@@ -1,0 +1,140 @@
+/**/
+#dne-card-i-canon .card__preview {
+    max-height: 222px;
+
+}
+
+#dne-card-i-canon .card__preview-img {
+    max-height: 222px;
+    object-fit: contain;
+
+}
+
+#dne-card-god-wtf .card__header {
+    margin-bottom: 0;
+}
+
+#dne-card-hide-insides-case .card__preview {
+    height: 180px;
+    overflow: hidden;
+    border-bottom: 4px solid black;
+}
+
+#dne-card-vinyl-mordechai .card__preview-img {
+    height: 280px;
+    overflow: hidden;
+}
+/*END CUSTOM DNE-CARDS STYLES*/
+
+/* START SWIPER */
+html,
+body {
+    position: relative;
+    height: 100%;
+}
+
+body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+.swiper {
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 80px;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 590px;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+}
+/* END SWIPER */
+
+/* START DNE */
+
+#card-template {
+    display: none;
+}
+
+.card {
+    position: relative;
+
+    height: 100%;
+    border: 10px solid black;
+
+    font-family: "JetBrains Mono", monospace;
+
+    background: white;
+}
+
+.card__header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 10px 5px 0;
+    margin-bottom: 10px;
+
+    word-break: break-word;
+}
+
+.card__title {
+    margin: 0;
+
+    font-family: 'Press Start 2P', cursive;
+    word-break: break-word;
+}
+
+.card__header-left {
+    width: 100%;
+    max-width: 80%;
+}
+
+.card__header-right {
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    max-width: 20%;
+
+    text-align: right;
+}
+
+.card__price {
+    font-family: 'Press Start 2P', cursive;
+}
+
+.card__limits {
+    font-family: "JetBrains Mono", monospace;
+}
+
+.card__description {
+    padding: 0 5px;
+}
+
+.card__footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5px;
+}
+
+.card__bonus {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.2em;
+}
+
+/* END DNE */
