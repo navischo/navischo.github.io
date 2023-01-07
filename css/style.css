@@ -1,4 +1,4 @@
-/**/
+/* START CUSTOM DNE-CARDS STYLES */
 #dne-card-i-canon .card__preview {
     max-height: 222px;
 
@@ -24,14 +24,20 @@
     height: 280px;
     overflow: hidden;
 }
-/*END CUSTOM DNE-CARDS STYLES*/
+/* END CUSTOM DNE-CARDS STYLES */
 
-/* START SWIPER */
 html,
 body {
     position: relative;
     height: 100%;
+    box-sizing: border-box;
 }
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+/* START SWIPER */
 
 body {
     background: #eee;
@@ -135,6 +141,11 @@ body {
 .card__bonus {
     font-family: 'Press Start 2P', cursive;
     font-size: 1.2em;
+}
+
+.js-cards-catalog {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 /* END DNE */
