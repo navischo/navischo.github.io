@@ -1,17 +1,17 @@
-# dne
+# DNE
 
-Привет и добро пожаловать в оригинальное приключение!
+Hello and welcome to the original adventure!
 
-Вступление.
+Introduction
 
-Где-то поблизости находится таинственная фабрика, у которой нет имени, где в праздники можно заметить скопления людей в темных плащах и очках странной формы. Ходят слухи, что некоторых из входящих никогда не видели снова. Говорят, что в фабрике действует магия. Эта программа станет вашими глазами и руками.
+Somewhere nearby is a mysterious factory that has no name, where on holidays you can see crowds of people in dark raincoats and strangely shaped glasses. Rumor has it that some of the people who enter are never seen again. They say that magic works in the factory. This program will become your eyes and hands.
 
-Эта программа изначально была разработана Егором Навіщо в Киеве. Арт Резиденция Green House обеспечила все необходимые ресурсы для разработки этой игры во время полномасштабного вторжения России на територию суверенного государства Украины. Игра основана как на моих любимых настольных играх: Манчкин, Серп, Схватки Боевых Магов, - так и компьютерных: Cyberpunk 2077, Colossal Cave Adventure.
-Данная версия была реализована средствами JS+HTML+CSS и доступна для запуска в любом современном браузере.
+This program was originally developed by Yehor Navischo in Kyiv. Green House Art Residency provided all the necessary resources for the development of this game during a full-scale Russian invasion of the territory of the sovereign state of Ukraine. The game is based both on my favorite board games: Munchkin, Scythe, Fights of Battle Mages - and computer games: Cyberpunk 2077, Colossal Cave Adventure.
+This version was implemented using JS+HTML+CSS and is available to run in any modern browser.
 
-Ввод команды
-Самый элементарный синтаксический анализатор этой программы будет принимать команды из двух слов без учера регистра. 
-Парсер проверяет только первые два слова, остальные - игнорируются. 
+Command entry
+The most elementary parser of this program will accept two-word commands without regard to case.
+The parser checks only the first two words, the rest are ignored.
 
-Запуск игры
-Для начала игры введите логин "navischo" и пароль "tvorchestvoilismert"
+Game launch
+To start the game, enter the login "navischo" and the password "tvorchestvoilismert"
