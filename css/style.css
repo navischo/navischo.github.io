@@ -24,6 +24,10 @@
     height: 280px;
     overflow: hidden;
 }
+
+#dne-card-prj-mriya .card__preview-img {
+    height: 220px;
+}
 /* END CUSTOM DNE-CARDS STYLES */
 
 html,
@@ -64,6 +68,7 @@ body {
 .swiper-slide img {
     display: block;
     width: 100%;
+    object-fit: contain;
 }
 /* END SWIPER */
 
@@ -127,6 +132,10 @@ body {
     padding: 0 5px;
 }
 
+.card__summary {
+    font-size: smaller;
+}
+
 .card__footer {
     position: absolute;
     bottom: 0;
@@ -138,7 +147,18 @@ body {
     padding-bottom: 5px;
 }
 
-.card__bonus {
+.card--door .card__footer {
+    justify-content: space-between;
+}
+
+.card__footer-left,
+.card__footer-right {
+    max-width: 50%;
+}
+
+.card__bonus,
+.card__budget,
+.card__profit {
     font-family: 'Press Start 2P', cursive;
     font-size: 1.2em;
 }

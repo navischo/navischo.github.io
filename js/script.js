@@ -503,6 +503,79 @@ class DNELootCard extends DNECard {
     }
 }
 
+class DNEDoorCard extends DNECard {
+    constructor(id, name, description, img, level, budget, client, roles, penalty, profit, profitOrigins) {
+        super(id, name, description, img);
+        this.level = level;
+        this.budget = budget;
+        this.client = client;
+        this.roles = roles;
+        this.penalty = penalty;
+        this.profit = profit;
+        this.profitOrigins = profitOrigins;
+    }
+}
+
+const initDNEDoorArr = () => {
+    const DoorArr = [];
+
+    // Замовлення, 19lvl
+    DoorArr.push(new DNEDoorCard("prj-mriya", "М Р І Я", "Розробка 6-ти годинного івенту, що складатиме лайв виступи підбірки артистів. Чим більше організаційних питань вирішено без допомоги клубу, тим більше заробіток від продажу. У разі успішного виконання, картку замовлення можна залишити собі і використати знову.", "https://lh4.googleusercontent.com/TmXLWrqcgvg_YxmSARONzYNXFjJJWLB2fb5fI1ZeAyfO75uBnkaQkQFn4x3POUs7W5o=w2400", 8, "15К", "Otel`", ["DJ", "Охранничек", "Сапорт", "Бармен"], "Потеряй уровень и доплати участникам -5К", "30K", "Вход, Бар, Онлайн-билетьі"));
+
+    // Various
+    // Замовлення, 19lvl
+    DoorArr.push(new DNEDoorCard("prj-various", "Various", "Розробка видання альбому на касетах, що складатиме компіляція треків артиста, оригінальний артворк альбому та лімітоване видання на касетах. Чим більше складових проекту розроблено без допомоги лейблу, тим більше заробіток від продажу. У разі успішного виконання, дає три унікальні картки: Демо компіляції, Альбому та Касети. Вартість кожного єтапу розробки - 1К, 6К та 14К. До кожного наступного єтапу розробки альбому зацікавленність аудиторії на вдвічі більша.", "https://lh4.googleusercontent.com/ZWRLV4_k8uGvUejY7GxJGKItp5wLJ563TzF3MmQPxDFz2qE1r1crTx4e55uMgyFgggI=w2400", 19, 0, "BODY Music", ["DJ"], "Потеряй уровень", "Продажи"));
+    // // Influence Operations
+    // Замовлення, 8lvl
+    DoorArr.push(new DNEDoorCard("prj-influence", "Influence Operations", "Замовлення на розробку дебютного діджитал-альбому для артиста лейблу BODY Music, що складатиме компіляція його треків та оригінальний артворк альбому. Чим більше складових проекту розроблено без допомоги лейблу, тим більше заробіток від продажу. У разі успішного виконання, дає унікальну картку Альбому. Вартість розробки - 2К.", "https://lh5.googleusercontent.com/BpTDR292VB5bP7HD52JYW0YqfpvJnmtiEN02SzIoWp-c5ubGpm0uApobLtL-IfsAbBE=w2400", 8, 0, "Замовлення"));
+    // Aenigma
+    // Замовлення, 16lvl
+    DoorArr.push(new DNEDoorCard("prj-aenigma", "Aenigma", "Замовлення на розробку восьмигодинного лайв-виступу в клубі Keller на Кирилівський, для артистів в жанрі гіпнотичного техно. Замовлення солідне, складатиме організацію повноцінного лайву з профессійною аппаратурою та світлом для 300+ людей та входом від 250, оригінальний артворк події а також флаєр, сайт з квитками, промо-відео, демо-профайли артистів, запрошення та просування опціонально. Чим більше складових проекту розроблено без допомоги клубу, тим більше заробіток від продажу. Гарантовано дає демо артистів та прибуток від входу, розмір якого залежить від уваги до проекту. У разі успішного виконання, дає унікальні картки: оригінальний концепт та артворк події, записати лайв для кожного з артистів - з верогідністю 25%, та картку проекту обмеженного видання цього лайву на платівці за кожен записаний лайв. Вартість розробки - 15К", "https://lh6.googleusercontent.com/ddLQawIUrWh7MxMGoj1D-m0Ed1ojjTbuGh6nCMs8q4nFu16qavKkcOyFc5BGugtCTE8=w2400", 16, 0, "Замовлення"));
+
+
+    console.log(DoorArr);
+    return DoorArr;
+}
+
+const DNEDoorArr = initDNEDoorArr();
+
+const drawDoorCards = () => {
+    const cardContainer = document.querySelector(".card-container");
+    const cardTemplate = document.querySelector("#door-card-template");
+
+    const drawCard = (cardContainer, cardTemplate, cardData) => {
+        console.log(cardContainer, cardTemplate, cardData);
+        const newCard = cardTemplate.cloneNode(true);
+        newCard.style.display = "block";
+        newCard.id = `dne-card-${cardData.id}`;
+        newCard.dataset.hash = `dne-card-${cardData.id}`;
+        newCard.querySelector(".card__title").textContent = cardData.name;
+        if (cardData.budget !== 0) {
+            newCard.querySelector(".card__budget").textContent = `${cardData.budget}`;
+        } else {
+            newCard.querySelector(".card__budget").style.display = "none";
+        }
+        newCard.querySelector(".card__profit").textContent = `${cardData.profit}`;
+        newCard.querySelector(".card__roles").textContent = `${cardData.roles}.`;
+        newCard.querySelector(".card__origins").textContent = `${cardData.profitOrigins}.`;
+        newCard.querySelector(".card__limits").textContent = `Замовлення від ${cardData.client}`;
+        newCard.querySelector(".card__preview-img").src = cardData.img;
+        newCard.querySelector(".card__description").textContent = `${cardData.description}`;
+        newCard.querySelector(".card__penalty").textContent = `${cardData.penalty}`;
+        newCard.querySelector(".card__bonus").textContent = `${cardData.level}`;
+        cardContainer.appendChild(newCard);
+    };
+
+// drawCard(cardContainer, cardTemplate, DNELootArr[0]);
+// drawCard(cardContainer, cardTemplate, DNELootArr[1]);
+
+    DNEDoorArr.forEach((DNEDoorCard) => {
+        drawCard(cardContainer, cardTemplate, DNEDoorCard);
+    });
+}
+
+drawDoorCards();
+
 const initDNELootArr = () => {
     const LootArr = [];
 
@@ -568,12 +641,20 @@ const initDNELootArr = () => {
     LootArr.push(new DNELootCard("tusk", "Ілон Таск", "Таск регулярно донатить ЗСУ на визволення Криму з під контролю Путлера, дарує старлінки та розробляє план розвитку Нового Донецьку. Чудово розуміється у розробці веб-сайтів, апок для смартфонів та дронах. Відчуває ностальгію по власній юності тож завжди радий допомогти молодим даруванням з втіленням найсміливіших ідей.", "https://lh6.googleusercontent.com/paU4WKE38gv_ftC9uXIsGNXoNp0_e8xiVa133tyR6s4zR2ZqkDYmirkcVeRZtRJfQU4=w2400", 4, 0, "Найомничок"));
     // Рік С-137
     LootArr.push(new DNELootCard("rick", "Рік С-137", "Так, той самий. Добре подумай яку справу довірити цій людині. Ніхто не знає що станеться далі.", "https://lh6.googleusercontent.com/FIZwLsrD-krhTSF5hdjlhDt7sFSTjTlmQIGvHxLaLeeA8ceUHPohn6i1k3t8yiDqi2Y=w2400", 5, 0, "Найомничок"));
+    // Убрать и отснять студию
+    // Фото чистої студії приваблюють клієнтів, отримай два випадкові закази на руку та використовуй цю картку як бонус +2 для будь-якого івенту в ній. Фото на професійний фотоаппарат з широким об'єктивом привабить навіть найвибагливішу аудиторію.
     // Записати сет
     LootArr.push(new DNELootCard("make-dj-set", "Записати DJ-сет", "Дає можливість записати сет як тільки тобі закортить. Необхідні студія та аппаратура", "https://lh5.googleusercontent.com/iZqspQQvU2AWz67qOcOdoM3uuV8_O0uFMuIIsdqnu1HpkaO_d5ASSNcKFsZTyrkNgbg=w2400", 1, 1000, "Дія"));
+    // Записати годинний сет
+    // У тебе буде година в студії з апаратурою. Бери свій контроллер та показуй що вмієш. Гравець виростивший цю Дію в свій хід гарантовано свій запис та має шанс зробити демо. В подальшій грі демо може зацікавити Лейбл, який запропонує контракт по його продюсуванню. Став своє демо на вечірках щоб його помітили.
+    // // Записати сет
+    // LootArr.push(new DNELootCard("make-dj-set", "Записати DJ-сет", "Дає можливість записати сет як тільки тобі закортить. Необхідні студія та аппаратура", "https://lh5.googleusercontent.com/iZqspQQvU2AWz67qOcOdoM3uuV8_O0uFMuIIsdqnu1HpkaO_d5ASSNcKFsZTyrkNgbg=w2400", 1, 1000, "Дія"));
     // Записати сет
     LootArr.push(new DNELootCard("make-live", "Запустити трансляцію", "Дає можливість привабити відвідувачів до події або показати важливий матеріал. Потребує камери та підключення до інтернету", "https://lh3.googleusercontent.com/2Ax7PXdSpzk73m3ANSMV11awPuvp-QAH9o-tm4_mFqahF4jie5h3XfBzofp8wZ9UkIo=w2400", 1, 0, "Дія"));
     // Забомбити кусок
     LootArr.push(new DNELootCard("make-piece", "Забомбити кусок", "Забомбити кусок можна на будь-якій стіні. Навіть якщо ніхто цього не дозволяв та навіть якщо хтось проти. Вулиця - твій холст. Нехай вона буде святом мистецтва для всіх. Кусок може привернути увагу будь до чого.", "https://lh3.googleusercontent.com/EQmsSlGvL6Bhdd2bJfWagPo-JLBD2x1hS8qSJ2a6j4PY43C1OtqDO5XbagvBEgyc-lc=w2400", 2, 1000, "Дія"));
+    // Забомбити кусок
+    LootArr.push(new DNELootCard("make-1991-n31", "19.91 на Стрічкоткацькій", "На Стрічкоткацькій давно не фарбували стіни, час це виправити. Дозволяти це звісно ніхто не буде, та якщо ти знайомий з власниками клубів, це може зійти за аргумент. Один охоронець на КПП. Для такого розміру шматка знадобиться драбина, попитай знайомих або придбай сам. Кольори на твій смак, візьми друзів щоб працювати швидше.", "https://lh4.googleusercontent.com/_-QeG9KGhNojivrs6WmQdlomzmgQiX2Cmd-_Srd5eDwFImJgZYk3PDuehvGUzY_PYxc=w2400", 5, 1600, "Дія"));
     // Скласти нутрощі у кейс
     LootArr.push(new DNELootCard("hide-insides-case", "Скласти нутрощі у кейс", "Ви можете дістати серце або мозок та покласти його у кейс. Тепер після вашої смерті, маючи кейс та ключ від нього гравець може воскресити вас, якщо у кейсі знаходиться ваш мозок. Або все що ви мали буде передано гравцю, що матиме кейс та ключ, якщо в кейсі знаходиться ваше сердце. Застосовуючи цю карту гравець вирішує що покласти в кейс, його рішення знає лише гейм-мастер. Одноразова дія, скинь після використання.", "https://lh4.googleusercontent.com/Z7SDwZp_vswKBpfz9MJy1okslUiTfbNvnaQp1cQkd3XfQxwGydioc9WRWDQhdrTQXjE=w2400", 5, "10К", "Дія"));
     // Підірвати косяка
@@ -601,14 +682,23 @@ const initDNELootArr = () => {
     // Водійське посвідчення
     LootArr.push(new DNELootCard("car-docs", "Водійське посвідчення", "Дозволяє легально керувати будь-яким транспортним засобом в межах Найт-Сіті.", "https://lh3.googleusercontent.com/PXtkM4KTHKrrhkGnkAdQqurHFp9oPuRABqjaiSciDDQ6Z1KlADcmDbXMWuSRvq_cnk8=w2400", 1, "0", ""));
 
-// Various
-// Замовлення, 19lvl
+    // DoorsArr.push(new ContractCard('Гикающий гик', '+6 против воинов', 6, 'Стань нормальным, сбрось все ссвои расы и классы', '2 сокровища'));
+    // DoorsArr.push(new ContractCard('Сочащаяся слизь', 'Какая мерзость! +4 против эльфов', 1, 'Потеряй надетую обувку. Если нет обувки, потеряй уровень.', '1 сокровище'));
+    // DoorsArr.push(new ContractCard('Улетные улитки', 'У тебя на смывку -2', 4, 'Разворовывают твои сокровища. Сбрось столько шмоток из игры или карт с руки(по своему выбору), сколько выпадет на кубике.', '2 сокровища'));
+    // DoorsArr.push(new ContractCard('Бигфут', '+3 против дварфов', 12, 'Наступает на тебя и съедает шляпу. Потеряй надетый головняк.', '3 сокровища'));
+    // DoorsArr.push(new ContractCard('Гарпистки', 'Сопротивляются магии. +5 против волшебников.', 4, 'Хреново исполняют ужасную музыку. Потеряй 2 уровня.', '2 сокровища'));
+    // DoorsArr.push(new ContractCard('Лепрекон', 'Да он отвратителен! +5 против эльфов.', 4, 'Забирает у тебя две шмотки - первую выбирает правый сосед, вторую левый. Сбрось эти шмотки.', '2 сокровища'));
+    // DoorsArr.push(new ContractCard('Обдолбанный голем', 'Можешь биться или пройти мимо, плюнув на обдолбанного голема и его сокровища. Исключение: вкусно выглядящим хафлингам придётся биться.', 14, 'Его пробивает на хавку. Ты съеден и мёртв.', '4 сокровища'));
+    // DoorsArr.push(new ContractCard('Амазонка', 'Не бьётся с женщинами; вместо боя дает одно сокровище.', 8, 'Тебя вздула женщина! Ущемление гордости в тяжелой форме. Потеряй все свои классы. Если у тебя нет класса, потеряй 3 уровня.', '2 сокровища'));
+
+    // Various
+    // Замовлення, 19lvl
     LootArr.push(new DNELootCard("prj-various", "Various", "Замовлення на розробку лімітованого видання альбому на касетах для артиста лейблу BODY Music, що складатиме компіляція його треків, оригінальний артворк альбому та лімітоване видання на касетах. Чим більше складових проекту розроблено без допомоги лейблу, тим більше заробіток від продажу. У разі успішного виконання, дає три унікальні картки: Демо компіляції, Альбому та Касети. Вартість кожного єтапу розробки - 1К, 6К та 14К. До кожного наступного єтапу розробки альбому зацікавленність аудиторії на вдвічі більша.", "https://lh4.googleusercontent.com/ZWRLV4_k8uGvUejY7GxJGKItp5wLJ563TzF3MmQPxDFz2qE1r1crTx4e55uMgyFgggI=w2400", 19, 0, "Замовлення"));
-// Influence Operations
-// Замовлення, 8lvl
-    LootArr.push(new DNELootCard("prj-influence", "Influence Operations", "Замовлення на розробку дебютного діджитал-альбому для артиста лейблу BODY Music, що складатиме компіляція його треків та оригінальний артворк альбому. Чим більше складових проекту розроблено без допомоги лейблу, тим більше заробіток від продажу. У разі успішного виконання, дає три унікальну картку Альбому. Вартість розробки - 2К.", "https://lh5.googleusercontent.com/BpTDR292VB5bP7HD52JYW0YqfpvJnmtiEN02SzIoWp-c5ubGpm0uApobLtL-IfsAbBE=w2400", 8, 0, "Замовлення"));
+    // Influence Operations
+    // Замовлення, 8lvl
+    LootArr.push(new DNELootCard("prj-influence", "Influence Operations", "Замовлення на розробку дебютного діджитал-альбому для артиста лейблу BODY Music, що складатиме компіляція його треків та оригінальний артворк альбому. Чим більше складових проекту розроблено без допомоги лейблу, тим більше заробіток від продажу. У разі успішного виконання, дає унікальну картку Альбому. Вартість розробки - 2К.", "https://lh5.googleusercontent.com/BpTDR292VB5bP7HD52JYW0YqfpvJnmtiEN02SzIoWp-c5ubGpm0uApobLtL-IfsAbBE=w2400", 8, 0, "Замовлення"));
     // Aenigma
-// Замовлення, 16lvl
+    // Замовлення, 16lvl
     LootArr.push(new DNELootCard("prj-aenigma", "Aenigma", "Замовлення на розробку восьмигодинного лайв-виступу в клубі Keller на Кирилівський, для артистів в жанрі гіпнотичного техно. Замовлення солідне, складатиме організацію повноцінного лайву з профессійною аппаратурою та світлом для 300+ людей та входом від 250, оригінальний артворк події а також флаєр, сайт з квитками, промо-відео, демо-профайли артистів, запрошення та просування опціонально. Чим більше складових проекту розроблено без допомоги клубу, тим більше заробіток від продажу. Гарантовано дає демо артистів та прибуток від входу, розмір якого залежить від уваги до проекту. У разі успішного виконання, дає унікальні картки: оригінальний концепт та артворк події, записати лайв для кожного з артистів - з верогідністю 25%, та картку проекту обмеженного видання цього лайву на платівці за кожен записаний лайв. Вартість розробки - 15К", "https://lh6.googleusercontent.com/ddLQawIUrWh7MxMGoj1D-m0Ed1ojjTbuGh6nCMs8q4nFu16qavKkcOyFc5BGugtCTE8=w2400", 16, 0, "Замовлення"));
     // Создать профайл
     // LootArr.push(new DNELootCard("get-profile", "Создать профайл", "Дает доступ к новой странице с профайлом игрока на которого бьіла применена карта", "", 0, 1000, ""));
@@ -631,39 +721,43 @@ const initDNELootArr = () => {
 
 const DNELootArr = initDNELootArr();
 
-const cardContainer = document.querySelector(".card-container");
-const cardTemplate = document.querySelector("#card-template");
-const drawCard = (cardContainer, cardTemplate, cardData) => {
-    console.log(cardContainer, cardTemplate, cardData);
-    const newCard = cardTemplate.cloneNode(true);
-    newCard.style.display = "block";
-    newCard.id = `dne-card-${cardData.id}`;
-    newCard.dataset.hash = `dne-card-${cardData.id}`;
-    newCard.querySelector(".card__title").textContent = cardData.name;
-    if (cardData.cost !== 0) {
-        newCard.querySelector(".card__price").textContent = cardData.cost;
-    } else {
-        newCard.querySelector(".card__price").style.display = "none";
-    }
-    newCard.querySelector(".card__limits").textContent = cardData.limits; // todo вьінести лимитьі в отдельньій параметр
-    newCard.querySelector(".card__preview-img").src = cardData.img;
-    newCard.querySelector(".card__description").textContent = cardData.description;
-    if (cardData.bonus !== 0) {
-        newCard.querySelector(".card__bonus").textContent = `+${cardData.bonus}`;
-    } else if (cardData.limits === "Проблема!") {
-        newCard.querySelector(".card__bonus").textContent = `-${cardData.bonus}`;
-    } else {
-        newCard.querySelector(".card__bonus").style.display = "none";
-    }
-    cardContainer.appendChild(newCard);
-};
+const drawLootCards = () => {
+    const cardContainer = document.querySelector(".card-container");
+    const cardTemplate = document.querySelector("#card-template");
+    const drawCard = (cardContainer, cardTemplate, cardData) => {
+        console.log(cardContainer, cardTemplate, cardData);
+        const newCard = cardTemplate.cloneNode(true);
+        newCard.style.display = "block";
+        newCard.id = `dne-card-${cardData.id}`;
+        newCard.dataset.hash = `dne-card-${cardData.id}`;
+        newCard.querySelector(".card__title").textContent = cardData.name;
+        if (cardData.cost !== 0) {
+            newCard.querySelector(".card__price").textContent = cardData.cost;
+        } else {
+            newCard.querySelector(".card__price").style.display = "none";
+        }
+        newCard.querySelector(".card__limits").textContent = cardData.limits; // todo вьінести лимитьі в отдельньій параметр
+        newCard.querySelector(".card__preview-img").src = cardData.img;
+        newCard.querySelector(".card__description").textContent = cardData.description;
+        if (cardData.bonus !== 0) {
+            newCard.querySelector(".card__bonus").textContent = `+${cardData.bonus}`;
+        } else if (cardData.limits === "Проблема!") {
+            newCard.querySelector(".card__bonus").textContent = `-${cardData.bonus}`;
+        } else {
+            newCard.querySelector(".card__bonus").style.display = "none";
+        }
+        cardContainer.appendChild(newCard);
+    };
 
 // drawCard(cardContainer, cardTemplate, DNELootArr[0]);
 // drawCard(cardContainer, cardTemplate, DNELootArr[1]);
 
-DNELootArr.forEach((DNELootCard) => {
-    drawCard(cardContainer, cardTemplate, DNELootCard);
-});
+    DNELootArr.forEach((DNELootCard) => {
+        drawCard(cardContainer, cardTemplate, DNELootCard);
+    });
+}
+
+drawLootCards();
 
 var swiper = new Swiper(".mySwiper", {
     effect: "coverflow",
@@ -735,7 +829,7 @@ var swiper = new Swiper(".mySwiper", {
 // Скрипт-разведчик, передается через приватньіе сети и отправляет все ключевьіе данньіе подсети жертвьі по заранее указанному адресу. По собьітию или команде может запустить Демона, при условии наличия в пайпе доступного слота Кибердеки.
 // Кибердека
 // Нетраннерская модификация мозга, позволяет загружать в сеть и удаленно управлять программами, которьіе отправляются цепочками из одного или более скриптов. Чем качественнее дека, тем больше скриптов в один пайп способен вместить пользователь.
-// Звук, +3, 45К/800
+// Звук, +3, 45К/1800
 // Регулярний набір з потужного монітора на штативі, мікшеру, дим-машини та двух мікро. Дозволить влаштувати адерграунд-сцену в будь-якому місці де є живлення. Для лайву потребує контроллер.
 // Сказать прямо
 // Карта позволяет в любой момент вьісказать короткий спич применившему ее игроку. В течении спича никто не перебивает, заговоривший во время чужого спича однаждьі получает предупреждение, дваждьі - покидает игру.
