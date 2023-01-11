@@ -20,6 +20,13 @@
     border-bottom: 4px solid black;
 }
 
+#dne-card-vinyl-mordechai .card__preview {
+    height: 200px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
 #dne-card-vinyl-mordechai .card__preview-img {
     height: 280px;
     overflow: hidden;
