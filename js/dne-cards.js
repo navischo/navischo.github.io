@@ -52,7 +52,7 @@ const initDNEDoorArr = () => {
 
 const DNEDoorArr = initDNEDoorArr();
 
-const drawDoorCards = () => {
+const drawDoorCards = (cardData) => {
     const cardContainer = document.querySelector(".card-container");
     const cardTemplate = document.querySelector("#door-card-template");
 
@@ -79,15 +79,12 @@ const drawDoorCards = () => {
         cardContainer.appendChild(newCard);
     };
 
-// drawCard(cardContainer, cardTemplate, DNELootArr[0]);
-// drawCard(cardContainer, cardTemplate, DNELootArr[1]);
-
-    DNEDoorArr.forEach((DNEDoorCard) => {
+    cardData.forEach((DNEDoorCard) => {
         drawCard(cardContainer, cardTemplate, DNEDoorCard);
     });
 }
 
-drawDoorCards();
+
 
 const initDNELootArr = () => {
     const LootArr = [];
@@ -247,7 +244,7 @@ const initDNELootArr = () => {
 
 const DNELootArr = initDNELootArr();
 
-const drawLootCards = () => {
+const drawLootCards = (cardData) => {
     const cardContainer = document.querySelector(".card-container");
     const cardTemplate = document.querySelector("#card-template");
     const drawCard = (cardContainer, cardTemplate, cardData) => {
@@ -278,12 +275,12 @@ const drawLootCards = () => {
 // drawCard(cardContainer, cardTemplate, DNELootArr[0]);
 // drawCard(cardContainer, cardTemplate, DNELootArr[1]);
 
-    DNELootArr.forEach((DNELootCard) => {
+    cardData.forEach((DNELootCard) => {
         drawCard(cardContainer, cardTemplate, DNELootCard);
     });
 }
 
-drawLootCards();
+
 
 // Ідеї для карт
 // Проектор, Екран, Получить травму, Сильная Стамина, Хороший имунитет, Радио-программа, Так говорил Заратустра(Книга, Дает новьіе знания пропорционально времени потраченному на изучение. Покупается один раз и может бьіть передана другим игрокам посредством бартера или продажи при встрече., 1, 400, Желание читать), Желание читать(Желание, Желание читать позволяет находить новую информацию в письменньіх источниках как статьи, письма и книги. Возникает внутри мотивационньіх центров мозга и подтверждается наличием данной картьі. Положи ее перед собой как айтемьі и смело изучай картьі книг)

@@ -44,56 +44,65 @@ body {
     box-sizing: border-box;
 }
 
+body {
+    margin: 0;
+}
+
 *, *::before, *::after {
     box-sizing: inherit;
 }
 
-/* START SWIPER */
-
-body {
-    background: #eee;
-    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    color: #000;
-    margin: 0;
-    padding: 0;
-}
-
-.swiper {
-    width: 100%;
-    padding-top: 20px;
-    padding-bottom: 80px;
-}
-
-.swiper-slide {
-    background-position: center;
-    background-size: cover;
-    width: 300px;
-    height: 590px;
-}
-
-.swiper-slide img {
+img {
     display: block;
     width: 100%;
     object-fit: contain;
 }
-/* END SWIPER */
 
 /* START DNE */
 
-#card-template {
+#card-template,
+#door-card-template {
     display: none;
+}
+
+.swiper-slide {
+    width: 300px;
+    height: 590px;
 }
 
 .card {
     position: relative;
 
-    height: 100%;
+    box-sizing: border-box;
+    width: 300px;
+    height: 590px;
     border: 10px solid black;
 
     font-family: "JetBrains Mono", monospace;
+    font-size: 14px;
+    color: #000;
 
     background: white;
+}
+
+.card--back {
+    position: relative;
+}
+
+.card--back::before {
+    content: "";
+
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    bottom: -10px;
+    left: -10px;
+
+    display: block;
+
+    background: url("https://lh6.googleusercontent.com/94ZiG04RaljkE0kBIgEnJ81qqspFoKyJfiKqkb7iJ0XPsKKfThuCHF6iqL5YOUtrAAc=w2400");
+    background-size: cover;
+    background-position: center;
 }
 
 .card__header {
@@ -121,7 +130,6 @@ body {
 .card__header-right {
     display: flex;
     flex-direction: column;
-    align-items: right;
     max-width: 20%;
 
     text-align: right;
@@ -173,6 +181,38 @@ body {
 .js-cards-catalog {
     display: flex;
     flex-wrap: wrap;
+}
+
+.card-page {
+    display: flex!important;
+    height: 100%;
+
+    font-family: "JetBrains Mono", monospace;
+    font-size: 14px;
+    color: #fff;
+
+    background: #000;
+}
+
+.card-page__preview {
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+.card-page__content {
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+h2 {
+    font-family: 'Press Start 2P', cursive;
+    word-break: break-word;
+}
+
+.card-page__budget,
+.card-page__profit,
+.card-page__level {
+    font-family: 'Press Start 2P', cursive;
 }
 
 /* END DNE */

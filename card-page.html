@@ -13,9 +13,32 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div class="js-cards-catalog card-container">
+<section class="card-page">
+    <!-- Swiper -->
+    <div class="card-page__preview">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper card-container">
+                <div class="swiper-slide card card--back"></div>
+            </div>
+        </div>
+    </div>
+    <div class="card-page__content">
+        <h2 class="js card-page__title"></h2>
+        <small class="js card-page__client"></small><br>
 
-</div>
+        <p class="js card-page__level"></p>
+        <p>
+            <b>Очікуваний бюджет:</b> <span class="js card-page__budget"></span><br>
+            <b>Очікуваний прибуток:</b> <span class="js card-page__profit"></span><br>
+            <small class="js card-page__origins"></small>
+        </p>
+        <p>
+            <b>Необхідні ролі:</b> <span class="js card-page__roles"></span><br>
+            <b>У разі невдачі:</b> <span class="js card-page__penalty"></span>
+        </p>
+        <p class="js card-page__description"></p>
+    </div>
+</section>
 
 <div id="card-template" class="swiper-slide" data-hash="card-id">
     <article class="card">
@@ -74,7 +97,40 @@
 <script src="js/script.js"></script>
 <script src="js/dne-cards.js"></script>
 <script>
+    drawDoorCards([DNEDoorArr[0]]);
+</script>
+<script src="js/dne-card-page.js"></script>
+<script>
+    drawDoorCardPage(DNEDoorArr[0]);
+</script>
+<!-- Demo styles -->
+<style>
+    .swiper {
+        width: 300px;
+        height: 590px;
+        margin: 0;
+    }
 
+    .swiper-slide {
+        background-position: center;
+        background-size: cover;
+        width: 300px;
+    }
+
+    .swiper-slide img {
+        display: block;
+        width: 100%;
+    }
+</style>
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        effect: "flip",
+        grabCursor: true,
+        autoplay: {
+            delay: 5000,
+        }
+    });
 </script>
 </body>
 </html>
