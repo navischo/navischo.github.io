@@ -35,6 +35,23 @@
 #dne-card-prj-mriya .card__preview-img {
     height: 220px;
 }
+
+#dne-card-prj-aenigma .card__description {
+    height: 89px;
+}
+
+
+#dne-card-prj-weedian-greece .card__description {
+    height: 92px;
+}
+
+#dne-card-prj-influence .card__description {
+    height: 92px;
+}
+
+#dne-card-prj-various .card__description {
+    height: 92px;
+}
 /* END CUSTOM DNE-CARDS STYLES */
 
 html,
@@ -115,6 +132,12 @@ img {
     word-break: break-word;
 }
 
+.card__id {
+    position: absolute;
+    top: 0;
+    font-size: 6px;
+}
+
 .card__title {
     margin: 0;
 
@@ -144,10 +167,12 @@ img {
 }
 
 .card__description {
+    overflow: hidden;
     padding: 0 5px;
 }
 
 .card__summary {
+    padding: 0 4px;
     font-size: smaller;
 }
 
@@ -160,6 +185,8 @@ img {
     display: flex;
     justify-content: center;
     padding-bottom: 5px;
+    padding-left: 4px;
+    padding-right: 4px;
 }
 
 .card--door .card__footer {
@@ -213,6 +240,16 @@ h2 {
 .card-page__profit,
 .card-page__level {
     font-family: 'Press Start 2P', cursive;
+}
+
+.card-page__id {
+    display: inline-block;
+    text-align: right;
+    transform: rotate(90deg);
+    transform-origin: left;
+    position: fixed;
+    top: 10px;
+    right: 20px;
 }
 
 /* END DNE */
