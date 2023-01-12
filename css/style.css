@@ -52,6 +52,31 @@
 #dne-card-prj-various .card__description {
     height: 92px;
 }
+[id*=dne-card-demo] .card__description {
+    height: 240px;
+}
+#dne-card-demo-marum-future .card__description {
+    height: 224px;
+}
+
+#dne-card-demo-autonomous-aka-slam .card__description {
+    height: 204px;
+}
+
+#dne-card-demo-before-sunrise .card__preview {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#dne-card-demo-before-sunrise .card__preview-img {
+    width: 80%;
+    /*height: 160px;*/
+}
+
+#dne-card-demo-before-sunrise .card__description {
+    height: 202px;
+}
 /* END CUSTOM DNE-CARDS STYLES */
 
 html,
