@@ -9,7 +9,7 @@ const drawDoorCardPage = (cardData) => {
         newCard.querySelector(".js.card-page__budget").style.display = "none";
     }
     newCard.querySelector(".js.card-page__id").textContent = `#${cardData.id}`;
-    newCard.querySelector(".js.card-page__profit").textContent = `${cardData.profit}`;
+    newCard.querySelector(".js.card-page__profit").innerHTML = `${cardData.profit}`;
     newCard.querySelector(".js.card-page__level").textContent = `${cardData.level}lvl`;
     newCard.querySelector(".js.card-page__roles").textContent = `${cardData.roles}.`;
     newCard.querySelector(".js.card-page__origins").textContent = `${cardData.profitOrigins}.`;

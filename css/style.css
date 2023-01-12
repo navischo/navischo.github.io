@@ -52,6 +52,9 @@
 #dne-card-prj-various .card__description {
     height: 92px;
 }
+[id*=dne-card-album] .card__description {
+    height: 132px;
+}
 [id*=dne-card-demo] .card__description {
     height: 240px;
 }
@@ -76,6 +79,47 @@
 
 #dne-card-demo-before-sunrise .card__description {
     height: 202px;
+}
+
+#dne-card-prj-vinyl-love-market .card__profit {
+    font-size: 1em;
+}
+
+#dne-card-prj-vinyl-love-market .card__description {
+    height: 164px;
+}
+
+#dne-card-class-dj .card__description {
+    height: 150px;
+}
+
+#dne-card-prj-vinyl-vlad-tapes .card__profit {
+    font-size: 1.1em;
+}
+
+#dne-card-prj-vinyl-various-i .card__profit {
+    font-size: 1em;
+}
+
+#dne-card-prj-vinyl-nocturnal .card__preview {
+    display: flex;
+    align-items: center;
+    height: 210px;
+    overflow: hidden;
+}
+
+#dne-card-car-mystery-track .card__preview {
+    display: flex;
+    align-items: center;
+    height: 260px;
+    overflow: hidden;
+}
+
+#dne-card-i-gopro .card__preview {
+    display: flex;
+    align-items: center;
+    height: 330px;
+    overflow: hidden;
 }
 /* END CUSTOM DNE-CARDS STYLES */
 
@@ -209,6 +253,7 @@ img {
 
     display: flex;
     justify-content: center;
+    align-items: flex-end;
     padding-bottom: 5px;
     padding-left: 4px;
     padding-right: 4px;
