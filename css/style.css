@@ -121,6 +121,25 @@
     height: 330px;
     overflow: hidden;
 }
+
+#dne-card-demo-sub-zero .card__preview {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#dne-card-demo-sub-zero .card__preview-img {
+    width: 95%;
+    /*height: 160px;*/
+}
+
+#dne-card-demo-sub-zero .card__description {
+    height: 202px;
+}
+
+#card-page-template {
+    display: none;
+}
 /* END CUSTOM DNE-CARDS STYLES */
 
 html,
@@ -151,7 +170,7 @@ img {
     display: none;
 }
 
-.swiper-slide {
+.swiper-slide[id*="dne-card-"] {
     width: 300px;
     height: 590px;
 }
@@ -291,6 +310,12 @@ img {
     background: #000;
 }
 
+@media (max-width: 768px) {
+    .card-page {
+        flex-direction: column;
+    }
+}
+
 .card-page__preview {
     padding-left: 20px;
     padding-top: 20px;
@@ -313,13 +338,17 @@ h2 {
 }
 
 .card-page__id {
-    display: inline-block;
-    text-align: right;
-    transform: rotate(90deg);
-    transform-origin: left;
-    position: fixed;
+    position: absolute;
     top: 10px;
     right: 20px;
+    z-index: 2;
+
+    display: inline-block;
+
+    text-align: right;
+
+    transform: rotate(90deg);
+    transform-origin: left;
 }
 
 /* END DNE */

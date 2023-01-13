@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>ANTI CARD</title>
     <link
             rel="stylesheet"
@@ -13,33 +14,49 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<section class="card-page">
-    <!-- Swiper -->
-    <div class="card-page__preview">
-        <div class="swiper mySwiper">
-            <div class="swiper-wrapper card-container">
-                <div class="swiper-slide card card--back"></div>
+<!-- Slider main container -->
+<div class="swiper">
+    <!-- Additional required wrapper -->
+    <div id="page-view-container" class="swiper-wrapper">
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+</div>
+<!--<div id="page-view" class="swiper mySwiper">-->
+<!--    <div id="page-view-container" class="swiper-wrapper">-->
+<!--    </div>-->
+<!--    <div class="swiper-pagination"></div>-->
+<!--</div>-->
+<div id="card-page-template" class="swiper-slide">
+    <section class="card-page">
+        <div class="card-page__preview">
+            <div id="card-view" class="swiper mySwiper">
+                <div class="swiper-wrapper card-container">
+                    <div class="swiper-slide card card--back"></div>
+                </div>
+<!--                <div class="swiper-button-prev"></div>-->
+<!--                <div class="swiper-button-next"></div>-->
             </div>
         </div>
-    </div>
-    <div class="card-page__content">
-        <small class="js card-page__id"></small>
-        <h2 class="js card-page__title"></h2>
-        <small class="js card-page__client"></small><br>
+        <div class="card-page__content">
+            <small class="js card-page__id"></small>
+            <h2 class="js card-page__title"></h2>
+            <small class="js card-page__client"></small><br>
 
-        <p class="js card-page__level"></p>
-        <p>
-            <b>Очікуваний бюджет:</b> <span class="js card-page__budget"></span><br>
-            <b>Очікуваний прибуток:</b> <span class="js card-page__profit"></span><br>
-            <small class="js card-page__origins"></small>
-        </p>
-        <p>
-            <b>Ролі:</b> <span class="js card-page__roles"></span><br>
-            <b>У разі невдачі:</b> <span class="js card-page__penalty"></span>
-        </p>
-        <p class="js card-page__description"></p>
-    </div>
-</section>
+            <p class="js card-page__level"></p>
+            <p>
+                <b>Очікуваний бюджет:</b> <span class="js card-page__budget"></span><br>
+                <b>Очікуваний прибуток:</b> <span class="js card-page__profit"></span><br>
+                <small class="js card-page__origins"></small>
+            </p>
+            <p>
+                <b>Ролі:</b> <span class="js card-page__roles"></span><br>
+                <b>У разі невдачі:</b> <span class="js card-page__penalty"></span>
+            </p>
+            <p class="js card-page__description"></p>
+        </div>
+    </section>
+</div>
 
 <div id="card-template" class="swiper-slide" data-hash="card-id">
     <article class="card">
@@ -95,45 +112,117 @@
 
 <!-- Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-
+<style>
+    .swiper {
+        width: 100vw;
+        height: 100vh;
+    }
+</style>
 <!-- Initialize Swiper -->
 <script src="js/script.js"></script>
 <script src="js/dne-cards.js"></script>
 <script>
-    drawDoorCards([DNEDoorArr[4]]);
+    //drawDoorCards([DNEDoorArr[4]]);
 </script>
 <script src="js/dne-card-page.js"></script>
 <script>
-    drawDoorCardPage(DNEDoorArr[4]);
+    //drawDoorCardPage(DNEDoorArr[4]);
+    console.log("DNEDoorArr", DNEDoorArr);
+    drawDoorCardPages(DNEDoorArr);
 </script>
-<!-- Demo styles -->
+<script>
+    const swiper = new Swiper('.swiper', {
+        // Optional parameters
+        loop: true,
+
+        // If we need pagination
+        pagination: {
+            el: '.swiper-pagination',
+        },
+    });
+</script>
 <style>
-    .swiper {
+    #card-view.swiper {
         width: 300px;
         height: 590px;
         margin: 0;
     }
 
-    .swiper-slide {
+    #card-view .swiper-slide {
         background-position: center;
         background-size: cover;
         width: 300px;
     }
 
-    .swiper-slide img {
+    #card-view .swiper-slide img {
         display: block;
         width: 100%;
     }
 </style>
 <!-- Initialize Swiper -->
 <script>
-    var swiper = new Swiper(".mySwiper", {
-        effect: "flip",
-        grabCursor: true,
-        autoplay: {
-            delay: 5000,
-        }
-    });
+
 </script>
+<!--<style>-->
+<!--    #page-view.swiper {-->
+<!--        width: 100%;-->
+<!--        height: 100%;-->
+<!--    }-->
+
+<!--    #page-view .swiper-slide {-->
+<!--        text-align: center;-->
+<!--        font-size: 18px;-->
+<!--        background: #fff;-->
+
+<!--        /* Center slide text vertically */-->
+<!--        display: -webkit-box;-->
+<!--        display: -ms-flexbox;-->
+<!--        display: -webkit-flex;-->
+<!--        display: flex;-->
+<!--        -webkit-box-pack: center;-->
+<!--        -ms-flex-pack: center;-->
+<!--        -webkit-justify-content: center;-->
+<!--        justify-content: center;-->
+<!--        -webkit-box-align: center;-->
+<!--        -ms-flex-align: center;-->
+<!--        -webkit-align-items: center;-->
+<!--        align-items: center;-->
+<!--    }-->
+
+<!--    #page-view .swiper-slide img {-->
+<!--        display: block;-->
+<!--        width: 100%;-->
+<!--        height: 100%;-->
+<!--        object-fit: cover;-->
+<!--    }-->
+
+<!--    #page-view .swiper-pagination-bullet {-->
+<!--        width: 20px;-->
+<!--        height: 20px;-->
+<!--        text-align: center;-->
+<!--        line-height: 20px;-->
+<!--        font-size: 12px;-->
+<!--        color: #000;-->
+<!--        opacity: 1;-->
+<!--        background: rgba(0, 0, 0, 0.2);-->
+<!--    }-->
+
+<!--    #page-view .swiper-pagination-bullet-active {-->
+<!--        color: #fff;-->
+<!--        background: #007aff;-->
+<!--    }-->
+<!--</style>-->
+<!-- Initialize Page View Swiper -->
+<!--<script>-->
+<!--    var pageViewSwiper = new Swiper("#page-view", {-->
+<!--        pagination: {-->
+<!--            el: ".swiper-pagination",-->
+<!--            clickable: true,-->
+<!--            renderBullet: function (index, className) {-->
+<!--                return '<span class="' + className + '">' + (index + 1) + "</span>";-->
+<!--            },-->
+<!--        },-->
+<!--    });-->
+<!--</script>-->
 </body>
 </html>
