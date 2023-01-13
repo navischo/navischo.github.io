@@ -15,7 +15,7 @@
 </head>
 <body>
 <!-- Slider main container -->
-<div class="swiper">
+<div id="page-view" class="swiper">
     <!-- Additional required wrapper -->
     <div id="page-view-container" class="swiper-wrapper">
     </div>
@@ -130,14 +130,29 @@
     console.log("DNEDoorArr", DNEDoorArr);
     drawDoorCardPages(DNEDoorArr);
 </script>
+<style>
+    .swiper-pagination-clickable .swiper-pagination-bullet {
+        cursor: pointer;
+        background: white;
+        width: 22px;
+        height: 20px;
+        font-family: "Press Start 2p", cursive;
+        font-size: 13px;
+        padding-top: 4px;
+    }
+</style>
 <script>
-    const swiper = new Swiper('.swiper', {
+    const swiper = new Swiper('#page-view', {
         // Optional parameters
         loop: true,
 
         // If we need pagination
         pagination: {
-            el: '.swiper-pagination',
+            el: ".swiper-pagination",
+            clickable: true,
+            renderBullet: function (index, className) {
+                return '<span class="' + className + '">' + (index + 1) + "</span>";
+            },
         },
     });
 </script>

@@ -137,6 +137,18 @@
     height: 202px;
 }
 
+#dne-card-demo-phonk-fridays-004 .card__description {
+    height: 202px;
+}
+
+#dne-card-demo-dark-trap-777 .card__description {
+    height: 208px;
+}
+
+#dne-card-demo-dark-trap-4 .card__description {
+    height: 204px;
+}
+
 #card-page-template {
     display: none;
 }
