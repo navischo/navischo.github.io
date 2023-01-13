@@ -149,6 +149,10 @@
     height: 204px;
 }
 
+#dne-card-deep-lofi-house .card__description {
+    height: 242px;
+}
+
 #card-page-template {
     display: none;
 }
