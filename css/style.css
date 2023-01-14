@@ -153,6 +153,10 @@
     height: 242px;
 }
 
+#dne-card-demo-chill-out .card__description {
+    height: 260px;
+}
+
 #card-page-template {
     display: none;
 }
