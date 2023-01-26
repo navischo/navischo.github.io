@@ -1,4 +1,8 @@
 /* START CUSTOM DNE-CARDS STYLES */
+#dne-card-moving {
+
+}
+
 #dne-card-i-canon .card__preview {
     max-height: 222px;
 
@@ -154,7 +158,15 @@
 }
 
 #dne-card-demo-chill-out .card__description {
-    height: 260px;
+    height: 255px;
+}
+
+#dne-card-demo-micks-tape .card__description {
+    height: 254px;
+}
+
+#dne-card-album-iron-horse .card__description {
+    height: 165px;
 }
 
 #card-page-template {
