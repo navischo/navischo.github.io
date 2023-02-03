@@ -37,13 +37,18 @@
 }
 
 #dne-card-prj-mriya .card__preview-img {
-    height: 220px;
+    /*height: 220px;*/
 }
 
 #dne-card-prj-aenigma .card__description {
     height: 89px;
 }
 
+#dne-card-class-seller .card__description {
+    position: absolute;
+    bottom: 20px;
+    width: 113px;
+}
 
 #dne-card-prj-weedian-greece .card__description {
     height: 92px;
@@ -56,6 +61,7 @@
 #dne-card-prj-various .card__description {
     height: 92px;
 }
+
 [id*=dne-card-album] .card__description {
     height: 132px;
 }
@@ -205,6 +211,72 @@ img {
 .swiper-slide[id*="dne-card-"] {
     width: 300px;
     height: 590px;
+}
+
+.js-cards-catalog {
+    max-width: 1200px;
+}
+
+.build .swiper-slide[id*="dne-card-"],
+.build .card {
+    width: 300px;
+    height: 460px;
+}
+
+.build .card__description {
+    margin: 3px 0 0;
+}
+
+.build .card__summary {
+    margin-top: 3px;
+}
+
+.build .card__last-line {
+    display: none;
+}
+
+.build #dne-card-machete .card__description {position: absolute; z-index: 1; top: 58px;}
+.build #dne-card-machete .card__preview {order: 2; margin-top: auto;}
+.build #dne-card-machete .card {display: flex; flex-direction: column;}
+
+.build #dne-card-vargus .card > * {
+    position: relative;
+    z-index: 2;
+}
+
+.build #dne-card-vargus .card__preview {
+    margin-bottom: -76px;
+    position: relative;
+    top: -45px;
+    z-index: 1;
+}
+
+.build #dne-card-prj-influence .card__preview {
+    overflow: hidden;
+    position: relative;
+    top: -5px;
+}
+
+.build #dne-card-prj-influence .card__preview-img {
+    transform: scale(1.1);
+}
+
+.build #dne-card-prj-influence .card__description {
+    position: relative;
+    top: -5px;
+}
+
+.build #dne-card-prj-vinyl-drainvoid .card__preview {
+    margin-bottom: -35px;
+}
+
+.build #dne-card-class-seller .card__preview-img {
+    margin-top: -13px;
+}
+
+.build #dne-card-class-seller .card,
+.build #dne-card-class-seller .card__preview {
+    overflow: hidden;
 }
 
 .card {
