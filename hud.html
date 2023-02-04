@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ANTI HUD</title>
+    <link
+            rel="stylesheet"
+              href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style> @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap'); @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap'); </style>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="build">
+<div id="clockdiv">
+    <div>
+        <span class="minutes"></span>
+        <div class="smalltext">Minutes</div>
+    </div>
+    <div>
+        <span class="seconds"></span>
+        <div class="smalltext">Seconds</div>
+    </div>
+</div>
+<style>
+    body{
+        text-align: center;
+        background: #00ECB9;
+        font-family: sans-serif;
+        font-weight: 100;
+    }
+
+    h1{
+        color: #396;
+        font-weight: 100;
+        font-size: 40px;
+        margin: 40px 0px 20px;
+    }
+
+    #clockdiv{
+        font-family: sans-serif;
+        color: #fff;
+        display: inline-block;
+        font-weight: 100;
+        text-align: center;
+        font-size: 30px;
+    }
+
+    #clockdiv > div{
+        padding: 10px;
+        border-radius: 3px;
+        background: #00BF96;
+        display: inline-block;
+    }
+
+    #clockdiv div > span{
+        padding: 15px;
+        border-radius: 3px;
+        background: #00816A;
+        display: inline-block;
+    }
+
+    .smalltext{
+        padding-top: 5px;
+        font-size: 16px;
+    }
+</style>
+<ul id="players-list">
+    <li class="player players-list-item">
+        <h3 class="player__id"></h3>
+        <b class="player__energy"></b>
+        <b class="player__bankroll"></b>
+    </li>
+</ul>
+<div class="js-cards-catalog card-container">
+
+</div>
+
+<div id="card-template" class="swiper-slide" data-hash="card-id">
+    <article class="card">
+        <header class="card__header">
+            <div class="card__header-left">
+                <small class="js card__id"></small>
+                <h2 class="card__title">DDJ-400</h2>
+                <small class="card__limits">Only for DJ`s</small>
+            </div>
+            <div class="card__header-right">
+                <b class="card__bonus">+2</b>
+
+            </div>
+        </header>
+        <div class="card__preview">
+            <img class="card__preview-img" src="" alt="">
+        </div>
+        <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, iste! Distinctio beatae, nostrum obcaecati, vero ipsum, doloribus minus ducimus sapiente dolores nulla dolor voluptas dolorum numquam? Reprehenderit tempore quod velit.</p>
+        <footer class="card__footer">
+            <b class="card__price">11K/400</b>
+        </footer>
+    </article>
+</div>
+
+<div id="door-card-template" class="swiper-slide" data-hash="card-id">
+    <article class="card card--door">
+        <header class="card__header">
+            <div class="card__header-left">
+                <small class="js card__id"></small>
+                <h2 class="card__title">DDJ-400</h2>
+                <small class="card__limits">Only for DJ`s</small>
+            </div>
+            <div class="card__header-right">
+                <b class="card__bonus">+2</b>
+
+            </div>
+        </header>
+        <div class="card__preview">
+            <img class="card__preview-img" src="" alt="">
+        </div>
+        <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, iste! Distinctio beatae, nostrum obcaecati, vero ipsum, doloribus minus ducimus sapiente dolores nulla dolor voluptas dolorum numquam? Reprehenderit tempore quod velit.</p>
+        <p class="card__summary">
+            Ролі: <small class="card__roles"></small>
+            Джерела прибутку: <small class="card__origins"></small>
+            <span class="card__last-line">У разі провалу: <small class="card__penalty"></small></span>
+        </p>
+        <footer class="card__footer">
+                <b class="card__budget">11K/400</b>
+                <b class="card__profit">11K/400</b>
+        </footer>
+    </article>
+</div>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script src="js/script.js"></script>
+<!-- Initialize DNE Cards -->
+<script src="js/dne-cards.js"></script>
+<script>
+    // drawDoorCards(DNEDoorArr);
+    // drawLootCards(DNELootArr);
+</script>
+<script src="js/dne-timer.js"></script>
+<script src="js/dne-player.js"></script>
+<script>
+    startGame(["navischo", "olivye", "echo", "microdoz"], 20, 30, START_STATS);
+</script>
+</body>
+</html>

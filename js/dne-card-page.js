@@ -8,7 +8,7 @@ const drawDoorCardPages = (cardsData) => {
         newCard.style.display = "block";
         newCard.id = ID;
         // drawDoorCards([cardData]);
-        newCard.querySelector(".js.card-page__title").textContent = cardData.name;
+        newCard.querySelector(".js.card-page__title").innerHTML = cardData.name;
         if (cardData.budget !== 0) {
             newCard.querySelector(".js.card-page__budget").textContent = `${cardData.budget}`;
         } else {

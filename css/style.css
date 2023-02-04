@@ -279,6 +279,55 @@ img {
     overflow: hidden;
 }
 
+.players-list-item {
+    display: none;
+}
+
+.player {
+    align-items: baseline;
+
+    font-size: 20px;
+    line-height: 1.6;
+    font-family: "Press Start 2p", cursive;
+}
+
+.player__id {
+    min-width: 200px;
+    margin: 0;
+    text-align: left;
+}
+
+.player__energy::before {
+    content: "⚡";
+
+    position: relative;
+    top: -4px;
+
+    font-size: 1.4em;
+}
+
+.player__bankroll::before {
+    content: "💳";
+
+    font-size: 2em;
+}
+
+.player__energy {
+    position: relative;
+    padding-left: 20px;
+}
+
+.player__bankroll {
+    position: relative;
+    padding-left: 54px;
+}
+
+.player__bankroll::before {
+    position: absolute;
+    left: 0;
+    top: -31px;
+}
+
 .card {
     position: relative;
 
