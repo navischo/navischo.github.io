@@ -19,6 +19,24 @@ class DNEGame {
     }
 }
 
+class DNEEvent {
+    // Инициатор
+    // Крю
+    // Ожидаемая аудитория
+    // Источники дохода
+    // Дата проведения
+    // Место
+    constructor(owner, playersArr, expectedAudience, incomeSourceArr, theDay, place) {
+        this.owner = owner;
+        this.playersArr = playersArr;
+        this.expectedAudience = expectedAudience;
+        this.incomeSourceArr = incomeSourceArr;
+        this.theDay = theDay;
+        this.place = place;
+    }
+}
+
+
 const startGame = (playersArr, maxTime, dayLenght, startStats) => {
     const playersObjectArr = [];
     playersArr.forEach((id) => {
@@ -58,4 +76,10 @@ const drawPlayer = (parentId, templateClass, playerData) => {
     newPlayerNode.style.display = "flex";
 
     parentNode.appendChild(newPlayerNode);
+}
+
+const startEvent = (owner, playersArr, expectedAudience, incomeSourceArr, theDay, place) => {
+    const newEvent = new DNEEvent(owner, playersArr, expectedAudience, incomeSourceArr, theDay, place);
+
+    return newEvent;
 }

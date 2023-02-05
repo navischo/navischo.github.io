@@ -13,69 +13,97 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="build">
-<div id="clockdiv">
-    <div>
-        <span class="minutes"></span>
-        <div class="smalltext">Minutes</div>
-    </div>
-    <div>
-        <span class="seconds"></span>
-        <div class="smalltext">Seconds</div>
+<div class="hud-bottom hud-bottom--fixed">
+    <button id="hud-btn" class="hud-btn">
+        <img src="img/img-hud-btn.png" alt="HUD" width="200" height="221">
+    </button>
+
+    <div id="hud-options" class="hud-options">
+        <ul class="hud-options-list">
+            <li class="js-start-vote hud-options-item">
+                <a href="#test-popup" class="open-popup-link">Vote</a></li>
+            <li class="hud-options-item">Trade</li>
+            <li class="hud-options-item">Shop</li>
+            <li class="js-open-stats hud-options-item">Stat</li>
+        </ul>
     </div>
 </div>
-<style>
-    body{
-        text-align: center;
-        background: #00ECB9;
-        font-family: sans-serif;
-        font-weight: 100;
-    }
 
-    h1{
-        color: #396;
-        font-weight: 100;
-        font-size: 40px;
-        margin: 40px 0px 20px;
-    }
+<aside id="hud" class="hud">
+    <h2>Does Not Exist</h2>
+    <div id="clockdiv">
+        <div>
+            <span class="minutes"></span>
+            <div class="smalltext">Minutes</div>
+        </div>
+        <div>
+            <span class="seconds"></span>
+            <div class="smalltext">Seconds</div>
+        </div>
+    </div>
+    <style>
+        body{
+            text-align: center;
+            background: #00ECB9;
+            font-family: sans-serif;
+            font-weight: 100;
+        }
 
-    #clockdiv{
-        font-family: sans-serif;
-        color: #fff;
-        display: inline-block;
-        font-weight: 100;
-        text-align: center;
-        font-size: 30px;
-    }
+        h1{
+            color: #396;
+            font-weight: 100;
+            font-size: 40px;
+            margin: 40px 0px 20px;
+        }
 
-    #clockdiv > div{
-        padding: 10px;
-        border-radius: 3px;
-        background: #00BF96;
-        display: inline-block;
-    }
+        #clockdiv{
+            font-family: sans-serif;
+            color: #fff;
+            display: inline-block;
+            font-weight: 100;
+            text-align: center;
+            font-size: 30px;
+        }
 
-    #clockdiv div > span{
-        padding: 15px;
-        border-radius: 3px;
-        background: #00816A;
-        display: inline-block;
-    }
+        #clockdiv > div{
+            padding: 10px;
+            border-radius: 3px;
+            background: #00BF96;
+            display: inline-block;
+        }
 
-    .smalltext{
-        padding-top: 5px;
-        font-size: 16px;
-    }
-</style>
-<ul id="players-list">
-    <li class="player players-list-item">
-        <h3 class="player__id"></h3>
-        <b class="player__energy"></b>
-        <b class="player__bankroll"></b>
-    </li>
-</ul>
+        #clockdiv div > span{
+            padding: 15px;
+            border-radius: 3px;
+            background: #00816A;
+            display: inline-block;
+        }
+
+        .smalltext{
+            padding-top: 5px;
+            font-size: 16px;
+        }
+    </style>
+    <ul id="players-list">
+        <li class="player players-list-item">
+            <h3 class="player__id">Player</h3>
+            <b class="player__energy">Energy</b>
+            <b class="player__bankroll">Bankroll</b>
+        </li>
+
+    </ul>
+</aside>
+
 <div class="js-cards-catalog card-container">
 
 </div>
+
+<div id="test-popup" class="white-popup mfp-hide">
+    Popup content
+</div>
+<style>
+
+</style>
 
 <div id="card-template" class="swiper-slide" data-hash="card-id">
     <article class="card">
@@ -129,11 +157,25 @@
     </article>
 </div>
 
+<!-- Magnific Popup core CSS file -->
+<link rel="stylesheet" href="libs/magnific-popup/magnific-popup.css">
+
+<!-- jQuery 1.7.2+ or Zepto.js 1.0+ -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+<!-- Magnific Popup core JS file -->
+<script src="libs/magnific-popup/jquery.magnific-popup.js"></script>
 <!-- Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
 <!-- Initialize Swiper -->
 <script src="js/script.js"></script>
+<script>
+    $('.open-popup-link').magnificPopup({
+        type:'inline',
+        midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+    });
+</script>
 <!-- Initialize DNE Cards -->
 <script src="js/dne-cards.js"></script>
 <script>
@@ -145,5 +187,6 @@
 <script>
     startGame(["navischo", "olivye", "echo", "microdoz"], 20, 30, START_STATS);
 </script>
+<script src="js/dne-hud.js"></script>
 </body>
 </html>

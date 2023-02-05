@@ -279,8 +279,129 @@ img {
     overflow: hidden;
 }
 
-.players-list-item {
+.hud-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    padding: 10px;
+
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.hud-btn--fixed {
+    position: fixed;
+    left: 50%;
+    bottom: 3px;
+    z-index: 10;
+
+    transform: translateX(-50%);
+}
+
+.hud-btn img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.hud-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    transition: .2s ease-in;
+}
+
+.hud-bottom .hud-options {
+    display: block;
+    width: 100%;
+}
+
+.hud-bottom--fixed {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+.hud-bottom--open {
+    transform: translateY(0)!important;
+}
+
+.hud {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+
     display: none;
+
+    background: rgba(0, 0, 0, .4);
+    border: 2px solid gold;
+}
+
+.hud--open {
+    display: block;
+}
+
+.hud-options {
+    display: none;
+
+    color: red;
+    background: black;
+}
+
+.hud-options--fixed {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.hud-options--open {
+    display: block;
+}
+
+.hud-options-list {
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+}
+
+.hud-options-item {
+    padding: 20px 10px;
+    border: 2px solid red;
+}
+
+.hud-options-item a,
+.hud-options-item a:active,
+.hud-options-item a:visited {
+    color: inherit;
+    text-decoration: none;
+}
+
+.white-popup {
+    position: relative;
+    background: #FFF;
+    padding: 20px;
+    width: auto;
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+.players-list-item {
+    display: flex;
+}
+
+.players-list-item:first-child {
+    border-bottom: 2px solid gold;
 }
 
 .player {
@@ -292,7 +413,7 @@ img {
 }
 
 .player__id {
-    min-width: 200px;
+    width: 70%;
     margin: 0;
     text-align: left;
 }
@@ -314,12 +435,15 @@ img {
 
 .player__energy {
     position: relative;
+    width: 15%;
     padding-left: 20px;
 }
 
 .player__bankroll {
     position: relative;
+    width: 15%;
     padding-left: 54px;
+    text-align: left;
 }
 
 .player__bankroll::before {
