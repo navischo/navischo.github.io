@@ -138,13 +138,17 @@
     justify-content: center;
 }
 
-#dne-card-demo-sub-zero .card__preview-img {
-    width: 95%;
-    /*height: 160px;*/
+#dne-card-car-basic .card__preview {
+    margin-bottom: -22px;
+}
+
+#dne-card-demo-mac-lofi .card__description {
+    /*width: 95%;*/
+    height: 160px;
 }
 
 #dne-card-demo-sub-zero .card__description {
-    height: 202px;
+    height: 70px;
 }
 
 #dne-card-demo-phonk-fridays-004 .card__description {
@@ -174,6 +178,9 @@
 #dne-card-album-iron-horse .card__description {
     height: 165px;
 }
+
+#dne-card-album-hentai  .card__description {height: 0;}
+#dne-card-album-motion-regime  .card__description {height: 0;}
 
 #card-page-template {
     display: none;
@@ -454,6 +461,7 @@ img {
 
 .card {
     position: relative;
+    overflow: hidden;
 
     box-sizing: border-box;
     width: 300px;
