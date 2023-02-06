@@ -95,17 +95,17 @@ const drawDoorCards = (cardData, specialContainer = "") => {
         const newCard = cardTemplate.cloneNode(true);
         newCard.style.display = "block";
         newCard.id = ID;
-        new Swiper(`#${ID}`, {
-            effect: "flip",
-            grabCursor: true,
-            autoplay: {
-                delay: 5000,
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-        });
+        // new Swiper(`#${ID}`, {
+        //     effect: "flip",
+        //     grabCursor: true,
+        //     autoplay: {
+        //         delay: 5000,
+        //     },
+        //     navigation: {
+        //         nextEl: '.swiper-button-next',
+        //         prevEl: '.swiper-button-prev',
+        //     },
+        // });
         newCard.querySelector(".card__title").innerHTML = cardData.name;
         newCard.querySelector(".js.card__id").textContent = `#${cardData.id}`;
         if (cardData.budget !== 0) {
@@ -129,8 +129,16 @@ const drawDoorCards = (cardData, specialContainer = "") => {
         cardContainer.appendChild(newCard);
     };
 
+
+
     cardData.forEach((DNEDoorCard) => {
-        if (DNEDoorCard.isBuild) {
+        const isBuild = document.querySelector("body").classList.contains("build");
+        console.log("is build?", isBuild);
+        if (isBuild) {
+            if (DNEDoorCard.isBuild) {
+                drawCard(cardContainer, cardTemplate, DNEDoorCard);
+            }
+        } else {
             drawCard(cardContainer, cardTemplate, DNEDoorCard);
         }
     });
@@ -218,7 +226,7 @@ const initDNELootArr = () => {
     LootArr.push(new DNELootCard("class-seller", "Селлер", "Може продавати айтеми дорожче їх собівартості, та обов'язково попросить відсоток, чим кращий продавець, тим більший. Має можливість працювати на івентах із мерчем та магазинах, щоб отримати додатковий дохід.", "https://lh3.googleusercontent.com/fWeM_q6WoqvpbeZHsyZGK3T1c7l4-xddZJJnNPF0rpEqDyIGzKWynUshmb27N7F_MOs=w2400", 1, 0, "Клас", "Може продати айтеми дорожче собівартості, та обов'язкого візьме відсоток.", "", true));
     LootArr.push(new DNELootCard("class-streamer", "Стрімер", "Може отримувати донати під час трансляцій. Чим більшу аудиторію має стрімер, тим більше верогідність отримати та розмір донатів. Має можливість працювати на івентах із мерчем, щоб отримати додатковий дохід.", "https://lh4.googleusercontent.com/uWaxdPO9xe4sZXU4UZGrMBx5hQ0GVXnV4Vk-WaqWbokv14PdbenppCzovLvbc4Rw5WM=w2400", 1, 0, "Клас"));
     LootArr.push(new DNELootCard("class-photographer", "Фотограф", "Зробить тобі якісні знімки. В істаграмі вартість будь чого росте в рази, коли має якісні знімки, будь це івент, простір або татуювання. Зробивши фото гравця ти маєш шанс згенерувати персонажа на основі його образу. Має можливість працювати на івентах, щоб принести йому більше популярності, шанс нових замовлень та отримати за це додатковий дохід.", "https://lh3.googleusercontent.com/V43LauxtU-trhnzgphBra9iro6BlfDJ3mYQfCSP6jdCkXQY2FTZsBndJvT8Cc6UM-dk=w2400", 1, 0, "Клас"));
-    LootArr.push(new DNELootCard("class-shinobi", "Шинобі", "Мистецтво Шинобі - іллюзія. Здатен вивчати дзютсу та використовувати їх у грі.", "https://lh3.googleusercontent.com/J9zfpfgBU-x_Ix5SfbLtxnJe7717J__pqa5zGGQ8l_CYeDSOB-xXvDOXcC2jv7aLePI=w2400", 1, 0, "Клас", "Здатен вивчати Дзютсу та використовувати їх на свою користь.", "", true));
+    LootArr.push(new DNELootCard("class-shinobi", "Шинобі", "Мистецтво Шинобі - іллюзія. Здатен вивчати дзютсу та використовувати їх у грі.", "https://lh3.googleusercontent.com/J9zfpfgBU-x_Ix5SfbLtxnJe7717J__pqa5zGGQ8l_CYeDSOB-xXvDOXcC2jv7aLePI=w2400", 1, 0, "Клас", "Здатен вивчати Дзютсу та використовувати їх на свою користь.", "", false));
     // Кибердека
 //
     // Драгрейсер
@@ -322,6 +330,7 @@ const initDNELootArr = () => {
     LootArr.push(new DNELootCard("demo-mac-lofi", "If Mac Miller made a Lo-Fi radio", "Демо дає можливість показати лейблам що ти хочеш записати. Можливо тобі пощастить знайти простір з якісною аппаратурою, зробити реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу. Бонус цього демо подвоюється, якщо його грати на окремій Rock сцені.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії.", "https://lh6.googleusercontent.com/__TE5qiVZ8radplr9C-_nNYXPxYLNgh0s7zZiY3Cb2LdI2cBdy5o0zp_geoHeMHLIo4=w2400", 2, 0, "Демо, 45m of Lo-Fi Hip-Hop"));
     LootArr.push(new DNELootCard("demo-420mix", "420MIX", "Демо дає можливість показати лейблам що ти хочеш записати. Можливо тобі пощастить знайти простір з якісною аппаратурою, зробити реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу. Бонус цього демо подвоюється, якщо його грати на окремій Rock сцені.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії.", "https://lh3.googleusercontent.com/DltYV5OGu4XExGUf1xrquZh4Kyukc7urY0ON2gft_m1QxFPgZWAWkSVn07P54gEq-Hk=w2400", 2, 0, "Демо, 27m of Lo-Fi Trippy Hip-Hop"));
     LootArr.push(new DNELootCard("album-iron-horse", "Iron Horse", "Альбом дає можливість поставити музику просто зараз. Це може бути цей самий альбом, або будь-який інший. Спробуй заробити гроші, використавши його під час вечірки, запису трансляції, сету або мікстейпу. Бонус цього демо подвоюється, якщо його грати на окремій Rock сцені.<br> Комбінуй альбоми в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", "https://lh4.googleusercontent.com/aQFjkqVVes7TM3o5-ar3XiL-bR-bXy7ap8IGqzG1XSTJAGo_WOoZ1u-OIJx7LDFUg4Y=w2400", 1, 0, "Альбом, 44m of Psychodelic Rock"));
+    LootArr.push(new DNELootCard("demo-driftin-4", "D R I F T I N 4", "Демо дає можливість показати лейблам що ти хочеш записати. Можливо тобі пощастить знайти простір з якісною аппаратурою, зробити реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу. Бонус цього демо подвоюється, якщо його грати на окремій Rock сцені.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії.", "https://lh3.googleusercontent.com/MQ6U8FWLiJNjYhhJI2xJdOukxaapEH5P9DGD3tJKz9MAdNovEKjCobIdZK1-m-si8Ig=w2400", 2, 0, "Альбом, 52m of Phonk Trap"));
     // LootArr.push(new DNELootCard("i-blank-hoodie", "Бланковий худік", "", "", 1, 1500, ""));
     // LootArr.push(new DNELootCard("money", "Гроші", "Коли вони дзвонять, зазвичай беруть слухавку", "", 1, "∞", ""));
     // LootArr.push(new DNELootCard("leak", "Злив", "Старий добрий спосіб швидко та надійно стати цікавою  та популярною. Обов'язково мати камеру що знімає в 1080p, шакальними відео з туалету вже нікого не зацікавиш. Хочеш посилити ефект? Замов рекламу)", "", 10, 0, "Тільки для дівчат"));
@@ -411,11 +420,19 @@ const drawLootCards = (cardData) => {
 // drawCard(cardContainer, cardTemplate, DNELootArr[0]);
 // drawCard(cardContainer, cardTemplate, DNELootArr[1]);
 
-    cardData.forEach((DNELootCard) => {
-        if (DNELootCard.isBuild) {
+    const drawIt = (DNELootCard) => {
+        const isBuild = document.querySelector("body").classList.contains("build");
+        console.log("is build?", isBuild);
+        if (isBuild) {
+            if (DNELootCard.isBuild) {
+                drawCard(cardContainer, cardTemplate, DNELootCard);
+            }
+        } else {
             drawCard(cardContainer, cardTemplate, DNELootCard);
         }
-    });
+    }
+
+    cardData.forEach(drawIt);
 }
 
 
