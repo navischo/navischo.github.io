@@ -220,6 +220,13 @@ img {
     height: 590px;
 }
 
+.js-tv iframe {
+    max-width: 100%;
+    max-height: 100%;
+    width: 100vw;
+    height: 100vh;
+}
+
 .build .js-cards-catalog {
     max-width: 1200px;
 }
