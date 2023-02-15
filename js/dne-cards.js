@@ -81,7 +81,7 @@ const initDNEDoorArr = () => {
     // DoorsArr.push(new ContractCard('Обдолбанный голем', 'Можешь биться или пройти мимо, плюнув на обдолбанного голема и его сокровища. Исключение: вкусно выглядящим хафлингам придётся биться.', 14, 'Его пробивает на хавку. Ты съеден и мёртв.', '4 сокровища'));
     // DoorsArr.push(new ContractCard('Амазонка', 'Не бьётся с женщинами; вместо боя дает одно сокровище.', 8, 'Тебя вздула женщина! Ущемление гордости в тяжелой форме. Потеряй все свои классы. Если у тебя нет класса, потеряй 3 уровня.', '2 сокровища'));
 
-    console.log(DoorArr);
+    // console.log(DoorArr);
     return DoorArr;
 }
 
@@ -93,7 +93,7 @@ const drawDoorCards = (cardData, specialContainer = "") => {
 
     const drawCard = (cardContainer, cardTemplate, cardData) => {
         const ID = `dne-card-${cardData.id}`;
-        console.log(ID, `#${ID}`, cardContainer, cardTemplate, cardData);
+        // console.log(ID, `#${ID}`, cardContainer, cardTemplate, cardData);
         const newCard = cardTemplate.cloneNode(true);
         newCard.style.display = "block";
         newCard.id = ID;
@@ -127,7 +127,7 @@ const drawDoorCards = (cardData, specialContainer = "") => {
         }
         newCard.querySelector(".card__penalty").textContent = `${cardData.penalty}`;
         newCard.querySelector(".card__bonus").textContent = `${cardData.level}`;
-        console.log(cardContainer, `${specialContainer} .card-container`);
+        // console.log(cardContainer, `${specialContainer} .card-container`);
         cardContainer.appendChild(newCard);
     };
 
@@ -135,7 +135,7 @@ const drawDoorCards = (cardData, specialContainer = "") => {
 
     cardData.forEach((DNEDoorCard) => {
         const isBuild = document.querySelector("body").classList.contains("build");
-        console.log("is build?", isBuild);
+        // console.log("is build?", isBuild);
         if (isBuild) {
             if (DNEDoorCard.isBuild) {
                 drawCard(cardContainer, cardTemplate, DNEDoorCard);
@@ -389,7 +389,7 @@ const initDNELootArr = () => {
 
 
 
-    console.log(LootArr);
+    // console.log(LootArr);
     return LootArr;
 }
 
@@ -399,7 +399,7 @@ const drawLootCards = (cardData) => {
     const cardContainer = document.querySelector(".card-container");
     const cardTemplate = document.querySelector("#card-template");
     const drawCard = (cardContainer, cardTemplate, cardData) => {
-        console.log(cardContainer, cardTemplate, cardData);
+        // console.log(cardContainer, cardTemplate, cardData);
         const newCard = cardTemplate.cloneNode(true);
         newCard.style.display = "block";
         newCard.id = `dne-card-${cardData.id}`;
@@ -433,7 +433,7 @@ const drawLootCards = (cardData) => {
 
     const drawIt = (DNELootCard) => {
         const isBuild = document.querySelector("body").classList.contains("build");
-        console.log("is build?", isBuild);
+        // console.log("is build?", isBuild);
         if (isBuild) {
             if (DNELootCard.isBuild) {
                 drawCard(cardContainer, cardTemplate, DNELootCard);
