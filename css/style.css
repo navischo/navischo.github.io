@@ -227,14 +227,24 @@ img {
     height: 100vh;
 }
 
+.build {
+    margin-top: 100px;
+}
+
 .build .js-cards-catalog {
-    max-width: 1200px;
+    /*max-width: 1200px;*/
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .build .swiper-slide[id*="dne-card-"],
 .build .card {
     width: 300px;
     height: 460px;
+}
+
+.build .swiper-slide[id*="dne-card-"]:nth-child(9n) {
+    margin-bottom: 420px;
 }
 
 .build .card__description {
