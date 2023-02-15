@@ -22,16 +22,12 @@
     <span class="js-toggle-chip chip chip--active">#card-id</span>
     <div class="catalog-controls__item">
         <b>Doors</b>
-        <section class="js-doors js-chip-list chip-list">
-            <span class="js-clear-all-doors chip chip--visible chip--active">Clear</span>
-        </section>
+        <section class="js-doors js-chip-list chip-list"></section>
     </div>
 
     <div class="catalog-controls__item">
         <b>Items</b>
-        <section class="js-items js-chip-list chip-list">
-            <span class="js-clear-all-items chip chip--visible chip--active">Clear</span>
-        </section>
+        <section class="js-items js-chip-list chip-list"></section>
     </div>
 </div>
 <style>
@@ -195,10 +191,10 @@
 <script src="js/dne-cards.js"></script>
 <script src="js/dne-chips.js"></script>
 <script>
-    drawDoorCards(DNEDoorArr);
+    // drawDoorCards(DNEDoorArr);
     drawLootCards(DNELootArr);
-    drawChips(DNEDoorArr, ".js-doors");
-    drawChips(DNELootArr, ".js-items");
+    // drawChips(DNEDoorArr, ".js-doors");
+    // drawChips(DNELootArr, ".js-items");
 </script>
 </body>
 </html>

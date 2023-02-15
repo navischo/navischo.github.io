@@ -13,6 +13,8 @@ catalogControlsToggleArr.forEach((catalogControlsToggle) => {
 const drawChips = (cardData, parentSelector = ".js-chip-list") => {
     const chipsParent = document.querySelector(parentSelector);
     const chipTemplate = document.querySelector(".js-toggle-chip");
+    const clearAllDoorsBtn = document.querySelector(".js-clear-all-doors");
+    const clearAllItemsBtn = document.querySelector(".js-clear-all-items");
     cardData.forEach((chip) => {
         if (chip.isBuild) {
             const newChip = chipTemplate.cloneNode(true);
@@ -27,4 +29,25 @@ const drawChips = (cardData, parentSelector = ".js-chip-list") => {
             chipsParent.appendChild(newChip);
         }
     });
+
+    const toggleAllDoors = () => {
+        const allChips = Array.from(clearAllDoorsBtn.parentElement.querySelectorAll(".chip:not(.js-clear-all-doors)"));
+        allChips.forEach((chip) => {
+            chip.classList.remove("chip--active");
+            console.log("ChipID", chip, `#dne-card-${chip.id.slice(9)}`)
+            document.querySelector(`#dne-card-${chip.id.slice(9)}`).classList.add("fw-d-none-i");
+        });
+    };
+
+    const toggleAllItems = () => {
+        const allChips = Array.from(clearAllItemsBtn.parentElement.querySelectorAll(".chip:not(.js-clear-all-items)"));
+        allChips.forEach((chip) => {
+            chip.classList.remove("chip--active");
+            console.log("ChipID", chip, `#dne-card-${chip.id.slice(9)}`)
+            document.querySelector(`#dne-card-${chip.id.slice(9)}`).classList.add("fw-d-none-i");
+        });
+    };
+
+    clearAllDoorsBtn.addEventListener("click", toggleAllDoors);
+    clearAllItemsBtn.addEventListener("click", toggleAllItems);
 }
