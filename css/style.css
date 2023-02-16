@@ -1,4 +1,61 @@
 /* START CUSTOM DNE-CARDS STYLES */
+#dne-card-elias-jensen .card__preview {
+    max-height: 265px;
+}
+
+#dne-card-elias-jensen .card__description {
+    color: white;
+}
+
+#dne-card-cleo .card__description {
+    position: absolute;
+    bottom: 10px;
+    color: white;
+}
+
+#dne-card-iron-alchemic .card__description {
+    position: absolute;
+    top: 70px;
+}
+
+#dne-card-chaos-green .card__preview {
+    margin-top: 100px;
+}
+
+#dne-card-chaos-green .card__description {
+    position: absolute;
+    top: 70px;
+}
+
+#dne-card-shadow .card__description {
+    position: absolute;
+    top: 50px;
+}
+
+#dne-card-make-live .card__preview {
+    margin-top: 45px;
+}
+
+#dne-card-make-live .card__description {
+    position: absolute;
+    top: 71px;
+}
+
+#dne-card-god-wtf .card__description {
+    position: relative;
+    top: -9px;
+}
+
+#dne-card-know-better .card__description {
+    position: relative;
+    top: -9px;
+}
+
+#dne-card-philosopher-stone .card {
+    background: black;
+    color: white;
+}
+
 #dne-card-moving {
 
 }
