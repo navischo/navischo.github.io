@@ -16,6 +16,12 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="build">
+<div class="hud-top hud-top--fixed">
+    <div class="js-balance units">
+        <a class="js-energy-balance units-energy">40</a>
+        <a class="js-cash-balance units-cash">12000</a>
+    </div>
+</div>
 <div class="hud-bottom hud-bottom--fixed">
     <button id="hud-btn" class="hud-btn">
         <img src="img/img-hud-btn.png" alt="HUD" width="200" height="221">
@@ -187,9 +193,11 @@
 </script>
 <script src="js/dne-timer.js"></script>
 <script src="js/dne-player.js"></script>
+<script src="js/dne-hud.js"></script>
 <script>
     startGame(["navischo", "olivye", "echo", "microdoz"], 20, 30, START_STATS);
+
+    updBalance(39, 11111);
 </script>
-<script src="js/dne-hud.js"></script>
 </body>
 </html>

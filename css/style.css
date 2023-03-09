@@ -13,6 +13,20 @@
     color: white;
 }
 
+#dne-card-lady-falko .card__description {
+    position: absolute;
+    bottom: 66px;
+
+    padding-left: 59px;
+
+    color: white;
+    text-shadow: 1px 3px 9px black;
+}
+
+#dne-card-sansa-stark .card__preview {
+    max-width: 89%;
+}
+
 #dne-card-iron-alchemic .card__description {
     position: absolute;
     top: 70px;
@@ -101,10 +115,62 @@
     height: 89px;
 }
 
+#dne-card-zer0 .card__description {
+    position: absolute;
+    top: 59px;
+}
+
+#dne-card-prj-ee-in-the-rain .card__preview-img {
+    position: relative;
+    left: -41px;
+}
+
+#dne-card-prj-ee-in-the-rain .card__summary {
+    position: absolute;
+    top: 67px;
+    right: 2px;
+    width: 81px;
+}
+
+#dne-card-prj-ee-everything-you-wish .card__preview-img {
+    position: relative;
+    left: -41px;
+}
+
+#dne-card-prj-ee-everything-you-wish .card__summary {
+    position: absolute;
+    top: 67px;
+    right: 2px;
+    width: 77px;
+    z-index: 3;
+}
+
+#dne-card-prj-ee-everything-you-wish .card::before {
+    content: "";
+
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    bottom: 0;
+    z-index: 2;
+
+    display: block;
+    width: 70px;
+    height: 296px;
+
+    background: white;
+
+}
+
 #dne-card-class-seller .card__description {
     position: absolute;
-    bottom: 20px;
-    width: 113px;
+    top: 132px;
+    width: 169px;
+}
+
+#dne-card-class-seller .card__preview {
+    position: relative;
+    right: -59px;
 }
 
 #dne-card-prj-weedian-greece .card__description {
@@ -416,6 +482,39 @@ img {
 
 .hud-bottom--open {
     transform: translateY(0)!important;
+}
+
+.hud-top {
+    display: flex;
+    justify-content: flex-end;
+
+    font-family: "Press Start 2p", cursive;
+}
+
+.hud-top--fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 10px;
+    z-index: 10;
+}
+
+.units-energy::before {
+    content: "⚡";
+
+    position: relative;
+    top: -2px;
+
+    font-size: 1.4em;
+}
+
+.units-cash::before {
+    content: "💳";
+
+    position: relative;
+    top: -4px;
+
+    font-size: 2em;
 }
 
 .hud {

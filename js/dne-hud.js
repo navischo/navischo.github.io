@@ -4,7 +4,7 @@ const hudBottom = document.querySelector(".hud-bottom");
 
 if (hudBottom) {
   const hudHeight = hudOptionsNode.clientHeight;
-  console.log("hudHeight", hudHeight);
+  // console.log("hudHeight", hudHeight);
   hudBottom.style.transform = `translateY(${hudHeight}px)`
 }
 
@@ -37,4 +37,18 @@ openStatBtn.addEventListener("click", () => {
     hud.classList.add("hud--open");
     hudOptionsNode.classList.remove("hud-options--open");
     hudBottom.classList.remove("hud-bottom--open");
-})
+});
+
+const energy = document.querySelector(".js-energy-balance");
+const cash = document.querySelector(".js-cash-balance");
+
+const updBalance = (energyVal, cashVal) => {
+    energy.innerHTML = energyVal;
+    cash.innerHTML = cashVal;
+    return {
+        energy: energyVal,
+        cash: cashVal
+    }
+};
+
+
