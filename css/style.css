@@ -7,6 +7,11 @@
     color: white;
 }
 
+#dne-card-olivye .card__preview {
+    position: absolute;
+    bottom: 0;
+}
+
 #dne-card-cleo .card__description {
     position: absolute;
     bottom: 10px;
@@ -25,6 +30,30 @@
 
 #dne-card-sansa-stark .card__preview {
     max-width: 89%;
+}
+
+#dne-card-class-jeweller .card__description {
+    position: absolute;
+    bottom: 3px;
+    color: white;
+    text-shadow: 1px 3px 9px black;
+}
+
+#dne-card-class-barber .card__description {
+    position: absolute;
+    top: 140px;
+    color: white;
+    text-shadow: 1px 3px 9px black;
+}
+
+#dne-card-class-barber .card::after {
+    content: "Ти програв.";
+
+    display: block;
+    padding: 3px;
+    margin: 3px 0 0;
+
+    text-align: right;
 }
 
 #dne-card-iron-alchemic .card__description {
@@ -77,6 +106,25 @@
 #dne-card-i-canon .card__preview {
     max-height: 222px;
 
+}
+
+#dne-card-cdj3000 .card__preview {
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+#dne-card-djms11 .card__preview {
+    max-width: 175px;
+    margin: 0 auto;
+}
+
+#dne-card-plx500 .card__preview {
+    padding-left: 5px;
+}
+
+#dne-card-ddjrev1 .card__preview {
+    max-width: 137px;
+    margin: 0 auto;
 }
 
 #dne-card-i-canon .card__preview-img {
@@ -168,9 +216,31 @@
     width: 169px;
 }
 
+#dne-card-class-streamer .card__description {
+    position: relative;
+    top: -5px;
+}
+
 #dne-card-class-seller .card__preview {
     position: relative;
     right: -59px;
+}
+
+#dne-card-wolf .card {
+    background: black;
+    color: white;
+}
+
+#dne-card-make-dj-set .card__header {
+    position: absolute;
+    color: white;
+    text-shadow: 1px 3px 9px black;
+}
+
+#dne-card-make-piece .card__header {
+    position: absolute;
+    color: white;
+    text-shadow: 1px 3px 9px black;
 }
 
 #dne-card-prj-weedian-greece .card__description {
