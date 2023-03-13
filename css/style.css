@@ -47,7 +47,7 @@
 }
 
 #dne-card-class-barber .card::after {
-    content: "Ти програв.";
+    content: "You loose";
 
     display: block;
     padding: 3px;
@@ -556,7 +556,7 @@ img {
 
 .hud-top {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
 
     font-family: "Press Start 2p", cursive;
 }
@@ -718,6 +718,7 @@ img {
     font-family: "JetBrains Mono", monospace;
     font-size: 14px;
     color: #000;
+    text-align: left;
 
     background: white;
 }
@@ -755,6 +756,7 @@ img {
 .card__id {
     position: absolute;
     top: 0;
+    left: 6px;
     font-size: 6px;
 }
 
@@ -881,6 +883,31 @@ h2 {
 
     transform: rotate(90deg);
     transform-origin: left;
+}
+
+.hand {
+    position: fixed;
+    bottom: 0;
+    z-index: 11;
+
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+
+.hand .swiper-slide {
+    position: static;
+
+    transform: translateY(86%);
+    transition: .2s ease-in;
+
+}
+
+.hand .swiper-slide:hover {
+    position: static;
+
+    transform: translateY(0);
 }
 
 /* END DNE */
