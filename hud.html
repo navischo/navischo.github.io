@@ -16,15 +16,25 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="build" style="background-image: url('img/screen-nohud--braindance.jpg'); background-size: cover; background-position: center;">
+<h1 class="score">
+    <span id="player-score">5</span> vs <span id="need-score">12</span>
+</h1>
+<div class="player-obj inventory">
+    player:<br>&nbsp;&nbsp;{<br>
+    &nbsp;&nbsp;class:<br>&nbsp;&nbsp;{&nbsp;
+        <span id="player-class-list" class="inventory-items"></span>
+      &nbsp;},
+      <br>&nbsp;&nbsp;crew:<br>&nbsp;&nbsp;{&nbsp;
+        <span id="player-crew-list" class="inventory-items"></span>
+      &nbsp;}
+    <br>}
+</div>
 <div class="inventory">
     inventory: <br>{<br>
-    <span class="inventory-items">
-        <a class="inventory-item" href="#">GOPRO</a>
-        <a class="inventory-item" href="#">Joint</a>
-        <a class="inventory-item" href="#">Ambition</a>
-    </span>
+    <span id="inventory-list" class="inventory-items"></span>
     }
 </div>
+<div id="inventory-card-display"></div>
 <div id="table" class="table">
     <div id="dne-card-alise" class="swiper-slide" data-hash="dne-card-alise" style="display: block;">
         <article class="card">
@@ -500,6 +510,8 @@
         midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
     });
 </script>
+<script src="js/dne-utils.js"></script>
+<script src="js/dne-score.js"></script>
 <!-- Initialize DNE Cards -->
 <script src="js/dne-cards.js"></script>
 <script>
@@ -511,6 +523,7 @@
 <script src="js/dne-hud.js"></script>
 <script src="js/dne-hand.js"></script>
 <script src="js/dne-table.js"></script>
+<script src="js/dne-inventory.js"></script>
 <script>
     startGame(["navischo", "olivye", "echo", "microdoz"], 20, 30, START_STATS);
 
@@ -522,6 +535,10 @@
     initTable();
 
     let currentPlayer = game.playersArr[0];
+    initInventory();
+    initProfile();
+    initScore();
+    updScore();
 
     console.log(`currentPlayer is ${currentPlayer.id}`, currentPlayer.hand);
     updHand(currentPlayer.hand);

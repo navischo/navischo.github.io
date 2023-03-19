@@ -897,6 +897,22 @@ h2 {
     transform: scale(.5);
 }
 
+.score {
+    position: fixed;
+    top: 0;
+    left: 50%;
+
+    margin: 0;
+    padding-top: 8px;
+
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+    text-align: center;
+    transform: translateX(-50%);
+    
+    
+}
+
 .inventory {
     position: fixed;
     right: 0;
@@ -905,15 +921,36 @@ h2 {
 
     padding: 5px;
 
+    font-family: "JetBrains Mono", monospace;
     color: white;
     text-align: right;
 }
 
-.inventory-item, .inventory-item:hover, .inventory-item:active, .inventory-item:visited {
-    display: block;
+.inventory.player-obj {
+    right: auto;
+    left: 0;
 
+    text-align: left;
+}
+
+.inventory-item {
+    display: block;
+}
+
+.player-obj .inventory-item {
+    display: inline-block;
+}
+
+.inventory-item:hover, .inventory-item:active, .inventory-item:visited {
     color: inherit;
     text-decoration: none;
+}
+
+.inventory-item:hover,
+.inventory-item.selected {
+    background-color: white;
+    color: black;
+    cursor: pointer;
 }
 
 .inventory-item::after {
@@ -921,8 +958,16 @@ h2 {
 
 }
 
-.air {
+.inventory-item:last-child::after {
+    content: "";
 
+}
+
+#inventory-card-display {
+    position: fixed;
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
 }
 
 .hand {

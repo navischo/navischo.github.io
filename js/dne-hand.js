@@ -1,8 +1,3 @@
-// Функция которая возвращает случайное число
-function getRandomInt(max) {
-  return Math.floor(Math.random() * max);
-}
-
 const initHand = (playerObj) => {
 	playerObj.hand = [];
 
@@ -20,5 +15,8 @@ const initHand = (playerObj) => {
 
 	// раздать карты всем игрокам
 	// использовать карту
+	// playerObj.useCard = (id) => {
+		
+	// }
 	// дораздать N кол-во карт
 }

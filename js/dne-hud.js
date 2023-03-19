@@ -61,9 +61,11 @@ const updHand = (cardsArr) => {
     cardsInYourHand.forEach(drawedCard => {
         drawedCard.addEventListener("click", (e) => {
             const id = drawedCard.id.substring(9);
-            
-            appendCardsOnTable([getCardById(id)]);
-            game.table.push([getCardById(id)]);
+            const newCard = getCardById(id);
+            appendCardsOnTable([newCard]);
+            game.table.push([newCard]);
+            currentPlayer.score = currentPlayer.score + newCard.bonus;
+            updScore();
 
             bottomHandNode.querySelector(`#dne-card-${id}`).remove();
             currentPlayer.hand.splice(currentPlayer.hand.findIndex(card => card.id === id), 1);
