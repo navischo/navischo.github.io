@@ -51,4 +51,16 @@ const updBalance = (energyVal, cashVal) => {
     }
 };
 
+const bottomHandNode = document.querySelector("#bottom-hand");
+const updHand = (cardsArr) => {
+    console.log("cardsArr", cardsArr);
+    bottomHandNode.innerHTML = "";
+    drawLootCards(cardsArr);
+    // cardsArr.forEach(cardData => {
+    //   drawLootCards(cardData);
+    // });
+    
+    // bottomHandNode.appendChild(cardsArr);
+}
+
 

@@ -93,7 +93,7 @@
         </article>
     </div>
 </div>
-<div class="hand">
+<!-- <div id="top-hand" class="hand">
     <div id="dne-card-prj-ee-dragobrat" class="swiper-slide" data-hash="card-id" style="display: block;">
         <article class="card card--door">
             <header class="card__header">
@@ -216,8 +216,8 @@
             </footer>
         </article>
     </div>
-</div>
-<div class="hand">
+</div> -->
+<div id="bottom-hand" class="card-container hand">
     <div id="dne-card-make-piece" class="swiper-slide" data-hash="dne-card-make-piece" style="display: block;">
         <article class="card">
             <header class="card__header">
@@ -418,9 +418,9 @@
     </ul>
 </aside>
 
-<div class="js-cards-catalog card-container">
+<!-- <div class="js-cards-catalog card-container">
 
-</div>
+</div> -->
 
 <div id="test-popup" class="white-popup mfp-hide">
     Popup content
@@ -509,10 +509,20 @@
 <script src="js/dne-timer.js"></script>
 <script src="js/dne-player.js"></script>
 <script src="js/dne-hud.js"></script>
+<script src="js/dne-hand.js"></script>
 <script>
     startGame(["navischo", "olivye", "echo", "microdoz"], 20, 30, START_STATS);
 
     updBalance(39, 11111);
+
+    game.playersArr.forEach((player) => {
+        initHand((player));
+    });
+
+    console.log(game.playersArr[0].hand);
+    updHand(game.playersArr[0].hand);
+
+    console.log("Game initiation complete", game);
 </script>
 </body>
 </html>

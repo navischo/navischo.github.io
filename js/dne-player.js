@@ -36,7 +36,7 @@ class DNEEvent {
     }
 }
 
-
+let game;
 const startGame = (playersArr, maxTime, dayLenght, startStats) => {
     const playersObjectArr = [];
     playersArr.forEach((id) => {
@@ -48,10 +48,10 @@ const startGame = (playersArr, maxTime, dayLenght, startStats) => {
     playersObjectArr.forEach((playerObj) => {
         drawPlayer("players-list", "players-list-item", playerObj);
     });
-    const newGame = new DNEGame(playersObjectArr);
+    game = new DNEGame(playersObjectArr);
     // Отрисовка
-    console.log("newGame", newGame);
-    return newGame;
+    console.log("Game initiation started", game);
+    return game;
 }
 
 const initPlayer = (id, energy, bankroll, classArr) => {
@@ -61,7 +61,7 @@ const initPlayer = (id, energy, bankroll, classArr) => {
         bankroll: bankroll,
         classArr: classArr
     };
-    console.log("newPlayer", newPlayer);
+    // console.log("newPlayer", newPlayer);
     return newPlayer;
 };
 
