@@ -569,6 +569,10 @@ img {
     z-index: 10;
 }
 
+.units {
+    color: white;
+}
+
 .units-energy::before {
     content: "⚡";
 
@@ -885,9 +889,45 @@ h2 {
     transform-origin: left;
 }
 
+.table {
+    display: flex;
+    padding: 0 10px;
+    padding-top: 60px;
+
+    transform: scale(.5);
+}
+
+.inventory {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    padding: 5px;
+
+    color: white;
+    text-align: right;
+}
+
+.inventory-item, .inventory-item:hover, .inventory-item:active, .inventory-item:visited {
+    display: block;
+
+    color: inherit;
+    text-decoration: none;
+}
+
+.inventory-item::after {
+    content: ",";
+
+}
+
+.air {
+
+}
+
 .hand {
     position: fixed;
-    bottom: 0;
+    bottom: -460px;
     z-index: 11;
 
     display: flex;
@@ -899,7 +939,7 @@ h2 {
 .hand .swiper-slide {
     position: static;
 
-    transform: translateY(86%);
+    transform: translateY(-14%);
     transition: .2s ease-in;
 
 }
@@ -907,7 +947,13 @@ h2 {
 .hand .swiper-slide:hover {
     position: static;
 
-    transform: translateY(0);
+    transform: translateY(-100%);
+}
+
+.hand + .hand {
+    z-index: 10;
+    bottom: 67px;
+    transform: translateY(100%);
 }
 
 /* END DNE */
