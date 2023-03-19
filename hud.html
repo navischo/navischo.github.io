@@ -25,7 +25,7 @@
     </span>
     }
 </div>
-<div class="table">
+<div id="table" class="table">
     <div id="dne-card-alise" class="swiper-slide" data-hash="dne-card-alise" style="display: block;">
         <article class="card">
             <header class="card__header">
@@ -510,6 +510,7 @@
 <script src="js/dne-player.js"></script>
 <script src="js/dne-hud.js"></script>
 <script src="js/dne-hand.js"></script>
+<script src="js/dne-table.js"></script>
 <script>
     startGame(["navischo", "olivye", "echo", "microdoz"], 20, 30, START_STATS);
 
@@ -518,9 +519,12 @@
     game.playersArr.forEach((player) => {
         initHand((player));
     });
+    initTable();
 
-    console.log(game.playersArr[0].hand);
-    updHand(game.playersArr[0].hand);
+    let currentPlayer = game.playersArr[0];
+
+    console.log(`currentPlayer is ${currentPlayer.id}`, currentPlayer.hand);
+    updHand(currentPlayer.hand);
 
     console.log("Game initiation complete", game);
 </script>

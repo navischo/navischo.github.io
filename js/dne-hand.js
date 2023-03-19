@@ -1,10 +1,10 @@
+// Функция которая возвращает случайное число
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}
+
 const initHand = (playerObj) => {
 	playerObj.hand = [];
-
-	// Функция которая возвращает случайное число
-	function getRandomInt(max) {
-	  return Math.floor(Math.random() * max);
-	}
 
 	// Выбираем случайную карту, пушим в руку
 	for (let i = 0; i < 5;) {

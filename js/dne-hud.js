@@ -56,11 +56,19 @@ const updHand = (cardsArr) => {
     console.log("cardsArr", cardsArr);
     bottomHandNode.innerHTML = "";
     drawLootCards(cardsArr);
-    // cardsArr.forEach(cardData => {
-    //   drawLootCards(cardData);
-    // });
-    
-    // bottomHandNode.appendChild(cardsArr);
+
+    const cardsInYourHand = bottomHandNode.querySelectorAll(".swiper-slide");
+    cardsInYourHand.forEach(drawedCard => {
+        drawedCard.addEventListener("click", (e) => {
+            const id = drawedCard.id.substring(9);
+            
+            appendCardsOnTable([getCardById(id)]);
+            game.table.push([getCardById(id)]);
+
+            bottomHandNode.querySelector(`#dne-card-${id}`).remove();
+            currentPlayer.hand.splice(currentPlayer.hand.findIndex(card => card.id === id), 1);
+        });
+    });
 }
 
 

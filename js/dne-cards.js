@@ -445,8 +445,8 @@ const initDNELootArr = () => {
 
 const DNELootArr = initDNELootArr();
 
-const drawLootCards = (cardData) => {
-    const cardContainer = document.querySelector(".card-container");
+const drawLootCards = (cardData, parent = ".card-container") => {
+    const cardContainer = document.querySelector(parent);
     const cardTemplate = document.querySelector("#card-template");
     const drawCard = (cardContainer, cardTemplate, cardData) => {
         // console.log(cardContainer, cardTemplate, cardData);
