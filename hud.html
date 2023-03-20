@@ -525,7 +525,10 @@
 <script src="js/dne-table.js"></script>
 <script src="js/dne-inventory.js"></script>
 <script>
-    startGame(["navischo", "olivye", "echo", "microdoz"], 20, 30, START_STATS);
+    startGame([
+        "navischo", // lvl 1
+        "luna" // lvl 1
+        ], 20, 30, START_STATS);
 
     updBalance(39, 11111);
 
@@ -539,6 +542,7 @@
     initProfile();
     initScore();
     updScore();
+    compareScore();
 
     console.log(`currentPlayer is ${currentPlayer.id}`, currentPlayer.hand);
     updHand(currentPlayer.hand);
