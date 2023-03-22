@@ -364,7 +364,7 @@
 </div>
 
 <aside id="hud" class="hud">
-    <h2>Does Not Exist</h2>
+    <h2 class="hud__h2" style="color: white">Does Not Exist</h2>
     <div id="clockdiv">
         <div>
             <span class="minutes"></span>
@@ -406,15 +406,20 @@
             display: inline-block;
         }
 
-        #clockdiv div > span{
-            padding: 15px;
-            border-radius: 3px;
-            background: #00816A;
+        #clockdiv div > span {
             display: inline-block;
+            padding: 15px;
+            
+            font-family: 'Press Start 2P', cursive;
+
+            background: #00816A;
+            border-radius: 3px;
         }
 
         .smalltext{
             padding-top: 5px;
+
+            font-family: 'JetBrains Mono', monospace;
             font-size: 16px;
         }
     </style>
@@ -530,7 +535,7 @@
         "luna" // lvl 1
         ], 20, 30, START_STATS);
 
-    updBalance(39, 11111);
+    updBalance(44, 40000);
 
     game.playersArr.forEach((player) => {
         initHand((player));

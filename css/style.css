@@ -511,6 +511,8 @@ img {
     border-radius: 50%;
     overflow: hidden;
     cursor: pointer;
+
+    color: white;
 }
 
 .hud-btn--fixed {
@@ -526,6 +528,10 @@ img {
     width: 100%;
     height: auto;
     object-fit: contain;
+}
+
+.hud__h2 {
+    color: white;
 }
 
 .hud-bottom {
@@ -551,6 +557,8 @@ img {
 }
 
 .hud-bottom--open {
+    z-index: 19;
+    
     transform: translateY(0)!important;
 }
 
@@ -597,6 +605,7 @@ img {
     left: 20px;
     right: 20px;
     bottom: 20px;
+    z-index: 20;
 
     display: none;
 
@@ -668,6 +677,7 @@ img {
     font-size: 20px;
     line-height: 1.6;
     font-family: "Press Start 2p", cursive;
+    color: white;
 }
 
 .player__id {
