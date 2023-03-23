@@ -558,7 +558,7 @@ img {
 
 .hud-bottom--open {
     z-index: 19;
-    
+
     transform: translateY(0)!important;
 }
 
@@ -980,6 +980,11 @@ h2 {
     transform: translateY(-50%);
 }
 
+.hand-scroll {
+    width: 100vw;
+    overflow-x: scroll;
+}
+
 .hand {
     position: fixed;
     bottom: -460px;
@@ -1009,6 +1014,158 @@ h2 {
     z-index: 10;
     bottom: 67px;
     transform: translateY(100%);
+}
+
+.mfp-bg--trs {
+    background: transparent;
+}
+.quest-modal {
+  padding: 20px;
+  padding-bottom: 80px;
+  background: #0e1116;
+}
+.img-responsive {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.fw-main-bg {
+  background-color: #3a1316;
+}
+
+.fw-main-color {
+  color: #ff6d65;
+  text-shadow: 1px 0px 4px #ff6d65;
+}
+
+.fw-p {
+  padding-left: 6px;
+  margin-top: 10px;
+  color: #ff6d65;
+  font-family: 'JetBrains Mono', monospace;
+  text-shadow: 1px 0px 4px #ff6d65;
+}
+
+.fw-check-list {
+  margin: 16px 0;
+}
+
+.fw-check-list > .fw-check-row:first-child {
+  box-shadow: inset 0 1px 0 0 #5e0c08;  
+}
+
+.fw-check-list > .fw-check-row:last-child {
+  box-shadow: inset 0 -1px 0 0 #5e0c08;
+}
+
+.fw-check-list > .fw-check-row:first-child, 
+.fw-check-list > .fw-check-row:last-child {
+  box-shadow: inset 0 -1px 0 0 #5e0c08, inset 0 1px 0 0 #5e0c08;
+}
+
+.fw-check-row {
+  
+  padding: 20px 26px;
+  padding-left: 26px;
+  border: none;
+  
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1em;
+  color: #53d3dc;
+  text-transform: uppercase;
+  letter-spacing: -1.2px;
+  text-shadow: 1px 0px 2px #53d3dc;
+  
+  cursor: pointer;
+  background: transparent;
+}
+
+.fw-check-row:hover {
+  background-color: rgba(40, 8, 7, .6);
+}
+
+.fw-check-row::before {
+  content: '';
+  
+  position: relative;
+  left: -3px;
+  bottom: -4px;
+  
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 20px;
+  
+  box-shadow: inset 0 0 0 1px #ff6d65;
+  background: #0e1116;
+}
+
+.fw-check-row--checked::before {
+  background: #ff6d65;
+  box-shadow: 0 0 4px 0px #ff6d65;
+}
+
+.fw-h1 {
+  color: #ff6d65;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: -1.2px;
+  text-shadow: 1px 0px 10px #ff6d65;
+}
+
+.fw-jetbrains-font {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.btn-reset {
+  padding: 0;
+  border: none;
+  
+  font-size: 0;
+  
+  background: transparent;
+}
+
+.fw-submit {
+  color: #4ed0d7;
+  box-shadow: 0 0 0 1px #4ed0d7;
+  background: #194045;
+  
+  display: block;
+  max-width: 480px;
+  width: 100%;
+  padding: 7px;
+  
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.3em;
+  color: #53d3dc;
+  text-transform: uppercase;
+  letter-spacing: -1.2px;
+  text-shadow: 1px 0px 2px #53d3dc;
+  
+  cursor: pointer;
+}
+
+.quest {
+  max-width: 480px;
+  padding: 18px 30px;
+}
+
+.quest__header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.quest__img {
+    width: 50px;
+    height: 96px;
+}
+
+.quest__title {
+    margin: 5px 0;
+    font-size: 24px;
 }
 
 /* END DNE */
