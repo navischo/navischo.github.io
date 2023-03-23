@@ -1168,7 +1168,213 @@ h2 {
     font-size: 24px;
 }
 
+#clockdiv {
+    font-family: sans-serif;
+    color: #fff;
+    display: inline-block;
+    font-weight: 100;
+    text-align: center;
+    font-size: 30px;
+}
+
+#clockdiv > div {
+    padding: 10px;
+    border-radius: 3px;
+    background: #00BF96;
+    display: inline-block;
+}
+
+#clockdiv div > span {
+    display: inline-block;
+    padding: 15px;
+    
+    font-family: 'Press Start 2P', cursive;
+
+    background: #00816A;
+    border-radius: 3px;
+}
+
+.smalltext {
+    padding-top: 5px;
+
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 16px;
+}
+
 /* END DNE */
+
+/* START VHS-SCREEN */
+
+.red {
+    fill: rgb(255, 0, 0);
+}
+
+.green {
+    fill: rgb(0, 255, 0);
+}
+
+.blue {
+    fill: rgb(0, 0, 255);
+}
+
+.tv {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    background: linear-gradient(to bottom, hsl(255, 0%, 20%), hsl(255, 0%, 50%));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    filter: url(#crt-filter); /* *** This is where I added the filter *** */
+}
+
+/* Example 1. 404 Page */
+.error-title {
+    color: white;
+    font-size: calc(10px + 15vmin);
+    margin: 0em;
+}
+
+.error-scnd-title {
+    color: white;
+    font-size: calc(10px + 8vmin);
+    font-weight: 400;
+    margin: 0 0 0.3em 0;
+}
+
+.rainbow-rect {
+    width: 80%;
+    height: 10%;
+    background: linear-gradient(270deg, #ff0000, #ff00ad, #000cff, #00fffa, #1fff00, #fffe00, #ff6c00, #ff0000, #ff00ad, #000cff, #00fffa);
+    background-size: 350% 350%;
+    animation: rainbowGradientAnim 8s linear infinite;
+}
+
+@keyframes rainbowGradientAnim {
+  0% {
+            background-position: 0% 50%;
+    }
+  100% {
+            background-position: 98% 50%;
+    }
+}
+
+/* Example 2. House Commercial */
+.background-house {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+.commercial-heading {
+    color: red;
+    background-color: white;
+    font-weight: 900;
+    font-size: calc(10px + 6vmin);
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.guy-img {
+    width: 30vmin;
+    position: absolute;
+    left: 11.5vmin;
+}
+
+.price {
+    font-weight: 900;
+    font-size: calc(10px + 8vmin);
+    background: linear-gradient(to bottom left, blue, darkblue);
+    width: 45vmin;
+    padding: 0.5em 1.5em;
+    text-align: center;
+    clip-path: polygon(38% 18%, 54% 3%, 68% 19%, 87% 15%, 79% 40%, 100% 53%, 86% 69%, 93% 96%, 64% 85%, 43% 100%, 29% 83%, 5% 94%, 14% 68%, 5% 44%, 19% 34%, 11% 4%);
+    position: absolute;
+    right: 3vmin;
+}
+
+.price > span {
+    background: -webkit-linear-gradient(yellow, orange);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.price > span > span {
+    background: -webkit-linear-gradient(cyan, greenyellow);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.button {
+    background: linear-gradient(to bottom right, yellow, orange);
+    border-radius: 1vmin;
+    font-size: calc(10px + 5vmin);
+    font-family: Helvetica;
+    font-weight: 700;
+    cursor: pointer;
+    position: absolute;
+    bottom: 15vmin;
+    left: 10vmin;
+}
+
+.button:hover {
+    transform: scale(1.03);
+}
+
+.button:active {
+    transform: scale(0.97);
+}
+
+/* stripes */
+.stripe {
+    width: 100%;
+    height: 20vmin;
+    filter: blur(40px);
+    opacity: 0.1;
+    position: absolute;
+    top: -100%;
+    animation: stripeAnim 10s linear infinite;
+}
+
+.red-stripe {
+    background-color: rgb(255, 0, 0);
+    animation-delay: 5s;
+}
+
+.blue-stripe {
+    background-color: rgb(0, 0, 255);
+}
+
+@keyframes stripeAnim {   
+    50% {
+        top: 110%;
+    }
+    100% {
+        top: 110%;
+    }
+}
+
+/* credit styling */
+.credit {
+    position: absolute;
+    bottom: 0;
+    background-color: white;
+    padding: 0.1em 0.3em;
+    font-size: calc(5px + 1.2vmin);
+}
+
+.credit > a {
+    color: blue;
+}
+
+/* END VHS-SCREEN */
 
 /* START ANIMINSTA */
 

@@ -16,9 +16,145 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="build" style="background-image: url('img/screen-nohud--braindance.jpg'); background-size: cover; background-position: center;">
+    <div class="vhs-screen">
+        <svg width="100%" height="100%">
+            <defs>
+                <!-- create a pattern with some phosphor dots for our base tile (I used Illustrator for this) -->
+                <pattern id="phosphor-dot-fill" width="11.875" height="4.25" patternUnits="userSpaceOnUse">
+                <g id="phosphor-dots" transform="scale(0.25)">
+                    <rect class="red" x="0.95" y="1.5" width="8.63" height="20" rx="4.31"/>
+                    <rect class="green" x="10.8" y="1.5" width="8.63" height="20" rx="4.31"/>
+                    <rect class="blue" x="20.29" y="1.5" width="8.63" height="20" rx="4.31"/>
+                    <path class="red" d="M31,5.89A4.24,4.24,0,0,0,35.33,10h0a4.23,4.23,0,0,0,4.31-4.11V0H31Z"/>
+                    <path class="green" d="M40.87,5.89a4.31,4.31,0,0,0,8.62,0V0H40.87Z"/>
+                    <path class="blue" d="M50.36,0V5.89A4.23,4.23,0,0,0,54.67,10h0A4.24,4.24,0,0,0,59,5.89V0Z"/>
+                    <path class="red" d="M35.33,13h0A4.24,4.24,0,0,0,31,17.11V23h8.63V17.11A4.23,4.23,0,0,0,35.33,13Z"/>
+                    <path class="green" d="M45.18,13a4.23,4.23,0,0,0-4.31,4.11V23h8.62V17.11A4.23,4.23,0,0,0,45.18,13Z"/>
+                    <path class="blue" d="M59,17.11A4.24,4.24,0,0,0,54.67,13h0a4.23,4.23,0,0,0-4.31,4.11V23H59Z"/>
+                </g>
+                </pattern>
+                
+                <!-- fill a rectangle the size of the whole element with the phosphor dot pattern -->
+                <rect x="0" y="0" id="phosphor-filled-rect" width="100%" height="100%" fill="url(#phosphor-dot-fill)"/>
+                
+                <!-- create base rectangles for glitch animation -->
+                <rect id="left-offset-rect" x="0" y="-100" width="100%" height="50%"/>
+                <rect id="right-offset-rect" x="0" y="-100" width="100%" height="50%"/>
+                
+                <filter id="crt-filter">
+                    <!-- get reference to the phosphor dot screen we created above -->
+                    <feImage xlink:href="#phosphor-filled-rect" result="GRID_PATTERN" />
+                    
+                    <!-- get references to the rectangles we created above -->
+                    <feImage xlink:href="#left-offset-rect" result="LEFT_RECT_SHAPE"/>
+                    <feImage xlink:href="#right-offset-rect" result="RIGHT_RECT_SHAPE"/>
+                    
+                    <!-- clip the source graphic to each rectangle -->
+                    <feComposite in="SourceGraphic" in2="LEFT_RECT_SHAPE" operator="in" result="LEFT_RECT_IMAGE"/>
+                    <feComposite in="SourceGraphic" in2="RIGHT_RECT_SHAPE" operator="in" result="RIGHT_RECT_IMAGE"/>
+                    
+                    <!-- offset each rectangle to right/left -->
+                    <feOffset in="LEFT_RECT_IMAGE" dx="-6" dy="0" result="LEFT_OFFSET_RECT"/>
+                    <feOffset in="RIGHT_RECT_IMAGE" dx="6" dy="0" result="RIGHT_OFFSET_RECT"/>
+                    
+                    <!-- merge the source graphic and the offset rectangles together -->
+                    <feMerge result="MERGED_SOURCE">
+                        <feMergeNode in="SourceGraphic"/>
+                        <feMergeNode in="LEFT_OFFSET_RECT" />
+                        <feMergeNode in="RIGHT_OFFSET_RECT" />
+                    </feMerge>
+                    
+                    <!-- blur the graphic a little to give a more realistic look -->
+                    <feGaussianBlur in="MERGED_SOURCE" stdDeviation="1" result="BLURRED_SOURCE"/>
+                    
+                    <!-- isolate each rgb color in the phosphor dots grid -->
+                    <feColorMatrix
+                        in="GRID_PATTERN"
+                type="matrix"
+                values="1 0 0 0 0
+                        0 0 0 0 0
+                        0 0 0 0 0
+                        1 0 0 0 0" result="RED"/>
+                    
+                    <feColorMatrix
+                        in="GRID_PATTERN"
+                type="matrix"
+                values="0 0 0 0 0
+                        0 1 0 0 0
+                        0 0 0 0 0
+                        0 1 0 0 0" result="GREEN"/>
+                    
+                    <feColorMatrix
+                        in="GRID_PATTERN"
+                type="matrix"
+                values="0 0 0 0 0
+                        0 0 0 0 0
+                        0 0 1 0 0
+                        0 0 1 0 0" result="BLUE"/>
+                    
+                    <!-- clip the blurred source graphic to the channels we just isolated -->
+                    <feComposite in="BLURRED_SOURCE" in2="RED" operator="atop" result="COMPOSITED_RED"/>
+                    <feComposite in="BLURRED_SOURCE" in2="GREEN" operator="atop" result="COMPOSITED_GREEN"/>
+                    <feComposite in="BLURRED_SOURCE" in2="BLUE" operator="atop" result="COMPOSITED_BLUE"/>
+                    
+                    <!-- bring out only the corresponding channel from our clipped source graphic -->
+                    <feColorMatrix
+                        in="COMPOSITED_RED"
+                type="matrix"
+                values="1 0 0 0 0
+                        0 0 0 0 0
+                        0 0 0 0 0
+                        1 0 0 0 0" result="RED_FINAL"/>
+                    
+                    <feColorMatrix
+                        in="COMPOSITED_GREEN"
+                type="matrix"
+                values="0 0 0 0 0
+                        0 1 0 0 0
+                        0 0 0 0 0
+                        0 1 0 0 0" result="FINAL_GREEN"/>
+                    
+                    <feColorMatrix
+                        in="COMPOSITED_BLUE"
+                type="matrix"
+                values="0 0 0 0 0
+                        0 0 0 0 0
+                        0 0 1 0 0
+                        0 0 1 0 0" result="FINAL_BLUE"/>
+                    
+                    <!-- merge all the channels back together -->
+                    <feMerge result="MERGED_TV">
+                        <feMergeNode in="RED_FINAL"/>
+                        <feMergeNode in="FINAL_GREEN"/>
+                        <feMergeNode in="FINAL_BLUE"/>
+                    </feMerge>
+                    
+                    <!-- blur for a more realistic look -->
+                    <feGaussianBlur stdDeviation="1.3" result="BLUR"/>
+                    
+                    <!-- brighten all the pixels a bit -->
+                    <feColorMatrix
+                type="matrix"
+                values="2 0 0 0 0
+                        0 2 0 0 0
+                        0 0 2 0 0
+                        0 0 0 2 0"
+                        result="FINAL_CRT"/>
+                </filter>
+            </defs>
+        </svg>
+        
+        <div class="tv">
+            <div class="stripe red-stripe"></div>
+            <div class="stripe blue-stripe"></div>
+            
+        </div>
+    </div>
+
 <h1 class="score">
     <span id="player-score">5</span> vs <span id="need-score">12</span>
 </h1>
+
 <div class="player-obj inventory">
     player:<br>&nbsp;&nbsp;{<br>
     &nbsp;&nbsp;class:<br>&nbsp;&nbsp;{&nbsp;
@@ -535,6 +671,7 @@
     });
 </script>
 <script src="js/dne-utils.js"></script>
+<script src="js/dne-vhs-screen.js"></script>
 <script src="js/dne-score.js"></script>
 <!-- Initialize DNE Cards -->
 <script src="js/dne-cards.js"></script>
