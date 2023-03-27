@@ -17,8 +17,8 @@ const initScore = () => {
 // 
 const updScore = (bonus = 0) => {
 	currentPlayer.score = currentPlayer.score + +bonus;
-	playerScoreNode.innerHTML = currentPlayer.score;
-	needScoreNode.innerHTML = 36;
+	playerScoreNode.value = currentPlayer.score;
+	needScoreNode.value = 36;
 }
 
 const compareScore = () => {
@@ -29,4 +29,17 @@ const compareScore = () => {
 		console.log(YOU_WIN);
 	}
 }
+
+// const scoreValArr = document.querySelectorAll(".js-score-val");
+// const editScore = (scoreValNode) => {
+// 		scoreValNode.innerHTML = `
+// 			<input class="js-score-val-input" type="number">
+// 			<button class="js-score-val-submit">
+// 		`;
+// 		scoreValNode.removeEventListener("click", editScore);
+// 	};
+
+// scoreValArr.forEach((scoreValNode) => {
+	// scoreValNode.addEventListener("click", editScore);
+// });
 
