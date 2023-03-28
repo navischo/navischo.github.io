@@ -7,7 +7,7 @@ const initScore = () => {
 	let soundPoints = 18+3+3+6+15; //  саунд
 	let lootPoints = 4+9; // аппаратура
 	currentPlayer.score = crewPoints + soundPoints + lootPoints;
-	console.log("currentPlayer", currentPlayer, currentPlayer.score);
+	// console.log("currentPlayer", currentPlayer, currentPlayer.score);
 // 	currentPlayer.classArr.forEach((card) => {
 // 		console.log("card", card);
 // 		updScore(+card.bonus);

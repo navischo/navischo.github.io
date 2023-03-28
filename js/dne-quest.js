@@ -6,4 +6,3 @@ checkRow.addEventListener("click", () => {
   checkRow.classList.toggle("fw-check-row--checked");
 });
 
-console.log(checkRow);

@@ -40,20 +40,27 @@ openStatBtn.addEventListener("click", () => {
 });
 
 const energy = document.querySelector(".js-energy-balance");
-const cash = document.querySelector(".js-cash-balance");
+const bankroll = document.querySelector(".js-bankroll-balance");
 
-const updBalance = (energyVal, cashVal) => {
+const updBalance = (energyVal, bankrollVal) => {
     energy.innerHTML = energyVal;
-    cash.innerHTML = cashVal;
+    bankroll.innerHTML = bankrollVal;
     return {
         energy: energyVal,
-        cash: cashVal
+        bankroll: bankrollVal
     }
 };
 
+const STATS_ID = {
+    energy: "energy",
+    bankroll: "bankroll",
+    playerScore: "playerScore",
+    versusScore: "versusScore"
+}
+
 const statsToEditSelectors = {
     energy: ".js-energy-balance",
-    bankroll: ".js-cash-balance",
+    bankroll: ".js-bankroll-balance",
     playerScore: "#player-score",
     versusScore: "#versus-score"
 }

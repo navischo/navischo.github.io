@@ -1,8 +1,24 @@
 const displaySelector = "#inventory-card-display";
 const inventoryCardDisplay = document.querySelector(displaySelector);
 const inventoryList = document.querySelector("#inventory-list");
+const playerClassList = document.querySelector("#player-class-list");
+const playerCrewList = document.querySelector("#player-crew-list");
 
-const appentCardToInventory = (cardData, parentNode = inventoryList) => {
+const cardNodesByType = {
+  inventory: inventoryList,
+  classArr: playerClassList,
+  crew: playerCrewList
+}
+
+const CARD_TYPES = {
+  inventory: "inventory", // loot
+  class: "classArr",
+  crew: "crew"
+}
+
+const appentCardToInventory = (cardData, cardType = CARD_TYPES.inventory) => {
+
+
   const newListItem = document.createElement("a");
   newListItem.classList.add("inventory-item");
   newListItem.id = `dne-card-${cardData.id}`;
@@ -25,24 +41,33 @@ const appentCardToInventory = (cardData, parentNode = inventoryList) => {
 	}
   });
 
-  parentNode.appendChild(newListItem);
-  currentPlayer.inventory.push(cardData);
+  currentPlayer[cardType].push(cardData);
+  cardNodesByType[cardType].appendChild(newListItem);
 
   return newListItem;
 }
 
-const initInventory = () => {
-  currentPlayer.inventory = [];
-  appentCardToInventory(getCardById("djflx6"));
-  appentCardToInventory(getCardById("i-gamer-sound"));
+const initInventory = (type = CARD_TYPES.inventory) => {
+  if (currentPlayer[type].length) {
+    currentPlayer[type].forEach((card) => {
+      appentCardToInventory(getCardById(card.id), type);
+    });
+  }
+
+  // if (currentPlayer.crew.length) {
+  //   currentPlayer.crew.forEach((card) => {
+  //     appentCardToInventory(getCardById(card.id));
+  //   });
+  // }
+  // currentPlayer.inventory = [];
+  // appentCardToInventory(getCardById("djflx6"));
+  // appentCardToInventory(getCardById("i-gamer-sound"));
 }
 
-const playerClassList = document.querySelector("#player-class-list");
-const playerCrewList = document.querySelector("#player-crew-list");
 const initProfile = () => {
-  currentPlayer.crew = [];
-  appentCardToInventory(getCardById("class-dj"), playerClassList);
+  // currentPlayer.crew = [];
+  // appentCardToInventory(getCardById("class-dj"), CARD_TYPES.class);
 
-  appentCardToInventory(getCardById("machete"), playerCrewList);
-  appentCardToInventory(getCardById("tusk"), playerCrewList);
+  // appentCardToInventory(getCardById("machete"), CARD_TYPES.crew);
+  // appentCardToInventory(getCardById("tusk"), CARD_TYPES.crew);
 };

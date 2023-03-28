@@ -55,19 +55,20 @@
     <div class="units">
         <div class="js-balance">
             <a class="js-energy-balance units-energy">40</a>
-            <a class="js-cash-balance units-cash">12000</a>
+            <a class="js-bankroll-balance units-bankroll">12000</a>
         </div>
         <div class="controls">
             <button class="js-get-cards">getCardsInHand(5);</button>
             <button class="js-get-one-card">getOneMore();</button>
             <button><a href="#set-stat-popup" class="js-set-stat open-popup-link">setStat();</a></button>
+            <button><a href="#find-card-by-id-popup" class="js-find-card-by-id open-popup-link">findCardById();</a></button>
+            <button onclick="saveGame()">saveGame();</button>
+            <button onclick="loadSave()">loadSave();</button>
         </div>
     </div>
 
 </div>
 <div class="hud-bottom hud-bottom--fixed">
-
-
     <div id="hud-options" class="hud-options">
         <ul class="hud-options-list">
             <li class="js-start-vote hud-options-item">
@@ -110,12 +111,21 @@
 
 <!-- <div class="js-cards-catalog card-container"></div> -->
 
-<div id="set-stat-popup" class="crew-modal white-popup mfp-hide">
+<div id="find-card-by-id-popup" class="card-by-id-popup white-popup mfp-hide">
+    <div>
+        <input class="js-find-card-by-id-input" type="text">
+        <button class="js-find-card-by-id-submit">Search</button>
+    </div>
+    <div class="js-find-card-by-id-container card-by-id-container"></div>
+    <button class="js-find-card-by-id-take-btn">Take it</button>
+</div>
+
+<div id="set-stat-popup" class="white-popup mfp-hide">
     <input class="js-set-stat-input" type="number">
     <button class="js-set-energy-stat">energy</button>
-    <button>cash</button>
-    <button>yourScore</button>
-    <button>versusScore</button>
+    <button class="js-set-bankroll-stat">bankroll</button>
+    <button class="js-set-playerScore-stat">yourScore</button>
+    <button class="js-set-versusScore-stat">versusScore</button>
 </div>
 
 <div id="crew-popup" class="crew-modal white-popup mfp-hide">
@@ -359,12 +369,12 @@
     // drawLootCards(DNELootArr);
 </script>
 <script src="js/dne-timer.js"></script>
+<script src="js/dne-save.js"></script>
 <script src="js/dne-player.js"></script>
 <script src="js/dne-hud.js"></script>
 <script src="js/dne-hand.js"></script>
 <script src="js/dne-table.js"></script>
 <script src="js/dne-inventory.js"></script>
-<script src="js/dne-save.js"></script>
 <script>
     startGame([
         "navischo", // lvl 1
@@ -379,7 +389,9 @@
 
     let currentPlayer = game.playersArr[0];
     initInventory();
-    initProfile();
+    initInventory(CARD_TYPES.class);
+    initInventory(CARD_TYPES.crew);
+    // initProfile();
     initScore();
     updScore();
     compareScore();
@@ -387,33 +399,74 @@
     console.log(`currentPlayer is ${currentPlayer.id}`, currentPlayer.hand);
     updHand(currentPlayer.hand);
 
-    const onSetEnergyBtnsClick = () => {
-        setStat(statsToEditSelectors.energy, () => {
-            currentPlayer.energy = +setStatInput.value;
+    const setEnergyDataOriginCallback = () => currentPlayer.energy = +setStatInput.value;
+    const setBankrollDataOriginCallback = () => currentPlayer.bankroll = +setStatInput.value;
+    const setPlayerScoreDataOriginCallback = () => currentPlayer.bankroll = +setStatInput.value;
+    const setVersusScoreDataOriginCallback = () => currentPlayer.bankroll = +setStatInput.value;
+
+    const initSetScoreBtns = (statId, setDataOriginCallback) => {
+        const onSetEnergyBtnsClick = () => {
+            setStat(statsToEditSelectors[statId], setEnergyDataOriginCallback);
+        }
+
+        const setEnergyBtns = document.querySelectorAll(`.js-set-${statId}-stat`);
+
+        setEnergyBtns.forEach((setEnergyBtn) => {
+            setEnergyBtn.addEventListener("click", onSetEnergyBtnsClick);
         });
     }
 
-    const setEnergyBtns = document.querySelectorAll(".js-set-energy-stat");
+    initSetScoreBtns(STATS_ID.energy, setEnergyDataOriginCallback);
+    initSetScoreBtns(STATS_ID.bankroll, setBankrollDataOriginCallback);
+    initSetScoreBtns(STATS_ID.playerScore, setPlayerScoreDataOriginCallback);
+    initSetScoreBtns(STATS_ID.versusScore, setVersusScoreDataOriginCallback);
 
-    setEnergyBtns.forEach((setEnergyBtn) => {
-        setEnergyBtn.addEventListener("click", onSetEnergyBtnsClick);
-    });
+    const findCardByIdInput = document.querySelector(".js-find-card-by-id-input");
+    const findCardByIdBtn = document.querySelector(".js-find-card-by-id-submit");
+    const findCardByIdContainerSelector = ".js-find-card-by-id-container";
+    let lastFindedCard;
 
-    // setStat(13333, ".js-cash-balance", () => {
-    //     currentPlayer.energy = 13333;
-    // });
+    const findCardById = () => {
+        const findedCard = getCardById(findCardByIdInput.value);
 
-    // setStat(66, "#player-score", () => {
-    //     currentPlayer.score = 66;
-    // });
+        if (findedCard) {
+            console.log("I find a card", findedCard);
+            lastFindedCard = findedCard;
+            document.querySelector(findCardByIdContainerSelector).innerHTML = "";
+            drawLootCards([findedCard], findCardByIdContainerSelector);
+        }
+    }
 
-    // setStat(71, "#versus-score", () => {
-    //     game.versusScore = 71;
-    // });
+    findCardByIdBtn.addEventListener("click", findCardById);
 
-    saveStorage.setItem('myGame', JSON.stringify(game));
-    const myGame = localStorage.getItem('myGame');
-    console.log("Game saved", JSON.parse(myGame));
+    const takeFindedCardBtn = document.querySelector(".js-find-card-by-id-take-btn");
+
+    const takeFindedCard = () => {
+        if (lastFindedCard) {
+            console.log(`${currentPlayer.id}, маєш нову карту "${lastFindedCard.name}"`, lastFindedCard);
+            switch (lastFindedCard.type) {
+              case "npc":
+                appentCardToInventory(lastFindedCard, CARD_TYPES.crew);
+                console.log("Додано до команди");
+                break;
+              case "loot":
+                appentCardToInventory(lastFindedCard);
+                console.log("Додано до інвентарю");
+                break;
+              case "class":
+                appentCardToInventory(lastFindedCard, CARD_TYPES.class);
+                console.log("Додано до класів");
+                break;
+              default:
+                appentCardToInventory(lastFindedCard);
+                console.log(`Type of this card is ${lastFindedCard.type}, added in your inventory`);
+            }
+        }
+    };
+
+    takeFindedCardBtn.addEventListener("click", takeFindedCard);
+
+    // saveGame();
 
     console.log("Game initiation complete", game);
 </script>

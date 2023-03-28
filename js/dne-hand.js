@@ -54,7 +54,7 @@ btnGetOneMore.addEventListener("click", () => {
 const bottomHandNode = document.querySelector("#bottom-hand");
 
 const updHand = (cardsArr) => {
-    console.log("cardsArr", cardsArr);
+    // console.log("cardsArr", cardsArr);
     bottomHandNode.innerHTML = "";
     drawLootCards(cardsArr);
 

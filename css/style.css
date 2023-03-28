@@ -600,13 +600,29 @@ img {
     font-size: 1.4em;
 }
 
-.units-cash::before {
+.units-bankroll::before {
     content: "💳";
 
     position: relative;
     top: -4px;
 
     font-size: 2em;
+}
+
+#set-stat-popup {
+    max-width: 520px;
+}
+
+#find-card-by-id-popup {
+    max-width: 340px;
+}
+
+.card-by-id-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-top: 10px;
 }
 
 .controls {

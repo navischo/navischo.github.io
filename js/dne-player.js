@@ -38,20 +38,26 @@ class DNEEvent {
 
 let game;
 const startGame = (playersArr, maxTime, dayLenght, startStats) => {
-    const playersObjectArr = [];
-    playersArr.forEach((id) => {
-        console.log(`Player ${id} joined the game`);
-       playersObjectArr.push(initPlayer(id, startStats.energy, startStats.bankroll, []));
-    });
-    setTimer(maxTime);
-    // todo В зависимости от времени игры менять время суток: надпись и фон
-    playersObjectArr.forEach((playerObj) => {
-        drawPlayer("players-list", "players-list-item", playerObj);
-    });
-    game = new DNEGame(playersObjectArr);
-    // Отрисовка
-    console.log("Game initiation started", game);
-    return game;
+    const savedGame = saveStorage.getItem('myGame');
+    if (savedGame) {
+        console.log("savedGame", savedGame);
+        loadSave();
+    } else {
+        const playersObjectArr = [];
+        playersArr.forEach((id) => {
+            console.log(`Player ${id} joined the game`);
+           playersObjectArr.push(initPlayer(id, startStats.energy, startStats.bankroll, []));
+        });
+        setTimer(maxTime);
+        // todo В зависимости от времени игры менять время суток: надпись и фон
+        playersObjectArr.forEach((playerObj) => {
+            drawPlayer("players-list", "players-list-item", playerObj);
+        });
+        game = new DNEGame(playersObjectArr);
+        // Отрисовка
+        console.log("Game initiation started", game);
+        return game;
+    }
 }
 
 const initPlayer = (id, energy, bankroll, classArr) => {
@@ -59,7 +65,9 @@ const initPlayer = (id, energy, bankroll, classArr) => {
         id: id,
         energy: energy,
         bankroll: bankroll,
-        classArr: classArr
+        classArr: classArr,
+        crew: [],
+        inventory: []
     };
     // console.log("newPlayer", newPlayer);
     return newPlayer;
