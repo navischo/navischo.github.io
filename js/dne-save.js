@@ -1,0 +1,1 @@
+const saveStorage = window.localStorage;

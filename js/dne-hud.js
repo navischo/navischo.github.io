@@ -51,26 +51,20 @@ const updBalance = (energyVal, cashVal) => {
     }
 };
 
-const bottomHandNode = document.querySelector("#bottom-hand");
-const updHand = (cardsArr) => {
-    console.log("cardsArr", cardsArr);
-    bottomHandNode.innerHTML = "";
-    drawLootCards(cardsArr);
-
-    const cardsInYourHand = bottomHandNode.querySelectorAll(".swiper-slide");
-    cardsInYourHand.forEach(drawedCard => {
-        drawedCard.addEventListener("click", (e) => {
-            const id = drawedCard.id.substring(9);
-            const newCard = getCardById(id);
-            appendCardsOnTable([newCard]);
-            game.table.push([newCard]);
-            currentPlayer.score = currentPlayer.score + newCard.bonus;
-            updScore();
-
-            bottomHandNode.querySelector(`#dne-card-${id}`).remove();
-            currentPlayer.hand.splice(currentPlayer.hand.findIndex(card => card.id === id), 1);
-        });
-    });
+const statsToEditSelectors = {
+    energy: ".js-energy-balance",
+    bankroll: ".js-cash-balance",
+    playerScore: "#player-score",
+    versusScore: "#versus-score"
+}
+const setStatBtn = document.querySelector(".js-set-stat");
+const setStatInput = document.querySelector(".js-set-stat-input");
+const setStat = (nodeSelector, updDataOriginCallback) => {
+    const parent = document.querySelector(nodeSelector);
+    parent.innerHTML = setStatInput.value;
+    updDataOriginCallback();
 }
 
 
+
+// setStatBtn.addEventListener

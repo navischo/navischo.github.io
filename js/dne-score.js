@@ -1,5 +1,5 @@
 const playerScoreNode = document.querySelector("#player-score");
-const needScoreNode = document.querySelector("#need-score");
+const versusScoreNode = document.querySelector("#versus-score");
 
 // todo добавить бонус от класса и инвентаря
 const initScore = () => {
@@ -7,7 +7,7 @@ const initScore = () => {
 	let soundPoints = 18+3+3+6+15; //  саунд
 	let lootPoints = 4+9; // аппаратура
 	currentPlayer.score = crewPoints + soundPoints + lootPoints;
-// 	console.log("currentPlayer.classArr", currentPlayer.classArr);
+	console.log("currentPlayer", currentPlayer, currentPlayer.score);
 // 	currentPlayer.classArr.forEach((card) => {
 // 		console.log("card", card);
 // 		updScore(+card.bonus);
@@ -17,12 +17,12 @@ const initScore = () => {
 // 
 const updScore = (bonus = 0) => {
 	currentPlayer.score = currentPlayer.score + +bonus;
-	playerScoreNode.value = currentPlayer.score;
-	needScoreNode.value = 36;
+	playerScoreNode.innerHTML = currentPlayer.score;
+	versusScoreNode.innerHTML = game.versusScore;
 }
 
 const compareScore = () => {
-	if (currentPlayer.score > needScoreNode.innerHTML) {
+	if (currentPlayer.score > versusScoreNode.innerHTML) {
 		const LEVEL_COUNT = 2;
 		const LOOT_COUNT = 15;
 		const YOU_WIN = `You made it. Get ${LOOT_COUNT} treasure and ${LEVEL_COUNT} levels!`
