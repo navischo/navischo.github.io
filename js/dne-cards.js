@@ -21,8 +21,7 @@ class DNELootCard extends DNECard {
 }
 
 class DNEDoorCard extends DNECard {
-    constructor(id, name, description, img, level, budget, client, roles, penalty, profit, profitOrigins, longline, qr,
-                isBuild, type = "door") {
+    constructor(id, name, description, img, level, budget, client, roles, penalty, profit, profitOrigins, longline, qr, isBuild, type = "door") {
         super(id, name, description, img);
         this.level = level;
         this.budget = budget;
@@ -137,7 +136,6 @@ const drawDoorCards = (cardData, specialContainer = "") => {
     };
 
 
-
     cardData.forEach((DNEDoorCard) => {
         const isBuild = document.querySelector("body").classList.contains("build");
         // console.log("is build?", isBuild);
@@ -150,7 +148,6 @@ const drawDoorCards = (cardData, specialContainer = "") => {
         }
     });
 }
-
 
 
 const initDNELootArr = () => {
@@ -169,11 +166,11 @@ const initDNELootArr = () => {
     LootArr.push(new DNELootCard("ddjrev1", "DDJ-REV1", "Дозволяє зводити дві стежки, задовольняючи потреби 100% аудиторії та підвищуючи задоволення діджеїв від івенту до високого рівня. З ним починаючі артисти готові грати безкоштовно", "https://lh6.googleusercontent.com/bCCZKzLEoTr1u-IZlLjIlJUhGc7tE_H7YlxQVYs6-RKfarQLmOnExKK_e2gBIh0Ezd8=w2400", 2, "17К/400", "Бонус для DJ-їв", "Дозволяє зводити дві стежки, модифікувати та записувати музику.", "", true, "loot"));
     LootArr.push(new DNELootCard("djflx6", "DJ-FLX6", "Дозволяє зводити чотири стежки, задовольняючи потреби 100% аудиторії та підвищуючи задоволення діджеїв від івенту до високого рівня. З ним починаючі артисти готові грати безкоштовно", "https://lh4.googleusercontent.com/KV3fJtCjjs85CosfaTKUf_9px7PL119Gm60ImACWyKEcZr47izhkTZoSXkeTodhBv0Q=w2400", 4, "36К/700", "Бонус для DJ-їв", "Дозволяє зводити чотири стежки, модифікувати та записувати музику.", "", true, "loot"));
     LootArr.push(new DNELootCard("ddjxp2", "DDJ-XP2", "Додає сетапу ще 32 перформанс пади, що дозволять гнучкіше маніпулювати та модифікувати стежки на льоту. З ним починаючі артисти готові грати безкоштовно", "https://lh3.googleusercontent.com/IAkFezRRdHo3SI4bKJf2MhUi5Pn6hcNFKdjZ2Sohw1Tltj_rCNGjEb6gfSOPuxoZKhw=w2400", 2, "19К/300", "Бонус для DJ-їв", "Додає сетапу ще 32 перформанс пади, що дозволять гнучкіше маніпулювати та модифікувати стежки на льоту.", "", true, "loot"));
-    
+
     const AORUS_SHORTLINE = "Відкриває можливість в режимі реального часу переглядати цифровий свій цифровий худ, статистику гравця та можливість зберігати прогрес в LocalStorage. Дає особливі здібності для кожного класу."; // todo добавить возможность шерить на других игроков
     const AORUS_LONGLINE = `Портативний компьютер на прямому нейронному інтерфейсі, дозволяє пірнати в Кібер-простір, отримуючи так чином доступ до усіх переваг доступних профессійним Нетраннерам. ${AORUS_SHORTLINE}`;
     LootArr.push(new DNELootCard("aorus5-se4", "AORUS 5 SE4", AORUS_LONGLINE, "https://lh3.googleusercontent.com/-8zozTgk_gMZXuEodcSS5zaBawwHmRZU-0OO9ym3ZOiy3CAYComQSPZqHgZrE_5WXak=w2400", 3, "66 999", "", AORUS_SHORTLINE, "", true, "loot")); // todo додати в майбутньому каталог, систему прокачки та особливі здібності для кожного классу, що має цей айтем
-    
+
     LootArr.push(new DNELootCard("cdj3000", "CDJ-3000", "Дозволяє зводити на одну стежку більше, за наявності Мікшера, задовольняючи потреби 100% аудиторії та підвищуючи задоволення діджеїв від івенту до високого рівня. З ним починаючі артисти готові грати безкоштовно", "https://lh3.googleusercontent.com/I48oibRzq_d66ig_NMxfN7snaHm6Y9EZifZvJeMqlsbJSM9tn7ipwZlhAneW8O7J1pI=w2400", 3, "130К/1К", "Бонус для DJ-їв", "Дозволяє зводити на одну стежку більше, за наявності Мікшера, модифікувати та записувати музику.", "", true, "loot"));
     LootArr.push(new DNELootCard("djm250mk2", "DJM-250MK2", "Дозволяє зводити дві стежки, як з вінілових, так із цифрових програвачів, модифікувати та записувати музику.", "https://lh5.googleusercontent.com/jvQ8mSu_KZDU5TUFnqx74vCdhm3BZR1W4X8vV9Cm5ZSchihgHRf4PmeTaxTz7rgxJfU=w2400", 2, "12К/200", "Бонус для DJ-їв", "Дозволяє зводити дві стежки, як з вінілових, так із цифрових програвачів, модифікувати та записувати музику.", "", true, "loot"));
     LootArr.push(new DNELootCard("djm750mk2", "DJM-750MK2", "Дозволяє зводити чотири стежки, як з вінілових, так із цифрових програвачів, модифікувати та записувати музику.", "https://lh6.googleusercontent.com/P-urxZ4DMOTdvX6mHrfjtDgkd4pAje03DYu51pxrPhs2S5i9iX28anwdDpDAr36kaDo=w2400", 4, "39К/400", "Бонус для DJ-їв", "Дозволяє зводити чотири стежки, як з вінілових, так із цифрових програвачів, модифікувати та записувати музику.", "", true, "loot"));
@@ -282,6 +279,17 @@ const initDNELootArr = () => {
     LootArr.push(new DNELootCard("naruto", "Наруто", "Завжди прийде на поміч якщо ти його друг. З цип хлопцем і в вогонь і в воду, ніколи тебе не залишить, навіть якщо перейшов до іншого гравця.", "https://lh5.googleusercontent.com/_kuetu2hY9sUDU93DjJByiZBegvmbwZQmn6PgK6InJ8cba4gankCVVUyneRUC6iPxVw=w2400", 1, 0, "Найомничок", "Завжди прийде на поміч якщо ти його друг. З цип хлопцем і в вогонь і в воду, ніколи тебе не залишить, навіть якщо перейшов до іншого гравця.", "", true, "npc"));
     LootArr.push(new DNELootCard("shadow", "Тінь", "Тінь вирішив відпочити від свого всесвіту і чілить у Києві останні місяці. Кажуть від привіз із собою смарагд Хаосу. Спробуй спитати як в нього справи, для твоєї вечірки може бути корисною його знатність рухатись з неймовірною швидкістю.", "https://lh5.googleusercontent.com/GJR1NJCddA61Kyl4Yp1z01p0iskBFSzn8R4gweyV58AxrMTkffw9FFZ4Gh7MmhosYK8=w2400", 1, 0, "Найомничок", "Тінь вирішив відпочити від свого всесвіту і чілить у Києві.", "", true, "npc"));
     LootArr.push(new DNELootCard("gorillaz", "Gorillaz", "Купа підлідків зібрали Рок-гурт та вирішили спробувати свої сили у Києві. Створюють експерементальний саунд, поєднуючи Електро, Рок та Хіп-Хоп напрями. Звучить надсучасно, сподіваюсь їх хтось помітить.", "https://lh4.googleusercontent.com/-dJLEO2gYvSlpBUlUkHuc24Cegq32ZLTrn83vDiOf8-hwuYAkW8eLMHkwKoBvFT8b8k=w2400", 4, 0, "4 Найомничка", "Четверо хлопців шукають роботу.<br><br> Здається, в них власний гурт, створюють експерементальний саунд, поєднуючи<br> Електро, Рок та Хіп-Хоп.<br><br> Звучить надсучасно, сподіваюсь їх хтось помітить.", "", true, "npc"));
+
+    const SAYLOR_MOON_LONGLINE = "";
+    const SAYLOR_MOON_SHORTLINE = "Юна леді вчиться контролювати свої здібності, пізнаючи себе та світ творчості.<br><br> Відкриття власного клубу та створення дружньої спільноти - її пристрасть та найбільша мрія.";
+    LootArr.push(new DNELootCard("saylor-moon", "Сейлор Мун", SAYLOR_MOON_LONGLINE, "https://lh3.googleusercontent.com/g5fpxKQ6LO9LYce4mmrWnTdhkwmMyx58dmMDVovS7WaoO8Qzk-fkD7Xlvi_z0L5M6FM=w2400", 1, 0, "Найомничок", SAYLOR_MOON_SHORTLINE, "", true, "npc"));
+
+
+    const TWINS_LONGLINE = "";
+    const TWINS_SHORTLINE = "Близнюки чудово розуміються на командній роботі, як пристрасть до Індустріального звучання, вона в них в крові.";
+    LootArr.push(new DNELootCard("twins", "Близнята", TWINS_LONGLINE, "https://lh6.googleusercontent.com/_X5UuUmOsyvCwAK1wa7nsYwh7MQzvX-N0eauLx9xBo_fZt9rmliWAh1ytWR-mqpNSIk=w2400", 2, 0, "2 Найомничка", TWINS_SHORTLINE, "", true, "npc"));
+
+
     const CHAOS_GREEN_LONGLINE = "Подвоює бонус усієї команди до виправданих очікувань аудиторії від івенту. Якщо його використовує Тінь, бонус потроється.";
     LootArr.push(new DNELootCard("chaos-green", "Смарагд Хаосу", CHAOS_GREEN_LONGLINE, "https://lh4.googleusercontent.com/unGQKQaPdQNlXOFsTaxOl10sHiwGJaucGGsQUiXC8DD_IaS6e25CJwWt4aTLGGxSCqM=w2400", 7, "200К/7K", "", CHAOS_GREEN_LONGLINE, "", true, "loot"));
     LootArr.push(new DNELootCard("lady-falko", "Леді Фалько", "Таємнича княжа особа веде свій бізнес чисто та обачно. Латекс та шкіра - для неї головна пристрасть, а про її івенти складають легенди.", "https://lh6.googleusercontent.com/YlzcEVCM2vJECjlLpkSl2kZqlj5T6rCIUQBVQSB2hXzHi6sOsZLIILTVRWm5HM4l9IE=w2400", 1, 0, "Найомничок", "Таємнича княжа особа веде свій бізнес чисто та обачно. Латекс та шкіра - її пристрасть, про її івенти складають легенди.", "", true, "npc"));
@@ -296,10 +304,20 @@ const initDNELootArr = () => {
     LootArr.push(new DNELootCard("ricks-second-portalgun", "Запасна портальна пушка Ріка", "Дозволяє миттєво переміщатись з пункту А в пункт Б. В часі з нею не поподорожуєш, бо Рік зробив її щоб Морті міг швидко ходити за пивом. Не заправляй її спрайтом.", "https://lh5.googleusercontent.com/FvLcgRozAUKRG7UniV9wQnIoNEvckTZ_g8DvU0so9nsPalQfPtkGfHzsNVH14obqe6o=w2400", 5, "300К/5К", "Авто"));
     LootArr.push(new DNELootCard("v", "V", "Так, поклич цього хлопця, що може піти не так?)", "https://lh6.googleusercontent.com/TGoJYG0KoqQ1oSf45SIKkFmp_6skZRJ9pmmR1vEWo6_xyFoHuCqZWI01Pi58MzRBKgg=w2400", 1, 0, "Найомничок", "Виглядає як порядний Охороничок та вправний Водій", "", true, "npc"));
     LootArr.push(new DNELootCard("wolf", "THE WOLF", "I solve problems", "https://lh3.googleusercontent.com/hgUIik77UVkI226aXYkYt7gtuvicht-KY4ytgoTuwB47f7gzrG93-9QI-rhgw5Y7RAk=w2400", 1, 0, "Найомничок", "I solve problems", "", true, "npc"));
+
+    const LISOVA_MAVKA_LONGLINE = "";
+    const LISOVA_MAVKA_SHORTLINE = "Здатна створювати неймовірні напої з природніх речовин та залюбки реалізує свій продукт на твоєму івенті.";
+    LootArr.push(new DNELootCard("lisova-mavka", "Лісова Діва", LISOVA_MAVKA_LONGLINE, "https://lh3.googleusercontent.com/gTtZ-rp5BXr_GyuAwIiSkTFBQWUmbwyyeFrc0G534MsQGLv_r6U8VonEkSm5eqW0z4E=w2400", 1, 0, "Найомничок", LISOVA_MAVKA_SHORTLINE, "", true, "npc"));
+
     // Кільце влади
     LootArr.push(new DNELootCard("power-ring", "Кільце влади", "Посилює найсильніші якості носителя, покращуючи їх до максимуму відносно обставин. Кільця влади можуть бути різної форми та рівнів могутності, залежно від майстра що його викував, рідкості матеріалу та каменю. З часом використання пробуджує темні сторони особистості носія та поступово підкоряє його власній волі. Кільце влади завжди вірне лише своєму творцю, завжди прагне до нього і чим більше наближається, тим могутнішим стає.", "https://lh4.googleusercontent.com/dWwMABhNjnvI-OOzxZDgmEqELhIfSJ25Ru8fR0hflXz1Ufd3Tr-jXDtZKTKVQ3dIxzk=w2400", 4, 0, "Драгоцінність", "Посилює найсильніші якості носителя, покращуючи їх до максимуму відносно обставин.", "", true, "loot"));
     // Убрать и отснять студию
     // Фото чистої студії приваблюють клієнтів, отримай два випадкові закази на руку та використовуй цю картку як бонус +2 для будь-якого івенту в ній. Фото на професійний фотоаппарат з широким об'єктивом привабить навіть найвибагливішу аудиторію.
+
+    const CALL_MARSELLUS_LONGLINE = "";
+    const CALL_MARSELLUS_SHORTLINE = "В тебе нема проблем, друже";
+    LootArr.push(new DNELootCard("call-marsellus", "Подзвонити Марселасу", CALL_MARSELLUS_LONGLINE, "https://lh5.googleusercontent.com/kV-iYymA8Iz_UVYOgazjCYk6Mcy_IBTzqnqQ78M_VWGrrY5EIKbeY11VDKhu1Qxq7nw=w2400", 0, "5⚡", "Дія", CALL_MARSELLUS_SHORTLINE, "", true, "dia"));
+
     // Записати сет
     LootArr.push(new DNELootCard("make-dj-set", "Записати професійний DJ-сет", "Дає можливість записати професійний DJ-сет як тільки тобі закортить. Необхідна лише аппаратура та за бажанням камера. Якщо маєш студію, використай цю карту лише за рахунок енергії. Зніми на камеру та зроби трансляцію щоб отримати +1 до бонусу за кожну дію та шанс своїм демо привернути увагу лейблів або отримати проект.", "https://lh5.googleusercontent.com/iZqspQQvU2AWz67qOcOdoM3uuV8_O0uFMuIIsdqnu1HpkaO_d5ASSNcKFsZTyrkNgbg=w2400", 1, "1⚡ 500", "Дія", "Дає можливість записати професійний DJ-сет як тільки тобі закортить.<br><br> Необхідна лише аппаратура та, за бажанням, камера.<br><br> Якщо маєш студію, використай цю карту лише за рахунок енергії.", "", true, "dia"));
     // Записати годинний сет
@@ -308,12 +326,27 @@ const initDNELootArr = () => {
     // LootArr.push(new DNELootCard("make-dj-set", "Записати DJ-сет", "Дає можливість записати сет як тільки тобі закортить. Необхідні студія та аппаратура", "https://lh5.googleusercontent.com/iZqspQQvU2AWz67qOcOdoM3uuV8_O0uFMuIIsdqnu1HpkaO_d5ASSNcKFsZTyrkNgbg=w2400", 1, 1000, "Дія"));
     // Записати сет
     LootArr.push(new DNELootCard("make-live", "Запустити трансляцію", "Дає можливість привабити відвідувачів до події або показати важливий матеріал. Потребує камери та підключення до інтернету. Приваблює додаткових відвідувачів, виклади дві додаткові карти аудиторії.", "https://lh3.googleusercontent.com/2Ax7PXdSpzk73m3ANSMV11awPuvp-QAH9o-tm4_mFqahF4jie5h3XfBzofp8wZ9UkIo=w2400", 1, "1⚡ 1h", "Дія", "Приваблює додаткових відвідувачів, виклади дві додаткові карти <br>аудиторії.", "", true, "door"));
+
+    // Флоп
+    const FLOP_SHORTLINE = "Швидкий, характерно недбалий, закрас та контур за лічені хвилини, опціонально тінь.<br><br>Як правило достатньо двох банок(високий слім+низький фет) контрастних кольорів.<br><br>Намалювати скетч заздалегідь буде супер";
+    const FLOP_LONGLINE = ` $Універсальний солдат в арсеналі Вандала, що з двох банок здатен зробити швидкий закрас та контур за лічені хвилини. Опціонально можна намалювати скетч і впевнитись у результаті до початку роботи.`;
+    LootArr.push(new DNELootCard("make-flop", "Флоп", FLOP_LONGLINE, "https://lh3.googleusercontent.com/oAnpZMw-GdG79UEJot10AtxR0buHdZ5KAKhuvsOeLbHSPRHN_EW8srN8Ilc6ItibViU=w2400", 1, "1⚡ 500", "Дія", FLOP_SHORTLINE, "", true));
+
     // Забомбити кусок
-    LootArr.push(new DNELootCard("make-piece", "Забомбити кусок", "Забомбити кусок можна на будь-якій стіні. Навіть якщо ніхто цього не дозволяв та навіть якщо хтось проти. Вулиця - твій холст. Нехай вона буде святом мистецтва для всіх. Кусок може привернути увагу будь до чого.", "https://lh5.googleusercontent.com/-LrxKPIJUhhiMqNOVDdPo07vri3pfz1Y_if2szB_lX63yS06ESUebo8_xUEETw22yb8=w2400", 2, "1⚡ 1K", "Дія", "Приверни увагу до вечірки величезним графіті.<br><br> Потрібна лише фарба. Якщо вона в тебе є, карта спрацює лише за рахунок енергії.", "", true));
-    // Забомбити кусок
-    LootArr.push(new DNELootCard("make-coop-piece", "Забомбити сумісний кусок", "Скооперуйся з ще одним(або більше) Райтером щоб забомбити сумісний кусок, що даватиме бонус усім. На Стрічкоткацькій давно не фарбували стіни, час це виправити. Дозволяти це звісно ніхто не буде, та якщо ти знайомий з власниками клубів, це може зійти за аргумент. Один охоронець на КПП. Для такого розміру шматка знадобиться драбина, попитай знайомих або придбай сам. Кольори на твій смак, візьми друзів щоб працювати швидше. Зніми на камеру щоб отримати +1 до бонусу та запис процессу.", "https://lh4.googleusercontent.com/_-QeG9KGhNojivrs6WmQdlomzmgQiX2Cmd-_Srd5eDwFImJgZYk3PDuehvGUzY_PYxc=w2400", 5, "4⚡ 2K", "Дія", "Скооперуйся з ще одним<br>(або більше) Райтером щоб забомбити сумісний кусок, що даватиме бонус усім.", "", true, "dia"));
-    // Забомбити кусок
-    LootArr.push(new DNELootCard("make-train-piece", "Забомбити потяг", "Скооперуйся з ще одним(або більше) Райтером щоб забомбити сумісний кусок, що даватиме бонус усім. На Стрічкоткацькій давно не фарбували стіни, час це виправити. Дозволяти це звісно ніхто не буде, та якщо ти знайомий з власниками клубів, це може зійти за аргумент. Один охоронець на КПП. Для такого розміру шматка знадобиться драбина, попитай знайомих або придбай сам. Кольори на твій смак, візьми друзів щоб працювати швидше. Зніми на камеру щоб отримати +1 до бонусу та запис процессу.", "https://lh5.googleusercontent.com/Mf3V9aRudavOj-zjTawLxbihB27qE1d2MoSc5Mi9PSqflqsO1lhKiIBglOF0ko1BL3Q=w2400", 7, "7⚡ 3K", "Дія", "Роздай стилю прямо на поїзді. Розроби ескіз в діджиталі, забезпеч фарбу та візьми Найомничка(або Гравця) прикрити спину та/або забомбити разом. Більше Райтерів, більше шансів на успіх.", "", true, "dia"));
+    const MAKE_PIECE_LONGLINE = "Забомбити кусок можна на будь-якій стіні. Навіть якщо ніхто цього не дозволяв та навіть якщо хтось проти. Вулиця - твій холст. Нехай вона буде святом мистецтва для всіх. Кусок може привернути увагу будь до чого.";
+    const MAKE_PIECE_SHORTLINE = "Приверни увагу до себе забомбивши на вечірці<br> величезне графіті.<br><br> Потрібна лише фарба. Якщо вона в тебе є, карта спрацює лише за рахунок енергії.";
+    LootArr.push(new DNELootCard("make-piece", "Кусок", MAKE_PIECE_LONGLINE, "https://lh5.googleusercontent.com/-LrxKPIJUhhiMqNOVDdPo07vri3pfz1Y_if2szB_lX63yS06ESUebo8_xUEETw22yb8=w2400", 2, "1⚡ 1K", "Дія", MAKE_PIECE_SHORTLINE, "", true));
+
+    // Сумісний кусок
+    const MAKE_COOP_PIECE_LONGLINE = "Скооперуйся з ще одним(або більше) Райтером щоб забомбити сумісний кусок, що даватиме бонус усім. На Стрічкоткацькій давно не фарбували стіни, час це виправити. Дозволяти це звісно ніхто не буде, та якщо ти знайомий з власниками клубів, це може зійти за аргумент. Один охоронець на КПП. Для такого розміру шматка знадобиться драбина, попитай знайомих або придбай сам. Кольори на твій смак, візьми друзів щоб працювати швидше. Зніми на камеру щоб отримати +1 до бонусу та запис процессу.";
+    const MAKE_COOP_PIECE_SHORTLINE = "Скооперуйся з ще одним<br>(або більше) Райтером щоб забомбити сумісний кусок, що даватиме бонус усім.";
+    LootArr.push(new DNELootCard("make-coop-piece", "Cумісний кусок", MAKE_COOP_PIECE_LONGLINE, "https://lh4.googleusercontent.com/_-QeG9KGhNojivrs6WmQdlomzmgQiX2Cmd-_Srd5eDwFImJgZYk3PDuehvGUzY_PYxc=w2400", 5, "4⚡ 2K", "Дія", MAKE_COOP_PIECE_SHORTLINE, "", true, "dia"));
+
+    // Потяг
+    const MAKE_TRAIN_PIECE_LONGLINE = "";
+    const MAKE_TRAIN_PIECE_SHORTLINE = `Роздай стилю прямо на поїзді. Розроби ескіз в діджиталі, забезпеч фарбу та візьми Найомничка(або Гравця) прикрити спину та/або забомбити разом.<br><br> Більше Райтерів, більше шансів на успіх.`;
+    LootArr.push(new DNELootCard("make-train-piece", "Потяг", MAKE_TRAIN_PIECE_LONGLINE, "https://lh5.googleusercontent.com/Mf3V9aRudavOj-zjTawLxbihB27qE1d2MoSc5Mi9PSqflqsO1lhKiIBglOF0ko1BL3Q=w2400", 7, "7⚡ 3K", "Дія", MAKE_TRAIN_PIECE_SHORTLINE, "", true, "dia"));
+
     // Скласти нутрощі у кейс
     LootArr.push(new DNELootCard("hide-insides-case", "Скласти нутрощі у кейс", "Ви можете дістати серце або мозок та покласти його у кейс. Тепер після вашої смерті, маючи кейс та ключ від нього гравець може воскресити вас, якщо у кейсі знаходиться ваш мозок. Або все що ви мали буде передано гравцю, що матиме кейс та ключ, якщо в кейсі знаходиться ваше сердце. Застосовуючи цю карту гравець вирішує що покласти в кейс, його рішення знає лише гейм-мастер. Одноразова дія, скинь після використання.", "https://lh4.googleusercontent.com/Z7SDwZp_vswKBpfz9MJy1okslUiTfbNvnaQp1cQkd3XfQxwGydioc9WRWDQhdrTQXjE=w2400", 5, "10К", "Дія"));
     // Спалах
@@ -337,10 +370,7 @@ const initDNELootArr = () => {
     // Платівка Half Age
     LootArr.push(new DNELootCard("vinyl-half-age", "Half Age", "Платівка дає можливість поставити музику просто зараз. Це може бути цей самий альбом, або будь-який інший. Спробуй заробити гроші, використавши її під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", "https://lh3.googleusercontent.com/FvFHXjLdWHPi6YD-Sf3blgvACFkPvXWkMfk7M5ig0VwOY_DvyTAPiAng97vzvUboi6g=w2400", 5, 2800, "Платівка, 36m of Minimal Electronic Synth-pop", VINYL_LONGLINE, "", true, "sound"));
     LootArr.push(new DNELootCard("vinyl-stay-ugly", "Stay Ugly", "Платівка дає можливість поставити музику просто зараз. Це може бути цей самий альбом, або будь-який інший. Спробуй заробити гроші, використавши її під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", "https://lh4.googleusercontent.com/E3bFd24vQSohVXr-aE7e8YIjz2g-lQJaEcc0r9k83Quc_5SpraxdRRzyWbBO0wrvSxs=w2400", 6, 4200, "Платівка, 16m of Meta Hip-Hop", VINYL_LONGLINE, "", true, "sound"));
-    LootArr.push(new DNELootCard("vinyl-pursuit", "Pursuit", "180-gram clear vinyl housed in bespoke inner and outer sleeves including a 10x10\" photographic print.\n" +
-        "Limited to 500 copies worldwide, individually hand numbered.\n" +
-        "Not sealed. <br>" +
-        "Платівка дає можливість поставити музику просто зараз. Це може бути цей самий альбом, або будь-який інший. Спробуй заробити гроші, використавши її під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", "https://lh6.googleusercontent.com/5C_USwT9sZWSz5od1wgsA3ZmJ-Z92BVVOrqM5vCrlyLpZ1wtLErOAxCk8KsqHu4GrKo=w2400", 7, 5500, "Платівка, 4m of Progressive Electronic"));
+    LootArr.push(new DNELootCard("vinyl-pursuit", "Pursuit", "180-gram clear vinyl housed in bespoke inner and outer sleeves including a 10x10\" photographic print.\n" + "Limited to 500 copies worldwide, individually hand numbered.\n" + "Not sealed. <br>" + "Платівка дає можливість поставити музику просто зараз. Це може бути цей самий альбом, або будь-який інший. Спробуй заробити гроші, використавши її під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", "https://lh6.googleusercontent.com/5C_USwT9sZWSz5od1wgsA3ZmJ-Z92BVVOrqM5vCrlyLpZ1wtLErOAxCk8KsqHu4GrKo=w2400", 7, 5500, "Платівка, 4m of Progressive Electronic"));
     LootArr.push(new DNELootCard("vinyl-aleph", "Aleph", "Платівка дає можливість поставити музику просто зараз. Це може бути цей самий альбом, або будь-який інший. Спробуй заробити гроші, використавши її під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", "https://lh6.googleusercontent.com/C8MFf0NXHJesCRn1SgP6Y6fg6AbOesG6rrKe1cCe3vQMuhp8KLMkmKZYvPeZfxoy-SU=w2400", 8, 7400, "Платівка, 54m of Progressive Electronic", VINYL_LONGLINE, "", true, "sound"));
     // Альбом NOCTURNAL
     LootArr.push(new DNELootCard("album-hentai", "HENTAI-JAZZ [DELUXE]", "Альбом дає можливість поставити музику просто зараз. Це може бути цей самий альбом, або будь-який інший. Спробуй заробити гроші, використавши його під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй альбоми в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", "https://lh4.googleusercontent.com/qigbEl26rtBCPjVFTsY-tAk455SX9d9T2Ubu0TjhMm0JYFDHCDcnEi3w7U8Q2kBzKrw=w2400", 2, 300, "Альбом, 62m of Vaporwave Jazz Barberbeat", ALBUM_LONGLINE, "", true, "sound"));
@@ -417,6 +447,10 @@ const initDNELootArr = () => {
     LootArr.push(new DNELootCard("car-mystery-track", "Таємничий фургон", "Дозволяє перевозити великі речі з точки А в точку B. Продавець сказав, що має якусь особливість, та не сказав яку.", "https://lh6.googleusercontent.com/0GkaTTGsXh_uSXnfkxxJ4QN3jQzO-DeTghgGp4JijNf5EtyY2t4FtqnCGAq3NKT91Fs=w2400", 2, "110K/700", "Авто", "Дозволяє перевозити великі речі з точки А в точку B. Продавець сказав, що має якусь особливість, та не сказав яку.", "", true, "car"));
     LootArr.push(new DNELootCard("car-my-avi", "Міні-аві", "Дозволяє перевозити великі речі з точки А в точку B. Літає так швидко, що не наздогнати.", "https://lh6.googleusercontent.com/G3sHLcA51HqhXD2U0pd0gGdl2QAEnfpz2g2YPbkra4Sq-EY5nlGJNjuJLhRuUR2XkpQ=w2400", 3, "220K/1700", "Авто", "Дозволяє перевозити великі речі з точки А в точку B. Літає так швидко, що не наздогнати.", "", true, "car"));
     LootArr.push(new DNELootCard("car-cosmos-track", "Космос-бас", "Дозволяє перевозити великі речі та безліч Найомничків з точки А в точку B. Літає так швидко, що не наздогнати.", "https://lh6.googleusercontent.com/JZpuQtC_XPMf-6fF-X1a8iHN34Q7nll6duEXKbFb5TAz4ir8bj2QEIVVgD43K3Yk-G4=w2400", 3, "240K/1400", "Авто", "Дозволяє перевозити великі речі та безліч Найомничків з точки А в точку B. Літає так швидко, що не наздогнати.", "", true, "car"));
+
+    const CAR_FERRARI_SHORTLINE = "Найшвидший транспорт на земній поверхні. Підходить для замовлень де швидкість на першому місці.";
+    const CAR_FERRARI_LONGLINE = "Дозволяє перевозити великі речі та одного Найомничка з точки А в точку B.<br><br> Пристебни ремінь, крихітко.";
+    LootArr.push(new DNELootCard("car-ferrari", "Ферарі", CAR_FERRARI_LONGLINE, "https://lh4.googleusercontent.com/faeJJ6BqQD6CnwzDZg19iPT84KMR97wRsAKGOqUCkJZQ8qCR1d58DUsf2ttucDmUHXM=w2400", 4, "370K/5K", "Авто", CAR_FERRARI_SHORTLINE, "", true, "car"));
     // Водійське посвідчення
     LootArr.push(new DNELootCard("car-docs", "Водійське посвідчення", "Дозволяє уникнути штрафу від Шерифа, якщо керувати будь-яким транспортним засобом в межах Найт-Сіті.", "https://lh3.googleusercontent.com/PXtkM4KTHKrrhkGnkAdQqurHFp9oPuRABqjaiSciDDQ6Z1KlADcmDbXMWuSRvq_cnk8=w2400", 1, "0", ""));
     // Создать профайл
@@ -433,9 +467,19 @@ const initDNELootArr = () => {
     LootArr.push(new DNELootCard("dmt-shamanic-technic", "Шаманічне дихання", "Просунута дворівнева техніка дихання через рот, що складається з двох швидких вдохів на половину легень та повний видих в кінці ітерації.", "https://lh6.googleusercontent.com/0oclNbVaoBfebNJiioiBHMNjiFptXElUd4yvLE2_0NPgYH0PVw4Qg0AUVuGwu7fxK4c=w2400", 1, "", "Техніка", "Просунута техніка дихання через рот, що складається з двох швидких вдохів. +1 до медитацій з нею", "", true));
     LootArr.push(new DNELootCard("dmt-wim-hof-technic", "Дихання Віма-Хова", "Просунута дворівнева техніка дихання через рот, що складається з двох швидких вдохів на половину легень та повний видих в кінці ітерації.", "https://lh3.googleusercontent.com/jLq3nGiyHFsvIQP0N8z8NScEgURv7gK013bVtKGeutejfw2xJRUspz36x4pjzXQD7yM=w2400", 1, "", "Техніка", "Просунута техніка дихання, що складається з одного глибокого вдоху через рот. Отримай +1 до усіх медитацій з цією технікою", "", true));
     LootArr.push(new DNELootCard("picnick", "Пікнік", "Хапай подругу та на пляж, сонечко на дворі", "https://lh6.googleusercontent.com/JFMHRRTLGPGvIyj5MURCTrcnBSXxQu28Rx4lUl0JmSXF_NUAD9ozjd-QtQPqQpz0pZs=w2400", 1, "3⚡ 5h", "Пригода", "Хапай подругу та на пляж, сонечко на дворі.<br><br>Використай картки Спалаху або Хеппі-Міл аби зробити його особливим", "", true));
+
+    const POOL_DAY_LONGLINE = "";
+    const POOL_DAY_SHORTLINE = "Сонечко сяє, пташки щебечуть, лолі плескають у воді. Твій карман зігріває два здорових косяка. Один, щоб цей день почати, та ще один, щоб його закінчити.";
+    LootArr.push(new DNELootCard("pool-day", "День басейну", POOL_DAY_LONGLINE, "https://lh4.googleusercontent.com/n8qFlaoITH-yHq7uGCfyMx2G79_gStc1gjO0ODMaqTwMAq2LrjFXFnYk5FbOvagAI0U=w2400", 1, "4⚡ 8h 1K", "Пригода", POOL_DAY_SHORTLINE, "", true));
+
+
+    const FOREST_DAY_LONGLINE = "";
+    const FOREST_DAY_SHORTLINE = "";
+    LootArr.push(new DNELootCard("forest-day", "День лісу", FOREST_DAY_LONGLINE, "https://lh5.googleusercontent.com/yHJa_BdTAaNBdmpnu5nKnYPAxLus_KsoYAtcPPEXL91qSxo19S71EkVU0JdgQ30h3Ow=w2400", 1, "1⚡ 12h", "Пригода", FOREST_DAY_SHORTLINE, "", true));
+
     LootArr.push(new DNELootCard("flower", "Квітка", "Насичує повітря киснем коли ти спиш, та ласує погляд коли прокидаєшся", "https://lh4.googleusercontent.com/G6o_Ys9Md86JRahzppRJv9QauONxab3IBGV05cSE1BoOBarZSPnUmadf0BJJbtaTojg=w2400", 0, "", "", "Насичує повітря киснем коли ти спиш, та ласує погляд коли прокидаєшся", "", true));
     LootArr.push(new DNELootCard("unprompted-trip", "Спонтанна подорож", "Дає відчути справжній смак життя та розвиває вміння швидко адаптуватися до нових умов. Використовуючи цю карту ти відпускаєш жагу контролю над власним життям та довіряєш свою долю випадку.", "https://lh5.googleusercontent.com/zjsNPBT05XWGt1ThEvkQqxAXhtBDCgdYYiziaXQQcexhtb3rutoHbuk7yTPqaAxR698=w2400", 0, "", "", "Дає відчути справжній смак життя та розвиває вміння швидко адаптуватися до нових умов. Відпусти жагу контролю над життям та довірся випадку.", "", true));
-    
+
     LootArr.push(new DNELootCard("dia-draw", "Малювання", "Використовуй час та енергію для отримання малюнків. Чим більше енергії та часу ти в них вкладеш, тим сильнішими вони будуть. Створення графічного зображення є однією з найдревніших медетацій винайдених людством. Від печерних малюнків кров'ю, до чорнил на папері перенесення власного бачення в матеріальний світ заворожувала людину. Просто бери та починай малювати, уява зробить усе інше.", "https://lh3.googleusercontent.com/oprP-CtoxAG5IWogg2Gn56Pu9MBNfNt35n4gQave2BvFfVA7YlExQdgtjL6t9r_kMsg=w2400", 1, "1⚡ 1h", "1h of Zen", "Використовуй час та енергію для отримання малюнків. Чим більше енергії та часу ти в них вкладеш, тим сильнішими вони будуть.", "", true));
     LootArr.push(new DNELootCard("tea-break", "Перерва на чай", "Дозволяє структурувати думки та наповнитись теплом чаю. Отримай свіжу енергію.", "https://lh6.googleusercontent.com/8MI06infbLkWNJCmXKTVbMgdTpssFnCfwu4A_MdURrkFaJyzWMlbNzd6GOulWRXYUz0=w2400", 1, "15m", ""));
     LootArr.push(new DNELootCard("moving", "Переїзд", "Використай зв'язки щоб позбавити іншого гравця студії. Він одразу пропускає хід та має витратити 3К щоб перевести свої великі речі на склад, інакше їх буде втрачено.", "https://lh4.googleusercontent.com/6E7iqRHUF0X_5GHgRrD35Zwg0FYMhvc-DdqoZOYlQ44dAbHP79XfUTAnVueigimk_Ts=w2400", 4, 0, "Проблема!"));
@@ -452,7 +496,6 @@ const initDNELootArr = () => {
 
     // todo єкран профайл которьій будет дублировать информацию из всех достуньіх источников
     // today 17/36
-
 
 
     // console.log(LootArr);
@@ -511,7 +554,6 @@ const drawLootCards = (cardData, parent = ".card-container") => {
 
     cardData.forEach(drawIt);
 }
-
 
 
 // Ідеї для карт

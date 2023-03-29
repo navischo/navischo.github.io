@@ -108,10 +108,6 @@
     color: white;
 }
 
-#dne-card-moving {
-
-}
-
 #dne-card-i-canon .card__preview {
     max-height: 222px;
 
@@ -250,6 +246,81 @@
     position: absolute;
     color: white;
     text-shadow: 1px 3px 9px black;
+}
+
+#dne-card-make-train-piece .card__description {
+    position: absolute;
+    top: 50px;
+    text-shadow: -1px 1px 5px #656565;
+}
+
+#dne-card-call-marsellus .card__header {
+    position: absolute;
+    z-index: 2;
+    color: white;
+}
+
+#dne-card-call-marsellus .card__description {
+    position: absolute;
+    bottom: 120px;
+    color: white;
+    text-shadow: -1px 1px 8px #1c1c1c;
+}
+
+#dne-card-call-marsellus .card__price {
+    color: white;
+    text-shadow: -1px 1px 8px #1c1c1c;
+}
+
+#dne-card-forest-day .card__header {
+    position: absolute;
+    z-index: 2;
+    color: white;
+}
+
+#dne-card-forest-day .card__price {
+    color: white;
+    text-shadow: -1px 1px 8px #1c1c1c;
+}
+
+#dne-card-call-marsellus .card__preview-img {
+    transform: scale(1.7) translateY(57px);
+}
+
+#dne-card-lisova-mavka .card__header {
+    position: absolute;
+    z-index: 2;
+    color: white;
+}
+
+#dne-card-lisova-mavka .card__description {
+    position: absolute;
+    bottom: 40px;
+    color: white;
+    text-shadow: -1px 1px 8px #1c1c1c;
+}
+
+#dne-card-lisova-mavka .card__price {
+    color: white;
+    text-shadow: -1px 1px 8px #1c1c1c;
+}
+
+#dne-card-lisova-mavka .card__preview-img {
+    transform: scale(1.32) translateX(17px) translateY(38px);
+}
+
+#dne-card-twins .card__header {
+    position: absolute;
+    z-index: 2;
+}
+
+#dne-card-twins .card__description {
+    position: absolute;
+    top: 50px;
+}
+
+#dne-card-twins .card__preview-img {
+    transform: scale(1.19) translateY(29px);
 }
 
 #dne-card-prj-weedian-greece .card__description {
@@ -798,6 +869,7 @@ img {
     align-items: baseline;
     justify-content: space-between;
     padding: 10px 5px 0;
+    width: 100%;
     margin-bottom: 10px;
 
     word-break: break-word;
@@ -869,6 +941,10 @@ img {
 .card__footer-left,
 .card__footer-right {
     max-width: 50%;
+}
+
+.card__bonus {
+    white-space: nowrap;
 }
 
 .card__bonus,
