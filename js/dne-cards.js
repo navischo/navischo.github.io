@@ -488,7 +488,7 @@ const initDNELootArr = () => {
     LootArr.push(new DNELootCard("demo-neffa-t", "Neffa T & Flowdan", NEFFA_T_DEMO_LONGLINE, NEFFA_T_DEMO_IMG, 3, "1K", "Демо", NEFFA_T_DEMO_SHORTLINE, "", true, "sound"));
 
     // Nastya Muravyova
-    //
+    // /
     //
     const MURAVYOVA_DEMO_LONGLINE = "";
     const MURAVYOVA_DEMO_SHORTLINE = `${DEMO_LONGLINE}`;
