@@ -43,12 +43,13 @@ const initDNEDoorArr = () => {
     // Cyberpunk Online
     //
     //
-    const CYBERPUNK_ONLINE_LONGLINE = "";
-    const CYBERPUNK_ONLINE_SHORTLINE = `Just do it.`;
-    const CYBERPUNK_ONLINE_IMG = `https://drive.google.com/file/d/1SAFT9um4Wk8jr42g5pSzDXPiaZ9VxcRO/view?usp=sharing`;
+    // const CYBERPUNK_ONLINE_LONGLINE = "";
+    // const CYBERPUNK_ONLINE_SHORTLINE = `Just do it.`;
+    // const CYBERPUNK_ONLINE_IMG_ID = `1SAFT9um4Wk8jr42g5pSzDXPiaZ9VxcRO`;
+    // const CYBERPUNK_ONLINE_IMG = `https://drive.google.com/uc?id=${CYBERPUNK_ONLINE_IMG_ID}`;
 
-    DoorArr.push(new DNELootCard("prj-cyberpunk-online", "Cyberpunk Online", CYBERPUNK_ONLINE_LONGLINE, CYBERPUNK_ONLINE_IMG, 1, "1⚡ 1h", "Проект", CYBERPUNK_ONLINE_SHORTLINE, "", true, ""));
-    DoorArr.push(new DNEDoorCard("prj-game", "Настільна гра", "Ваш друг пропонує вам розробити власну колекційну карткову гру. Виготовіть пілотну партію на 254 картки за тиждень і зіграйте найпершу пригоду в історії зі своїми друзями.", "https://lh6.googleusercontent.com/88QzQQ3A_d2Ay7UT7pakKhHI_JkLFM70HrMOM2IXWLKIRckIMNJ2OR_ynfQMNgouips=w2400", 2, "8h", "Green House", "Найомничок", "Усі витрати на замовнику, виконай роботу на вищому рівні щоб отримати особливий бонус від замовника.", "1K", "Виплата", "", "", true, "prj"));
+    // DoorArr.push(new DNEDoorCard("prj-cyberpunk-online", "Cyberpunk Online", CYBERPUNK_ONLINE_LONGLINE, CYBERPUNK_ONLINE_IMG, 40, "?", "Green House", "Найомничок", "Усі витрати на замовнику, виконай роботу на вищому рівні щоб отримати особливий бонус від замовника.", "?", "", "", "", true, "prj"));
+    DoorArr.push(new DNEDoorCard("prj-game", "Настільна гра", "Ваш друг пропонує вам розробити власну колекційну карткову гру. Виготовіть пілотну партію на 254 картки за тиждень і зіграйте найпершу пригоду в історії зі своїми друзями.", "https://lh6.googleusercontent.com/88QzQQ3A_d2Ay7UT7pakKhHI_JkLFM70HrMOM2IXWLKIRckIMNJ2OR_ynfQMNgouips=w2400", 1, "420 8h", "Green House", "Найомничок", "Усі витрати на тобі", "", "", "Твій друг притяг пусті карти з манчкіну та розповідає що має шалену ідею для гри.", "", true, "prj"));
     DoorArr.push(new DNEDoorCard("prj-ee-dragobrat", "EE: <span style='letter-spacing: -2.4px;'>Hi-Lite</span>", "Розробка 8-ми годинного івенту, що складатиме лайв виступи підбірки артистів в жанрі важкої електроніки. Чим більше організаційних питань вирішено без допомоги клубу, тим більше заробіток від продажу. У разі успішного виконання, картку замовлення можна залишити собі і використати знову, організувавши нову ітерацію цьогож івенту. Вартість організації кожної наступної ітерації подвоюється.", "https://lh3.googleusercontent.com/_fp6uXNNwaRaxoX8ttxY78-UzNOn0nXxL5s4Cxc7nP7lED_U-VqoAo6OMolxR_2k4kQ=w2400", 2, "5К", "EE", "DJ* Татуер* Чай*", "Усі витрати на організаторі, якщо івент зібрав менше 50% від бюджету, карта скидається", "?", "Усі доступні", "Розробка івенту-подорожі в горах на вільних умовах", "", true));
     // Influence Operations
     // Замовлення, 8lvl
@@ -117,7 +118,11 @@ const drawDoorCards = (cardData, specialContainer = "") => {
         }
         newCard.querySelector(".card__profit").innerHTML = `${cardData.profit}`;
         newCard.querySelector(".card__roles").textContent = `${cardData.roles}.`;
-        newCard.querySelector(".card__origins").textContent = `${cardData.profitOrigins}.`;
+        if (cardData.profitOrigins || cardData.profitOrigins !== "") {
+            newCard.querySelector(".card__origins").textContent = `${cardData.profitOrigins}.`;
+        } else {
+            newCard.querySelector(".card__origins-wrap").style.display = "none";
+        }
         newCard.querySelector(".card__limits").innerHTML = `Замовлення від ${cardData.client}`;
         newCard.querySelector(".card__preview-img").src = cardData.img;
         if (cardData.longline) {

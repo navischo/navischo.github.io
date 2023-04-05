@@ -18,7 +18,7 @@ const drawChips = (cardData, parentSelector = ".js-chip-list") => {
     cardData.forEach((chip) => {
         if (chip.isBuild) {
             const newChip = chipTemplate.cloneNode(true);
-            console.log(newChip);
+            // console.log(newChip);
             newChip.id = `dne-chip-${chip.id}`;
             newChip.classList.add("chip--visible");
             newChip.textContent = `${chip.id}`;
