@@ -309,6 +309,21 @@
     transform: scale(1.32) translateX(17px) translateY(38px);
 }
 
+#dne-card-make-big-piece .card__description {
+    position: absolute;
+    top: 90px;
+    color: white;
+    text-shadow: -1px 1px 5px #656565;
+}
+
+#dne-card-make-big-piece .card__footer {
+    color: white;
+}
+
+#dne-card-make-big-piece .card__preview-img {
+    transform: scale(1.3) translateY(33px);
+}
+
 #dne-card-twins .card__header {
     position: absolute;
     z-index: 2;
@@ -521,7 +536,7 @@ img {
 }
 
 .build .swiper-slide[id*="dne-card-"]:nth-child(9n) {
-    margin-bottom: 420px;
+    /*margin-bottom: 420px;*/
 }
 
 .build .card__description {
@@ -1032,8 +1047,8 @@ h2 {
     color: white;
     text-align: center;
     transform: translateX(-50%);
-    
-    
+
+
 }
 
 .score input {
@@ -1178,31 +1193,31 @@ h2 {
 }
 
 .fw-check-list > .fw-check-row:first-child {
-  box-shadow: inset 0 1px 0 0 #5e0c08;  
+  box-shadow: inset 0 1px 0 0 #5e0c08;
 }
 
 .fw-check-list > .fw-check-row:last-child {
   box-shadow: inset 0 -1px 0 0 #5e0c08;
 }
 
-.fw-check-list > .fw-check-row:first-child, 
+.fw-check-list > .fw-check-row:first-child,
 .fw-check-list > .fw-check-row:last-child {
   box-shadow: inset 0 -1px 0 0 #5e0c08, inset 0 1px 0 0 #5e0c08;
 }
 
 .fw-check-row {
-  
+
   padding: 20px 26px;
   padding-left: 26px;
   border: none;
-  
+
   font-family: 'JetBrains Mono', monospace;
   font-size: 1em;
   color: #53d3dc;
   text-transform: uppercase;
   letter-spacing: -1.2px;
   text-shadow: 1px 0px 2px #53d3dc;
-  
+
   cursor: pointer;
   background: transparent;
 }
@@ -1213,16 +1228,16 @@ h2 {
 
 .fw-check-row::before {
   content: '';
-  
+
   position: relative;
   left: -3px;
   bottom: -4px;
-  
+
   display: inline-block;
   width: 20px;
   height: 20px;
   margin-right: 20px;
-  
+
   box-shadow: inset 0 0 0 1px #ff6d65;
   background: #0e1116;
 }
@@ -1247,9 +1262,9 @@ h2 {
 .btn-reset {
   padding: 0;
   border: none;
-  
+
   font-size: 0;
-  
+
   background: transparent;
 }
 
@@ -1257,19 +1272,19 @@ h2 {
   color: #4ed0d7;
   box-shadow: 0 0 0 1px #4ed0d7;
   background: #194045;
-  
+
   display: block;
   max-width: 480px;
   width: 100%;
   padding: 7px;
-  
+
   font-family: 'JetBrains Mono', monospace;
   font-size: 1.3em;
   color: #53d3dc;
   text-transform: uppercase;
   letter-spacing: -1.2px;
   text-shadow: 1px 0px 2px #53d3dc;
-  
+
   cursor: pointer;
 }
 
@@ -1315,7 +1330,7 @@ h2 {
 #clockdiv div > span {
     display: inline-block;
     padding: 15px;
-    
+
     font-family: 'Press Start 2P', cursive;
 
     background: #00816A;
@@ -1355,6 +1370,25 @@ h2 {
     display: flex;
 }
 
+.setup {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 4;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: white;
+}
+
+.setup > * {
+    margin: 10px;
+}
+
 /* END DNE */
 
 /* START VHS-SCREEN */
@@ -1382,7 +1416,7 @@ h2 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+
     filter: url(#crt-filter); /* *** This is where I added the filter *** */
 }
 
@@ -1506,7 +1540,7 @@ h2 {
     background-color: rgb(0, 0, 255);
 }
 
-@keyframes stripeAnim {   
+@keyframes stripeAnim {
     50% {
         top: 110%;
     }
@@ -1545,40 +1579,40 @@ h2 {
                     <path class="blue" d="M59,17.11A4.24,4.24,0,0,0,54.67,13h0a4.23,4.23,0,0,0-4.31,4.11V23H59Z"/>
                 </g>
                 </pattern>
-                
+
                 <!-- fill a rectangle the size of the whole element with the phosphor dot pattern -->
                 <rect x="0" y="0" id="phosphor-filled-rect" width="100%" height="100%" fill="url(#phosphor-dot-fill)"/>
-                
+
                 <!-- create base rectangles for glitch animation -->
                 <rect id="left-offset-rect" x="0" y="-100" width="100%" height="50%"/>
                 <rect id="right-offset-rect" x="0" y="-100" width="100%" height="50%"/>
-                
+
                 <filter id="crt-filter">
                     <!-- get reference to the phosphor dot screen we created above -->
                     <feImage xlink:href="#phosphor-filled-rect" result="GRID_PATTERN" />
-                    
+
                     <!-- get references to the rectangles we created above -->
                     <feImage xlink:href="#left-offset-rect" result="LEFT_RECT_SHAPE"/>
                     <feImage xlink:href="#right-offset-rect" result="RIGHT_RECT_SHAPE"/>
-                    
+
                     <!-- clip the source graphic to each rectangle -->
                     <feComposite in="SourceGraphic" in2="LEFT_RECT_SHAPE" operator="in" result="LEFT_RECT_IMAGE"/>
                     <feComposite in="SourceGraphic" in2="RIGHT_RECT_SHAPE" operator="in" result="RIGHT_RECT_IMAGE"/>
-                    
+
                     <!-- offset each rectangle to right/left -->
                     <feOffset in="LEFT_RECT_IMAGE" dx="-6" dy="0" result="LEFT_OFFSET_RECT"/>
                     <feOffset in="RIGHT_RECT_IMAGE" dx="6" dy="0" result="RIGHT_OFFSET_RECT"/>
-                    
+
                     <!-- merge the source graphic and the offset rectangles together -->
                     <feMerge result="MERGED_SOURCE">
                         <feMergeNode in="SourceGraphic"/>
                         <feMergeNode in="LEFT_OFFSET_RECT" />
                         <feMergeNode in="RIGHT_OFFSET_RECT" />
                     </feMerge>
-                    
+
                     <!-- blur the graphic a little to give a more realistic look -->
                     <feGaussianBlur in="MERGED_SOURCE" stdDeviation="1" result="BLURRED_SOURCE"/>
-                    
+
                     <!-- isolate each rgb color in the phosphor dots grid -->
                     <feColorMatrix
                         in="GRID_PATTERN"
@@ -1587,7 +1621,7 @@ h2 {
                         0 0 0 0 0
                         0 0 0 0 0
                         1 0 0 0 0" result="RED"/>
-                    
+
                     <feColorMatrix
                         in="GRID_PATTERN"
                 type="matrix"
@@ -1595,7 +1629,7 @@ h2 {
                         0 1 0 0 0
                         0 0 0 0 0
                         0 1 0 0 0" result="GREEN"/>
-                    
+
                     <feColorMatrix
                         in="GRID_PATTERN"
                 type="matrix"
@@ -1603,12 +1637,12 @@ h2 {
                         0 0 0 0 0
                         0 0 1 0 0
                         0 0 1 0 0" result="BLUE"/>
-                    
+
                     <!-- clip the blurred source graphic to the channels we just isolated -->
                     <feComposite in="BLURRED_SOURCE" in2="RED" operator="atop" result="COMPOSITED_RED"/>
                     <feComposite in="BLURRED_SOURCE" in2="GREEN" operator="atop" result="COMPOSITED_GREEN"/>
                     <feComposite in="BLURRED_SOURCE" in2="BLUE" operator="atop" result="COMPOSITED_BLUE"/>
-                    
+
                     <!-- bring out only the corresponding channel from our clipped source graphic -->
                     <feColorMatrix
                         in="COMPOSITED_RED"
@@ -1617,7 +1651,7 @@ h2 {
                         0 0 0 0 0
                         0 0 0 0 0
                         1 0 0 0 0" result="RED_FINAL"/>
-                    
+
                     <feColorMatrix
                         in="COMPOSITED_GREEN"
                 type="matrix"
@@ -1625,7 +1659,7 @@ h2 {
                         0 1 0 0 0
                         0 0 0 0 0
                         0 1 0 0 0" result="FINAL_GREEN"/>
-                    
+
                     <feColorMatrix
                         in="COMPOSITED_BLUE"
                 type="matrix"
@@ -1633,17 +1667,17 @@ h2 {
                         0 0 0 0 0
                         0 0 1 0 0
                         0 0 1 0 0" result="FINAL_BLUE"/>
-                    
+
                     <!-- merge all the channels back together -->
                     <feMerge result="MERGED_TV">
                         <feMergeNode in="RED_FINAL"/>
                         <feMergeNode in="FINAL_GREEN"/>
                         <feMergeNode in="FINAL_BLUE"/>
                     </feMerge>
-                    
+
                     <!-- blur for a more realistic look -->
                     <feGaussianBlur stdDeviation="1.3" result="BLUR"/>
-                    
+
                     <!-- brighten all the pixels a bit -->
                     <feColorMatrix
                 type="matrix"
@@ -1655,11 +1689,11 @@ h2 {
                 </filter>
             </defs>
         </svg>
-        
+
         <div class="tv">
             <div class="stripe red-stripe"></div>
             <div class="stripe blue-stripe"></div>
-            
+
         </div>
     </div> -->
 */

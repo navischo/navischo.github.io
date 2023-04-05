@@ -279,7 +279,7 @@
             <h1 class="quest__title fw-h1 fw-jetbrains-font">Добро вознаграждается</h1>
         </header>
         <button class="fw-submit btn-reset">Отслеживать</button>
-        
+
         <div class="fw-check-list">
           <button class="js fw-check-row fw-check-row--checked">Забрать награду из магазина кассиуса райдера</button>
         </div>
@@ -384,7 +384,7 @@
     game.playersArr.forEach((player) => {
         initHand((player));
     });
-    game.versusScore = 69;
+    game.versusScore = 0;
     initTable();
 
     let currentPlayer = game.playersArr[0];
@@ -394,7 +394,7 @@
     // initProfile();
     initScore();
     updScore();
-    compareScore();
+    // compareScore();
 
     console.log(`currentPlayer is ${currentPlayer.id}`, currentPlayer.hand);
     updHand(currentPlayer.hand);
