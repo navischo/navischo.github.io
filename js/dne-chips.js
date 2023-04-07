@@ -51,3 +51,10 @@ const drawChips = (cardData, parentSelector = ".js-chip-list") => {
     clearAllDoorsBtn.addEventListener("click", toggleAllDoors);
     clearAllItemsBtn.addEventListener("click", toggleAllItems);
 }
+
+const clearChips = (parentSelector = ".js-chip-list") => {
+    const chipsParents = document.querySelectorAll(parentSelector);
+    chipsParents.forEach((chipsParent) => {
+        chipsParent.innerHTML = "";
+    });
+}

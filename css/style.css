@@ -1389,6 +1389,16 @@ h2 {
     margin: 10px;
 }
 
+.build .js-cards-catalog-npc {
+    max-width: 1240px;
+    justify-content: center;
+}
+
+.build .swiper-slide[id*="dne-card-"],
+.build .card {
+    margin: 5px;
+}
+
 /* END DNE */
 
 /* START VHS-SCREEN */

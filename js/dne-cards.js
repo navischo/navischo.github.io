@@ -161,7 +161,6 @@ const initDNELootArr = () => {
     const DEMO_LONGLINE_SHORT = "Демо можна відправити Лейблу, зіграти на вечірці <br>або навідь видати на вінілі. <br><br>Комбінуй звук в одному жанрі щоб посилити враження";
     const DEMO_LONGLINE_SHORT_2 = "Демо можна відправити Лейблу, зіграти на вечірці <br>або навідь видати на вінілі. <br><br>Більше людей його почують, більше шанс на нове замовлення.";
 
-    LootArr.push(new DNELootCard("support", "Найомничок", "Можеш застосувати на нього ще один клас та дати йому одну шмотку. Якщо втрачаєш Найомничка, клас до тебе повертається, та шмотку втрачаєш із ним. Можеш підставити Найомничка щоб піти від відповідальності за провальний івент. Тримай Найомничка перед собой поряд с іншими айтемами.", "https://lh4.googleusercontent.com/SMs5epImEfomWNvE5FJFJgtvVK3inDgX5oGiaQmwvORuLEMhIkBFn6qaUgMDN216x8U=w2400", 1, 0, "", COMPANION_LONGLINE, "", true, "npc"));
     LootArr.push(new DNELootCard("ddj400", "DDJ-400", "Дозволяє зводити дві стежки, задовольняючи потреби 80% аудиторії будь-якого івенту.", "https://lh3.googleusercontent.com/0FZHsm4sbeaFrstYVngi54Th4WRf2ZnGpz_4hUnuaOwMDfDfld2QfzwRRbgFgQciVlk=w2400", 2, "16К/400", "Бонус для DJ-їв", "Дозволяє зводити дві стежки, модифікувати та записувати музику", "", true));
     LootArr.push(new DNELootCard("plx500", "PLX-500", "Дозволяє зводити на одну стежку вінілу більше, за наявності Мікшера, задовольняючи потреби 100% аудиторії та підвищуючи задоволення діджеїв від івенту до високого рівня. З ним починаючі артисти готові грати безкоштовно", "https://lh3.googleusercontent.com/KN2qxZnH-hXNEHgObCGjs5LZ0ZGYecDDhdQITXMEm664nSvrjALLo-mqsfuYaPzqaD0=w2400", 3, "16К/400", "Бонус для DJ-їв", "Дозволяє зводити на одну стежку вінілу більше, за наявності Мікшера, модифікувати та записувати музику.", "", true, "loot"));
     LootArr.push(new DNELootCard("ddjrev1", "DDJ-REV1", "Дозволяє зводити дві стежки, задовольняючи потреби 100% аудиторії та підвищуючи задоволення діджеїв від івенту до високого рівня. З ним починаючі артисти готові грати безкоштовно", "https://lh6.googleusercontent.com/bCCZKzLEoTr1u-IZlLjIlJUhGc7tE_H7YlxQVYs6-RKfarQLmOnExKK_e2gBIh0Ezd8=w2400", 2, "17К/400", "Бонус для DJ-їв", "Дозволяє зводити дві стежки, модифікувати та записувати музику.", "", true, "loot"));
@@ -239,36 +238,37 @@ const initDNELootArr = () => {
     LootArr.push(new DNELootCard("class-ttter", "Татуєр", "Наб'є тобі татуху. Регулярно робить це на різноманітних вечірках на які тільки зможе прийти. Завжди радий бачити у власній студії щоб вколоти свіжу масть. Мусить мати чисте місце для роботи, необхідну аппаратуру та матеріали. Кожне його татуювання має особливу властивість. Наб'є тобі татуху. Кожне тату дає власнику особливу властивість до кінця гри, яку саме - обирає татуєр та гейм-майстер. Власник може попросити татуєра дати татуюванню якусь певну властивість, та чи зробить він це знатиме лише гейм-майстер.", "https://lh5.googleusercontent.com/WUvRRRJpFIACJw50hOycHsKNnwSB3SdJSs-_5JQk11pKHMoDstW_n9nzWwb28y_wTUU=w2400", 1, 0, "Клас", "Наб'є тобі татуху. Кожне тату дає власнику особливу властивість до кінця гри, яку саме - обирає татуєр та гейм-майстер.", "", true, "class"));
     // DJ
     LootArr.push(new DNELootCard("class-dj", "DJ", "Поставить музику. На протязі гри може ставити музику. Якщо кожен гравець її похвалить, спробує записати Демо, щоб потім ставити його на вечірках, продавати як Альбом в інтернеті і можливо колись навіть записати його на вінілі.<br> Якщо кожен гравець визнає що музика не та, той хто її ставив втрачає цей клас.", "https://lh5.googleusercontent.com/i6Sfz0bcn1Q6HQsSqQhV1QMtCq7pyETASnCXsyswzh7NAZ2iOVdAyQoncZ8mE23BBW8=w2400", 1, 0, "Клас", "Ставить музику. Ти відповідальний за звук, enjoy!", "", true, "class"));
-    // DJ
+
+
     LootArr.push(new DNELootCard("class-netrunner", "Компьютер-мєн", "Компьютермєн здатен робити неймовірні речі з компьютером. Чим потужніше його обладнання, тим потужніші його можливості. Спектр його дій захоплює все, починаючи з монтажу відео та обробки графіки, закінчуючи розробкою веб-сайтів та 3Д-моделювання.", "https://lh4.googleusercontent.com/_NvNB3zKOJkiy19PTgbJkCqovWYT1AFdaOLZ5CI9AhTIxAqZR1skE4lxIlniWoWkpUk=w2400", 1, 0, "Клас"));
     LootArr.push(new DNELootCard("botnet", "Ботнет", "Мережа фейкових користувачів Instagram що виглядають як звичайні люди, коментують один одного, репостять та надсилають повідомлення з рандомізованим контентом. Можуть миттєво популярізувати будь яку ідею на всю свою аудиторію. Розробити такий не складко, потрібно трохи технічних навичок та багато креативності. Мережевий Дозор зацікавиться їх власником.", "https://lh4.googleusercontent.com/esZ8EbhZ6W4wudZe-Kjm442KRBg_1P3-lePD8HJddEOErmflqrhrVjl3vFHzFhDywFA=w2400", 6, "3К", "Тільки для Компьютермена"));
     // LootArr.push(new DNELootCard("law-belford", "Закон Белфорда", "Математичний закон, що дозволяє перевіряти масиви данних будь-якого об'єму на фальсифікацію.", "", 0, 0, "Тільки для Компьютермена"));
-    // Механік
-    LootArr.push(new DNELootCard("mechanic", "Механік", "Механік здатен виконати будь-яку чоловічу роботу по дому, в машині або на івенті. Сильний чоловік що працює за розумні гроші. Має автівку вантажного классу та водійське посвідчення", "https://lh4.googleusercontent.com/Fut_jQUzHbDUFJ9siml-QsQQQQFrYamdaVff8SL-Uqi9TiKx2rVQKapBRaq6PmOwGyA=w2400", 1, 0, "Найомничок", "Сильний чоловік що працює за розумні гроші. Має - автівку вантажного классу, посвідчення.", "", true, "npc"));
-    LootArr.push(new DNELootCard("class-riper-doc", "Ріпер-док", "Рипер вьтащит из тебя пулю, дочистит деку от демонов, установит кибер-имплант. Требует чистого рабочего места и неоходимую аппаратуру для каждой задачи.", "https://lh4.googleusercontent.com/dCcYzvFtdty2YemyWeXVuSufgM-cBjEQitKSc0hNJd0LbAxk3U6mYsvy-P-z72aFuF4=w2400", 1, 0, "Клас"));
-    LootArr.push(new DNELootCard("class-riper-doc", "Ріпер-док", "Рипер вьтащит из тебя пулю, дочистит деку от демонов, установит кибер-имплант. Требует чистого рабочего места и неоходимую аппаратуру для каждой задачи.", "https://lh4.googleusercontent.com/dCcYzvFtdty2YemyWeXVuSufgM-cBjEQitKSc0hNJd0LbAxk3U6mYsvy-P-z72aFuF4=w2400", 1, 0, "Клас"));
+   LootArr.push(new DNELootCard("class-riper-doc", "Ріпер-док", "Рипер вьтащит из тебя пулю, дочистит деку от демонов, установит кибер-имплант. Требует чистого рабочего места и неоходимую аппаратуру для каждой задачи.", "https://lh4.googleusercontent.com/dCcYzvFtdty2YemyWeXVuSufgM-cBjEQitKSc0hNJd0LbAxk3U6mYsvy-P-z72aFuF4=w2400", 1, 0, "Клас"));
     LootArr.push(new DNELootCard("i-cyberdeck", "Кібер-дека", "Нетраннерська модифікація мозку, дозволяє завантажувати в мережу та віддалено керувати программами, які відправляються ланцюгами з одного або більше скриптів. Чим якісніша дека, тим більше скриптів в один пайп здатен вмістити її користувач. Об'єм пам'яті: 2 слоти", "https://lh3.googleusercontent.com/d1L38A_1BkvWOxovw9VXYP7N43Nf3lzr0694rItzFJkcdzp1V-28OQaE7um0LPMFGQc=w2400", 1, "10К", "Кібер-імплант"));
     LootArr.push(new DNELootCard("i-stack", "Карбоновий стек", "Дозволяє зберегти єнграмму особистості щоб завантажити в інше тіло. Процес не є приємним, відновлення може займати від декількох годин, до декількох днів. Таким чином незворотно вбити власника стеку можна лише фізично знищивши стек з енергетичної зброї.", "https://lh6.googleusercontent.com/tnZoBgsKRJl80CrR9alTbiItgE6plsJRSGd83Hts9vEmC3cvGc0WV9MrvEKg22GyO3Q=w2400", 1, "400К", "Кібер-імплант"));
     LootArr.push(new DNELootCard("class-collector", "Коллекціонер", "Зробить відео-контент з будь-якого творчого задуму. Спробуй використати отримані матеріали щоб розповісти у відео-форматі про свою справу. Хтось може звернути на це увагу та запропонувати тобі роботу.", "https://lh6.googleusercontent.com/c1TwnNfpDleCf4bJp00yiswT7zTrzzfhSjwTWXdBLALXUHYy9dEmYMCEKpHdbWuKfE4=w2400", 1, 0, "Клас", "Здатен бачити спражню цінність предметів, виділяти серед них драгоцінні.<br><br> Надає цю інформацію за розумний відсоток або соковитий аванс", "", true, "class"));
     const BARBER_LONGLINE = "Підстреже тебе швидко та якісно. Гарна новина: Ти маєш постійну роботу в мережі барберів та стабільний заробіток відносно рангу. Погана новина: Ти жінка.<br> Щасти<br><br> Міні-гра:<br>Не дивись їй під спідницю.";
     LootArr.push(new DNELootCard("class-barber", "Барбер", BARBER_LONGLINE, "https://lh5.googleusercontent.com/swk49Cl7o0LdJzLglojbUTrMZVPS1j2fkGa7-rMJcpuDCwv5HBkunz_vIjrwQa45UFA=w2400", 1, 0, "Клас", BARBER_LONGLINE, "", true, "class"));
-    LootArr.push(new DNELootCard("porn-prince", "Порно-принц", "Зробить відео-контент з будь-якого творчого задуму. Спробуй використати отримані матеріали щоб розповісти у відео-форматі про свою справу. Хтось може звернути на це увагу та запропонувати тобі роботу.", "https://lh4.googleusercontent.com/FZFTYr__oUeAQtVUxdlG0AT7A2BMWGKmCL9KECct9KeZK6iacLswIjCpc2aEWfqjk64=w2400", 1, 0, "Найомничок", "Створює відео-контент з івентів, на які приходить.", "", true, "npc"));
     // LootArr.push(new DNELootCard("class-videomaker", "Відео-<br>мейкер", "Зробить відео-контент з будь-якого творчого задуму. Спробуй використати отримані матеріали щоб розповісти у відео-форматі про свою справу. Хтось може звернути на це увагу та запропонувати тобі роботу.", "https://lh4.googleusercontent.com/FZFTYr__oUeAQtVUxdlG0AT7A2BMWGKmCL9KECct9KeZK6iacLswIjCpc2aEWfqjk64=w2400", 1, 0, "Клас", "Створює відео-контент з івентів, на які приходить.", "", true));
     LootArr.push(new DNELootCard("class-shoplifter", "Шопліфтер", "Може дістати для тебе будь-який айтем з магазину вдвічі дешевше, не питай як. Може скинути будь-яку картку з руки щоб з верогідністю 30% вкрасти будь-яку річ іншого гравця, що знаходиться з ним в одному приміщенні та не захищена ключем. Крадіжка важливих предметів, наприклад звуку під час вечірки може призвести до найкатастрофічніших наслідків. В разі невдалої крадіжки тобі доведеться заплатити її власнику компенсацію до 50% від вартості айтему. Охороничок допоможе залишати Шопліфтера за дверима.", "https://lh3.googleusercontent.com/6Wd_TULgCtwHpTisY2Nivlpvcwy8xRw9I6jgMeWF0NMnSZwHA86gcw5RD0fq6-GPFmE=w2400", 1, 0, "Клас", "Може дістати для тебе будь-який айтем з магазину вдвічі дешевше, не питай як.<br><br> Підріж айтем іншого гравця з верогідністю 33% скинувши картку з руки.", "", true, "class"));
-    LootArr.push(new DNELootCard("class-seller", "Селлер", "Може продавати айтеми дорожче їх собівартості, та обов'язково попросить відсоток, чим кращий продавець, тим більший. Має можливість працювати на івентах із мерчем та магазинах, щоб отримати додатковий дохід.", "https://lh3.googleusercontent.com/fWeM_q6WoqvpbeZHsyZGK3T1c7l4-xddZJJnNPF0rpEqDyIGzKWynUshmb27N7F_MOs=w2400", 1, 0, "Клас", "Може продати айтеми дорожче собівартості, та обов'язкого візьме відсоток.", "", true));
+    LootArr.push(new DNELootCard("class-seller", "Селлер", "Може продавати айтеми дорожче їх собівартості, та обов'язково попросить відсоток, чим кращий продавець, тим більший. Має можливість працювати на івентах із мерчем та магазинах, щоб отримати додатковий дохід.", "https://lh3.googleusercontent.com/fWeM_q6WoqvpbeZHsyZGK3T1c7l4-xddZJJnNPF0rpEqDyIGzKWynUshmb27N7F_MOs=w2400", 1, 0, "Клас", "Може продати айтеми дорожче собівартості, та обов'язкого візьме відсоток.", "", true, "class"));
     LootArr.push(new DNELootCard("class-streamer", "Стрімер", "Може отримувати донати під час трансляцій. Чим більшу аудиторію має стрімер, тим більше верогідність розмір та кількість донатів. Має можливість працювати на івентах із мерчем, щоб отримати додатковий дохід.", "https://lh4.googleusercontent.com/uWaxdPO9xe4sZXU4UZGrMBx5hQ0GVXnV4Vk-WaqWbokv14PdbenppCzovLvbc4Rw5WM=w2400", 1, 0, "Клас", "Може отримувати донати під час трансляцій. Чим більшу аудиторію має стрімер, тим більше верогідність розмір та кількість донатів.<br> Має можливість працювати на івентах із мерчем, щоб отримати додатковий дохід.", "", true, "class"));
     LootArr.push(new DNELootCard("class-jeweller", "Ювелір", "Вітання, тепер ти маєш здатність створювати дорогоцінні речі з металу та каменю.<br><br> Та май на увазі, постійне використання здібностей такого роду призводить певні метаморфози.", "https://lh6.googleusercontent.com/vZeo459Kvfml9PNnrpt6aB175VWeNr8EEmVo60Ukk64PF7NxGr1rNjJlXAXY8kxC9ZU=w2400", 1, 0, "Клас", "Вітання, тепер ти маєш здатність створювати дорогоцінні речі з металу та каменю.<br><br> Та май на увазі, постійне використання здібностей такого роду призводить певні метаморфози.", "", true, "class"));
-    LootArr.push(new DNELootCard("alise", "Aліс`е", "Проклятий янгол з сумними очима. Чудово продає речі, бо здатна відрізнити оригінал від підробки та цінує свій відсоток.", "https://lh4.googleusercontent.com/a-hieOJkrw-3bWjz8EawHojHcLcH78bHvYAFnIN9rew2VPZUxg8mTzcrMJb791fwPL4=w2400", 1, 0, "Найомничок", "Проклятий янгол з сумними очима. Чудово продає речі, бо здатна відрізнити оригінал від підробки та цінує свій відсоток.", "", true, "npc"));
     LootArr.push(new DNELootCard("class-photographer", "Фотограф", "Зробить тобі якісні знімки. В істаграмі вартість будь чого росте в рази, коли має якісні знімки, будь це івент, простір або татуювання. Зробивши фото гравця ти маєш шанс згенерувати персонажа на основі його образу. Має можливість працювати на івентах, щоб принести йому більше популярності, шанс нових замовлень та отримати за це додатковий дохід.", "https://lh3.googleusercontent.com/V43LauxtU-trhnzgphBra9iro6BlfDJ3mYQfCSP6jdCkXQY2FTZsBndJvT8Cc6UM-dk=w2400", 1, 0, "Клас"));
     LootArr.push(new DNELootCard("class-shinobi", "Шинобі", "Мистецтво Шинобі - іллюзія. Здатен вивчати дзютсу та використовувати їх у грі.", "https://lh3.googleusercontent.com/J9zfpfgBU-x_Ix5SfbLtxnJe7717J__pqa5zGGQ8l_CYeDSOB-xXvDOXcC2jv7aLePI=w2400", 1, 0, "Клас", "Здатен вивчати Дзютсу та використовувати їх на свою користь.", "", false));
-    // Кибердека
-//
     // Драгрейсер
     // LootArr.push(new DNELootCard("class-drugracer", "Драгрейсер", "", "", 1, 0, "Клас"));
-    // Мачете
+    LootArr.push(new DNELootCard("class-typograf", "Типограф", "Типограф надрукує тобі будь-яку яку картку та віддасть за розумний відсоток від її вартості.", "https://lh6.googleusercontent.com/o75I3KWBcZNK5MEn9EYCKrvJK7SYlc65cGLIlDnpf7O5OZsSNQIRtQ7rzY8TXEr-1a8=w2400", 1, 0, "Клас", "Типограф надрукує тобі будь-яку яку картку та віддасть за розумний відсоток від її вартості.", "", true, "class"));
+
+    const GABE_LONGLINE = "Любить своїх фанів. Відповідає на твої імейли. Оплачує своїм робітникам та їх родинам подорож на Гаваї.<br><br>Звісно в нього ти знайдеш найкращий лут, або навідь зможеш придбати.";
+    LootArr.push(new DNELootCard("gabe", "Гейб", GABE_LONGLINE, "https://lh6.googleusercontent.com/7i6mSHABzuXys1AYpZyzxTxgHSPfoMZIdRPKBJeCvwtBcvx8L7arDexJJF2ODvT6HQY=w2400", 0, 0, "Мільярдер", GABE_LONGLINE, "", true, "npc"));
+    LootArr.push(new DNELootCard("gm", "Гейм-майстер", "Ти - гейм-майстер, розум всесвіту в який отримують запрошення Гравці. Історія їх рішень веде свою розповідь твоїм мовчанням та закінчується твоїм словом.", "https://lh3.googleusercontent.com/ZTuvzKcI1DXRXzBe7dMlO1oS1TH9KWmfNayttkFz6fw6wEnptPQozduYQHDtjSZOE4M=w2400", 0, 0, "А", "Ти - гейм-майстер, розум всесвіту в який отримують запрошення Гравці. Історія їх рішень веде свою розповідь твоїм мовчанням та закінчується твоїм словом.", "", true, "npc"));
+    LootArr.push(new DNELootCard("support", "Найомничок", "Можеш застосувати на нього ще один клас та дати йому одну шмотку. Якщо втрачаєш Найомничка, клас до тебе повертається, та шмотку втрачаєш із ним. Можеш підставити Найомничка щоб піти від відповідальності за провальний івент. Тримай Найомничка перед собой поряд с іншими айтемами.", "https://lh4.googleusercontent.com/SMs5epImEfomWNvE5FJFJgtvVK3inDgX5oGiaQmwvORuLEMhIkBFn6qaUgMDN216x8U=w2400", 1, 0, "", COMPANION_LONGLINE, "", true, "npc"));
+    LootArr.push(new DNELootCard("mechanic", "Механік", "Механік здатен виконати будь-яку чоловічу роботу по дому, в машині або на івенті. Сильний чоловік що працює за розумні гроші. Має автівку вантажного классу та водійське посвідчення", "https://lh4.googleusercontent.com/Fut_jQUzHbDUFJ9siml-QsQQQQFrYamdaVff8SL-Uqi9TiKx2rVQKapBRaq6PmOwGyA=w2400", 1, 0, "Найомничок", "Сильний чоловік що працює за розумні гроші. Має - автівку вантажного классу, посвідчення.", "", true, "npc"));
+    LootArr.push(new DNELootCard("porn-prince", "Порно-принц", "Зробить відео-контент з будь-якого творчого задуму. Спробуй використати отримані матеріали щоб розповісти у відео-форматі про свою справу. Хтось може звернути на це увагу та запропонувати тобі роботу.", "https://lh4.googleusercontent.com/FZFTYr__oUeAQtVUxdlG0AT7A2BMWGKmCL9KECct9KeZK6iacLswIjCpc2aEWfqjk64=w2400", 1, 0, "Найомничок", "Створює відео-контент з івентів, на які приходить.", "", true, "npc"));
+    LootArr.push(new DNELootCard("alise", "Aліс`е", "Проклятий янгол з сумними очима. Чудово продає речі, бо здатна відрізнити оригінал від підробки та цінує свій відсоток.", "https://lh4.googleusercontent.com/a-hieOJkrw-3bWjz8EawHojHcLcH78bHvYAFnIN9rew2VPZUxg8mTzcrMJb791fwPL4=w2400", 1, 0, "Найомничок", "Проклятий янгол з сумними очима. Чудово продає речі, бо здатна відрізнити оригінал від підробки та цінує свій відсоток.", "", true, "npc"));
     LootArr.push(new DNELootCard("vargus", "Варгус", "Варгус має талант до продажу речей людям та живе щасливим життям, підпрацьовуючи в секс-шопі, у вільний час від книжок та рольових ігор. З радістю допоможе тобі в продажі товарів на івентах, та обов'язково візьме відсоток. Навіть не думай, в неї є подруга.", "https://lh3.googleusercontent.com/6gH7UsITDPPYen1jxeGornc0u1qERrzJASIDw5yNCQs03ptnsEWqH1fi-LrecRVtM9k=w2400", 1, 0, "Найомничок", "Варгус має талант до продажу речей людям та з радістю допоможе тобі з цим за розумний відсоток", "", true, "npc"));
     LootArr.push(new DNELootCard("olivye", "Олів'є", "Олів'є - людина перформанс. Він перетворить на захопливу пригоду навідь звичайнісінький день. Перетворить на товар буквально будь-що, з радістю допоможе тобі в продажі та обов'язково візьме відсоток.", "https://lh6.googleusercontent.com/UPZBku2FlEp8bXCBMhdsRXu2ZRWVrAyLidobt8lMhi82Fudyxexfi7rwCHubrAGSgM4=w2400", 1, 0, "Найомничок", "Олів'є - людина перформанс. Перетворить на товар буквально будь-що, з радістю допоможе тобі в продажі та обов'язково візьме відсоток.", "", true, "npc"));
-    LootArr.push(new DNELootCard("class-typograf", "Типограф", "Типограф надрукує тобі будь-яку яку картку та віддасть за розумний відсоток від її вартості.", "https://lh6.googleusercontent.com/o75I3KWBcZNK5MEn9EYCKrvJK7SYlc65cGLIlDnpf7O5OZsSNQIRtQ7rzY8TXEr-1a8=w2400", 1, 0, "Клас", "Типограф надрукує тобі будь-яку яку картку та віддасть за розумний відсоток від її вартості.", "", true, "class"));
     LootArr.push(new DNELootCard("wednesday", "Середа", "Середа переїхала з Харкова і захопилася Київською натурою, від тоді нічне життя столиці її не відпускає. Має талант до продажу рослин та речей з органічних матеріалів. З радістю допоможе тобі в продажі товарів на івентах, та обов'язково візьме відсоток.", "https://lh3.googleusercontent.com/4sGFySzeBod97kvEwmqncV9wHszsLBoE0qDZ5rujFfsqjfU6eqYpjdLnKP63VXSI7gE=w2400", 1, 0, "Найомничок", "Має талант до продажу рослин та речей з органічних матеріалів. З радістю допоможе тобі в продажі товарів на івентах, та обов'язково візьме відсоток.", "", true, "npc"));
     LootArr.push(new DNELootCard("cleo", "Клео", "Клео - надійний товариш, доки ти її друг. Переїхавши з Берліну почала займатися організацією і доводі успішно. Має власне авто, талант до продажу та організації, та працює лише за ідею і тільки з одним гравцем за всю партію.", "https://lh3.googleusercontent.com/a8JzDrNSRIgDG_m4yH4-A5kttXRu6SM6D1APBlOBn4WhIdT4bpUA9_YtHB_yPejzOlc=w2400", 1, 0, "Найомничок-DJ", "Має власне авто, талант до продажу та організації, та працює лише за ідею і тільки з одним гравцем за всю партію.", "", true, "npc"));
     LootArr.push(new DNELootCard("zer0", "0", "Смертельно небезпечний та фантастично дорогий.", "https://lh3.googleusercontent.com/iLWF6yChVeG_1Sstqxehiaq2TEH7Tv3PNkHekUKIbKoZ_04FxB-FF5K5LXocBLO-Xjo=w2400", 1, 0, "Найомничок", "Смертельно небезпечний та фантастично дорогий.", "", true, "npc"));
@@ -301,7 +301,7 @@ const initDNELootArr = () => {
     // Ілон Таск
     LootArr.push(new DNELootCard("tusk", "Ілон Таск", "Таск регулярно донатить ЗСУ на визволення Криму з під контролю Путлера, дарує старлінки та розробляє план розвитку Нового Донецьку. Чудово розуміється у розробці веб-сайтів, апок для смартфонів та дронах. Відчуває ностальгію по власній юності тож завжди радий допомогти молодим даруванням з втіленням найсміливіших ідей.", "https://lh6.googleusercontent.com/paU4WKE38gv_ftC9uXIsGNXoNp0_e8xiVa133tyR6s4zR2ZqkDYmirkcVeRZtRJfQU4=w2400", 1, 0, "Найомничок", "Чудово розуміється на електронній музиці та техніці, може домовитись їх придбати вдвічі дешевше, не просто ж так він мільярдер.", "", true, "npc"));
     // Рік С-137
-    LootArr.push(new DNELootCard("rick", "Рік С-137", "Так, той самий. В нього завжди при собі його портальна пушка та хто в біса зна що ще. Добре подумай яку справу довірити цій людині. Ніхто не знає що станеться далі.", "https://lh6.googleusercontent.com/FIZwLsrD-krhTSF5hdjlhDt7sFSTjTlmQIGvHxLaLeeA8ceUHPohn6i1k3t8yiDqi2Y=w2400", 1, 0, "Найомничок", "Так, той самий. З ядерним перегаром, літаючою тарілкою зі сміття та мікровсесвітом, накшталт твого, під капотом", "", true));
+    LootArr.push(new DNELootCard("rick", "Рік С-137", "Так, той самий. В нього завжди при собі його портальна пушка та хто в біса зна що ще. Добре подумай яку справу довірити цій людині. Ніхто не знає що станеться далі.", "https://lh6.googleusercontent.com/FIZwLsrD-krhTSF5hdjlhDt7sFSTjTlmQIGvHxLaLeeA8ceUHPohn6i1k3t8yiDqi2Y=w2400", 1, 0, "Найомничок", "Так, той самий. З ядерним перегаром, літаючою тарілкою зі сміття та мікровсесвітом, накшталт твого, під капотом", "", true, "npc"));
     LootArr.push(new DNELootCard("ricks-second-portalgun", "Запасна портальна пушка Ріка", "Дозволяє миттєво переміщатись з пункту А в пункт Б. В часі з нею не поподорожуєш, бо Рік зробив її щоб Морті міг швидко ходити за пивом. Не заправляй її спрайтом.", "https://lh5.googleusercontent.com/FvLcgRozAUKRG7UniV9wQnIoNEvckTZ_g8DvU0so9nsPalQfPtkGfHzsNVH14obqe6o=w2400", 5, "300К/5К", "Авто"));
     LootArr.push(new DNELootCard("v", "V", "Так, поклич цього хлопця, що може піти не так?)", "https://lh6.googleusercontent.com/TGoJYG0KoqQ1oSf45SIKkFmp_6skZRJ9pmmR1vEWo6_xyFoHuCqZWI01Pi58MzRBKgg=w2400", 1, 0, "Найомничок", "Виглядає як порядний Охороничок та вправний Водій", "", true, "npc"));
     LootArr.push(new DNELootCard("wolf", "THE WOLF", "I solve problems", "https://lh3.googleusercontent.com/hgUIik77UVkI226aXYkYt7gtuvicht-KY4ytgoTuwB47f7gzrG93-9QI-rhgw5Y7RAk=w2400", 1, 0, "Найомничок", "I solve problems", "", true, "npc"));
@@ -311,7 +311,7 @@ const initDNELootArr = () => {
     LootArr.push(new DNELootCard("lisova-mavka", "Лісова Діва", LISOVA_MAVKA_LONGLINE, "https://lh3.googleusercontent.com/gTtZ-rp5BXr_GyuAwIiSkTFBQWUmbwyyeFrc0G534MsQGLv_r6U8VonEkSm5eqW0z4E=w2400", 1, 0, "Найомничок", LISOVA_MAVKA_SHORTLINE, "", true, "npc"));
 
     // Кільце влади
-    LootArr.push(new DNELootCard("power-ring", "Кільце влади", "Посилює найсильніші якості носителя, покращуючи їх до максимуму відносно обставин. Кільця влади можуть бути різної форми та рівнів могутності, залежно від майстра що його викував, рідкості матеріалу та каменю. З часом використання пробуджує темні сторони особистості носія та поступово підкоряє його власній волі. Кільце влади завжди вірне лише своєму творцю, завжди прагне до нього і чим більше наближається, тим могутнішим стає.", "https://lh4.googleusercontent.com/dWwMABhNjnvI-OOzxZDgmEqELhIfSJ25Ru8fR0hflXz1Ufd3Tr-jXDtZKTKVQ3dIxzk=w2400", 4, 0, "Драгоцінність", "Посилює найсильніші якості носителя, покращуючи їх до максимуму відносно обставин.", "", true, "loot"));
+    LootArr.push(new DNELootCard("power-ring", "Кільце влади", "Посилює найсильніші якості носителя, покращуючи їх до максимуму відносно обставин. Кільця влади можуть бути різної форми та рівнів могутності, залежно від майстра що його викував, рідкості матеріалу та каменю. З часом використання пробуджує темні сторони особистості носія та поступово підкоряє його власній волі. Кільце влади завжди вірне лише своєму творцю, завжди прагне до нього і чим більше наближається, тим могутнішим стає.", "https://lh4.googleusercontent.com/dWwMABhNjnvI-OOzxZDgmEqELhIfSJ25Ru8fR0hflXz1Ufd3Tr-jXDtZKTKVQ3dIxzk=w2400", 4, 0, "Драгоцінність", "Посилює найсильніші якості носителя, покращуючи їх до максимуму відносно обставин.", "", true, "anti"));
     // Убрать и отснять студию
     // Фото чистої студії приваблюють клієнтів, отримай два випадкові закази на руку та використовуй цю картку як бонус +2 для будь-якого івенту в ній. Фото на професійний фотоаппарат з широким об'єктивом привабить навіть найвибагливішу аудиторію.
 
@@ -331,12 +331,12 @@ const initDNELootArr = () => {
     // Флоп
     const FLOP_SHORTLINE = "Швидкий, характерно недбалий, закрас та контур за лічені хвилини, опціонально тінь.<br><br>Як правило достатньо двох банок(високий слім+низький фет) контрастних кольорів.<br><br>Намалювати скетч заздалегідь буде супер";
     const FLOP_LONGLINE = ` $Універсальний солдат в арсеналі Вандала, що з двох банок здатен зробити швидкий закрас та контур за лічені хвилини. Опціонально можна намалювати скетч і впевнитись у результаті до початку роботи.`;
-    LootArr.push(new DNELootCard("make-flop", "Флоп", FLOP_LONGLINE, "https://lh3.googleusercontent.com/oAnpZMw-GdG79UEJot10AtxR0buHdZ5KAKhuvsOeLbHSPRHN_EW8srN8Ilc6ItibViU=w2400", 1, "1⚡ 500", "Дія", FLOP_SHORTLINE, "", true));
+    LootArr.push(new DNELootCard("make-flop", "Флоп", FLOP_LONGLINE, "https://lh3.googleusercontent.com/oAnpZMw-GdG79UEJot10AtxR0buHdZ5KAKhuvsOeLbHSPRHN_EW8srN8Ilc6ItibViU=w2400", 1, "1⚡ 500", "Дія", FLOP_SHORTLINE, "", true, "dia"));
 
     // Забомбити кусок
     const MAKE_PIECE_LONGLINE = "Забомбити кусок можна на будь-якій стіні. Навіть якщо ніхто цього не дозволяв та навіть якщо хтось проти. Вулиця - твій холст. Нехай вона буде святом мистецтва для всіх. Кусок може привернути увагу будь до чого.";
     const MAKE_PIECE_SHORTLINE = "Приверни увагу до себе забомбивши на вечірці<br> величезне графіті.<br><br> Потрібна лише фарба. Якщо вона в тебе є, карта спрацює лише за рахунок енергії.";
-    LootArr.push(new DNELootCard("make-piece", "Кусок", MAKE_PIECE_LONGLINE, "https://lh5.googleusercontent.com/-LrxKPIJUhhiMqNOVDdPo07vri3pfz1Y_if2szB_lX63yS06ESUebo8_xUEETw22yb8=w2400", 2, "1⚡ 1K", "Дія", MAKE_PIECE_SHORTLINE, "", true));
+    LootArr.push(new DNELootCard("make-piece", "Кусок", MAKE_PIECE_LONGLINE, "https://lh5.googleusercontent.com/-LrxKPIJUhhiMqNOVDdPo07vri3pfz1Y_if2szB_lX63yS06ESUebo8_xUEETw22yb8=w2400", 2, "1⚡ 1K", "Дія", MAKE_PIECE_SHORTLINE, "", true, "dia"));
 
     // Сумісний кусок
     const MAKE_COOP_PIECE_LONGLINE = "Скооперуйся з ще одним(або більше) Райтером щоб забомбити сумісний кусок, що даватиме бонус усім. На Стрічкоткацькій давно не фарбували стіни, час це виправити. Дозволяти це звісно ніхто не буде, та якщо ти знайомий з власниками клубів, це може зійти за аргумент. Один охоронець на КПП. Для такого розміру шматка знадобиться драбина, попитай знайомих або придбай сам. Кольори на твій смак, візьми друзів щоб працювати швидше. Зніми на камеру щоб отримати +1 до бонусу та запис процессу.";
@@ -359,15 +359,18 @@ const initDNELootArr = () => {
     // Скласти нутрощі у кейс
     LootArr.push(new DNELootCard("hide-insides-case", "Скласти нутрощі у кейс", "Ви можете дістати серце або мозок та покласти його у кейс. Тепер після вашої смерті, маючи кейс та ключ від нього гравець може воскресити вас, якщо у кейсі знаходиться ваш мозок. Або все що ви мали буде передано гравцю, що матиме кейс та ключ, якщо в кейсі знаходиться ваше сердце. Застосовуючи цю карту гравець вирішує що покласти в кейс, його рішення знає лише гейм-мастер. Одноразова дія, скинь після використання.", "https://lh4.googleusercontent.com/Z7SDwZp_vswKBpfz9MJy1okslUiTfbNvnaQp1cQkd3XfQxwGydioc9WRWDQhdrTQXjE=w2400", 5, "10К", "Дія"));
     // Спалах
-    LootArr.push(new DNELootCard("make-puf", "Спалах", "Ви можете використати 1г своїх Квітів щоб забити смачнющий косий розміру XL та розділити цю радість з найближчим колом гравців. Ходять чутки, що просунуті гравці здатні творити магію під час Спалаху. Враження від івенту на якому взривають косяки ростуть до максимуму для всіх івентів, де концепт допускає паління. +1 до виправданих очікувань кожному гравцю за кожен косяк.", "https://lh6.googleusercontent.com/RaCJIJOCn6erGEpLCyXrgq2L_PdlUxR6RVDXmafA0wwQ6iOUCrwjrVt2_35_E4H7pA4=w2400", 1, "300", "Дія", "Використай свої квіти, щоб зробити Спалах. Кажуть він має неймовірну силу, особливо під час вечірок.", "", true));
+    LootArr.push(new DNELootCard("make-puf", "Спалах", "Ви можете використати 1г своїх Квітів щоб забити смачнющий косий розміру XL та розділити цю радість з найближчим колом гравців. Ходять чутки, що просунуті гравці здатні творити магію під час Спалаху. Враження від івенту на якому взривають косяки ростуть до максимуму для всіх івентів, де концепт допускає паління. +1 до виправданих очікувань кожному гравцю за кожен косяк.", "https://lh6.googleusercontent.com/RaCJIJOCn6erGEpLCyXrgq2L_PdlUxR6RVDXmafA0wwQ6iOUCrwjrVt2_35_E4H7pA4=w2400", 1, "300", "Дія", "Використай свої квіти, щоб зробити Спалах. Кажуть він має неймовірну силу, особливо під час вечірок.", "", true, "dia"));
     // Блиснути знаннями
-    LootArr.push(new DNELootCard("know-better", "Блиснути знаннями", "Блиснути знаннями правил може кожен гравець з цією картою. Як він сказав, так і буде. Будь-який івент отримує + або - 5 до виправданих очікувань аудиторії. Одноразовий айтем.", "https://lh6.googleusercontent.com/Z0_oh_v-ThuF_YQuzYLLB9k_T35I7yk5FE7fvfuBuohUFzfekFju4thMuw-C2Dny-rk=w2400", 5, "5⚡", "Дія", "Будь-який івент отримує + або - 5 до виправданих очікувань аудиторії. Одноразовий айтем.", "", true, "loot"));
+    LootArr.push(new DNELootCard("know-better", "Блиснути знаннями", "Блиснути знаннями правил може кожен гравець з цією картою. Як він сказав, так і буде. Будь-який івент отримує + або - 5 до виправданих очікувань аудиторії. Одноразовий айтем.", "https://lh6.googleusercontent.com/Z0_oh_v-ThuF_YQuzYLLB9k_T35I7yk5FE7fvfuBuohUFzfekFju4thMuw-C2Dny-rk=w2400", 5, "5⚡", "Дія", "Будь-який івент отримує + або - 5 до виправданих очікувань аудиторії. Одноразовий айтем.", "", true, "dia"));
     // Записати сет
     const MAKE_KABANCHIK_LONGLINE = "Дає можливість терміново привезти великі речі з точки А в точку B. Одноразова карта, після використання скинь.";
     LootArr.push(new DNELootCard("make-kabanchik", "Рванути кабанчиком", MAKE_KABANCHIK_LONGLINE, "https://lh3.googleusercontent.com/D3lF7EoLNhW0st7HHOxKHe_NFPBXk2X0WB-ZZ2rE1Qh1uoDmFdZu6-_-4a_8NVmnGoY=w2400", 1, 700, "Дія", MAKE_KABANCHIK_LONGLINE, "", true, "door"));
+
     const MAKE_ZAYCHICKOM_DESCRIPTION = "Дає можливість терміново привезти айтем в одну руку, що не є великим, з точки А в точку B. Одноразова карта, після використання скинь.";
     LootArr.push(new DNELootCard("make-zaychickom", "Злітати зайцем", MAKE_ZAYCHICKOM_DESCRIPTION, "https://lh5.googleusercontent.com/GRSCU2MwtGB_MFC8rBA8TH-DAM43J5xUobuYvehwwAH8y4fMMvHZ9XpYtfITfrnz3vM=w2400", 1, 400, "Дія", "Дає можливість терміново привезти айтеми, що не є великими.", "", true, "door"));
-    LootArr.push(new DNELootCard("make-after-transfer", "Афтер трансфер", "Розвезе всіх гостей по домівках після закінчення вечірки. Повір, вони будуть тобі за це вдячні.", "https://lh6.googleusercontent.com/kb4mpV8o6NAM_5ydJRplk8wgXmPpx8Bdt2NPzxfDFYVRRVEjafmgFvWBVdkC3zAXL8g=w2400", 3, 2500, "Дія"));
+
+    LootArr.push(new DNELootCard("make-after-transfer", "Афтер трансфер", "Розвезе всіх гостей по домівках після закінчення вечірки. Повір, вони будуть тобі за це вдячні.", "https://lh6.googleusercontent.com/kb4mpV8o6NAM_5ydJRplk8wgXmPpx8Bdt2NPzxfDFYVRRVEjafmgFvWBVdkC3zAXL8g=w2400", 3, 2500, "Дія", "Розвезе всіх гостей по домівках після закінчення вечірки. Повір, вони будуть тобі за це вдячні.", "", true, "dia"));
+
     LootArr.push(new DNELootCard("make-french-exit", "Піти по-французьки", "Гравець що використав цю карту, дістає вогнепальну зброю и робить постріл у голову гравця, в адресу якого була використана карта.<br><br> Все, цей гравець мертвий, куля в голову як не як.<br><br> А ти що думав з тобою тут хтось сюсюкатись буде?", "https://lh3.googleusercontent.com/VVGoBbf0sATIkcowuVZuAuJrkjF0C6ZKr2bY43f_f4U4B9Hk9au3Q90d9mGiIZDhKso=w2400", 0, 0, "Дія"));
     // Платівка IGOR
     LootArr.push(new DNELootCard("vinyl-igor", "IGOR", "Платівка дає можливість поставити музику просто зараз. Це може бути цей самий альбом, або будь-який інший. Спробуй заробити гроші, використавши її під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", "https://lh3.googleusercontent.com/heEq3Fh5UX0YwXs-Y52x6v7ZBdprdaS1y7NLrK6zgBy4_CGaFDc75WlCzSvVQkdQD_w=w2400", 3, 900, "Платівка, 39m of Hip-Hop", VINYL_LONGLINE, "", true, "sound"));
@@ -535,6 +538,17 @@ const initDNELootArr = () => {
     LootArr.push(new DNELootCard("demo-enter-void", "ENTER THE VOID 2", "Демо дає можливість показати лейблам що ти хочеш записати. Можливо тобі пощастить знайти простір з якісною аппаратурою, зробити реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу. Бонус цього демо подвоюється, якщо його грати на окремій Rock сцені.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії.", "https://lh3.googleusercontent.com/SWCAFtVMEBd7flzl7L1olK6xDf_N5kHOs8kUHDiqB0_BVZDj9wDM13JdnekFX4AB9Xk=w2400", 1, 0, "Демо, 18m of Experimental Ambient", DEMO_LONGLINE, "", true, "sound"));
     LootArr.push(new DNELootCard("demo-trappin-japan-15", "TRAPPIN IN JAPAN 15", "Демо дає можливість показати лейблам що ти хочеш записати. Можливо тобі пощастить знайти простір з якісною аппаратурою, зробити реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу. Бонус цього демо подвоюється, якщо його грати на окремій Rock сцені.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії.", "https://lh3.googleusercontent.com/dLtfBGYLL2FMmBNcGlRdPGX1D-KYo6UQ1rXdtGZiabL4syg7AzmonpwvxaS9TKY_E7k=w2400", 1, 0, "Демо, 56m of Phonk<br> Vapor Trap", DEMO_LONGLINE, "", true, "sound"));
     LootArr.push(new DNELootCard("demo-trappin-japan-18", "TRAPPIN IN JAPAN 18", "Демо дає можливість показати лейблам що ти хочеш записати. Можливо тобі пощастить знайти простір з якісною аппаратурою, зробити реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу. Бонус цього демо подвоюється, якщо його грати на окремій Rock сцені.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії.", "https://lh3.googleusercontent.com/R8hhVznQZxCScNx3mClr50t-31uLZNNaVzHBSnwo8_Qg8T6sZmwjkXubNOfb1VMxOis=w2400", 1, 0, "Демо, 68m of Lo-Fi<br> Vapor Trap", DEMO_LONGLINE, "", true, "sound"));
+
+    // AMBIENT TECHNO MIX 003
+    //
+    //
+    const AMBIENT_TECHNO_003_LONGLINE = "";
+    const AMBIENT_TECHNO_003_SHORTLINE = `${DEMO_LONGLINE}`;
+    const AMBIENT_TECHNO_003_IMG_ID = `1OJDmbnrguvckqkYUZWlqufpGhqG9_omO`;
+    const AMBIENT_TECHNO_003_IMG = `https://drive.google.com/uc?id=${AMBIENT_TECHNO_003_IMG_ID}`;
+
+    LootArr.push(new DNELootCard("demo-ambient-techno-003", "AMBIENT TECHNO MIX 003", AMBIENT_TECHNO_003_LONGLINE, AMBIENT_TECHNO_003_IMG, 2, 0, "Демо, 96m of Ambient Techno", AMBIENT_TECHNO_003_SHORTLINE, "", true, "sound"));
+
     // LootArr.push(new DNELootCard("demo-patience", "P A T I E N C E", "Демо дає можливість показати лейблам що ти хочеш записати. Можливо тобі пощастить знайти простір з якісною аппаратурою, зробити реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу. Бонус цього демо подвоюється, якщо його грати на окремій Rock сцені.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії.", "https://lh3.googleusercontent.com/R8hhVznQZxCScNx3mClr50t-31uLZNNaVzHBSnwo8_Qg8T6sZmwjkXubNOfb1VMxOis=w2400", 1, 0, "Демо, 68m of Lo-Fi<br> Vapor Trap", DEMO_LONGLINE, "", true, "sound"));
 
     // Patience
@@ -544,7 +558,57 @@ const initDNELootArr = () => {
     const DEMO_PATIENCE_SHORTLINE = `${DEMO_LONGLINE}`;
     const DEMO_PATIENCE_IMG = `https://lh3.googleusercontent.com/bcu13OJqk1khEZOvbIrxWXsCzvm1XSCgXy1G2wQHtgjapTpC394qTNhZmp2DucuMPCM=w2400`;
 
-    LootArr.push(new DNELootCard("demo-patience", "P A T I E N C E", DEMO_PATIENCE_LONGLINE, DEMO_PATIENCE_IMG, 2, 0, "Демо", DEMO_PATIENCE_SHORTLINE, "", true, "sound"));
+    LootArr.push(new DNELootCard("demo-patience", "P A T I E N C E", DEMO_PATIENCE_LONGLINE, DEMO_PATIENCE_IMG, 2, 0, "Демо, 39m of Chillwave Syntwave Retrowave", DEMO_PATIENCE_SHORTLINE, "", true, "sound"));
+
+    // HARDWAVE PHONK MIX
+    //
+    //
+    const HARDWAVE_DEMO_LONGLINE = "";
+    const HARDWAVE_DEMO_SHORTLINE = `${DEMO_LONGLINE}`;
+    const HARDWAVE_DEMO_IMG_ID = `12xpLKOEc3Zj2XNh0DmlPZGIENrA8K2xL`;
+    const HARDWAVE_DEMO_IMG = `https://drive.google.com/uc?id=${HARDWAVE_DEMO_IMG_ID}`;
+
+    LootArr.push(new DNELootCard("demo-hardwave", "HARDWAVE PHONK MIX", HARDWAVE_DEMO_LONGLINE, HARDWAVE_DEMO_IMG, 1, 0, "Демо, 76m of Hardwave Phonk", HARDWAVE_DEMO_SHORTLINE, "", true, "sound"));
+
+    // CHILL DUDE HERE
+    //
+    //
+    const CHILL_DUDE_HERE_DEMO_LONGLINE = "";
+    const CHILL_DUDE_HERE_DEMO_SHORTLINE = `${DEMO_LONGLINE}`;
+    const CHILL_DUDE_HERE_DEMO_IMG_ID = `1e983AlaSqeXDObvtCjPXw7yqFkqObTvb`;
+    const CHILL_DUDE_HERE_DEMO_IMG = `https://drive.google.com/uc?id=${CHILL_DUDE_HERE_DEMO_IMG_ID}`;
+
+    LootArr.push(new DNELootCard("demo-chill-dude-here", "CHILL DUDE HERE", CHILL_DUDE_HERE_DEMO_LONGLINE, CHILL_DUDE_HERE_DEMO_IMG, 2, 0, "Демо, 242m of Ambient Chillwave", CHILL_DUDE_HERE_DEMO_SHORTLINE, "", true, "sound"));
+
+    // Sing Me a Lullaby, My Sweet Temptation
+    //
+    //
+    const SWEET_TEMPTATION_ALBUM_LONGLINE = "";
+    const SWEET_TEMPTATION_ALBUM_SHORTLINE = `${ALBUM_LONGLINE}`;
+    const SWEET_TEMPTATION_ALBUM_IMG_ID = `1oDnU-joLQnXZ_IXwEjQfSSAfy9xBOHOo`;
+    const SWEET_TEMPTATION_ALBUM_IMG = `https://drive.google.com/uc?id=${SWEET_TEMPTATION_ALBUM_IMG_ID}`;
+
+    LootArr.push(new DNELootCard("album-sweet-temptation", "Sing Me a Lullaby, My Sweet Temptation", SWEET_TEMPTATION_ALBUM_LONGLINE, SWEET_TEMPTATION_ALBUM_IMG, 3, 500, "Альбом, 36m of Hardwave Hip-Hop", SWEET_TEMPTATION_ALBUM_SHORTLINE, "", true, "sound"));
+
+    // HOTLINE MIAMI EPIC MIX
+    //
+    //
+    const EPIC_HOTLINE_DEMO_LONGLINE = "";
+    const EPIC_HOTLINE_DEMO_SHORTLINE = `${DEMO_LONGLINE}`;
+    const EPIC_HOTLINE_DEMO_IMG_ID = `1bbxxOMmU-Gfc8RxlDIINf6K4T41ZQ9rT`;
+    const EPIC_HOTLINE_DEMO_IMG = `https://drive.google.com/uc?id=${EPIC_HOTLINE_DEMO_IMG_ID}`;
+
+    LootArr.push(new DNELootCard("demo-epic-hotline", "HOTLINE MIAMI EPIC MIX", EPIC_HOTLINE_DEMO_LONGLINE, EPIC_HOTLINE_DEMO_IMG, 1, 0, "Демо, 87m of Synth Retrowave", EPIC_HOTLINE_DEMO_SHORTLINE, "", true, "sound"));
+
+    // DANGEROUS DAYS
+    //
+    //
+    const DANGEROUS_DAYS_ALBUM_LONGLINE = "";
+    const DANGEROUS_DAYS_ALBUM_SHORTLINE = `${ALBUM_LONGLINE}`;
+    const DANGEROUS_DAYS_ALBUM_IMG_ID = `1guZ8eFtexrCgGvYSmxcdezNaoHX6Lp5G`;
+    const DANGEROUS_DAYS_ALBUM_IMG = `https://drive.google.com/uc?id=${DANGEROUS_DAYS_ALBUM_IMG_ID}`;
+
+    LootArr.push(new DNELootCard("album-dangerous-days", "DANGEROUS DAYS", DANGEROUS_DAYS_ALBUM_LONGLINE, DANGEROUS_DAYS_ALBUM_IMG, 2, "1.2K", "Демо, 69m of Coldwave Synth Retrowave", DANGEROUS_DAYS_ALBUM_SHORTLINE, "", true, "sound"));
 
     // LootArr.push(new DNELootCard("i-blank-hoodie", "Бланковий худік", "", "", 1, 1500, ""));
     // LootArr.push(new DNELootCard("money", "Гроші", "Коли вони дзвонять, зазвичай беруть слухавку", "", 1, "∞", ""));
@@ -555,9 +619,6 @@ const initDNELootArr = () => {
 
     LootArr.push(new DNELootCard("dirty-mouth", "Не почистити зуби", "Ротова вонь дає мінус привабливості. Будь-який івент на який прийде гравець з цією проблемою отримує -2 до виправданих очікувань аудиторії. Може бути скинута після одного івенту або раніше, якщо почистити зуби.", "https://lh5.googleusercontent.com/fXOXvb-4Nu-o1LqenwcbnBhj8BCoFxNLn6Dsez4KU8f2jDpg-cru4RivzjN2uFpXK_0=w2400", 2, 0, "Проблема!"));
     // Боже втручання
-    const GABE_LONGLINE = "Любить своїх фанів. Відповідає на твої імейли. Оплачує своїм робітникам та їх родинам подорож на Гаваї.<br><br>Звісно в нього ти знайдеш найкращий лут, або навідь зможеш придбати.";
-    LootArr.push(new DNELootCard("gabe", "Гейб", GABE_LONGLINE, "https://lh6.googleusercontent.com/7i6mSHABzuXys1AYpZyzxTxgHSPfoMZIdRPKBJeCvwtBcvx8L7arDexJJF2ODvT6HQY=w2400", 0, 0, "Мільярдер", GABE_LONGLINE, "", true, "door"));
-    LootArr.push(new DNELootCard("gm", "Гейм-майстер", "Ти - гейм-майстер, розум всесвіту в який отримують запрошення Гравці. Історія їх рішень веде свою розповідь твоїм мовчанням та закінчується твоїм словом.", "https://lh3.googleusercontent.com/ZTuvzKcI1DXRXzBe7dMlO1oS1TH9KWmfNayttkFz6fw6wEnptPQozduYQHDtjSZOE4M=w2400", 0, 0, "А", "Ти - гейм-майстер, розум всесвіту в який отримують запрошення Гравці. Історія їх рішень веде свою розповідь твоїм мовчанням та закінчується твоїм словом.", "", true, "door"));
     LootArr.push(new DNELootCard("god-wtf", "Боже втручання", "Ти маєш зіграти цю карту, як тільки її отримав. Усі DJ одразу отримують замовлення на вечірку на Кирилівській! Знайди карту замовлення вечірки на Кирилівській та одразу її активуй. Після проведення цієї вечірки гра закінчиться та виграє гравець з найбільшим капіталом. Якщо ти виграв за рахунок цієї карти, ти в праві підвергнути суперників безжальному осміянню.", "https://lh5.googleusercontent.com/oKk0dgYD_pZfoxzwIy_FmLIWw2ffxHfpl0vJwiAXkGYei30EFVrLyMG9K-HvkSmRKRA=w2400", 0, 0, "", "Усі DJ-ї отримують рівень просто зараз, навіть якщо це переможний рівень. Якщо ти виграв за рахунок цієї карти, ти в праві підвергнути суперників безжальному осміянню.", "", true, "door"));
     // LootArr.push(new DNELootCard("soft-paws", "На м'яких лапках", "З ними ти маєш здатність переміщатись непоітно, а твої рухи стають безшумні. Втрать здатність тримати будь що, бо в тебе лапки. Лапки з Навушками створюють неймовірної сили комбо.", "", 0, 0, "", "З ними ти маєш здатність переміщатись непоітно, а твої рухи стають безшумні. Втрать здатність тримати будь що, бо в тебе лапки.", "", false, "loot"));
     // Спойлер
@@ -583,25 +644,25 @@ const initDNELootArr = () => {
     // персонажі
     // Яценко
     // LootArr.push(new DNELootCard("yats", "Яценко", "Дозволяє проводити події в Closer", "", 0, 0, ""));
-    LootArr.push(new DNELootCard("dmt-breathing", "DMT-дихання", "Максимально проста заспокійлива медитація на основі практики холотропного дихання. Нічого складного, просто повторюй за майстром та насолоджуйся. Потребує короткий проміжок часу щоб перезавантажити хімію крові та отримати певну кількість додаткової енергії. Сесія дихання може тривати від 5 до 45 хвилин, даючи тим більше енергії, чем довшою вона була. Кожен гравець що приєнується до сесії дає більше додаткової енергії усім учасникам. Дає можливість наситити тіло киснем та отримати енергії на годину. Для підтримання єфекту на задовільному рівні рекомендується використовувати не частіше одного разу на добу.", "https://lh5.googleusercontent.com/giP9SpZzE2TghZ_eEbGlFBd6rCj6KtDQdtxWqk4rArsCotYD0kUK_4drDWieWkdUfzw=w2400", 1, "5m of Zen", "Медитація", "Проста заспокійлива медитація для відновлення енергії", "", true));
-    LootArr.push(new DNELootCard("dmt-alkaline-breathing", "Tao Te Ching", "Просунута фокусуюча медитація на основі практики холотропного дихання. Нічого складного, просто повторюй за майстром та насолоджуйся. Потребує короткий проміжок часу щоб перезавантажити хімію крові та отримати певну кількість додаткової енергії. Сесія дихання може тривати від 5 до 45 хвилин, даючи тим більше енергії, чем довшою вона була. Кожен гравець що приєнується до сесії дає більше додаткової енергії усім учасникам. Дає можливість наситити тіло киснем та отримати енергії на годину. Для підтримання єфекту на задовільному рівні рекомендується використовувати не частіше одного разу на добу.", "https://lh3.googleusercontent.com/LBMcaimOv_avTcBhSzXZnSrkvPtOQE_pAJpoQApnPQvX0c_b2hof0uFA4SllGn6Vf1U=w2400", 1, "15m of Zen", "Alkaline DMT-дихання", "Просунута тонізуюча медитація для додаткової енергії та миттевого фокусу", "", true));
-    LootArr.push(new DNELootCard("dmt-shamanic-technic", "Шаманічне дихання", "Просунута дворівнева техніка дихання через рот, що складається з двох швидких вдохів на половину легень та повний видих в кінці ітерації.", "https://lh6.googleusercontent.com/0oclNbVaoBfebNJiioiBHMNjiFptXElUd4yvLE2_0NPgYH0PVw4Qg0AUVuGwu7fxK4c=w2400", 1, "", "Техніка", "Просунута техніка дихання через рот, що складається з двох швидких вдохів. +1 до медитацій з нею", "", true));
-    LootArr.push(new DNELootCard("dmt-wim-hof-technic", "Дихання Віма-Хова", "Просунута дворівнева техніка дихання через рот, що складається з двох швидких вдохів на половину легень та повний видих в кінці ітерації.", "https://lh3.googleusercontent.com/jLq3nGiyHFsvIQP0N8z8NScEgURv7gK013bVtKGeutejfw2xJRUspz36x4pjzXQD7yM=w2400", 1, "", "Техніка", "Просунута техніка дихання, що складається з одного глибокого вдоху через рот. Отримай +1 до усіх медитацій з цією технікою", "", true));
-    LootArr.push(new DNELootCard("picnick", "Пікнік", "Хапай подругу та на пляж, сонечко на дворі", "https://lh6.googleusercontent.com/JFMHRRTLGPGvIyj5MURCTrcnBSXxQu28Rx4lUl0JmSXF_NUAD9ozjd-QtQPqQpz0pZs=w2400", 1, "3⚡ 5h", "Пригода", "Хапай подругу та на пляж, сонечко на дворі.<br><br>Використай картки Спалаху або Хеппі-Міл аби зробити його особливим", "", true));
+    LootArr.push(new DNELootCard("dmt-breathing", "DMT-дихання", "Максимально проста заспокійлива медитація на основі практики холотропного дихання. Нічого складного, просто повторюй за майстром та насолоджуйся. Потребує короткий проміжок часу щоб перезавантажити хімію крові та отримати певну кількість додаткової енергії. Сесія дихання може тривати від 5 до 45 хвилин, даючи тим більше енергії, чем довшою вона була. Кожен гравець що приєнується до сесії дає більше додаткової енергії усім учасникам. Дає можливість наситити тіло киснем та отримати енергії на годину. Для підтримання єфекту на задовільному рівні рекомендується використовувати не частіше одного разу на добу.", "https://lh5.googleusercontent.com/giP9SpZzE2TghZ_eEbGlFBd6rCj6KtDQdtxWqk4rArsCotYD0kUK_4drDWieWkdUfzw=w2400", 1, "5m of Zen", "Медитація", "Проста заспокійлива медитація для відновлення енергії", "", true, "anti"));
+    LootArr.push(new DNELootCard("dmt-alkaline-breathing", "Tao Te Ching", "Просунута фокусуюча медитація на основі практики холотропного дихання. Нічого складного, просто повторюй за майстром та насолоджуйся. Потребує короткий проміжок часу щоб перезавантажити хімію крові та отримати певну кількість додаткової енергії. Сесія дихання може тривати від 5 до 45 хвилин, даючи тим більше енергії, чем довшою вона була. Кожен гравець що приєнується до сесії дає більше додаткової енергії усім учасникам. Дає можливість наситити тіло киснем та отримати енергії на годину. Для підтримання єфекту на задовільному рівні рекомендується використовувати не частіше одного разу на добу.", "https://lh3.googleusercontent.com/LBMcaimOv_avTcBhSzXZnSrkvPtOQE_pAJpoQApnPQvX0c_b2hof0uFA4SllGn6Vf1U=w2400", 1, "15m of Zen", "Alkaline DMT-дихання", "Просунута тонізуюча медитація для додаткової енергії та миттевого фокусу", "", true, "anti"));
+    LootArr.push(new DNELootCard("dmt-shamanic-technic", "Шаманічне дихання", "Просунута дворівнева техніка дихання через рот, що складається з двох швидких вдохів на половину легень та повний видих в кінці ітерації.", "https://lh6.googleusercontent.com/0oclNbVaoBfebNJiioiBHMNjiFptXElUd4yvLE2_0NPgYH0PVw4Qg0AUVuGwu7fxK4c=w2400", 1, "", "Техніка", "Просунута техніка дихання через рот, що складається з двох швидких вдохів. +1 до медитацій з нею", "", true, "anti"));
+    LootArr.push(new DNELootCard("dmt-wim-hof-technic", "Дихання Віма-Хова", "Просунута дворівнева техніка дихання через рот, що складається з двох швидких вдохів на половину легень та повний видих в кінці ітерації.", "https://lh3.googleusercontent.com/jLq3nGiyHFsvIQP0N8z8NScEgURv7gK013bVtKGeutejfw2xJRUspz36x4pjzXQD7yM=w2400", 1, "", "Техніка", "Просунута техніка дихання, що складається з одного глибокого вдоху через рот. Отримай +1 до усіх медитацій з цією технікою", "", true, "anti"));
+    LootArr.push(new DNELootCard("picnick", "Пікнік", "Хапай подругу та на пляж, сонечко на дворі", "https://lh6.googleusercontent.com/JFMHRRTLGPGvIyj5MURCTrcnBSXxQu28Rx4lUl0JmSXF_NUAD9ozjd-QtQPqQpz0pZs=w2400", 1, "3⚡ 5h", "Пригода", "Хапай подругу та на пляж, сонечко на дворі.<br><br>Використай картки Спалаху або Хеппі-Міл аби зробити його особливим", "", true, "anti"));
 
     const POOL_DAY_LONGLINE = "";
     const POOL_DAY_SHORTLINE = "Сонечко сяє, пташки щебечуть, лолі плескають у воді. Твій карман зігріває два здорових косяка. Один, щоб цей день почати, та ще один, щоб його закінчити.";
-    LootArr.push(new DNELootCard("pool-day", "День басейну", POOL_DAY_LONGLINE, "https://lh4.googleusercontent.com/n8qFlaoITH-yHq7uGCfyMx2G79_gStc1gjO0ODMaqTwMAq2LrjFXFnYk5FbOvagAI0U=w2400", 1, "4⚡ 8h 1K", "Пригода", POOL_DAY_SHORTLINE, "", true));
+    LootArr.push(new DNELootCard("pool-day", "День басейну", POOL_DAY_LONGLINE, "https://lh4.googleusercontent.com/n8qFlaoITH-yHq7uGCfyMx2G79_gStc1gjO0ODMaqTwMAq2LrjFXFnYk5FbOvagAI0U=w2400", 1, "4⚡ 8h 1K", "Пригода", POOL_DAY_SHORTLINE, "", true, "anti"));
 
 
     const FOREST_DAY_LONGLINE = "";
     const FOREST_DAY_SHORTLINE = "";
-    LootArr.push(new DNELootCard("forest-day", "День лісу", FOREST_DAY_LONGLINE, "https://lh5.googleusercontent.com/yHJa_BdTAaNBdmpnu5nKnYPAxLus_KsoYAtcPPEXL91qSxo19S71EkVU0JdgQ30h3Ow=w2400", 1, "1⚡ 12h", "Пригода", FOREST_DAY_SHORTLINE, "", true));
+    LootArr.push(new DNELootCard("forest-day", "День лісу", FOREST_DAY_LONGLINE, "https://lh5.googleusercontent.com/yHJa_BdTAaNBdmpnu5nKnYPAxLus_KsoYAtcPPEXL91qSxo19S71EkVU0JdgQ30h3Ow=w2400", 1, "1⚡ 12h", "Пригода", FOREST_DAY_SHORTLINE, "", true, "anti"));
 
-    LootArr.push(new DNELootCard("flower", "Квітка", "Насичує повітря киснем коли ти спиш, та ласує погляд коли прокидаєшся", "https://lh4.googleusercontent.com/G6o_Ys9Md86JRahzppRJv9QauONxab3IBGV05cSE1BoOBarZSPnUmadf0BJJbtaTojg=w2400", 0, "", "", "Насичує повітря киснем коли ти спиш, та ласує погляд коли прокидаєшся", "", true));
-    LootArr.push(new DNELootCard("unprompted-trip", "Спонтанна подорож", "Дає відчути справжній смак життя та розвиває вміння швидко адаптуватися до нових умов. Використовуючи цю карту ти відпускаєш жагу контролю над власним життям та довіряєш свою долю випадку.", "https://lh5.googleusercontent.com/zjsNPBT05XWGt1ThEvkQqxAXhtBDCgdYYiziaXQQcexhtb3rutoHbuk7yTPqaAxR698=w2400", 0, "", "", "Дає відчути справжній смак життя та розвиває вміння швидко адаптуватися до нових умов. Відпусти жагу контролю над життям та довірся випадку.", "", true));
+    LootArr.push(new DNELootCard("flower", "Квітка", "Насичує повітря киснем коли ти спиш, та ласує погляд коли прокидаєшся", "https://lh4.googleusercontent.com/G6o_Ys9Md86JRahzppRJv9QauONxab3IBGV05cSE1BoOBarZSPnUmadf0BJJbtaTojg=w2400", 0, "", "", "Насичує повітря киснем коли ти спиш, та ласує погляд коли прокидаєшся", "", true, "anti"));
+    LootArr.push(new DNELootCard("unprompted-trip", "Спонтанна подорож", "Дає відчути справжній смак життя та розвиває вміння швидко адаптуватися до нових умов. Використовуючи цю карту ти відпускаєш жагу контролю над власним життям та довіряєш свою долю випадку.", "https://lh5.googleusercontent.com/zjsNPBT05XWGt1ThEvkQqxAXhtBDCgdYYiziaXQQcexhtb3rutoHbuk7yTPqaAxR698=w2400", 0, "", "", "Дає відчути справжній смак життя та розвиває вміння швидко адаптуватися до нових умов. Відпусти жагу контролю над життям та довірся випадку.", "", true, "anti"));
 
-    LootArr.push(new DNELootCard("dia-draw", "Малювання", "Використовуй час та енергію для отримання малюнків. Чим більше енергії та часу ти в них вкладеш, тим сильнішими вони будуть. Створення графічного зображення є однією з найдревніших медетацій винайдених людством. Від печерних малюнків кров'ю, до чорнил на папері перенесення власного бачення в матеріальний світ заворожувала людину. Просто бери та починай малювати, уява зробить усе інше.", "https://lh3.googleusercontent.com/oprP-CtoxAG5IWogg2Gn56Pu9MBNfNt35n4gQave2BvFfVA7YlExQdgtjL6t9r_kMsg=w2400", 1, "1⚡ 1h", "1h of Zen", "Використовуй час та енергію для отримання малюнків. Чим більше енергії та часу ти в них вкладеш, тим сильнішими вони будуть.", "", true));
+    LootArr.push(new DNELootCard("dia-draw", "Малювання", "Використовуй час та енергію для отримання малюнків. Чим більше енергії та часу ти в них вкладеш, тим сильнішими вони будуть. Створення графічного зображення є однією з найдревніших медетацій винайдених людством. Від печерних малюнків кров'ю, до чорнил на папері перенесення власного бачення в матеріальний світ заворожувала людину. Просто бери та починай малювати, уява зробить усе інше.", "https://lh3.googleusercontent.com/oprP-CtoxAG5IWogg2Gn56Pu9MBNfNt35n4gQave2BvFfVA7YlExQdgtjL6t9r_kMsg=w2400", 1, "1⚡ 1h", "1h of Zen", "Використовуй час та енергію для отримання малюнків. Чим більше енергії та часу ти в них вкладеш, тим сильнішими вони будуть.", "", true, "dia"));
     LootArr.push(new DNELootCard("tea-break", "Перерва на чай", "Дозволяє структурувати думки та наповнитись теплом чаю. Отримай свіжу енергію.", "https://lh6.googleusercontent.com/8MI06infbLkWNJCmXKTVbMgdTpssFnCfwu4A_MdURrkFaJyzWMlbNzd6GOulWRXYUz0=w2400", 1, "15m", ""));
     LootArr.push(new DNELootCard("moving", "Переїзд", "Використай зв'язки щоб позбавити іншого гравця студії. Він одразу пропускає хід та має витратити 3К щоб перевести свої великі речі на склад, інакше їх буде втрачено.", "https://lh4.googleusercontent.com/6E7iqRHUF0X_5GHgRrD35Zwg0FYMhvc-DdqoZOYlQ44dAbHP79XfUTAnVueigimk_Ts=w2400", 4, 0, "Проблема!"));
     LootArr.push(new DNELootCard("zero-ambition", "Нульові амбіції", "Зацькуй іншого гравця разом зі своїми Найомничками, щоб позбавити його мотивації діяти. Настіпні три ходи він може тільки витрачати гроші. Щоб використати цю карту, треба мати що найменше 2х найомничків. +1 пропущений хід та -1 бонус за кожного наступного наймничка, якщо їх більше.", "https://lh6.googleusercontent.com/1RPpDAYIjBGRsJJ5TNVSrWO5mtP1hG3PKMx34dwQ4b3c9bwUnz8G9xtNfMGWCAefptc=w2400", 3, 0, "Проблема!"));
@@ -675,6 +736,49 @@ const drawLootCards = (cardData, parent = ".card-container") => {
 
     cardData.forEach(drawIt);
 }
+
+const CATALOG_TYPE = {
+    npc: "npc",
+    class: "class",
+    loot: "loot",
+    sound: "sound",
+    project: "project",
+    dia: "dia",
+    anti: "anti"
+}
+
+const initCatalog = (type) => {
+    document.querySelector(".js-cards-catalog").innerHTML = "";
+    document.querySelector(".head-title").innerHTML = `${type.toUpperCase()} CATALOG`;
+    if (type === "project") {
+        drawDoorCards(DNEDoorArr);
+        clearChips();
+        drawChips(DNEDoorArr, ".js-doors");
+    } if (type === "" || type === "anti") {
+        clearChips();
+
+        drawDoorCards(DNEDoorArr);
+        drawChips(DNEDoorArr, ".js-doors");
+
+        drawLootCards(DNELootArr);
+        drawChips(DNELootArr, ".js-items");
+    } else {
+        const DNENewCardsArr = DNELootArr.filter(card => card.type === type);
+        drawLootCards(DNENewCardsArr);
+        clearChips();
+        drawChips(DNENewCardsArr, ".js-items");
+    }
+}
+
+const catalogTypeControls = document.querySelectorAll(".js-init-catalog");
+
+catalogTypeControls.forEach((catalogTypeControl) => {
+    catalogTypeControl.addEventListener("click", () => {
+        const type = catalogTypeControl.textContent.toLowerCase();
+        console.log("type", type);
+        initCatalog(CATALOG_TYPE[type]);
+    });
+});
 
 
 // Ідеї для карт
