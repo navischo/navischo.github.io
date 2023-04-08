@@ -423,7 +423,7 @@ const initDNELootArr = () => {
     const FRACTURE_DEMO_IMG_ID = `1A9Jrpxg8D5sJw40lgxvPaHKq8q6x0TFw`;
     const FRACTURE_DEMO_IMG = `https://drive.google.com/uc?id=${FRACTURE_DEMO_IMG_ID}`;
 
-    LootArr.push(new DNELootCard("demo-fracture", "Fracture", FRACTURE_DEMO_LONGLINE, FRACTURE_DEMO_IMG, 5, "4K", "Демо", FRACTURE_DEMO_SHORTLINE, "", true, "sound"));
+    LootArr.push(new DNELootCard("demo-fracture", "Fracture", FRACTURE_DEMO_LONGLINE, FRACTURE_DEMO_IMG, 5, "4K", "Демо, 55m of Електро", FRACTURE_DEMO_SHORTLINE, "", true, "sound"));
 
     // Nite Fleit
     //
@@ -433,7 +433,7 @@ const initDNELootArr = () => {
     const NITE_FLEIT_DEMO_IMG_ID = `1WqyqS1RPqjHheQccGZ8vuR6_z89HfaDa`;
     const NITE_FLEIT_DEMO_IMG = `https://drive.google.com/uc?id=${NITE_FLEIT_DEMO_IMG_ID}`;
 
-    LootArr.push(new DNELootCard("demo-nite-fleit", "Nite Fleit", NITE_FLEIT_DEMO_LONGLINE, NITE_FLEIT_DEMO_IMG, 2, 500, "Демо", NITE_FLEIT_DEMO_SHORTLINE, "", true, "sound"));
+    LootArr.push(new DNELootCard("demo-nite-fleit", "Nite Fleit", NITE_FLEIT_DEMO_LONGLINE, NITE_FLEIT_DEMO_IMG, 2, 500, "Демо, 54m of Електро", NITE_FLEIT_DEMO_SHORTLINE, "", true, "sound"));
 
     // Operation Madness
     //
@@ -443,7 +443,7 @@ const initDNELootArr = () => {
     const MADNESS_DEMO_IMG_ID = `1g__G2RZpDSGnPPV-3Q5IDcFbngB9cTgr`;
     const MADNESS_DEMO_IMG = `https://drive.google.com/uc?id=${MADNESS_DEMO_IMG_ID}`;
 
-    LootArr.push(new DNELootCard("demo-madness", "Operation Madness", MADNESS_DEMO_LONGLINE, MADNESS_DEMO_IMG, 2, 500, "Демо", MADNESS_DEMO_SHORTLINE, "", true, "sound"));
+    LootArr.push(new DNELootCard("demo-madness", "Operation Madness", MADNESS_DEMO_LONGLINE, MADNESS_DEMO_IMG, 2, 500, "Демо, 55m of Електро", MADNESS_DEMO_SHORTLINE, "", true, "sound"));
 
     // Sim0na
     //
@@ -453,7 +453,7 @@ const initDNELootArr = () => {
     const SIMONA_DEMO_IMG_ID = `1i_XzHA78FqWh0lEGchGYyngxJE_tvWJ0`;
     const SIMONA_DEMO_IMG = `https://drive.google.com/uc?id=${SIMONA_DEMO_IMG_ID}`;
 
-    LootArr.push(new DNELootCard("demo-sim0na", "Sim0na", SIMONA_DEMO_LONGLINE, SIMONA_DEMO_IMG, 3, "1K", "Демо", SIMONA_DEMO_SHORTLINE, "", true, "sound"));
+    LootArr.push(new DNELootCard("demo-sim0na", "Sim0na", SIMONA_DEMO_LONGLINE, SIMONA_DEMO_IMG, 3, "1K", "Демо, 54m of Електро", SIMONA_DEMO_SHORTLINE, "", true, "sound"));
 
     // Oneman
     //
@@ -463,7 +463,7 @@ const initDNELootArr = () => {
     const ONEMAN_DEMO_IMG_ID = `1KRRpkeM82gFld3FPTOk0TfTI4joZgOG1`;
     const ONEMAN_DEMO_IMG = `https://drive.google.com/uc?id=${ONEMAN_DEMO_IMG_ID}`;
 
-    LootArr.push(new DNELootCard("demo-oneman", "Oneman", ONEMAN_DEMO_LONGLINE, ONEMAN_DEMO_IMG, 3, "1K", "Демо", ONEMAN_DEMO_SHORTLINE, "", true, "sound"));
+    LootArr.push(new DNELootCard("demo-oneman", "Oneman", ONEMAN_DEMO_LONGLINE, ONEMAN_DEMO_IMG, 3, "1K", "Демо, 56m of Електро", ONEMAN_DEMO_SHORTLINE, "", true, "sound"));
 
     // DJ Perception
     //
@@ -473,7 +473,7 @@ const initDNELootArr = () => {
     const DJ_PERCEPTION_DEMO_IMG_ID = `1Axtle-9Z6QBxA6KbUpLmKZp9JlmQkAsd`;
     const DJ_PERCEPTION_DEMO_IMG = `https://drive.google.com/uc?id=${DJ_PERCEPTION_DEMO_IMG_ID}`;
 
-    LootArr.push(new DNELootCard("demo-dj-perception", "DJ Perception", DJ_PERCEPTION_DEMO_LONGLINE, DJ_PERCEPTION_DEMO_IMG, 3, "1K", "Демо", DJ_PERCEPTION_DEMO_SHORTLINE, "", true, "sound"));
+    LootArr.push(new DNELootCard("demo-dj-perception", "DJ Perception", DJ_PERCEPTION_DEMO_LONGLINE, DJ_PERCEPTION_DEMO_IMG, 3, "1K", "Демо, 56m of Електро", DJ_PERCEPTION_DEMO_SHORTLINE, "", true, "sound"));
 
     // Jordss
     //
@@ -483,7 +483,7 @@ const initDNELootArr = () => {
     const LORDSS_DEMO_IMG_ID = `1u7NTPZf6QoFFF-zAkulLmN82OvTYvcGo`;
     const LORDSS_DEMO_IMG = `https://drive.google.com/uc?id=${LORDSS_DEMO_IMG_ID}`;
 
-    LootArr.push(new DNELootCard("demo-jordss", "Jordss", LORDSS_DEMO_LONGLINE, LORDSS_DEMO_IMG, 3, "1K", "Демо", LORDSS_DEMO_SHORTLINE, "", true, "sound"));
+    LootArr.push(new DNELootCard("demo-jordss", "Jordss", LORDSS_DEMO_LONGLINE, LORDSS_DEMO_IMG, 3, "1K", "Демо, 54m of Електро", LORDSS_DEMO_SHORTLINE, "", true, "sound"));
 
     // Neffa T & Flowdan
     //
@@ -493,7 +493,7 @@ const initDNELootArr = () => {
     const NEFFA_T_DEMO_IMG_ID = `1pRUh6PagZ_VYsU2X5R2LeDW8lQI8MmGd`;
     const NEFFA_T_DEMO_IMG = `https://drive.google.com/uc?id=${NEFFA_T_DEMO_IMG_ID}`;
 
-    LootArr.push(new DNELootCard("demo-neffa-t", "Neffa T & Flowdan", NEFFA_T_DEMO_LONGLINE, NEFFA_T_DEMO_IMG, 3, "1K", "Демо", NEFFA_T_DEMO_SHORTLINE, "", true, "sound"));
+    LootArr.push(new DNELootCard("demo-neffa-t", "Neffa T & Flowdan", NEFFA_T_DEMO_LONGLINE, NEFFA_T_DEMO_IMG, 3, "1K", "Демо, 55m of Електро", NEFFA_T_DEMO_SHORTLINE, "", true, "sound"));
 
     // Nastya Muravyova
     // /
@@ -503,7 +503,7 @@ const initDNELootArr = () => {
     const MURAVYOVA_DEMO_IMG_ID = `1JhB6cT3DFC5Z9x_ukDdArZS15TNxRui_`;
     const MURAVYOVA_DEMO_IMG = `https://drive.google.com/uc?id=${MURAVYOVA_DEMO_IMG_ID}`;
 
-    LootArr.push(new DNELootCard("demo-muravyova", "Nastya Muravyova", MURAVYOVA_DEMO_LONGLINE, MURAVYOVA_DEMO_IMG, 4, "5K", "Демо", MURAVYOVA_DEMO_SHORTLINE, "", true, "sound"));
+    LootArr.push(new DNELootCard("demo-muravyova", "Nastya Muravyova", MURAVYOVA_DEMO_LONGLINE, MURAVYOVA_DEMO_IMG, 4, "5K", "Демо, 54m of Електро", MURAVYOVA_DEMO_SHORTLINE, "", true, "sound"));
 
     LootArr.push(new DNELootCard("demo-deep-lofi-house", "DEEP LOFI HOUSE MIX", "Демо дає можливість показати лейблам що ти хочеш записати. Лейб HOR має високу репутацію, його демо значно збільшує шанси знайти простір з якісною аппаратурою, зробити якісний реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", "https://lh6.googleusercontent.com/zS10ZYBzZeDDdkakdAlyyddKA8ReOm8k7aWpxpGmQPmDi3WzPt_UZtEnPqBvjCkSbw8=w2400", 1, 0, "Демо, 67m of Deep Lo-fi House", DEMO_LONGLINE_SHORT_2, "", true, "sound"));
     LootArr.push(new DNELootCard("demo-tony-approved", "TONY SAYS FCKUIN' APPROVED", "Демо дає можливість показати лейблам що ти хочеш записати. Лейб HOR має високу репутацію, його демо значно збільшує шанси знайти простір з якісною аппаратурою, зробити якісний реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", "https://lh3.googleusercontent.com/j77ixolnmMZ8P1Tlc4rWE6bSDqKHhs8N1mOrk6ZhY4gcE3-9383hsnIDfOm3dLfp5TY=w2400", 1, 0, "Демо, 59m of Lo-fi House", DEMO_LONGLINE_SHORT_2, "", true, "sound"));
@@ -517,7 +517,7 @@ const initDNELootArr = () => {
     const DEMO_IKRA_SAYS_YES_SHORTLINE = `${DEMO_LONGLINE}`;
     const DEMO_IKRA_SAYS_YES_IMG = `https://lh6.googleusercontent.com/jdHH6etnr0P9mZ9yWcJPTSEWRZzG86vkqY1Z7SwjsGYSchuIVPA21i8vtKJr7XZh49Q=w2400`;
 
-    LootArr.push(new DNELootCard("demo-ikra-says-yes", "Артем Ікра каже Так", DEMO_IKRA_SAYS_YES_LONGLINE, DEMO_IKRA_SAYS_YES_IMG, 2, "NYP", "Демо", DEMO_IKRA_SAYS_YES_SHORTLINE, "", true, "sound"));
+    LootArr.push(new DNELootCard("demo-ikra-says-yes", "Артем Ікра каже Так", DEMO_IKRA_SAYS_YES_LONGLINE, DEMO_IKRA_SAYS_YES_IMG, 2, "NYP", "Демо, 57m of Електро", DEMO_IKRA_SAYS_YES_SHORTLINE, "", true, "sound"));
 
     LootArr.push(new DNELootCard("demo-phonk-fridays-004", "PHONK FRIDAY 004", "Демо дає можливість показати лейблам що ти хочеш записати. Можливо тобі пощастить знайти простір з якісною аппаратурою, зробити реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", "https://lh6.googleusercontent.com/HJJfm6UflRH1Ni8xdUN0gqQj64-u7zHb_EkxbfIcPmM5-fITgv26JAxCRbEyBIvKYrE=w2400", 1, 0, "Демо, 104m of Cloud Phonk Trap", DEMO_LONGLINE_SHORT_2, "", true, "sound"));
     LootArr.push(new DNELootCard("demo-phonk-fridays-005", "PHONK FRIDAY 005", "Демо дає можливість показати лейблам що ти хочеш записати. Можливо тобі пощастить знайти простір з якісною аппаратурою, зробити реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", "https://lh3.googleusercontent.com/3AkmwPXRJNR2QT6tUsAjora1RjsOX6ZcIIclJBNdsZJJuxxj3ly-hcQ5tFRRKRyszwE=w2400", 1, 0, "Демо, 103m of Abstract Phonk Trap", DEMO_LONGLINE_SHORT_2, "", true, "sound"));
@@ -686,6 +686,14 @@ const initDNELootArr = () => {
 
 const DNELootArr = initDNELootArr();
 
+DNELootArr.forEach((card) => {
+    if (card.type === "sound") {
+        setSoundStat(card);
+    }
+});
+
+console.log("DNELootArr", DNELootArr);
+
 const drawLootCards = (cardData, parent = ".card-container") => {
     const cardContainer = document.querySelector(parent);
     const cardTemplate = document.querySelector("#card-template");
@@ -754,7 +762,7 @@ const initCatalog = (type) => {
         drawDoorCards(DNEDoorArr);
         clearChips();
         drawChips(DNEDoorArr, ".js-doors");
-    } if (type === "" || type === "anti") {
+    }  if (type === "" || type === "anti") {
         clearChips();
 
         drawDoorCards(DNEDoorArr);

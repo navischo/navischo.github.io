@@ -19,7 +19,7 @@ const getCardsInHand = (count, playerObj) => {
 			break;
 		} else {
 		    const newCard = DNELootArr[getRandomInt(DNELootArr.length)];
-		    
+
 		    // console.log("isThisCardAlredyInHand", !!isThisCardAlredyInHand, isThisCardAlredyInHand(newCard.id, playerObj));
 		    if (newCard.isBuild && (newCard.type === "sound") && !isThisCardAlredyInHand(newCard.id, playerObj)) {
 		      playerObj.hand.push(newCard);
@@ -64,7 +64,7 @@ const updHand = (cardsArr) => {
             const id = drawedCard.id.substring(9);
             const newCard = getCardById(id);
             appendCardsOnTable([newCard]);
-            game.table.push([newCard]);
+            game.table.push(newCard);
             currentPlayer.score = currentPlayer.score + newCard.bonus;
             updScore();
 
@@ -87,7 +87,7 @@ const initHand = (playerObj) => {
 	// раздать карты всем игрокам
 	// использовать карту
 	// playerObj.useCard = (id) => {
-		
+
 	// }
 	// дораздать N кол-во карт
 }

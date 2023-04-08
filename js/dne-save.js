@@ -10,5 +10,6 @@ const loadSave = () => {
 	const myGame = JSON.parse(saveStorage.getItem('myGame'));
 	game = undefined;
 	game = myGame;
+	// game = JSON.parse(saveStorage.getItem('myGame'));
 	console.log("Game succesfully loaded from your last save", game);
 }

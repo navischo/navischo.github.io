@@ -1394,8 +1394,8 @@ h2 {
     justify-content: center;
 }
 
-.build .swiper-slide[id*="dne-card-"],
-.build .card {
+.js-cards-catalog-npc .swiper-slide[id*="dne-card-"],
+.js-cards-catalog-npc .card {
     margin: 5px;
 }
 

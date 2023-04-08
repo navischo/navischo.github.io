@@ -64,6 +64,7 @@
             <button><a href="#find-card-by-id-popup" class="js-find-card-by-id open-popup-link">findCardById();</a></button>
             <button onclick="saveGame()">saveGame();</button>
             <button onclick="loadSave()">loadSave();</button>
+            <button onclick="updGenreBonus()">updGenreBonus(game.table);</button>
         </div>
     </div>
 
@@ -469,6 +470,13 @@
     // saveGame();
 
     console.log("Game initiation complete", game);
+    const updGenreBonus = () => {
+        updScore(matchGenreBonus(game.table));
+    }
+    // setSoundStat(getCardById("vinyl-half-age"));
+    // setSoundStat(getCardById("vinyl-aleph"));
+    // setSoundStat(getCardById("album-motion-regime"));
+    // matchSoundStat([getCardById("vinyl-half-age"), getCardById("vinyl-aleph")]);
 </script>
 </body>
 </html>
