@@ -260,6 +260,18 @@ const initDNELootArr = () => {
     // LootArr.push(new DNELootCard("class-drugracer", "Драгрейсер", "", "", 1, 0, "Клас"));
     LootArr.push(new DNELootCard("class-typograf", "Типограф", "Типограф надрукує тобі будь-яку яку картку та віддасть за розумний відсоток від її вартості.", "https://lh6.googleusercontent.com/o75I3KWBcZNK5MEn9EYCKrvJK7SYlc65cGLIlDnpf7O5OZsSNQIRtQ7rzY8TXEr-1a8=w2400", 1, 0, "Клас", "Типограф надрукує тобі будь-яку яку картку та віддасть за розумний відсоток від її вартості.", "", true, "class"));
 
+    // Рокраннер
+    //
+    //
+    const ROCKRUNNER_CLASS_LONGLINE = "Рок-музиканти, співаки, заколотники XXI століття, які перетворили свою музику на зброю і направили її проти корпорацій та урядів, на боротьбу з системою, використовують своє мистецтво для вираження своїх поглядів на політичну чи соціальну ситуацію, відрізняються непохитністю, радикальними висловлюваннями та виступами, що запам'ятовуються.";
+    const ROCKRUNNER_CLASS_SHORTLINE = `Розірве натовп своїм соло, збере гурт та організує виступ<br> за вихідні.<br><br> Щоб на наступні<br> зробити це знову.`;
+    const ROCKRUNNER_CLASS_IMG_ID = `1aOmIiNYZ1cvlIgKUmF3TmWNMdAddpgAg`;
+    const ROCKRUNNER_CLASS_IMG = `https://drive.google.com/uc?id=${ROCKRUNNER_CLASS_IMG_ID}`;
+
+    LootArr.push(new DNELootCard("class-rockrunner", "Рокраннер", ROCKRUNNER_CLASS_LONGLINE, ROCKRUNNER_CLASS_IMG, 1, 0, "Клас", ROCKRUNNER_CLASS_SHORTLINE, "", true, "class"));
+
+
+
     const GABE_LONGLINE = "Любить своїх фанів. Відповідає на твої імейли. Оплачує своїм робітникам та їх родинам подорож на Гаваї.<br><br>Звісно в нього ти знайдеш найкращий лут, або навідь зможеш придбати.";
     LootArr.push(new DNELootCard("gabe", "Гейб", GABE_LONGLINE, "https://lh6.googleusercontent.com/7i6mSHABzuXys1AYpZyzxTxgHSPfoMZIdRPKBJeCvwtBcvx8L7arDexJJF2ODvT6HQY=w2400", 0, 0, "Мільярдер", GABE_LONGLINE, "", true, "npc"));
     LootArr.push(new DNELootCard("gm", "Гейм-майстер", "Ти - гейм-майстер, розум всесвіту в який отримують запрошення Гравці. Історія їх рішень веде свою розповідь твоїм мовчанням та закінчується твоїм словом.", "https://lh3.googleusercontent.com/ZTuvzKcI1DXRXzBe7dMlO1oS1TH9KWmfNayttkFz6fw6wEnptPQozduYQHDtjSZOE4M=w2400", 0, 0, "А", "Ти - гейм-майстер, розум всесвіту в який отримують запрошення Гравці. Історія їх рішень веде свою розповідь твоїм мовчанням та закінчується твоїм словом.", "", true, "npc"));

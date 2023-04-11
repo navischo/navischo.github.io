@@ -36,6 +36,26 @@
     transform: scale(1.11);
 }
 
+#dne-card-class-rockrunner .card > * {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    text-shadow: -1px 0px 5px #000000cc;
+}
+
+#dne-card-class-rockrunner .card__preview {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 0;
+    transform: scale(1.03);
+}
+#dne-card-class-rockrunner .card__description {
+    position: absolute;
+    bottom: 40px;
+}
+
 #dne-card-make-train-piece .card__header {
     position: absolute;
     z-index: 2;
