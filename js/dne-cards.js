@@ -720,7 +720,11 @@ DNELootArr.forEach((card) => {
 });
 
 // console.log("DNELootArr", DNELootArr);
-
+const drawImgLazy = (img, src) => {
+    img.src = "img/gif-placeholder-1.webp";
+    img.dataset.original = src;
+    $(img).lazyload({effect :'fadeIn'});                                                  // creds http://surl.li/girer
+}
 const drawLootCards = (cardData, parent = ".card-container") => {
     const cardContainer = document.querySelector(parent);
     const cardTemplate = document.querySelector("#card-template");
@@ -740,10 +744,13 @@ const drawLootCards = (cardData, parent = ".card-container") => {
         }
 
         newCard.querySelector(".card__limits").innerHTML = cardData.limits;
-        const newCardImg = newCard.querySelector(".card__preview-img");
-        newCardImg.src = "img/gif-placeholder-1.webp";
-        newCardImg.dataset.original = cardData.img;
-        $(newCardImg).lazyload({effect :'fadeIn'});                                                  // creds http://surl.li/girer
+        if (document.querySelector("body").classList.contains("lazy")) {
+            drawImgLazy(newCard.querySelector(".card__preview-img"), cardData.img);
+        } else {
+            newCard.querySelector(".card__preview-img").src = cardData.img;
+        }
+
+
 
         if (cardData.longline) {
             newCard.querySelector(".card__description").innerHTML = cardData.longline;
