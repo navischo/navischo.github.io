@@ -111,25 +111,34 @@ const drawDoorCards = (cardData, specialContainer = "") => {
         newCard.id = ID;
         newCard.querySelector(".card__title").innerHTML = cardData.name;
         newCard.querySelector(".js.card__id").textContent = `#${cardData.id}`;
+
         if (cardData.budget !== 0) {
             newCard.querySelector(".card__budget").textContent = `${cardData.budget}`;
         } else {
             newCard.querySelector(".card__budget").style.display = "none";
         }
+
         newCard.querySelector(".card__profit").innerHTML = `${cardData.profit}`;
         newCard.querySelector(".card__roles").textContent = `${cardData.roles}.`;
+
         if (cardData.profitOrigins || cardData.profitOrigins !== "") {
             newCard.querySelector(".card__origins").textContent = `${cardData.profitOrigins}.`;
         } else {
             newCard.querySelector(".card__origins-wrap").style.display = "none";
         }
+
         newCard.querySelector(".card__limits").innerHTML = `Замовлення від ${cardData.client}`;
-        newCard.querySelector(".card__preview-img").src = cardData.img;
+        const newCardImg = newCard.querySelector(".card__preview-img");
+        newCardImg.src = "img/gif-placeholder-1.webp";
+        newCardImg.dataset.original = cardData.img;
+        $(newCardImg).lazyload({effect :'fadeIn'});
+
         if (cardData.longline) {
             newCard.querySelector(".card__description").innerHTML = cardData.longline;
         } else {
             newCard.querySelector(".card__description").innerHTML = cardData.description.slice(0, 50);
         }
+
         newCard.querySelector(".card__penalty").textContent = `${cardData.penalty}`;
         newCard.querySelector(".card__bonus").textContent = `${cardData.level}`;
         // console.log(cardContainer, `${specialContainer} .card-container`);
@@ -656,8 +665,14 @@ const initDNELootArr = () => {
     // персонажі
     // Яценко
     // LootArr.push(new DNELootCard("yats", "Яценко", "Дозволяє проводити події в Closer", "", 0, 0, ""));
-    LootArr.push(new DNELootCard("dmt-breathing", "DMT-дихання", "Максимально проста заспокійлива медитація на основі практики холотропного дихання. Нічого складного, просто повторюй за майстром та насолоджуйся. Потребує короткий проміжок часу щоб перезавантажити хімію крові та отримати певну кількість додаткової енергії. Сесія дихання може тривати від 5 до 45 хвилин, даючи тим більше енергії, чем довшою вона була. Кожен гравець що приєнується до сесії дає більше додаткової енергії усім учасникам. Дає можливість наситити тіло киснем та отримати енергії на годину. Для підтримання єфекту на задовільному рівні рекомендується використовувати не частіше одного разу на добу.", "https://lh5.googleusercontent.com/giP9SpZzE2TghZ_eEbGlFBd6rCj6KtDQdtxWqk4rArsCotYD0kUK_4drDWieWkdUfzw=w2400", 1, "5m of Zen", "Медитація", "Проста заспокійлива медитація для відновлення енергії", "", true, "anti"));
-    LootArr.push(new DNELootCard("dmt-alkaline-breathing", "Tao Te Ching", "Просунута фокусуюча медитація на основі практики холотропного дихання. Нічого складного, просто повторюй за майстром та насолоджуйся. Потребує короткий проміжок часу щоб перезавантажити хімію крові та отримати певну кількість додаткової енергії. Сесія дихання може тривати від 5 до 45 хвилин, даючи тим більше енергії, чем довшою вона була. Кожен гравець що приєнується до сесії дає більше додаткової енергії усім учасникам. Дає можливість наситити тіло киснем та отримати енергії на годину. Для підтримання єфекту на задовільному рівні рекомендується використовувати не частіше одного разу на добу.", "https://lh3.googleusercontent.com/LBMcaimOv_avTcBhSzXZnSrkvPtOQE_pAJpoQApnPQvX0c_b2hof0uFA4SllGn6Vf1U=w2400", 1, "15m of Zen", "Alkaline DMT-дихання", "Просунута тонізуюча медитація для додаткової енергії та миттевого фокусу", "", true, "anti"));
+    LootArr.push(new DNELootCard("dmt-breathing", "DMT-дихання", "Максимально проста заспокійлива медитація на основі практики холотропного дихання. Нічого складного, просто повторюй за майстром та насолоджуйся. Потребує короткий проміжок часу щоб перезавантажити хімію крові та отримати певну кількість додаткової енергії. Сесія дихання може тривати від 5 до 45 хвилин, даючи тим більше енергії, чем довшою вона була. Кожен гравець що приєнується до сесії дає більше додаткової енергії усім учасникам. Дає можливість наситити тіло киснем та отримати енергії на годину. Для підтримання єфекту на задовільному рівні рекомендується використовувати не частіше одного разу на добу.", "https://lh5.googleusercontent.com/giP9SpZzE2TghZ_eEbGlFBd6rCj6KtDQdtxWqk4rArsCotYD0kUK_4drDWieWkdUfzw=w2400", 1, "5m", "Медитація", "Проста заспокійлива медитація для відновлення енергії", "", true, "anti"));
+    LootArr.push(new DNELootCard("dmt-alkaline-breathing", "Tao Te Ching", "Просунута фокусуюча медитація на основі практики холотропного дихання. Нічого складного, просто повторюй за майстром та насолоджуйся. Потребує короткий проміжок часу щоб перезавантажити хімію крові та отримати певну кількість додаткової енергії. Сесія дихання може тривати від 5 до 45 хвилин, даючи тим більше енергії, чем довшою вона була. Кожен гравець що приєнується до сесії дає більше додаткової енергії усім учасникам. Дає можливість наситити тіло киснем та отримати енергії на годину. Для підтримання єфекту на задовільному рівні рекомендується використовувати не частіше одного разу на добу.", "https://lh3.googleusercontent.com/LBMcaimOv_avTcBhSzXZnSrkvPtOQE_pAJpoQApnPQvX0c_b2hof0uFA4SllGn6Vf1U=w2400", 1, "15m", "Alkaline DMT-дихання", "Просунута тонізуюча медитація для додаткової енергії та миттевого фокусу", "", true, "anti"));
+
+    const NO_RULES_DMT_IMG_ID = `1fIo3eHY8kCPqdlF-vnvfZM9iPwmxjDnU`;
+    const NO_RULES_DMT_IMG = `https://drive.google.com/uc?id=${NO_RULES_DMT_IMG_ID}`;
+
+    LootArr.push(new DNELootCard("dmt-breathing-no-rules", "DMT-дихання без правил", "Максимально проста заспокійлива медитація на основі практики холотропного дихання. Нічого складного, просто повторюй за майстром та насолоджуйся. Потребує короткий проміжок часу щоб перезавантажити хімію крові та отримати певну кількість додаткової енергії. Сесія дихання може тривати від 5 до 45 хвилин, даючи тим більше енергії, чем довшою вона була. Кожен гравець що приєнується до сесії дає більше додаткової енергії усім учасникам. Дає можливість наситити тіло киснем та отримати енергії на годину. Для підтримання єфекту на задовільному рівні рекомендується використовувати не частіше одного разу на добу.", NO_RULES_DMT_IMG, 1, "5m", "Медитація", "Заспокійлива медитація позбавлена будь яких правил, what ever works best", "", true, "anti"));
+
     LootArr.push(new DNELootCard("dmt-shamanic-technic", "Шаманічне дихання", "Просунута дворівнева техніка дихання через рот, що складається з двох швидких вдохів на половину легень та повний видих в кінці ітерації.", "https://lh6.googleusercontent.com/0oclNbVaoBfebNJiioiBHMNjiFptXElUd4yvLE2_0NPgYH0PVw4Qg0AUVuGwu7fxK4c=w2400", 1, "", "Техніка", "Просунута техніка дихання через рот, що складається з двох швидких вдохів. +1 до медитацій з нею", "", true, "anti"));
     LootArr.push(new DNELootCard("dmt-wim-hof-technic", "Дихання Віма-Хова", "Просунута дворівнева техніка дихання через рот, що складається з двох швидких вдохів на половину легень та повний видих в кінці ітерації.", "https://lh3.googleusercontent.com/jLq3nGiyHFsvIQP0N8z8NScEgURv7gK013bVtKGeutejfw2xJRUspz36x4pjzXQD7yM=w2400", 1, "", "Техніка", "Просунута техніка дихання, що складається з одного глибокого вдоху через рот. Отримай +1 до усіх медитацій з цією технікою", "", true, "anti"));
     LootArr.push(new DNELootCard("picnick", "Пікнік", "Хапай подругу та на пляж, сонечко на дворі", "https://lh6.googleusercontent.com/JFMHRRTLGPGvIyj5MURCTrcnBSXxQu28Rx4lUl0JmSXF_NUAD9ozjd-QtQPqQpz0pZs=w2400", 1, "3⚡ 5h", "Пригода", "Хапай подругу та на пляж, сонечко на дворі.<br><br>Використай картки Спалаху або Хеппі-Міл аби зробити його особливим", "", true, "anti"));
@@ -674,7 +689,7 @@ const initDNELootArr = () => {
     LootArr.push(new DNELootCard("flower", "Квітка", "Насичує повітря киснем коли ти спиш, та ласує погляд коли прокидаєшся", "https://lh4.googleusercontent.com/G6o_Ys9Md86JRahzppRJv9QauONxab3IBGV05cSE1BoOBarZSPnUmadf0BJJbtaTojg=w2400", 0, "", "", "Насичує повітря киснем коли ти спиш, та ласує погляд коли прокидаєшся", "", true, "anti"));
     LootArr.push(new DNELootCard("unprompted-trip", "Спонтанна подорож", "Дає відчути справжній смак життя та розвиває вміння швидко адаптуватися до нових умов. Використовуючи цю карту ти відпускаєш жагу контролю над власним життям та довіряєш свою долю випадку.", "https://lh5.googleusercontent.com/zjsNPBT05XWGt1ThEvkQqxAXhtBDCgdYYiziaXQQcexhtb3rutoHbuk7yTPqaAxR698=w2400", 0, "", "", "Дає відчути справжній смак життя та розвиває вміння швидко адаптуватися до нових умов. Відпусти жагу контролю над життям та довірся випадку.", "", true, "anti"));
 
-    LootArr.push(new DNELootCard("dia-draw", "Малювання", "Використовуй час та енергію для отримання малюнків. Чим більше енергії та часу ти в них вкладеш, тим сильнішими вони будуть. Створення графічного зображення є однією з найдревніших медетацій винайдених людством. Від печерних малюнків кров'ю, до чорнил на папері перенесення власного бачення в матеріальний світ заворожувала людину. Просто бери та починай малювати, уява зробить усе інше.", "https://lh3.googleusercontent.com/oprP-CtoxAG5IWogg2Gn56Pu9MBNfNt35n4gQave2BvFfVA7YlExQdgtjL6t9r_kMsg=w2400", 1, "1⚡ 1h", "1h of Zen", "Використовуй час та енергію для отримання малюнків. Чим більше енергії та часу ти в них вкладеш, тим сильнішими вони будуть.", "", true, "dia"));
+    LootArr.push(new DNELootCard("dia-draw", "Малювання", "Використовуй час та енергію для отримання малюнків. Чим більше енергії та часу ти в них вкладеш, тим сильнішими вони будуть. Створення графічного зображення є однією з найдревніших медетацій винайдених людством. Від печерних малюнків кров'ю, до чорнил на папері перенесення власного бачення в матеріальний світ заворожувала людину. Просто бери та починай малювати, уява зробить усе інше.", "https://lh3.googleusercontent.com/oprP-CtoxAG5IWogg2Gn56Pu9MBNfNt35n4gQave2BvFfVA7YlExQdgtjL6t9r_kMsg=w2400", 1, "1⚡ 1h", "", "Використай час та енергію для створення малюнку.<br><br> Чим більше енергії та часу ти в нього вкладеш, тим кращий результат чекатиме на тебе в кінці.<br><br>+1 малюнок в твою коллекцію", "", true, "dia"));
     LootArr.push(new DNELootCard("tea-break", "Перерва на чай", "Дозволяє структурувати думки та наповнитись теплом чаю. Отримай свіжу енергію.", "https://lh6.googleusercontent.com/8MI06infbLkWNJCmXKTVbMgdTpssFnCfwu4A_MdURrkFaJyzWMlbNzd6GOulWRXYUz0=w2400", 1, "15m", ""));
     LootArr.push(new DNELootCard("moving", "Переїзд", "Використай зв'язки щоб позбавити іншого гравця студії. Він одразу пропускає хід та має витратити 3К щоб перевести свої великі речі на склад, інакше їх буде втрачено.", "https://lh4.googleusercontent.com/6E7iqRHUF0X_5GHgRrD35Zwg0FYMhvc-DdqoZOYlQ44dAbHP79XfUTAnVueigimk_Ts=w2400", 4, 0, "Проблема!"));
     LootArr.push(new DNELootCard("zero-ambition", "Нульові амбіції", "Зацькуй іншого гравця разом зі своїми Найомничками, щоб позбавити його мотивації діяти. Настіпні три ходи він може тільки витрачати гроші. Щоб використати цю карту, треба мати що найменше 2х найомничків. +1 пропущений хід та -1 бонус за кожного наступного наймничка, якщо їх більше.", "https://lh6.googleusercontent.com/1RPpDAYIjBGRsJJ5TNVSrWO5mtP1hG3PKMx34dwQ4b3c9bwUnz8G9xtNfMGWCAefptc=w2400", 3, 0, "Проблема!"));
@@ -704,7 +719,7 @@ DNELootArr.forEach((card) => {
     }
 });
 
-console.log("DNELootArr", DNELootArr);
+// console.log("DNELootArr", DNELootArr);
 
 const drawLootCards = (cardData, parent = ".card-container") => {
     const cardContainer = document.querySelector(parent);
@@ -717,18 +732,25 @@ const drawLootCards = (cardData, parent = ".card-container") => {
         newCard.dataset.hash = `dne-card-${cardData.id}`;
         newCard.querySelector(".card__title").innerHTML = cardData.name;
         newCard.querySelector(".js.card__id").textContent = `#${cardData.id}`;
+
         if (cardData.cost !== 0) {
             newCard.querySelector(".card__price").textContent = cardData.cost;
         } else {
             newCard.querySelector(".card__price").style.display = "none";
         }
-        newCard.querySelector(".card__limits").innerHTML = cardData.limits; // todo вьінести лимитьі в отдельньій параметр
-        newCard.querySelector(".card__preview-img").src = cardData.img;
+
+        newCard.querySelector(".card__limits").innerHTML = cardData.limits;
+        const newCardImg = newCard.querySelector(".card__preview-img");
+        newCardImg.src = "img/gif-placeholder-1.webp";
+        newCardImg.dataset.original = cardData.img;
+        $(newCardImg).lazyload({effect :'fadeIn'});                                                  // creds http://surl.li/girer
+
         if (cardData.longline) {
             newCard.querySelector(".card__description").innerHTML = cardData.longline;
         } else {
             newCard.querySelector(".card__description").innerHTML = cardData.description.slice(0, 50);
         }
+
         if (cardData.bonus !== 0) {
             newCard.querySelector(".card__bonus").textContent = `+${cardData.bonus}`;
         } else if (cardData.limits === "Проблема!") {
@@ -736,6 +758,7 @@ const drawLootCards = (cardData, parent = ".card-container") => {
         } else {
             newCard.querySelector(".card__bonus").style.display = "none";
         }
+
         cardContainer.appendChild(newCard);
     };
 
@@ -767,7 +790,24 @@ const CATALOG_TYPE = {
     anti: "anti"
 }
 
+const catalogSaveCeil = "currentCatalog";
+const saveCatalog = (currentType) => {
+    localStorage.setItem(catalogSaveCeil, `${currentType}`);
+}
+
+const loadCatalog = () => {
+    return localStorage.getItem(catalogSaveCeil);
+}
+
 const initCatalog = (type) => {
+    let currentCatalogSave = loadCatalog();
+
+    if (!currentCatalogSave) {
+        saveCatalog(type);
+    } else {
+        type = currentCatalogSave;
+    }
+
     document.querySelector(".js-cards-catalog").innerHTML = "";
     document.querySelector(".head-title").innerHTML = `${type.toUpperCase()} CATALOG`;
     if (type === "project") {
@@ -796,6 +836,7 @@ catalogTypeControls.forEach((catalogTypeControl) => {
     catalogTypeControl.addEventListener("click", () => {
         const type = catalogTypeControl.textContent.toLowerCase();
         console.log("type", type);
+        saveCatalog(type);
         initCatalog(CATALOG_TYPE[type]);
     });
 });

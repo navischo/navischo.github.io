@@ -21,7 +21,7 @@ const setSoundStat = (cardObj) => {
         duration: parsedStr[1],
         tags: parsedStr.slice(3)
     };
-    console.log("setSoundStat", str, parsedStr, cardObj);
+    // console.log("setSoundStat", str, parsedStr, cardObj);
     return cardObj;
 }
 

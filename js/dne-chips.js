@@ -1,4 +1,4 @@
-console.log("DNELootArr", DNELootArr);
+// console.log("DNELootArr", DNELootArr);
 
 const catalogControls = document.querySelector(".js-catalog-controls");
 const catalogControlsToggleArr = document.querySelectorAll(".js-toggle-catalog-controls");

@@ -7,6 +7,18 @@
     color: white;
 }
 
+#dne-card-dmt-breathing-no-rules .card__description {
+    position: absolute;
+    bottom: 30px;
+    color: white;
+    text-shadow: 0 1.5px 4px black;
+}
+
+#dne-card-dmt-breathing-no-rules .card__price {
+    color: white;
+    text-shadow: 0 1.5px 4px black;
+}
+
 #dne-card-olivye .card__preview {
     position: absolute;
     bottom: 0;
@@ -1052,6 +1064,11 @@ h2 {
     padding-top: 60px;
 
     transform: scale(.5);
+}
+
+.drag-table .col-3 {
+    display: flex;
+    justify-content: center;
 }
 
 .score {
