@@ -1006,6 +1006,14 @@ img {
     flex-wrap: wrap;
 }
 
+.catalog-controls__show-btn {
+    z-index: 3;
+}
+
+.catalog-controls__hide-btn {
+    z-index: 4;
+}
+
 .card-page {
     display: flex!important;
     height: 100%;
