@@ -502,6 +502,29 @@
 #dne-card-album-hentai  .card__description {height: 0;}
 #dne-card-album-motion-regime  .card__description {height: 0;}
 
+#dne-card-album-i-no-longer-fear .card__preview-img {
+    position: absolute;
+    transform: scale(2) translateY(27px);
+}
+
+#dne-card-album-i-no-longer-fear .card__limits {
+    position: relative;
+    z-index: 2;
+
+    display: block;
+    width: 275px;
+    padding-top: 2px;
+
+    color: white;
+    text-shadow: 1px 2px 4px black;
+}
+
+#dne-card-album-i-no-longer-fear .card__title {
+    width: 231px;
+}
+
+
+
 #card-page-template {
     display: none;
 }
@@ -1251,7 +1274,7 @@ h2 {
 }
 
 .fw-check-row {
-
+    width: 100%;
   padding: 20px 26px;
   padding-left: 26px;
   border: none;
@@ -1262,6 +1285,8 @@ h2 {
   text-transform: uppercase;
   letter-spacing: -1.2px;
   text-shadow: 1px 0px 2px #53d3dc;
+    text-align: left;
+
 
   cursor: pointer;
   background: transparent;

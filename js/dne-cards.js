@@ -128,10 +128,11 @@ const drawDoorCards = (cardData, specialContainer = "") => {
         }
 
         newCard.querySelector(".card__limits").innerHTML = `Замовлення від ${cardData.client}`;
-        const newCardImg = newCard.querySelector(".card__preview-img");
-        newCardImg.src = "img/gif-placeholder-1.webp";
-        newCardImg.dataset.original = cardData.img;
-        $(newCardImg).lazyload({effect :'fadeIn'});
+        if (document.querySelector("body").classList.contains("lazy")) {
+            drawImgLazy(newCard.querySelector(".card__preview-img"), cardData.img);
+        } else {
+            newCard.querySelector(".card__preview-img").src = cardData.img;
+        }
 
         if (cardData.longline) {
             newCard.querySelector(".card__description").innerHTML = cardData.longline;
@@ -610,6 +611,16 @@ const initDNELootArr = () => {
     const SWEET_TEMPTATION_ALBUM_IMG = `https://drive.google.com/uc?id=${SWEET_TEMPTATION_ALBUM_IMG_ID}`;
 
     LootArr.push(new DNELootCard("album-sweet-temptation", "Sing Me a Lullaby, My Sweet Temptation", SWEET_TEMPTATION_ALBUM_LONGLINE, SWEET_TEMPTATION_ALBUM_IMG, 3, 500, "Альбом, 36m of Hardwave Hip-Hop", SWEET_TEMPTATION_ALBUM_SHORTLINE, "", true, "sound"));
+
+    //
+    //
+    //
+    const ALBUM_I_MO_LONGER_FEAR_LONGLINE = "";
+    const ALBUM_I_MO_LONGER_FEAR_SHORTLINE = `${ALBUM_LONGLINE}`;
+    const ALBUM_I_MO_LONGER_FEAR_IMG_ID = `1tq4UM6q8HnMC2GgHShZSQ0-WHjFhEKAP`;
+    const ALBUM_I_MO_LONGER_FEAR_IMG = `https://drive.google.com/uc?id=${ALBUM_I_MO_LONGER_FEAR_IMG_ID}`;
+
+    LootArr.push(new DNELootCard("album-i-no-longer-fear", "I NO LONGER FEAR THE RAZOR GUARDING MY HEEL I,II,III,IV", ALBUM_I_MO_LONGER_FEAR_LONGLINE, ALBUM_I_MO_LONGER_FEAR_IMG, 2, 0, "Альбом, 30m of Cloud Trap Hip-Hop", ALBUM_I_MO_LONGER_FEAR_SHORTLINE, "", true, "sound"));
 
     // HOTLINE MIAMI EPIC MIX
     //
