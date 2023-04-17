@@ -60,7 +60,8 @@ const updHand = (cardsArr) => {
 
     const cardsInYourHand = bottomHandNode.querySelectorAll(".swiper-slide");
     cardsInYourHand.forEach(drawedCard => {
-        drawedCard.addEventListener("click", (e) => {
+		const plusBtn = drawedCard.querySelector("button");
+		plusBtn.addEventListener("click", (e) => {
             const id = drawedCard.id.substring(9);
             const newCard = getCardById(id);
             appendCardsOnTable([newCard]);

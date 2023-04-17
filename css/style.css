@@ -14,6 +14,28 @@
     text-shadow: 0 1.5px 4px black;
 }
 
+#dne-card-toxic .card__preview-img {
+    transform: scale(1.07) translateY(10px);
+}
+
+#dne-card-toxic .card__description {
+    position: absolute;
+    bottom: 10px;
+
+    color: white;
+}
+
+#dne-card-elias-jensen .card__preview-img {
+    transform: scale(1.06) translateY(10px);
+}
+
+#dne-card-elias-jensen .card__description {
+    position: absolute;
+    bottom: 10px;
+
+    color: white;
+}
+
 #dne-card-dmt-breathing-no-rules .card__price {
     color: white;
     text-shadow: 0 1.5px 4px black;
@@ -48,7 +70,7 @@
     transform: scale(1.11);
 }
 
-#dne-card-class-rockrunner .card > * {
+#dne-card-class-rockrunner .card > *:not(.card__controls) {
     position: relative;
     z-index: 1;
     color: #fff;
@@ -934,6 +956,23 @@ img {
     background-position: center;
 }
 
+.card__controls {
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+
+    visibility: hidden;
+    opacity: 0;
+
+    transition: .2s ease-in;
+}
+
+.card:hover .card__controls {
+    visibility: visible;
+
+    opacity: 1;
+}
+
 .card__header {
     display: flex;
     align-items: baseline;
@@ -1090,11 +1129,31 @@ h2 {
 }
 
 .table {
+    position: fixed;
+    top: -80px;
+    left: 0;
+    right: 0;
+
     display: flex;
+    max-width: 1520px;
+    flex-wrap: wrap;
     padding: 0 10px;
     padding-top: 60px;
+    margin: 0 auto;
 
     transform: scale(.5);
+}
+
+.table.round-two {
+    top: -200px;
+}
+
+.table.round-three {
+    top: -320px;
+}
+
+.table.round-three {
+    top: -440px;
 }
 
 .drag-table .col-3 {

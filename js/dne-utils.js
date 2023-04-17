@@ -1,3 +1,5 @@
+const body = document.querySelector("body");
+
 // Функция которая возвращает случайное число
 function getRandomInt(max) {
   return Math.floor(Math.random() * max);
@@ -56,3 +58,8 @@ const matchGenreBonus = (cardArr) => {
     return Math.ceil(totalBonus);
 }
 
+const createNode = (parent, node, text = "") => {
+    const newNode = document.createElement(node);
+    newNode.textContent = text;
+    parent.appendChild(newNode);
+}

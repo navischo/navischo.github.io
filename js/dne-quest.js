@@ -28,6 +28,13 @@ class DNECheckpoint {
 
 const NEXT_CHECKPOINT_MESSAGE = `Новий чекпоінт досягнуто. Можеш відпочити і подумати, що робити далі`;
 
+const acidFridayCheckpointsStroke =
+`16 Вызвать таксу до Ретромагаза
+Забрать свой подарок
+Добраться до студии
+Установить игру на консоль`
+;
+
 const newTurnCheckpointsStroke =
 `Войти в «Тотентанц»
 Поговорить с главарем мальстремовцев

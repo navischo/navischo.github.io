@@ -112,6 +112,12 @@ const drawDoorCards = (cardData, specialContainer = "") => {
         newCard.querySelector(".card__title").innerHTML = cardData.name;
         newCard.querySelector(".js.card__id").textContent = `#${cardData.id}`;
 
+        const controls = {};
+        controls.parent = newCard.querySelector(".js-card-controls");
+        controls.btns = controls.parent.querySelectorAll("button");
+
+        controls.btns.forEach(controlsClickHandler);
+
         if (cardData.budget !== 0) {
             newCard.querySelector(".card__budget").textContent = `${cardData.budget}`;
         } else {
@@ -318,12 +324,53 @@ const initDNELootArr = () => {
     LootArr.push(new DNELootCard("lady-falko", "Леді Фалько", "Таємнича княжа особа веде свій бізнес чисто та обачно. Латекс та шкіра - для неї головна пристрасть, а про її івенти складають легенди.", "https://lh6.googleusercontent.com/YlzcEVCM2vJECjlLpkSl2kZqlj5T6rCIUQBVQSB2hXzHi6sOsZLIILTVRWm5HM4l9IE=w2400", 1, 0, "Найомничок", "Таємнича княжа особа веде свій бізнес чисто та обачно. Латекс та шкіра - її пристрасть, про її івенти складають легенди.", "", true, "npc"));
     LootArr.push(new DNELootCard("iron-alchemic", "Сталевий Алхімік", "Всім іноді потрібна перерва. Рок музика дала можливість Эдварду Элрику зробити її для себе. Кажуть він чудово проявляє себе в організації івентів з рок-музикою. Чутово мати такого хлопця в команді, якщо збираєшся влаштувати івент в цьому жанрі.", "https://lh6.googleusercontent.com/h2uF5Q439t611fW6MQEOEFbADuixR5J35oRrZQJmlWR05oEi8viPeyzk5vRPppS1-ms=w2400", 1, 0, "Найомничок-Рокер", "Всім іноді потрібна перерва. Рок музика дала можливість Эдварду зробити її для себе.", "", true, "npc"));
     LootArr.push(new DNELootCard("philosopher-stone", "Філососький камінь", "Дозволяє три рази за гру перетворити одну карту айтему на будь-яку іншу картку айтему. Навіть якщо ця картка одна в грі і вже комусь належить. Айтем, на який було використано камінь набуває усіх властивостей нового айтему, а попередні - втрачає. Від тепер це дві ідеальні копії.", "https://lh6.googleusercontent.com/ShUiPYAGTjXlxpRycl_a4SJeoVkFtgT2nk08pURKbk4K6dwp5Krx8q0Nj8HwC4p3O7Q=w2400", 8, "333К", "Тільки для Сталевого Алхіміка", "Дозволяє три рази за гру перетворити одну карту айтему на будь-яку іншу картку айтему. <br><br>Айтем, на який було використано камінь набуває усіх властивостей нового айтему, а попередні - втрачає.<br>Від тепер це дві ідеальні копії.", "", true, "loot"));
-    LootArr.push(new DNELootCard("toxic", "Sertolovo Toxic", "Купа новачків шукає роботу у місті. Один з таких, кажуть раньше був кухарем, знається на організації публічних івентів.. Від реперів завжди чекай біди, а від невідомих реперів тим паче.", "https://lh5.googleusercontent.com/HZhNfPmBohSpiag-yAc2lO81u0TsLnTV56dJJ-JT85s04WJmm2aTU3Y41b74w50Gk3I=w2400", 1, 0, "Найомничок-репер", "Амбітний новачок нізвідки шукає роботу. Має талант до продажу, пристрасть до Хіп-Хопу та обмаль часу.", "", true, "npc"));
+    // LootArr.push(new DNELootCard("elias-jensen", "Alias Jensen", "", "https://drive.google.com/file/d/1AaIOpGM8FoHQ-LNlqXVIUDvyru5Wl2hC/view?usp=share_link", 1, 0, "Найомничок-MC", "Амбітний новачок нізвідки шукає роботу. Має талант до продажу, пристрасть до Хіп-Хопу та обмаль часу.", "", true, "npc"));
+
+    // Elias Jensen
+    //
+    //
+    const ELIAS_JENSEN_LONGLINE = "";
+    const ELIAS_JENSEN_SHORTLINE = `Легендарний DJ Детройтської сцени та професійний продюсер з платиновими платівками в таких жанрах як Industrial та EDM`;
+    const ELIAS_JENSEN_IMG_ID = `1AaIOpGM8FoHQ-LNlqXVIUDvyru5Wl2hC`;
+    const ELIAS_JENSEN_IMG = `https://drive.google.com/uc?id=${ELIAS_JENSEN_IMG_ID}`;
+
+    LootArr.push(new DNELootCard("elias-jensen", "Elias Jensen", ELIAS_JENSEN_LONGLINE, ELIAS_JENSEN_IMG, 1, 0, "Найомничок-DJ", ELIAS_JENSEN_SHORTLINE, "", true, "npc"));
+
+    // Toxic
+    //
+    //
+    const TOXIC_LONGLINE = "Купа новачків шукає роботу у місті. Один з таких, кажуть раньше був кухарем, знається на організації публічних івентів. Від MCів завжди чекай біди, а від невідомих MCів тим паче.";
+    const TOXIC_SHORTLINE = `Амбітний новачок нізвідки шукає роботу. Має талант до продажу, пристрасть до Хіп-Хопу та обмаль часу аби зустрітись.`;
+    const TOXIC_IMG_ID = `1-xnMSwzvFqT6NizOFr-4LOruZD1AMqOa`;
+    const TOXIC_IMG = `https://drive.google.com/uc?id=${TOXIC_IMG_ID}`;
+
+    LootArr.push(new DNELootCard("toxic", "Sertolovo Toxic", TOXIC_LONGLINE, TOXIC_IMG, 1, 0, "Найомничок-MC", TOXIC_SHORTLINE, "", true, "npc"));
     LootArr.push(new DNELootCard("i-sneeker-trunk", "Багажник кросів", "Багажник рідкісних вінтажних кросів, як мене запевнив їх продавець. Звідки вони в нього, я не питав. Цю купу брухту в ідеалі привести до ладу та реалізувати. Гравець або найомничок з класом Продавець здатен продати їх втричі дорожче, але обов'язково візьме відсоток.", "https://lh3.googleusercontent.com/cq-AdJ91YqaIIgmGibDDEP5Vpi77Ppzb3rXXxMzA14r--Tnk1ODXZGpnEaKjMQgjqso=w2400", 0, "80К", "Велика", "Багажник рідкісних вінтажних кросів, як мене запевнив їх продавець.", "", true));
     // Ілон Таск
     LootArr.push(new DNELootCard("tusk", "Ілон Таск", "Таск регулярно донатить ЗСУ на визволення Криму з під контролю Путлера, дарує старлінки та розробляє план розвитку Нового Донецьку. Чудово розуміється у розробці веб-сайтів, апок для смартфонів та дронах. Відчуває ностальгію по власній юності тож завжди радий допомогти молодим даруванням з втіленням найсміливіших ідей.", "https://lh6.googleusercontent.com/paU4WKE38gv_ftC9uXIsGNXoNp0_e8xiVa133tyR6s4zR2ZqkDYmirkcVeRZtRJfQU4=w2400", 1, 0, "Найомничок", "Чудово розуміється на електронній музиці та техніці, може домовитись їх придбати вдвічі дешевше, не просто ж так він мільярдер.", "", true, "npc"));
     // Рік С-137
     LootArr.push(new DNELootCard("rick", "Рік С-137", "Так, той самий. В нього завжди при собі його портальна пушка та хто в біса зна що ще. Добре подумай яку справу довірити цій людині. Ніхто не знає що станеться далі.", "https://lh6.googleusercontent.com/FIZwLsrD-krhTSF5hdjlhDt7sFSTjTlmQIGvHxLaLeeA8ceUHPohn6i1k3t8yiDqi2Y=w2400", 1, 0, "Найомничок", "Так, той самий. З ядерним перегаром, літаючою тарілкою зі сміття та мікровсесвітом, накшталт твого, під капотом", "", true, "npc"));
+
+    // A
+    //
+    //
+    const A_LONGLINE = "";
+    const A_SHORTLINE = ``;
+    const A_IMG_ID = `1hQd9OPzuLXvkNyudTTH7dfBvRLBwBuI2`;
+    const A_IMG = `https://drive.google.com/uc?id=${A_IMG_ID}`;
+
+    LootArr.push(new DNELootCard("a", "A", A_LONGLINE, A_IMG, 1, 0, "Найомничок", A_SHORTLINE, "", true, "npc"));
+
+    // D
+    //
+    //
+    const D_LONGLINE = "";
+    const D_SHORTLINE = ``;
+    const D_IMG_ID = `1PuJGV4EQ74OJ2R2XmZ8y3ZpTFnCwiM6G`;
+    const D_IMG = `https://drive.google.com/uc?id=${D_IMG_ID}`;
+
+    LootArr.push(new DNELootCard("d", "D", D_LONGLINE, D_IMG, 1, 0, "Найомничок", D_SHORTLINE, "", true, "npc"));
+
     LootArr.push(new DNELootCard("ricks-second-portalgun", "Запасна портальна пушка Ріка", "Дозволяє миттєво переміщатись з пункту А в пункт Б. В часі з нею не поподорожуєш, бо Рік зробив її щоб Морті міг швидко ходити за пивом. Не заправляй її спрайтом.", "https://lh5.googleusercontent.com/FvLcgRozAUKRG7UniV9wQnIoNEvckTZ_g8DvU0so9nsPalQfPtkGfHzsNVH14obqe6o=w2400", 5, "300К/5К", "Авто"));
     LootArr.push(new DNELootCard("v", "V", "Так, поклич цього хлопця, що може піти не так?)", "https://lh6.googleusercontent.com/TGoJYG0KoqQ1oSf45SIKkFmp_6skZRJ9pmmR1vEWo6_xyFoHuCqZWI01Pi58MzRBKgg=w2400", 1, 0, "Найомничок", "Виглядає як порядний Охороничок та вправний Водій", "", true, "npc"));
     LootArr.push(new DNELootCard("wolf", "THE WOLF", "I solve problems", "https://lh3.googleusercontent.com/hgUIik77UVkI226aXYkYt7gtuvicht-KY4ytgoTuwB47f7gzrG93-9QI-rhgw5Y7RAk=w2400", 1, 0, "Найомничок", "I solve problems", "", true, "npc"));
@@ -405,7 +452,7 @@ const initDNELootArr = () => {
     LootArr.push(new DNELootCard("vinyl-half-age", "Half Age", "Платівка дає можливість поставити музику просто зараз. Це може бути цей самий альбом, або будь-який інший. Спробуй заробити гроші, використавши її під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", "https://lh3.googleusercontent.com/FvFHXjLdWHPi6YD-Sf3blgvACFkPvXWkMfk7M5ig0VwOY_DvyTAPiAng97vzvUboi6g=w2400", 5, 2800, "Платівка, 36m of Minimal Electronic Synth-pop", VINYL_LONGLINE, "", true, "sound"));
     LootArr.push(new DNELootCard("vinyl-stay-ugly", "Stay Ugly", "Платівка дає можливість поставити музику просто зараз. Це може бути цей самий альбом, або будь-який інший. Спробуй заробити гроші, використавши її під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", "https://lh4.googleusercontent.com/E3bFd24vQSohVXr-aE7e8YIjz2g-lQJaEcc0r9k83Quc_5SpraxdRRzyWbBO0wrvSxs=w2400", 6, 4200, "Платівка, 16m of Meta Hip-Hop", VINYL_LONGLINE, "", true, "sound"));
     LootArr.push(new DNELootCard("vinyl-pursuit", "Pursuit", "180-gram clear vinyl housed in bespoke inner and outer sleeves including a 10x10\" photographic print.\n" + "Limited to 500 copies worldwide, individually hand numbered.\n" + "Not sealed. <br>" + "Платівка дає можливість поставити музику просто зараз. Це може бути цей самий альбом, або будь-який інший. Спробуй заробити гроші, використавши її під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", "https://lh6.googleusercontent.com/5C_USwT9sZWSz5od1wgsA3ZmJ-Z92BVVOrqM5vCrlyLpZ1wtLErOAxCk8KsqHu4GrKo=w2400", 7, 5500, "Платівка, 4m of Progressive Electronic"));
-    LootArr.push(new DNELootCard("vinyl-aleph", "Aleph", "Платівка дає можливість поставити музику просто зараз. Це може бути цей самий альбом, або будь-який інший. Спробуй заробити гроші, використавши її під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", "https://lh6.googleusercontent.com/C8MFf0NXHJesCRn1SgP6Y6fg6AbOesG6rrKe1cCe3vQMuhp8KLMkmKZYvPeZfxoy-SU=w2400", 8, 7400, "Платівка, 54m of Progressive Electronic", VINYL_LONGLINE, "", true, "sound"));
+    LootArr.push(new DNELootCard("vinyl-aleph", "Aleph", "Платівка дає можливість поставити музику просто зараз. Це може бути цей самий альбом, або будь-який інший. Спробуй заробити гроші, використавши її під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", "https://lh6.googleusercontent.com/C8MFf0NXHJesCRn1SgP6Y6fg6AbOesG6rrKe1cCe3vQMuhp8KLMkmKZYvPeZfxoy-SU=w2400", 8, 7777, "Платівка, 54m of Progressive Electronic", VINYL_LONGLINE, "", true, "sound"));
     // Альбом NOCTURNAL
     LootArr.push(new DNELootCard("album-hentai", "HENTAI-JAZZ [DELUXE]", "Альбом дає можливість поставити музику просто зараз. Це може бути цей самий альбом, або будь-який інший. Спробуй заробити гроші, використавши його під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй альбоми в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", "https://lh4.googleusercontent.com/qigbEl26rtBCPjVFTsY-tAk455SX9d9T2Ubu0TjhMm0JYFDHCDcnEi3w7U8Q2kBzKrw=w2400", 2, 300, "Альбом, 62m of Vaporwave Jazz Barberbeat", ALBUM_LONGLINE, "", true, "sound"));
     LootArr.push(new DNELootCard("album-rare-gods", "RARE GODS", "Альбом дає можливість поставити музику просто зараз. Це може бути цей самий альбом, або будь-який інший. Спробуй заробити гроші, використавши його під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй альбоми в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", "https://lh6.googleusercontent.com/OFR8ufbJuQKecwX6FiEyTL522Jnqes2xL2g62sIwI8eXZhTbtalyDlKeUi1TGBcPmE0=w2400", 2, "NYP", "Альбом, 17m of Abstract Vaporwave Hip-Hop", ALBUM_LONGLINE, "", true, "sound"));
@@ -423,7 +470,7 @@ const initDNELootArr = () => {
     LootArr.push(new DNELootCard("album-neon-skydeath", "NEON SKYDEATH", "Альбом дає можливість поставити музику просто зараз. Це може бути цей самий альбом, або будь-який інший. Спробуй заробити гроші, використавши його під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй альбоми в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", "https://lh6.googleusercontent.com/9bnPwSeFJeyqlhBgTnKtBahoVvKAkwSB5ZChAyhpMm_wYPrjUHFHnq1_wrbflpwt1Fs=w2400", 3, "NYP", "Альбом, 26m of Retrowave Syntpunk", ALBUM_LONGLINE, "", true, "sound"));
     // Демо Autonomous aka Slam
     LootArr.push(new DNELootCard("demo-tweeman", "TWEEMAN", "Демо дає можливість показати лейблам що ти хочеш записати. Можливо тобі навіть вдасться знайти простір з якісною аппаратурою, зробити якісний реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", "https://lh3.googleusercontent.com/IAON5k2AY0ZW5M--oM4njhEfQDFvLYJCFN9mRIzdpVZJHYlLCNVakDyu5bCnr9_lWAI=w2400", 3, 500, "Демо, 56m of Електро", DEMO_LONGLINE, "", true, "sound"));
-    LootArr.push(new DNELootCard("demo-autonomous-aka-slam", "Autonomous aka Slam", "Демо дає можливість показати лейблам що ти хочеш записати. Можливо тобі навіть вдасться знайти простір з якісною аппаратурою, зробити якісний реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", "https://lh5.googleusercontent.com/2vnBrdPitfEB2W0Ygvco65SUPsQgeX6k_EKmvXsAG1AIVMMDrK27f4cHGdZGIAVc26U=w2400", 3, 500, "Демо, 56m of Електро", DEMO_LONGLINE, "", true, "sound"));
+    LootArr.push(new DNELootCard("demo-autonomous-aka-slam", "Autonomous aka Slam", "Демо дає можливість показати лейблам що ти хочеш записати. Можливо тобі навіть вдасться знайти простір з якісною аппаратурою, зробити якісний реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", "https://lh5.googleusercontent.com/2vnBrdPitfEB2W0Ygvco65SUPsQgeX6k_EKmvXsAG1AIVMMDrK27f4cHGdZGIAVc26U=w2400", 5, "2K", "Демо, 56m of Електро", DEMO_LONGLINE, "", true, "sound"));
     // Демо Jing
     LootArr.push(new DNELootCard("demo-jing", "Jing", "Демо дає можливість показати лейблам що ти хочеш записати. Лейб HOR має високу репутацію, його демо значно збільшує шанси знайти простір з якісною аппаратурою, зробити якісний реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", "https://lh5.googleusercontent.com/dnU_1kJofGM8L6FcyZFY9FIV7X0XMmt6NZjqHRI5eDv4Tybe2MNQSydfpaLst9BGqLE=w2400", 2, 500, "Демо, 54m of Електро", DEMO_LONGLINE_SHORT, "", true, "sound"));
     // Демо Courtesy
@@ -652,6 +699,17 @@ const initDNELootArr = () => {
     LootArr.push(new DNELootCard("dirty-mouth", "Не почистити зуби", "Ротова вонь дає мінус привабливості. Будь-який івент на який прийде гравець з цією проблемою отримує -2 до виправданих очікувань аудиторії. Може бути скинута після одного івенту або раніше, якщо почистити зуби.", "https://lh5.googleusercontent.com/fXOXvb-4Nu-o1LqenwcbnBhj8BCoFxNLn6Dsez4KU8f2jDpg-cru4RivzjN2uFpXK_0=w2400", 2, 0, "Проблема!"));
     // Боже втручання
     LootArr.push(new DNELootCard("god-wtf", "Боже втручання", "Ти маєш зіграти цю карту, як тільки її отримав. Усі DJ одразу отримують замовлення на вечірку на Кирилівській! Знайди карту замовлення вечірки на Кирилівській та одразу її активуй. Після проведення цієї вечірки гра закінчиться та виграє гравець з найбільшим капіталом. Якщо ти виграв за рахунок цієї карти, ти в праві підвергнути суперників безжальному осміянню.", "https://lh5.googleusercontent.com/oKk0dgYD_pZfoxzwIy_FmLIWw2ffxHfpl0vJwiAXkGYei30EFVrLyMG9K-HvkSmRKRA=w2400", 0, 0, "", "Усі DJ-ї отримують рівень просто зараз, навіть якщо це переможний рівень. Якщо ти виграв за рахунок цієї карти, ти в праві підвергнути суперників безжальному осміянню.", "", true, "door"));
+
+    // Mr. Mistix
+    //
+    //
+    const MR_MISTIX_LONGLINE = "";
+    const MR_MISTIX_SHORTLINE = `Присвятить життя тому щоб виконати одне твоє бажання, після чого назавжди зникне`;
+    const MR_MISTIX_IMG_ID = `1a1apWkm5lJ3YcKAdvdUnvBUcy8IKmVHB`;
+    const MR_MISTIX_IMG = `https://drive.google.com/uc?id=${MR_MISTIX_IMG_ID}`;
+
+    LootArr.push(new DNELootCard("mr-mistix", "Mr. Mistix", MR_MISTIX_LONGLINE, MR_MISTIX_IMG, 0, 0, "Одноразова картка", MR_MISTIX_SHORTLINE, "", true, "anti"));
+
     // LootArr.push(new DNELootCard("soft-paws", "На м'яких лапках", "З ними ти маєш здатність переміщатись непоітно, а твої рухи стають безшумні. Втрать здатність тримати будь що, бо в тебе лапки. Лапки з Навушками створюють неймовірної сили комбо.", "", 0, 0, "", "З ними ти маєш здатність переміщатись непоітно, а твої рухи стають безшумні. Втрать здатність тримати будь що, бо в тебе лапки.", "", false, "loot"));
     // Спойлер
     LootArr.push(new DNELootCard("spoiler", "Спойлер", "Спойлер дозволяє дізнатись хто виграє гру і не дати йому це зробити. Навіть якщо він вже мав виграти і кричить про це у весь голос. Рішення залежить тільки від тебе.", "https://lh5.googleusercontent.com/uXfX_bj1898ak2fCQmahc-wipWTmASAPGRQa-ywKRELxW69VRALjVf09rndPQkKpImI=w2400", 0, 0, ""));
@@ -736,6 +794,22 @@ const drawImgLazy = (img, src) => {
     img.dataset.original = src;
     $(img).lazyload({effect :'fadeIn'});                                                  // creds http://surl.li/girer
 }
+
+const COMMANDS = {
+    plus: "+",
+    buy: "buy",
+    rent: "rent",
+    talk: "talk"
+};
+
+const controlsClickHandler = (btn) => {
+    if (btn.textContent === COMMANDS.plus) {
+        btn.addEventListener("click", () => {
+            console.log(`You are ${COMMANDS.plus}`);
+        });
+    }
+};
+
 const drawLootCards = (cardData, parent = ".card-container") => {
     const cardContainer = document.querySelector(parent);
     const cardTemplate = document.querySelector("#card-template");
@@ -747,6 +821,26 @@ const drawLootCards = (cardData, parent = ".card-container") => {
         newCard.dataset.hash = `dne-card-${cardData.id}`;
         newCard.querySelector(".card__title").innerHTML = cardData.name;
         newCard.querySelector(".js.card__id").textContent = `#${cardData.id}`;
+
+
+        const controls = {};
+        controls.parent = newCard.querySelector(".js-card-controls");
+        if (cardData.type === "loot") {
+            createNode(controls.parent, "button", COMMANDS.buy);
+            createNode(controls.parent, "button", COMMANDS.rent);
+        }
+        if (cardData.type === "npc") {
+            createNode(controls.parent, "button", COMMANDS.talk);
+        }
+        controls.btns = controls.parent.querySelectorAll("button");
+
+        controls.btns.forEach((btn) => {
+            if (btn.textContent === COMMANDS.plus) {
+                btn.addEventListener("click", () => {
+                    console.log(`You are ${COMMANDS.plus} ${cardData.name}`);
+                });
+            }
+        });
 
         if (cardData.cost !== 0) {
             newCard.querySelector(".card__price").textContent = cardData.cost;
@@ -897,8 +991,8 @@ catalogTypeControls.forEach((catalogTypeControl) => {
 // DJ
 // Штучний інтелект класу Креєйтор, розроблена на основі єнграмми мозку андерграундного Електронної музикантки 20х років, на честь якої була названа. Фізично не існує, регулярно записує лайв виступи у віртуальному просторі. Може підписуватись на лейбли, створюючи унікальні колабораційні проекти, та виступати в ролі Найомничка.
 // Boulevard Depo
-// DJ та Репер
-// Штучний інтелект класу Креєйтор, розроблена на основі єнграмми мозку популярного репера-терориста що діяв на далекому Сході 30х років, на честь якої була названа. Фізично існує в андроїді, регулярно видає власні музичні альбоми та супутні товари. Може підписуватись на лейбли, створюючи унікальні колабораційні проекти, та виступати в ролі Найомничка.
+// DJ та MC
+// Штучний інтелект класу Креєйтор, розроблена на основі єнграмми мозку популярного MCа-терориста що діяв на далекому Сході 30х років, на честь якої була названа. Фізично існує в андроїді, регулярно видає власні музичні альбоми та супутні товари. Може підписуватись на лейбли, створюючи унікальні колабораційні проекти, та виступати в ролі Найомничка.
 // POKENAV
 // Децентрализованньій анонимньій форум с двухсторонним шифрованием, обладающий всеми возможностями современного мессенджера. Позволяет подключаться к сети из любого браузера и обмениваться анонимньіми сообщениями с другими игроками.
 // Нейровирус
