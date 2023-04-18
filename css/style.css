@@ -424,6 +424,20 @@
     background: #f1f0ec;
 }
 
+#dne-card-i-sinabon .card__footer {
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+}
+
+#dne-card-i-sinabon .card__price {
+    color: white;
+}
+
+#dne-card-support-supports .card__header-left {
+    max-width: 86%;
+}
+
 #dne-card-class-seller .card {
     background: #f1f0ec;
 }
