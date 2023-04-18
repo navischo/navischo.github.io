@@ -63,3 +63,8 @@ const createNode = (parent, node, text = "") => {
     newNode.textContent = text;
     parent.appendChild(newNode);
 }
+
+const makeUniq = (arr) => {
+    return arr.filter((el, id) => arr.indexOf(el) === id);
+}
+
