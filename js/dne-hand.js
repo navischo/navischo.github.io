@@ -82,13 +82,4 @@ const initHand = (playerObj) => {
 	playerObj.hand = [];
 
 	getCardsInHand(5, playerObj);
-
-	// todo добавить методы
-
-	// раздать карты всем игрокам
-	// использовать карту
-	// playerObj.useCard = (id) => {
-
-	// }
-	// дораздать N кол-во карт
 }

@@ -1,15 +1,14 @@
 import { DNELootArr, DNEDoorArr } from "./data.cards.js";
 import { win77 } from "../dne-cli.js";
-import {getCardById, getRandomInt, moveCardById} from "../utils/getCardById.js";
+import { getCardById, getRandomInt, moveCardById, grabCost } from "../utils/getCardById.js";
 
-//=> Все карты(кроме неукомплектованных), в любом кол-ве копий
+//=> 1. Все карты(кроме неукомплектованных), в любом кол-ве копий [done]
+//=> 2. Строгая коллекция специально для этой игры, без дублей [done]
+//=> 3. Игрок выбрал стартовые карты, остальное в магазин
+//=> 4. Игрок использует карты
+//=> 5. Карты со стола распределяются между игроком и магазином
 
-const loot = DNELootArr;
-const doors = DNEDoorArr;
-
-//=> Строгая коллекция специально для этой игры, без дублей
-
-const gameSet = new Set(loot.concat(doors));
+const gameSet = new Set(DNELootArr.concat(DNEDoorArr));
 
 const initGame = () => {
     const game = {
@@ -67,31 +66,26 @@ initCardGroups(win77.game.loot);
 console.log(win77.game);
 console.log("gameSet", gameSet);
 
-//=> Игрок выбрал стартовые карты, остальное в магазин
-
-const shop = [];
-
 const initPlayer = () => {
     const player = {
+        id: "navischo",
+        balance: {
+            energy: 40,
+            bankroll: 12000
+        },
         hand: new Set(),
         crew: new Set(),
         classArr: new Set(),
         sound: new Set(),
         loot: new Set()
     };
-    const soundCount = 5;
-
-    // Два Наемничка
-    // Один Клас
-    // Пять миксов
-    // Айтемы по желанию
-
 
     moveCardById("v", win77.game.crew, player.crew);
     moveCardById("a", win77.game.crew, player.crew);
 
     moveCardById("class-ttter", win77.game.class, player.classArr);
 
+    // todo getCardsInHand(5)
     moveCardById("vinyl-igor", win77.game.sound, player.sound);
     moveCardById("vinyl-aleph", win77.game.sound, player.sound);
     moveCardById("album-toxic", win77.game.sound, player.sound);
@@ -100,25 +94,20 @@ const initPlayer = () => {
 
     moveCardById("ddj400", win77.game.loot, player.loot);
 
-    //getRandomInt
-    // for (let i = 0; i <= soundCount; i++) {
-    //     moveCardById(win77.game.sound[getRandomInt(win77.game.sound.length)].id, win77.game.sound, player.sound);
-    // }
-    // win77.game.sound.forEach((sound, index) => {
-    //     if
-    // });
-
     return player;
 }
 win77.setPlayer(initPlayer());
+win77.getCostFromPlayer(500);
 win77.setShop("sound");
 win77.setShop("crew");
 win77.setShop("class");
 win77.setShop("anti");
 console.log(win77);
 
-//=> Игрок использует карты
+const initTable = () => {
+    win77.setTable();
+    moveCardById("demo-fracture", win77.game.player.sound, win77.game.table);
+}
 
-const table = [];
+initTable();
 
-//=> Карты со стола распределяются между игроком и магазином

@@ -33,6 +33,16 @@ const moveCardById = (id, from, to) => {
     } else {
         console.log(`Card with id ${id} does not exist`);
     }
+    return card;
 }
 
-export { getRandomInt, getCardById, moveCardById };
+const grabCost = (cost, from, to) => {
+    from = from - cost;
+    console.log(from);
+    to = to + cost;
+    console.log(to);
+    console.log(cost, from, to);
+
+}
+
+export { getRandomInt, getCardById, moveCardById, grabCost };
