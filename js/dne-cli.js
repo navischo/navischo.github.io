@@ -2,12 +2,13 @@ class DNECli {
     constructor() {}
 
     log(command) {
-        console.log(command);
+        return console.log(command);
     }
 
     setGame(gameObj) {
         this.game = gameObj;
-        this.game.shop = {};
+        this.game.catalog = {};
+        this.game.bank = 10000000;
     }
 
     setPlayer(playerObj) {
@@ -18,11 +19,8 @@ class DNECli {
         this.game[name] = cardSet;
     }
 
-    setShop(category) {
-        this.game.shop[category] = this.game[category];
-        this.game.shop.balance = {
-            bankroll: 10000000
-        };
+    setCatalog(category) {
+        this.game.catalog[category] = this.game[category];
         delete this.game[category];
     }
 

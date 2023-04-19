@@ -1,4 +1,4 @@
-import { DNELootArr } from "../cards/data.cards.js";
+import { DNECards } from "../cards/data.cards.js";
 
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);

@@ -1,0 +1,168 @@
+#find-card-by-id-popup {
+    max-width: 340px;
+}
+
+.card-by-id-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-top: 10px;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+
+    box-sizing: border-box;
+    width: 300px;
+    height: 500px;
+    border: 10px solid black;
+
+    font-family: "JetBrains Mono", monospace;
+    font-size: 14px;
+    color: #000;
+    text-align: left;
+
+    background: white;
+}
+
+.card--back {
+    position: relative;
+}
+
+.card--back::before {
+    content: "";
+
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    bottom: -10px;
+    left: -10px;
+
+    display: block;
+
+    background: url("https://lh6.googleusercontent.com/94ZiG04RaljkE0kBIgEnJ81qqspFoKyJfiKqkb7iJ0XPsKKfThuCHF6iqL5YOUtrAAc=w2400");
+    background-size: cover;
+    background-position: center;
+}
+
+.card__controls {
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+
+    visibility: hidden;
+    opacity: 0;
+
+    transition: .2s ease-in;
+}
+
+.card:hover .card__controls {
+    visibility: visible;
+
+    opacity: 1;
+}
+
+.card__header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 10px 5px 0;
+    width: 100%;
+    margin-bottom: 10px;
+
+    word-break: break-word;
+}
+
+.card__id {
+    position: absolute;
+    top: 0;
+    left: 6px;
+    font-size: 6px;
+}
+
+.card__title {
+    margin: 0;
+
+    font-family: 'Press Start 2P', cursive;
+    word-break: break-word;
+}
+
+.card__header-left {
+    width: 100%;
+    max-width: 80%;
+}
+
+.card__header-right {
+    display: flex;
+    flex-direction: column;
+    max-width: 20%;
+
+    text-align: right;
+}
+
+.card__price {
+    font-family: 'Press Start 2P', cursive;
+}
+
+.card__limits {
+    font-family: "JetBrains Mono", monospace;
+}
+
+.card__description {
+    overflow: hidden;
+    padding: 0 5px;
+}
+
+.card__summary {
+    padding: 0 4px;
+    font-size: smaller;
+}
+
+.card__footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 5px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.card--door .card__footer {
+    justify-content: space-between;
+}
+
+.card__footer-left,
+.card__footer-right {
+    max-width: 50%;
+}
+
+.card__bonus {
+    white-space: nowrap;
+}
+
+.card__bonus,
+.card__budget,
+.card__profit {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.2em;
+}
+
+.js-cards-catalog {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.catalog-controls__show-btn {
+    z-index: 3;
+}
+
+.catalog-controls__hide-btn {
+    z-index: 4;
+}

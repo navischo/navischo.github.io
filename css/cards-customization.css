@@ -1,0 +1,880 @@
+/* START CUSTOM DNE-CARDS STYLES */
+#dne-card-elias-jensen .card__preview {
+    max-height: 265px;
+}
+
+#dne-card-elias-jensen .card__description {
+    color: white;
+}
+
+#dne-card-gabe .card__preview-img {
+    transform: scale(2.5) translateY(45px);
+}
+
+#dne-card-gabe .card__description {
+    position: absolute;
+    bottom: 20px;
+
+    color: white;
+    text-shadow: 1px 2px 5px black;
+}
+
+#dne-card-gm .card__header-left {
+    max-width: 100%;
+}
+
+#dne-card-gm .card__preview-img {
+    transform: scale(2.5) translateY(48px);
+}
+
+#dne-card-gm .card__description {
+    position: absolute;
+    bottom: 20px;
+
+    color: white;
+    text-shadow: 1px 2px 5px black;
+}
+
+#dne-card-resurrection .card {
+    color: white;
+    background: black;
+}
+
+#dne-card-resurrection .card__header-left {
+    max-width: 100%;
+}
+
+#dne-card-michalych .card__description {
+    position: absolute;
+    bottom: 10px;
+
+    color: white;
+    text-shadow: 2px 1px 4px black;
+}
+
+#dne-card-i47 .card__description {
+    position: absolute;
+    bottom: 20px;
+
+    color: white;
+}
+
+#dne-card-porn-prince .card__preview-img {
+    transform: scale(1.5) translateY(26px);
+}
+
+#dne-card-porn-prince .card {
+    background: black;
+}
+
+#dne-card-porn-prince .card__header {
+    position: relative;
+    z-index: 2;
+
+    color: white;
+}
+
+#dne-card-porn-prince .card__header-left {
+    max-width: 86%;
+}
+
+#dne-card-porn-prince .card__description {
+    position: absolute;
+    bottom: 20px;
+    z-index: 2;
+
+    color: white;
+}
+
+#dne-card-v .card__preview-img {
+    position: relative;
+    z-index: 0;
+
+    transform: scale(2.5) translate(10px, 29px);
+}
+
+#dne-card-v .card__header {
+    position: relative;
+    z-index: 1;
+
+    color: white;
+}
+
+#dne-card-v .card__description {
+    position: absolute;
+    bottom: 20px;
+    z-index: 1;
+
+    color: white;
+}
+
+#dne-card-i61 .card__preview-img {
+    transform: scale(1.2) translateY(29px);
+}
+
+#dne-card-i61 .card__description {
+    position: relative;
+    z-index: 2;
+}
+
+#dne-card-dmt-breathing-no-rules .card__description {
+    position: absolute;
+    bottom: 30px;
+    color: white;
+    text-shadow: 0 1.5px 4px black;
+}
+
+#dne-card-toxic .card__preview-img {
+    transform: scale(1.07) translateY(10px);
+}
+
+#dne-card-toxic .card__description {
+    position: absolute;
+    bottom: 10px;
+
+    color: white;
+}
+
+#dne-card-elias-jensen .card__preview-img {
+    transform: scale(1.06) translateY(10px);
+}
+
+#dne-card-elias-jensen .card__description {
+    position: absolute;
+    bottom: 10px;
+
+    color: white;
+}
+
+#dne-card-dmt-breathing-no-rules .card__price {
+    color: white;
+    text-shadow: 0 1.5px 4px black;
+}
+
+#dne-card-olivye .card__preview {
+    position: absolute;
+    bottom: 0;
+}
+
+#dne-card-cleo .card__description {
+    position: absolute;
+    bottom: 10px;
+    color: white;
+}
+
+#dne-card-lady-falko .card {
+    background: black;
+}
+
+#dne-card-lady-falko .card__header {
+    color: white;
+}
+
+#dne-card-lady-falko .card__description {
+    position: absolute;
+    bottom: 66px;
+
+    padding-left: 59px;
+
+    color: white;
+    text-shadow: 1px 2px 4px black;
+}
+
+#dne-card-mechanic .card__preview-img {
+    transform: scale(1.3) translateY(37px);
+}
+
+#dne-card-mechanic .card__description {
+    position: absolute;
+    bottom: 20px;
+
+    color: white;
+
+    text-shadow: 1px 2px 4px black;
+}
+
+#dne-card-sansa-stark .card__preview {
+    max-width: 89%;
+}
+
+#dne-card-make-train-piece .card__preview {
+    transform: scale(1.11);
+}
+
+/*#dne-card-class-rockrunner .card > *:not(.card__controls) {*/
+/*    position: relative;*/
+/*    z-index: 1;*/
+/*    color: #fff;*/
+/*    text-shadow: -1px 0px 5px #000000cc;*/
+/*}*/
+
+#dne-card-class-rockrunner .card__preview {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 0;
+    transform: scale(1.03);
+}
+#dne-card-class-rockrunner .card__description {
+    position: absolute;
+    bottom: 40px;
+    z-index: 1;
+
+    color: #fff;
+    text-shadow: -1px 0px 5px #000000cc;
+}
+
+#dne-card-class-rockrunner .card__header {
+    position: absolute;
+    z-index: 2;
+}
+
+#dne-card-class-rockrunner .card__title {
+    text-shadow: -1px 0px 5px #000000cc;
+}
+
+#dne-card-make-train-piece .card__header {
+    position: absolute;
+    z-index: 2;
+
+    color: #fff;
+    text-shadow: -1px 0px 5px #000000cc;
+}
+
+#dne-card-class-jeweller .card__description {
+    position: absolute;
+    bottom: 3px;
+    color: white;
+    text-shadow: 1px 3px 9px black;
+}
+
+#dne-card-class-barber .card__description {
+    position: absolute;
+    top: 140px;
+    color: white;
+    text-shadow: 1px 3px 9px black;
+}
+
+#dne-card-class-barber .card::after {
+    content: "You loose";
+
+    display: block;
+    padding: 3px;
+    margin: 3px 0 0;
+
+    text-align: right;
+}
+
+#dne-card-iron-alchemic .card__description {
+    position: absolute;
+    top: 70px;
+}
+
+#dne-card-chaos-green .card__preview {
+    margin-top: 100px;
+}
+
+#dne-card-chaos-green .card__description {
+    position: absolute;
+    top: 70px;
+}
+
+#dne-card-shadow .card__description {
+    position: absolute;
+    top: 50px;
+}
+
+#dne-card-make-live .card__preview {
+    margin-top: 45px;
+}
+
+#dne-card-make-live .card__description {
+    position: absolute;
+    top: 71px;
+}
+
+#dne-card-god-wtf .card__description {
+    position: relative;
+    top: -9px;
+}
+
+#dne-card-know-better .card__description {
+    position: relative;
+    top: -9px;
+}
+
+#dne-card-philosopher-stone .card {
+    background: black;
+    color: white;
+}
+
+#dne-card-i-canon .card__preview {
+    max-height: 222px;
+
+}
+
+#dne-card-cdj3000 .card__preview {
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+#dne-card-djms11 .card__preview {
+    max-width: 175px;
+    margin: 0 auto;
+}
+
+#dne-card-plx500 .card__preview {
+    padding-left: 5px;
+}
+
+#dne-card-ddjrev1 .card__preview {
+    max-width: 137px;
+    margin: 0 auto;
+}
+
+#dne-card-i-canon .card__preview-img {
+    max-height: 222px;
+    object-fit: contain;
+
+}
+
+#dne-card-god-wtf .card__header {
+    margin-bottom: 0;
+}
+
+#dne-card-hide-insides-case .card__preview {
+    height: 180px;
+    overflow: hidden;
+    border-bottom: 4px solid black;
+}
+
+#dne-card-vinyl-mordechai .card__preview {
+    height: 200px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+#dne-card-vinyl-mordechai .card__preview-img {
+    height: 280px;
+    overflow: hidden;
+}
+
+#dne-card-prj-mriya .card__preview-img {
+    /*height: 220px;*/
+}
+
+#dne-card-prj-aenigma .card__description {
+    height: 89px;
+}
+
+#dne-card-zer0 .card__description {
+    position: absolute;
+    top: 59px;
+}
+
+#dne-card-prj-ee-in-the-rain .card__preview-img {
+    position: relative;
+    left: -41px;
+}
+
+#dne-card-prj-ee-in-the-rain .card__summary {
+    position: absolute;
+    top: 67px;
+    right: 2px;
+    width: 81px;
+}
+
+#dne-card-prj-ee-everything-you-wish .card__preview-img {
+    position: relative;
+    left: -41px;
+}
+
+#dne-card-prj-ee-everything-you-wish .card__summary {
+    position: absolute;
+    top: 67px;
+    right: 2px;
+    width: 77px;
+    z-index: 3;
+}
+
+#dne-card-prj-ee-everything-you-wish .card::before {
+    content: "";
+
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    bottom: 0;
+    z-index: 2;
+
+    display: block;
+    width: 70px;
+    height: 296px;
+
+    background: white;
+
+}
+
+#dne-card-michalych .card__preview-img {
+    filter: drop-shadow(2px 4px 6px black);
+}
+
+#dne-card-michalych .card {
+    background: #f1f0ec;
+}
+
+#dne-card-i-sinabon .card__footer {
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+}
+
+#dne-card-i-sinabon .card__price {
+    color: white;
+}
+
+#dne-card-support-supports .card__header-left {
+    max-width: 86%;
+}
+
+#dne-card-class-seller .card {
+    background: #f1f0ec;
+}
+
+#dne-card-class-seller .card__description {
+    position: absolute;
+    top: 132px;
+    width: 169px;
+}
+
+#dne-card-class-streamer .card__description {
+    position: relative;
+    top: -5px;
+}
+
+#dne-card-class-seller .card__preview {
+    position: relative;
+    right: -59px;
+}
+
+#dne-card-wolf .card {
+    background: black;
+    color: white;
+}
+
+#dne-card-wolf .card__preview-img {
+    position: relative;
+    z-index: 0;
+
+    transform: scale(2.6) translate(24px, 29px);
+}
+
+#dne-card-wolf .card__header {
+    position: relative;
+    z-index: 1;
+    color: white;
+}
+
+#dne-card-wolf .card__description {
+    position: absolute;
+    bottom: 20px;
+    z-index: 1;
+
+    color: white;
+}
+
+#dne-card-make-dj-set .card__header {
+    position: absolute;
+    color: white;
+    text-shadow: 1px 3px 9px black;
+}
+
+#dne-card-make-piece .card__header {
+    position: absolute;
+    color: white;
+    text-shadow: 1px 3px 9px black;
+}
+
+#dne-card-make-train-piece .card__description {
+    position: absolute;
+    top: 50px;
+    text-shadow: -1px 1px 5px #656565;
+}
+
+#dne-card-call-marsellus .card__header {
+    position: absolute;
+    z-index: 2;
+    color: white;
+}
+
+#dne-card-call-marsellus .card__description {
+    position: absolute;
+    bottom: 120px;
+    color: white;
+    text-shadow: -1px 1px 8px #1c1c1c;
+}
+
+#dne-card-call-marsellus .card__price {
+    color: white;
+    text-shadow: -1px 1px 8px #1c1c1c;
+}
+
+#dne-card-forest-day .card__header {
+    position: absolute;
+    z-index: 2;
+    color: white;
+}
+
+#dne-card-forest-day .card__price {
+    color: white;
+    text-shadow: -1px 1px 8px #1c1c1c;
+}
+
+#dne-card-call-marsellus .card__preview-img {
+    transform: scale(1.7) translateY(57px);
+}
+
+#dne-card-lisova-mavka .card__header {
+    position: absolute;
+    z-index: 2;
+    color: white;
+}
+
+#dne-card-lisova-mavka .card__description {
+    position: absolute;
+    bottom: 40px;
+    color: white;
+    text-shadow: -1px 1px 8px #1c1c1c;
+}
+
+#dne-card-lisova-mavka .card__price {
+    color: white;
+    text-shadow: -1px 1px 8px #1c1c1c;
+}
+
+#dne-card-lisova-mavka .card__preview-img {
+    transform: scale(1.32) translateX(17px) translateY(38px);
+}
+
+#dne-card-make-big-piece .card__description {
+    position: absolute;
+    top: 90px;
+    color: white;
+    text-shadow: -1px 1px 5px #656565;
+}
+
+#dne-card-make-big-piece .card__footer {
+    color: white;
+}
+
+#dne-card-make-big-piece .card__preview-img {
+    transform: scale(1.3) translateY(33px);
+}
+
+#dne-card-twins .card__header {
+    position: absolute;
+    z-index: 2;
+
+    color: white;
+}
+
+#dne-card-twins .card__description {
+    position: absolute;
+    top: 50px;
+
+    color: white;
+    text-shadow: 1px 3px 9px black;
+}
+
+#dne-card-twins .card__preview-img {
+    transform: scale(1.19) translateY(29px);
+}
+
+#dne-card-prj-weedian-greece .card__description {
+    height: 92px;
+}
+
+#dne-card-prj-influence .card__description {
+    height: 92px;
+}
+
+#dne-card-prj-various .card__description {
+    height: 92px;
+}
+
+[id*=dne-card-album] .card__description {
+    height: 132px;
+}
+[id*=dne-card-demo] .card__description {
+    height: 240px;
+}
+#dne-card-demo-marum-future .card__description {
+    height: 224px;
+}
+
+#dne-card-demo-autonomous-aka-slam .card__description {
+    height: 204px;
+}
+
+#dne-card-demo-before-sunrise .card__preview {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#dne-card-demo-before-sunrise .card__preview-img {
+    width: 80%;
+    /*height: 160px;*/
+}
+
+#dne-card-demo-before-sunrise .card__description {
+    height: 202px;
+}
+
+#dne-card-prj-vinyl-love-market .card__profit {
+    font-size: 1em;
+}
+
+#dne-card-prj-vinyl-love-market .card__description {
+    height: 164px;
+}
+
+#dne-card-class-dj .card__description {
+    height: 150px;
+}
+
+#dne-card-prj-vinyl-vlad-tapes .card__profit {
+    font-size: 1.1em;
+}
+
+#dne-card-prj-vinyl-various-i .card__profit {
+    font-size: 1em;
+}
+
+#dne-card-prj-vinyl-nocturnal .card__preview {
+    display: flex;
+    align-items: center;
+    height: 210px;
+    overflow: hidden;
+}
+
+#dne-card-car-mystery-track .card__preview {
+    display: flex;
+    align-items: center;
+    height: 260px;
+    overflow: hidden;
+}
+
+#dne-card-i-gopro .card__preview {
+    display: flex;
+    align-items: center;
+    height: 330px;
+    overflow: hidden;
+}
+
+#dne-card-demo-sub-zero .card__preview {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#dne-card-car-basic .card__preview {
+    margin-bottom: -22px;
+}
+
+#dne-card-demo-mac-lofi .card__description {
+    /*width: 95%;*/
+    height: 160px;
+}
+
+#dne-card-demo-sub-zero .card__description {
+    height: 70px;
+}
+
+#dne-card-demo-phonk-fridays-004 .card__description {
+    height: 202px;
+}
+
+#dne-card-demo-dark-trap-777 .card__description {
+    height: 208px;
+}
+
+#dne-card-demo-dark-trap-4 .card__description {
+    height: 204px;
+}
+
+#dne-card-deep-lofi-house .card__description {
+    height: 242px;
+}
+
+#dne-card-demo-chill-out .card__description {
+    height: 255px;
+}
+
+#dne-card-demo-micks-tape .card__description {
+    height: 254px;
+}
+
+#dne-card-album-iron-horse .card__description {
+    height: 165px;
+}
+
+#dne-card-album-hentai  .card__description {height: 0;}
+#dne-card-album-motion-regime  .card__description {height: 0;}
+
+#dne-card-album-i-no-longer-fear .card__preview-img {
+    position: absolute;
+    transform: scale(2) translateY(27px);
+}
+
+#dne-card-album-i-no-longer-fear .card__limits {
+    position: relative;
+    z-index: 2;
+
+    display: block;
+    width: 275px;
+    padding-top: 2px;
+
+    color: white;
+    text-shadow: 1px 2px 4px black;
+}
+
+#dne-card-album-i-no-longer-fear .card__title {
+    width: 231px;
+}
+
+
+
+#card-page-template {
+    display: none;
+}
+/* END CUSTOM DNE-CARDS STYLES */
+
+html,
+body {
+    position: relative;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+img {
+    display: block;
+    width: 100%;
+    object-fit: contain;
+}
+
+/* START DNE */
+
+#card-template,
+#door-card-template {
+    display: none;
+}
+
+.fw-d-none-i {
+    display: none!important;
+}
+
+.swiper-slide[id*="dne-card-"] {
+    width: 300px;
+    height: 590px;
+}
+
+.js-tv iframe {
+    max-width: 100%;
+    max-height: 100%;
+    width: 100vw;
+    height: 100vh;
+}
+
+.build {
+    /*margin-top: 100px;*/
+}
+
+.build .js-cards-catalog {
+    /*max-width: 1200px;*/
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.build .swiper-slide[id*="dne-card-"],
+.build .card {
+    width: 300px;
+    height: 460px;
+}
+
+.build .swiper-slide[id*="dne-card-"]:nth-child(9n) {
+    /*margin-bottom: 420px;*/
+}
+
+.build .card__description {
+    margin: 3px 0 0;
+}
+
+.build .card__summary {
+    margin-top: 3px;
+}
+
+.build .card__last-line {
+    display: none;
+}
+
+.build #dne-card-machete .card__description {position: absolute; z-index: 1; top: 58px;}
+.build #dne-card-machete .card__preview {order: 2; margin-top: auto;}
+.build #dne-card-machete .card {display: flex; flex-direction: column;}
+
+.build #dne-card-vargus .card > *:not(.card__controls) {
+    position: relative;
+    z-index: 2;
+}
+
+.build #dne-card-vargus .card > .card__header {
+    z-index: 3;
+}
+
+.build #dne-card-vargus .card > .card__controls {
+    z-index: 3;
+}
+
+.build #dne-card-vargus .card__preview {
+    margin-bottom: -76px;
+    position: relative;
+    top: -45px;
+    z-index: 1;
+}
+
+.build #dne-card-prj-influence .card__preview {
+    overflow: hidden;
+    position: relative;
+    top: -5px;
+}
+
+.build #dne-card-prj-influence .card__preview-img {
+    transform: scale(1.1);
+}
+
+.build #dne-card-prj-influence .card__description {
+    position: relative;
+    top: -5px;
+}
+
+.build #dne-card-prj-vinyl-drainvoid .card__preview {
+    margin-bottom: -35px;
+}
+
+.build #dne-card-class-seller .card__preview-img {
+    margin-top: -13px;
+}
+
+.build #dne-card-class-seller .card,
+.build #dne-card-class-seller .card__preview {
+    overflow: hidden;
+}

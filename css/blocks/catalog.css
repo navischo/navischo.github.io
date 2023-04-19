@@ -1,0 +1,94 @@
+.catalog-controls {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+
+    padding: 10px 10px 40px;
+
+    transform: translateY(-100%);
+    transition: .3s ease-in;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.catalog-controls--visible {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+.catalog-controls__show-btn,
+.catalog-controls__hide-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+.catalog-controls__item + .catalog-controls__item {
+    margin-top: 20px;
+}
+
+.catalog-controls__item b {
+    font-family: "Press Start 2p", cursive;
+    font-size: 20px;
+}
+
+.chip-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.chip {
+    display: none;
+    padding: 0 15px;
+    margin: 2px;
+
+    font-size: 18px;
+    line-height: 30px;
+    border-radius: 25px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+    box-shadow: inset 0 0 0 0 #222222;
+
+    transition: .2s ease-in;
+}
+
+.chip:hover {
+    box-shadow: inset 0 0 0 4px #222222;
+}
+
+.chip:active {
+    transform: scale(.98);
+}
+
+.chip--visible {
+    display: inline-block;
+}
+
+.chip--active {
+
+    box-shadow: inset 0 0 0 3px #222222;
+}
+
+.chip img {
+    float: left;
+    margin: 0 10px 0 -25px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.closebtn {
+    padding-left: 10px;
+    color: #888;
+    font-weight: bold;
+    float: right;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.closebtn:hover {
+    color: #000;
+}

@@ -1,4 +1,5 @@
 import { DNELootCard, DNEDoorCard } from "./interface.cards.js";
+import { setSoundStat } from "../utils/setSoundStat.js";
 
 //=> LOOT START
 
@@ -710,6 +711,12 @@ const initDNELootArr = () => {
 
 const DNELootArr = initDNELootArr().filter(card => card.isBuild);
 
+DNELootArr.forEach((card) => {
+    if (card.type === "sound") {
+        setSoundStat(card);
+    }
+});
+
 //=> LOOT END
 
 //=> DOORS START
@@ -785,4 +792,6 @@ const DNEDoorArr = initDNEDoorArr().filter(card => card.isBuild);
 
 //=> DOORS END
 
-export { DNELootArr, DNEDoorArr };
+const DNECards = new Set(DNELootArr.concat(DNEDoorArr));
+
+export { DNECards };

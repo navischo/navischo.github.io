@@ -1,1 +1,5 @@
 @import "./blocks/pokeball.css";
+@import "./blocks/card.css";
+@import "./blocks/catalog.css";
+
+@import "./cards-customization.css";

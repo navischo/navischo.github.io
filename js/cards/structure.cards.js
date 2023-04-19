@@ -1,17 +1,20 @@
-import { DNELootArr, DNEDoorArr } from "./data.cards.js";
+import { DNECards } from "./data.cards.js";
 import { win77 } from "../dne-cli.js";
 import { getCardById, getRandomInt, moveCardById, grabCost } from "../utils/getCardById.js";
 
-//=> 1. Все карты(кроме неукомплектованных), в любом кол-ве копий [done]
-//=> 2. Строгая коллекция специально для этой игры, без дублей [done]
-//=> 3. Игрок выбрал стартовые карты, остальное в магазин
-//=> 4. Игрок использует карты
-//=> 5. Карты со стола распределяются между игроком и магазином
+//=> 0. Все карты(кроме неукомплектованных), в любом кол-ве копий [done]
+//=> 1. Строгая коллекция специально для этой игры, без дублей [done]
+//=> 2. Игрок выбрал стартовые карты, остальное в магазин
+//=> 3. Игрок использует карты
+//=> 4. Карты со стола распределяются между игроком и магазином
 
-const gameSet = new Set(DNELootArr.concat(DNEDoorArr));
+//=> 1.
+const gameSet = DNECards;
 
+//=> 1.1. Запуск игры
 const initGame = () => {
     const game = {
+        cards: DNECards,
         doors: new Set(),
         loot: new Set()
     }
@@ -27,6 +30,9 @@ const initGame = () => {
     return game;
 }
 
+
+
+//=> 1.2. Карты на группы в game
 const initCardGroups = (lootSet) => {
     const soundCards = new Set();
     const classCards = new Set();
@@ -63,9 +69,8 @@ const initCardGroups = (lootSet) => {
 win77.setGame(initGame());
 initCardGroups(win77.game.loot);
 
-console.log(win77.game);
-console.log("gameSet", gameSet);
 
+//=> 2. Игрок выбрал стартовые карты
 const initPlayer = () => {
     const player = {
         id: "navischo",
@@ -97,13 +102,17 @@ const initPlayer = () => {
     return player;
 }
 win77.setPlayer(initPlayer());
+
 win77.getCostFromPlayer(500);
-win77.setShop("sound");
-win77.setShop("crew");
-win77.setShop("class");
-win77.setShop("anti");
+
+//=> 2.1. Oстальное из game переносим в game.shop
+win77.setCatalog("sound");
+win77.setCatalog("crew");
+win77.setCatalog("class");
+win77.setCatalog("anti");
 console.log(win77);
 
+//=> 3. Игрок использует карты
 const initTable = () => {
     win77.setTable();
     moveCardById("demo-fracture", win77.game.player.sound, win77.game.table);
