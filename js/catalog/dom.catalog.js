@@ -48,12 +48,18 @@ const initCatalog = (type) => {
         drawChips(DNENewCardsArr, ".js-items");
     }
 
+    // если открыта вкладка лута
+    // отдельная функция хендлер
+    // вешается на все кнопки buy rent на странице
+
+    // if ()
+
     getDrawedCards();
 }
 
 const catalogTypeControls = document.querySelectorAll(".js-init-catalog");
 
-console.log(Array.from(Object.keys(CARD_TYPES)));
+// console.log(Array.from(Object.keys(CARD_TYPES)));
 
 const cardTypesArr = Array.from(Object.keys(CARD_TYPES));
 
@@ -64,9 +70,9 @@ for (let i = 3; i < cardTypesArr.length; i++) {
 catalogTypeControls.forEach((catalogTypeControl) => {
     catalogTypeControl.addEventListener("click", () => {
         const type = catalogTypeControl.textContent.toLowerCase();
-        console.log("type", type);
+        // console.log("type", type);
         saveCatalog(type);
-        console.log("type CARD_TYPES", type, CARD_TYPES, CARD_TYPES[type]);
+        // console.log("type CARD_TYPES", type, CARD_TYPES, CARD_TYPES[type]);
         initCatalog(CARD_TYPES[type]);
     });
 });

@@ -26,13 +26,13 @@ const getCardById = (id, set) => {
 }
 
 const moveCardById = (id, from, to) => {
-    console.log(`Trying to move #${id} from to`, from, to);
+    // console.log(`Trying to move #${id} from to`, from, to);
 
     const card = Array.from(from).find((lootCard) => lootCard.id === id);
     if (card) {
         to.add(card);
         from.delete(card);
-        console.log(`Card with id ${id} successfully moved`);
+        // console.log(`Card with id ${id} successfully moved`);
     } else {
         console.log(`Card with id ${id} does not exist`);
     }

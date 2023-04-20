@@ -3,34 +3,54 @@ import { getCardElement } from "./template.cards.js";
 import { COMMANDS } from "./const.cards.js";
 import { drawImgLazy } from "../utils/drawImgLazy.js";
 import { createNode } from "../utils/createNode.js";
-import { initInventory } from "../inventory/dom.inventory.js";
+import { initInventory } from "../hud/inventory.hud.js";
 import {moveCardById} from "../utils/getCardById.js";
+import { updBalanceNode } from "../hud/balance.hud.js";
+import { isSetHasId } from "../utils/isSetHasId.js";
+
+const initHandlers = (cardData, controls) => {
+    const plusButtonHandler = () => {
+        console.log(`You are ${COMMANDS.plus} ${cardData.id}`);
+        moveCardById(cardData.id, win77.game.catalog[cardData.type], win77.game.player[cardData.type]);
+        initInventory();
+    };
+
+    const buyButtonHandler = () => {
+        const catalog = win77.game.catalog[cardData.type];
+        // console.log("win get cost", cardData.cost, cardData);
+        // console.log("isSetHasId(catalog, cardData.id)", isSetHasId(catalog, cardData.id));
+        if (isSetHasId(catalog, cardData.id)) {
+            win77.getCostFromPlayer(cardData.cost);
+            updBalanceNode();
+            moveCardById(cardData.id, catalog, win77.game.player[cardData.type]);
+            initInventory();
+        } else {
+            console.log(`Item ${cardData.name} was already sold`);
+        }
+    };
+
+    controls.btns.forEach((btn) => {
+        if (btn.textContent === COMMANDS.plus) {
+            btn.addEventListener("click", plusButtonHandler);
+        } else if (btn.textContent === COMMANDS.buy) {
+            btn.addEventListener("click", buyButtonHandler);
+        }
+    });
+}
+
 const addCardControls = (newCard, cardData) => {
     const controls = {};
     controls.parent = newCard.querySelector(".js-card-controls");
     if (cardData.type === "loot") {
-        createNode(controls.parent, "button", COMMANDS.buy);
-        createNode(controls.parent, "button", COMMANDS.rent);
+        createNode(controls.parent, "button", COMMANDS.buy, COMMANDS.buy);
+        createNode(controls.parent, "button", COMMANDS.rent, COMMANDS.rent);
     }
     if (cardData.type === "npc") {
-        createNode(controls.parent, "button", COMMANDS.talk);
+        createNode(controls.parent, "button", COMMANDS.talk, COMMANDS.talk);
     }
     controls.btns = controls.parent.querySelectorAll("button");
 
-    controls.btns.forEach((btn) => {
-        if (btn.textContent === COMMANDS.plus) {
-            btn.addEventListener("click", () => {
-                console.log(`You are ${COMMANDS.plus} ${cardData.id}`);
-                // берем id карты
-                // каталог[типкарты]
-                // вставить в каталог[типкарты] игрока
-                console.log("cardData.type", cardData.type, win77.game.catalog[cardData.type], win77.game.player[cardData.type], cardData, win77.game);
-                moveCardById(cardData.id, win77.game.catalog[cardData.type], win77.game.player[cardData.type]);
-                console.log("cardData, win77.game", cardData, win77.game);
-                initInventory();
-            });
-        }
-    });
+    initHandlers(cardData, controls);
 }
 
 const drawCard = (cardContainer, cardTemplate, cardData) => {
@@ -56,7 +76,7 @@ const drawLootCards = (cardData, parent = "#dne-page") => {
         drawCard(cardContainer, getCardElement, DNELootCard);
     }
 
-    console.log("cardDataforEach", cardData);
+    // console.log("cardDataforEach", cardData);
     Array.from(cardData).forEach(drawIt);
 }
 

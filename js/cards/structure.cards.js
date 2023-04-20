@@ -2,7 +2,7 @@ import { CARD_TYPES } from "./const.cards.js";
 import { DNECards } from "./data.cards.js";
 import { win77 } from "../dne-cli.js";
 import { getCardById, getRandomInt, moveCardById, grabCost } from "../utils/getCardById.js";
-import { initInventory } from "../inventory/dom.inventory.js";
+import { initInventory } from "../hud/inventory.hud.js";
 
 //=> 0. Все карты(кроме неукомплектованных), в любом кол-ве копий [done]
 //=> 1. Строгая коллекция специально для этой игры, без дублей [done]
@@ -38,7 +38,7 @@ const initGame = () => {
 
             case CARD_TYPES.class:
                 game.catalog.class.add(card);
-                console.log("catalog switch", game.catalog.class, DNECards);
+                // console.log("catalog switch", game.catalog.class, DNECards);
                 break;
 
             case CARD_TYPES.loot:
@@ -63,8 +63,8 @@ const initGame = () => {
         }
     });
 
-    console.log("catalog switch finish", game.catalog.class, DNECards);
-    console.log("game", game.catalog.class, game.catalog.anti, game, DNECards);
+    // console.log("catalog switch finish", game.catalog.class, DNECards);
+    // console.log("game", game.catalog.class, game.catalog.anti, game, DNECards);
 
     return game;
 }
@@ -88,7 +88,8 @@ const initPlayer = () => {
         lvl: 1,
         balance: {
             energy: 40,
-            bankroll: 12000
+            bankroll: 12000,
+            skillPoints: 3
         },
         hand: new Set(),
         npc: new Set(),
@@ -97,7 +98,7 @@ const initPlayer = () => {
         loot: new Set()
     };
 
-    console.log("win77.game.catalog.npc", win77, win77.game.catalog.npc);
+    // console.log("win77.game.catalog.npc", win77, win77.game.catalog.npc);
     moveCardById("v", win77.game.catalog.npc, player.npc);
     moveCardById("a", win77.game.catalog.npc, player.npc);
 

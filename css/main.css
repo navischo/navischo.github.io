@@ -2,5 +2,6 @@
 @import "./blocks/card.css";
 @import "./blocks/catalog.css";
 @import "./blocks/inventory.css";
+@import "./blocks/hud.css";
 
 @import "./cards-customization.css";

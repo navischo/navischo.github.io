@@ -33,7 +33,7 @@ const inventory = {
 const initInventory = () => {
     const player = win77.game.player;
     inventory.clear();
-    console.log("initInventory", player, cardNodesByType);
+    // console.log("initInventory", player, cardNodesByType);
 
     player.npc.forEach((npcCard) => {
         appendCardToInventory(npcCard, CARD_TYPES.npc);
@@ -49,7 +49,5 @@ const initInventory = () => {
 }
 
 export { initInventory, appendCardToInventory };
-
-// todo привязать добавление в инвентарь к кнопкам плюсов на картах
 
 // todo возможность просматривать добавленные карты

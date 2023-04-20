@@ -1,0 +1,105 @@
+.hud-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    padding: 10px;
+
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+
+    color: white;
+}
+
+.hud-btn--fixed {
+    position: fixed;
+    left: 50%;
+    bottom: 3px;
+    z-index: 10;
+
+    transform: translateX(-50%);
+}
+
+.hud-btn img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.hud__h2 {
+    color: white;
+    text-align: center;
+}
+
+.hud-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    transition: .2s ease-in;
+}
+
+.hud-bottom .hud-options {
+    display: block;
+    width: 100%;
+}
+
+.hud-bottom--fixed {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+.hud-bottom--open {
+    z-index: 19;
+
+    transform: translateY(0)!important;
+}
+
+.hud-top {
+    display: flex;
+    justify-content: space-between;
+
+    font-family: "Press Start 2p", cursive;
+}
+
+.hud-top--fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 10px;
+    z-index: 10;
+}
+
+.units {
+    position: fixed;
+    top: 6px;
+    right: 55px;
+
+    color: black;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 14px;
+}
+
+.units-energy::before {
+    content: "⚡";
+
+    position: relative;
+    top: 2px;
+
+    font-size: 1.4em;
+}
+
+.units-bankroll::before {
+    content: "💳";
+
+    position: relative;
+    /*top: -4px;*/
+
+    font-size: 2em;
+}
