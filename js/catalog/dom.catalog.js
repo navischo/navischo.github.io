@@ -15,8 +15,8 @@ const loadCatalog = () => {
 }
 
 const initCatalog = (type) => {
-    const doors = splitDoorsAndLoot(win77.game.cards).doors;
-    const loot = splitDoorsAndLoot(win77.game.cards).loot;
+    const doors = splitDoorsAndLoot(win77.game.catalog.all).doors;
+    const loot = splitDoorsAndLoot(win77.game.catalog.all).loot;
 
     let currentCatalogSave = loadCatalog();
 
@@ -29,9 +29,10 @@ const initCatalog = (type) => {
     document.querySelector(".js-cards-catalog").innerHTML = "";
     document.querySelector(".head-title").innerHTML = `${type.toUpperCase()} CATALOG`;
     if (type === "prj") {
-        drawDoorCards(win77.game.catalog.prj);
+        drawDoorCards(doors);
         clearChips();
         drawChips(doors, ".js-doors");
+        console.log(document.querySelectorAll(".card:not(.card--door)"));
     }  if (type === "" || type === "anti") {
         clearChips();
 
@@ -41,7 +42,7 @@ const initCatalog = (type) => {
         drawLootCards(loot);
         drawChips(loot, ".js-items");
     } else {
-        const DNENewCardsArr = Array.from(win77.game.cards).filter(card => card.type === type);
+        const DNENewCardsArr = Array.from(win77.game.catalog.all).filter(card => card.type === type);
         drawLootCards(DNENewCardsArr);
         clearChips();
         drawChips(DNENewCardsArr, ".js-items");

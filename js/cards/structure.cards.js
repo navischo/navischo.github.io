@@ -16,8 +16,55 @@ const gameSet = DNECards;
 //=> 1.1. Запуск игры
 const initGame = () => {
     const game = {
-        cards: DNECards
+        catalog: {
+            [CARD_TYPES.npc]: new Set(),
+            [CARD_TYPES.class]: new Set(),
+            [CARD_TYPES.loot]: new Set(),
+            [CARD_TYPES.sound]: new Set(),
+            [CARD_TYPES.prj]: new Set(),
+            [CARD_TYPES.dia]: new Set(),
+            [CARD_TYPES.anti]: new Set(),
+            all: DNECards
+        }
     }
+
+    console.log("game", game);
+
+    DNECards.forEach((card) => {
+        switch (card.type) {
+            case CARD_TYPES.npc:
+                game.catalog.npc.add(card);
+                break;
+
+            case CARD_TYPES.class:
+                game.catalog.class.add(card);
+                console.log("catalog switch", game.catalog.class, DNECards);
+                break;
+
+            case CARD_TYPES.loot:
+                game.catalog.loot.add(card);
+                break;
+
+            case CARD_TYPES.sound:
+                game.catalog.sound.add(card);
+                break;
+
+            case CARD_TYPES.prj:
+                game.catalog.prj.add(card);
+                break;
+
+            case CARD_TYPES.dia:
+                game.catalog.dia.add(card);
+                break;
+
+            default:
+                game.catalog.anti.add(card);
+                break;
+        }
+    });
+
+    console.log("catalog switch finish", game.catalog.class, DNECards);
+    console.log("game", game.catalog.class, game.catalog.anti, game, DNECards);
 
     return game;
 }
@@ -27,59 +74,11 @@ const initGame = () => {
 //=> 1.2. Карты на группы в game
 // npc class loot sound project dia anti
 const initCardGroups = (set) => {
-    const npcCatalog = new Set();
-    const classCatalog = new Set();
-    const lootCatalog = new Set();
-    const soundCatalog = new Set();
-    const projectCatalog = new Set();
-    const diaCatalog = new Set();
-    const antiCatalog = new Set();
 
-    set.forEach((card) => {
-        switch (card.type) {
-            case CARD_TYPES.npc:
-                npcCatalog.add(card);
-                break;
-
-            case CARD_TYPES.class:
-                classCatalog.add(card);
-                break;
-
-            case CARD_TYPES.loot:
-                lootCatalog.add(card);
-                break;
-
-            case CARD_TYPES.sound:
-                soundCatalog.add(card);
-                break;
-
-            case CARD_TYPES.prj:
-                projectCatalog.add(card);
-                break;
-
-            case CARD_TYPES.dia:
-                diaCatalog.add(card);
-                break;
-
-            default:
-                antiCatalog.add(card);
-                break;
-        }
-    });
-
-    win77.setCardGroup(CARD_TYPES.npc, npcCatalog);
-    win77.setCardGroup(CARD_TYPES.class, classCatalog);
-    win77.setCardGroup(CARD_TYPES.loot, lootCatalog);
-    win77.setCardGroup(CARD_TYPES.sound, soundCatalog);
-    win77.setCardGroup(CARD_TYPES.prj, projectCatalog);
-    win77.setCardGroup(CARD_TYPES.dia, diaCatalog);
-    console.log("antiCatalog", antiCatalog);
-    win77.setCardGroup(CARD_TYPES.anti, antiCatalog);
 }
 
 
 win77.setGame(initGame());
-initCardGroups(win77.game.cards);
 
 
 //=> 2. Игрок выбрал стартовые карты
@@ -97,20 +96,20 @@ const initPlayer = () => {
         loot: new Set()
     };
 
-    console.log("win77.game.catalog.npc", win77, win77.game.npc);
-    moveCardById("v", win77.game.npc, player.crew);
-    moveCardById("a", win77.game.npc, player.crew);
+    console.log("win77.game.catalog.npc", win77, win77.game.catalog.npc);
+    moveCardById("v", win77.game.catalog.npc, player.crew);
+    moveCardById("a", win77.game.catalog.npc, player.crew);
 
-    moveCardById("class-ttter", win77.game.class, player.classArr);
+    moveCardById("class-ttter", win77.game.catalog.class, player.classArr);
 
     // todo getCardsInHand(5)
-    moveCardById("vinyl-igor", win77.game.sound, player.sound);
-    moveCardById("vinyl-aleph", win77.game.sound, player.sound);
-    moveCardById("album-toxic", win77.game.sound, player.sound);
-    moveCardById("demo-jelz", win77.game.sound, player.sound);
-    moveCardById("demo-fracture", win77.game.sound, player.sound);
+    moveCardById("vinyl-igor", win77.game.catalog.sound, player.sound);
+    moveCardById("vinyl-aleph", win77.game.catalog.sound, player.sound);
+    moveCardById("album-toxic", win77.game.catalog.sound, player.sound);
+    moveCardById("demo-jelz", win77.game.catalog.sound, player.sound);
+    moveCardById("demo-fracture", win77.game.catalog.sound, player.sound);
 
-    moveCardById("ddj400", win77.game.loot, player.loot);
+    moveCardById("ddj400", win77.game.catalog.loot, player.loot);
 
     return player;
 }

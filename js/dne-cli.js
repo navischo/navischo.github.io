@@ -7,16 +7,11 @@ class DNECli {
 
     setGame(gameObj) {
         this.game = gameObj;
-        this.game.catalog = {};
         this.game.bank = 10000000;
     }
 
     setPlayer(playerObj) {
         this.game.player = playerObj;
-    }
-
-    setCardGroup(name, cardSet) {
-        this.game[name] = cardSet;
     }
 
     setCatalog(category) {
