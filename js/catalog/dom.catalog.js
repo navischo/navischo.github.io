@@ -53,6 +53,14 @@ const initCatalog = (type) => {
 
 const catalogTypeControls = document.querySelectorAll(".js-init-catalog");
 
+console.log(Array.from(Object.keys(CARD_TYPES)));
+
+const cardTypesArr = Array.from(Object.keys(CARD_TYPES));
+
+for (let i = 3; i < cardTypesArr.length; i++) {
+    catalogTypeControls[i].setAttribute("disabled", true);
+}
+
 catalogTypeControls.forEach((catalogTypeControl) => {
     catalogTypeControl.addEventListener("click", () => {
         const type = catalogTypeControl.textContent.toLowerCase();

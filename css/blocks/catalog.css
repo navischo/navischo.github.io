@@ -13,6 +13,10 @@
     visibility: hidden;
 }
 
+.catalog-controls__filter:nth-child(n + 4)::before {
+    content: "🔒";
+}
+
 .catalog-controls--visible {
     transform: translateY(0);
     opacity: 1;

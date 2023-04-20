@@ -85,6 +85,7 @@ win77.setGame(initGame());
 const initPlayer = () => {
     const player = {
         id: "navischo",
+        lvl: 1,
         balance: {
             energy: 40,
             bankroll: 12000
