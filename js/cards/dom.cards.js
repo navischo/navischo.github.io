@@ -48,7 +48,8 @@ const drawLootCards = (cardData, parent = "#dne-page") => {
         drawCard(cardContainer, getCardElement, DNELootCard);
     }
 
-    cardData.forEach(drawIt);
+    console.log("cardDataforEach", cardData);
+    Array.from(cardData).forEach(drawIt);
 }
 
 // drawLootCards(win77.game.catalog.class);

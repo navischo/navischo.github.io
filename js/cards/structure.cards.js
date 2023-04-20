@@ -14,18 +14,8 @@ const gameSet = DNECards;
 //=> 1.1. Запуск игры
 const initGame = () => {
     const game = {
-        cards: DNECards,
-        doors: new Set(),
-        loot: new Set()
+        cards: DNECards
     }
-
-    gameSet.forEach((card) => {
-        if (card.type === "prj") {
-            game.doors.add(card);
-        } else {
-            game.loot.add(card);
-        }
-     })
 
     return game;
 }
@@ -33,41 +23,61 @@ const initGame = () => {
 
 
 //=> 1.2. Карты на группы в game
-const initCardGroups = (lootSet) => {
-    const soundCards = new Set();
-    const classCards = new Set();
-    const npcCards = new Set();
-    const antiCards = new Set();
+// npc class loot sound project dia anti
+const initCardGroups = (set) => {
+    const npcCatalog = new Set();
+    const classCatalog = new Set();
+    const lootCatalog = new Set();
+    const soundCatalog = new Set();
+    const projectCatalog = new Set();
+    const diaCatalog = new Set();
+    const antiCatalog = new Set();
 
-    lootSet.forEach((lootCard) => {
-        switch (lootCard.type) {
-            case `sound`:
-                soundCards.add(lootCard);
+    set.forEach((card) => {
+        switch (card.type) {
+            case `npc`:
+                npcCatalog.add(card);
                 break;
 
             case `class`:
-                classCards.add(lootCard);
+                classCatalog.add(card);
                 break;
 
-            case `npc`:
-                npcCards.add(lootCard);
+            case `loot`:
+                lootCatalog.add(card);
                 break;
 
-            case `anti`:
-                antiCards.add(lootCard);
+            case `sound`:
+                soundCatalog.add(card);
+                break;
+
+            case `prj`:
+                projectCatalog.add(card);
+                break;
+
+            case `dia`:
+                diaCatalog.add(card);
+                break;
+
+            default:
+                antiCatalog.add(card);
                 break;
         }
     });
 
-    win77.setCardGroup("sound", soundCards);
-    win77.setCardGroup("class", classCards);
-    win77.setCardGroup("crew", npcCards);
-    win77.setCardGroup("anti", antiCards);
+    win77.setCardGroup("crew", npcCatalog);
+    win77.setCardGroup("class", classCatalog);
+    win77.setCardGroup("loot", lootCatalog);
+    win77.setCardGroup("sound", soundCatalog);
+    win77.setCardGroup("prj", projectCatalog);
+    win77.setCardGroup("dia", diaCatalog);
+    console.log("antiCatalog", antiCatalog);
+    win77.setCardGroup("anti", antiCatalog);
 }
 
 
 win77.setGame(initGame());
-initCardGroups(win77.game.loot);
+initCardGroups(win77.game.cards);
 
 
 //=> 2. Игрок выбрал стартовые карты
@@ -106,9 +116,12 @@ win77.setPlayer(initPlayer());
 win77.getCostFromPlayer(500);
 
 //=> 2.1. Oстальное из game переносим в game.shop
-win77.setCatalog("sound");
 win77.setCatalog("crew");
 win77.setCatalog("class");
+win77.setCatalog("loot");
+win77.setCatalog("sound");
+win77.setCatalog("prj");
+win77.setCatalog("dia");
 win77.setCatalog("anti");
 console.log(win77);
 

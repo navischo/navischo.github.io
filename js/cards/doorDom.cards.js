@@ -45,6 +45,6 @@ const drawDoorCards = (cardData) => {
     });
 }
 
-drawDoorCards(win77.game.doors);
+// drawDoorCards(win77.game.doors);
 
 export { drawDoorCards };

@@ -303,7 +303,7 @@ const initDNELootArr = () => {
     // // Записати сет
     // LootArr.push(new DNELootCard("make-dj-set", "Записати DJ-сет", "Дає можливість записати сет як тільки тобі закортить. Необхідні студія та аппаратура", "https://lh5.googleusercontent.com/iZqspQQvU2AWz67qOcOdoM3uuV8_O0uFMuIIsdqnu1HpkaO_d5ASSNcKFsZTyrkNgbg=w2400", 1, 1000, "Дія"));
     // Записати сет
-    LootArr.push(new DNELootCard("make-live", "Запустити трансляцію", "Дає можливість привабити відвідувачів до події або показати важливий матеріал. Потребує камери та підключення до інтернету. Приваблює додаткових відвідувачів, виклади дві додаткові карти аудиторії.", "https://lh3.googleusercontent.com/2Ax7PXdSpzk73m3ANSMV11awPuvp-QAH9o-tm4_mFqahF4jie5h3XfBzofp8wZ9UkIo=w2400", 1, "1⚡ 1h", "Дія", "Приваблює додаткових відвідувачів, виклади дві додаткові карти <br>аудиторії.", "", true, "door"));
+    LootArr.push(new DNELootCard("make-live", "Запустити трансляцію", "Дає можливість привабити відвідувачів до події або показати важливий матеріал. Потребує камери та підключення до інтернету. Приваблює додаткових відвідувачів, виклади дві додаткові карти аудиторії.", "https://lh3.googleusercontent.com/2Ax7PXdSpzk73m3ANSMV11awPuvp-QAH9o-tm4_mFqahF4jie5h3XfBzofp8wZ9UkIo=w2400", 1, "1⚡ 1h", "Дія", "Приваблює додаткових відвідувачів, виклади дві додаткові карти <br>аудиторії.", "", true, "dia"));
 
     // Флоп
     const FLOP_SHORTLINE = "Швидкий, характерно недбалий, закрас та контур за лічені хвилини, опціонально тінь.<br><br>Як правило достатньо двох банок(високий слім+низький фет) контрастних кольорів.<br><br>Намалювати скетч заздалегідь буде супер";
@@ -341,10 +341,10 @@ const initDNELootArr = () => {
     LootArr.push(new DNELootCard("know-better", "Блиснути знаннями", "Блиснути знаннями правил може кожен гравець з цією картою. Як він сказав, так і буде. Будь-який івент отримує + або - 5 до виправданих очікувань аудиторії. Одноразовий айтем.", "https://lh6.googleusercontent.com/Z0_oh_v-ThuF_YQuzYLLB9k_T35I7yk5FE7fvfuBuohUFzfekFju4thMuw-C2Dny-rk=w2400", 5, "5⚡", "Дія", "Будь-який івент отримує + або - 5 до виправданих очікувань аудиторії. Одноразовий айтем.", "", true, "dia"));
     // Записати сет
     const MAKE_KABANCHIK_LONGLINE = "Дає можливість терміново привезти великі речі з точки А в точку B. Одноразова карта, після використання скинь.";
-    LootArr.push(new DNELootCard("make-kabanchik", "Рванути кабанчиком", MAKE_KABANCHIK_LONGLINE, "https://lh3.googleusercontent.com/D3lF7EoLNhW0st7HHOxKHe_NFPBXk2X0WB-ZZ2rE1Qh1uoDmFdZu6-_-4a_8NVmnGoY=w2400", 1, 700, "Дія", MAKE_KABANCHIK_LONGLINE, "", true, "door"));
+    LootArr.push(new DNELootCard("make-kabanchik", "Рванути кабанчиком", MAKE_KABANCHIK_LONGLINE, "https://lh3.googleusercontent.com/D3lF7EoLNhW0st7HHOxKHe_NFPBXk2X0WB-ZZ2rE1Qh1uoDmFdZu6-_-4a_8NVmnGoY=w2400", 1, 700, "Дія", MAKE_KABANCHIK_LONGLINE, "", true, "dia"));
 
     const MAKE_ZAYCHICKOM_DESCRIPTION = "Дає можливість терміново привезти айтем в одну руку, що не є великим, з точки А в точку B. Одноразова карта, після використання скинь.";
-    LootArr.push(new DNELootCard("make-zaychickom", "Злітати зайцем", MAKE_ZAYCHICKOM_DESCRIPTION, "https://lh5.googleusercontent.com/GRSCU2MwtGB_MFC8rBA8TH-DAM43J5xUobuYvehwwAH8y4fMMvHZ9XpYtfITfrnz3vM=w2400", 1, 400, "Дія", "Дає можливість терміново привезти айтеми, що не є великими.", "", true, "door"));
+    LootArr.push(new DNELootCard("make-zaychickom", "Злітати зайцем", MAKE_ZAYCHICKOM_DESCRIPTION, "https://lh5.googleusercontent.com/GRSCU2MwtGB_MFC8rBA8TH-DAM43J5xUobuYvehwwAH8y4fMMvHZ9XpYtfITfrnz3vM=w2400", 1, 400, "Дія", "Дає можливість терміново привезти айтеми, що не є великими.", "", true, "dia"));
 
     LootArr.push(new DNELootCard("make-after-transfer", "Афтер трансфер", "Розвезе всіх гостей по домівках після закінчення вечірки. Повір, вони будуть тобі за це вдячні.", "https://lh6.googleusercontent.com/kb4mpV8o6NAM_5ydJRplk8wgXmPpx8Bdt2NPzxfDFYVRRVEjafmgFvWBVdkC3zAXL8g=w2400", 3, 2500, "Дія", "Розвезе всіх гостей по домівках після закінчення вечірки. Повір, вони будуть тобі за це вдячні.", "", true, "dia"));
 
@@ -627,7 +627,7 @@ const initDNELootArr = () => {
 
     LootArr.push(new DNELootCard("dirty-mouth", "Не почистити зуби", "Ротова вонь дає мінус привабливості. Будь-який івент на який прийде гравець з цією проблемою отримує -2 до виправданих очікувань аудиторії. Може бути скинута після одного івенту або раніше, якщо почистити зуби.", "https://lh5.googleusercontent.com/fXOXvb-4Nu-o1LqenwcbnBhj8BCoFxNLn6Dsez4KU8f2jDpg-cru4RivzjN2uFpXK_0=w2400", 2, 0, "Проблема!"));
     // Боже втручання
-    LootArr.push(new DNELootCard("god-wtf", "Боже втручання", "Ти маєш зіграти цю карту, як тільки її отримав. Усі DJ одразу отримують замовлення на вечірку на Кирилівській! Знайди карту замовлення вечірки на Кирилівській та одразу її активуй. Після проведення цієї вечірки гра закінчиться та виграє гравець з найбільшим капіталом. Якщо ти виграв за рахунок цієї карти, ти в праві підвергнути суперників безжальному осміянню.", "https://lh5.googleusercontent.com/oKk0dgYD_pZfoxzwIy_FmLIWw2ffxHfpl0vJwiAXkGYei30EFVrLyMG9K-HvkSmRKRA=w2400", 0, 0, "", "Усі DJ-ї отримують рівень просто зараз, навіть якщо це переможний рівень. Якщо ти виграв за рахунок цієї карти, ти в праві підвергнути суперників безжальному осміянню.", "", true, "door"));
+    LootArr.push(new DNELootCard("god-wtf", "Боже втручання", "Ти маєш зіграти цю карту, як тільки її отримав. Усі DJ одразу отримують замовлення на вечірку на Кирилівській! Знайди карту замовлення вечірки на Кирилівській та одразу її активуй. Після проведення цієї вечірки гра закінчиться та виграє гравець з найбільшим капіталом. Якщо ти виграв за рахунок цієї карти, ти в праві підвергнути суперників безжальному осміянню.", "https://lh5.googleusercontent.com/oKk0dgYD_pZfoxzwIy_FmLIWw2ffxHfpl0vJwiAXkGYei30EFVrLyMG9K-HvkSmRKRA=w2400", 0, 0, "", "Усі DJ-ї отримують рівень просто зараз, навіть якщо це переможний рівень. Якщо ти виграв за рахунок цієї карти, ти в праві підвергнути суперників безжальному осміянню.", "", true, "dia"));
 
     // Mr. Mistix
     //
