@@ -3,7 +3,8 @@ import { getCardElement } from "./template.cards.js";
 import { COMMANDS } from "./const.cards.js";
 import { drawImgLazy } from "../utils/drawImgLazy.js";
 import { createNode } from "../utils/createNode.js";
-
+import { initInventory } from "../inventory/dom.inventory.js";
+import {moveCardById} from "../utils/getCardById.js";
 const addCardControls = (newCard, cardData) => {
     const controls = {};
     controls.parent = newCard.querySelector(".js-card-controls");
@@ -19,7 +20,14 @@ const addCardControls = (newCard, cardData) => {
     controls.btns.forEach((btn) => {
         if (btn.textContent === COMMANDS.plus) {
             btn.addEventListener("click", () => {
-                console.log(`You are ${COMMANDS.plus} ${cardData.name}`);
+                console.log(`You are ${COMMANDS.plus} ${cardData.id}`);
+                // берем id карты
+                // каталог[типкарты]
+                // вставить в каталог[типкарты] игрока
+                console.log("cardData.type", cardData.type, win77.game.catalog[cardData.type], win77.game.player[cardData.type], cardData, win77.game);
+                moveCardById(cardData.id, win77.game.catalog[cardData.type], win77.game.player[cardData.type]);
+                console.log("cardData, win77.game", cardData, win77.game);
+                initInventory();
             });
         }
     });

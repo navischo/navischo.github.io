@@ -54,8 +54,8 @@ const initInventory = (type = CARD_TYPES.inventory) => {
     });
   }
 
-  // if (currentPlayer.crew.length) {
-  //   currentPlayer.crew.forEach((card) => {
+  // if (currentplayer.npc.length) {
+  //   currentplayer.npc.forEach((card) => {
   //     appentCardToInventory(getCardById(card.id));
   //   });
   // }
@@ -65,7 +65,7 @@ const initInventory = (type = CARD_TYPES.inventory) => {
 }
 
 const initProfile = () => {
-  // currentPlayer.crew = [];
+  // currentplayer.npc = [];
   // appentCardToInventory(getCardById("class-dj"), CARD_TYPES.class);
 
   // appentCardToInventory(getCardById("machete"), CARD_TYPES.crew);

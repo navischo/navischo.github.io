@@ -21,15 +21,25 @@ const appendCardToInventory = (cardData, cardType = CARD_TYPES.loot) => {
     cardNodesByType[cardType].appendChild(newListItem);
 }
 
+const inventory = {
+    append: appendCardToInventory,
+    clear: () => {
+        cardNodesByType.loot.innerHTML = ``;
+        cardNodesByType.class.innerHTML = ``;
+        cardNodesByType.npc.innerHTML = ``;
+    }
+}
+
 const initInventory = () => {
     const player = win77.game.player;
-    console.log("initInventory", player);
+    inventory.clear();
+    console.log("initInventory", player, cardNodesByType);
 
-    player.crew.forEach((npcCard) => {
+    player.npc.forEach((npcCard) => {
         appendCardToInventory(npcCard, CARD_TYPES.npc);
     });
 
-    player.classArr.forEach((npcCard) => {
+    player.class.forEach((npcCard) => {
         appendCardToInventory(npcCard, CARD_TYPES.class);
     });
 
@@ -41,4 +51,5 @@ const initInventory = () => {
 export { initInventory, appendCardToInventory };
 
 // todo привязать добавление в инвентарь к кнопкам плюсов на картах
+
 // todo возможность просматривать добавленные карты

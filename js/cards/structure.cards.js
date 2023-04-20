@@ -90,17 +90,17 @@ const initPlayer = () => {
             bankroll: 12000
         },
         hand: new Set(),
-        crew: new Set(),
-        classArr: new Set(),
+        npc: new Set(),
+        class: new Set(),
         sound: new Set(),
         loot: new Set()
     };
 
     console.log("win77.game.catalog.npc", win77, win77.game.catalog.npc);
-    moveCardById("v", win77.game.catalog.npc, player.crew);
-    moveCardById("a", win77.game.catalog.npc, player.crew);
+    moveCardById("v", win77.game.catalog.npc, player.npc);
+    moveCardById("a", win77.game.catalog.npc, player.npc);
 
-    moveCardById("class-ttter", win77.game.catalog.class, player.classArr);
+    moveCardById("class-ttter", win77.game.catalog.class, player.class);
 
     // todo getCardsInHand(5)
     moveCardById("vinyl-igor", win77.game.catalog.sound, player.sound);
@@ -118,13 +118,13 @@ win77.setPlayer(initPlayer());
 win77.getCostFromPlayer(500);
 
 //=> 2.1. Oстальное из game переносим в game.shop
-win77.setCatalog("crew");
-win77.setCatalog("class");
-win77.setCatalog("loot");
-win77.setCatalog("sound");
-win77.setCatalog("prj");
-win77.setCatalog("dia");
-win77.setCatalog("anti");
+// win77.setCatalog("crew");
+// win77.setCatalog("class");
+// win77.setCatalog("loot");
+// win77.setCatalog("sound");
+// win77.setCatalog("prj");
+// win77.setCatalog("dia");
+// win77.setCatalog("anti");
 console.log(win77);
 
 initInventory();
