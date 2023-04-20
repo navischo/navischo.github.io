@@ -1,18 +1,9 @@
 import { win77 } from "../dne-cli.js";
+import { CARD_TYPES } from "../cards/const.cards.js";
 import { drawLootCards } from "../cards/dom.cards.js";
 import { drawDoorCards } from "../cards/doorDom.cards.js";
 import { clearChips, drawChips } from "./chips.catalog.js";
 import { splitDoorsAndLoot } from "../utils/setToArr.js";
-
-const CATALOG_TYPE = {
-    npc: "npc",
-    class: "class",
-    loot: "loot",
-    sound: "sound",
-    project: "project",
-    dia: "dia",
-    anti: "anti"
-}
 
 const catalogSaveCeil = "currentCatalog";
 const saveCatalog = (currentType) => {
@@ -24,6 +15,9 @@ const loadCatalog = () => {
 }
 
 const initCatalog = (type) => {
+    const doors = splitDoorsAndLoot(win77.game.cards).doors;
+    const loot = splitDoorsAndLoot(win77.game.cards).loot;
+
     let currentCatalogSave = loadCatalog();
 
     if (!currentCatalogSave) {
@@ -34,18 +28,16 @@ const initCatalog = (type) => {
 
     document.querySelector(".js-cards-catalog").innerHTML = "";
     document.querySelector(".head-title").innerHTML = `${type.toUpperCase()} CATALOG`;
-    if (type === "project") {
+    if (type === "prj") {
         drawDoorCards(win77.game.catalog.prj);
         clearChips();
-        drawChips(win77.game.doors, ".js-doors");
+        drawChips(doors, ".js-doors");
     }  if (type === "" || type === "anti") {
         clearChips();
 
-        const doors = splitDoorsAndLoot(win77.game.cards).doors;
         drawDoorCards(doors);
         drawChips(doors, ".js-doors");
 
-        const loot = splitDoorsAndLoot(win77.game.cards).loot;
         drawLootCards(loot);
         drawChips(loot, ".js-items");
     } else {
@@ -65,7 +57,8 @@ catalogTypeControls.forEach((catalogTypeControl) => {
         const type = catalogTypeControl.textContent.toLowerCase();
         console.log("type", type);
         saveCatalog(type);
-        initCatalog(CATALOG_TYPE[type]);
+        console.log("type CARD_TYPES", type, CARD_TYPES, CARD_TYPES[type]);
+        initCatalog(CARD_TYPES[type]);
     });
 });
 

@@ -1,6 +1,8 @@
+import { CARD_TYPES } from "./const.cards.js";
 import { DNECards } from "./data.cards.js";
 import { win77 } from "../dne-cli.js";
 import { getCardById, getRandomInt, moveCardById, grabCost } from "../utils/getCardById.js";
+import { initInventory } from "../inventory/dom.inventory.js";
 
 //=> 0. Все карты(кроме неукомплектованных), в любом кол-ве копий [done]
 //=> 1. Строгая коллекция специально для этой игры, без дублей [done]
@@ -35,27 +37,27 @@ const initCardGroups = (set) => {
 
     set.forEach((card) => {
         switch (card.type) {
-            case `npc`:
+            case CARD_TYPES.npc:
                 npcCatalog.add(card);
                 break;
 
-            case `class`:
+            case CARD_TYPES.class:
                 classCatalog.add(card);
                 break;
 
-            case `loot`:
+            case CARD_TYPES.loot:
                 lootCatalog.add(card);
                 break;
 
-            case `sound`:
+            case CARD_TYPES.sound:
                 soundCatalog.add(card);
                 break;
 
-            case `prj`:
+            case CARD_TYPES.prj:
                 projectCatalog.add(card);
                 break;
 
-            case `dia`:
+            case CARD_TYPES.dia:
                 diaCatalog.add(card);
                 break;
 
@@ -65,14 +67,14 @@ const initCardGroups = (set) => {
         }
     });
 
-    win77.setCardGroup("crew", npcCatalog);
-    win77.setCardGroup("class", classCatalog);
-    win77.setCardGroup("loot", lootCatalog);
-    win77.setCardGroup("sound", soundCatalog);
-    win77.setCardGroup("prj", projectCatalog);
-    win77.setCardGroup("dia", diaCatalog);
+    win77.setCardGroup(CARD_TYPES.npc, npcCatalog);
+    win77.setCardGroup(CARD_TYPES.class, classCatalog);
+    win77.setCardGroup(CARD_TYPES.loot, lootCatalog);
+    win77.setCardGroup(CARD_TYPES.sound, soundCatalog);
+    win77.setCardGroup(CARD_TYPES.prj, projectCatalog);
+    win77.setCardGroup(CARD_TYPES.dia, diaCatalog);
     console.log("antiCatalog", antiCatalog);
-    win77.setCardGroup("anti", antiCatalog);
+    win77.setCardGroup(CARD_TYPES.anti, antiCatalog);
 }
 
 
@@ -95,8 +97,9 @@ const initPlayer = () => {
         loot: new Set()
     };
 
-    moveCardById("v", win77.game.crew, player.crew);
-    moveCardById("a", win77.game.crew, player.crew);
+    console.log("win77.game.catalog.npc", win77, win77.game.npc);
+    moveCardById("v", win77.game.npc, player.crew);
+    moveCardById("a", win77.game.npc, player.crew);
 
     moveCardById("class-ttter", win77.game.class, player.classArr);
 
@@ -124,6 +127,8 @@ win77.setCatalog("prj");
 win77.setCatalog("dia");
 win77.setCatalog("anti");
 console.log(win77);
+
+initInventory();
 
 //=> 3. Игрок использует карты
 const initTable = () => {

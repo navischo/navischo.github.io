@@ -19,7 +19,7 @@
             <button class="js-init-catalog catalog-controls__filter">CLASS</button>
             <button class="js-init-catalog catalog-controls__filter">LOOT</button>
             <button class="js-init-catalog catalog-controls__filter">SOUND</button>
-            <button class="js-init-catalog catalog-controls__filter">PROJECT</button>
+            <button class="js-init-catalog catalog-controls__filter">PRJ</button>
             <button class="js-init-catalog catalog-controls__filter">DIA</button>
             <button class="js-init-catalog catalog-controls__filter">ANTI</button>
         </div>
@@ -38,6 +38,24 @@
             </section>
         </div>
     </div>
+
+    <div class="player-obj inventory">
+        player:<br>&nbsp;&nbsp;{<br>
+        &nbsp;&nbsp;class:<br>&nbsp;&nbsp;{&nbsp;
+        <span id="player-class-list" class="inventory-items"></span>
+        &nbsp;},
+        <br>&nbsp;&nbsp;crew:<br>&nbsp;&nbsp;{&nbsp;
+        <span id="player-crew-list" class="inventory-items"></span>
+        &nbsp;}
+        <br>}
+    </div>
+    <div class="inventory">
+        inventory: <br>{<br>
+        <span id="inventory-list" class="inventory-items"></span>
+        }
+    </div>
+
+    <div id="inventory-card-display"></div>
 
     <div id="dne-page" class="js-cards-catalog">
 
