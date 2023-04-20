@@ -26,6 +26,11 @@ class DNECli {
     getCostFromPlayer(cost) {
         this.game.player.balance.bankroll = this.game.player.balance.bankroll - cost;
     }
+
+    getSkillPointsFromPlayer(count) {
+        this.game.player.balance.skillPoints = this.game.player.balance.skillPoints - count;
+        console.log("getSkillPointsFromPlayer", count, this.game.player.balance.skillPoints);
+    }
 }
 
 const win77 = new DNECli();

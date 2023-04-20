@@ -9,10 +9,16 @@ import { updBalanceNode } from "../hud/balance.hud.js";
 import { isSetHasId } from "../utils/isSetHasId.js";
 
 const initHandlers = (cardData, controls) => {
+    const catalog = win77.game.catalog[cardData.type];
     const plusButtonHandler = () => {
         console.log(`You are ${COMMANDS.plus} ${cardData.id}`);
-        moveCardById(cardData.id, win77.game.catalog[cardData.type], win77.game.player[cardData.type]);
-        initInventory();
+
+        if (isSetHasId(catalog, cardData.id)) {
+            win77.getSkillPointsFromPlayer(1);
+            updBalanceNode();
+            moveCardById(cardData.id, catalog, win77.game.player[cardData.type]);
+            initInventory();
+        }
     };
 
     const buyButtonHandler = () => {
