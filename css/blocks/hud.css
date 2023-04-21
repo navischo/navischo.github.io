@@ -28,6 +28,17 @@
     text-align: center;
 }
 
+
+.time {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    font-family: "JetBrains Mono", monospace;
+
+}
+
 .hud-btn {
     display: flex;
     align-items: center;
