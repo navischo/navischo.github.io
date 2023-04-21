@@ -32,7 +32,7 @@ const setTimer = () => {
     function jpTimer(){
         const maxSec = 59;
         const maxMin = 59;
-        const maxHour = 59;
+        const maxHour = 66;
         let s = 0;
         let m = 0;
         let h = 0;
