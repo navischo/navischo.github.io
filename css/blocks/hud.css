@@ -1,3 +1,33 @@
+.score {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    z-index: 20;
+
+    margin: 0;
+    padding-top: 8px;
+
+    font-family: 'Press Start 2P', cursive;
+    color: black;
+    text-align: center;
+    transform: translateX(-50%);
+
+
+}
+
+.score input {
+    width: 120px;
+    padding: 0;
+    border: 0;
+
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+    background: transparent;
+    box-shadow: none;
+    font-size: 44px;
+    text-align: center;
+}
+
 .hud-btn {
     display: flex;
     align-items: center;
