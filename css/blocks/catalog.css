@@ -34,7 +34,8 @@
     margin-top: 20px;
 }
 
-.catalog-controls__item b {
+.catalog-controls__item b,
+.catalog-controls__subtitle {
     font-family: "Press Start 2p", cursive;
     font-size: 20px;
 }
