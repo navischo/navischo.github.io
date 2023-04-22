@@ -117,7 +117,7 @@ const initPlayer = () => {
 }
 win77.setPlayer(initPlayer());
 
-win77.getCostFromPlayer(500);
+// win77.getCostFromPlayer(500);
 
 //=> 2.1. Oстальное из game переносим в game.shop
 // win77.setCatalog("crew");

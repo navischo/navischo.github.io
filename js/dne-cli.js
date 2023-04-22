@@ -1,3 +1,5 @@
+import { getRandomInt, moveCardById } from "./utils/getCardById.js";
+
 class DNECli {
     constructor() {}
 
@@ -30,6 +32,14 @@ class DNECli {
     getSkillPointsFromPlayer(count) {
         this.game.player.balance.skillPoints = this.game.player.balance.skillPoints - count;
         console.log("getSkillPointsFromPlayer", count, this.game.player.balance.skillPoints);
+    }
+
+    putCardAtPlayersHand(count = 1) {
+        for (let i = 0; i < count; i++) {
+            const soundSet = this.game.catalog.sound;
+            const randomId = Array.from(soundSet).map((soundCard) => soundCard.id)[getRandomInt(soundSet.size)];
+            moveCardById(randomId, soundSet, this.game.player.hand);
+        }
     }
 }
 

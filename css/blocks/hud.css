@@ -1,3 +1,28 @@
+.hand {
+    position: fixed;
+    bottom: -460px;
+    z-index: 11;
+
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+
+.hand div[id*="dne-card"] {
+    position: static;
+
+    transform: translateY(-14%);
+    transition: .2s ease-in;
+
+}
+
+.hand div[id*="dne-card"]:hover {
+    position: static;
+
+    transform: translateY(-100%);
+}
+
 .score {
     position: fixed;
     top: 0;
@@ -36,6 +61,34 @@
 
 body {
     color: black;
+}
+
+.table {
+    position: fixed;
+    top: -80px;
+    left: 0;
+    right: 0;
+
+    display: flex;
+    max-width: 1520px;
+    flex-wrap: wrap;
+    padding: 0 10px;
+    padding-top: 60px;
+    margin: 0 auto;
+
+    transform: scale(.5);
+}
+
+.table.round-two {
+    top: -200px;
+}
+
+.table.round-three {
+    top: -320px;
+}
+
+.table.round-three {
+    top: -440px;
 }
 
 .hud-body-background {

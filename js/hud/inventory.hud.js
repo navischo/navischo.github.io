@@ -1,4 +1,5 @@
 import { CARD_TYPES } from "../cards/const.cards.js";
+// import { drawLootCards } from "../cards/dom.cards.js";
 
 const displaySelector = "#inventory-card-display";
 const inventoryCardDisplay = document.querySelector(displaySelector);
@@ -18,6 +19,28 @@ const appendCardToInventory = (cardData, cardType = CARD_TYPES.loot) => {
     const newListItem = document.createElement("a");
     newListItem.classList.add("inventory-item");
     newListItem.textContent = cardData.name;
+
+    newListItem.addEventListener("click", (e) => {
+        inventoryCardDisplay.innerHTML = "";
+        const allItems = document.querySelectorAll(".inventory-item");
+        allItems.forEach((item) => item.classList.remove("selected"));
+
+        if (e.target.classList.contains("selected")) {
+
+            e.target.classList.remove("selected");
+        } else {
+            const allInventoryItems = inventoryList.querySelectorAll(".inventory-item");
+            if (allInventoryItems.length) {
+                allInventoryItems.forEach(item => item.classList.remove("selected"));
+            }
+
+            const id = cardData.id;
+            newListItem.classList.add("selected");
+            console.log(cardData);
+            // drawLootCards(cardData, displaySelector);
+        }
+    });
+
     cardNodesByType[cardType].appendChild(newListItem);
 }
 

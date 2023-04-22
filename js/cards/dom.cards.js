@@ -4,9 +4,10 @@ import { COMMANDS } from "./const.cards.js";
 import { drawImgLazy } from "../utils/drawImgLazy.js";
 import { createNode } from "../utils/createNode.js";
 import { initInventory } from "../hud/inventory.hud.js";
-import {moveCardById} from "../utils/getCardById.js";
+import { moveCardById } from "../utils/getCardById.js";
 import { updBalanceNode } from "../hud/balance.hud.js";
 import { isSetHasId } from "../utils/isSetHasId.js";
+import { PAGE_NAMES } from "../hud/router.hud.js";
 
 const initHandlers = (cardData, controls) => {
     const catalog = win77.game.catalog[cardData.type];
@@ -59,24 +60,24 @@ const addCardControls = (newCard, cardData) => {
     initHandlers(cardData, controls);
 }
 
-const drawCard = (cardContainer, cardTemplate, cardData) => {
-    const newCard = cardTemplate(cardData);
+const drawCard = (cardContainer, getElementCallback, cardData) => {
+    const newCard = getElementCallback(cardData);
 
     addCardControls(newCard, cardData);
 
-    const isLazyLoad = document.querySelector("body").classList.contains("lazy");
-
-    if (isLazyLoad) {
-        drawImgLazy(newCard.querySelector(".card__preview-img"), cardData.img);
-    } else {
+    if (win77.router.currentPage === PAGE_NAMES.hud) {
         newCard.querySelector(".card__preview-img").src = cardData.img;
+    } else {
+        drawImgLazy(newCard.querySelector(".card__preview-img"), cardData.img);
     }
 
     cardContainer.appendChild(newCard);
 };
 
-const drawLootCards = (cardData, parent = "#dne-page") => {
-    const cardContainer = document.querySelector(parent);
+// win77.pokeButton.dia.drawCard = drawCard;
+
+const drawLootCards = (cardData, parentSelector = "#dne-page") => {
+    const cardContainer = document.querySelector(parentSelector);
 
     const drawIt = (DNELootCard) => {
         drawCard(cardContainer, getCardElement, DNELootCard);
@@ -88,4 +89,39 @@ const drawLootCards = (cardData, parent = "#dne-page") => {
 
 // drawLootCards(win77.game.catalog.class);
 
-export { drawLootCards };
+const updHand = () => {
+    const hand = document.querySelector("#bottom-hand");
+    hand.innerHTML = ``;
+    drawLootCards(win77.game.player.hand, "#bottom-hand");
+
+    const cardsInYourHand = hand.querySelectorAll("div[id*='dne-card']");
+    cardsInYourHand.forEach(card => {
+        const plusBtn = card.querySelector("button");
+        plusBtn.addEventListener("click", (e) => {
+            const id = card.id.substring(9);
+            const bonus = +(card.querySelector(".card__bonus").textContent);
+            console.log(win77);
+            moveCardById(id, win77.game.player.hand, win77.game.table);
+            updTable();
+
+            win77.pokeButton.dia.updScore(bonus);
+
+            hand.querySelector(`#dne-card-${id}`).remove();
+        });
+    });
+}
+
+win77.putCardAtPlayersHand(5);
+// updHand();
+win77.pokeButton.dia.goToPage("hud");
+
+// win77.pokeButton.dia.updHand = updHand;
+
+const updTable = () => {
+    const node = document.querySelector("#table");
+    node.innerHTML = ``;
+    drawLootCards(win77.game.table, "#table");
+}
+updTable();
+
+export { drawLootCards, drawCard, updHand, updTable };

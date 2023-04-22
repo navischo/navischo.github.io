@@ -1,7 +1,8 @@
 import { win77 } from "../dne-cli.js";
 import { CARD_TYPES } from "../cards/const.cards.js";
 
-import { hudMarkup } from "./dom.hud.js";
+import { hudMarkup, initHud } from "./dom.hud.js";
+import { updHand } from "../cards/dom.cards.js";
 
 const PAGE_NAMES = {
     enter: "enter",
@@ -48,14 +49,15 @@ const goToPage = (name) => {
     title.textContent = win77.router.currentPage.toUpperCase();
 
     if (name === PAGE_NAMES.hud) {
+        // initHud();
         win77.page.node.innerHTML = hudMarkup;
+        updHand();
         body.classList.add("hud-body-background");
     }
 
     return name;
 }
 win77.pokeButton.dia.goToPage = goToPage;
-
 
 const portalParent = document.querySelector(".js-portals-parent");
 const portalNodes = portalParent.querySelectorAll(".js-portal");
@@ -68,6 +70,4 @@ portalNodes.forEach((portalNode) => {
     });
 });
 
-goToPage("hud");
-
-export { goToPage };
+export { goToPage, PAGE_NAMES };

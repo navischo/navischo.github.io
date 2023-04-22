@@ -26,13 +26,10 @@ const initScore = () => {
 }
 
 const updScore = (bonus = 0) => {
-    let score = win77.game.player.score;
-    score = score + +bonus;
+    win77.game.player.score = win77.game.player.score + +bonus;
 
-    playerScoreNode.innerHTML = score;
+    playerScoreNode.innerHTML = win77.game.player.score;
     versusScoreNode.innerHTML = win77.game.versusScore;
-
-    return score;
 }
 
 win77.pokeButton.dia.updScore = updScore;

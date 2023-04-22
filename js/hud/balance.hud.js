@@ -28,7 +28,7 @@ const updBalanceNode = () => {
 }
 
 createBalanceNode();
-win77.getCostFromPlayer(1000);
+// win77.getCostFromPlayer(1000);
 updBalanceNode();
 
 export { updBalanceNode };
