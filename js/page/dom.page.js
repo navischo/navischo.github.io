@@ -25,3 +25,5 @@ win77.pokeButton = {
     }
 };
 win77.pokeButton.node.addEventListener("click", win77.pokeButton.dia.log);
+
+export { placeholderMarkup };

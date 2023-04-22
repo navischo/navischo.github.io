@@ -1,0 +1,27 @@
+#dne-page[data-hash="npc"] ~ .score,
+#dne-page[data-hash="class"] ~ .score,
+#dne-page[data-hash="loot"] ~ .score {
+    display: none;
+}
+
+#dne-page[data-hash="npc"] ~ .time,
+#dne-page[data-hash="class"] ~ .time,
+#dne-page[data-hash="loot"] ~ .time {
+    display: none;
+}
+
+.catalog-controls__item:last-child {
+    display: none;
+}
+
+#dne-page[data-hash="npc"] ~ .catalog-controls .catalog-controls__item:last-child,
+#dne-page[data-hash="class"] ~ .catalog-controls .catalog-controls__item:last-child,
+#dne-page[data-hash="loot"] ~ .catalog-controls .catalog-controls__item:last-child {
+    display: block;
+}
+
+.build .js-cards-catalog[data-hash="hud"] {
+    max-width: 100%;
+}
+
+

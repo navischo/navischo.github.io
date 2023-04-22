@@ -4,6 +4,7 @@ import { drawLootCards } from "../cards/dom.cards.js";
 import { drawDoorCards } from "../cards/doorDom.cards.js";
 import { clearChips, drawChips } from "./chips.catalog.js";
 import { splitDoorsAndLoot } from "../utils/setToArr.js";
+import { goToPage } from "../hud/router.hud.js";
 
 const catalogSaveCeil = "currentCatalog";
 const saveCatalog = (currentType) => {
@@ -47,6 +48,8 @@ const initCatalog = (type) => {
         clearChips();
         drawChips(DNENewCardsArr, ".js-items");
     }
+    console.log(type, win77);
+    win77.pokeButton.dia.goToPage(type);
 
     // если открыта вкладка лута
     // отдельная функция хендлер

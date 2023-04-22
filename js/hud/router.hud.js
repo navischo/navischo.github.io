@@ -1,14 +1,22 @@
 import { win77 } from "../dne-cli.js";
 import { CARD_TYPES } from "../cards/const.cards.js";
 
-const pipeline = ["enter", CARD_TYPES.npc, CARD_TYPES.class, CARD_TYPES.loot, "hud", "event", "board"];
+import { hudMarkup } from "./dom.hud.js";
 
-const goToPage = (name) => {
-    currentPage = name;
+const PAGE_NAMES = {
+    enter: "enter",
+    npc: CARD_TYPES.npc,
+    class: CARD_TYPES.class,
+    loot: CARD_TYPES.loot,
+    hud: "hud",
+    event: "event",
+    board: "board"
+};
 
-    return name;
-}
-win77.pokeButton.dia.goToPage = goToPage;
+const pipeline = [PAGE_NAMES.enter, PAGE_NAMES.npc, PAGE_NAMES.class, PAGE_NAMES.loot, PAGE_NAMES.hud, PAGE_NAMES.event, PAGE_NAMES.board];
+const body = document.querySelector("body");
+const title = document.querySelector(".head-title");
+let currentPage = PAGE_NAMES.npc;
 
 const initNav = () => {
     const nav = {};
@@ -25,15 +33,29 @@ const initNav = () => {
     return nav;
 }
 
-let currentPage = CARD_TYPES.npc;
-goToPage("hud");
-
 win77.router = {
     isLogin: true,
     pipeline: pipeline,
     currentPage: currentPage,
     nav: initNav()
 };
+
+const goToPage = (name) => {
+    win77.router.currentPage = name;
+    win77.page.node.setAttribute("data-hash", `${name}`);
+    localStorage.currentPage = win77.router.currentPage;
+    body.classList.remove("hud-body-background");
+    title.textContent = win77.router.currentPage.toUpperCase();
+
+    if (name === PAGE_NAMES.hud) {
+        win77.page.node.innerHTML = hudMarkup;
+        body.classList.add("hud-body-background");
+    }
+
+    return name;
+}
+win77.pokeButton.dia.goToPage = goToPage;
+
 
 const portalParent = document.querySelector(".js-portals-parent");
 const portalNodes = portalParent.querySelectorAll(".js-portal");
@@ -45,3 +67,7 @@ portalNodes.forEach((portalNode) => {
         console.log("win77.router", win77.router.currentPage);
     });
 });
+
+goToPage("hud");
+
+export { goToPage };

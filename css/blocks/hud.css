@@ -8,7 +8,7 @@
     padding-top: 8px;
 
     font-family: 'Press Start 2P', cursive;
-    color: black;
+    color: inherit;
     text-align: center;
     transform: translateX(-50%);
 
@@ -26,6 +26,24 @@
     box-shadow: none;
     font-size: 44px;
     text-align: center;
+}
+
+.background-house {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+body {
+    color: black;
+}
+
+.hud-body-background {
+    color: white;
+
+    background-image: url('../../img/screen-nohud--braindance.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
 
@@ -122,7 +140,7 @@
     top: 6px;
     right: 55px;
 
-    color: black;
+    color: inherit;
     font-family: "JetBrains Mono", monospace;
     font-size: 14px;
 }
