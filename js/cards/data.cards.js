@@ -259,6 +259,16 @@ const initDNELootArr = () => {
     // Рік С-137
     LootArr.push(new DNELootCard("rick", "Рік С-137", "Так, той самий. В нього завжди при собі його портальна пушка та хто в біса зна що ще. Добре подумай яку справу довірити цій людині. Ніхто не знає що станеться далі.", "https://lh6.googleusercontent.com/FIZwLsrD-krhTSF5hdjlhDt7sFSTjTlmQIGvHxLaLeeA8ceUHPohn6i1k3t8yiDqi2Y=w2400", 1, 0, "Найомничок", "Так, той самий. З ядерним перегаром, літаючою тарілкою зі сміття та мікровсесвітом, накшталт твого, під капотом", "", true, "npc"));
 
+    // Дідусь Влад
+    //
+    //
+    const VLAD_LONGLINE = "";
+    const VLAD_SHORTLINE = ``;
+    const VLAD_IMG_ID = `166GMUPmFsJQBKEHPj-tbfGM02yYqBJrz`;
+    const VLAD_IMG = `https://drive.google.com/uc?id=${VLAD_IMG_ID}`;
+
+    LootArr.push(new DNELootCard("vlad", "Дідусь Влад", VLAD_LONGLINE, VLAD_IMG, 1, 0, "Найомничок", VLAD_SHORTLINE, "", true, "npc"));
+
     // A
     //
     //
@@ -377,6 +387,17 @@ const initDNELootArr = () => {
     LootArr.push(new DNELootCard("album-pluxury", "PLUXURY", "Альбом дає можливість поставити музику просто зараз. Це може бути цей самий альбом, або будь-який інший. Спробуй заробити гроші, використавши його під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй альбоми в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", "https://lh3.googleusercontent.com/G4TemTj5XXRd5n0PT7DzgQRI4XGbfdrdXO-kh8V_V-d_sYzYginfGgfOvWIkqoh9Khs=w2400", 2, "NYP", "Альбом, 31m of Cloud Hip-Hop", ALBUM_LONGLINE, "", true, "sound"));
     LootArr.push(new DNELootCard("album-paywall", "PAYWALL", "Альбом дає можливість поставити музику просто зараз. Це може бути цей самий альбом, або будь-який інший. Спробуй заробити гроші, використавши його під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй альбоми в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", "https://lh6.googleusercontent.com/I9yE4jWJsFQ1ZHyVWkphQWqJVb5NkSRK-w02jcDDdP1Pc4kEsdXVN4gEVpHXAfWfjE4=w2400", 2, "NYP", "Альбом, 24m of Abstract Cloud Hip-Hop", ALBUM_LONGLINE, "", true, "sound"));
     LootArr.push(new DNELootCard("album-toxic", "TOXIC", "Альбом дає можливість поставити музику просто зараз. Це може бути цей самий альбом, або будь-який інший. Спробуй заробити гроші, використавши його під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй альбоми в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", "https://lh5.googleusercontent.com/-0BiGi775ic-8I15Cza4sLnAW5kB-CcCt97pQOxHLCyNbtlFWcZK3ze37vwIiBBSSwY=w2400", 2, "NYP", "Альбом, 30m of Meta Cloud Hip-Hop", ALBUM_LONGLINE, "", true, "sound"));
+
+    // Plastic Beach
+    //
+    //
+    const PLASTIC_BEACH_ALBUM_LONGLINE = "";
+    const PLASTIC_BEACH_ALBUM_SHORTLINE = `${ALBUM_LONGLINE}`;
+    const PLASTIC_BEACH_ALBUM_IMG_ID = `1io8Dz5ByOPRT0JzhCN2FcK4ca_BRGklC`;
+    const PLASTIC_BEACH_ALBUM_IMG = `https://drive.google.com/uc?id=${PLASTIC_BEACH_ALBUM_IMG_ID}`;
+
+    LootArr.push(new DNELootCard("album-plastic-beach", "Plastic Beach", PLASTIC_BEACH_ALBUM_LONGLINE, PLASTIC_BEACH_ALBUM_IMG, 3, 500, "Альбом, 55m Electronic Funk Hip-Hop", PLASTIC_BEACH_ALBUM_SHORTLINE, "", true, "sound"));
+
     LootArr.push(new DNELootCard("album-nocturnal", "NOCTURNAL", "Альбом дає можливість поставити музику просто зараз. Це може бути цей самий альбом, або будь-який інший. Спробуй заробити гроші, використавши його під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй альбоми в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", "https://lh3.googleusercontent.com/Ptll0Y5YHiOav4t10WasQeX7jXMF9oaWB4kKM8gyyC4kzYGABC8Oy3c3zJeLasmQ2gk=w2400", 2, 300, "Альбом, 37m of Industrial Synthpunk", ALBUM_LONGLINE, "", true, "sound"));
     // Альбом LOVE MARKET
     LootArr.push(new DNELootCard("album-love-market", "LOVE MARKET", "Альбом дає можливість поставити музику просто зараз. Це може бути цей самий альбом, або будь-який інший. Спробуй заробити гроші, використавши його під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй альбоми в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", "https://lh5.googleusercontent.com/QavzJ5EDbmtiCCgTz_odOe8FEN8_KaU2mrVj8vCznlUQDiycL9_UKpLTUKSNeFL5VZM=w2400", 2, 300, "Альбом, 34m of OldSchool Synthpunk Techno", ALBUM_LONGLINE, "", true, "sound"));
@@ -688,6 +709,17 @@ const initDNELootArr = () => {
     LootArr.push(new DNELootCard("unprompted-trip", "Спонтанна подорож", "Дає відчути справжній смак життя та розвиває вміння швидко адаптуватися до нових умов. Використовуючи цю карту ти відпускаєш жагу контролю над власним життям та довіряєш свою долю випадку.", "https://lh5.googleusercontent.com/zjsNPBT05XWGt1ThEvkQqxAXhtBDCgdYYiziaXQQcexhtb3rutoHbuk7yTPqaAxR698=w2400", 0, "", "", "Дає відчути справжній смак життя та розвиває вміння швидко адаптуватися до нових умов. Відпусти жагу контролю над життям та довірся випадку.", "", true, "anti"));
 
     LootArr.push(new DNELootCard("dia-draw", "Малювання", "Використовуй час та енергію для отримання малюнків. Чим більше енергії та часу ти в них вкладеш, тим сильнішими вони будуть. Створення графічного зображення є однією з найдревніших медетацій винайдених людством. Від печерних малюнків кров'ю, до чорнил на папері перенесення власного бачення в матеріальний світ заворожувала людину. Просто бери та починай малювати, уява зробить усе інше.", "https://lh3.googleusercontent.com/oprP-CtoxAG5IWogg2Gn56Pu9MBNfNt35n4gQave2BvFfVA7YlExQdgtjL6t9r_kMsg=w2400", 1, "1⚡ 1h", "", "Використай час та енергію для створення малюнку.<br><br> Чим більше енергії та часу ти в нього вкладеш, тим кращий результат чекатиме на тебе в кінці.<br><br>+1 малюнок в твою коллекцію", "", true, "dia"));
+
+    // Код
+    //
+    //
+    const DIA_CODE_LONGLINE = "Використовуй час, енергію та свої навички программування, щоб написати апку на js та html/css. Чим більше енергії та часу ти в них вкладеш, тим кориснішою вона буде.";
+    const DIA_CODE_SHORTLINE = `Використай час, енергію та свої навички программування для створення коду.<br><br> Чим більше енергії та часу ти в нього вкладеш, тим кращий результат чекатиме на тебе в кінці.<br><br>+1 кодпен в твою коллекцію`;
+    const DIA_CODE_IMG_ID = `1_xdG_U2HiygsrK20rd5EvpVAd5IactFi`;
+    const DIA_CODE_IMG = `https://drive.google.com/uc?id=${DIA_CODE_IMG_ID}`;
+
+    LootArr.push(new DNELootCard("dia-code", "Код", DIA_CODE_LONGLINE, DIA_CODE_IMG, 1, "1⚡ 1h", "Dia", DIA_CODE_SHORTLINE, "", true, "dia"));
+
     LootArr.push(new DNELootCard("tea-break", "Перерва на чай", "Дозволяє структурувати думки та наповнитись теплом чаю. Отримай свіжу енергію.", "https://lh6.googleusercontent.com/8MI06infbLkWNJCmXKTVbMgdTpssFnCfwu4A_MdURrkFaJyzWMlbNzd6GOulWRXYUz0=w2400", 1, "15m", ""));
     LootArr.push(new DNELootCard("moving", "Переїзд", "Використай зв'язки щоб позбавити іншого гравця студії. Він одразу пропускає хід та має витратити 3К щоб перевести свої великі речі на склад, інакше їх буде втрачено.", "https://lh4.googleusercontent.com/6E7iqRHUF0X_5GHgRrD35Zwg0FYMhvc-DdqoZOYlQ44dAbHP79XfUTAnVueigimk_Ts=w2400", 4, 0, "Проблема!"));
     LootArr.push(new DNELootCard("zero-ambition", "Нульові амбіції", "Зацькуй іншого гравця разом зі своїми Найомничками, щоб позбавити його мотивації діяти. Настіпні три ходи він може тільки витрачати гроші. Щоб використати цю карту, треба мати що найменше 2х найомничків. +1 пропущений хід та -1 бонус за кожного наступного наймничка, якщо їх більше.", "https://lh6.googleusercontent.com/1RPpDAYIjBGRsJJ5TNVSrWO5mtP1hG3PKMx34dwQ4b3c9bwUnz8G9xtNfMGWCAefptc=w2400", 3, 0, "Проблема!"));
