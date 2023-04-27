@@ -24,4 +24,23 @@
     max-width: 100%;
 }
 
+#dne-page[data-hash="hud"] ~ .time {
+    display: none;
+}
+
+#dne-page[data-hash="hud"].js-tab ~ .time {
+    display: block;
+    z-index: 11;
+    background: black;
+    box-shadow: 0px 0px 0 4px black;
+}
+
+#dne-page[data-hash="hud"] ~ .score {
+    display: none;
+}
+
+#dne-page[data-hash="hud"].js-tab ~ .score {
+    display: block;
+}
+
 

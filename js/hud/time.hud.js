@@ -23,7 +23,7 @@ const setCountdown = () => {
 
         if (distance < 0) {
             clearInterval(x);
-            node.innerHTML = "<a href='blank.html' target='_blank'>NEXT ROUND</a>";
+            node.innerHTML = "<a href='index.html' target='_blank'>NEXT ROUND</a>";
         }
     }, 1000);
 }
