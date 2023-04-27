@@ -63,6 +63,8 @@
 
 .inventory-item {
     display: block;
+    color: inherit;
+    text-decoration: none;
 }
 
 .player-obj .inventory-item {

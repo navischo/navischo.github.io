@@ -44,7 +44,7 @@ class DNECli {
     }
 
     showCard(cardData) {
-        const cardParent = document.querySelector("#inventory-card-display");
+        const cardParent = document.querySelector("#card-popup");
         cardParent.innerHTML = ``;
         this.pokeButton.dia.drawCard(cardParent, getCardElement, cardData);
         console.log(cardData.id, cardParent);

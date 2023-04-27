@@ -1,5 +1,6 @@
 import { CARD_TYPES } from "../cards/const.cards.js";
 import { win77 } from "../dne-cli.js";
+import { initInventoryPopupJquery } from "../utils/initInventoryPopup.jquery.js";
 
 
 const inventoryMarkup = `
@@ -52,27 +53,11 @@ const appendCardToInventory = (cardData, cardType = CARD_TYPES.loot) => {
     const newListItem = document.createElement("a");
     newListItem.classList.add("inventory-item");
     newListItem.textContent = cardData.name;
+    newListItem.href = `#card-popup`;
 
     newListItem.addEventListener("click", (e) => {
         inventoryCardDisplay.innerHTML = "";
-        const allItems = document.querySelectorAll(".inventory-item");
-        allItems.forEach((item) => item.classList.remove("selected"));
-
-        if (e.target.classList.contains("selected")) {
-
-            e.target.classList.remove("selected");
-        } else {
-            const allInventoryItems = inventoryList.querySelectorAll(".inventory-item");
-            if (allInventoryItems.length) {
-                allInventoryItems.forEach(item => item.classList.remove("selected"));
-            }
-
-            const id = cardData.id;
-            newListItem.classList.add("selected");
-            console.log(cardData);
-            win77.showCard(cardData);
-            // drawLootCards(cardData, displaySelector);
-        }
+        win77.showCard(cardData);
     });
 
     cardNodesByType[cardType].appendChild(newListItem);
@@ -119,8 +104,8 @@ const initInventory = () => {
     player.cars.forEach((carCard) => {
         initCarInventory(carCard);
     });
+
+    initInventoryPopupJquery();
 }
 
 export { initInventory, appendCardToInventory };
-
-// todo возможность просматривать добавленные карты

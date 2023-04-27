@@ -1,0 +1,56 @@
+.white-popup {
+    position: relative;
+    background: #FFF;
+    padding: 20px;
+    width: auto;
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+.white-popup .mfp-close {
+    position: absolute;
+    top: auto;
+    right: 20px;
+    bottom: -30px;
+}
+
+.shop {
+    background: url("https://lh6.googleusercontent.com/3KJ-A90qu130KVL5BgHD2zoc3XfgaaVM1O3KldnwapgJA0Q8ftONXwIdJSfv7WBbgg4=w2400");
+    background-size: contain;
+}
+
+.shop-modal {
+    background: transparent;
+}
+
+.shop__title {
+    position: absolute;
+
+    color: white;
+
+    font-family: "Press Start 2p", cursive;
+}
+
+.card-modal {
+    width: 300px;
+    height: 460px;
+    padding: 0;
+}
+
+body .mfp-bg {
+    background: transparent;
+}
+
+.card-modal--left {
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.card-modal--right {
+    position: absolute;
+    right: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+}
