@@ -70,6 +70,7 @@ const appendCardToInventory = (cardData, cardType = CARD_TYPES.loot) => {
             const id = cardData.id;
             newListItem.classList.add("selected");
             console.log(cardData);
+            win77.showCard(cardData);
             // drawLootCards(cardData, displaySelector);
         }
     });

@@ -1,4 +1,5 @@
 import { getRandomInt, moveCardById } from "./utils/getCardById.js";
+import { getCardElement } from "./cards/template.cards.js";
 
 class DNECli {
     constructor() {}
@@ -40,6 +41,13 @@ class DNECli {
             const randomId = Array.from(soundSet).map((soundCard) => soundCard.id)[getRandomInt(soundSet.size)];
             moveCardById(randomId, soundSet, this.game.player.hand);
         }
+    }
+
+    showCard(cardData) {
+        const cardParent = document.querySelector("#inventory-card-display");
+        cardParent.innerHTML = ``;
+        this.pokeButton.dia.drawCard(cardParent, getCardElement, cardData);
+        console.log(cardData.id, cardParent);
     }
 }
 

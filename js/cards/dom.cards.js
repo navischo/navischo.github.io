@@ -74,7 +74,7 @@ const drawCard = (cardContainer, getElementCallback, cardData) => {
     cardContainer.appendChild(newCard);
 };
 
-// win77.pokeButton.dia.drawCard = drawCard;
+win77.pokeButton.dia.drawCard = drawCard;
 
 const drawLootCards = (cardData, parentSelector = "#dne-page") => {
     const cardContainer = document.querySelector(parentSelector);
