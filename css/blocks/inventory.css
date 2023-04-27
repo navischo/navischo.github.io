@@ -11,8 +11,47 @@
     text-align: right;
 }
 
+.inventory button {
+    font-size: inherit;
+    font-family: "JetBrains Mono", monospace;
+    color: inherit;
+    text-align: right;
+
+    padding: 0;
+    border: none;
+    cursor: pointer;
+
+    background: none;
+}
+
+.inventory button:hover,
+.inventory button:active,
+.inventory button:visited {
+    color: inherit;
+    text-decoration: none;
+}
+
+.inventory button:hover,
+.inventory button.selected {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
 .js-in-car {
     display: inline;
+}
+
+.js-car-in {
+    display: none;
+}
+
+.js-car-in {
+    position: absolute;
+}
+
+.js-car-open {
+    display: block;
 }
 
 .inventory.player-obj {

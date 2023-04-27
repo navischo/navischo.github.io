@@ -1,5 +1,6 @@
 import { win77 } from "../dne-cli.js";
 
+const body = document.querySelector("body");
 const page = document.querySelector("#dne-page");
 
 const placeholderMarkup = `
@@ -13,6 +14,9 @@ const placeholderMarkup = `
 page.innerHTML = placeholderMarkup;
 const pokeButton = document.querySelector("#poke-button");
 
+win77.body = {
+    node: body
+};
 win77.page = {
     node: page
 };
