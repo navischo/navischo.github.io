@@ -708,7 +708,7 @@ const initDNELootArr = () => {
     LootArr.push(new DNELootCard("flower", "Квітка", "Насичує повітря киснем коли ти спиш, та ласує погляд коли прокидаєшся", "https://lh4.googleusercontent.com/G6o_Ys9Md86JRahzppRJv9QauONxab3IBGV05cSE1BoOBarZSPnUmadf0BJJbtaTojg=w2400", 0, "", "", "Насичує повітря киснем коли ти спиш, та ласує погляд коли прокидаєшся", "", true, "anti"));
     LootArr.push(new DNELootCard("unprompted-trip", "Спонтанна подорож", "Дає відчути справжній смак життя та розвиває вміння швидко адаптуватися до нових умов. Використовуючи цю карту ти відпускаєш жагу контролю над власним життям та довіряєш свою долю випадку.", "https://lh5.googleusercontent.com/zjsNPBT05XWGt1ThEvkQqxAXhtBDCgdYYiziaXQQcexhtb3rutoHbuk7yTPqaAxR698=w2400", 0, "", "", "Дає відчути справжній смак життя та розвиває вміння швидко адаптуватися до нових умов. Відпусти жагу контролю над життям та довірся випадку.", "", true, "anti"));
 
-    LootArr.push(new DNELootCard("dia-draw", "Малювання", "Використовуй час та енергію для отримання малюнків. Чим більше енергії та часу ти в них вкладеш, тим сильнішими вони будуть. Створення графічного зображення є однією з найдревніших медетацій винайдених людством. Від печерних малюнків кров'ю, до чорнил на папері перенесення власного бачення в матеріальний світ заворожувала людину. Просто бери та починай малювати, уява зробить усе інше.", "https://lh3.googleusercontent.com/oprP-CtoxAG5IWogg2Gn56Pu9MBNfNt35n4gQave2BvFfVA7YlExQdgtjL6t9r_kMsg=w2400", 1, "1⚡ 1h", "", "Використай час та енергію для створення малюнку.<br><br> Чим більше енергії та часу ти в нього вкладеш, тим кращий результат чекатиме на тебе в кінці.<br><br>+1 малюнок в твою коллекцію", "", true, "dia"));
+    LootArr.push(new DNELootCard("dia-draw", "Малювання", "Використовуй час та енергію для отримання малюнків. Чим більше енергії та часу ти в них вкладеш, тим сильнішими вони будуть. Створення графічного зображення є однією з найдревніших медетацій винайдених людством. Від печерних малюнків кров'ю, до чорнил на папері перенесення власного бачення в матеріальний світ заворожувала людину. Просто бери та починай малювати, уява зробить усе інше.", "https://lh3.googleusercontent.com/oprP-CtoxAG5IWogg2Gn56Pu9MBNfNt35n4gQave2BvFfVA7YlExQdgtjL6t9r_kMsg=w2400", 1, "1⚡ 1h", "Дія", "Використай час та енергію для створення малюнку.<br><br> Чим більше енергії та часу ти в нього вкладеш, тим кращий результат чекатиме на тебе в кінці.<br><br>+1 малюнок в твою коллекцію", "", true, "dia"));
 
     // Код
     //
@@ -755,6 +755,16 @@ DNELootArr.forEach((card) => {
 
 const initDNEDoorArr = () => {
     const DoorArr = [];
+
+    // 1AM LOFI SESSION
+    //
+    //
+    const I_AM_LOFI_SESSION_LONGLINE = "Запиши коротке Демо, до 20m в жанрі Lo-fi, щоб зацікавити лейбл. Можливість записати ексклюзивний сет для видання на касетах або вінілі, якщо твоє демо прозведе враження.";
+    const I_AM_LOFI_SESSION_SHORTLINE = `${I_AM_LOFI_SESSION_LONGLINE}`;
+    const I_AM_LOFI_SESSION_IMG_ID = `1XTVXsGZvfDQB2rq6c8zpF4CN9sXlkuq3`;
+    const I_AM_LOFI_SESSION_IMG = `https://drive.google.com/uc?id=${I_AM_LOFI_SESSION_IMG_ID}`;
+
+    DoorArr.push(new DNEDoorCard("prj-i-am-lofi-session", "1AM LOFI SESSION", I_AM_LOFI_SESSION_LONGLINE, I_AM_LOFI_SESSION_IMG, 1, "1h", "Lofi Girl", "DJ", "", "?", "Платіж", I_AM_LOFI_SESSION_SHORTLINE, "", true, "prj"));
 
     // Cyberpunk Online
     //
