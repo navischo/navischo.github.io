@@ -11,6 +11,10 @@
     text-align: right;
 }
 
+.js-in-car {
+    display: inline;
+}
+
 .inventory.player-obj {
     right: auto;
     left: 0;

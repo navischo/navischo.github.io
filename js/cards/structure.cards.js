@@ -95,10 +95,12 @@ const initPlayer = () => {
         npc: new Set(),
         class: new Set(),
         sound: new Set(),
-        loot: new Set()
+        loot: new Set(),
+        cars: new Set()
     };
 
     // console.log("win77.game.catalog.npc", win77, win77.game.catalog.npc);
+    moveCardById("car-cosmos-track", win77.game.catalog.anti, player.cars);
     moveCardById("v", win77.game.catalog.npc, player.npc);
     moveCardById("a", win77.game.catalog.npc, player.npc);
 
@@ -134,7 +136,7 @@ initInventory();
 //=> 3. Игрок использует карты
 const initTable = () => {
     win77.setTable();
-    moveCardById("demo-fracture", win77.game.player.sound, win77.game.table);
+    // moveCardById("demo-fracture", win77.game.player.sound, win77.game.table);
 }
 
 initTable();

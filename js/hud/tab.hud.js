@@ -1,8 +1,13 @@
 import {win77} from "../dne-cli.js";
 
 const classSelector = "js-tab";
-win77.page.node.addEventListener("keydown", (e) => {
-    console.log(e, e.code);
-    win77.page.node.classList.toggle(classSelector);
-});
 
+document.addEventListener("keydown", (e) => {
+    if (e.key === "CapsLock") {
+        win77.page.node.classList.add(classSelector);
+        document.addEventListener("keyup", (e) => {
+            win77.page.node.classList.remove(classSelector);
+        });
+    }
+    e.stopPropagation();
+});

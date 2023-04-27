@@ -1,4 +1,5 @@
 import { CARD_TYPES } from "../cards/const.cards.js";
+import { createNode } from "../utils/createNode.js";
 // import { drawLootCards } from "../cards/dom.cards.js";
 
 const displaySelector = "#inventory-card-display";
@@ -53,6 +54,19 @@ const inventory = {
     }
 }
 
+const carInventoryParent = document.querySelector(".js-in-car");
+const carInventoryMarkup = `
+in Car(<span class="js-car-name">car</span>): <br>{<br>
+<span id="car-inventory-list" class="inventory-items"></span>
+}
+`;
+const initCarInventory = (carCard) => {
+    carInventoryParent.innerHTML = carInventoryMarkup;
+    // carInventoryParent.classList.add("car-inventory");
+    const nameNode = carInventoryParent.querySelector(".js-car-name");
+    nameNode.textContent = `"${carCard.name}"`;
+}
+
 const initInventory = () => {
     const player = win77.game.player;
     inventory.clear();
@@ -62,12 +76,16 @@ const initInventory = () => {
         appendCardToInventory(npcCard, CARD_TYPES.npc);
     });
 
-    player.class.forEach((npcCard) => {
-        appendCardToInventory(npcCard, CARD_TYPES.class);
+    player.class.forEach((classCard) => {
+        appendCardToInventory(classCard, CARD_TYPES.class);
     });
 
-    player.loot.forEach((npcCard) => {
-        appendCardToInventory(npcCard, CARD_TYPES.loot);
+    player.loot.forEach((lootCard) => {
+        appendCardToInventory(lootCard, CARD_TYPES.loot);
+    });
+
+    player.cars.forEach((carCard) => {
+        initCarInventory(carCard);
     });
 }
 
