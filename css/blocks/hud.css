@@ -94,7 +94,8 @@ body {
 .hud-body-background {
     color: white;
 
-    background-image: url('../../img/screen-nohud--braindance.jpg');
+    /*background-image: url('../../img/screen-nohud--braindance.jpg');*/
+    background-image: url('../../img/screen-nohud--cloudpunk.jpg');
     background-size: cover;
     background-position: center;
 }
