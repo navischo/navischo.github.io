@@ -66,7 +66,8 @@ const catalogTypeControls = document.querySelectorAll(".js-init-catalog");
 
 const cardTypesArr = Array.from(Object.keys(CARD_TYPES));
 
-for (let i = 3; i < cardTypesArr.length; i++) {
+const fora = 4;
+for (let i = 3 + fora; i < cardTypesArr.length; i++) {
     catalogTypeControls[i].setAttribute("disabled", true);
 }
 

@@ -878,3 +878,22 @@ img {
 .build #dne-card-class-seller .card__preview {
     overflow: hidden;
 }
+
+#dne-card-vlad .card__preview-img {
+    position: absolute;
+    top: 0;
+    z-index: 0;
+    transform: scale(1.1);
+}
+
+#dne-card-vlad .card__header-left {
+    max-width: 87%;
+}
+
+#dne-card-vlad .card__header,
+#dne-card-vlad .card__footer,
+#dne-card-vlad .card__description {
+    position: relative;
+    z-index: 1;
+    color: white;
+}

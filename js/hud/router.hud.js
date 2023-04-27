@@ -17,6 +17,8 @@ const PAGE_NAMES = {
 const pipeline = [PAGE_NAMES.enter, PAGE_NAMES.npc, PAGE_NAMES.class, PAGE_NAMES.loot, PAGE_NAMES.hud, PAGE_NAMES.event, PAGE_NAMES.board];
 const body = document.querySelector("body");
 const title = document.querySelector(".head-title");
+// todo по-умолчанию худ не отрисовывается, открыт каталог звука
+// todo если открыт hud => запустить генерацию худа
 let currentPage = PAGE_NAMES.npc;
 
 const initNav = () => {
