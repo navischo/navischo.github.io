@@ -827,12 +827,29 @@ const initDNELootArr = () => {
 
     LootArr.push(new DNELootCard("sleep", "Сон", SLEEP_LONGLINE, SLEEP_IMG, 1, "8h", "Дія", SLEEP_SHORTLINE, "", true, "dia"));
 
+    // GAMEBOY
+    //
+    //
+    const GAMEBOY_LONGLINE = "Дозволяє зберегти свій прогрес на GAMEBOY. Перезаписуй збереження скільки завгодно разів, та в тебе тільки один слот. Використовуй в будь який момент свого ходу щоб зберегтись або завантажитись. У випадку смерті ти просто завантажуєшся з останнього збереження. Цей предмет не можна обміняти або купити, лише подарувати, отримавши цю картку від Майстра на початку гри";
+    const GAMEBOY_SHORTLINE = `Дозволяє зберегти свій прогрес на GAMEBOY. В будь який момент створи збереження та за потреби використай свій GAMEBOY щоб до нього завантажитись.`;
+    const GAMEBOY_IMG = `https://lh4.googleusercontent.com/sN9l6r5xenQZTyUKE5O138NHImoBEvUqKk5LT3A5T8VRifLeSY9WcaPSsCgm_bAobrQ=w2400`;
+
+    LootArr.push(new DNELootCard("gameboy", "GAMEBOY", GAMEBOY_LONGLINE, GAMEBOY_IMG, 0, 0, "", GAMEBOY_SHORTLINE, "", true, "anti"));
+
+    // 1UP
+    //
+    //
+    const IUP_LONGLINE = "";
+    const IUP_SHORTLINE = `Ще одне життя. Так, ти можеш почати усе з початку. Використай цю картку щоб врятувати від Смерті побратима.`;
+    const IUP_IMG = `https://lh4.googleusercontent.com/Tp-OCYgwdmmEESRTfr5pVRypB46latBy3uAIOqbhsKlghxUsKAPN48RuUD_leLquyEM=w2400`;
+
+    LootArr.push(new DNELootCard("iup", "1UP", IUP_LONGLINE, IUP_IMG, 0, 0, "", IUP_SHORTLINE, "", true, "anti"));
+
     LootArr.push(new DNELootCard("tea-break", "Перерва на чай", "Дозволяє структурувати думки та наповнитись теплом чаю. Отримай свіжу енергію.", "https://lh6.googleusercontent.com/8MI06infbLkWNJCmXKTVbMgdTpssFnCfwu4A_MdURrkFaJyzWMlbNzd6GOulWRXYUz0=w2400", 1, "15m", ""));
     LootArr.push(new DNELootCard("moving", "Переїзд", "Використай зв'язки щоб позбавити іншого гравця студії. Він одразу пропускає хід та має витратити 3К щоб перевести свої великі речі на склад, інакше їх буде втрачено.", "https://lh4.googleusercontent.com/6E7iqRHUF0X_5GHgRrD35Zwg0FYMhvc-DdqoZOYlQ44dAbHP79XfUTAnVueigimk_Ts=w2400", 4, 0, "Проблема!"));
     LootArr.push(new DNELootCard("zero-ambition", "Нульові амбіції", "Зацькуй іншого гравця разом зі своїми Найомничками, щоб позбавити його мотивації діяти. Настіпні три ходи він може тільки витрачати гроші. Щоб використати цю карту, треба мати що найменше 2х найомничків. +1 пропущений хід та -1 бонус за кожного наступного наймничка, якщо їх більше.", "https://lh6.googleusercontent.com/1RPpDAYIjBGRsJJ5TNVSrWO5mtP1hG3PKMx34dwQ4b3c9bwUnz8G9xtNfMGWCAefptc=w2400", 3, 0, "Проблема!"));
     LootArr.push(new DNELootCard("breakdown", "Панічний ступор", "Накрути іншого гравця разом зі своїми Найомничками, щоб впевнити його що він не встигає. На наступному своєму івенті він має виправдати очікування аудиторії тільки за рахунок лайн-апу. Щоб використати цю карту, треба мати що найменше 2х найомничків. -1 бонус за кожного наступного наймничка, якщо їх більше.", "https://lh6.googleusercontent.com/xffJ6AXD2wxPi3wFRNgga9iUOmIWXQV7QY8QdidqiCytZF57nNHI_zRAAbtqZSXpb0o=w2400", 2, 0, "Проблема!"));
     LootArr.push(new DNELootCard("seppuku", "Сеппуку", "Ти мертвий.", "https://lh5.googleusercontent.com/zyr6pz4k23-dqGhGpyEe-hJMIxOCR2vjBPYtiBhetHY_TJ9dfJtTEbZ-yipb-TqYYYM=w2400", 0, 0, ""));
-    LootArr.push(new DNELootCard("iup", "1UP", "Ще одне життя. Так, ти можеш почати усе з початку. Використай цю картку щоб врятувати від смерті побратима.", "https://lh4.googleusercontent.com/Tp-OCYgwdmmEESRTfr5pVRypB46latBy3uAIOqbhsKlghxUsKAPN48RuUD_leLquyEM=w2400", 0, "0", ""));
     LootArr.push(new DNELootCard("gameboy", "GAMEBOY", "Дозволяє зберегти свій прогрес на GAMEBOY. Перезаписуй збереження скільки завгодно разів, та в тебе тільки один слот. Використовуй в будь який момент свого ходу щоб зберегтись або завантажитись. У випадку смерті ти просто завантажуєшся з останнього збереження. Цей предмет не можна обміняти або купити, лише подарувати, отримавши цю картку від Майстра на початку гри", "https://lh4.googleusercontent.com/sN9l6r5xenQZTyUKE5O138NHImoBEvUqKk5LT3A5T8VRifLeSY9WcaPSsCgm_bAobrQ=w2400", 0, "0", ""));
     LootArr.push(new DNELootCard("e", "∄", "Nicht heute", "https://lh3.googleusercontent.com/0lBFAvAVJ4mxoyJ8WNXz8EE_cesilaNQXOMOcHrD1vRr1CG0JVyF9l8oOI4fZo4ivyo=w2400", 0, "0", ""));
 

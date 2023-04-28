@@ -1071,3 +1071,7 @@ img {
     position: absolute;
     bottom: 35px;
 }
+
+#dne-card-iup .card__preview-img {
+    transform: scale(.9);
+}
