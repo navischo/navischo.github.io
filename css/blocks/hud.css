@@ -37,7 +37,7 @@
     text-align: center;
     transform: translateX(-50%);
 
-
+    text-shadow: 3px 2px black;
 }
 
 .score input {

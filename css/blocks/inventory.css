@@ -9,9 +9,12 @@
     font-family: "JetBrains Mono", monospace;
     color: inherit;
     text-align: right;
+    text-shadow: 2px 1px 0 black;
 }
 
 .inventory button {
+    transition: .1s ease-in;
+
     font-size: inherit;
     font-family: "JetBrains Mono", monospace;
     color: inherit;
@@ -22,6 +25,7 @@
     cursor: pointer;
 
     background: none;
+    text-shadow: 2px 1px 0 black;
 }
 
 .inventory button:hover,
@@ -29,6 +33,7 @@
 .inventory button:visited {
     color: inherit;
     text-decoration: none;
+    text-shadow: none;
 }
 
 .inventory button:hover,
@@ -36,6 +41,7 @@
     background-color: white;
     color: black;
     cursor: pointer;
+    text-shadow: none;
 }
 
 .js-in-car {
@@ -62,6 +68,8 @@
 }
 
 .inventory-item {
+    transition: .1s ease-in;
+
     display: block;
     color: inherit;
     text-decoration: none;
@@ -74,6 +82,7 @@
 .inventory-item:hover, .inventory-item:active, .inventory-item:visited {
     color: inherit;
     text-decoration: none;
+    text-shadow: none;
 }
 
 .inventory-item:hover,
@@ -81,6 +90,7 @@
     background-color: white;
     color: black;
     cursor: pointer;
+    text-shadow: none;
 }
 
 .inventory-item::after {
