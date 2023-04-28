@@ -897,3 +897,177 @@ img {
     z-index: 1;
     color: white;
 }
+
+#dne-card-ifon .card__preview-img {
+    position: relative;
+    z-index: 0;
+    transform: scale(1.34) translateY(10px);
+}
+
+#dne-card-ifon .card__header {
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+
+#dne-card-ifon .card__description {
+    position: absolute;
+    z-index: 2;
+    bottom: 35px;
+    color: white;
+}
+
+#dne-card-ifon .card__footer {
+    position: absolute;
+    z-index: 2;
+    bottom: 5px;
+    color: white;
+}
+
+#dne-card-ifon .card::after {
+    content: "";
+
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    display: block;
+    height: 275px;
+
+    background: linear-gradient(to top, #000, transparent 35%);
+
+}
+
+#dne-card-combat-master .card__preview {
+    position: absolute;
+    top: 0;
+    transform: scale(1.2) translateY(27px);
+}
+
+#dne-card-combat-master .card__header {
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+
+#dne-card-combat-master .card__description {
+    position: absolute;
+    z-index: 2;
+    bottom: 5px;
+    color: white;
+}
+
+#dne-card-class-driver .card__preview-img {
+    transform: scale(1.25) translateY(-13px);
+}
+
+#dne-card-class-driver .card__header {
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+
+#dne-card-class-driver .card__description {
+    position: absolute;
+    z-index: 2;
+    bottom: 5px;
+    color: white;
+}
+
+#dne-card-class-driver .card::before {
+    content: "";
+
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    display: block;
+    height: 275px;
+
+    background: linear-gradient(to bottom, #000, transparent 35%);
+
+}
+
+#dne-card-class-driver .card::after {
+    content: "";
+
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    display: block;
+    height: 275px;
+
+    background: linear-gradient(to top, #000, transparent 65%);
+
+}
+
+#dne-card-sleep .card__preview-img {
+    transform: scale(1.35) translateY(35px);
+}
+
+#dne-card-sleep .card__description {
+    position: absolute;
+    z-index: 2;
+    bottom: 35px;
+    color: white;
+}
+
+#dne-card-sleep .card__footer {
+    position: absolute;
+    z-index: 2;
+    bottom: 5px;
+    color: white;
+}
+#dne-card-sleep .card::before {
+    content: "";
+
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    display: block;
+    height: 275px;
+
+    background: linear-gradient(to top, #050505, transparent 65%);
+
+}
+
+#dne-card-zlykh .card__preview-img {
+    transform: scale(1.5);
+    z-index: 0;
+    position: relative;
+}
+
+#dne-card-zlykh .card__header {
+    position: relative;
+    z-index: 2;
+}
+
+#dne-card-vinyl-flower-boy .card__preview-img {
+    transform: scale(.9);
+}
+
+#dne-card-vinyl-i-am-chill-session .card {
+    color: white;
+    background-color: #1f1f36;
+}
+
+#dne-card-vinyl-i-am-chill-session .card__header {
+    position: absolute;
+    top: 50px;
+    z-index: 2;
+}
+
+#dne-card-vinyl-i-am-chill-session .card__description {
+    position: absolute;
+    bottom: 35px;
+}

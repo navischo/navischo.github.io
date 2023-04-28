@@ -135,6 +135,32 @@ const initDNELootArr = () => {
 
     LootArr.push(new DNELootCard("class-shinobi", "Шинобі", SHINOBI_CLASS_LONGLINE, SHINOBI_CLASS_IMG, 1, 0, "Клас", SHINOBI_CLASS_SHORTLINE, "", true, "class"));
 
+    // Майстер Бою
+    //
+    //
+    const COMBAT_MASTER_LONGLINE = "";
+    const COMBAT_MASTER_SHORTLINE = `Пройди курс бойової підготовки, щоб відкривати в собі навички ведення бою.<br><br> Досвідчені фахівці отримують високооплачувану роботу на проєктній основі.<br><br> Чим складніше завдання,<br> тим вище ставки.`;
+    const COMBAT_MASTER_IMG_ID = `1nWqUkT3EPwJ-nw2nwhgWTEsp7Wec4R7I`;
+    const COMBAT_MASTER_IMG = `https://drive.google.com/uc?id=${COMBAT_MASTER_IMG_ID}`;
+
+    LootArr.push(new DNELootCard("combat-master", "Майстер Бою", COMBAT_MASTER_LONGLINE, COMBAT_MASTER_IMG, 1, 0, "Клас", COMBAT_MASTER_SHORTLINE, "", true, "class"));
+
+    // Драйвер
+    //
+    //
+    const DRIVER_CLASS_LONGLINE = `
+    Щоб освоїти цей клас та отримати доступ до можливостей Драйвера, ти маєш використовувати Душу, кожного разу отримуючи нові здібності натомість. 
+    Виконай квест "Перша доставка". 
+    Ти музикант, приїхав у нове місто та влаштувався в анонімну службу доставки Клаудпанк. 
+    Ти завантажуєш свого вихованця як кастомну особу борт-помічника. 
+    Тобі потрібні гроші, щоб знайти нове синтетичне тіло собаки для нього. 
+    Доставляючи посилки під всевидячим оком крила корпорацій та пильним наглядом блок постів міста у тебе виникають сумніви у легальному статусі свого роботодавця.`;
+    const DRIVER_CLASS_SHORTLINE = `Драйвер здатен<br> водити Авто як завгодно,<br> та далеко не хто завгодно<br> здатен водити Авто<br><br> як Драйвер.`;
+    const DRIVER_CLASS_IMG_ID = `11vbz4Dx3UfPLTR2GdbhFFDpkGq4LXwWc`;
+    const DRIVER_CLASS_IMG = `https://drive.google.com/uc?id=${DRIVER_CLASS_IMG_ID}`;
+
+    LootArr.push(new DNELootCard("class-driver", "Драйвер", DRIVER_CLASS_LONGLINE, DRIVER_CLASS_IMG, 1, 0, "Клас", DRIVER_CLASS_SHORTLINE, "", true, "class"));
+
     // Воскресіння
     //
     //
@@ -209,6 +235,17 @@ const initDNELootArr = () => {
     LootArr.push(new DNELootCard("i47", "47", F7_LONGLINE, F7_IMG, 1, 0, "Найомничок", F7_SHORTLINE, "", true, "npc"));
 
     LootArr.push(new DNELootCard("i61", "61", "Trust me, i`am i61", "https://lh6.googleusercontent.com/qumGC_im9tZgoM_aMaItCmCqO37bUO2EYilop2w6PZPSvJQbXmfomdP_tyjrrWux-Rk=w2400", 1, 0, "Найомничок", "Trust me, i`am i61", "", true, "npc"));
+
+    // Ghost Dog
+    //
+    //
+    const GHOST_DOG_LONGLINE = "";
+    const GHOST_DOG_SHORTLINE = ``;
+    const GHOST_DOG_IMG_ID = `1UL2biMpCnSviaVt7mg4goGdIH4mmcf4N`;
+    const GHOST_DOG_IMG = `https://drive.google.com/uc?id=${GHOST_DOG_IMG_ID}`;
+
+    LootArr.push(new DNELootCard("ghost-dog", "Ghost Dog", GHOST_DOG_LONGLINE, GHOST_DOG_IMG, 1, 0, "Найомничок", GHOST_DOG_SHORTLINE, "", true, "npc"));
+
     LootArr.push(new DNELootCard("upgrade", "UPGRADE", "Після страшенних травм важко сумісних з життям ви стали учасником державної програми відновлення Апгрейд. Титанові кістки в поєднанні з надсучасним інтерфейсом карбонового спинного мозку роблять можливість в автоматичному режимі чинити опір агресору у ситуаціях рівня небезпеки S та нижче, поки ваша свідомість повністю підтримує лінгвістичні здібності.", "https://lh3.googleusercontent.com/hjjlI54RXzntVQCU3Wluj_wZMKhlxkPth3kQGXeHRqVjyHAeJunEYCI2z5LhYWMup2A=w2400", 1, 0, "", "Після страшенних травм важко сумісних з життям ви стали учасником державної програми відновлення Апгрейд.<br> Титанові кістки в поєднанні з надсучасним інтерфейсом карбонового спинного мозку роблять можливість в автоматичному режимі чинити опір агресору у ситуаціях рівня небезпеки S та нижче.<br><br> Тим часом ваша свідомість повністю підтримує лінгвістичні здібності.", "", true, "npc"));
     LootArr.push(new DNELootCard("machete", "Мачете", "Мачете приєднався до ЗСУ щоб вбивати русню в Україні, був взятий в полон під Донецьком, де втік з конц-табору РФ і заліг на дно в Києві. Буде радий будь якій роботі, чудово впорається з охороною, фейсконтролем та зйомками в пілотних епізодах.", "https://lh5.googleusercontent.com/gExfGHO7RIkKcdu0kC-md2uTZldiZH-sD4b_ZkQ43LNGKiHngWzWKQwIq1tjSJMRKHg=w2400", 1, 0, "Найомничок", "Охоронничок від бога і співрозмовник чудовий, легко впорається навіть з баром або фейсом", "", true, "npc"));
     // LootArr.push(new DNELootCard("machete", "Мачете", "Мачете приєднався до ЗСУ щоб вбивати русню в Україні, був взятий в полон під Донецьком, де втік з конц-табору РФ і заліг на дно в Києві. Буде радий будь якій роботі, чудово впорається з охороною, фейсконтролем та зйомками в пілотних епізодах.", "https://lh5.googleusercontent.com/gExfGHO7RIkKcdu0kC-md2uTZldiZH-sD4b_ZkQ43LNGKiHngWzWKQwIq1tjSJMRKHg=w2400", 1, 0, "Найомничок", "Охоронничок від бога і співрозмовник чудовий, легко впорається навіть з баром або фейсом", "", true));
@@ -221,6 +258,15 @@ const initDNELootArr = () => {
     const SAYLOR_MOON_SHORTLINE = "Юна леді вчиться контролювати свої здібності, пізнаючи себе та світ творчості.<br><br> Відкриття власного клубу та створення дружньої спільноти - її пристрасть та найбільша мрія.";
     LootArr.push(new DNELootCard("saylor-moon", "Сейлор Мун", SAYLOR_MOON_LONGLINE, "https://lh3.googleusercontent.com/g5fpxKQ6LO9LYce4mmrWnTdhkwmMyx58dmMDVovS7WaoO8Qzk-fkD7Xlvi_z0L5M6FM=w2400", 1, 0, "Найомничок", SAYLOR_MOON_SHORTLINE, "", true, "npc"));
 
+    // Сашко Злих
+    //
+    //
+    const ZLYKH_LONGLINE = "";
+    const ZLYKH_SHORTLINE = ``;
+    const ZLYKH_IMG_ID = `1JBAF__zcZ9tyrH_zFQ5sayleNnt04glW`;
+    const ZLYKH_IMG = `https://drive.google.com/uc?id=${ZLYKH_IMG_ID}`;
+
+    LootArr.push(new DNELootCard("zlykh", "Сашко Злих", ZLYKH_LONGLINE, ZLYKH_IMG, 1, 0, "Найомничок-DJ", ZLYKH_SHORTLINE, "", true, "npc"));
 
     const TWINS_LONGLINE = "";
     const TWINS_SHORTLINE = "Близнюки чудово розуміються на командній роботі, як пристрасть до Індустріального звучання, вона в них в крові.";
@@ -369,6 +415,27 @@ const initDNELootArr = () => {
     LootArr.push(new DNELootCard("support-supports", "Підтримати Найомничків", SUPPORT_SUPPORTS_LONGLINE, SUPPORT_SUPPORTS_IMG, 1, "1⚡ 300", "Дія", SUPPORT_SUPPORTS_SHORTLINE, "", true, "dia"));
 
     LootArr.push(new DNELootCard("make-french-exit", "Піти по-французьки", "Гравець що використав цю карту, дістає вогнепальну зброю и робить постріл у голову гравця, в адресу якого була використана карта.<br><br> Все, цей гравець мертвий, куля в голову як не як.<br><br> А ти що думав з тобою тут хтось сюсюкатись буде?", "https://lh3.googleusercontent.com/VVGoBbf0sATIkcowuVZuAuJrkjF0C6ZKr2bY43f_f4U4B9Hk9au3Q90d9mGiIZDhKso=w2400", 0, 0, "Дія"));
+
+    // 1AM CHILL SESSION
+    //
+    //
+    const I_AM_CHILL_SESSION_VINYL_LONGLINE = "";
+    const I_AM_CHILL_SESSION_VINYL_SHORTLINE = `${VINYL_LONGLINE}`;
+    const I_AM_CHILL_SESSION_VINYL_IMG_ID = `1mZFZ2uCF3tsldpVGzt9ceu4NU3KICEk8`;
+    const I_AM_CHILL_SESSION_VINYL_IMG = `https://drive.google.com/uc?id=${I_AM_CHILL_SESSION_VINYL_IMG_ID}`;
+
+    LootArr.push(new DNELootCard("vinyl-i-am-chill-session", "1AM CHILL SESSION", I_AM_CHILL_SESSION_VINYL_LONGLINE, I_AM_CHILL_SESSION_VINYL_IMG, 4, 1600, "Платівка, 160m of Chill Ambient", I_AM_CHILL_SESSION_VINYL_SHORTLINE, "", true, "sound"));
+
+    // Flower Boy
+    //
+    //
+    const FLOWER_BOY_VINYL_LONGLINE = "";
+    const FLOWER_BOY_VINYL_SHORTLINE = `${VINYL_LONGLINE}`;
+    const FLOWER_BOY_VINYL_IMG_ID = `12Xt1sW8PmEzrkcOfNNNGk0bLug_mcZec`;
+    const FLOWER_BOY_VINYL_IMG = `https://drive.google.com/uc?id=${FLOWER_BOY_VINYL_IMG_ID}`;
+
+    LootArr.push(new DNELootCard("vinyl-flower-boy", "Flower Boy", FLOWER_BOY_VINYL_LONGLINE, FLOWER_BOY_VINYL_IMG, 3, 1100, "Платівка, 46m of Progressive Hip-Hop", FLOWER_BOY_VINYL_SHORTLINE, "", true, "sound"));
+
     // Платівка IGOR
     LootArr.push(new DNELootCard("vinyl-igor", "IGOR", "Платівка дає можливість поставити музику просто зараз. Це може бути цей самий альбом, або будь-який інший. Спробуй заробити гроші, використавши її під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", "https://lh3.googleusercontent.com/heEq3Fh5UX0YwXs-Y52x6v7ZBdprdaS1y7NLrK6zgBy4_CGaFDc75WlCzSvVQkdQD_w=w2400", 3, 900, "Платівка, 39m of Hip-Hop", VINYL_LONGLINE, "", true, "sound"));
     // Платівка Nevermind
@@ -639,6 +706,16 @@ const initDNELootArr = () => {
 
     LootArr.push(new DNELootCard("album-dangerous-days", "DANGEROUS DAYS", DANGEROUS_DAYS_ALBUM_LONGLINE, DANGEROUS_DAYS_ALBUM_IMG, 2, "1.2K", "Демо, 69m of Coldwave Synth Retrowave", DANGEROUS_DAYS_ALBUM_SHORTLINE, "", true, "sound"));
 
+    // ANGELWAVE
+    //
+    //
+    const ANGELWAVE_ALBUM_LONGLINE = "";
+    const ANGELWAVE_ALBUM_SHORTLINE = `${ALBUM_LONGLINE}`;
+    const ANGELWAVE_ALBUM_IMG_ID = `1nrjlM84k1793Itl_lHi91RyMyaSmaHm5`;
+    const ANGELWAVE_ALBUM_IMG = `https://drive.google.com/uc?id=${ANGELWAVE_ALBUM_IMG_ID}`;
+
+    LootArr.push(new DNELootCard("album-angelwave", "ANGELWAVE", ANGELWAVE_ALBUM_LONGLINE, ANGELWAVE_ALBUM_IMG, 3, "NYP", "Альбом, 30m of Progressive Vapor Cloud", ANGELWAVE_ALBUM_SHORTLINE, "", true, "sound"));
+
     // LootArr.push(new DNELootCard("i-blank-hoodie", "Бланковий худік", "", "", 1, 1500, ""));
     // LootArr.push(new DNELootCard("money", "Гроші", "Коли вони дзвонять, зазвичай беруть слухавку", "", 1, "∞", ""));
     // LootArr.push(new DNELootCard("leak", "Злив", "Старий добрий спосіб швидко та надійно стати цікавою  та популярною. Обов'язково мати камеру що знімає в 1080p, шакальними відео з туалету вже нікого не зацікавиш. Хочеш посилити ефект? Замов рекламу)", "", 10, 0, "Тільки для дівчат"));
@@ -719,6 +796,36 @@ const initDNELootArr = () => {
     const DIA_CODE_IMG = `https://drive.google.com/uc?id=${DIA_CODE_IMG_ID}`;
 
     LootArr.push(new DNELootCard("dia-code", "Код", DIA_CODE_LONGLINE, DIA_CODE_IMG, 1, "1⚡ 1h", "Dia", DIA_CODE_SHORTLINE, "", true, "dia"));
+
+    // Фон
+    //
+    //
+    const FON_LONGLINE = "Портативний комп'ютерний термінал має низку особливих функцій для кожного. Може бути використаний для дзвінків, роутингу, доступу до Кіберпростору та багато іншого. Чим краще технологічно підкований виробник, тим ширшим буде набір можливостей.";
+    const FON_SHORTLINE = `Дозволяє дзвонити Найомничкам, виходити в Мережу, бачити цифровий інтерфейс гри.`;
+    const FON_IMG_ID = `1AWl-YY9QslohV0-jO4NRKtIX7UqZ06pm`;
+    const FON_IMG = `https://drive.google.com/uc?id=${FON_IMG_ID}`;
+
+    LootArr.push(new DNELootCard("ifon", "Фон", FON_LONGLINE, FON_IMG, 1, 4200, "", FON_SHORTLINE, "", true, "anti"));
+
+    // Почіта
+    //
+    //
+    const POCHITA_LONGLINE = `Смерть із цією Тваринкою запускає вступний квест "Одна ніч у Києві" якщо встановлений Мод "Ніч на Землі".`;
+    const POCHITA_SHORTLINE = `Може принести себе в жертву, щоб дати воскреснути своєму господареві, коли він зустріне Смерть.`;
+    const POCHITA_IMG_ID = `1E6H0YeXJi9ShDVeNfKxPUaLZopLBaMKE`;
+    const POCHITA_IMG = `https://drive.google.com/uc?id=${POCHITA_IMG_ID}`;
+
+    LootArr.push(new DNELootCard("pochita", "Почіта", POCHITA_LONGLINE, POCHITA_IMG, 1, 0, "Тваринка", POCHITA_SHORTLINE, "", true, "npc"));
+
+    // Сон
+    //
+    //
+    const SLEEP_LONGLINE = "";
+    const SLEEP_SHORTLINE = `Відпочинь щоб відновити сили. Загорнись у теплий пледик разом с подругою на величезному ліжку, щоб отримати додаткові +1 за кожен пункт на протязі усього наступного дня.`;
+    const SLEEP_IMG_ID = `1OBgmNUQd927sMFp0XkK69PNf8GqASh0i`;
+    const SLEEP_IMG = `https://drive.google.com/uc?id=${SLEEP_IMG_ID}`;
+
+    LootArr.push(new DNELootCard("sleep", "Сон", SLEEP_LONGLINE, SLEEP_IMG, 1, "8h", "Дія", SLEEP_SHORTLINE, "", true, "dia"));
 
     LootArr.push(new DNELootCard("tea-break", "Перерва на чай", "Дозволяє структурувати думки та наповнитись теплом чаю. Отримай свіжу енергію.", "https://lh6.googleusercontent.com/8MI06infbLkWNJCmXKTVbMgdTpssFnCfwu4A_MdURrkFaJyzWMlbNzd6GOulWRXYUz0=w2400", 1, "15m", ""));
     LootArr.push(new DNELootCard("moving", "Переїзд", "Використай зв'язки щоб позбавити іншого гравця студії. Він одразу пропускає хід та має витратити 3К щоб перевести свої великі речі на склад, інакше їх буде втрачено.", "https://lh4.googleusercontent.com/6E7iqRHUF0X_5GHgRrD35Zwg0FYMhvc-DdqoZOYlQ44dAbHP79XfUTAnVueigimk_Ts=w2400", 4, 0, "Проблема!"));
