@@ -215,13 +215,78 @@ const initDNELootArr = () => {
     LootArr.push(new DNELootCard("michalych", "Міхалич", MICKHALYCH_LONGLINE, MICKHALYCH_IMG, 1, 0, "Найомничок", MICKHALYCH_SHORTLINE, "", true, "npc"));
 
     LootArr.push(new DNELootCard("support", "Найомничок", "Можеш застосувати на нього ще один клас та дати йому одну шмотку. Якщо втрачаєш Найомничка, клас до тебе повертається, та шмотку втрачаєш із ним. Можеш підставити Найомничка щоб піти від відповідальності за провальний івент. Тримай Найомничка перед собой поряд с іншими айтемами.", "https://lh4.googleusercontent.com/SMs5epImEfomWNvE5FJFJgtvVK3inDgX5oGiaQmwvORuLEMhIkBFn6qaUgMDN216x8U=w2400", 1, 0, "", COMPANION_LONGLINE, "", true, "npc"));
+
+    // Лялька
+    //
+    //
+    const DOLL_LONGLINE = "";
+    const DOLL_SHORTLINE = `Welcome home, good hunter`;
+    const DOLL_IMG_ID = `1nezBWRaDGRcT2zR4oM3nCgaDyoIuNcxH`;
+    const DOLL_IMG = `https://drive.google.com/uc?id=${DOLL_IMG_ID}`;
+
+    LootArr.push(new DNELootCard("doll", "Doll", DOLL_LONGLINE, DOLL_IMG, 1, 0, "Найомничок", DOLL_SHORTLINE, "", true, "npc"));
+
     LootArr.push(new DNELootCard("mechanic", "Механік", "Механік здатен виконати будь-яку чоловічу роботу по дому, в машині або на івенті. Сильний чоловік що працює за розумні гроші. Має автівку вантажного классу та водійське посвідчення", "https://lh4.googleusercontent.com/Fut_jQUzHbDUFJ9siml-QsQQQQFrYamdaVff8SL-Uqi9TiKx2rVQKapBRaq6PmOwGyA=w2400", 1, 0, "Найомничок", "Сильний чоловік що працює за розумні гроші. Має - автівку вантажного классу, посвідчення.", "", true, "npc"));
+
+    // Бойовий Механік
+    //
+    //
+    const COMBAT_MECHANIC_LONGLINE = "Бойовий механік здатна виконати будь-яку роботу не тільки в приміщенні або машині, а навідь на полі бою та прямо під час сутички. Незамінний помічник, елітного рівня, що виручить усюди.";
+    const COMBAT_MECHANIC_SHORTLINE = `Бойовий механік здатна виконати будь-яку роботу не тільки в приміщенні або машині, а навідь на полі бою та прямо під час`;
+    const COMBAT_MECHANIC_IMG_ID = `1-WjUmxxPEkLk0vpKiceiQqUaTFVPk3x1`;
+    const COMBAT_MECHANIC_IMG = `https://drive.google.com/uc?id=${COMBAT_MECHANIC_IMG_ID}`;
+
+    LootArr.push(new DNELootCard("combat-mechanic", "Бойовий Механік", COMBAT_MECHANIC_LONGLINE, COMBAT_MECHANIC_IMG, 1, 0, "Найомничок", COMBAT_MECHANIC_SHORTLINE, "", true, "npc"));
+
     LootArr.push(new DNELootCard("porn-prince", "Порно-принц", "Здатен створити гарячий відео-контент з будь-якого творчого задуму. Спробуй використати отримані матеріали щоб розповісти у відео-форматі про свою справу. Хтось може звернути на це увагу та запропонувати тобі роботу.", "https://lh4.googleusercontent.com/FZFTYr__oUeAQtVUxdlG0AT7A2BMWGKmCL9KECct9KeZK6iacLswIjCpc2aEWfqjk64=w2400", 1, 0, "Найомничок", "Здатен створити гарячий відео-контент з будь-якого творчого задуму на твоєму івенті.<br><br> Забезпеч його апаратурою,усе інше - справа техніки.", "", true, "npc"));
+
+    // Єва
+    //
+    //
+    const EVA_LONGLINE = "";
+    const EVA_SHORTLINE = `Молода дівчина успішно стрімить, майструє крихітні прикраси з епоксидної смоли та дарує Найомничкам, заряджаючи їх енергією.`;
+    const EVA_IMG_ID = `15FWesuvomOmKaToRH-dkPdOzzi-HaEww`;
+    const EVA_IMG = `https://drive.google.com/uc?id=${EVA_IMG_ID}`;
+
+    LootArr.push(new DNELootCard("eva", "Єва", EVA_LONGLINE, EVA_IMG, 1, 0, "Найомничок-Стрімер", EVA_SHORTLINE, "", true, "npc"));
+
     LootArr.push(new DNELootCard("alise", "Aліс`е", "Проклятий янгол з сумними очима. Чудово продає речі, бо здатна відрізнити оригінал від підробки та цінує свій відсоток.", "https://lh4.googleusercontent.com/a-hieOJkrw-3bWjz8EawHojHcLcH78bHvYAFnIN9rew2VPZUxg8mTzcrMJb791fwPL4=w2400", 1, 0, "Найомничок", "Проклятий янгол з сумними очима. Чудово продає речі, бо здатна відрізнити оригінал від підробки та цінує свій відсоток.", "", true, "npc"));
+
+    // Мисливець
+    //
+    //
+    const HUNTER_LONGLINE = "";
+    const HUNTER_SHORTLINE = `Полює на монстрів. Захистить твій івент від них за потреби та допоможе здихатись Відповідальності за провал.`;
+    const HUNTER_IMG_ID = `1-uOsrs2xqQVCWqsCu46h9m_ddf-AJwnI`;
+    const HUNTER_IMG = `https://drive.google.com/uc?id=${HUNTER_IMG_ID}`;
+
+    LootArr.push(new DNELootCard("lilith", "Ліліт", HUNTER_LONGLINE, HUNTER_IMG, 1, 0, "Найомничок", HUNTER_SHORTLINE, "", true, "npc"));
+
+    // i2B
+    //
+    //
+    const I2B_LONGLINE = "";
+    const I2B_SHORTLINE = `Бойовий-андроід із твоїх мрій. Допомогає, захищає, муркоче.`;
+    const I2B_IMG_ID = `1DRcSPPfyUf42kikvepWXU8N780PGqJ62`;
+    const I2B_IMG = `https://drive.google.com/uc?id=${I2B_IMG_ID}`;
+
+    LootArr.push(new DNELootCard("i2b", "i2B", I2B_LONGLINE, I2B_IMG, 1, 0, "Найомничок", I2B_SHORTLINE, "", true, "npc"));
+
     LootArr.push(new DNELootCard("vargus", "Варгус", "Варгус має талант до продажу речей людям та живе щасливим життям, підпрацьовуючи в секс-шопі, у вільний час від книжок та рольових ігор. З радістю допоможе тобі в продажі товарів на івентах, та обов'язково візьме відсоток. Навіть не думай, в неї є подруга.", "https://lh3.googleusercontent.com/6gH7UsITDPPYen1jxeGornc0u1qERrzJASIDw5yNCQs03ptnsEWqH1fi-LrecRVtM9k=w2400", 1, 0, "Найомничок", "Варгус має талант до продажу речей людям та з радістю допоможе тобі з цим за розумний відсоток", "", true, "npc"));
     LootArr.push(new DNELootCard("olivye", "Олів'є", "Олів'є - людина перформанс. Він перетворить на захопливу пригоду навідь звичайнісінький день. Перетворить на товар буквально будь-що, з радістю допоможе тобі в продажі та обов'язково візьме відсоток.", "https://lh6.googleusercontent.com/UPZBku2FlEp8bXCBMhdsRXu2ZRWVrAyLidobt8lMhi82Fudyxexfi7rwCHubrAGSgM4=w2400", 1, 0, "Найомничок", "Олів'є - людина перформанс. Перетворить на товар буквально будь-що, з радістю допоможе тобі в продажі та обов'язково візьме відсоток.", "", true, "npc"));
     LootArr.push(new DNELootCard("wednesday", "Середа", "Середа переїхала з Харкова і захопилася Київською натурою, від тоді нічне життя столиці її не відпускає. Має талант до продажу рослин та речей з органічних матеріалів. З радістю допоможе тобі в продажі товарів на івентах, та обов'язково візьме відсоток.", "https://lh3.googleusercontent.com/4sGFySzeBod97kvEwmqncV9wHszsLBoE0qDZ5rujFfsqjfU6eqYpjdLnKP63VXSI7gE=w2400", 1, 0, "Найомничок", "Має талант до продажу рослин та речей з органічних матеріалів. З радістю допоможе тобі в продажі товарів на івентах, та обов'язково візьме відсоток.", "", true, "npc"));
     LootArr.push(new DNELootCard("cleo", "Клео", "Клео - надійний товариш, доки ти її друг. Переїхавши з Берліну почала займатися організацією і доводі успішно. Має власне авто, талант до продажу та організації, та працює лише за ідею і тільки з одним гравцем за всю партію.", "https://lh3.googleusercontent.com/a8JzDrNSRIgDG_m4yH4-A5kttXRu6SM6D1APBlOBn4WhIdT4bpUA9_YtHB_yPejzOlc=w2400", 1, 0, "Найомничок-DJ", "Має власне авто, талант до продажу та організації, та працює лише за ідею і тільки з одним гравцем за всю партію.", "", true, "npc"));
+
+    // Сенсей
+    //
+    //
+    const SENSEI_LONGLINE = "";
+    const SENSEI_SHORTLINE = `Помстись ворогам. Поверни свою честь. Опануй мистецтво смертельного бою.`;
+    const SENSEI_IMG_ID = `13eiuBzIQXINrQvxyr6OdlaLiS_yJLMDN`;
+    const SENSEI_IMG = `https://drive.google.com/uc?id=${SENSEI_IMG_ID}`;
+
+    LootArr.push(new DNELootCard("sensei", "Сенсей", SENSEI_LONGLINE, SENSEI_IMG, 1, 0, "Найомничок", SENSEI_SHORTLINE, "", true, "npc"));
+
     LootArr.push(new DNELootCard("zer0", "0", "Смертельно небезпечний та фантастично дорогий.", "https://lh3.googleusercontent.com/iLWF6yChVeG_1Sstqxehiaq2TEH7Tv3PNkHekUKIbKoZ_04FxB-FF5K5LXocBLO-Xjo=w2400", 1, 0, "Найомничок", "Смертельно небезпечний та фантастично дорогий.", "", true, "npc"));
 
     // 47
@@ -347,6 +412,36 @@ const initDNELootArr = () => {
     LootArr.push(new DNELootCard("power-ring", "Кільце влади", "Посилює найсильніші якості носителя, покращуючи їх до максимуму відносно обставин. Кільця влади можуть бути різної форми та рівнів могутності, залежно від майстра що його викував, рідкості матеріалу та каменю. З часом використання пробуджує темні сторони особистості носія та поступово підкоряє його власній волі. Кільце влади завжди вірне лише своєму творцю, завжди прагне до нього і чим більше наближається, тим могутнішим стає.", "https://lh4.googleusercontent.com/dWwMABhNjnvI-OOzxZDgmEqELhIfSJ25Ru8fR0hflXz1Ufd3Tr-jXDtZKTKVQ3dIxzk=w2400", 4, 0, "Драгоцінність", "Посилює найсильніші якості носителя, покращуючи їх до максимуму відносно обставин.", "", true, "anti"));
     // Убрать и отснять студию
     // Фото чистої студії приваблюють клієнтів, отримай два випадкові закази на руку та використовуй цю картку як бонус +2 для будь-якого івенту в ній. Фото на професійний фотоаппарат з широким об'єктивом привабить навіть найвибагливішу аудиторію.
+
+    // Пограти
+    //
+    //
+    const PLAY_LONGLINE = "";
+    const PLAY_SHORTLINE = `Дозволь собі зануритись у світ гри на пів годинки`;
+    const PLAY_IMG_ID = `1Qoa0B40mSFTaZ7pYDECC8dHgL-xufmsZ`;
+    const PLAY_IMG = `https://drive.google.com/uc?id=${PLAY_IMG_ID}`;
+
+    LootArr.push(new DNELootCard("dia-play", "Пограти", PLAY_LONGLINE, PLAY_IMG, 1, "30m", "Дія", PLAY_SHORTLINE, "", true, "dia"));
+
+    // Пограти для себе
+    //
+    //
+    const PLAY_FOR_YOURSELF_LONGLINE = "";
+    const PLAY_FOR_YOURSELF_SHORTLINE = `Невимушена сесія лише для тебе. Насолоджуйся.`;
+    const PLAY_FOR_YOURSELF_IMG_ID = `1MpvpA01Rw-lGIx-7tYMY7Rc8TK_1ZgeN`;
+    const PLAY_FOR_YOURSELF_IMG = `https://drive.google.com/uc?id=${PLAY_FOR_YOURSELF_IMG_ID}`;
+
+    LootArr.push(new DNELootCard("dia-play-for-yourself", "Пограти для себе", PLAY_FOR_YOURSELF_LONGLINE, PLAY_FOR_YOURSELF_IMG, 1, "20m", "Дія", PLAY_FOR_YOURSELF_SHORTLINE, "", true, "dia"));
+
+    // Нічна гра
+    //
+    //
+    const DIA_NIGHT_PLAY_LONGLINE = "";
+    const DIA_NIGHT_PLAY_SHORTLINE = `Одягай кегурумі, кутайся в пледик, хапай ніштяки та пішли скоріш, Сонька чекає.`;
+    const DIA_NIGHT_PLAY_IMG_ID = `1EZ8ai1v7_s0ZCtbeQ8JIoXjnTPBq83Kp`;
+    const DIA_NIGHT_PLAY_IMG = `https://drive.google.com/uc?id=${DIA_NIGHT_PLAY_IMG_ID}`;
+
+    LootArr.push(new DNELootCard("dia-night-play", "Нічна гра", DIA_NIGHT_PLAY_LONGLINE, DIA_NIGHT_PLAY_IMG, 1, "1⚡ 2h", "Дія", DIA_NIGHT_PLAY_SHORTLINE, "", true, "dia"));
 
     const CALL_MARSELLUS_LONGLINE = "";
     const CALL_MARSELLUS_SHORTLINE = "В тебе нема проблем, друже";
@@ -725,7 +820,7 @@ const initDNELootArr = () => {
 
     LootArr.push(new DNELootCard("dirty-mouth", "Не почистити зуби", "Ротова вонь дає мінус привабливості. Будь-який івент на який прийде гравець з цією проблемою отримує -2 до виправданих очікувань аудиторії. Може бути скинута після одного івенту або раніше, якщо почистити зуби.", "https://lh5.googleusercontent.com/fXOXvb-4Nu-o1LqenwcbnBhj8BCoFxNLn6Dsez4KU8f2jDpg-cru4RivzjN2uFpXK_0=w2400", 2, 0, "Проблема!"));
     // Боже втручання
-    LootArr.push(new DNELootCard("god-wtf", "Боже втручання", "Ти маєш зіграти цю карту, як тільки її отримав. Усі DJ одразу отримують замовлення на вечірку на Кирилівській! Знайди карту замовлення вечірки на Кирилівській та одразу її активуй. Після проведення цієї вечірки гра закінчиться та виграє гравець з найбільшим капіталом. Якщо ти виграв за рахунок цієї карти, ти в праві підвергнути суперників безжальному осміянню.", "https://lh5.googleusercontent.com/oKk0dgYD_pZfoxzwIy_FmLIWw2ffxHfpl0vJwiAXkGYei30EFVrLyMG9K-HvkSmRKRA=w2400", 0, 0, "", "Усі DJ-ї отримують рівень просто зараз, навіть якщо це переможний рівень. Якщо ти виграв за рахунок цієї карти, ти в праві підвергнути суперників безжальному осміянню.", "", true, "dia"));
+    LootArr.push(new DNELootCard("god-wtf", "Боже втручання", "Ти маєш зіграти цю карту, як тільки її отримав. Усі DJ одразу отримують замовлення на вечірку на Кирилівській! Знайди карту замовлення вечірки на Кирилівській та одразу її активуй. Після проведення цієї вечірки гра закінчиться та виграє гравець з найбільшим капіталом. Якщо ти виграв за рахунок цієї карти, ти в праві підвергнути суперників безжальному реготу.", "https://lh5.googleusercontent.com/oKk0dgYD_pZfoxzwIy_FmLIWw2ffxHfpl0vJwiAXkGYei30EFVrLyMG9K-HvkSmRKRA=w2400", 0, 0, "", "Усі DJ-ї отримують рівень просто зараз, навіть якщо це переможний рівень. Якщо ти виграв за рахунок цієї карти, ти в праві підвергнути суперників безжальному осміянню.", "", true, "dia"));
 
     // Mr. Mistix
     //

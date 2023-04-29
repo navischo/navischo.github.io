@@ -1075,3 +1075,115 @@ img {
 #dne-card-iup .card__preview-img {
     transform: scale(.9);
 }
+
+#dne-card-doll .card__header {
+    position: absolute;
+    z-index: 2;
+    color: white;
+}
+
+#dne-card-doll .card__description {
+    position: absolute;
+    bottom: 20px;
+    z-index: 2;
+    color: white;
+}
+
+#dne-card-doll .card__preview-img {
+    transform: scale(1.6) translateY(52px);
+}
+
+#dne-card-eva .card__header {
+    position: absolute;
+    z-index: 2;
+    color: white;
+}
+
+#dne-card-eva .card__description {
+    position: absolute;
+    bottom: 20px;
+    z-index: 2;
+    color: white;
+}
+
+#dne-card-eva .card__preview-img {
+    transform: scale(1.6) translateY(52px);
+}
+
+#dne-card-combat-mechanic .card__header {
+    position: absolute;
+    z-index: 2;
+    color: white;
+}
+
+#dne-card-combat-mechanic .card__description {
+    position: absolute;
+    bottom: 20px;
+    z-index: 2;
+    color: white;
+}
+
+#dne-card-combat-mechanic .card__preview-img {
+    transform: scale(1.6) translateY(52px);
+}
+
+#dne-card-sensei .card__header {
+    position: absolute;
+    z-index: 2;
+    color: white;
+}
+
+#dne-card-sensei .card__description {
+    position: absolute;
+    bottom: 20px;
+    z-index: 2;
+    color: white;
+}
+
+#dne-card-sensei .card__preview-img {
+    transform: scale(1.6) translateY(52px);
+}
+
+#dne-card-dia-play .card__header {
+    position: absolute;
+    z-index: 2;
+    color: white;
+}
+
+#dne-card-dia-play .card__description {
+    position: absolute;
+    bottom: 30px;
+    z-index: 2;
+    color: white;
+}
+
+#dne-card-dia-play .card__footer {
+    position: absolute;
+    bottom: 5px;
+    color: white;
+}
+
+#dne-card-dia-play .card__preview-img {
+    transform: scale(1.6) translateY(52px);
+}
+
+#dne-card-dia-play-for-yourself .card__header {
+    position: absolute;
+    z-index: 2;
+}
+
+#dne-card-dia-play-for-yourself .card__description {
+    position: absolute;
+    top: 70px;
+    z-index: 2;
+}
+
+#dne-card-dia-play-for-yourself .card__footer {
+    position: absolute;
+    bottom: 5px;
+}
+
+#dne-card-dia-play-for-yourself .card__preview-img {
+    transform: scale(1.6) translateY(48px);
+}
+
