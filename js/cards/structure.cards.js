@@ -1,5 +1,5 @@
 import { CARD_TYPES } from "./const.cards.js";
-import { DNECards } from "./data.cards.js";
+import { DNECards, DNESecretCards } from "./data.cards.js";
 import { win77 } from "../dne-cli.js";
 import { getCardById, getRandomInt, moveCardById, grabCost } from "../utils/getCardById.js";
 import { initInventory } from "../hud/inventory.hud.js";
@@ -24,7 +24,8 @@ const initGame = () => {
             [CARD_TYPES.prj]: new Set(),
             [CARD_TYPES.dia]: new Set(),
             [CARD_TYPES.anti]: new Set(),
-            all: DNECards
+            all: DNECards,
+            _secret: DNESecretCards
         }
     }
 

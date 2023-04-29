@@ -960,4 +960,35 @@ const DNEDoorArr = initDNEDoorArr().filter(card => card.isBuild);
 
 const DNECards = new Set(DNELootArr.concat(DNEDoorArr));
 
-export { DNECards };
+class DNEMonsterCard {
+    constructor(id, name, level, description) {
+        this.id = id;
+        this.name = name;
+        this.level = level;
+        this.description = description;
+    }
+
+    getQuest() {
+        console.log(`New quest from ${this.name}`);
+    }
+
+    fight() {
+        console.log(`You invite ${this.name} to fight with you`);
+    }
+}
+const initMonsterArr = () => {
+    const MonstersArr = [];
+
+    MonstersArr.push(new DNEMonsterCard("monster", "Монстр", "1", "Монстр почувається нормально. Так він каже. Насправді монстр зробив одне невдале татуювання. Все б нічого, скажеш ти, у кого вони всі вдалі? - І будеш правий. Ось тільки є один нюанс, це здоровенний блекворк на обличчі. Тепер ця чунга чанга збирається в останню путь завтра ввечері. Зроби щось, якщо тобі не начхати"))
+
+    return MonstersArr;
+}
+
+const DNEMonsterArr = initMonsterArr();
+const DNESecretCards = {
+    monsters: DNEMonsterArr,
+    smiths: [],
+    mafia: []
+}
+
+export { DNECards, DNESecretCards };
