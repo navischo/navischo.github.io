@@ -820,7 +820,7 @@ const initDNELootArr = () => {
 
     LootArr.push(new DNELootCard("dirty-mouth", "Не почистити зуби", "Ротова вонь дає мінус привабливості. Будь-який івент на який прийде гравець з цією проблемою отримує -2 до виправданих очікувань аудиторії. Може бути скинута після одного івенту або раніше, якщо почистити зуби.", "https://lh5.googleusercontent.com/fXOXvb-4Nu-o1LqenwcbnBhj8BCoFxNLn6Dsez4KU8f2jDpg-cru4RivzjN2uFpXK_0=w2400", 2, 0, "Проблема!"));
     // Боже втручання
-    LootArr.push(new DNELootCard("god-wtf", "Боже втручання", "Ти маєш зіграти цю карту, як тільки її отримав. Усі DJ одразу отримують замовлення на вечірку на Кирилівській! Знайди карту замовлення вечірки на Кирилівській та одразу її активуй. Після проведення цієї вечірки гра закінчиться та виграє гравець з найбільшим капіталом. Якщо ти виграв за рахунок цієї карти, ти в праві підвергнути суперників безжальному реготу.", "https://lh5.googleusercontent.com/oKk0dgYD_pZfoxzwIy_FmLIWw2ffxHfpl0vJwiAXkGYei30EFVrLyMG9K-HvkSmRKRA=w2400", 0, 0, "", "Усі DJ-ї отримують рівень просто зараз, навіть якщо це переможний рівень. Якщо ти виграв за рахунок цієї карти, ти в праві підвергнути суперників безжальному осміянню.", "", true, "dia"));
+    LootArr.push(new DNELootCard("god-wtf", "Боже втручання", "Ти маєш зіграти цю карту, як тільки її отримав. Усі DJ одразу отримують замовлення на вечірку на Кирилівській! Знайди карту замовлення вечірки на Кирилівській та одразу її активуй. Після проведення цієї вечірки гра закінчиться та виграє гравець з найбільшим капіталом. Якщо ти виграв за рахунок цієї карти, ти в праві підвергнути суперників нещадному реготу.", "https://lh5.googleusercontent.com/oKk0dgYD_pZfoxzwIy_FmLIWw2ffxHfpl0vJwiAXkGYei30EFVrLyMG9K-HvkSmRKRA=w2400", 0, 0, "", "Усі DJ-ї отримують рівень просто зараз, навіть якщо це переможний рівень. Якщо ти виграв за рахунок цієї карти, ти в праві підвергнути суперників нещадному реготу.", "", true, "dia"));
 
     // Mr. Mistix
     //
@@ -939,6 +939,16 @@ const initDNELootArr = () => {
     const IUP_IMG = `https://lh4.googleusercontent.com/Tp-OCYgwdmmEESRTfr5pVRypB46latBy3uAIOqbhsKlghxUsKAPN48RuUD_leLquyEM=w2400`;
 
     LootArr.push(new DNELootCard("iup", "1UP", IUP_LONGLINE, IUP_IMG, 0, 0, "", IUP_SHORTLINE, "", true, "anti"));
+
+    // Нокіа
+    //
+    //
+    const NOKIA_LONGLINE = "";
+    const NOKIA_SHORTLINE = `Так, ще працює`;
+    const NOKIA_IMG_ID = `1pXrDMWoWJquMqkDbb5eyEAUYzOznq4pl`;
+    const NOKIA_IMG = `https://drive.google.com/uc?id=${NOKIA_IMG_ID}`;
+
+    LootArr.push(new DNELootCard("nokia", "Нокіа", NOKIA_LONGLINE, NOKIA_IMG, 1, 0, "Фон", NOKIA_SHORTLINE, "", true, "anti"));
 
     LootArr.push(new DNELootCard("tea-break", "Перерва на чай", "Дозволяє структурувати думки та наповнитись теплом чаю. Отримай свіжу енергію.", "https://lh6.googleusercontent.com/8MI06infbLkWNJCmXKTVbMgdTpssFnCfwu4A_MdURrkFaJyzWMlbNzd6GOulWRXYUz0=w2400", 1, "15m", ""));
     LootArr.push(new DNELootCard("moving", "Переїзд", "Використай зв'язки щоб позбавити іншого гравця студії. Він одразу пропускає хід та має витратити 3К щоб перевести свої великі речі на склад, інакше їх буде втрачено.", "https://lh4.googleusercontent.com/6E7iqRHUF0X_5GHgRrD35Zwg0FYMhvc-DdqoZOYlQ44dAbHP79XfUTAnVueigimk_Ts=w2400", 4, 0, "Проблема!"));

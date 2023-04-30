@@ -1187,3 +1187,23 @@ img {
     transform: scale(1.6) translateY(48px);
 }
 
+#dne-card-nokia .card {
+    background: black;
+}
+
+#dne-card-nokia .card__preview-img {
+transform: scale(1.6) translateY(48px);
+}
+
+#dne-card-nokia .card__header {
+    position: absolute;
+    z-index: 2;
+    color: white;
+}
+
+#dne-card-nokia .card__description {
+    position: absolute;
+    bottom: 25px;
+    z-index: 2;
+    color: white;
+}

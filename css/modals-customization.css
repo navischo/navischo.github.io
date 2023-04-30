@@ -54,3 +54,86 @@ body .mfp-bg {
     top: 50%;
     transform: translateY(-50%);
 }
+
+.nokia-modal {
+    background: transparent;
+    max-width: 578px;
+}
+
+.nokia {}
+
+.nokia__preview {
+    position: relative;
+
+    width: 538px;
+    height: 633px;
+
+    background-image: url("../img/nokia.png");
+}
+
+/*.nokia__preview::before {*/
+/*    content: "";*/
+
+/*    position: absolute;*/
+/*    top: 198px;*/
+/*    left: 151px;*/
+/*    z-index: 2;*/
+
+/*    display: block;*/
+/*    width: 165px;*/
+/*    height: 129px;*/
+
+/*    background: url("../img/nokia-squere.png");*/
+/*}*/
+
+.nokia-area {
+    position: absolute;
+    top: 204px;
+    left: 157px;
+
+    display: block;
+    width: 155px;
+    height: 119px;
+
+    color: black;
+
+    /*background: white;*/
+    background: #b9d127;
+    background-image: url("../img/bg-nokia-squere.png");
+    background-size: cover;
+}
+
+.nokia-area .title {
+    margin: 0;
+    padding-left: 8px;
+    padding-top: 8px;
+    padding-bottom: 4px;
+
+    font-size: 1em;
+    font-family: "Press Start 2p", cursive;
+
+}
+
+.nokia-area a {
+    display: block;
+    padding-left: 8px;
+
+    color: inherit;
+    text-decoration: none;
+    font-family: "JetBrains Mono", monospace;
+}
+
+.nokia-area a:hover {
+    color: #b9d127;
+    background: black;
+}
+
+.nokia-area .menu {
+    overflow-y: auto;
+}
+
+a.js-phone {
+    color: inherit;
+    text-decoration: none;
+    font-family: "JetBrains Mono", monospace;
+}

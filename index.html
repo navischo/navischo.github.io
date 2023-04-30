@@ -51,6 +51,20 @@
 
     </div>
 
+    <div id="nokia-popup" class="nokia nokia-modal white-popup mfp-hide">
+        <div class="nokia__preview">
+            <div id="nokia" class="nokia-area">
+                <h3 class="title">Pokenav</h3>
+                <div class="menu">
+                    <a href="#">Green House</a>
+                    <a href="#">Purple Moon</a>
+                    <a href="#">∄</a>
+                    <a href="#">Fight Club</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Magnific Popup core CSS file -->
     <link rel="stylesheet" href="libs/magnific-popup/magnific-popup.css">
 
@@ -82,6 +96,11 @@
         import { initInventoryPopupJquery } from "./js/utils/initInventoryPopup.jquery.js";
 
         initInventoryPopupJquery();
+
+        $('.js-phone').magnificPopup({
+            type: 'inline',
+            midClick: true
+        });
     </script>
 </body>
 </html>

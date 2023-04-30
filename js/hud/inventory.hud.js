@@ -13,6 +13,7 @@ const inventoryMarkup = `
     <span id="player-crew-list" class="inventory-items"></span>
     &nbsp;}
     <br>}<br><br><div class="js-in-car"></div>
+    <a href="#nokia-popup" class="js-phone inventory-item">call me()</a>
 </div>
 <div class="inventory">
     inventory: <br>{<br>
@@ -20,7 +21,6 @@ const inventoryMarkup = `
     }
 </div>
 
-<div id="inventory-card-display"></div>
 `;
 document.querySelector("#dne-page").insertAdjacentHTML("afterend", inventoryMarkup);
 

@@ -115,6 +115,7 @@ const initPlayer = () => {
     moveCardById("demo-fracture", win77.game.catalog.sound, player.sound);
 
     moveCardById("ddj400", win77.game.catalog.loot, player.loot);
+    moveCardById("nokia", win77.game.catalog.anti, player.loot);
 
     return player;
 }
