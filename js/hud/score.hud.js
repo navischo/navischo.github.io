@@ -1,6 +1,7 @@
 import { createNode } from "../utils/createNode.js";
 import { win77 } from "../dne-cli.js";
 import { getRandomInt } from "../utils/getCardById.js";
+import { openPopup } from "../popup/dom.popup.jquery.js";
 
 const body = document.querySelector("body");
 
@@ -26,11 +27,20 @@ const initScore = () => {
     win77.game.versusScore = getRandomInt(20);
 }
 
+const isItWin = () => {
+    if (win77.game.player.score > win77.game.versusScore) {
+        console.log("You are win");
+        openPopup("#dialog-popup");
+    }
+}
+
 const updScore = (bonus = 0) => {
     win77.game.player.score = win77.game.player.score + +bonus;
 
     playerScoreNode.innerHTML = win77.game.player.score;
     versusScoreNode.innerHTML = win77.game.versusScore;
+
+    isItWin();
 }
 
 win77.pokeButton.dia.updScore = updScore;
