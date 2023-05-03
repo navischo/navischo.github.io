@@ -17,11 +17,6 @@ class DNECli {
         this.game.player = playerObj;
     }
 
-    setCatalog(category) {
-        this.game.catalog[category] = this.game[category];
-        delete this.game[category];
-    }
-
     setTable() {
         this.game.table = new Set();
     }

@@ -39,4 +39,4 @@ const initGreenHouse = () => {
     return greenHouse;
 }
 
-console.log(initGreenHouse());
+// console.log(initGreenHouse());

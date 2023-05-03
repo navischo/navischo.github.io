@@ -1,5 +1,5 @@
 const initInventoryPopupJquery = () => {
-    console.log($('.inventory-item'));
+    // console.log($('.inventory-item'));
     $('.inventory-item').magnificPopup({
         type: 'inline',
         midClick: true

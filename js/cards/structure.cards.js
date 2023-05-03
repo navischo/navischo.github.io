@@ -29,7 +29,7 @@ const initGame = () => {
         }
     }
 
-    console.log("game", game);
+    // console.log("game", game);
 
     DNECards.forEach((card) => {
         switch (card.type) {
@@ -131,7 +131,7 @@ win77.setPlayer(initPlayer());
 // win77.setCatalog("prj");
 // win77.setCatalog("dia");
 // win77.setCatalog("anti");
-console.log(win77);
+// console.log(win77);
 
 initInventory();
 
