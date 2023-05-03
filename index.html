@@ -20,6 +20,8 @@
 
         <div class="js-portals-parent catalog-controls__item">
             <button class="js-portal catalog-controls__filter" data-portal="hud">HUD</button>
+            <button class="js-portal catalog-controls__filter" data-portal="event">EVENT</button>
+            <button class="js-portal catalog-controls__filter" data-portal="board">BOARD</button>
         </div>
 
         <div class="catalog-controls__item">
@@ -55,6 +57,11 @@
 
     </div>
 
+    <a class="js-dialog" href="#dialog-popup">Dialog</a>
+    <div id="dialog-popup" class="dialog-modal white-popup mfp-hide">
+
+    </div>
+
     <!-- Magnific Popup core CSS file -->
     <link rel="stylesheet" href="libs/magnific-popup/magnific-popup.css">
 
@@ -86,6 +93,7 @@
     <script type="module">
         import { initInventoryPopupJquery } from "./js/utils/initInventoryPopup.jquery.js";
         import { initNokiaPopup } from "./js/hud/fon.hud.js";
+        import { initDialogPopup } from "./js/hud/dialog.hud.js";
 
         initInventoryPopupJquery();
 
@@ -95,6 +103,13 @@
         });
 
         initNokiaPopup();
+
+        $('.js-dialog').magnificPopup({
+            type: 'inline',
+            midClick: true
+        });
+
+        initDialogPopup();
     </script>
 </body>
 </html>

@@ -1,5 +1,6 @@
 import { createNode } from "../utils/createNode.js";
 import { win77 } from "../dne-cli.js";
+import { getRandomInt } from "../utils/getCardById.js";
 
 const body = document.querySelector("body");
 
@@ -22,7 +23,7 @@ const initScore = () => {
     let lootPoints = 0;
 
     win77.game.player.score = crewPoints + soundPoints + lootPoints;
-    win77.game.versusScore = 0;
+    win77.game.versusScore = getRandomInt(20);
 }
 
 const updScore = (bonus = 0) => {

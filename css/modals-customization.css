@@ -137,3 +137,119 @@ a.js-phone {
     text-decoration: none;
     font-family: "JetBrains Mono", monospace;
 }
+
+.dialog-modal {
+    max-width: 266px;
+    padding: 0;
+}
+
+.win77-dialog {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "JetBrains Mono", monospace;
+    background: #c2c6ca;
+    font-size: 12px;
+    -webkit-font-smoothing: none;
+    width: 265px;
+    height: 118px;
+    box-shadow: 0.5px 0.5px 0 0.5px black, inset 1px 1px #C2C6CA, inset -1px -1px #85898d, inset 2px 2px white;
+}
+
+.win77-dialog__textarea {
+    padding: 0 15px;
+
+    color: black;
+}
+
+.dialog-modal .win77-dialog__close {
+    right: 5px;
+    bottom: 4px;
+    display: flex;
+    background: #c2c6ca;
+    opacity: 1;
+}
+
+.dialog-modal .mfp-close:active {
+    top: auto;
+}
+
+.win77-dialog button {
+    background: #c2c6ca;
+    border: none;
+    padding: 0;
+    border-radius: 0;
+    outline: none;
+}
+.win77-dialog .shadow {
+    box-shadow: 0.5px 0.5px 0 0.5px black, inset 1px 1px white, inset -1px -1px #85898d;
+}
+.win77-dialog .bar {
+    box-sizing: content-box;
+    display: flex;
+    flex-flow: row nowrap;
+    font-weight: bold;
+    justify-content: space-between;
+    width: calc(100% - 11px);
+    height: 13px;
+    color: white;
+    background: #00a;
+    padding: 2px 3px 3px;
+    margin: 3px 2px 1px 3px;
+}
+.win77-dialog .bar p {
+    margin: 0;
+}
+.win77-dialog .bar button {
+    width: 15px;
+    height: 13px;
+}
+.win77-dialog .bar button:active {
+    box-shadow: 0.5px 0.5px 0 0.5px white, inset 1px 1px black, inset -1px -1px #c2c6ca, inset 2px 2px #85898d;
+}
+.win77-dialog .bar button:active svg {
+    transform: translateX(1px) translateY(1px);
+}
+.win77-dialog .bar button svg {
+    margin: 3px 3px 3px 4px;
+}
+.win77-dialog .buttons {
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 1px 15px 14px 14px;
+}
+.win77-dialog .buttons button {
+    width: 74px;
+    height: 22px;
+    display: grid;
+}
+.win77-dialog .buttons button:not(:last-child) {
+    margin-right: 7px;
+}
+.win77-dialog .buttons button p {
+    font-size: 12px;
+    margin: auto;
+}
+.win77-dialog .buttons button img {
+    margin: 4px 3px 3px 4px;
+    display: none;
+}
+.win77-dialog .buttons button p, .win77-dialog .buttons button img {
+    grid-column: 1;
+    grid-row: 1;
+}
+.win77-dialog .buttons button:focus {
+    outline: none;
+    box-shadow: 0.5px 0.5px 0 0.5px black, inset 1px 1px black, inset -1px -1px black, inset 2px 2px white, inset -2px -2px #85898d;
+}
+.win77-dialog .buttons button:focus img {
+    display: block;
+}
+.win77-dialog .buttons button:active {
+    box-shadow: 0.5px 0.5px 0 0.5px black, inset 1px 1px black, inset -1px -1px #85898d, inset 2px 2px #85898d;
+    outline: none;
+}
+.win77-dialog .buttons button:active p, .win98popup .buttons button:active img {
+    transform: translateX(1px) translateY(1px);
+}
