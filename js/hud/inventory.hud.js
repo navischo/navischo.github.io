@@ -33,8 +33,6 @@ in Car(<button class="js-car-name">car</button>)<span class="js-car-in">{<br>
 const carInventoryParent = document.querySelector(".js-in-car");
 
 
-const displaySelector = "#inventory-card-display";
-const inventoryCardDisplay = document.querySelector(displaySelector);
 const inventoryList = document.querySelector("#inventory-list");
 // const soundList = document.querySelector("#sound-list");
 const playerClassList = document.querySelector("#player-class-list");
@@ -56,7 +54,6 @@ const appendCardToInventory = (cardData, cardType = CARD_TYPES.loot) => {
     newListItem.href = `#card-popup`;
 
     newListItem.addEventListener("click", (e) => {
-        inventoryCardDisplay.innerHTML = "";
         win77.showCard(cardData);
     });
 

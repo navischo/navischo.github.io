@@ -11,3 +11,13 @@ document.addEventListener("keydown", (e) => {
     }
     e.stopPropagation();
 });
+
+const openWithTimer = () => {
+    win77.page.node.classList.add(classSelector);
+
+    setTimeout(() => {
+        win77.page.node.classList.remove(classSelector);
+    }, 2000);
+}
+
+export { openWithTimer };

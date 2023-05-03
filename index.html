@@ -52,17 +52,7 @@
     </div>
 
     <div id="nokia-popup" class="nokia nokia-modal white-popup mfp-hide">
-        <div class="nokia__preview">
-            <div id="nokia" class="nokia-area">
-                <h3 class="title">Pokenav</h3>
-                <div class="menu">
-                    <a href="#">Green House</a>
-                    <a href="#">Purple Moon</a>
-                    <a href="#">∄</a>
-                    <a href="#">Fight Club</a>
-                </div>
-            </div>
-        </div>
+
     </div>
 
     <!-- Magnific Popup core CSS file -->
@@ -89,11 +79,13 @@
     <script type="module" src="js/hud/dom.hud.js"></script>
     <script type="module" src="js/hud/inventory.hud.js"></script>
     <script type="module" src="js/hud/tab.hud.js"></script>
+    <script type="module" src="js/hud/fon.hud.js"></script>
     <script type="module" src="js/page/screen.page.js"></script>
     <script type="module" src="js/inInteraction/interface.inInteraction.js"></script>
 
     <script type="module">
         import { initInventoryPopupJquery } from "./js/utils/initInventoryPopup.jquery.js";
+        import { initNokiaPopup } from "./js/hud/fon.hud.js";
 
         initInventoryPopupJquery();
 
@@ -101,6 +93,8 @@
             type: 'inline',
             midClick: true
         });
+
+        initNokiaPopup();
     </script>
 </body>
 </html>

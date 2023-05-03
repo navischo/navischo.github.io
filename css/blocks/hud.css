@@ -98,6 +98,9 @@ body {
     background-image: url('../../img/screen-nohud--cloudpunk.jpg');
     background-size: cover;
     background-position: center;
+    background-color: black;
+
+    transition: .5s ease-in-out;
 }
 
 

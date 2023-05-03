@@ -8,6 +8,7 @@ import { moveCardById } from "../utils/getCardById.js";
 import { updBalanceNode } from "../hud/balance.hud.js";
 import { isSetHasId } from "../utils/isSetHasId.js";
 import { PAGE_NAMES } from "../hud/router.hud.js";
+import { openWithTimer } from "../hud/tab.hud.js";
 
 const initHandlers = (cardData, controls) => {
     const catalog = win77.game.catalog[cardData.type];
@@ -101,6 +102,7 @@ const updHand = () => {
             const id = card.id.substring(9);
             const bonus = +(card.querySelector(".card__bonus").textContent);
             console.log(win77);
+            openWithTimer();
             moveCardById(id, win77.game.player.hand, win77.game.table);
             updTable();
 
