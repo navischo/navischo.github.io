@@ -122,7 +122,7 @@ const updHand = () => {
 
             hand.querySelector(`#dne-card-${id}`).remove();
 
-            if (win77.game.player.score < win77.game.versusScore && win77.game.player.hand.size === 0) {
+            if (win77.game.player.score <= win77.game.versusScore && win77.game.player.hand.size === 0) {
                 initDialogPopup(1);
                 openPopup("#dialog-popup");
             } else {

@@ -17,7 +17,7 @@ const openWithTimer = () => {
 
     setTimeout(() => {
         win77.page.node.classList.remove(classSelector);
-    }, 2000);
+    }, 5000);
 }
 
 export { openWithTimer };
