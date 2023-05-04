@@ -9,13 +9,25 @@ import { updBalanceNode } from "../hud/balance.hud.js";
 import { isSetHasId } from "../utils/isSetHasId.js";
 import { PAGE_NAMES } from "../hud/router.hud.js";
 import { openWithTimer } from "../hud/tab.hud.js";
+import { setExecutive } from "../hud/table.hud.js";
+import { CARD_TYPES } from "./const.cards.js";
+import { initDialogPopup } from "../hud/dialog.hud.js";
+import { openPopup } from "../popup/dom.popup.jquery.js";
+
 
 const initHandlers = (cardData, controls) => {
     const catalog = win77.game.catalog[cardData.type];
     const plusButtonHandler = () => {
+        const currentPage = win77.router.currentPage;
+        const isItCatalogPage = currentPage === PAGE_NAMES.npc || currentPage === PAGE_NAMES.class;
+        const isItCharacterCard = cardData.type === CARD_TYPES.npc || cardData.type === CARD_TYPES.class;
         console.log(`You are ${COMMANDS.plus} ${cardData.id}`);
 
-        if (isSetHasId(catalog, cardData.id)) {
+        if (isItCharacterCard && currentPage === PAGE_NAMES.hud) {
+            setExecutive(cardData.name);
+        }
+
+        if (isItCatalogPage && isSetHasId(catalog, cardData.id)) {
             win77.getSkillPointsFromPlayer(1);
             updBalanceNode();
             moveCardById(cardData.id, catalog, win77.game.player[cardData.type]);
@@ -109,6 +121,13 @@ const updHand = () => {
             win77.pokeButton.dia.updScore(bonus);
 
             hand.querySelector(`#dne-card-${id}`).remove();
+
+            if (win77.game.player.score < win77.game.versusScore && win77.game.player.hand.size === 0) {
+                initDialogPopup(1);
+                openPopup("#dialog-popup");
+            } else {
+                initDialogPopup(0);
+            }
         });
     });
 }

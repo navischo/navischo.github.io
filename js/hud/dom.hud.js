@@ -9,7 +9,7 @@ const hudMarkup = `
 <!--<video class="background-house" src="../../mp4/video-place.mp4" autoplay></video>-->
 <div id="inventory-card-display"></div>
 
-<div id="table" class="table"></div>
+<div id="table" class="table" data-owner="Navischo"></div>
 
 <!-- <div id="top-hand" class="hand"></div> -->
 

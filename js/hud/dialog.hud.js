@@ -1,23 +1,43 @@
+import { win77 } from "../dne-cli.js";
+import { updHand } from "../cards/dom.cards.js";
+import { updBalanceNode } from "./balance.hud.js";
+
 const DIALOG_QUESTIONS = [
     {
         question: `<p>Your lineup is awesome. Ready to start event?</p>`,
         answers: [
             {
-                text: "Yes",
-                action: (e) => {
-                    console.log(e);
-                }
-            },
-            {
-                text: "No",
-                action: (e) => {
-                    console.log(e);
-                }
-            },
-            {
-                text: "Cancel",
+                text: "Yep",
                 action: () => {
-                    console.log(`hell`);
+                    console.log("Starting event..");
+                }
+            },
+            {
+                text: "Few mins",
+                action: () => {
+                    console.log("Few mins");
+                }
+            }
+        ]
+    },
+    {
+        question: `<p>Seems you dont have enouch sound. Wanna give up or buy some more?</p>`,
+        answers: [
+            {
+                text: "Give up",
+                action: (e) => {
+                    console.log("Give up");
+                    location.reload();
+                }
+            },
+            {
+                text: "1 more(500)",
+                action: (e) => {
+                    console.log("One more");
+                    win77.putCardAtPlayersHand(1);
+                    win77.getCostFromPlayer(500);
+                    updHand();
+                    updBalanceNode();
                 }
             }
         ]
@@ -60,12 +80,13 @@ const dialogPopupMarkup = (question, answers) => `
 </div>
 `;
 
-const initDialogPopup = () => {
+const initDialogPopup = (index = 0) => {
     const parent = document.querySelector("#dialog-popup");
     const newNode = document.createElement("div");
     newNode.classList.add("win77-dialog");
-    newNode.innerHTML = dialogPopupMarkup(DIALOG_QUESTIONS[0].question, DIALOG_QUESTIONS[0].answers);
-    initAnswersActions(DIALOG_QUESTIONS[0].answers, newNode);
+    parent.innerHTML = '';
+    newNode.innerHTML = dialogPopupMarkup(DIALOG_QUESTIONS[index].question, DIALOG_QUESTIONS[index].answers);
+    initAnswersActions(DIALOG_QUESTIONS[index].answers, newNode);
     parent.appendChild(newNode);
 }
 

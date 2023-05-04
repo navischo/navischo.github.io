@@ -107,13 +107,6 @@ const initPlayer = () => {
 
     moveCardById("class-ttter", win77.game.catalog.class, player.class);
 
-    // todo getCardsInHand(5)
-    moveCardById("vinyl-igor", win77.game.catalog.sound, player.sound);
-    moveCardById("vinyl-aleph", win77.game.catalog.sound, player.sound);
-    moveCardById("album-toxic", win77.game.catalog.sound, player.sound);
-    moveCardById("demo-jelz", win77.game.catalog.sound, player.sound);
-    moveCardById("demo-fracture", win77.game.catalog.sound, player.sound);
-
     moveCardById("ddj400", win77.game.catalog.loot, player.loot);
     moveCardById("nokia", win77.game.catalog.anti, player.loot);
 
@@ -123,23 +116,8 @@ win77.setPlayer(initPlayer());
 
 // win77.getCostFromPlayer(500);
 
-//=> 2.1. Oстальное из game переносим в game.shop
-// win77.setCatalog("crew");
-// win77.setCatalog("class");
-// win77.setCatalog("loot");
-// win77.setCatalog("sound");
-// win77.setCatalog("prj");
-// win77.setCatalog("dia");
-// win77.setCatalog("anti");
-// console.log(win77);
-
 initInventory();
 
 //=> 3. Игрок использует карты
-const initTable = () => {
-    win77.setTable();
-    // moveCardById("demo-fracture", win77.game.player.sound, win77.game.table);
-}
 
-initTable();
 

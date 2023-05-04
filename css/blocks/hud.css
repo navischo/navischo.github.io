@@ -79,6 +79,18 @@ body {
     transform: scale(.5);
 }
 
+.table::before {
+    content: attr(data-owner);
+
+    position: absolute;
+    top: 25px;
+    left: 20px;
+
+    font-family: "Press Start 2p", cursive;
+    font-size: 30px;
+    text-shadow: 5px 3px black;
+}
+
 .table.round-two {
     top: -200px;
 }
