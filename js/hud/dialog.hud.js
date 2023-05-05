@@ -2,6 +2,7 @@ import { win77 } from "../dne-cli.js";
 import { updHand } from "../cards/dom.cards.js";
 import { updBalanceNode } from "./balance.hud.js";
 import { closePopup } from "../popup/dom.popup.jquery.js";
+import { switchTime } from "./time.hud.js";
 
 const DIALOG_QUESTIONS = [
     {
@@ -11,8 +12,11 @@ const DIALOG_QUESTIONS = [
                 text: "Yep",
                 action: () => {
                     document.querySelector("#dne-page-up").classList.add("js-open");
-                    console.log("Starting event..");
                     closePopup();
+                    win77.setLineupLength(420);
+                    // win77.pokeButton.node.addEventListener("click", );
+                    switchTime(win77.game.lineupLength);
+                    console.log("Starting event..", win77.game.lineupLength, win77.pokeButton.node);
                 }
             },
             {

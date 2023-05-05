@@ -21,6 +21,10 @@ class DNECli {
         this.game.table = new Set();
     }
 
+    setLineupLength(min) {
+        this.game.lineupLength = min;
+    }
+
     getCostFromPlayer(cost) {
         this.game.player.balance.bankroll = this.game.player.balance.bankroll - cost;
     }
