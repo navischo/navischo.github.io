@@ -2,6 +2,7 @@ import { win77 } from "../dne-cli.js";
 
 const body = document.querySelector("body");
 const page = document.querySelector("#dne-page");
+const pageUp = document.querySelector("#dne-page-up");
 
 const placeholderMarkup = `
 <div class="pokeball-wrap">
@@ -11,7 +12,7 @@ const placeholderMarkup = `
 </div>
 `;
 
-page.innerHTML = placeholderMarkup;
+pageUp.innerHTML = placeholderMarkup;
 const pokeButton = document.querySelector("#poke-button");
 
 win77.body = {

@@ -7,4 +7,8 @@ const openPopup = (id) => {
     });
 }
 
-export { openPopup };
+const closePopup = () => {
+    $.magnificPopup.close();
+}
+
+export { openPopup, closePopup };

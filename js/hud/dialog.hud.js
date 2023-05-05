@@ -1,6 +1,7 @@
 import { win77 } from "../dne-cli.js";
 import { updHand } from "../cards/dom.cards.js";
 import { updBalanceNode } from "./balance.hud.js";
+import { closePopup } from "../popup/dom.popup.jquery.js";
 
 const DIALOG_QUESTIONS = [
     {
@@ -9,13 +10,16 @@ const DIALOG_QUESTIONS = [
             {
                 text: "Yep",
                 action: () => {
+                    document.querySelector("#dne-page-up").classList.add("js-open");
                     console.log("Starting event..");
+                    closePopup();
                 }
             },
             {
                 text: "Few mins",
                 action: () => {
                     console.log("Few mins");
+                    closePopup();
                 }
             }
         ]
@@ -38,6 +42,7 @@ const DIALOG_QUESTIONS = [
                     win77.getCostFromPlayer(500);
                     updHand();
                     updBalanceNode();
+                    closePopup();
                 }
             }
         ]
