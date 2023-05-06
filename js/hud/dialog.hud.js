@@ -1,8 +1,8 @@
 import { win77 } from "../dne-cli.js";
 import { updHand } from "../cards/dom.cards.js";
-import { updBalanceNode } from "./balance.hud.js";
 import { closePopup } from "../popup/dom.popup.jquery.js";
 import { switchTime } from "./time.hud.js";
+import { settings } from "../theday/const.theday.js";
 
 const DIALOG_QUESTIONS = [
     {
@@ -11,12 +11,7 @@ const DIALOG_QUESTIONS = [
             {
                 text: "Yep",
                 action: () => {
-                    document.querySelector("#dne-page-up").classList.add("js-open");
-                    closePopup();
-                    win77.setLineupLength(420);
-                    // win77.pokeButton.node.addEventListener("click", );
-                    switchTime(win77.game.lineupLength);
-                    console.log("Starting event..", win77.game.lineupLength, win77.pokeButton.node);
+                    setupTheday();
                 }
             },
             {
@@ -45,7 +40,7 @@ const DIALOG_QUESTIONS = [
                     win77.putCardAtPlayersHand(1);
                     win77.getCostFromPlayer(500);
                     updHand();
-                    updBalanceNode();
+                    win77.updBalanceHUD();
                     closePopup();
                 }
             }
@@ -97,6 +92,26 @@ const initDialogPopup = (index = 0) => {
     newNode.innerHTML = dialogPopupMarkup(DIALOG_QUESTIONS[index].question, DIALOG_QUESTIONS[index].answers);
     initAnswersActions(DIALOG_QUESTIONS[index].answers, newNode);
     parent.appendChild(newNode);
+}
+
+const setupTheday = () => {
+    let lineupLength = 0;
+    const limitsStrings = document.querySelectorAll("#table .card__limits");
+
+    limitsStrings.forEach((limitsString) => {
+        console.log("time", lineupLength, limitsString);
+        const wordsArr = limitsString.textContent.split(" ");
+        const time = +(wordsArr[1].replace("m", ""));
+        lineupLength = lineupLength + time;
+    });
+    win77.setLineupLength(lineupLength);
+
+    document.querySelector("#dne-page-up").classList.add("js-open");
+    closePopup();
+
+    switchTime(win77.game.event.lineupLength);
+    win77.setEventSettings(Object.assign({}, settings));
+    console.log("Starting event..", win77.game.event.lineupLength, win77.pokeButton.node);
 }
 
 export { initDialogPopup };

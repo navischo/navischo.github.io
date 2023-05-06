@@ -29,7 +29,7 @@ const initHandlers = (cardData, controls) => {
 
         if (isItCatalogPage && isSetHasId(catalog, cardData.id)) {
             win77.getSkillPointsFromPlayer(1);
-            updBalanceNode();
+            win77.updBalanceHUD();
             moveCardById(cardData.id, catalog, win77.game.player[cardData.type]);
             initInventory();
         }
@@ -100,8 +100,6 @@ const drawLootCards = (cardData, parentSelector = "#dne-page") => {
     Array.from(cardData).forEach(drawIt);
 }
 
-// drawLootCards(win77.game.catalog.class);
-
 const updHand = () => {
     const hand = document.querySelector("#bottom-hand");
     hand.innerHTML = ``;
@@ -133,10 +131,8 @@ const updHand = () => {
 }
 
 win77.putCardAtPlayersHand(5);
-// updHand();
 win77.pokeButton.dia.goToPage("hud");
 
-// win77.pokeButton.dia.updHand = updHand;
 
 const updTable = () => {
     const node = document.querySelector("#table");

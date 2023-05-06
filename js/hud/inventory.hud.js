@@ -105,4 +105,4 @@ const initInventory = () => {
     initInventoryPopupJquery();
 }
 
-export { initInventory, appendCardToInventory };
+export { initInventory };

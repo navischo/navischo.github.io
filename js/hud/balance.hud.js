@@ -17,7 +17,6 @@ const createBalanceNode = () => {
     const newBalance = document.createElement("div");
     newBalance.classList.add("units");
     newBalance.innerHTML = markup;
-    // win77.page.node.appendChild(newBalance);
     body.appendChild(newBalance);
 }
 
@@ -28,7 +27,6 @@ const updBalanceNode = () => {
 }
 
 createBalanceNode();
-// win77.getCostFromPlayer(1000);
-updBalanceNode();
+win77.updBalanceHUD();
 
 export { updBalanceNode };

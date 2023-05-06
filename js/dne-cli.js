@@ -22,16 +22,34 @@ class DNECli {
     }
 
     setLineupLength(min) {
-        this.game.lineupLength = min;
+        this.game.event.lineupLength = min;
+    }
+
+    setEventSettings(settingsObj) {
+        this.game.event.settings = settingsObj;
+    }
+
+    giveIncomeToPlayer(income) {
+        this.game.player.balance.bankroll = this.game.player.balance.bankroll + income;
     }
 
     getCostFromPlayer(cost) {
         this.game.player.balance.bankroll = this.game.player.balance.bankroll - cost;
     }
 
+    updBalanceHUD() {
+        const body = document.querySelector("body");
+        body.querySelector(".js-skill-points-balance").textContent = win77.game.player.balance.skillPoints;
+        body.querySelector(".js-energy-balance").textContent = win77.game.player.balance.energy;
+        body.querySelector(".js-bankroll-balance").textContent = win77.game.player.balance.bankroll;
+    }
+
+    giveSkillPointsToPlayer(count) {
+        this.game.player.balance.skillPoints = this.game.player.balance.skillPoints + count;
+    }
+
     getSkillPointsFromPlayer(count) {
         this.game.player.balance.skillPoints = this.game.player.balance.skillPoints - count;
-        console.log("getSkillPointsFromPlayer", count, this.game.player.balance.skillPoints);
     }
 
     putCardAtPlayersHand(count = 1) {

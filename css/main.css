@@ -3,6 +3,7 @@
 @import "./blocks/catalog.css";
 @import "./blocks/inventory.css";
 @import "./blocks/hud.css";
+@import "./blocks/theday.css";
 
 @import "./cards-customization.css";
 @import "./page-customization.css";

@@ -1,0 +1,42 @@
+#gradient {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.js-rick-portal {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+.js-rick-portal img {
+    transform: scale(1.6) translateY(50px);
+}
+
+.body-cell {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 20;
+
+    display: block;
+    width: 100vw;
+    height: 100vh;
+
+    transform: translateY(-100%);
+    transition: .2s ease-in-out;
+}
+
+.body-cell.js-open {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(0);
+}

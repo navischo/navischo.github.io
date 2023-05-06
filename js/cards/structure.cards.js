@@ -1,7 +1,7 @@
 import { CARD_TYPES } from "./const.cards.js";
 import { DNECards, DNESecretCards } from "./data.cards.js";
 import { win77 } from "../dne-cli.js";
-import { getCardById, getRandomInt, moveCardById, grabCost } from "../utils/getCardById.js";
+import { moveCardById } from "../utils/getCardById.js";
 import { initInventory } from "../hud/inventory.hud.js";
 
 //=> 0. Все карты(кроме неукомплектованных), в любом кол-ве копий [done]
@@ -26,10 +26,14 @@ const initGame = () => {
             [CARD_TYPES.anti]: new Set(),
             all: DNECards,
             _secret: DNESecretCards
+        },
+        event: {
+            settings: {},
+            result: {
+                income: 0
+            }
         }
     }
-
-    // console.log("game", game);
 
     DNECards.forEach((card) => {
         switch (card.type) {
@@ -39,7 +43,6 @@ const initGame = () => {
 
             case CARD_TYPES.class:
                 game.catalog.class.add(card);
-                // console.log("catalog switch", game.catalog.class, DNECards);
                 break;
 
             case CARD_TYPES.loot:
@@ -64,19 +67,9 @@ const initGame = () => {
         }
     });
 
-    // console.log("catalog switch finish", game.catalog.class, DNECards);
-    // console.log("game", game.catalog.class, game.catalog.anti, game, DNECards);
-
     return game;
 }
 
-
-
-//=> 1.2. Карты на группы в game
-// npc class loot sound project dia anti
-const initCardGroups = (set) => {
-
-}
 
 
 win77.setGame(initGame());
@@ -100,7 +93,6 @@ const initPlayer = () => {
         cars: new Set()
     };
 
-    // console.log("win77.game.catalog.npc", win77, win77.game.catalog.npc);
     moveCardById("car-cosmos-track", win77.game.catalog.anti, player.cars);
     moveCardById("v", win77.game.catalog.npc, player.npc);
     moveCardById("a", win77.game.catalog.npc, player.npc);
@@ -113,8 +105,6 @@ const initPlayer = () => {
     return player;
 }
 win77.setPlayer(initPlayer());
-
-// win77.getCostFromPlayer(500);
 
 initInventory();
 

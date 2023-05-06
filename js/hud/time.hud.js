@@ -1,4 +1,4 @@
-import {createNode} from "../utils/createNode.js";
+import { createNode } from "../utils/createNode.js";
 import { win77 } from "../dne-cli.js";
 
 const body = document.querySelector("body");
@@ -36,8 +36,8 @@ const setCountdown = (min) => {
 
     function jpTimer(){
         const maxSec = 59;
-        const maxMin = 59;
-        const maxHour = 24;
+        const maxMin = 9;
+        const maxHour = 0;
         let s = 59;
         let m = maxMin;
         let h = maxHour;
@@ -63,7 +63,6 @@ const setCountdown = (min) => {
 
             node.innerHTML = `${h ? `${h}h` : ``} ${m ? `${m}m` : ``} ${s ? `${s}s` : ``}`;
 
-            s--;
 
         }, 1000);
     }

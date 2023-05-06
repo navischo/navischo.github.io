@@ -47,3 +47,5 @@ win77.pokeButton.dia.updScore = updScore;
 
 initScore();
 updScore();
+
+export { initScore, updScore };
