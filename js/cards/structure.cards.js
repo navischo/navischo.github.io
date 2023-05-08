@@ -10,9 +10,6 @@ import { initInventory } from "../hud/inventory.hud.js";
 //=> 3. Игрок использует карты
 //=> 4. Карты со стола распределяются между игроком и магазином
 
-//=> 1.
-const gameSet = DNECards;
-
 //=> 1.1. Запуск игры
 const initGame = () => {
     const game = {
@@ -94,8 +91,8 @@ const initPlayer = () => {
     };
 
     moveCardById("car-cosmos-track", win77.game.catalog.anti, player.cars);
-    moveCardById("v", win77.game.catalog.npc, player.npc);
     moveCardById("a", win77.game.catalog.npc, player.npc);
+    moveCardById("d", win77.game.catalog.npc, player.npc);
 
     moveCardById("class-ttter", win77.game.catalog.class, player.class);
 
@@ -109,5 +106,8 @@ win77.setPlayer(initPlayer());
 initInventory();
 
 //=> 3. Игрок использует карты
+
+// todo положить сюда карты звука после ивента
+// win77.game.player.sound
 
 

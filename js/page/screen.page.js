@@ -24,10 +24,12 @@ const SCREEN_NAMES = [
 ];
 
 const initScreen = () => {
+    const body = document.querySelector("body");
     if (win77.router.currentPage === PAGE_NAMES.hud) {
-        document.querySelector("body").style.backgroundImage = `url('./libs/screen/${SCREEN_NAMES[getRandomInt(SCREEN_NAMES.length)]}.jpg')`;
+        body.classList.remove("background-hidden");
+        body.style.backgroundImage = `url('./libs/screen/${SCREEN_NAMES[getRandomInt(SCREEN_NAMES.length)]}.jpg')`;
     } else {
-        document.querySelector("body").style.backgroundImage = `none`;
+        body.classList.add("background-hidden");
     }
 }
 

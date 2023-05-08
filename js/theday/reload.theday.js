@@ -12,7 +12,7 @@ const reloadTheday = () => {
     document.querySelector("#dne-page-up").classList.remove("js-open");
     console.log("Cards from table", win77.game.table);
     win77.game.table.forEach((card) => {
-        moveCardById(card.id, win77.game.table, win77.game.player.loot);
+        moveCardById(card.id, win77.game.table, win77.game.player.sound);
     });
 
     win77.giveIncomeToPlayer(win77.game.event.result.income);

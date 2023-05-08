@@ -37,14 +37,14 @@ const carInventoryParent = document.querySelector(".js-in-car");
 
 
 const inventoryList = document.querySelector("#inventory-list");
-// const soundList = document.querySelector("#sound-list");
+const soundList = document.querySelector("#sound-list");
 const playerClassList = document.querySelector("#player-class-list");
 const playerCrewList = document.querySelector("#player-crew-list");
 
 
 const cardNodesByType = {
     [CARD_TYPES.loot]: inventoryList,
-    // [CARD_TYPES.sound]: soundList,
+    [CARD_TYPES.sound]: soundList,
     [CARD_TYPES.class]: playerClassList,
     [CARD_TYPES.npc]: playerCrewList
 }
@@ -69,6 +69,7 @@ const inventory = {
         cardNodesByType.loot.innerHTML = ``;
         cardNodesByType.class.innerHTML = ``;
         cardNodesByType.npc.innerHTML = ``;
+        cardNodesByType.sound.innerHTML = ``;
     }
 }
 
@@ -99,6 +100,11 @@ const initInventory = () => {
 
     player.loot.forEach((lootCard) => {
         appendCardToInventory(lootCard, CARD_TYPES.loot);
+    });
+
+    player.sound.forEach((soundCard) => {
+        // console.log("player.sound, soundCard", player.sound, soundCard);
+        appendCardToInventory(soundCard, CARD_TYPES.sound);
     });
 
     player.cars.forEach((carCard) => {
