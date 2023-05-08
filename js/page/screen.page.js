@@ -1,4 +1,6 @@
 import { getRandomInt } from "../utils/getCardById.js";
+import { win77 } from "../dne-cli.js";
+import { PAGE_NAMES } from "../hud/router.hud.js";
 
 const SCREEN_NAMES = [
     `screen-nohud--on-bike`,
@@ -22,12 +24,19 @@ const SCREEN_NAMES = [
 ];
 
 const initScreen = () => {
-    const element = document.querySelector(".hud-body-background");
-    element.style.backgroundImage = `url('./libs/screen/${SCREEN_NAMES[getRandomInt(SCREEN_NAMES.length)]}.jpg')`;
+    if (win77.router.currentPage === PAGE_NAMES.hud) {
+        document.querySelector("body").style.backgroundImage = `url('./libs/screen/${SCREEN_NAMES[getRandomInt(SCREEN_NAMES.length)]}.jpg')`;
+    } else {
+        document.querySelector("body").style.backgroundImage = `none`;
+    }
 }
 
-initScreen();
-
-setInterval(() => {
+const initIntervalScreen = () => {
+    // console.log("Its hud?", win77.router.currentPage === PAGE_NAMES.hud, win77.router.currentPage, PAGE_NAMES.hud);
     initScreen();
-}, 30000);
+    setInterval(() => {
+        initScreen();
+    }, 30000);
+}
+
+export { initIntervalScreen };

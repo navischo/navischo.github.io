@@ -1,3 +1,4 @@
+/*CORE*/
 @import "./blocks/pokeball.css";
 @import "./blocks/card.css";
 @import "./blocks/catalog.css";
@@ -5,8 +6,12 @@
 @import "./blocks/hud.css";
 @import "./blocks/theday.css";
 
+/*CUSTOM UI COMPONENT*/
+@import "blocks/cybr-btn.css";
+
+/*CUSTOMIZATION*/
 @import "./cards-customization.css";
 @import "./page-customization.css";
 @import "./modals-customization.css";
-
 @import "./ctrlpme.css";
+@import "framework.css";

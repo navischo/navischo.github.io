@@ -3,6 +3,7 @@ import { CARD_TYPES } from "../cards/const.cards.js";
 
 import { hudMarkup, initHud } from "./dom.hud.js";
 import { updHand } from "../cards/dom.cards.js";
+import { initIntervalScreen } from "../page/screen.page.js";
 
 const PAGE_NAMES = {
     enter: "enter",
@@ -19,7 +20,7 @@ const body = document.querySelector("body");
 const title = document.querySelector(".head-title");
 // todo по-умолчанию худ не отрисовывается, открыт каталог звука
 // todo если открыт hud => запустить генерацию худа
-let currentPage = PAGE_NAMES.npc;
+let currentPage = PAGE_NAMES.hud;
 
 const initNav = () => {
     const nav = {};
@@ -47,11 +48,11 @@ const goToPage = (name) => {
     win77.router.currentPage = name;
     win77.page.node.setAttribute("data-hash", `${name}`);
     localStorage.currentPage = win77.router.currentPage;
+    initIntervalScreen();
     body.classList.remove("hud-body-background");
     title.textContent = win77.router.currentPage.toUpperCase();
 
     if (name === PAGE_NAMES.hud) {
-        // initHud();
         win77.page.node.innerHTML = hudMarkup;
         updHand();
         body.classList.add("hud-body-background");
@@ -66,7 +67,7 @@ const portalNodes = portalParent.querySelectorAll(".js-portal");
 
 portalNodes.forEach((portalNode) => {
     portalNode.addEventListener("click", () => {
-       console.log("portalNode.dataset", portalNode.dataset, portalNode.textContent);
+       // console.log("portalNode.dataset", portalNode.dataset, portalNode.textContent);
         goToPage(portalNode.dataset.portal);
         console.log("win77.router", win77.router.currentPage);
     });

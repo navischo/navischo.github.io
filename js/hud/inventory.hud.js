@@ -18,6 +18,9 @@ const inventoryMarkup = `
 <div class="inventory">
     inventory: <br>{<br>
     <span id="inventory-list" class="inventory-items"></span>
+    }<br><br>
+    sound: <br>{<br>
+    <span id="sound-list" class="inventory-items"></span>
     }
 </div>
 
