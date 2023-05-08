@@ -7,6 +7,7 @@ import { moveCardById } from "../utils/getCardById.js";
 const reloadTheday = () => {
     initScore();
     updScore();
+    win77.pokeButton.dia.clearSmithsSet();
     win77.game.event.settings.guests.set.clear();
 
     document.querySelector("#dne-page-up").classList.remove("js-open");

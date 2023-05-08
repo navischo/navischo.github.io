@@ -13,12 +13,15 @@
     text-transform: uppercase;
 }
 
-.dialog::before {
+/*.dialog::before {*/
+.dialog__to,
+.dialog__bye {
     content: attr(data-to);
 
     position: absolute;
     top: 0;
     left: -6px;
+    z-index: 3;
     /*transform: translateX(-120%);*/
     background: rgba(0, 0, 0, .8);
 
@@ -27,11 +30,36 @@
     padding: 8px 10px;
     border: 2px solid #f55c4d;
 
+    font-family: "JetBrains Mono", monospace;
     font-weight: 700;
+    text-transform: uppercase;
     font-size: 18px;
     line-height: 1;
     color: #f55c4d;
 
+    transition: .3s ease-in;
+}
+
+.dialog__bye {
+    z-index: 2;
+
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.dialog__to:hover + .dialog__bye,
+.dialog__bye:hover {
+    transform: translateY(120%);
+    opacity: 1;
+    visibility: visible;
+}
+
+.dialog__to.--active,
+.dialog__to:hover,
+.dialog__bye:hover {
+    cursor: pointer;
+    box-shadow: 1px 2px 4px 0px #f55c4d;
 }
 
 .dialog__answer + .dialog__answer {
@@ -57,6 +85,8 @@
 }
 
 .dialog__answer.--custom {
+    width: 100%;
+    outline: none;
     /*border: none;*/
 }
 
@@ -126,6 +156,11 @@
 
 .background-hidden {
     background: none!important;
+}
+
+body.js-tab {
+    filter: invert(1);
+    overflow: hidden;
 }
 
 .hand {

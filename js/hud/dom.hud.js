@@ -1,5 +1,5 @@
 import { win77 } from "../dne-cli.js";
-import { placeholderMarkup } from "../page/dom.page.js";
+import { pokeButtonMarkup } from "../utils/pokeButtonMarkup.js";
 import { createNode } from "../utils/createNode.js";
 import { PAGE_NAMES } from "./router.hud.js";
 import { getCardElement } from "../cards/template.cards.js";
@@ -15,7 +15,7 @@ const hudMarkup = `
 
 <div id="bottom-hand" class="card-container hand"></div>
 
-<!-- ${placeholderMarkup} -->
+<!-- ${pokeButtonMarkup} -->
 `;
 
 const initHud = () => {

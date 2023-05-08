@@ -43,7 +43,20 @@ const isMale = (name) => {
     }
 }
 
-const useSmithsCard = () => {
+const drawSmitsCard = () => {
+    const parent = document.querySelector("#queue");
+    const guest = document.createElement("div");
+
+    guest.classList.add("card");
+    guest.innerHTML = `
+<div class="card__preview">
+    <img class="card__preview-img" src="https://lh5.googleusercontent.com/WUvRRRJpFIACJw50hOycHsKNnwSB3SdJSs-_5JQk11pKHMoDstW_n9nzWwb28y_wTUU=w2400" alt="" data-original="https://lh5.googleusercontent.com/WUvRRRJpFIACJw50hOycHsKNnwSB3SdJSs-_5JQk11pKHMoDstW_n9nzWwb28y_wTUU=w2400" style="">
+</div>`;
+
+    parent.appendChild(guest);
+}
+
+const useSmithsCard = (interval) => {
     const socialPoints = win77.game.event.settings.socialPoints;
     if (socialPoints > 0) {
         const smithCard = Object.assign({}, SMITHS_TYPES[getRandomInt(SMITHS_TYPES.length)]);
@@ -57,18 +70,33 @@ const useSmithsCard = () => {
 
         win77.game.event.settings.socialPoints--;
 
+        drawSmitsCard();
+
         console.log(`Security: Seems like ${smithCard.name} coming to your Event from strange portal with ${smithCard.plusCount} friends. Let them pass?`);
     } else {
+        clearInterval(interval);
         console.log(`Security: Seems like your social points is off`);
-        reloadTheday();
+        const portalToClose = document.querySelector(".js-rick-portal");
+        portalToClose ?
+        portalToClose.addEventListener("click", reloadTheday)
+        : "";
     }
+}
+
+const useSmithsCards = () => {
+    const interval = setInterval(() => {
+        const socialPoints = win77.game.event.settings.socialPoints;
+        useSmithsCard(interval);
+        console.log("We use one social point, left:", socialPoints);
+    }, 3000);
 }
 
 const clearSmithsSet = () => {
     win77.game.event.settings.guests.set.clear();
+    document.querySelector("#queue").innerHTML = "";
 }
 
-win77.pokeButton.dia.useSmithsCard = useSmithsCard;
+win77.pokeButton.dia.useSmithsCards = useSmithsCards;
 win77.pokeButton.dia.clearSmithsSet = clearSmithsSet;
 
 export { settings };

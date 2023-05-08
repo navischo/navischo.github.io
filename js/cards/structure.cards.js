@@ -107,7 +107,6 @@ initInventory();
 
 //=> 3. Игрок использует карты
 
-// todo положить сюда карты звука после ивента
-// win77.game.player.sound
+// todo показать карточку аудитории с анимацией slide-in-blurred-right
 
 
