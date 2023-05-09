@@ -8,58 +8,10 @@
     <title class="head-title">Catalog</title>
     <link rel="stylesheet" href="css/main.css">
 </head>
-<style>
-    body {
-        background: url("libs/screen/screen-hud--spalah-2@2x1.jpg")!important;
-        background-size: cover!important;
-        background-repeat: no-repeat;
-        background-position: center!important;
-    }
-</style>
-<body class="lazy build">
-    <div class="dialog" data-to="Captain">
-        <button id="dne-cli-exe" class="dialog__to --active">Captain</button>
-        <button class="js-dialog-bye dialog__bye">Bye</button>
-        <input id="dne-cli" type="text" class="dialog__answer --custom">
-        <button class="hvr-bounce-to-right dialog__answer">Розкажи мені про Санто-Домінго.</button>
-        <button class="hvr-bounce-to-right dialog__answer">Чому тебе називають Капітаном?</button>
-        <button class="hvr-bounce-to-right dialog__answer">Як бізнес?</button>
+<body class="lazy build background-single">
+    <div id="dialogs-container">
+
     </div>
-    <script>
-        const initDialogCli = () => {
-            const dneCliExe = document.querySelector("#dne-cli-exe");
-            const dneCliInput = document.querySelector("#dne-cli");
-            const dialogBye = document.querySelector(".js-dialog-bye");
-
-            console.log("dneCliExe & dneCliInput", dneCliExe, dneCliInput);
-
-            const runCli = () => {
-                console.log("Cli command evaluation", dneCliInput.value);
-                try {
-                    eval(dneCliInput.value);
-                } catch (e) {
-                    console.log("Command finished with code 1", e); // передать объект исключения обработчику ошибок
-                }
-                dneCliInput.value = "";
-            }
-
-            dneCliExe.addEventListener("click", () => {
-                runCli();
-            });
-
-            dneCliInput.addEventListener("keydown", (e) => {
-                if (e.key === "Enter") {
-                    runCli();
-                }
-            });
-
-            dialogBye.addEventListener("click", () => {
-                document.querySelector(".dialog").style.display = "none";
-            });
-        }
-
-        initDialogCli();
-    </script>
     <div id="dne-page-up" class="body-cell">
 
     </div>
@@ -141,6 +93,7 @@
     <script type="module" src="js/hud/inventory.hud.js"></script>
     <script type="module" src="js/hud/tab.hud.js"></script>
     <script type="module" src="js/hud/fon.hud.js"></script>
+    <script type="module" src="js/hud/dialogCli.hud.js"></script>
     <script type="module" src="js/page/screen.page.js"></script>
     <script type="module" src="js/inInteraction/interface.inInteraction.js"></script>
 

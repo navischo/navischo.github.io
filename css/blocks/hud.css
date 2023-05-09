@@ -154,6 +154,13 @@
     transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
 }
 
+.background-single {
+    background: url("../../libs/screen/screen-hud--spalah-2@2x1.jpg")!important;
+    background-size: cover!important;
+    background-repeat: no-repeat;
+    background-position: center!important;
+}
+
 .background-hidden {
     background: none!important;
 }
