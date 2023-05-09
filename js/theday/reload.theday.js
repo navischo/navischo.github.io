@@ -5,6 +5,8 @@ import { updTable, updHand } from "../cards/dom.cards.js";
 import { moveCardById } from "../utils/getCardById.js";
 
 const reloadTheday = () => {
+    console.log(`Event is finished. You archive ${win77.game.event.result.income} income and some sound to play next time`, win77.game.event);
+
     initScore();
     updScore();
     win77.pokeButton.dia.clearSmithsSet();
@@ -20,8 +22,6 @@ const reloadTheday = () => {
     win77.giveIncomeToPlayer(win77.game.event.result.income);
     win77.giveSkillPointsToPlayer(1);
     win77.updBalanceHUD();
-
-    console.log(`Event is finished. You archive ${win77.game.event.result.income} income`, win77.game.event);
 
     initInventory();
     updTable();
