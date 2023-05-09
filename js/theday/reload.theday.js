@@ -11,6 +11,7 @@ const reloadTheday = () => {
     win77.game.event.settings.guests.set.clear();
 
     document.querySelector("#dne-page-up").classList.remove("js-open");
+    document.querySelector("#dne-page-up").innerHTML = "";
     console.log("Cards from table", win77.game.table);
     win77.game.table.forEach((card) => {
         moveCardById(card.id, win77.game.table, win77.game.player.sound);

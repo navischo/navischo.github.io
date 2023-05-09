@@ -23,6 +23,7 @@ const initGradient = () => {
     {
         const parent = document.querySelector("#gradient");
         if (parent) {
+            // console.log("Gradient generates");
             let c0_0 = colors[colorIndices[0]];
             let c0_1 = colors[colorIndices[1]];
             let c1_0 = colors[colorIndices[2]];
@@ -55,6 +56,7 @@ const initGradient = () => {
             }
         } else {
             clearInterval(interval);
+            console.log("Gradient generation stop");
         }
     }
 

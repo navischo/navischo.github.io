@@ -77,18 +77,24 @@ const useSmithsCard = (interval) => {
         clearInterval(interval);
         console.log(`Security: Seems like your social points is off`);
         const portalToClose = document.querySelector(".js-rick-portal");
-        portalToClose ?
-        portalToClose.addEventListener("click", reloadTheday)
-        : "";
+        if (portalToClose) {
+            portalToClose.addEventListener("click", reloadTheday);
+        }
     }
 }
 
 const useSmithsCards = () => {
-    const interval = setInterval(() => {
+    const handler = () => {
         const socialPoints = win77.game.event.settings.socialPoints;
+
         useSmithsCard(interval);
         console.log("We use one social point, left:", socialPoints);
-    }, 3000);
+
+        if (socialPoints === 0) {
+            clearInterval(interval);
+        }
+    };
+    const interval = setInterval(handler, 500); // 3000
 }
 
 const clearSmithsSet = () => {

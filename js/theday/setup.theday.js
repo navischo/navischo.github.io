@@ -2,6 +2,7 @@ import { win77 } from "../dne-cli.js";
 import { closePopup } from "../popup/dom.popup.jquery.js";
 import { switchTime } from "../hud/time.hud.js";
 import { settings } from "./const.theday.js";
+import { drawTheday } from "./init.theday.js";
 
 const setupTheday = () => {
     let lineupLength = 0;
@@ -20,7 +21,8 @@ const setupTheday = () => {
 
     switchTime(win77.game.event.lineupLength);
     win77.setEventSettings(Object.assign({}, settings));
-    console.log("Starting event..", win77.game.event.lineupLength, win77.pokeButton.node);
+    console.log(`Starting event..`, win77.game.event);
+    drawTheday();
 }
 
 export { setupTheday };
