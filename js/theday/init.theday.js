@@ -22,7 +22,7 @@ ${pokeButtonMarkup}
 
 const initTheday = () => {
     console.log(`${win77.game.player.id} starts an Event`, win77);
-    initGradient();
+    // initGradient();
     document.querySelector(".js-rick-portal").style.display = "block";
     win77.pokeButton.dia.useSmithsCards();
 }

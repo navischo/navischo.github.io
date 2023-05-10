@@ -39,7 +39,7 @@ const getDialogOptionMarkup = (line) => `<button class="hvr-bounce-to-right dial
 const getDialogActionMarkup = (line) => `<button class="js-dialog-${line} dialog__bye">${line}</button>`;
 
 const getDialogCliMarkup = (dialogData) => `
-<div class="dialog" data-to="${dialogData.to}">
+<div class="dialog" data-to="${dialogData.to}" style="display: none">
     <button id="dne-cli-exe" class="dialog__to --active">${dialogData.to}</button>
     ${dialogData.actions.map((action) => getDialogActionMarkup(action.line)).join("")}
     

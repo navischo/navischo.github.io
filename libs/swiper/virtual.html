@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <!-- Demo styles -->
+    <style>
+        /*
+        траблы постраничного представления
+        ширина и высота на адаптиве
+        возможность скролить при размере больше одного екрана
+        */
+        body {
+            background: #eee;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #000;
+            margin: 0;
+            padding: 0;
+        }
+
+        .swiper {
+            box-sizing: border-box;
+            width: 100vw;
+            height: 100vh;
+            /*margin: 20px auto;*/
+        }
+
+        .swiper-slide {
+            height: auto;
+            padding-bottom: 50px;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            text-align: left;
+            font-size: 18px;
+            background: #fff;
+        }
+
+        .append-buttons {
+            position: fixed;
+            left: 50%;
+            top: 20px;
+            z-index: 20;
+            transform: translateX(-50%);
+
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .append-buttons a {
+            display: inline-block;
+            border: 1px solid #007aff;
+            color: #007aff;
+            text-decoration: none;
+            padding: 4px 10px;
+            border-radius: 4px;
+            margin: 0 10px;
+            font-size: 13px;
+        }
+
+        .swiper-page {
+            height: calc(100vh - 60px);
+            padding: 30px;
+
+            overflow-y: scroll;
+        }
+    </style>
+</head>
+
+<body>
+<!-- Swiper -->
+<div class="swiper">
+    <div class="swiper-wrapper"></div>
+    <div class="swiper-scrollbar"></div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</div>
+<p class="append-buttons">
+    <a href="#" class="prepend-2-slides">Prepend 2 Slides</a>
+    <a href="#" class="slide-1">Slide 1</a>
+    <a href="#" class="slide-250">Slide 50</a>
+    <a href="#" class="slide-500">Slide 100</a>
+    <a href="#" class="slide-150">Slide 150</a>
+    <a href="#" class="slide-200">Slide 200</a>
+    <a href="#" class="append-slide">Append Slide</a>
+</p>
+
+<!-- Swiper JS -->
+<script type="module" src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+<script type="module" src="../../js/cards/data.cards.js"></script>
+
+<!-- Initialize Swiper -->
+<script type="module">
+    import { DNECards } from "../../js/cards/data.cards.js";
+    console.log(DNECards);
+    const pageMarkup = (card) => `
+<section class="swiper-page">
+<h4>${card.name} Scroll Container</h4>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In luctus,
+          ex eu sagittis faucibus, ligula ipsum sagittis magna, et imperdiet
+          dolor lectus eu libero. Vestibulum venenatis eget turpis sed
+          faucibus. Maecenas in ullamcorper orci, eu ullamcorper sem. Etiam
+          elit ante, luctus non ante sit amet, sodales vulputate odio. Aenean
+          tristique nisl tellus, sit amet fringilla nisl volutpat cursus.
+          Quisque dignissim lectus ac nunc consectetur mattis. Proin vel
+          hendrerit ipsum, et lobortis dolor. Vestibulum convallis, nibh et
+          tincidunt tristique, nisl risus facilisis lectus, ut interdum orci
+          nisl ac nunc. Cras et aliquam felis. Quisque vel ipsum at elit
+          sodales posuere eget non est. Fusce convallis vestibulum dolor non
+          volutpat. Vivamus vestibulum quam ut ultricies pretium.
+        </p>
+        <p>
+          Suspendisse rhoncus fringilla nisl. Mauris eget lorem ac urna
+          consectetur convallis non vel mi. Donec libero dolor, volutpat ut
+          urna sit amet, aliquet molestie purus. Phasellus faucibus, leo vel
+          scelerisque lobortis, ipsum leo sollicitudin metus, eget sagittis
+          ante orci eu ipsum. Nulla ac mauris eu risus sagittis scelerisque
+          iaculis bibendum mauris. Cras ut egestas orci. Cras odio risus,
+          sagittis ut nunc vitae, aliquam consectetur purus. Vivamus ornare
+          nunc vel tellus facilisis, quis dictum elit tincidunt. Donec
+          accumsan nisi at laoreet sodales. Cras at ullamcorper massa.
+          Maecenas at facilisis ex. Nam mollis dignissim purus id efficitur.
+        </p>
+        <p>
+          Curabitur eget aliquam erat. Curabitur a neque vitae purus volutpat
+          elementum. Vivamus quis vestibulum leo, efficitur ullamcorper velit.
+          Integer tincidunt finibus metus vel porta. Mauris sed mauris congue,
+          pretium est nec, malesuada purus. Nulla hendrerit consectetur arcu
+          et lacinia. Suspendisse augue justo, convallis eget arcu in, pretium
+          tempor ligula. Nullam vulputate tincidunt est ut ullamcorper.
+        </p>
+        <p>
+          Curabitur sed sodales leo. Nulla facilisi. Etiam condimentum, nisi
+          id tempor vulputate, nisi justo cursus justo, pellentesque
+          condimentum diam arcu sit amet leo. Cum sociis natoque penatibus et
+          magnis dis parturient montes, nascetur ridiculus mus. In placerat
+          tellus a posuere vehicula. Donec diam massa, efficitur vitae mattis
+          et, pretium in augue. Fusce iaculis mi quis ante venenatis, sit amet
+          pellentesque orci aliquam. Vestibulum elementum posuere vehicula.
+        </p>
+        <p>
+          Sed tincidunt diam a massa pharetra faucibus. Praesent condimentum
+          id arcu nec fringilla. Maecenas faucibus, ante et venenatis
+          interdum, erat mi eleifend dui, at convallis nisl est nec arcu. Duis
+          vitae arcu rhoncus, faucibus magna ut, tempus metus. Cras in nibh
+          sed ipsum consequat rhoncus. Proin fringilla nulla ut augue tempor
+          fermentum. Nunc hendrerit non nisi vitae finibus. Donec eget ornare
+          libero. Aliquam auctor erat enim, a semper risus semper at. In ut
+          dui in metus tincidunt euismod eget et lacus. Aenean et dictum urna,
+          sed rhoncus lorem. Duis pharetra sagittis odio. Etiam a libero ut
+          nisi feugiat tincidunt vel vitae turpis. Maecenas vel orci sit amet
+          lorem hendrerit venenatis sollicitudin ut dui. Quisque rhoncus nibh
+          in massa pretium scelerisque.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In luctus,
+          ex eu sagittis faucibus, ligula ipsum sagittis magna, et imperdiet
+          dolor lectus eu libero. Vestibulum venenatis eget turpis sed
+          faucibus. Maecenas in ullamcorper orci, eu ullamcorper sem. Etiam
+          elit ante, luctus non ante sit amet, sodales vulputate odio. Aenean
+          tristique nisl tellus, sit amet fringilla nisl volutpat cursus.
+          Quisque dignissim lectus ac nunc consectetur mattis. Proin vel
+          hendrerit ipsum, et lobortis dolor. Vestibulum convallis, nibh et
+          tincidunt tristique, nisl risus facilisis lectus, ut interdum orci
+          nisl ac nunc. Cras et aliquam felis. Quisque vel ipsum at elit
+          sodales posuere eget non est. Fusce convallis vestibulum dolor non
+          volutpat. Vivamus vestibulum quam ut ultricies pretium.
+        </p>
+        <p>
+          Suspendisse rhoncus fringilla nisl. Mauris eget lorem ac urna
+          consectetur convallis non vel mi. Donec libero dolor, volutpat ut
+          urna sit amet, aliquet molestie purus. Phasellus faucibus, leo vel
+          scelerisque lobortis, ipsum leo sollicitudin metus, eget sagittis
+          ante orci eu ipsum. Nulla ac mauris eu risus sagittis scelerisque
+          iaculis bibendum mauris. Cras ut egestas orci. Cras odio risus,
+          sagittis ut nunc vitae, aliquam consectetur purus. Vivamus ornare
+          nunc vel tellus facilisis, quis dictum elit tincidunt. Donec
+          accumsan nisi at laoreet sodales. Cras at ullamcorper massa.
+          Maecenas at facilisis ex. Nam mollis dignissim purus id efficitur.
+        </p>
+        <p>
+          Curabitur eget aliquam erat. Curabitur a neque vitae purus volutpat
+          elementum. Vivamus quis vestibulum leo, efficitur ullamcorper velit.
+          Integer tincidunt finibus metus vel porta. Mauris sed mauris congue,
+          pretium est nec, malesuada purus. Nulla hendrerit consectetur arcu
+          et lacinia. Suspendisse augue justo, convallis eget arcu in, pretium
+          tempor ligula. Nullam vulputate tincidunt est ut ullamcorper.
+        </p>
+        <p>
+          Curabitur sed sodales leo. Nulla facilisi. Etiam condimentum, nisi
+          id tempor vulputate, nisi justo cursus justo, pellentesque
+          condimentum diam arcu sit amet leo. Cum sociis natoque penatibus et
+          magnis dis parturient montes, nascetur ridiculus mus. In placerat
+          tellus a posuere vehicula. Donec diam massa, efficitur vitae mattis
+          et, pretium in augue. Fusce iaculis mi quis ante venenatis, sit amet
+          pellentesque orci aliquam. Vestibulum elementum posuere vehicula.
+        </p>
+        <p>
+          Sed tincidunt diam a massa pharetra faucibus. Praesent condimentum
+          id arcu nec fringilla. Maecenas faucibus, ante et venenatis
+          interdum, erat mi eleifend dui, at convallis nisl est nec arcu. Duis
+          vitae arcu rhoncus, faucibus magna ut, tempus metus. Cras in nibh
+          sed ipsum consequat rhoncus. Proin fringilla nulla ut augue tempor
+          fermentum. Nunc hendrerit non nisi vitae finibus. Donec eget ornare
+          libero. Aliquam auctor erat enim, a semper risus semper at. In ut
+          dui in metus tincidunt euismod eget et lacus. Aenean et dictum urna,
+          sed rhoncus lorem. Duis pharetra sagittis odio. Etiam a libero ut
+          nisi feugiat tincidunt vel vitae turpis. Maecenas vel orci sit amet
+          lorem hendrerit venenatis sollicitudin ut dui. Quisque rhoncus nibh
+          in massa pretium scelerisque.
+        </p>
+</section>
+`;
+
+    let appendNumber = 600;
+    let prependNumber = 1;
+    const swiper = new Swiper('.swiper', {
+        slidesPerView: 1,
+        // direction: "vertical",
+        centeredSlides: true,
+        spaceBetween: 30,
+        // freeMode: true,
+        simulateTouch: false,
+        scrollbar: {
+            el: ".swiper-scrollbar",
+        },
+        // mousewheel: true,
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'fraction',
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        virtual: {
+            slides: (function () {
+                const slides = [];
+                for (let card of DNECards) {
+                    console.log(card);
+                    slides.push(pageMarkup(card));
+                }
+                return slides;
+            })(),
+        },
+    });
+
+    document
+        .querySelector('.slide-1')
+        .addEventListener('click', function (e) {
+            e.preventDefault();
+            swiper.slideTo(0, 0);
+        });
+
+    document
+        .querySelector('.slide-250')
+        .addEventListener('click', function (e) {
+            e.preventDefault();
+            swiper.slideTo(49, 0);
+        });
+
+    document
+        .querySelector('.slide-500')
+        .addEventListener('click', function (e) {
+            e.preventDefault();
+            swiper.slideTo(99, 0);
+        });
+
+    document
+        .querySelector('.slide-150')
+        .addEventListener('click', function (e) {
+            e.preventDefault();
+            swiper.slideTo(149, 0);
+        });
+
+    document
+        .querySelector('.slide-200')
+        .addEventListener('click', function (e) {
+            e.preventDefault();
+            swiper.slideTo(199, 0);
+        });
+
+    document
+        .querySelector('.prepend-2-slides')
+        .addEventListener('click', function (e) {
+            e.preventDefault();
+            swiper.virtual.prependSlide([
+                'New card n.' + --prependNumber,
+                'New card n.' + --prependNumber,
+            ]);
+        });
+
+    document
+        .querySelector('.append-slide')
+        .addEventListener('click', function (e) {
+            e.preventDefault();
+            swiper.virtual.appendSlide('New card n.' + ++appendNumber);
+        });
+</script>
+</body>
+
+</html>

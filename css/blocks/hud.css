@@ -1,3 +1,11 @@
+#queue {
+    position: fixed;
+    left: calc(50% - 150px);
+    top: calc(50% - 230px);
+
+    display: flex;
+}
+
 .dialog {
     position: fixed;
     bottom: 90px;
@@ -381,6 +389,7 @@ body {
     position: fixed;
     top: 6px;
     right: 55px;
+    /*z-index: 21;*/
 
     color: inherit;
     font-family: "JetBrains Mono", monospace;
