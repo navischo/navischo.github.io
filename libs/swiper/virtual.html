@@ -33,7 +33,7 @@
 
         .swiper-slide {
             height: auto;
-            padding-bottom: 50px;
+            /*padding-bottom: 50px;*/
             -webkit-box-sizing: border-box;
             box-sizing: border-box;
             text-align: left;
@@ -64,10 +64,54 @@
         }
 
         .swiper-page {
-            height: calc(100vh - 60px);
-            padding: 30px;
+            /*height: calc(100vh - 60px);*/
+            height: 100vh;
+            /*padding: 30px;*/
 
             overflow-y: scroll;
+        }
+
+        .custom-scrollbar {
+            -webkit-overflow-scrolling: inherit;
+            transform: translate3d(0, 0, 0);
+        }
+
+        .custom-scrollbar.--x {
+            overflow-x: auto;
+            overflow-y: hidden;
+        }
+
+        .custom-scrollbar.--y {
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar {
+            height: 9px;
+            width: 0px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-button:end:increment,
+        .custom-scrollbar::-webkit-scrollbar-button:start:decrement {
+            background: 0 0;
+            display: none;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-track-piece {
+            background: transparent;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb:horizontal,
+        .custom-scrollbar::-webkit-scrollbar-thumb:vertical {
+            background: var(--colors-tertiary--500);
+            border-radius: 5px;
+            display: block;
+            height: 50px;
+        }
+
+        .iframe-live {
+            width: 100%;
+            height: 100vh;
         }
     </style>
 </head>
@@ -103,7 +147,8 @@
     import { DNECards } from "../../js/cards/data.cards.js";
     console.log(DNECards);
     const pageMarkup = (card) => `
-<section class="swiper-page">
+<section class="swiper-page custom-scrollbar --y">
+${ card.id === "demo-jelz" ? `<iframe class="iframe-live" src="https://www.youtube.com/embed/bmkUxv_oK68" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>` : "" }
 <h4>${card.name} Scroll Container</h4>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. In luctus,
@@ -247,7 +292,7 @@
             slides: (function () {
                 const slides = [];
                 for (let card of DNECards) {
-                    console.log(card);
+                    console.log(card.id);
                     slides.push(pageMarkup(card));
                 }
                 return slides;

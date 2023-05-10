@@ -49,11 +49,20 @@ const initHandlers = (cardData, controls) => {
         }
     };
 
+    const talkButtonHandler = () => {
+        if (cardData.id === "felix") {
+            const audioObj = new Audio("../../mp3/mur.mp3");
+            audioObj.play();
+        }
+    }
+
     controls.btns.forEach((btn) => {
         if (btn.textContent === COMMANDS.plus) {
             btn.addEventListener("click", plusButtonHandler);
         } else if (btn.textContent === COMMANDS.buy) {
             btn.addEventListener("click", buyButtonHandler);
+        } else if (btn.textContent === COMMANDS.talk) {
+            btn.addEventListener("click", talkButtonHandler);
         }
     });
 }

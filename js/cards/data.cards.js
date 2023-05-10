@@ -912,6 +912,16 @@ const initDNELootArr = () => {
 
     LootArr.push(new DNELootCard("pochita", "Почіта", POCHITA_LONGLINE, POCHITA_IMG, 1, 0, "Тваринка", POCHITA_SHORTLINE, "", true, "npc"));
 
+    // Фелікс
+    //
+    //
+    const FELIX_LONGLINE = "";
+    const FELIX_SHORTLINE = `Зіграє з тобою сет b2b. Зігріває та муркоче, загортається в м'які речі і заряджається на сонечку.`;
+    const FELIX_IMG_ID = `1XEFWfOp4QXDsEEp9X3I9XQXADkno9-23`;
+    const FELIX_IMG = `https://drive.google.com/uc?id=${FELIX_IMG_ID}`;
+
+    LootArr.push(new DNELootCard("felix", "Фелікс", FELIX_LONGLINE, FELIX_IMG, 1, 0, "Тваринка-DJ", FELIX_SHORTLINE, "", true, "npc"));
+
     // Сон
     //
     //

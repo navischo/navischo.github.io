@@ -1207,3 +1207,20 @@ transform: scale(1.6) translateY(48px);
     z-index: 2;
     color: white;
 }
+
+#dne-card-felix .card__preview-img {
+    transform: scale(1.4) translateY(10px);
+}
+
+#dne-card-felix .card__header {
+    position: absolute;
+    z-index: 2;
+    color: black;
+}
+
+#dne-card-felix .card__description {
+    position: absolute;
+    bottom: 25px;
+    z-index: 2;
+    color: white;
+}
