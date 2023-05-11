@@ -59,7 +59,7 @@ const initDialogCli = () => {
     const dneCliInput = document.querySelector("#dne-cli");
     const dialogBye = document.querySelector(".js-dialog-bye");
 
-    console.log("dneCliExe & dneCliInput", dneCliExe, dneCliInput);
+    // console.log("dneCliExe & dneCliInput", dneCliExe, dneCliInput);
 
     const runCli = () => {
         console.log("Cli command evaluation", dneCliInput.value);

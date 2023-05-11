@@ -19,7 +19,7 @@ const setupTheday = () => {
     document.querySelector("#dne-page-up").classList.add("js-open");
     closePopup();
 
-    switchTime(win77.game.event.lineupLength);
+    // switchTime(win77.game.event.lineupLength); // time temporary disabled
     win77.setEventSettings(Object.assign({}, settings));
     console.log(`Starting event..`, win77.game.event);
     drawTheday();

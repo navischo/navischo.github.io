@@ -1,22 +1,6 @@
-import { createNode } from "../utils/createNode.js";
 import { win77 } from "../dne-cli.js";
 import { getRandomInt } from "../utils/getCardById.js";
 import { openPopup } from "../popup/dom.popup.jquery.js";
-
-const body = document.querySelector("body");
-
-const markup = `
-<span id="player-score" class="js-score-val">5</span> vs <span id="versus-score" class="js-score-val">12</span>
-`;
-
-const createMarkupNode = () => {
-    createNode(body, "h1", markup, "score");
-}
-
-createMarkupNode();
-
-const playerScoreNode = document.querySelector("#player-score");
-const versusScoreNode = document.querySelector("#versus-score");
 
 const initScore = () => {
     let crewPoints = 0;
@@ -35,6 +19,9 @@ const isItWin = () => {
 }
 
 const updScore = (bonus = 0) => {
+    const playerScoreNode = document.querySelector("#player-score");
+    const versusScoreNode = document.querySelector("#versus-score");
+
     win77.game.player.score = win77.game.player.score + +bonus;
 
     playerScoreNode.innerHTML = win77.game.player.score;
@@ -44,8 +31,5 @@ const updScore = (bonus = 0) => {
 }
 
 win77.pokeButton.dia.updScore = updScore;
-
-initScore();
-updScore();
 
 export { initScore, updScore };

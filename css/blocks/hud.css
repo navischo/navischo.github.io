@@ -174,8 +174,8 @@
 }
 
 body.js-tab {
-    filter: invert(1);
-    overflow: hidden;
+    /*filter: invert(1);*/
+    /*overflow: hidden;*/
 }
 
 .hand {
@@ -389,7 +389,7 @@ body {
     position: fixed;
     top: 6px;
     right: 55px;
-    /*z-index: 21;*/
+    z-index: 21;
 
     color: inherit;
     font-family: "JetBrains Mono", monospace;

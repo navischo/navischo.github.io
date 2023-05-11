@@ -4,7 +4,7 @@ import { drawLootCards } from "../cards/dom.cards.js";
 import { drawDoorCards } from "../cards/doorDom.cards.js";
 import { clearChips, drawChips } from "./chips.catalog.js";
 import { splitDoorsAndLoot } from "../utils/setToArr.js";
-import { goToPage } from "../hud/router.hud.js";
+import { swiper } from "../swiper/swiper.module.js";
 
 const catalogSaveCeil = "currentCatalog";
 const saveCatalog = (currentType) => {
@@ -30,21 +30,21 @@ const initCatalog = (type) => {
     document.querySelector(".js-cards-catalog").innerHTML = "";
     document.querySelector(".head-title").innerHTML = `${type.toUpperCase()} CATALOG`;
     if (type === "prj") {
-        drawDoorCards(doors);
+        drawDoorCards(doors, ".js-cards-catalog");
         clearChips();
         drawChips(doors, ".js-doors");
         console.log(document.querySelectorAll(".card:not(.card--door)"));
     }  if (type === "" || type === "anti") {
         clearChips();
 
-        drawDoorCards(doors);
+        drawDoorCards(doors, ".js-cards-catalog");
         drawChips(doors, ".js-doors");
 
-        drawLootCards(loot);
+        drawLootCards(loot, ".js-cards-catalog");
         drawChips(loot, ".js-items");
     } else {
         const DNENewCardsArr = Array.from(win77.game.catalog.all).filter(card => card.type === type);
-        drawLootCards(DNENewCardsArr);
+        drawLootCards(DNENewCardsArr, ".js-cards-catalog");
         clearChips();
         drawChips(DNENewCardsArr, ".js-items");
     }
@@ -75,6 +75,7 @@ catalogTypeControls.forEach((catalogTypeControl) => {
     catalogTypeControl.addEventListener("click", () => {
         const type = catalogTypeControl.textContent.toLowerCase();
         // console.log("type", type);
+        swiper.slideTo(0, 0);
         saveCatalog(type);
         // console.log("type CARD_TYPES", type, CARD_TYPES, CARD_TYPES[type]);
         initCatalog(CARD_TYPES[type]);

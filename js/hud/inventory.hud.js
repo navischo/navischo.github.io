@@ -25,8 +25,7 @@ const inventoryMarkup = `
 </div>
 
 `;
-document.querySelector("#dne-page").insertAdjacentHTML("afterend", inventoryMarkup);
-
+document.querySelector(".swiper").insertAdjacentHTML("afterend", inventoryMarkup); // todo error
 
 const carInventoryMarkup = `
 in Car(<button class="js-car-name">car</button>)<span class="js-car-in">{<br>
@@ -114,4 +113,4 @@ const initInventory = () => {
     initInventoryPopupJquery();
 }
 
-export { initInventory };
+export { initInventory, inventoryMarkup };

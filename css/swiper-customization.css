@@ -1,0 +1,108 @@
+body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+.swiper {
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    /*margin: 20px auto;*/
+}
+
+.swiper-slide {
+    height: auto;
+    /*padding-bottom: 50px;*/
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    text-align: left;
+    font-size: 18px;
+    /*background: #fff;*/
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    top: 96% !important;
+}
+
+.append-buttons {
+    /*position: fixed;*/
+    /*left: 50%;*/
+    /*top: 30px;*/
+    /*z-index: 20;*/
+    /*transform: translateX(-50%);*/
+
+    /*text-align: center;*/
+    /*margin-top: 20px;*/
+}
+
+.append-buttons a {
+    display: inline-block;
+    border: 1px solid #007aff;
+    color: #007aff;
+    text-decoration: none;
+    padding: 4px 10px;
+    border-radius: 4px;
+    margin: 0 10px;
+    font-size: 13px;
+    background: white;
+}
+
+.append-buttons a:first-child {
+    margin-left: 0;
+}
+
+.swiper-page {
+    /*height: calc(100vh - 60px);*/
+    height: 100vh;
+    /*padding: 30px;*/
+
+    overflow-y: scroll;
+}
+
+.custom-scrollbar {
+    -webkit-overflow-scrolling: inherit;
+    transform: translate3d(0, 0, 0);
+}
+
+.custom-scrollbar.--x {
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.custom-scrollbar.--y {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    height: 9px;
+    width: 0px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-button:end:increment,
+.custom-scrollbar::-webkit-scrollbar-button:start:decrement {
+    background: 0 0;
+    display: none;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track-piece {
+    background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:horizontal,
+.custom-scrollbar::-webkit-scrollbar-thumb:vertical {
+    background: var(--colors-tertiary--500);
+    border-radius: 5px;
+    display: block;
+    height: 50px;
+}
+
+.iframe-live {
+    width: 100%;
+    height: 100vh;
+}

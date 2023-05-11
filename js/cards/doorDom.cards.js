@@ -36,8 +36,8 @@ const drawCard = (cardContainer, cardData) => {
     cardContainer.appendChild(newCard);
 };
 
-const drawDoorCards = (cardData) => {
-    const cardContainer = document.querySelector(`#dne-page`);
+const drawDoorCards = (cardData, parentSelector = "#dne-page") => {
+    const cardContainer = document.querySelector(parentSelector);
 
 
     cardData.forEach((DNEDoorCard) => {

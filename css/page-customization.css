@@ -20,6 +20,18 @@
     display: block;
 }
 
+.card-catalog-wrap {
+    width: 100%;
+    height: 100vh;
+    background: white;
+}
+
+.js-cards-catalog {
+    width: 920px;
+    max-width: max-content!important;
+    justify-content: center;
+}
+
 .build .js-cards-catalog[data-hash="hud"] {
     max-width: 100%;
 }
@@ -41,6 +53,23 @@
 
 #dne-page[data-hash="hud"].js-tab ~ .score {
     display: block;
+}
+
+body .units {
+    color: white;
+}
+
+body[data-hash="cards"] .units {
+    color: black;
+}
+
+body[data-hash="cards"] .inventory {
+    color: black;
+    text-shadow: none;
+}
+
+body[data-hash="cards"] .js-car-name {
+    text-shadow: none!important;
 }
 
 

@@ -105,7 +105,7 @@ const setTimer = () => {
     jpTimer();
 }
 
-setTimer();
+// setTimer();
 
 const switchTime = (min) => {
     let h = (min / 60) > 0 ? Math.floor(min / 60) : 0;

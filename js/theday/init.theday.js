@@ -1,3 +1,4 @@
+import { swiper } from "../swiper/swiper.module.js";
 import { win77 } from "../dne-cli.js";
 import { initGradient } from "./gradient.theday.js";
 import { pokeButtonMarkup } from "../utils/pokeButtonMarkup.js";
@@ -22,7 +23,7 @@ ${pokeButtonMarkup}
 
 const initTheday = () => {
     console.log(`${win77.game.player.id} starts an Event`, win77);
-    // initGradient();
+    initGradient();
     document.querySelector(".js-rick-portal").style.display = "block";
     win77.pokeButton.dia.useSmithsCards();
 }
@@ -42,6 +43,7 @@ const getThedayElement = () => {
 }
 
 const drawTheday = () => {
+    swiper.slideTo(3, 0);
     const parent = document.querySelector("#dne-page-up");
     parent.innerHTML = "";
     parent.appendChild(getThedayElement());
