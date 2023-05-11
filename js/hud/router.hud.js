@@ -70,8 +70,8 @@ const goToPage = (name) => {
 
     if (name === PAGE_NAMES.hud) {
         body.querySelector("#dne-page").innerHTML = hudMarkup;
-        initScore();  // todo error
-        updScore(); // todo error
+        initScore();
+        updScore();
         updHand();
         body.classList.add("hud-body-background");
     }

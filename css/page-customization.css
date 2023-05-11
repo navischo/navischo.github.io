@@ -72,4 +72,12 @@ body[data-hash="cards"] .js-car-name {
     text-shadow: none!important;
 }
 
+body[data-hash="admin"] .inventory,
+body[data-hash="event"] .inventory {
+    display: none;
+}
+
+body[data-hash="play"] .score {
+    color: white;
+}
 

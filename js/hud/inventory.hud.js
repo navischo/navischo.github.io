@@ -25,7 +25,7 @@ const inventoryMarkup = `
 </div>
 
 `;
-document.querySelector(".swiper").insertAdjacentHTML("afterend", inventoryMarkup); // todo error
+document.querySelector(".swiper").insertAdjacentHTML("afterend", inventoryMarkup);
 
 const carInventoryMarkup = `
 in Car(<button class="js-car-name">car</button>)<span class="js-car-in">{<br>

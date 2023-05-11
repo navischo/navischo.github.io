@@ -27,6 +27,6 @@ const updBalanceNode = () => {
 }
 
 createBalanceNode();
-win77.updBalanceHUD();  // todo error
+win77.updBalanceHUD();
 
 export { updBalanceNode };
