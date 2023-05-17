@@ -50,10 +50,12 @@
 .card__controls {
     position: absolute;
     bottom: 0;
-    z-index: 2;
+    z-index: 3;
 
     visibility: hidden;
     opacity: 0;
+
+    padding: 5px;
 
     transition: .2s ease-in;
 }
@@ -62,6 +64,59 @@
     visibility: visible;
 
     opacity: 1;
+}
+
+/*.card__controls:hover {*/
+/*    visibility: visible;*/
+
+/*    opacity: 1;*/
+/*}*/
+
+.card__controls > button {
+    font-size: 20px;
+    padding: 0 10px;
+    font-weight: 700;
+    color: black;
+    border: 2px solid black;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 2px;
+    clip-path: var(--ui-notch-path);
+    cursor: pointer;
+    display: inline-block;
+    font-family: var(--fonts-primary);
+    letter-spacing: 0.045em;
+    text-align: left;
+    text-transform: uppercase;
+    transform: translateY(0);
+    transition: .1s ease-in;
+}
+
+.card__controls > button::before {
+    background-color: black;
+    bottom: 10px;
+    content: "";
+    display: block;
+    height: 3px;
+    position: absolute;
+    right: 2px;
+    top: auto;
+    transform: rotate(315deg) translateY(10px);
+    width: var(--ui-notch-hypotenuse);
+    z-index: 31;
+    transition: .1s ease-in;
+}
+
+.card__controls > button:hover {
+    background-color: rgba(80, 233, 239, 0.7)!important;
+    border-color: var(--colors-secondary--500);
+}
+
+.card__controls > button:hover::before {
+    background-color: var(--colors-secondary--500);
+}
+
+.card__controls > button:active {
+    transform: translateY(1px);
 }
 
 .card__header {

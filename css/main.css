@@ -1,3 +1,5 @@
+@import "./vars.css";
+
 /*CORE*/
 @import "./blocks/pokeball.css";
 @import "./blocks/card.css";
@@ -7,6 +9,7 @@
 @import "./blocks/theday.css";
 
 /*CUSTOM UI COMPONENT*/
+@import "blocks/hud-core.css";
 @import "blocks/cybr-btn.css";
 
 /*CUSTOMIZATION*/
