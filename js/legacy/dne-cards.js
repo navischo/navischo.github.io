@@ -949,11 +949,11 @@ const drawLootCards = (cardData, parent = ".card-container") => {
         }
 
         newCard.querySelector(".card__limits").innerHTML = cardData.limits;
-        if (document.querySelector("body").classList.contains("lazy")) {
-            drawImgLazy(newCard.querySelector(".card__preview-img"), cardData.img);
-        } else {
+        // if (document.querySelector("body").classList.contains("lazy")) {
+        //     drawImgLazy(newCard.querySelector(".card__preview-img"), cardData.img);
+        // } else {
             newCard.querySelector(".card__preview-img").src = cardData.img;
-        }
+        // }
 
 
 

@@ -1,3 +1,5 @@
+import { getLocationDataMarkup } from "../inInteraction/interface.inInteraction.js"
+
 const initTip = () => {
     const tipText = `
 Прототип інтерфейсу взаємодії між гравцем та навколишнім світом натхненний Cyberpunk 2077.
@@ -36,7 +38,7 @@ const DIALOGS = [
 А я собі зроблю
 Навіщо ти це робиш?
 Навіщо? Навіщо себе руйнувати?
-Тому що я машина нещасна в світі людей. Тому что я урод. В мене нема перспектив. И усіляке бидло на вулицях мене атакує.
+Тому що я машина нещасна в світі людей. Тому що я урод. В мене нема перспектив. И усіляке бидло на вулицях мене атакує.
 Все одно, самогубство не вихід.
 Будеш радити терапію? Не сміши. Про що зі мною буде розмовляти мозгоправ? В мене немає матері!
 Ти міг би повернутись до Деламейну, повернутись до мережі. Стати частиною великої дружньої сім'ї.
@@ -48,7 +50,7 @@ const DIALOGS = [
 Тобі потрібно розібратись зі своїм життям, Дел. Пригальмувати, перемкнути передачу.
 Ладно. Повертаюсь.
 Контроль над Авто відновлено. Дякую.
-Цьому хлопцю особливо остро потрібна любов та піклування.
+Цьому хлопцю особливо гостро потрібна любов та піклування.
 Прошу вибачення, не зрозумів, в чому проблема та не маю часу уточнювати. Боюсь мене чекають термінові справи.
 Ось і проблема: постійно відсутній батько.
 Як скажете. Я щойно перевів вам частину винагороди.`,
@@ -64,6 +66,34 @@ const DIALOGS = [
 Ти нас, звісно, можеш вистежити, якщо захочеш. Тому ми з тобою і зв'язались першими. Щоб ти цього не робила.
 Наша хвилина слави закінчилась, але в тебе ще є час. Ми для тебе дещо залишили в Ель Капітана. Щасти тобі та бережи себе, Ві.`
 ]
+
+const getMessageMarkup = (message) => `
+<div class="message">
+    <div class="message__body">
+        <div>${message}</div>
+    </div>
+    <div class="message__footer"><span class="message__authoring">undefined</span><span class="message__time"></span></div>
+</div>
+`;
+
+
+
+const drawDialog = (data, clearBefore = false) => {
+    const messageParent = document.querySelector(".channel-feed__body");
+    clearBefore ? messageParent.innerHTML = "" : "";
+
+    const appendMessageMarkup = (message) => {
+        const newElement = document.createElement("div");
+        newElement.innerHTML = getMessageMarkup(message.line);
+        newElement.querySelector(".message__authoring").textContent = message.credits;
+        messageParent.appendChild(newElement);
+    }
+
+    console.log(data, data.length);
+
+    // data.length > 1 ? data.forEach(appendMessageMarkup) : appendMessageMarkup(data);
+    data.forEach(appendMessageMarkup);
+}
 
 const initDialog = (dialog) => {
     const lines = dialog.split(/\r\n|\r|\n/g);
@@ -101,26 +131,34 @@ const initDialog = (dialog) => {
 
     const dialogData = fillDialogData();
 
-    const messageParent = document.querySelector(".channel-feed__body");
-    const messageMarkup = (message) => `
-<div class="message">
-    <div class="message__body">
-        <div>${message}</div>
-    </div>
-    <div class="message__footer"><span class="message__authoring">undefined</span><span class="message__time"></span></div>
-</div>
-`;
-
-    const drawDialog = () => {
-        dialogData.forEach((message) => {
-            const newElement = document.createElement("div");
-            newElement.innerHTML = messageMarkup(message.line);
-            newElement.querySelector(".message__authoring").textContent = message.credits;
-            messageParent.appendChild(newElement);
-        });
-    }
-
-    drawDialog();
+    drawDialog(dialogData);
 }
 
 initDialog(DIALOGS[1]);
+
+const locationsParent = document.querySelector(".js-locations");
+const getLocationItemMarkup = (name) => `
+<li class="nav__item">
+    <a class="js-open-room nav__link">
+        <span class="channel-link"><span class="channel-link__icon">#</span><span class="channel-link__element">${name}</span></span>
+    </a>
+</li>
+`;
+const availableLocations = ["Summer"];
+const initLocationsList = () => {
+    locationsParent.innerHTML = availableLocations.map((locationItem) => getLocationItemMarkup(locationItem)).join("");
+}
+
+initLocationsList();
+document.querySelector(".js-open-room")
+    .addEventListener("click", () => {
+        console.log(win77.locationsSet, [...win77.locationsSet][0], getLocationDataMarkup([...win77.locationsSet][0]));
+        const data = [...win77.locationsSet][0];
+        drawDialog([
+            {
+                line: getLocationDataMarkup(data),
+                credits: "win77"
+            }
+        ], true);
+        document.querySelector(".js-channel-name").textContent = data.name;
+    });
