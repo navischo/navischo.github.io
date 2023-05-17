@@ -38,25 +38,53 @@
 <!--                <button class="js-portal catalog-controls__filter" data-portal="event">EVENT</button>-->
 <!--                <button class="js-portal catalog-controls__filter" data-portal="board">BOARD</button>-->
 <!--            </div>-->
-            <p class="append-buttons">
-                <!--        <a href="#" class="prepend-2-slides">Prepend 2 Slides</a>-->
-                <!--        <a href="#" class="slide-1">ENTER</a>-->
-                <a href="#" class="js-swipe-page slide-250">CARDS</a>
-                <a href="#" class="js-swipe-page slide-500">ADMIN</a>
-                <a href="#" class="js-swipe-page slide-150">PLAY</a>
-                <a href="#" class="js-swipe-page slide-200">EVENT</a>
-                <!--        <a href="#" class="append-slide">Append Slide</a>-->
-            </p>
+        <header class="app-header">
+            <div class="app-header__anchor"><span class="app-header__anchor-text">Fredom-City NetWire</span></div>
+            <nav>
+                <ul class="nav">
+                    <li class="nav__item">
+                        <a class="js-swipe-page slide-250 nav__link"><span class="nav__link__element">CARDS</span></a>
+                        <div class="nav__item-sublist">
+                            <div class="catalog-controls__item">
+                                <button class="js-init-catalog catalog-controls__filter">NPC</button>
+                                <button class="js-init-catalog catalog-controls__filter">CLASS</button>
+                                <button class="js-init-catalog catalog-controls__filter">LOOT</button>
+                                <button class="js-init-catalog catalog-controls__filter">SOUND</button>
+                                <button class="js-init-catalog catalog-controls__filter">PRJ</button>
+                                <button class="js-init-catalog catalog-controls__filter">DIA</button>
+                                <button class="js-init-catalog catalog-controls__filter">ANTI</button>
+                            </div>
+                        </div>
+                    </li>
+<!--                    <li class="nav__item">-->
+<!--                        <a class="nav__link nav__link&#45;&#45;active" href="#">-->
+<!--                            <span class="nav__link__element">BOARD</span><span class="nav__link__element"><span class="badge">11</span></span>-->
+<!--                        </a>-->
+<!--                    </li>-->
+                    <li class="nav__item">
+                        <a class="js-swipe-page slide-500 nav__link"><span class="nav__link__element">ADMIN</span></a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="js-swipe-page slide-150 nav__link" href="#"><span class="nav__link__element">PLAY</span></a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="js-swipe-page slide-200 nav__link" href="#"><span class="nav__link__element">EVENT</span></a>
+                    </li>
+                </ul>
+            </nav>
+            <div></div>
+        </header>
+<!--            <p class="append-buttons">-->
+<!--                &lt;!&ndash;        <a href="#" class="prepend-2-slides">Prepend 2 Slides</a>&ndash;&gt;-->
+<!--                &lt;!&ndash;        <a href="#" class="slide-1">ENTER</a>&ndash;&gt;-->
+<!--                <a href="#" class="js-swipe-page slide-250">CARDS</a>-->
+<!--                <a href="#" class="js-swipe-page slide-500">ADMIN</a>-->
+<!--                <a href="#" class="js-swipe-page slide-150">PLAY</a>-->
+<!--                <a href="#" class="js-swipe-page slide-200">EVENT</a>-->
+<!--                &lt;!&ndash;        <a href="#" class="append-slide">Append Slide</a>&ndash;&gt;-->
+<!--            </p>-->
 
-            <div class="catalog-controls__item">
-                <button class="js-init-catalog catalog-controls__filter">NPC</button>
-                <button class="js-init-catalog catalog-controls__filter">CLASS</button>
-                <button class="js-init-catalog catalog-controls__filter">LOOT</button>
-                <button class="js-init-catalog catalog-controls__filter">SOUND</button>
-                <button class="js-init-catalog catalog-controls__filter">PRJ</button>
-                <button class="js-init-catalog catalog-controls__filter">DIA</button>
-                <button class="js-init-catalog catalog-controls__filter">ANTI</button>
-            </div>
+
 
             <div class="catalog-controls__item" style="display: none">
                 <b>Doors</b>
@@ -65,7 +93,7 @@
                 </section>
             </div>
 
-            <div class="catalog-controls__item">
+            <div class="catalog-controls__item" style="display: none">
                 <b>Items</b>
                 <span class="js-clear-all-items chip chip--visible chip--active">Clear</span>
                 <section class="js-items js-chip-list chip-list">

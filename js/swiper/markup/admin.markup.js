@@ -1,31 +1,7 @@
 const adminMarkup = `
 <div id="root">
     <div class="app-skeleton">
-        <header class="app-header">
-            <div class="app-header__anchor"><span class="app-header__anchor__text">Fredom-City NetWire</span></div>
-            <nav>
-                <ul class="nav">
-                    <li class="nav__item">
-                        <a class="nav__link" href="index.html" target="_blank"><span class="nav__link__element">PLAY</span></a>
-                    </li>
-                    <li class="nav__item">
-                        <a class="nav__link nav__link--active" href="#">
-                            <span class="nav__link__element">BOARD</span><span class="nav__link__element"><span class="badge">11</span></span>
-                        </a>
-                    </li>
-                    <li class="nav__item">
-                        <a class="nav__link" href="#"><span class="nav__link__element">ADMIN</span></a>
-                    </li>
-                    <li class="nav__item">
-                        <a class="nav__link" href="#"><span class="nav__link__element">THEDAY</span></a>
-                    </li>
-                    <li class="nav__item">
-                        <a class="nav__link" href="#"><span class="nav__link__element">CARDS</span></a>
-                    </li>
-                </ul>
-            </nav>
-            <div></div>
-        </header>
+        
         <div class="app-container">
             <div class="app-a">
                 <div class="segment-topbar">
@@ -34,7 +10,7 @@ const adminMarkup = `
                     </div>
                     <div class="segment-topbar__aside">
                         <div class="button-toolbar">
-                            <a class="button button--primary button--size-lg">
+                            <a class="js-add-slide button button--primary button--size-lg">
                                 <svg class="button__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                     <path d="M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z"></path>
                                 </svg>
@@ -97,7 +73,7 @@ const adminMarkup = `
                         <h2 class="nav-section__title">Direct</h2>
                     </div>
                     <div class="nav-section__body">
-                        <ul class="nav">
+                        <ul class="js-direct nav">
                             <li class="nav__item">
                                 <a class="nav__link" href="#">
                     <span class="conversation-link conversation-link--online conversation-link--unread">

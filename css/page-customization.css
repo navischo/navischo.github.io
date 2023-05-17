@@ -10,9 +10,9 @@
     display: none;
 }
 
-.catalog-controls__item:last-child {
-    display: none;
-}
+/*.catalog-controls__item:last-child {*/
+/*    display: none;*/
+/*}*/
 
 #dne-page[data-hash="npc"] ~ .catalog-controls .catalog-controls__item:last-child,
 #dne-page[data-hash="class"] ~ .catalog-controls .catalog-controls__item:last-child,

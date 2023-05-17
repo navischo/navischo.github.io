@@ -1,6 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&amp;display=swap");
 @import url("https://fonts.googleapis.com/css2?family=VT323&amp;display=swap");
 
+.catalog-controls {
+    background-color: var(--colors-bg--500);
+    background-image: radial-gradient( ellipse at 33% 10%, #461616 0%, transparent 75% );
+}
+
+.units a,
+.app-header__anchor-text {
+    transition: .15s ease-in;
+}
+
+.catalog-controls--visible ~ .units a,
+.catalog-controls--visible ~ .app-header__anchor-text {
+    color: white;
+}
+
 #root * {
     box-sizing: border-box;
     position: relative;
@@ -31,6 +46,7 @@ a {
 
 .app-skeleton {
     padding: 0 1rem;
+    padding-top: 80px;
     height: 100vh;
     max-width: 90em;
     margin: auto;
@@ -42,7 +58,8 @@ a {
     grid-area: header;
     justify-content: space-between;
     margin-bottom: 1rem;
-    padding: 1rem 0 0.5rem 0;
+    padding-top: 15px;
+    padding-right: 178px;
 }
 
 .app-header::after {
@@ -60,7 +77,7 @@ a {
     padding: 0.5rem;
 }
 
-.app-header__anchor__text {
+.app-header__anchor-text {
     font-family: var(--fonts-secondary);
     font-size: 1.25rem;
     letter-spacing: 0.035rem;
@@ -119,6 +136,7 @@ a {
 
 .nav__link {
     line-height: 1.4rem;
+    cursor: pointer;
 }
 
 .nav__link__element + .nav__link__element {
@@ -134,9 +152,42 @@ a {
     margin-left: 3rem;
 }
 
+.nav__item {
+    position: relative;
+}
+
+.nav__item-sublist {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(0);
+    visibility: hidden;
+    opacity: 0;
+    transition: .15s ease-in;
+}
+
+.nav__item:hover .nav__item-sublist {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(-100%);
+}
+
+.catalog-controls__item {
+    display: flex;
+    margin-right: 10px;
+}
+
+.catalog-controls__filter {
+    white-space: nowrap;
+}
+
 .app-header .nav__link {
     align-items: baseline;
     display: flex;
+
+    color: rgb(232, 97, 90);
+    font-family: "JetBrains Mono", monospace;
+
     text-shadow: var(--ui-glow-text);
     text-transform: uppercase;
     transition: transform 0.25s;

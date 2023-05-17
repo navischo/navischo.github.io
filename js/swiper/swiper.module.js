@@ -4,7 +4,7 @@ import { cardCatalogMarkup } from "./markup/cardCatalog.markup.js";
 import { hudMarkup } from "./markup/hud.markup.js";
 import { eventMarkup } from "./markup/event.markup.js";
 
-// import { win77 } from "../dne-cli.js";
+import { win77 } from "../dne-cli.js";
 
 // API code
 const swiper = new Swiper('.swiper', {
@@ -56,6 +56,7 @@ swiper.on('slideChange', function (e) {
     document.querySelector(".head-title").textContent = pageName.toUpperCase();
 });
 // swiper.slideTo(0, 0);
+win77.swiper = swiper;
 
 // single exports output
 export { swiper };

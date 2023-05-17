@@ -1,3 +1,13 @@
+#sound-list {
+    display: block;
+    max-height: 105px;
+    overflow-y: scroll;
+}
+
+#sound-list::-webkit-scrollbar {
+    width: 0;
+}
+
 .inventory {
     position: fixed;
     right: 0;

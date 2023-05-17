@@ -1,4 +1,5 @@
 import { getLocationDataMarkup } from "../inInteraction/interface.inInteraction.js"
+import { win77 } from "../dne-cli.js";
 
 const initTip = () => {
     const tipText = `
@@ -136,29 +137,60 @@ const initDialog = (dialog) => {
 
 initDialog(DIALOGS[1]);
 
-const locationsParent = document.querySelector(".js-locations");
-const getLocationItemMarkup = (name) => `
+const initLocations = () => {
+    const locationsParent = document.querySelector(".js-locations");
+    const getLocationItemMarkup = (name) => `
+    <li class="nav__item">
+        <a class="js-open-room nav__link">
+            <span class="channel-link"><span class="channel-link__icon">#</span><span class="channel-link__element">${name}</span></span>
+        </a>
+    </li>
+    `;
+    const availableLocations = ["Summer"];
+    const initLocationsList = () => {
+        locationsParent.innerHTML = availableLocations.map((locationItem) => getLocationItemMarkup(locationItem)).join("");
+    }
+
+    initLocationsList();
+    document.querySelector(".js-open-room")
+        .addEventListener("click", () => {
+            console.log(win77.locationsSet, [...win77.locationsSet][0], getLocationDataMarkup([...win77.locationsSet][0]));
+            const data = [...win77.locationsSet][0];
+            drawDialog([
+                {
+                    line: getLocationDataMarkup(data),
+                    credits: "win77"
+                }
+            ], true);
+            document.querySelector(".js-channel-name").textContent = data.name;
+        });
+}
+
+initLocations();
+
+const initDirect = () => {
+    const directParent = document.querySelector(".js-direct");
+    const getDirectItemMarkup = (name) => `
 <li class="nav__item">
-    <a class="js-open-room nav__link">
-        <span class="channel-link"><span class="channel-link__icon">#</span><span class="channel-link__element">${name}</span></span>
+    <a class="nav__link" href="#">
+        <span class="conversation-link"><span class="conversation-link__icon"></span><span
+            class="conversation-link__element">${name}</span></span>
     </a>
 </li>
 `;
-const availableLocations = ["Summer"];
-const initLocationsList = () => {
-    locationsParent.innerHTML = availableLocations.map((locationItem) => getLocationItemMarkup(locationItem)).join("");
+    const availableDirects = ["Rick C-137"];
+    const initDirectsList = () => {
+        directParent.innerHTML = availableDirects.map((locationItem) => getDirectItemMarkup(locationItem)).join("");
+    }
+
+    initDirectsList();
 }
 
-initLocationsList();
-document.querySelector(".js-open-room")
-    .addEventListener("click", () => {
-        console.log(win77.locationsSet, [...win77.locationsSet][0], getLocationDataMarkup([...win77.locationsSet][0]));
-        const data = [...win77.locationsSet][0];
-        drawDialog([
-            {
-                line: getLocationDataMarkup(data),
-                credits: "win77"
-            }
-        ], true);
-        document.querySelector(".js-channel-name").textContent = data.name;
-    });
+initDirect();
+
+const addNewSlideButton = document.querySelector(".js-add-slide");
+addNewSlideButton.addEventListener("click", () => {
+    win77.swiper.virtual.prependSlide([
+        `hello world`
+    ]);
+});
