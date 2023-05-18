@@ -92,3 +92,9 @@ body.hide-hud .swiper-button-prev {
     display: none;
 }
 
+body[data-hash="cards"] .nav__item-sublist {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(-100%);
+}
+
