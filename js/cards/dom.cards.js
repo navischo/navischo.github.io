@@ -11,8 +11,9 @@ import { PAGE_NAMES } from "../hud/router.hud.js";
 import { openWithTimer } from "../hud/tab.hud.js";
 import { setExecutive } from "../hud/table.hud.js";
 import { CARD_TYPES } from "./const.cards.js";
-import { initDialogPopup } from "../hud/dialog.hud.js";
+import { dialog } from "../hud/dialog.hud.js";
 import { openPopup } from "../popup/dom.popup.jquery.js";
+import { initOneMoreBtn } from "../utils/initOneMoreBtn.js";
 
 
 const initHandlers = (cardData, controls) => {
@@ -87,11 +88,11 @@ const drawCard = (cardContainer, getElementCallback, cardData) => {
 
     addCardControls(newCard, cardData);
 
-    if (win77.router.currentPage === PAGE_NAMES.hud) {
+    // if (win77.router.currentPage === PAGE_NAMES.hud) {
         newCard.querySelector(".card__preview-img").src = cardData.img;
-    } else {
-        drawImgLazy(newCard.querySelector(".card__preview-img"), cardData.img);
-    }
+    // } else {
+    //     drawImgLazy(newCard.querySelector(".card__preview-img"), cardData.img);
+    // }
 
     cardContainer.appendChild(newCard);
 };
@@ -115,6 +116,7 @@ const updHand = () => {
     drawLootCards(win77.game.player.hand, "#bottom-hand");
 
     const cardsInYourHand = hand.querySelectorAll("div[id*='dne-card']");
+    initOneMoreBtn();
     cardsInYourHand.forEach(card => {
         const plusBtn = card.querySelector("button");
         plusBtn.addEventListener("click", (e) => {
@@ -129,11 +131,13 @@ const updHand = () => {
 
             hand.querySelector(`#dne-card-${id}`).remove();
 
+            initOneMoreBtn();
+
             if (win77.game.player.score <= win77.game.versusScore && win77.game.player.hand.size === 0) {
-                initDialogPopup(1);
+                dialog.init(1);
                 openPopup("#dialog-popup");
             } else {
-                initDialogPopup(0);
+                dialog.init(0);
             }
         });
     });

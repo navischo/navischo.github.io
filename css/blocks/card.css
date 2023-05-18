@@ -119,6 +119,11 @@
     transform: translateY(1px);
 }
 
+.card__controls .buy {
+    margin-right: 15px;
+    margin-left: 23px;
+}
+
 .card__header {
     display: flex;
     align-items: baseline;

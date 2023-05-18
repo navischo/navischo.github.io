@@ -3,6 +3,11 @@ import { updHand } from "../cards/dom.cards.js";
 import { closePopup } from "../popup/dom.popup.jquery.js";
 import { setupTheday } from "../theday/setup.theday.js";
 
+const DIALOG_ID = {
+    start: 0,
+    oneMore: 1
+}
+
 const DIALOG_QUESTIONS = [
     {
         question: `<p>Your lineup is awesome. Ready to start event?</p>`,
@@ -24,6 +29,10 @@ const DIALOG_QUESTIONS = [
     },
     {
         question: `<p>Seems you dont have enouch sound. Wanna give up or buy some more?</p>`,
+        answersId: {
+            giveUp: 0,
+            oneMore: 1
+        },
         answers: [
             {
                 text: "Give up",
@@ -93,6 +102,10 @@ const initDialogPopup = (index = 0) => {
     parent.appendChild(newNode);
 }
 
+const dialog = {
+    DIALOG_ID,
+    DIALOG_QUESTIONS,
+    init: initDialogPopup
+}
 
-
-export { initDialogPopup };
+export { dialog };

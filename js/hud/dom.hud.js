@@ -12,8 +12,9 @@ const hudMarkup = `
 <!--<video class="background-house" src="../../mp4/video-place.mp4" autoplay></video>-->
 <div id="inventory-card-display"></div>
 
-<div id="table" class="table" data-owner="Navischo"></div>
-
+<div  class="table custom-scrollbar --y">
+<div id="table" class="table__cards" data-owner="navischo"></div>
+</div>
 <!-- <div id="top-hand" class="hand"></div> -->
 
 <div id="bottom-hand" class="card-container hand"></div>

@@ -1,3 +1,7 @@
+.fw-d-none {
+    display: none;
+}
+
 .fw-mt-10 {
     margin-top: 10px;
 }

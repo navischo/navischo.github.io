@@ -192,8 +192,8 @@ a.js-phone {
     justify-content: space-between;
     width: calc(100% - 11px);
     height: 13px;
-    color: white;
-    background: #00a;
+    color: black;
+    background: rgba(80, 233, 239, 0.7);
     padding: 2px 3px 3px;
     margin: 3px 2px 1px 3px;
 }

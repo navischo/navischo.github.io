@@ -246,10 +246,18 @@ body {
 
 .table {
     position: fixed;
-    top: -80px;
+    top: 80px;
     left: 0;
     right: 0;
 
+    height: calc(187vh - 80px);
+
+    overflow-y: scroll;
+    transform: scale(.5)!important;
+    transform-origin: top;
+}
+
+.table__cards {
     display: flex;
     max-width: 1520px;
     flex-wrap: wrap;
@@ -257,32 +265,32 @@ body {
     padding-top: 60px;
     margin: 0 auto;
 
-    transform: scale(.5);
+
 }
 
-.table::before {
+.table__cards::before {
     content: attr(data-owner);
 
     position: absolute;
     top: 25px;
-    left: 20px;
+    left: 220px;
 
     font-family: "Press Start 2p", cursive;
     font-size: 30px;
     text-shadow: 5px 3px black;
 }
 
-.table.round-two {
-    top: -200px;
-}
-
-.table.round-three {
-    top: -320px;
-}
-
-.table.round-three {
-    top: -440px;
-}
+/*.table.round-two {*/
+/*    top: -200px;*/
+/*}*/
+/**/
+/*.table.round-three {*/
+/*    top: -320px;*/
+/*}*/
+/**/
+/*.table.round-three {*/
+/*    top: -440px;*/
+/*}*/
 
 .hud-body-background {
     color: white;

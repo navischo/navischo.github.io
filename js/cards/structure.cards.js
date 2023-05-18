@@ -1,7 +1,7 @@
 import { CARD_TYPES } from "./const.cards.js";
 import { DNECards, DNESecretCards } from "./data.cards.js";
 import { win77 } from "../dne-cli.js";
-import { moveCardById } from "../utils/getCardById.js";
+import {getRandomInt, moveCardById} from "../utils/getCardById.js";
 import { initInventory } from "../hud/inventory.hud.js";
 
 //=> 0. Все карты(кроме неукомплектованных), в любом кол-ве копий [done]
@@ -91,10 +91,13 @@ const initPlayer = () => {
     };
 
     moveCardById("car-cosmos-track", win77.game.catalog.anti, player.cars);
-    moveCardById("a", win77.game.catalog.npc, player.npc);
-    moveCardById("d", win77.game.catalog.npc, player.npc);
+    moveCardById("rick", win77.game.catalog.npc, player.npc);
 
-    moveCardById("class-ttter", win77.game.catalog.class, player.class);
+    const getRandomClassId = () => {
+        const classIdsArr = [...win77.game.catalog.class].map((classObj) => classObj.id);
+        return classIdsArr[getRandomInt(classIdsArr.length)];
+    };
+    moveCardById(getRandomClassId(), win77.game.catalog.class, player.class);
 
     moveCardById("ddj400", win77.game.catalog.loot, player.loot);
     moveCardById("nokia", win77.game.catalog.anti, player.loot);
