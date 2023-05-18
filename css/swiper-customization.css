@@ -64,6 +64,16 @@ body {
     overflow-y: scroll;
 }
 
+.swiper-button-next:after, .swiper-button-prev:after {
+    user-select: none;
+}
+
+body .swiper-button-next,
+body .swiper-button-prev {
+    color: white;
+    text-shadow: 2px 1px 0 black;
+}
+
 .custom-scrollbar {
     -webkit-overflow-scrolling: inherit;
     transform: translate3d(0, 0, 0);

@@ -79,7 +79,7 @@ const initPlayer = () => {
         lvl: 1,
         balance: {
             energy: 40,
-            bankroll: 12000,
+            bankroll: 14000,
             skillPoints: 3
         },
         hand: new Set(),

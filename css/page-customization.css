@@ -81,3 +81,14 @@ body[data-hash="play"] .score {
     color: white;
 }
 
+body.hide-hud .units,
+body.hide-hud .score,
+body.hide-hud #bottom-hand,
+body.hide-hud .player-obj,
+body.hide-hud .inventory,
+body.hide-hud .js-toggle-catalog-controls,
+body.hide-hud .swiper-button-next,
+body.hide-hud .swiper-button-prev {
+    display: none;
+}
+

@@ -27,12 +27,38 @@ const swiper = new Swiper('.swiper', {
     },
 });
 
+const PAGE_NAMES = {
+    cards: "cards",
+    admin: "admin",
+    play: "play",
+    event: "event"
+}
+
+const pagesLexicon = [
+    PAGE_NAMES.cards,
+    PAGE_NAMES.admin,
+    PAGE_NAMES.play,
+    PAGE_NAMES.event
+];
+
 const PAGES_ID = {
     cards: 0,
     admin: 1,
     play: 2,
     event: 3
 };
+
+const swipeNextLocation = (name = "blank") => {
+    swiper.virtual.appendSlide(`Slide by name ${name}`);
+    const id = pagesLexicon.length;
+    PAGES_ID[name] = id;
+    PAGE_NAMES[name] = name;
+    pagesLexicon.push(PAGE_NAMES[name]);
+    swiper.slideTo(id, 0);
+    console.log(`Slide by name ${name} successfully delivered[id, PAGES_ID, PAGE_NAMES, pagesLexicon]`, id, PAGES_ID, PAGE_NAMES, pagesLexicon);
+}
+
+win77.swipeNextLocation = swipeNextLocation;
 
 document
     .querySelectorAll('.js-swipe-page')
@@ -50,10 +76,15 @@ swiper.virtual.prependSlide([
     cardCatalogMarkup
 ]);
 swiper.on('slideChange', function (e) {
-    const pageName = Object.keys(PAGES_ID)[e.activeIndex];
-    document.querySelector("body").dataset.hash = pageName;
-    console.log('slide changed', pageName, e);
-    document.querySelector(".head-title").textContent = pageName.toUpperCase();
+    if (Object.keys(PAGES_ID)[e.activeIndex]) {
+        const pageName = Object.keys(PAGES_ID)[e.activeIndex];
+        document.querySelector("body").dataset.hash = pageName;
+        console.log('slide changed', pageName, e);
+        document.querySelector(".head-title").textContent = pageName.toUpperCase();
+    } else {
+        document.querySelector(".head-title").textContent = "EXPLORE";
+    }
+
 });
 // swiper.slideTo(0, 0);
 win77.swiper = swiper;
