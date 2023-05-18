@@ -5,8 +5,6 @@ const initOneMoreBtn = () => {
     const oneMoreBtnWrap = document.querySelector("#one-more");
     const cardsInYourHand = document.querySelectorAll(`#bottom-hand ${displayedCardsSelector}`);
 
-    console.log(cardsInYourHand, oneMoreBtnWrap);
-
     const clickHandler = () => {
         console.log(`You have less than five cards. Want more?`);
         const question = dialog.DIALOG_QUESTIONS[dialog.DIALOG_ID.oneMore];

@@ -3,6 +3,7 @@ import { DNECards, DNESecretCards } from "./data.cards.js";
 import { win77 } from "../dne-cli.js";
 import {getRandomInt, moveCardById} from "../utils/getCardById.js";
 import { initInventory } from "../hud/inventory.hud.js";
+import { parseCost } from "../utils/parseCost.js";
 
 //=> 0. Все карты(кроме неукомплектованных), в любом кол-ве копий [done]
 //=> 1. Строгая коллекция специально для этой игры, без дублей [done]
@@ -63,6 +64,9 @@ const initGame = () => {
                 break;
         }
     });
+
+    // parse cost
+    // game.catalog.loot.forEach(parseCost);
 
     return game;
 }

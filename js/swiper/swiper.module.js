@@ -79,7 +79,7 @@ swiper.on('slideChange', function (e) {
     if (Object.keys(PAGES_ID)[e.activeIndex]) {
         const pageName = Object.keys(PAGES_ID)[e.activeIndex];
         document.querySelector("body").dataset.hash = pageName;
-        console.log('slide changed', pageName, e);
+        // console.log('slide changed', pageName, e);
         document.querySelector(".head-title").textContent = pageName.toUpperCase();
     } else {
         document.querySelector(".head-title").textContent = "EXPLORE";

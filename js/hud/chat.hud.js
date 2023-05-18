@@ -90,7 +90,7 @@ const drawDialog = (data, clearBefore = false) => {
         messageParent.appendChild(newElement);
     }
 
-    console.log(data, data.length);
+    // console.log(data, data.length);
 
     // data.length > 1 ? data.forEach(appendMessageMarkup) : appendMessageMarkup(data);
     data.forEach(appendMessageMarkup);
