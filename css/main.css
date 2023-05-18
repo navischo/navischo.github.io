@@ -11,6 +11,7 @@
 /*CUSTOM UI COMPONENT*/
 @import "blocks/hud-core.css";
 @import "blocks/cybr-btn.css";
+@import "blocks/cybr-title.css";
 
 /*CUSTOMIZATION*/
 @import "./cards-customization.css";

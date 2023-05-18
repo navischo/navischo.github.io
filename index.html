@@ -10,6 +10,25 @@
 
 </head>
 <body class="build background-single">
+<!--    <div class="sudo-page">-->
+<!--        <div class="cybr-center">-->
+<!--            <h1 class="cybr-title">Cyberholyac</h1>-->
+<!--            <a class="cybr-action" onclick="document.querySelector('.sudo-page').style.display = 'none'">Press START 2p</a>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <style>-->
+<!--        .sudo-page {-->
+<!--            position: fixed;-->
+<!--            top: 0;-->
+<!--            right: 0;-->
+<!--            bottom: 0;-->
+<!--            left: 0;-->
+<!--            z-index: 40;-->
+
+<!--            background: rgba(0, 0, 0, .6);-->
+<!--        }-->
+<!--    </style>-->
+
     <div id="dialogs-container">
 
     </div>
@@ -147,6 +166,7 @@
     <script type="module" src="js/hud/dialogCli.hud.js"></script>
     <script type="module" src="js/page/screen.page.js"></script>
     <script type="module" src="js/inInteraction/interface.inInteraction.js"></script>
+    <script type="module" src="js/utils/initCybrTitle.js"></script>
 
     <script type="module" src="js/hud/chat.hud.js"></script>
 
@@ -171,6 +191,7 @@
         });
 
         initDialogPopup();
+        win77.swiper.slideTo(2, 0);
     </script>
     <script>
 
