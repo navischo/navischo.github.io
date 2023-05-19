@@ -14,12 +14,14 @@ handler();
 const interval = setInterval(handler, 15000);
 
 const finishHandler = () => {
-    document
-        .querySelector(".sudo-page").remove();
-    clearInterval(interval, handler);
-    clearTimeout(loadingFinishTimeout, finishHandler);
+    document.querySelector(".sudo-page").remove();
+    clearInterval(interval);
+    clearTimeout(loadingFinishTimeout);
 };
 const loadingFinishTimeout = setTimeout(finishHandler, getRandomInt(30000));
+document.addEventListener("keydown", () => {
+    document.querySelector(".sudo-page").remove();
+});
 
 // const getCardById = (id) => {
 //     const card = DNELootArr.find((lootCard) => lootCard.id === id);

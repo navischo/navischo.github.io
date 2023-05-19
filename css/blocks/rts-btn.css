@@ -1,0 +1,57 @@
+.rts-btn-wrap {
+    visibility: hidden;
+    opacity: 0;
+
+    position: fixed;
+    top: 55px;
+    left: 50%;
+    z-index: 39;
+    transform: translate(-50%, -100%);
+    transition: .2s ease-in-out;
+}
+
+#rts-btn {
+    padding: 0;
+    border: none;
+    background: none;
+    font-family: "Press Start 2p", cursive;
+    color: #07b7d4;
+    text-align: center;
+    font-size: 1.8em;
+    cursor: pointer;
+
+    animation: title-rotation 2.5s infinite alternate linear, font-shadow-404 10s infinite linear;
+}
+
+body.ready-to-start .rts-btn-wrap {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(-50%, 0);
+}
+
+@keyframes title-rotation {
+    from {
+        transform: translate(0, 0) rotate(-5deg);
+    }
+    to {
+        transform: translate(0, 0) rotate(5deg);
+    }
+}
+
+@keyframes font-shadow-404 {
+    0% {
+        text-shadow: hsl(189, 69%, 55%) 0px 0px,hsl(189, 69%, 55%) 0px 0px,hsl(204, 69%, 55%) 1px 1px,hsl(219, 69%, 55%) 2px 2px,hsl(234, 69%, 55%) 3px 3px,hsl(249, 69%, 55%) 4px 4px,hsl(264, 69%, 55%) 5px 5px,hsl(279, 69%, 55%) 6px 6px,hsl(294, 69%, 55%) 7px 7px,hsl(309, 69%, 55%) 8px 8px;
+    }
+    25% {
+        text-shadow: hsl(189, 69%, 55%) 0px 0px,hsl(189, 69%, 55%) 0px -0px,hsl(204, 69%, 55%) 1px -1px,hsl(219, 69%, 55%) 2px -2px,hsl(234, 69%, 55%) 3px -3px,hsl(249, 69%, 55%) 4px -4px,hsl(264, 69%, 55%) 5px -5px,hsl(279, 69%, 55%) 6px -6px,hsl(294, 69%, 55%) 7px -7px,hsl(309, 69%, 55%) 8px -8px;
+    }
+    50% {
+        text-shadow: hsl(189, 69%, 55%) 0px 0px,hsl(189, 69%, 55%) -0px -0px,hsl(204, 69%, 55%) -1px -1px,hsl(219, 69%, 55%) -2px -2px,hsl(234, 69%, 55%) -3px -3px,hsl(249, 69%, 55%) -4px -4px,hsl(264, 69%, 55%) -5px -5px,hsl(279, 69%, 55%) -6px -6px,hsl(294, 69%, 55%) -7px -7px,hsl(309, 69%, 55%) -8px -8px;
+    }
+    75% {
+        text-shadow: hsl(189, 69%, 55%) 0px 0px,hsl(189, 69%, 55%) -0px 0px,hsl(204, 69%, 55%) -1px 1px,hsl(219, 69%, 55%) -2px 2px,hsl(234, 69%, 55%) -3px 3px,hsl(249, 69%, 55%) -4px 4px,hsl(264, 69%, 55%) -5px 5px,hsl(279, 69%, 55%) -6px 6px,hsl(294, 69%, 55%) -7px 7px,hsl(309, 69%, 55%) -8px 8px;
+    }
+    100% {
+        text-shadow: hsl(189, 69%, 55%) 0px 0px,hsl(189, 69%, 55%) 0px 0px,hsl(204, 69%, 55%) 1px 1px,hsl(219, 69%, 55%) 2px 2px,hsl(234, 69%, 55%) 3px 3px,hsl(249, 69%, 55%) 4px 4px,hsl(264, 69%, 55%) 5px 5px,hsl(279, 69%, 55%) 6px 6px,hsl(294, 69%, 55%) 7px 7px,hsl(309, 69%, 55%) 8px 8px;
+    }
+}

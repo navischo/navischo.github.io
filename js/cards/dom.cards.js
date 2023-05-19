@@ -134,10 +134,10 @@ const updHand = () => {
             initOneMoreBtn();
 
             if (win77.game.player.score <= win77.game.versusScore && win77.game.player.hand.size === 0) {
-                dialog.init(1);
+                dialog.init(dialog.DIALOG_ID.oneMore);
                 openPopup("#dialog-popup");
             } else {
-                dialog.init(0);
+                dialog.init(dialog.DIALOG_ID.start);
             }
         });
     });

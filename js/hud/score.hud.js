@@ -11,10 +11,26 @@ const initScore = () => {
     win77.game.versusScore = getRandomInt(20);
 }
 
+const readyToStart = () => {
+    const body = document.querySelector("body");
+    const className = "ready-to-start";
+    const isBodyContainsClass = body.classList.contains(className);
+    console.log(body, className, !isBodyContainsClass);
+    if (!isBodyContainsClass) {
+        body.classList.add(`${className}`);
+        console.log(`Lets show dialog`);
+        openPopup("#dialog-popup");
+        document.querySelector("#rts-btn")
+            .addEventListener("click", () => {
+                openPopup("#dialog-popup");
+            });
+    }
+};
+
 const isItWin = () => {
     if (win77.game.player.score > win77.game.versusScore) {
         console.log("You are win");
-        openPopup("#dialog-popup");
+        readyToStart();
     }
 }
 
