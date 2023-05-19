@@ -5,6 +5,22 @@ function getRandomInt(max) {
     return Math.floor(Math.random() * max);
 }
 
+const handler = () => {
+    document
+        .querySelector(".windows__logo")
+        .style.filter = `hue-rotate(${getRandomInt(360)}deg)`;
+}
+handler();
+const interval = setInterval(handler, 15000);
+
+const finishHandler = () => {
+    document
+        .querySelector(".sudo-page").remove();
+    clearInterval(interval, handler);
+    clearTimeout(loadingFinishTimeout, finishHandler);
+};
+const loadingFinishTimeout = setTimeout(finishHandler, getRandomInt(30000));
+
 // const getCardById = (id) => {
 //     const card = DNELootArr.find((lootCard) => lootCard.id === id);
 //     if (card) {
