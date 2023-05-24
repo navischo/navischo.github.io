@@ -27,6 +27,32 @@
     background: white;
 }
 
+.card.--smith .card__header {
+    position: static;
+    z-index: 1;
+}
+
+.card.--smith .card__preview {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+}
+.card.--rick {
+    background: #6db855;
+}
+.card.--jerry {
+    background: #2d3235;
+}
+.card.--summer {
+    background: #c894b7;
+}
+.card.--morty {
+    background: #46bae0;
+}
+.card.--beth {
+    background: #993637;
+}
+
 .card--back {
     position: relative;
 }

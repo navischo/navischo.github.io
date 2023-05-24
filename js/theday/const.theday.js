@@ -43,15 +43,23 @@ const isMale = (name) => {
     }
 }
 
-const drawSmitsCard = () => {
+const drawSmitsCard = (dataObj) => {
     const parent = document.querySelector("#queue");
     const guest = document.createElement("div");
 
     guest.classList.add("card");
+    guest.classList.add(`--${dataObj.name}`);
+    guest.classList.add("--smith");
     guest.innerHTML = `
+<header class="card__header">
+    <div class="card__header-right">
+        <b class="card__bonus">+${dataObj.plusCount}</b>
+    </div>
+</header>
 <div class="card__preview">
-    <img class="card__preview-img" src="https://lh5.googleusercontent.com/WUvRRRJpFIACJw50hOycHsKNnwSB3SdJSs-_5JQk11pKHMoDstW_n9nzWwb28y_wTUU=w2400" alt="" data-original="https://lh5.googleusercontent.com/WUvRRRJpFIACJw50hOycHsKNnwSB3SdJSs-_5JQk11pKHMoDstW_n9nzWwb28y_wTUU=w2400" style="">
+    <img class="card__preview-img" src="img/${dataObj.name}.png" alt="" style="">
 </div>`;
+    // console.log(`drawSmitsCard(${name})`, guest.innerHTML);
 
     parent.appendChild(guest);
 }
@@ -70,7 +78,7 @@ const useSmithsCard = (interval) => {
 
         win77.game.event.settings.socialPoints--;
 
-        drawSmitsCard();
+        drawSmitsCard(smithCard);
 
         console.log(`Security: Seems like ${smithCard.name} coming to your Event from strange portal with ${smithCard.plusCount} friends. Let them pass?`);
     } else {

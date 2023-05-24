@@ -5,23 +5,25 @@ function getRandomInt(max) {
     return Math.floor(Math.random() * max);
 }
 
-const handler = () => {
-    document
-        .querySelector(".windows__logo")
-        .style.filter = `hue-rotate(${getRandomInt(360)}deg)`;
-}
-handler();
-const interval = setInterval(handler, 15000);
+// START win-load-placeholder
 
-const finishHandler = () => {
-    document.querySelector(".sudo-page").remove();
-    clearInterval(interval);
-    clearTimeout(loadingFinishTimeout);
-};
-const loadingFinishTimeout = setTimeout(finishHandler, getRandomInt(30000));
-document.addEventListener("keydown", () => {
-    document.querySelector(".sudo-page").remove();
-});
+// const handler = () => {
+//     document
+//         .querySelector(".windows__logo")
+//         .style.filter = `hue-rotate(${getRandomInt(360)}deg)`;
+// }
+// handler();
+// const interval = setInterval(handler, 15000);
+
+// const finishHandler = () => {
+//     document.querySelector(".sudo-page").remove();
+//     clearInterval(interval);
+//     clearTimeout(loadingFinishTimeout);
+// };
+// const loadingFinishTimeout = setTimeout(finishHandler, getRandomInt(30000));
+// document.addEventListener("keydown", () => {
+//     document.querySelector(".sudo-page").remove();
+// });
 
 // const getCardById = (id) => {
 //     const card = DNELootArr.find((lootCard) => lootCard.id === id);
@@ -32,6 +34,8 @@ document.addEventListener("keydown", () => {
 //         console.log(`Card with id ${id} does not exist`);
 //     }
 // }
+
+// FINISH win-load-placeholder
 
 const getCardById = (id, set) => {
     const card = Array.from(set).find((lootCard) => lootCard.id === id);
