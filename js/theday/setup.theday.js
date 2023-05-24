@@ -16,7 +16,13 @@ const setupTheday = () => {
     });
     win77.setLineupLength(lineupLength);
 
-    document.querySelector("#dne-page-up").classList.add("js-open");
+    try {
+        document.querySelector("#dne-page-up").classList.add("js-open");
+    }
+    catch (e) {
+        console.log("Seems like error in setup.theday: #dne-page-up not found");
+    }
+    // document.querySelector("#dne-page-up").classList.add("js-open");
     closePopup();
 
     // switchTime(win77.game.event.lineupLength); // time temporary disabled
