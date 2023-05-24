@@ -96,6 +96,7 @@ const initPlayer = () => {
 
     moveCardById("car-cosmos-track", win77.game.catalog.anti, player.cars);
     moveCardById("rick", win77.game.catalog.npc, player.npc);
+    moveCardById("felix", win77.game.catalog.npc, player.npc);
 
     const getRandomClassId = () => {
         const classIdsArr = [...win77.game.catalog.class].map((classObj) => classObj.id);
@@ -104,7 +105,9 @@ const initPlayer = () => {
     moveCardById(getRandomClassId(), win77.game.catalog.class, player.class);
 
     moveCardById("ddj400", win77.game.catalog.loot, player.loot);
-    moveCardById("nokia", win77.game.catalog.anti, player.loot);
+    moveCardById("plx500", win77.game.catalog.loot, player.loot);
+    moveCardById("ddjxp2", win77.game.catalog.loot, player.loot);
+    // moveCardById("nokia", win77.game.catalog.anti, player.loot);
 
     return player;
 }

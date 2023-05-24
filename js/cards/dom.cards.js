@@ -94,13 +94,16 @@ const drawCard = (cardContainer, getElementCallback, cardData) => {
     //     drawImgLazy(newCard.querySelector(".card__preview-img"), cardData.img);
     // }
 
+    console.log(`drawCard()`, newCard);
     cardContainer.appendChild(newCard);
+    console.log(`drawCard() cardContainer`, cardContainer);
 };
 
 win77.pokeButton.dia.drawCard = drawCard;
 
 const drawLootCards = (cardData, parentSelector = "#dne-page") => {
     const cardContainer = document.querySelector(parentSelector);
+    console.log(`drawLootCards()`, cardData, parentSelector, cardContainer);
 
     const drawIt = (DNELootCard) => {
         drawCard(cardContainer, getCardElement, DNELootCard);

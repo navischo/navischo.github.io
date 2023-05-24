@@ -16,12 +16,29 @@ const getPortalElement = () => {
 }
 
 const thedayMarkup = `
+<!--setup-->
+<div id="main-scene">
+    
+    <div class="swiper executive">
+        <div id="executive" class="swiper-wrapper"></div>
+    </div>
+    <div class="setup">
+        <div class="setup__left"></div>
+        <div id="setup" class="setup__controller"></div>
+        <div class="setup__right"></div>
+    </div>
+</div>
+<!--executive-->
 <div id="queue"></div>
 ${pokeButtonMarkup}
+<div id="lineup" class="hand"></div>
 <div id="gradient" style=""/>
 `;
 
+
+
 const initTheday = () => {
+
     console.log(`${win77.game.player.id} starts an Event`, win77);
     initGradient();
     document.querySelector(".js-rick-portal").style.display = "block";

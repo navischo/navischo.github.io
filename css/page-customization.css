@@ -77,6 +77,11 @@ body[data-hash="event"] .inventory {
     display: none;
 }
 
+body[data-hash="event"] #main-scene {
+    visibility: visible;
+    opacity: 1;
+}
+
 body[data-hash="play"] .score {
     color: white;
 }

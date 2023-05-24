@@ -1,6 +1,6 @@
 #queue {
     position: fixed;
-    left: calc(50% - 150px);
+    left: calc(50% + 190px);
     top: calc(50% - 230px);
 
     display: flex;

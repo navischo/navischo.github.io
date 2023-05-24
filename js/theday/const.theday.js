@@ -1,6 +1,7 @@
 import { getRandomInt } from "../utils/getCardById.js";
 import { win77 } from "../dne-cli.js";
 import { reloadTheday } from "./reload.theday.js";
+import { drawLootCards } from "../cards/dom.cards.js";
 
 const SMITHS_TYPES = [
     {
@@ -58,11 +59,25 @@ const drawSmitsCard = (dataObj) => {
 </header>
 <div class="card__preview">
     <img class="card__preview-img" src="img/${dataObj.name}.png" alt="" style="">
-</div>`;
+</div>
+<!--<div class="js-card-controls card__controls">-->
+<!--    <button>+</button>-->
+<!--    <button>-</button>-->
+<!--</div>-->
+`;
     // console.log(`drawSmitsCard(${name})`, guest.innerHTML);
 
     parent.appendChild(guest);
 }
+
+// const initControls = (guestCard) => {
+//     const controlBtns = guestCard.querySelectorAll("button");
+//     controlBtns.forEach((control) => {
+//         if (control.textContent === `+`) {
+//             win77.game.event.settings.socialPoints--;
+//         }
+//     });
+// }
 
 const useSmithsCard = (interval) => {
     const socialPoints = win77.game.event.settings.socialPoints;
@@ -91,7 +106,44 @@ const useSmithsCard = (interval) => {
     }
 }
 
+const getScene = () => {
+    const sceneElement = document.querySelector("#main-scene");
+    const setup = {
+        parent: sceneElement.querySelector(".setup")
+    };
+    setup.controllerSelector = "#setup";
+    setup.lineupSelector = "#lineup";
+    setup.left = setup.parent.querySelector(".setup__left");
+    setup.right = setup.parent.querySelector(".setup__right");
+    const executiveSelector = "#executive";
+
+    return {
+        setup,
+        executiveSelector: executiveSelector,
+        data: {
+            executive: win77.game.player.npc,
+            controller: win77.game.player.loot,
+            lineup: win77.game.table
+        }
+    }
+}
+
 const useSmithsCards = () => {
+    const scene = getScene();
+    console.log(`${win77.game.player.id} getSceneData()`, scene);
+    drawLootCards(scene.data.executive, scene.executiveSelector);
+    const teamCards = document.querySelectorAll(`${scene.executiveSelector} .card`);
+    teamCards.forEach((teamCard) => {
+        console.log(`teamCard`, teamCard, teamCard.parentNode);
+        teamCard.parentNode.classList.add("swiper-slide");
+    });
+    win77.swiperExecutive = new Swiper(".swiper.executive", {
+        effect: "cards",
+        grabCursor: true,
+    });
+    drawLootCards(scene.data.controller, scene.setup.controllerSelector);
+    drawLootCards(scene.data.lineup, scene.setup.lineupSelector);
+    document.querySelector(`${scene.setup.lineupSelector}`).classList.add("--play");
     const handler = () => {
         const socialPoints = win77.game.event.settings.socialPoints;
 

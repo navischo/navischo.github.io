@@ -1,3 +1,9 @@
+.swiper-slide[id*="dne-card"],
+.swiper.executive {
+    width: 300px!important;
+    height: 500px;
+}
+
 .swiper {
     box-sizing: border-box;
     width: 100vw;
