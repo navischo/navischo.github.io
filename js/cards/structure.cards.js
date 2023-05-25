@@ -28,6 +28,8 @@ const initGame = () => {
         event: {
             settings: {},
             result: {
+                cashOnEnter: 0,
+                cashOnBar: 0,
                 income: 0
             }
         }

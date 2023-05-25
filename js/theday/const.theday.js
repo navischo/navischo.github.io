@@ -21,6 +21,8 @@ const SMITHS_TYPES = [
         enterBudget: 500
     }
 ];
+
+const SMITHS_LETTERS = ["A", "B", "C", "D", "E"]
 const settings = {
     enterPrice: 200,
     socialPoints: 5,
@@ -53,8 +55,8 @@ const drawSmitsCard = (dataObj) => {
     guest.classList.add("--smith");
     guest.innerHTML = `
 <header class="card__header">
-    <div class="card__header-right">
-        <b class="card__bonus">+${dataObj.plusCount}</b>
+    <div class="card__header-left">
+        <h2 class="card__title">+${dataObj.plusCount}</h2>
     </div>
 </header>
 <div class="card__preview">
@@ -72,13 +74,20 @@ const drawSmitsCard = (dataObj) => {
     controls.forEach((btn) => {
         if (btn.textContent === "+") {
             btn.addEventListener("click", () => {
-                guest.remove();
+                guest.classList.add("slide-out-left");
+                setTimeout(() => {
+                    guest.remove();
+                }, 500);
+                passGuest(dataObj);
                 const message = `You pass ${dataObj.name}`;
-                console.log(message);
+                console.log(message, dataObj, win77.game);
             });
         } else if (btn.textContent === "-") {
             btn.addEventListener("click", () => {
-                guest.remove();
+                guest.classList.add("slide-out-blurred-right");
+                setTimeout(() => {
+                    guest.remove();
+                }, 450);
                 console.log(`You say not today to ${dataObj.name}`, dataObj, win77.game);
                 win77.game.event.settings.socialPoints++;
                 inviteGuest();
@@ -88,32 +97,48 @@ const drawSmitsCard = (dataObj) => {
     guest.classList.add("slide-in-blurred-right");
 }
 
-// const initControls = (guestCard) => {
-//     const controlBtns = guestCard.querySelectorAll("button");
-//     controlBtns.forEach((control) => {
-//         if (control.textContent === `+`) {
-//             win77.game.event.settings.socialPoints--;
-//         }
-//     });
-// }
+const matchCashOnEnter = (smithCard) => {
+    return smithCard.enterBudget + (smithCard.enterBudget * smithCard.plusCount);
+}
+
+const matchCashOnBar = () => {
+    const man = win77.game.event.settings.guests.manCount;
+    const woman = win77.game.event.settings.guests.womanCount;
+    const basePrice = win77.game.event.settings.bar.basePrice;
+    // todo добавить ограничение по кол-ву напитков на баре
+    return (basePrice * (man / 2)) + (basePrice * (woman * 3));
+}
+
+const matchEventIncome = (smithCard) => {
+    const cashOnEnter = matchCashOnEnter(smithCard);
+    win77.game.event.result.cashOnEnter = win77.game.event.result.cashOnEnter + cashOnEnter;
+
+
+    win77.game.event.result.cashOnBar = matchCashOnBar();
+
+    win77.game.event.result.income =
+        +win77.game.event.result.cashOnEnter
+        + win77.game.event.result.cashOnBar;
+
+    console.log(`${smithCard.name}(${smithCard.enterBudget}) bring you ${cashOnEnter} income`);
+}
+
+const passGuest = (smithCard) => {
+    win77.game.event.settings.guestsCount = win77.game.event.settings.guestsCount + smithCard.plusCount;
+    win77.game.event.settings.guests[`${isMale(smithCard.name)}Count`] = win77.game.event.settings.guests[`${isMale(smithCard.name)}Count`] + smithCard.plusCount;
+    win77.game.event.settings.guests.set.add(smithCard);
+}
 
 const useSmithsCard = (interval = undefined) => {
     const socialPoints = win77.game.event.settings.socialPoints;
     if (socialPoints > 0) {
         const smithCard = Object.assign({}, SMITHS_TYPES[getRandomInt(SMITHS_TYPES.length)]);
         smithCard.plusCount = getRandomInt(14);
-        const income = smithCard.enterBudget * smithCard.plusCount;
-        win77.game.event.result.income = +win77.game.event.result.income + income;
-        win77.game.event.settings.guestsCount = win77.game.event.settings.guestsCount + smithCard.plusCount;
-
-        win77.game.event.settings.guests[`${isMale(smithCard.name)}Count`] = win77.game.event.settings.guests[`${isMale(smithCard.name)}Count`] + smithCard.plusCount;
-        win77.game.event.settings.guests.set.add(smithCard);
+        console.log(`Security: Seems like ${smithCard.name} coming to your Event from strange portal with ${smithCard.plusCount} friends. Let them pass?`);
 
         win77.game.event.settings.socialPoints--;
 
         drawSmitsCard(smithCard);
-
-        console.log(`Security: Seems like ${smithCard.name} coming to your Event from strange portal with ${smithCard.plusCount} friends. Let them pass?`);
     } else {
         // if (interval) {
         //     clearInterval(interval);
@@ -180,15 +205,15 @@ const useSmithsCards = () => {
             clearInterval(interval);
         }
     };
-    const interval = setInterval(inviteGuestByInterval, 500); // 3000
+    const interval = setInterval(inviteGuestByInterval, 3000);
 }
 
-const clearSmithsSet = () => {
-    win77.game.event.settings.guests.set.clear();
+// const clearSmithsSet = () => {
+//     win77.game.event.settings.guests.set.clear();
     // document.querySelector("#queue").innerHTML = "";
-}
+// }
 
 win77.pokeButton.dia.useSmithsCards = useSmithsCards;
-win77.pokeButton.dia.clearSmithsSet = clearSmithsSet;
+// win77.pokeButton.dia.clearSmithsSet = clearSmithsSet;
 
-export { settings };
+export { settings, matchEventIncome };

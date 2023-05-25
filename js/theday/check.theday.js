@@ -9,7 +9,7 @@ const drawCheck = (checkData, parent = "body") => {
     const getCheckLayer = (data, wrapIndex) => {
         const wrap = document.createElement("div");
         const keys = Object.keys(data);
-        console.log("keys", keys);
+        // console.log("keys", keys);
 
 
         let keysMarkup = "";
@@ -18,7 +18,7 @@ const drawCheck = (checkData, parent = "body") => {
             pointsArr.push(data[key]);
             keysMarkup = keysMarkup + `<p class="check-clone__text-${wrapIndex} fw-ad-${strokeIndex + 1}">${key.toUpperCase()}</p>`;
         });
-        console.log("keysMarkup", keysMarkup);
+        // console.log("keysMarkup", keysMarkup);
 
 
         let pointsMarkup = "";

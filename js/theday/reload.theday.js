@@ -3,9 +3,14 @@ import { initInventory } from "../hud/inventory.hud.js";
 import { win77 } from "../dne-cli.js";
 import { updTable, updHand } from "../cards/dom.cards.js";
 import { moveCardById } from "../utils/getCardById.js";
-import { drawCheck, checkData } from "./check.theday.js";
+import { matchEventIncome } from "./const.theday.js";
+import { drawCheck } from "./check.theday.js";
 
 const reloadTheday = () => {
+    Array.from(win77.game.event.settings.guests.set).forEach((smithsCard) => {
+        matchEventIncome(smithsCard);
+    });
+
     console.log(`Event is finished. You archive ${win77.game.event.result.income} income and some sound to play next time`, win77.game.event);
     document.querySelector("body").classList.remove("background-single");
 
@@ -15,7 +20,7 @@ const reloadTheday = () => {
 
     initScore();
     updScore();
-    win77.pokeButton.dia.clearSmithsSet();
+    // win77.pokeButton.dia.clearSmithsSet();
     win77.game.event.settings.guests.set.clear();
 
 
