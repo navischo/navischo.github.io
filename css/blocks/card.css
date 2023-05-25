@@ -47,6 +47,11 @@
     z-index: 0;
     top: 0;
 }
+
+.card.--rare .card__preview {
+    position: static;
+}
+
 .card.--rick {
     background: #6db855;
 }

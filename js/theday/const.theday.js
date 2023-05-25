@@ -19,10 +19,13 @@ const SMITHS_TYPES = [
     }, {
         name: "rick",
         enterBudget: 500
+    }, {
+        name: "rare",
+        enterBudget: 1000
     }
 ];
 
-const SMITHS_LETTERS = ["A", "B", "C", "D", "E"]
+const SMITHS_LETTERS = ["A", "B", "C", "D", "E"];
 const settings = {
     enterPrice: 200,
     socialPoints: 5,
@@ -46,12 +49,113 @@ const isMale = (name) => {
     }
 }
 
+const rareGuestsArr = [{
+    name: "Luke",
+    img: "rare-guest-1",
+    enterBudget: 1000,
+    maxPlusCount: 20,
+    isOnBoard: false
+}, {
+    name: "Mandalorian",
+    img: "rare-guest-2",
+    enterBudget: 1000,
+    maxPlusCount: 20,
+    isOnBoard: false
+}, {
+    name: "Solo",
+    img: "rare-guest-3",
+    enterBudget: 1000,
+    maxPlusCount: 20,
+    isOnBoard: false
+}, {
+    name: "Emperor",
+    img: "rare-guest-4",
+    enterBudget: 1000,
+    maxPlusCount: 20,
+    isOnBoard: false
+}, {
+    name: "Princess",
+    img: "rare-guest-5",
+    enterBudget: 1000,
+    maxPlusCount: 20,
+    isOnBoard: false
+}, {
+    name: "Chubaka",
+    img: "rare-guest-6",
+    enterBudget: 1000,
+    maxPlusCount: 20,
+    isOnBoard: false
+}, {
+    name: "Yoda",
+    img: "rare-guest-7",
+    enterBudget: 1000,
+    maxPlusCount: 33,
+    isOnBoard: false
+}, {
+    name: "Obivan",
+    img: "rare-guest-8",
+    enterBudget: 1000,
+    maxPlusCount: 20,
+    isOnBoard: false
+}];
+const rareGuestsSet = new Set();
+rareGuestsArr.forEach((rareGuest) => {
+   rareGuestsSet.add(rareGuest);
+});
+
+// const RARE_GUESTS_TOTAL_COUNT = 8;
+// const RARE_GUESTS = [
+//     {img: "rare-guest"}
+// ]
+// const moveRareGuestByName = (name, from, to) => {
+//     console.log(`Trying to move #${name} from to`, from, to);
+//
+//     const card = Array.from(from).find((lootCard) => lootCard.name === name);
+//     if (card) {
+//         to.add(card);
+//         from.delete(card);
+//         console.log(`Card with id ${name} successfully moved`);
+//     } else {
+//         console.log(`Card with id ${name} does not exist`);
+//     }
+//     return card;
+// }
+// name, from, to
+const getRareGuest = () => {
+    const guestObj = rareGuestsArr[getRandomInt(rareGuestsArr.length)];
+    const card = Array.from(rareGuestsSet).find((card) => card.name === guestObj.name);
+    if (card) {
+        console.log(`Rare guest with name ${name} successfully passed`);
+    } else {
+        console.log(`Rare guest with name ${name} does not exist`);
+    }
+    return card;
+}
+
+
+// const getImgFormat = (name) => {
+//     if (name === "rare") {
+//         return `jpg`;
+//     } else {
+//         return `png`;
+//     }
+// }
+
 const drawSmitsCard = (dataObj) => {
+    const rareGuest = dataObj.name === "rare" ? getRareGuest() : false;
+    console.log("rareGuest", rareGuest, getRareGuest());
+    if (rareGuest) {
+        dataObj.name = rareGuest.name;
+        dataObj.profile = rareGuest;
+        dataObj.profile.isOnBoard = true;
+        dataObj.plusCount = getRandomInt(dataObj.profile.maxPlusCount);
+        dataObj.enterBudget = getRandomInt(dataObj.profile.enterBudget);
+    }
     const parent = document.querySelector("#queue");
     const guest = document.createElement("div");
 
     guest.classList.add("card");
-    guest.classList.add(`--${dataObj.name}`);
+    guest.classList.add(`--${rareGuest ? "rare" : dataObj.name}`);
     guest.classList.add("--smith");
     guest.innerHTML = `
 <header class="card__header">
@@ -60,7 +164,7 @@ const drawSmitsCard = (dataObj) => {
     </div>
 </header>
 <div class="card__preview">
-    <img class="card__preview-img" src="img/${dataObj.name}.png" alt="" style="">
+    <img class="card__preview-img" src="img/${rareGuest ? rareGuest.img : dataObj.name}.${rareGuest ? "jpg" : "png"}" alt="" style="">
 </div>
 <div class="js-card-controls card__controls">
     <button>+</button>
@@ -74,6 +178,9 @@ const drawSmitsCard = (dataObj) => {
     controls.forEach((btn) => {
         if (btn.textContent === "+") {
             btn.addEventListener("click", () => {
+                if (dataObj.name === "rare") {
+
+                }
                 guest.classList.add("slide-out-left");
                 setTimeout(() => {
                     guest.remove();

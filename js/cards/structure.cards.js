@@ -30,6 +30,7 @@ const initGame = () => {
             result: {
                 cashOnEnter: 0,
                 cashOnBar: 0,
+                // rarity: 0,
                 income: 0
             }
         }
