@@ -19,10 +19,12 @@ To start a singleplayer game, enter the login "navi" and the password "continuei
 Multiplayer config sample
 ```
 {
-    players: [
-        {
-            name: ""
-        }
-    ]
+  "players": [
+    {
+      "name": "navi",
+      "game": {},
+      "sound": []
+    }
+  ]
 }
 ```
