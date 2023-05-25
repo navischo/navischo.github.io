@@ -185,7 +185,7 @@ const useSmithsCards = () => {
 
 const clearSmithsSet = () => {
     win77.game.event.settings.guests.set.clear();
-    document.querySelector("#queue").innerHTML = "";
+    // document.querySelector("#queue").innerHTML = "";
 }
 
 win77.pokeButton.dia.useSmithsCards = useSmithsCards;

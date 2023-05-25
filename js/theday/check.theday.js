@@ -1,11 +1,7 @@
 const checkData = {
     budget: 36800,
     income: 154000,
-    flex: 1000,
-    mob: 3270,
     crew: 5000,
-    timeBonus: 13490,
-    special: 12000,
     total: 222160
 };
 
@@ -50,10 +46,14 @@ const drawCheck = (checkData, parent = "body") => {
         checkElement.appendChild(getCheckLayer(checkData, i));
     }
     document.querySelector(parent).appendChild(checkElement);
+    // uncomment to add background
     const skyAndOcean = document.createElement("div");
     skyAndOcean.classList.add("check-screen__sky-and-ocean");
     skyAndOcean.innerHTML = getSkyAndOceanMarkup();
-    document.querySelector(parent).appendChild(skyAndOcean);
+    checkElement.appendChild(skyAndOcean);
+    checkElement.addEventListener("click", () => {
+        checkElement.remove();
+    });
 }
 
 const getSkyAndOceanMarkup = () =>
