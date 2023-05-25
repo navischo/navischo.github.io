@@ -64,7 +64,6 @@ const goToPage = (name) => {
     swipePage(name);
     // body.setAttribute("data-hash", `${name}`);
     localStorage.currentPage = win77.router.currentPage;
-    initIntervalScreen();
     body.classList.remove("hud-body-background");
     title.textContent = win77.router.currentPage.toUpperCase();
 

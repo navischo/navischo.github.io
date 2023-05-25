@@ -6,6 +6,7 @@ import { moveCardById } from "../utils/getCardById.js";
 
 const reloadTheday = () => {
     console.log(`Event is finished. You archive ${win77.game.event.result.income} income and some sound to play next time`, win77.game.event);
+    document.querySelector("body").classList.remove("background-single");
 
     initScore();
     updScore();
