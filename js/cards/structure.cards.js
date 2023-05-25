@@ -91,7 +91,8 @@ const initPlayer = () => {
         class: new Set(),
         sound: new Set(),
         loot: new Set(),
-        cars: new Set()
+        cars: new Set(),
+        readyTimeout: 0
     };
 
     moveCardById("car-cosmos-track", win77.game.catalog.anti, player.cars);

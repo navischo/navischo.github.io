@@ -60,14 +60,32 @@ const drawSmitsCard = (dataObj) => {
 <div class="card__preview">
     <img class="card__preview-img" src="img/${dataObj.name}.png" alt="" style="">
 </div>
-<!--<div class="js-card-controls card__controls">-->
-<!--    <button>+</button>-->
-<!--    <button>-</button>-->
-<!--</div>-->
+<div class="js-card-controls card__controls">
+    <button>+</button>
+    <button>-</button>
+</div>
 `;
     // console.log(`drawSmitsCard(${name})`, guest.innerHTML);
 
     parent.appendChild(guest);
+    const controls = guest.querySelectorAll("button");
+    controls.forEach((btn) => {
+        if (btn.textContent === "+") {
+            btn.addEventListener("click", () => {
+                guest.remove();
+                const message = `You pass ${dataObj.name}`;
+                console.log(message);
+            });
+        } else if (btn.textContent === "-") {
+            btn.addEventListener("click", () => {
+                guest.remove();
+                console.log(`You say not today to ${dataObj.name}`, dataObj, win77.game);
+                win77.game.event.settings.socialPoints++;
+                inviteGuest();
+            });
+        }
+    });
+    guest.classList.add("slide-in-blurred-right");
 }
 
 // const initControls = (guestCard) => {
@@ -79,7 +97,7 @@ const drawSmitsCard = (dataObj) => {
 //     });
 // }
 
-const useSmithsCard = (interval) => {
+const useSmithsCard = (interval = undefined) => {
     const socialPoints = win77.game.event.settings.socialPoints;
     if (socialPoints > 0) {
         const smithCard = Object.assign({}, SMITHS_TYPES[getRandomInt(SMITHS_TYPES.length)]);
@@ -97,13 +115,22 @@ const useSmithsCard = (interval) => {
 
         console.log(`Security: Seems like ${smithCard.name} coming to your Event from strange portal with ${smithCard.plusCount} friends. Let them pass?`);
     } else {
-        clearInterval(interval);
+        // if (interval) {
+        //     clearInterval(interval);
+        // }
         console.log(`Security: Seems like your social points is off`);
         const portalToClose = document.querySelector(".js-rick-portal");
         if (portalToClose) {
             portalToClose.addEventListener("click", reloadTheday);
         }
     }
+}
+
+const inviteGuest = () => {
+    const socialPoints = win77.game.event.settings.socialPoints;
+
+    useSmithsCard();
+    console.log("We use one social point, left:", socialPoints);
 }
 
 const getScene = () => {
@@ -144,17 +171,16 @@ const useSmithsCards = () => {
     drawLootCards(scene.data.controller, scene.setup.controllerSelector);
     drawLootCards(scene.data.lineup, scene.setup.lineupSelector);
     document.querySelector(`${scene.setup.lineupSelector}`).classList.add("--play");
-    const handler = () => {
+    const inviteGuestByInterval = () => {
         const socialPoints = win77.game.event.settings.socialPoints;
 
-        useSmithsCard(interval);
-        console.log("We use one social point, left:", socialPoints);
+        inviteGuest();
 
         if (socialPoints === 0) {
             clearInterval(interval);
         }
     };
-    const interval = setInterval(handler, 500); // 3000
+    const interval = setInterval(inviteGuestByInterval, 500); // 3000
 }
 
 const clearSmithsSet = () => {

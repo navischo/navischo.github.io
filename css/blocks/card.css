@@ -27,6 +27,16 @@
     background: white;
 }
 
+.card.--smith {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.card.--smith.slide-in-blurred-right {
+    visibility: visible;
+    opacity: 1;
+}
+
 .card.--smith .card__header {
     position: static;
     z-index: 1;
