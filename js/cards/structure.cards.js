@@ -79,7 +79,7 @@ win77.setGame(initGame());
 //=> 2. Игрок выбрал стартовые карты
 const initPlayer = () => {
     const player = {
-        id: "navischo",
+        id: "navi",
         lvl: 1,
         balance: {
             energy: 40,
@@ -91,8 +91,7 @@ const initPlayer = () => {
         class: new Set(),
         sound: new Set(),
         loot: new Set(),
-        cars: new Set(),
-        readyTimeout: 0
+        cars: new Set()
     };
 
     moveCardById("car-cosmos-track", win77.game.catalog.anti, player.cars);
