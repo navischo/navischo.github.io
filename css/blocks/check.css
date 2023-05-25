@@ -1,0 +1,296 @@
+@font-face {
+    font-family: 'JUSTICE3D';
+    src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/225473/justice.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.check-screen p {
+    margin: 0;
+}
+
+.check-screen__sky-and-ocean {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.check-clone {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    height: 100vh;
+    padding: 140px 15% 0 15%;
+
+    display: flex;
+    justify-content: space-between;
+
+
+    font-family: 'JUSTICE3D', sans-serif;
+    font-size: 55px;
+    line-height: 45px;
+}
+
+.check-clone-0 {
+    z-index: 6;
+}
+
+.check-clone-1 {
+    z-index: 5;
+    margin-left: 4px;
+}
+
+.check-clone-2 {
+    z-index: 4;
+    margin-left: 7px;
+    margin-top: 2px;
+}
+
+.check-clone-3 {
+    z-index: 4;
+    margin-left: -2px;
+    margin-top: -2px;
+}
+
+.check-clone__text-0 {
+    background: -webkit-linear-gradient(#6bb2ae, #3e9990);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 0 8px;
+    animation: slide 2.5s infinite ease-in-out;
+}
+
+.check-clone__text-1 {
+    background: -webkit-linear-gradient(top, rgba(208, 0, 154, 1) 5%, rgba(157, 0, 5, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 0 8px;
+    animation: slide 2.5s infinite ease-in-out;
+}
+
+.check-clone__text-2,
+.check-clone__text-3 {
+    background: black;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 0 8px;
+    animation: slide 2.5s infinite ease-in-out;
+}
+
+.check-screen-0 .check-clone__text-0 {
+    background: -webkit-linear-gradient(#6bb2ae, #3e9990);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.check-screen-1 .check-clone__text-1 {
+    background: -webkit-linear-gradient(top, rgba(208, 0, 154, 1) 5%, rgba(157, 0, 5, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.check-screen-2 .check-clone__text-2,
+.check-screen-3 .check-clone__text-2 {
+    background: black;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.check-clone__points {
+    text-align: right;
+}
+
+.sky {
+    display: flex;
+    flex-grow: 1;
+    background-color: black;
+    height: 375px;
+    overflow: hidden;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+
+.ocean {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding-top: 100px;
+    background: -moz-linear-gradient(top, #010100 0%, #3f230b 16%, #3f230b 72%, #000000 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #010100 0%, #3f230b 16%, #3f230b 72%, #000000 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #010100 0%, #3f230b 16%, #3f230b 72%, #000000 100%);
+    -webkit-box-shadow: 0px -13px 21px 5px rgba(167, 1, 1, 1);
+    -moz-box-shadow: 0px -13px 21px 5px rgba(167, 1, 1, 1);
+    box-shadow: 0px -13px 21px 5px rgba(167, 1, 1, 1);
+    height: 300px;
+    position: relative;
+    z-index: 2;
+}
+
+.sun {
+    height: 250px;
+    width: 250px;
+    border-radius: 100%;
+    background: linear-gradient(180deg, #e89b33, #fd0c05);
+    background-size: 400% 400%;
+    -webkit-box-shadow: 0px 0px 77px 10px rgba(253, 13, 5, 1);
+    -moz-box-shadow: 0px 0px 77px 10px rgba(253, 13, 5, 1);
+    box-shadow: 0px 0px 77px 10px rgba(253, 13, 5, 1);
+    margin-top: 150px;
+    animation: sun-pulse 6s infinite, sun-color 2s infinite;
+}
+
+.line-1 {
+    width: 75vw;
+    height: 4px;
+    animation: 0.2s pulse infinite;
+    opacity: 0.8;
+    right: 0;
+    top: 0;
+    margin-left: 25vw;
+    margin-bottom: 4px;
+    display: none;
+    background-color: black;
+}
+
+.trees {
+    background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/225473/palm-tree-2.png');
+    height: 96px;
+    width: 57vw;
+    position: absolute;
+    top: 303px;
+    right: 0;
+    animation: scroll-across-right 4s infinite linear;
+    z-index: -1;
+}
+
+.trees-reverse {
+    background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/225473/palm-tree-2.png');
+    height: 96px;
+    width: 57vw;
+    position: absolute;
+    top: 303px;
+    left: 0;
+    animation: scroll-across-left 4s infinite linear;
+    z-index: -1;
+}
+
+.trees-bg {
+    height: 296px;
+    width: 120vw;
+    position: absolute;
+    top: 103px;
+    left: -40px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(217, 156, 156, 0) 39%, rgba(163, 13, 13, 1) 95%, rgba(158, 0, 0, 1) 100%);
+}
+
+.fw-ad-1 {
+    animation-delay: 0.1s;
+}
+
+.fw-ad-2 {
+    animation-delay: 0.2s;
+}
+
+.fw-ad-3 {
+    animation-delay: 0.3s;
+}
+
+.fw-ad-4 {
+    animation-delay: 0.4s;
+}
+
+.fw-ad-5 {
+    animation-delay: 0.5s;
+}
+
+.fw-ad-6 {
+    animation-delay: 0.6s;
+}
+
+@keyframes scroll-across-left {
+    0% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(-280px)
+    }
+}
+
+@keyframes scroll-across-right {
+    0% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(280px)
+    }
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(40px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0.9;
+    }
+    50% {
+        opacity: 0.4;
+    }
+    100% {
+        opacity: 0.9;
+    }
+}
+
+@keyframes sun-pulse {
+    0% {
+        -webkit-box-shadow: 0px 0px 77px 10px rgba(253, 13, 5, 1);
+        -moz-box-shadow: 0px 0px 77px 10px rgba(253, 13, 5, 1);
+        box-shadow: 0px 0px 77px 10px rgba(253, 13, 5, 1);
+    }
+    50% {
+        -webkit-box-shadow: 0px 0px 77px 10px rgba(232, 155, 51, 1);
+        -moz-box-shadow: 0px 0px 77px 10px rgba(232, 155, 51, 1);
+        box-shadow: 0px 0px 77px 10px rgba(232, 155, 51, 1);
+    }
+    100% {
+        -webkit-box-shadow: 0px 0px 77px 10px rgba(253, 13, 5, 1);
+        -moz-box-shadow: 0px 0px 77px 10px rgba(253, 13, 5, 1);
+        box-shadow: 0px 0px 77px 10px rgba(253, 13, 5, 1);
+    }
+}
+
+@keyframes sun-color {
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+
+/*.noise {*/
+/*    position: absolute;*/
+/*    width: 100vw;*/
+/*    height: 100vh;*/
+/*    background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/225473/img-noise-361x370.png');*/
+/*    z-index: 10;*/
+/*    opacity: 0.5*/
+/*}*/
