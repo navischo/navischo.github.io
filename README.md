@@ -28,3 +28,12 @@ Multiplayer config sample
   ]
 }
 ```
+
+Making atmosphere
+
+Custom backgrounds
+1. Add your images to ./libs/screen
+2. Write name of every image to array SCREEN_NAMES in ./js/page/screen.page.js
+
+Recommended sound solution
+DDJ-400+SPS-5&5 on a good large table will be perfect for 3 Players

@@ -50,49 +50,61 @@ const isMale = (name) => {
 }
 
 const rareGuestsArr = [{
-    name: "Luke",
+    name: "darksranchik",
+    img: "darksranchik",
+    enterBudget: 1000,
+    maxPlusCount: 20,
+    isOnBoard: false
+}, {
+    name: "lightsranchik",
+    img: "lightsranchik",
+    enterBudget: 1000,
+    maxPlusCount: 20,
+    isOnBoard: false
+}, {
+    name: "luke",
     img: "rare-guest-1",
     enterBudget: 1000,
     maxPlusCount: 20,
     isOnBoard: false
 }, {
-    name: "Mandalorian",
+    name: "mandalorian",
     img: "rare-guest-2",
     enterBudget: 1000,
     maxPlusCount: 20,
     isOnBoard: false
 }, {
-    name: "Solo",
+    name: "solo",
     img: "rare-guest-3",
     enterBudget: 1000,
     maxPlusCount: 20,
     isOnBoard: false
 }, {
-    name: "Emperor",
+    name: "emperor",
     img: "rare-guest-4",
     enterBudget: 1000,
     maxPlusCount: 20,
     isOnBoard: false
 }, {
-    name: "Princess",
+    name: "princess",
     img: "rare-guest-5",
     enterBudget: 1000,
     maxPlusCount: 20,
     isOnBoard: false
 }, {
-    name: "Chubaka",
+    name: "chubaka",
     img: "rare-guest-6",
     enterBudget: 1000,
     maxPlusCount: 20,
     isOnBoard: false
 }, {
-    name: "Yoda",
+    name: "yoda",
     img: "rare-guest-7",
     enterBudget: 1000,
     maxPlusCount: 33,
     isOnBoard: false
 }, {
-    name: "Obivan",
+    name: "obivan",
     img: "rare-guest-8",
     enterBudget: 1000,
     maxPlusCount: 20,
@@ -155,7 +167,12 @@ const drawSmitsCard = (dataObj) => {
     const guest = document.createElement("div");
 
     guest.classList.add("card");
-    guest.classList.add(`--${rareGuest ? "rare" : dataObj.name}`);
+    if (rareGuest) {
+        guest.classList.add(`--rare`);
+        guest.classList.add(`--${dataObj.name}`);
+    } else {
+        guest.classList.add(`--${dataObj.name}`);
+    }
     guest.classList.add("--smith");
     guest.innerHTML = `
 <header class="card__header">
@@ -164,7 +181,7 @@ const drawSmitsCard = (dataObj) => {
     </div>
 </header>
 <div class="card__preview">
-    <img class="card__preview-img" src="img/${rareGuest ? rareGuest.img : dataObj.name}.${rareGuest ? "jpg" : "png"}" alt="" style="">
+    <img class="card__preview-img" src="img/${rareGuest ? rareGuest.img : dataObj.name}.png" alt="" style="">
 </div>
 <div class="js-card-controls card__controls">
     <button>+</button>

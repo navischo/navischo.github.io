@@ -68,7 +68,14 @@
 .card.--beth {
     background: #993637;
 }
-
+.card.--darksranchik {
+    color: white;
+    background: black;
+}
+.card.--lightsranchik {
+    color: white;
+    background: #46bae0;
+}
 .card--back {
     position: relative;
 }
