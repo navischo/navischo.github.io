@@ -135,13 +135,25 @@ rareGuestsArr.forEach((rareGuest) => {
 // name, from, to
 const getRareGuest = () => {
     const guestObj = rareGuestsArr[getRandomInt(rareGuestsArr.length)];
-    const card = Array.from(rareGuestsSet).find((card) => card.name === guestObj.name);
-    if (card) {
-        console.log(`Rare guest with name ${name} successfully passed`);
+    const name = guestObj.name;
+    const isGuestNowAvailable = !guestObj.isOnBoard;
+    if (isGuestNowAvailable) {
+        const card = Array.from(rareGuestsSet).find((card) => card.name === name);
+        if (card) {
+            console.log(`Rare guest with name ${name} successfully passed`, rareGuestsSet);
+        } else {
+            console.log(`Rare guest with name ${name} does not exist`, rareGuestsSet);
+        }
+        return card;
     } else {
-        console.log(`Rare guest with name ${name} does not exist`);
+        console.log(`Rare guest ${name} unavailable now`);
+        const isAnyoneMoreAvailable = Array.from(rareGuestsSet).find((card) => card.isOnBoard === false);
+        if (isAnyoneMoreAvailable) {
+            return getRareGuest();
+        } else {
+            console.log(`Seem like no more Rare guest available in your Direct`, rareGuestsSet);
+        }
     }
-    return card;
 }
 
 

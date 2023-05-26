@@ -70,11 +70,15 @@
 }
 .card.--darksranchik {
     color: white;
-    background: black;
+    background: #b33c37;
 }
 .card.--lightsranchik {
     color: white;
     background: #46bae0;
+}
+.card.--darksranchik .card__preview,
+.card.--lightsranchik .card__preview {
+    position: absolute;
 }
 .card--back {
     position: relative;
