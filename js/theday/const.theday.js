@@ -112,6 +112,7 @@ const rareGuestsArr = [{
     isOnBoard: false
 }];
 const rareGuestsSet = new Set();
+win77.game.player.rareGuestsSet = rareGuestsSet;
 rareGuestsArr.forEach((rareGuest) => {
    rareGuestsSet.add(rareGuest);
 });
@@ -169,7 +170,7 @@ const getRareGuest = () => {
 
 const drawSmitsCard = (dataObj) => {
     const rareGuest = dataObj.name === "rare" ? getRareGuest() : false;
-    console.log("rareGuest", rareGuest, getRareGuest());
+    console.log("isRareGuest", rareGuest);
     if (rareGuest) {
         dataObj.name = rareGuest.name;
         dataObj.profile = rareGuest;

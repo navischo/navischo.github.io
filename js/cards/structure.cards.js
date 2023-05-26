@@ -33,7 +33,8 @@ const initGame = () => {
                 // rarity: 0,
                 income: 0
             }
-        }
+        },
+        final: false
     }
 
     DNECards.forEach((card) => {
@@ -78,15 +79,16 @@ const initGame = () => {
 
 win77.setGame(initGame());
 
-
 //=> 2. Игрок выбрал стартовые карты
 const initPlayer = () => {
+    const savedBankroll = +localStorage.getItem("bankroll");
+    console.log(savedBankroll ? `Your bankroll in amount of ${savedBankroll} was restored from LocalStorage. Enjoy!` : `Your starting bankroll is 14000`, savedBankroll); // 970510
     const player = {
         id: "navi",
         lvl: 1,
         balance: {
             energy: 40,
-            bankroll: 14000,
+            bankroll: savedBankroll ? savedBankroll : 14000,
             skillPoints: 3
         },
         hand: new Set(),

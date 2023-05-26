@@ -1,5 +1,6 @@
 import { getRandomInt, moveCardById } from "./utils/getCardById.js";
 import { getCardElement } from "./cards/template.cards.js";
+import { appendNewTop } from "./theday/endgame.theday.js";
 
 class DNECli {
     constructor() {}
@@ -46,6 +47,16 @@ class DNECli {
 
     giveSkillPointsToPlayer(count) {
         this.game.player.balance.skillPoints = this.game.player.balance.skillPoints + count;
+        if (this.game.player.balance.skillPoints >= 4) {
+            this.game.final = {
+                result: {
+                    bankroll: this.game.player.balance.bankroll
+                }
+            };
+            localStorage.setItem("bankroll", `${this.game.player.balance.bankroll}`);
+            appendNewTop(this.game.player.id, this.game.player.balance.bankroll);
+            console.log("Seems like you win the game. Congratulations!", win77.game);
+        }
     }
 
     getSkillPointsFromPlayer(count) {
