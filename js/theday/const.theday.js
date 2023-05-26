@@ -33,7 +33,8 @@ const settings = {
     guests: {
         set: new Set(),
         womanCount: 0,
-        manCount: 0
+        manCount: 0,
+        isRareAvailable: true
     },
     bar: {
         length: 100,
@@ -151,6 +152,7 @@ const getRareGuest = () => {
         if (isAnyoneMoreAvailable) {
             return getRareGuest();
         } else {
+            win77.game.event.settings.guests.isRareAvailable = false;
             console.log(`Seem like no more Rare guest available in your Direct`, rareGuestsSet);
         }
     }
@@ -207,9 +209,6 @@ const drawSmitsCard = (dataObj) => {
     controls.forEach((btn) => {
         if (btn.textContent === "+") {
             btn.addEventListener("click", () => {
-                if (dataObj.name === "rare") {
-
-                }
                 guest.classList.add("slide-out-left");
                 setTimeout(() => {
                     guest.remove();
@@ -220,6 +219,9 @@ const drawSmitsCard = (dataObj) => {
             });
         } else if (btn.textContent === "-") {
             btn.addEventListener("click", () => {
+                if (dataObj.profile) {
+                    dataObj.profile.isOnBoard = false;
+                }
                 guest.classList.add("slide-out-blurred-right");
                 setTimeout(() => {
                     guest.remove();
@@ -268,7 +270,12 @@ const passGuest = (smithCard) => {
 const useSmithsCard = (interval = undefined) => {
     const socialPoints = win77.game.event.settings.socialPoints;
     if (socialPoints > 0) {
-        const smithCard = Object.assign({}, SMITHS_TYPES[getRandomInt(SMITHS_TYPES.length)]);
+        let smithCard = Object.assign({}, SMITHS_TYPES[getRandomInt(SMITHS_TYPES.length)]);
+        if (smithCard.name === "rare" && !win77.game.event.settings.guests.isRareAvailable) {
+            do {
+                smithCard = Object.assign({}, SMITHS_TYPES[getRandomInt(SMITHS_TYPES.length)]);
+            } while (smithCard.name !== "rare");
+        }
         smithCard.plusCount = getRandomInt(14);
         console.log(`Security: Seems like ${smithCard.name} coming to your Event from strange portal with ${smithCard.plusCount} friends. Let them pass?`);
 
