@@ -1,6 +1,6 @@
 const NOKIA_MENUS = [
     {
-        title: "Pokenav",
+        title: "Pokewall",
         items: [
             {
                 href: "#",
