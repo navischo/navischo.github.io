@@ -13,8 +13,17 @@ Command entry
 The most elementary parser of this program will accept two-word commands without regard to case.
 The parser checks only the first two words, the rest are ignored.
 
+Installation
+1. Unpack the archive with the game
+2. Install node.js (https://nodejs.org/en/download) and cmder (https://cmder.app/) mini
+3. Install packages with the "npm i" command. After opening cmder, move to the game directory with the command "cd <path_to_directory>"
+4. Insert your name in config on line 87. By opening it by double-click on the file in the root of the game directory
+5. Start session build with "npm run start"
+
+Have fun!
+
 Game launch
-To start a singleplayer game, enter the login "navi" and the password "continueisanart"
+To start a single player game, enter the login "navi" and the password "continueisanart"
 
 Multiplayer config sample
 ```

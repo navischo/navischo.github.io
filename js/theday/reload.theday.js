@@ -21,7 +21,7 @@ const reloadTheday = () => {
     win77.giveIncomeToPlayer(win77.game.event.result.income);
     win77.giveSkillPointsToPlayer(1);
     console.log("!win77.game.final", win77.game.final, win77.game.player.balance.skillPoints, win77.game.player.balance.skillPoints === 4);
-    if (win77.game.final === false) {
+    if (win77.game.final === false) { // win77.game.player.balance.skillPoints % 10
         drawCheck(win77.game.event.result, "#dne-page-up");
     } else {
         drawCheck(parseTopsString(localStorage.getItem("tops")), "#dne-page-up");

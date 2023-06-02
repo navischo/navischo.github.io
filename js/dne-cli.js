@@ -57,6 +57,8 @@ class DNECli {
             appendNewTop(this.game.player.id, this.game.player.balance.bankroll);
             console.log("Seems like you win the game. Congratulations!", win77.game);
         }
+
+        return this.game.player.balance.skillPoints;
     }
 
     getSkillPointsFromPlayer(count) {

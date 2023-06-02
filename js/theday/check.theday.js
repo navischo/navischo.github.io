@@ -47,10 +47,12 @@ const drawCheck = (checkData, parent = "body") => {
     }
     document.querySelector(parent).appendChild(checkElement);
     // uncomment to add background
-    const skyAndOcean = document.createElement("div");
-    skyAndOcean.classList.add("check-screen__sky-and-ocean");
-    skyAndOcean.innerHTML = getSkyAndOceanMarkup();
-    checkElement.appendChild(skyAndOcean);
+    if (win77.game.player.balance.skillPoints % 10) {
+        const skyAndOcean = document.createElement("div");
+        skyAndOcean.classList.add("check-screen__sky-and-ocean");
+        skyAndOcean.innerHTML = getSkyAndOceanMarkup();
+        checkElement.appendChild(skyAndOcean);
+    }
     checkElement.addEventListener("click", () => {
         checkElement.remove();
     });
