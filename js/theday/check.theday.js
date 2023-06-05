@@ -52,6 +52,11 @@ const drawCheck = (checkData, parent = "body") => {
         skyAndOcean.classList.add("check-screen__sky-and-ocean");
         skyAndOcean.innerHTML = getSkyAndOceanMarkup();
         checkElement.appendChild(skyAndOcean);
+    } else {
+        const skyAndOcean = document.createElement("div");
+        skyAndOcean.classList.add("intro");
+        skyAndOcean.innerHTML = getIntro();
+        checkElement.appendChild(skyAndOcean);
     }
     checkElement.addEventListener("click", () => {
         checkElement.remove();
@@ -90,5 +95,21 @@ const getSkyAndOceanMarkup = () =>
     <div class="line-1"></div>
     <div class="line-1"></div>
 </div>`;
+
+const getIntro = () => {
+    return `
+<!--<div class="intro">-->
+    <div class="video">
+        <video class="video__media" src="mp4/dinner.mp4" autoplay muted loop></video>
+    </div>
+
+    <div class="intro__content">
+        <div class="container">
+            <h1 class="intro__title"><a href="hud.html">CONTINUE</a></h1>
+        </div>
+    </div>
+<!--</div>-->
+    `
+}
 
 export { drawCheck, checkData };
