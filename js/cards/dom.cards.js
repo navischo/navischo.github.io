@@ -87,7 +87,7 @@ const addCardControls = (newCard, cardData) => {
     controls.parent = newCard.querySelector(".js-card-controls");
     if (cardData.type === "loot") {
         createNode(controls.parent, "button", COMMANDS.buy, COMMANDS.buy);
-        createNode(controls.parent, "button", COMMANDS.rent, COMMANDS.rent);
+        cardData.costObj.rentAvailable ? createNode(controls.parent, "button", COMMANDS.rent, COMMANDS.rent) : "";
     }
     if (cardData.type === "npc") {
         createNode(controls.parent, "button", COMMANDS.talk, COMMANDS.talk);
