@@ -63,6 +63,13 @@
     background: yellow; /*var(--primary)*/
 }
 
+.cybr-btn.--reverse::before {
+    background: yellow;
+}
+.cybr-btn.--reverse::after {
+    background: cyan;
+}
+
 .cybr-btn__tag {
     position: absolute;
     padding: 1px 4px;
