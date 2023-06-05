@@ -122,3 +122,10 @@
     margin: 0;
     padding: 15px;
 }
+
+.story-demo {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin-bottom: 77px;
+}
