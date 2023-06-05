@@ -1,11 +1,25 @@
 import { getLocationDataMarkup } from "../inInteraction/interface.inInteraction.js"
 import { win77 } from "../dne-cli.js";
 
-const initTip = () => {
-    const tipText = `
+const DEFAULT_TIP = `
 Прототип інтерфейсу взаємодії між гравцем та навколишнім світом натхненний Cyberpunk 2077.
 The goal is: showcasing a start of a UI kit. If you've played the game, you' might be able to pick-up some similarities with the in-game menus.
 `;
+
+const ADVICES = [
+    `(i)Кращий спосіб заробити на Івенті - запрошувати великі компанії цікавих гостей`
+];
+
+const getAdviceScreenMarkup = () => `
+<div class="advice-screen">
+    <article class="advice --bottom-left">
+        <p>(i)Кращий спосіб заробити на Івенті - запрошувати великі компанії цікавих гостей</p>
+    </article>
+</div>
+`;
+
+const initTip = (text = DEFAULT_TIP) => {
+
 
     const tipMarkup = (text) => `
 <div class="pad">
@@ -21,7 +35,7 @@ The goal is: showcasing a start of a UI kit. If you've played the game, you' mig
         console.log("You ask about tip for..", e.target.textContent, e.target, e);
         const newEl = document.createElement("div");
         newEl.classList.add("pad");
-        newEl.innerHTML = tipMarkup(tipText);
+        newEl.innerHTML = tipMarkup(text);
         tipsParent.appendChild(newEl);
     }
 
@@ -29,7 +43,7 @@ The goal is: showcasing a start of a UI kit. If you've played the game, you' mig
     body.addEventListener("auxclick", showTip);
 }
 
-initTip();
+initTip(ADVICES[0]);
 
 const TUTORIAL_PARTS = {
     whatIsSoundCards:

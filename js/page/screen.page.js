@@ -70,7 +70,12 @@ const SCREEN_NAMES = [
     `screen-nohud--hello-carry`,
     `screen-nohud--party-sky`,
     `screen-nohud--system-shock`,
-    `screen-nohud--place-to-think`
+    `screen-nohud--place-to-think`,
+    `screen-nohud--ghost-ride`,
+    `screen-nohud--shablya`,
+    `screen-nohud--dtp`,
+    `screen-nohud--mablock`,
+    `screen-nohud--necromant`
 ];
 
 const initScreen = () => {

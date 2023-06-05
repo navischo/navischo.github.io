@@ -1,4 +1,5 @@
 @import "./vars.css";
+@import "./fonts.css";
 
 /*CORE*/
 @import "./blocks/pokeball.css";

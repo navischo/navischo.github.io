@@ -1,0 +1,22 @@
+.advice-screen {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 50;
+
+    display: flex;
+
+    /*background: rgba(0, 0, 0, .6);*/
+}
+
+.advice {
+    color: white;
+    font-family: "JetBrains Mono", monospace;
+    text-shadow: 2px 1px 0 black;
+}
+
+.advice.--bottom-left {
+    margin-top: auto;
+}

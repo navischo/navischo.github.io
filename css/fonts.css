@@ -1,0 +1,21 @@
+@font-face {
+    font-family: "Cyberpunk";
+    src:
+            url(https://assets.codepen.io/2585/Cyberpunk-Regular.svg#Cyberpunk) format('svg'),
+            url(https://assets.codepen.io/2585/Cyberpunk-Regular.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Cyber;
+    src: url("https://assets.codepen.io/605876/Blender-Pro-Bold.otf");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'JUSTICE3D';
+    src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/225473/justice.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
