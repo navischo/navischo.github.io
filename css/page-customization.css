@@ -93,6 +93,7 @@ body.hide-hud .player-obj,
 body.hide-hud .inventory,
 body.hide-hud .js-toggle-catalog-controls,
 body.hide-hud .swiper-button-next,
+body.hide-hud #table,
 body.hide-hud .swiper-button-prev {
     display: none;
 }
