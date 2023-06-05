@@ -14,13 +14,13 @@
     <h1 class="cybr-title buy__title">Does Not Exist</h1>
     <p class="buy__subtitle">Competitive Board-n-Web Game...<br> about creating Rave of your Dream</p>
     <div class="buy__type-btns">
-        <button class="cybr-btn buy__digital" style="margin-right: 10px">Digital</button>
-        <button class="cybr-btn buy__physical">Physical</button>
+        <button id="buy-digital" class="cybr-btn buy__digital" style="margin-right: 10px">Digital</button>
+        <button id="buy-physical" class="cybr-btn buy__physical">Physical</button>
     </div>
     <ul class="buy__bundle-list">
         <li class="buy__bundle">
             <h3 class="buy__bundle-title">Bunny</h3>
-            <b class="buy__bundle-price">07€</b>
+            <b id="price-bunny" class="buy__bundle-price">07€</b>
             <img class="buy__bundle-preview" src="img/buy/bunny.png" alt="">
             <div class="buy__bundle-textfield">
                 <ul>
@@ -37,7 +37,7 @@
         </li>
         <li class="buy__bundle">
             <h3 class="buy__bundle-title">Basic</h3>
-            <b class="buy__bundle-price">17€</b>
+            <b id="price-basic" class="buy__bundle-price">17€</b>
             <img class="buy__bundle-preview" src="img/buy/basic.png" alt="">
             <div class="buy__bundle-textfield">
                 <ul>
@@ -54,7 +54,7 @@
         </li>
         <li class="buy__bundle">
             <h3 class="buy__bundle-title">Regular</h3>
-            <b class="buy__bundle-price --regular">119€</b>
+            <b id="price-regular" class="buy__bundle-price --regular">119€</b>
             <img class="buy__bundle-preview" src="img/buy/regular.png" alt="">
             <div class="buy__bundle-textfield">
                 <ul>
@@ -87,7 +87,7 @@
             <p>
                 Hello, my name is Navischo and this program was originally developed by me in winter Kyiv of 2023. Green House Art Residency provided all
                 the necessary resources for the development of this game during a full-scale Russian invasion to the
-                territory of the sovereign state of Ukraine. The game is based both on my favorite board games:
+                territory of the sovereign state of Ukraine. The game is based on my favorite board games:
                 Munchkin, Scythe, Fights of Battle Mages - and computer games: Cyberpunk 2077, Colossal Cave Adventure.
                 This version was implemented using JS+HTML+CSS and is available to run in any modern browser.
             </p>
@@ -100,5 +100,29 @@
 <footer>
     <p style="padding: 10px; text-align: center">(c)2023, all rights received. Continue is an Art</p>
 </footer>
+<script>
+    const buyDigitalBtn = document.querySelector("#buy-digital");
+    const buyPhysicalBtn = document.querySelector("#buy-physical");
+    const bunnyPriceNode = document.querySelector("#price-bunny");
+    const basicPriceNode = document.querySelector("#price-basic");
+    const regularPriceNode = document.querySelector("#price-regular");
+    const priceNodeArr = [bunnyPriceNode, basicPriceNode, regularPriceNode];
+    const digitalPriceArr = [0, 0, 0];
+    const physicalPriceArr = [7, 17, 119];
+    const CURRENCY = "€";
+
+    buyDigitalBtn.addEventListener("click", () => {
+        digitalPriceArr.forEach((price, i) => {
+            priceNodeArr[i].textContent = `${price}${CURRENCY}`;
+        });
+    });
+
+    buyPhysicalBtn.addEventListener("click", () => {
+        physicalPriceArr.forEach((price, i) => {
+            priceNodeArr[i].textContent = `${price}${CURRENCY}`;
+        });
+    });
+
+</script>
 </body>
 </html>
