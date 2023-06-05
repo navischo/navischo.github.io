@@ -1,0 +1,124 @@
+.buy-body {
+    color: white;
+    background: black;
+
+    font-family: "Press Start 2p", cursive;
+
+}
+
+.story {
+    padding-top: 80px;
+    text-align: center;
+}
+
+.story__textfield {
+    color: black;
+    background: white;
+
+    min-height: 120px;
+    padding: 20px;
+    margin-bottom: 10px;
+
+    font-family: "Press Start 2p", cursive;
+    line-height: 2em;
+}
+
+.story__textfield-container {
+    max-width: 800px;
+    width: 100%;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+.story__textfield > *:last-child {
+    margin-bottom: 0;
+}
+
+.buy__title {
+    margin-bottom: 0;
+
+    font-size: 7em;
+    letter-spacing: -10px;
+    text-align: center;
+}
+
+.buy__subtitle {
+    margin-bottom: 3em;
+
+    text-align: center;
+    line-height: 30px;
+}
+
+.buy__type-btns {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.buy__bundle-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+.buy__bundle + .buy__bundle {
+    margin-left: 20px;
+}
+
+.buy__bundle {
+    position: relative;
+
+    color: black;
+    /*background: white;*/
+
+    max-width: 400px;
+
+    font-family: "Press Start 2p", cursive;
+}
+
+.buy__bundle-price {
+    position: absolute;
+    top: -20px;
+    right: -10px;
+
+    font-family: "Press Start 2p", cursive;
+    font-size: 5em;
+    color: cyan;
+
+    text-shadow: 6px 5px 0 yellow;
+}
+
+.buy__bundle-price.--regular {
+    right: -45px;
+}
+
+.buy__bundle-textfield {
+    color: black;
+    background: white;
+
+    min-height: 150px;
+    padding: 10px;
+    margin-bottom: 10px;
+
+    font-family: "JetBrains Mono", monospace;
+}
+
+.buy__bundle-textfield > *:last-child {
+    margin-bottom: 0;
+}
+
+.buy__bundle-preview {
+    width: 400px;
+}
+
+.buy__bundle-title {
+    background: black;
+    color: white;
+    border: 2px solid white;
+    margin: 0;
+    padding: 15px;
+}

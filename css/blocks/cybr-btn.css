@@ -38,6 +38,7 @@
     min-height: 35px;
     line-height: 20px;
     transition: background 0.2s;
+    z-index: 1;
 }
 
 .cybr-btn:hover {
@@ -60,12 +61,12 @@
 }
 
 .cybr-btn:before {
-    background: #f2040e;
+    background: cyan;
     transform: translate(var(--border), 0);
 }
 
 .cybr-btn:after {
-    background: var(--primary);
+    background: yellow; /*var(--primary)*/
 }
 
 .cybr-btn__tag {
@@ -170,6 +171,53 @@
     }
 }
 
-.cybr-btn:nth-of-type(2) {
-    --primary-hue: 260;
+/*.cybr-btn:nth-of-type(2) {*/
+/*    --primary-hue: 260;*/
+/*}*/
+
+.my-cybr-btn {
+    font-size: 20px;
+    padding: 0 10px;
+    font-weight: 700;
+    color: black;
+    border: 2px solid black;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 2px;
+    clip-path: var(--ui-notch-path);
+    cursor: pointer;
+    display: inline-block;
+    font-family: var(--fonts-primary);
+    letter-spacing: 0.045em;
+    text-align: left;
+    text-transform: uppercase;
+    transform: translateY(0);
+    transition: .1s ease-in;
+}
+
+.my-cybr-btn::before {
+    background-color: black;
+    bottom: 10px;
+    content: "";
+    display: block;
+    height: 3px;
+    position: absolute;
+    right: 2px;
+    top: auto;
+    transform: rotate(315deg) translateY(10px);
+    width: var(--ui-notch-hypotenuse);
+    z-index: 31;
+    transition: .1s ease-in;
+}
+
+.my-cybr-btn:hover {
+    background-color: rgba(80, 233, 239, 0.7)!important;
+    border-color: var(--colors-secondary--500);
+}
+
+.my-cybr-btn:hover::before {
+    background-color: var(--colors-secondary--500);
+}
+
+.my-cybr-btn:active {
+    transform: translateY(1px);
 }
