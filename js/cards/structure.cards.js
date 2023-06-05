@@ -70,7 +70,7 @@ const initGame = () => {
     });
 
     // parse cost
-    // game.catalog.loot.forEach(parseCost);
+    game.catalog.loot.forEach(parseCost);
 
     return game;
 }

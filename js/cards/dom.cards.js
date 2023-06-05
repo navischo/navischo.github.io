@@ -41,12 +41,24 @@ const initHandlers = (cardData, controls) => {
         // console.log("win get cost", cardData.cost, cardData);
         // console.log("isSetHasId(catalog, cardData.id)", isSetHasId(catalog, cardData.id));
         if (isSetHasId(catalog, cardData.id)) {
-            win77.getCostFromPlayer(cardData.cost);
+            win77.getCostFromPlayer(cardData.costObj.buy);
             updBalanceNode();
             moveCardById(cardData.id, catalog, win77.game.player[cardData.type]);
             initInventory();
         } else {
             console.log(`Item ${cardData.name} was already sold`);
+        }
+    };
+
+    const rentButtonHandler = () => {
+        const catalog = win77.game.catalog[cardData.type];
+        if (isSetHasId(catalog, cardData.id) && cardData.costObj.rentAvailable) {
+            win77.getCostFromPlayer(cardData.costObj.rent);
+            updBalanceNode();
+            moveCardById(cardData.id, catalog, win77.game.player[cardData.type]);
+            initInventory();
+        } else {
+            console.log(`Item ${cardData.name} is already in rent`);
         }
     };
 
@@ -62,6 +74,8 @@ const initHandlers = (cardData, controls) => {
             btn.addEventListener("click", plusButtonHandler);
         } else if (btn.textContent === COMMANDS.buy) {
             btn.addEventListener("click", buyButtonHandler);
+        } else if (btn.textContent === COMMANDS.rent) {
+            btn.addEventListener("click", rentButtonHandler);
         } else if (btn.textContent === COMMANDS.talk) {
             btn.addEventListener("click", talkButtonHandler);
         }

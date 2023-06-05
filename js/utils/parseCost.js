@@ -1,9 +1,13 @@
+const isCostShorted = () => {
+
+}
+
 const parseCost = (lootItem) => {
     const separator = "/";
     const costString = lootItem.cost;
     console.log(costString, `${costString}`.includes(separator));
     const rentAvailable = `${costString}`.includes(separator);
-    const constObj = {
+    const costObj = {
         rentAvailable: rentAvailable,
         buy: 0,
         rent: 0
@@ -15,19 +19,31 @@ const parseCost = (lootItem) => {
         console.log(`${buy} - ${rent}`);
 
         const isCostShorted = `${buy}`.includes("K");
-        console.log(isCostShorted, buy.replace("K", "000"));
+        console.log("isCostShorted", isCostShorted, buy.replace("K", "000"));
         if (isCostShorted) {
-            constObj.buy = +buy.replace("K", "000");
+            costObj.buy = +buy.replace("K", "000");
         } else {
-            constObj.buy = buy;
+            costObj.buy = buy;
         }
 
-        constObj.rent = +rent;
+        const isRentShorted = `${rent}`.includes("K");
+        console.log("isRentShorted", isRentShorted, rent.replace("K", "000"));
+        if (isCostShorted) {
+            costObj.rent = +rent.replace("K", "000");
+        } else {
+            costObj.rent = rent;
+        }
     } else {
-        constObj.buy = costString;
+        const cost = costString;
+        const isCostShorted = `${cost}`.includes("K");
+        if (isCostShorted) {
+            costObj.buy = +cost.replace("K", "000");
+        } else {
+            costObj.buy = +cost;
+        }
     }
 
-    lootItem.costObj = constObj;
+    lootItem.costObj = costObj;
     console.log(lootItem.cost, lootItem.costObj);
 };
 
