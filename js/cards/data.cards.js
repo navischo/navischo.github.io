@@ -615,7 +615,7 @@ const initDNELootArr = () => {
 
     LootArr.push(new DNELootCard("demo-madness", "Operation Madness", MADNESS_DEMO_LONGLINE, MADNESS_DEMO_IMG, 2, 500, "Демо, 55m of Електро", MADNESS_DEMO_SHORTLINE, "", true, "sound"));
 
-    // Sim0na
+    // Sim0ne
     //
     //
     const SIMONA_DEMO_LONGLINE = "";
@@ -623,7 +623,7 @@ const initDNELootArr = () => {
     const SIMONA_DEMO_IMG_ID = `1i_XzHA78FqWh0lEGchGYyngxJE_tvWJ0`;
     const SIMONA_DEMO_IMG = `https://drive.google.com/uc?id=${SIMONA_DEMO_IMG_ID}`;
 
-    LootArr.push(new DNELootCard("demo-sim0na", "Sim0na", SIMONA_DEMO_LONGLINE, SIMONA_DEMO_IMG, 3, "1K", "Демо, 54m of Електро", SIMONA_DEMO_SHORTLINE, "", true, "sound"));
+    LootArr.push(new DNELootCard("demo-sim0ne", "Sim0ne", SIMONA_DEMO_LONGLINE, SIMONA_DEMO_IMG, 3, "1K", "Демо, 54m of Електро", SIMONA_DEMO_SHORTLINE, "", true, "sound"));
 
     // Oneman
     //
