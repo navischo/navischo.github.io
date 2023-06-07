@@ -100,7 +100,7 @@
     font-family: "JetBrains Mono", monospace;
 }
 .windows__bg .windows__name .windows__name--inner{
-    font-family: "Press Start 2p", cursive;
+    font-family: "Press Start 2p", sans-serif;
     font-size: 6vw;
     font-weight: bold;
 }

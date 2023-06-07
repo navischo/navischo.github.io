@@ -28,7 +28,7 @@
 
     color: white;
 
-    font-family: "Press Start 2p", cursive;
+    font-family: "Press Start 2p", sans-serif;
 }
 
 .card-modal {
@@ -110,7 +110,7 @@ body .mfp-bg {
     padding-bottom: 4px;
 
     font-size: 1em;
-    font-family: "Press Start 2p", cursive;
+    font-family: "Press Start 2p", sans-serif;
 
 }
 

@@ -217,7 +217,7 @@ body.js-tab {
     margin: 0;
     padding-top: 8px;
 
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'Press Start 2P', sans-serif;
     color: inherit;
     text-align: center;
     transform: translateX(-50%);
@@ -230,7 +230,7 @@ body.js-tab {
     padding: 0;
     border: 0;
 
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'Press Start 2P', sans-serif;
     color: white;
     background: transparent;
     box-shadow: none;
@@ -279,7 +279,7 @@ body {
     top: 25px;
     left: 220px;
 
-    font-family: "Press Start 2p", cursive;
+    font-family: "Press Start 2p", sans-serif;
     font-size: 30px;
     text-shadow: 5px 3px black;
 }
@@ -387,7 +387,7 @@ body {
     display: flex;
     justify-content: space-between;
 
-    font-family: "Press Start 2p", cursive;
+    font-family: "Press Start 2p", sans-serif;
 }
 
 .hud-top--fixed {

@@ -198,7 +198,7 @@
 .card__title {
     margin: 0;
 
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'Press Start 2P', sans-serif;
     word-break: break-word;
 }
 
@@ -216,7 +216,7 @@
 }
 
 .card__price {
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'Press Start 2P', sans-serif;
 }
 
 .card__limits {
@@ -263,7 +263,7 @@
 .card__bonus,
 .card__budget,
 .card__profit {
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'Press Start 2P', sans-serif;
     font-size: 1.2em;
 }
 

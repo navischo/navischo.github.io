@@ -946,7 +946,7 @@ img {
     display: flex;
     justify-content: space-between;
 
-    font-family: "Press Start 2p", cursive;
+    font-family: "Press Start 2p", sans-serif;
 }
 
 .hud-top--fixed {
@@ -1025,7 +1025,7 @@ img {
     color: red;
     background: black;
 
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'Press Start 2P', sans-serif;
     text-align: center;
     text-transform: uppercase;
 }
@@ -1082,7 +1082,7 @@ img {
 
     font-size: 20px;
     line-height: 1.6;
-    font-family: "Press Start 2p", cursive;
+    font-family: "Press Start 2p", sans-serif;
     color: white;
 }
 
@@ -1201,7 +1201,7 @@ img {
 .card__title {
     margin: 0;
 
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'Press Start 2P', sans-serif;
     word-break: break-word;
 }
 
@@ -1219,7 +1219,7 @@ img {
 }
 
 .card__price {
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'Press Start 2P', sans-serif;
 }
 
 .card__limits {
@@ -1266,7 +1266,7 @@ img {
 .card__bonus,
 .card__budget,
 .card__profit {
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'Press Start 2P', sans-serif;
     font-size: 1.2em;
 }
 
@@ -1311,14 +1311,14 @@ img {
 }
 
 h2 {
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'Press Start 2P', sans-serif;
     word-break: break-word;
 }
 
 .card-page__budget,
 .card-page__profit,
 .card-page__level {
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'Press Start 2P', sans-serif;
 }
 
 .card-page__id {
@@ -1377,7 +1377,7 @@ h2 {
     margin: 0;
     padding-top: 8px;
 
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'Press Start 2P', sans-serif;
     color: white;
     text-align: center;
     transform: translateX(-50%);
@@ -1390,7 +1390,7 @@ h2 {
     padding: 0;
     border: 0;
 
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'Press Start 2P', sans-serif;
     color: white;
     background: transparent;
     box-shadow: none;
@@ -1667,7 +1667,7 @@ h2 {
     display: inline-block;
     padding: 15px;
 
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'Press Start 2P', sans-serif;
 
     background: #00816A;
     border-radius: 3px;
@@ -1902,7 +1902,7 @@ h2 {
 .intro__title {
     margin: 0;
 
-    font-family: "Press Start 2p", cursive;
+    font-family: "Press Start 2p", sans-serif;
     font-size: 45px;
     color: #fff;
     text-align: center;

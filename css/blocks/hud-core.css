@@ -242,7 +242,7 @@ a {
 }
 
 .segment-topbar__title .channel-link__element {
-    font-family: "Press Start 2p", cursive;
+    font-family: "Press Start 2p", sans-serif;
 }
 
 .channel-link__element + .channel-link__element,
