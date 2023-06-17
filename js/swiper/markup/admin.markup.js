@@ -6,7 +6,7 @@ const adminMarkup = `
             <div class="app-a">
                 <div class="segment-topbar">
                     <div class="segment-topbar__header">
-                        <h3 class="text-heading3 segment-topbar__title">Navi</h3>
+                        <h3 class="js-owner text-heading3 segment-topbar__title">Navi</h3>
                     </div>
                     <div class="segment-topbar__aside">
                         <div class="button-toolbar">

@@ -3,9 +3,10 @@ import { getRandomInt } from "./getCardById.js";
 const loadLogo = document.querySelector("#load-logo");
 if (loadLogo) {
     const handler = () => {
-        document
-            .querySelector(".windows__logo")
-            .style.filter = `hue-rotate(${getRandomInt(360)}deg)`;
+        const logoElement = document.querySelector(".windows__logo");
+        if (logoElement) {
+            logoElement.style.filter = `hue-rotate(${getRandomInt(360)}deg)`;
+        }
     }
     handler();
     const interval = setInterval(handler, 15000);

@@ -5,7 +5,7 @@ const isCostShorted = () => {
 const parseCost = (lootItem) => {
     const separator = "/";
     const costString = lootItem.cost;
-    console.log(costString, `${costString}`.includes(separator));
+    // console.log(costString, `${costString}`.includes(separator));
     const rentAvailable = `${costString}`.includes(separator);
     const costObj = {
         rentAvailable: rentAvailable,
@@ -19,7 +19,7 @@ const parseCost = (lootItem) => {
         console.log(`${buy} - ${rent}`);
 
         const isCostShorted = `${buy}`.includes("K");
-        console.log("isCostShorted", isCostShorted, buy.replace("K", "000"));
+        // console.log("isCostShorted", isCostShorted, buy.replace("K", "000"));
         if (isCostShorted) {
             costObj.buy = +buy.replace("K", "000");
         } else {
@@ -44,7 +44,7 @@ const parseCost = (lootItem) => {
     }
 
     lootItem.costObj = costObj;
-    console.log(lootItem.cost, lootItem.costObj);
+    console.log(lootItem.cost, lootItem.costObj, `Item loaded successfully`);
 };
 
 export { parseCost };

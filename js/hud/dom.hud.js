@@ -5,7 +5,7 @@ import { PAGE_NAMES } from "./router.hud.js";
 import { getCardElement } from "../cards/template.cards.js";
 import { drawCard, drawLootCards, updHand } from "../cards/dom.cards.js";
 
-const hudMarkup = `
+const hudMarkup = (owner = win77.game.player.id ? win77.game.player.id : "navi") => `
 <h1 class="score">
     <span id="player-score" class="js-score-val">5</span> vs <span id="versus-score" class="js-score-val">12</span>
 </h1>
@@ -13,7 +13,7 @@ const hudMarkup = `
 <div id="inventory-card-display"></div>
 
 <div  class="table custom-scrollbar --y">
-<div id="table" class="table__cards" data-owner="navischo"></div>
+<div id="table" class="table__cards" data-owner="${owner}"></div>
 </div>
 <!-- <div id="top-hand" class="hand"></div> -->
 
@@ -23,8 +23,9 @@ const hudMarkup = `
 `;
 
 const initHud = () => {
+    console.log(`win77.game.player.id`, win77.game.player.id);
     win77.page.node.innerHTML = ``;
-    createNode(win77.page.node, "div", hudMarkup, PAGE_NAMES.hud);
+    createNode(win77.page.node, "div", hudMarkup(), PAGE_NAMES.hud);
     updHand();
 }
 

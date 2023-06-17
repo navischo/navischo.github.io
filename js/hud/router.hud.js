@@ -68,7 +68,7 @@ const goToPage = (name) => {
     title.textContent = win77.router.currentPage.toUpperCase();
 
     if (name === PAGE_NAMES.hud) {
-        body.querySelector("#dne-page").innerHTML = hudMarkup;
+        body.querySelector("#dne-page").innerHTML = hudMarkup();
         initScore();
         updScore();
         updHand();
