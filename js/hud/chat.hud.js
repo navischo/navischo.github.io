@@ -1,5 +1,6 @@
 import { getLocationDataMarkup } from "../inInteraction/interface.inInteraction.js"
 import { win77 } from "../dne-cli.js";
+import { drawAdvice } from "../page/advice.page.js";
 
 const DEFAULT_TIP = `
 Прототип інтерфейсу взаємодії між гравцем та навколишнім світом натхненний Cyberpunk 2077.
@@ -33,6 +34,7 @@ const initTip = (text = DEFAULT_TIP) => {
     const tipsParent = document.querySelector(".app-b");
     const showTip = (e) => {
         console.log("You ask about tip for..", e.target.textContent, e.target, e);
+        drawAdvice();
         const newEl = document.createElement("div");
         newEl.classList.add("pad");
         newEl.innerHTML = tipMarkup(text);

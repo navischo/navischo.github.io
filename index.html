@@ -16,7 +16,7 @@
     <div class="sudo-page">
         <div class="windows__bg">
             <div class="windows__bg--inner">
-                <div class="windows__logo">
+                <div id="load-logo" class="windows__logo">
                     <div class="windows__logo--inner red"></div>
                     <div class="windows__logo--inner green"></div>
                     <div class="windows__logo--inner blue"></div>
@@ -45,19 +45,6 @@
 <!--            <a class="cybr-action" onclick="document.querySelector('.sudo-page').style.display = 'none'">Press START 2p</a>-->
 <!--        </div>-->
     </div>
-    <style>
-        .sudo-page {
-            position: fixed;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            z-index: 40;
-            background: rgba(0, 0, 0, .6);
-        }
-
-
-    </style>
 
     <div id="dialogs-container">
 
@@ -195,6 +182,7 @@
     <script type="module" src="js/hud/fon.hud.js"></script>
     <script type="module" src="js/hud/dialogCli.hud.js"></script>
     <script type="module" src="js/page/screen.page.js"></script>
+    <script type="module" src="js/page/advice.page.js"></script>
     <script type="module" src="js/inInteraction/interface.inInteraction.js"></script>
     <script type="module" src="js/utils/initCybrTitle.js"></script>
     <script type="module" src="js/utils/initHypnosoftLoader.js"></script>
@@ -209,6 +197,7 @@
         import { initNokiaPopup } from "./js/hud/fon.hud.js";
         import { initIntervalScreen } from "./js/page/screen.page.js";
         import { dialog } from "./js/hud/dialog.hud.js";
+        import { drawAdvice } from "./js/page/advice.page.js";
 
         initInventoryPopupJquery();
 
@@ -227,6 +216,7 @@
         dialog.init();
         win77.swiper.slideTo(2, 0);
         initIntervalScreen();
+        // drawAdvice();
     </script>
     <script>
 

@@ -96,6 +96,7 @@ const SCREEN_NAMES = [
     `screen-nohud--last-night-19`,
     `screen-nohud--last-night-20`,
     `screen-nohud--last-night-21`,
+    `screen-nohud--moonrise`,
     `screen-nohud--necromant`
 ];
 

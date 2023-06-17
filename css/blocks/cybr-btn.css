@@ -210,6 +210,15 @@
     transition: .1s ease-in;
 }
 
+.my-cybr-btn.--white {
+    color: white;
+    border-color: white;
+}
+
+.my-cybr-btn.--white::before {
+    background-color: white;
+}
+
 .my-cybr-btn:hover {
     background-color: rgba(80, 233, 239, 0.7)!important;
     border-color: var(--colors-secondary--500);

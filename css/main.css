@@ -11,6 +11,8 @@
 
 /*CUSTOM UI COMPONENT*/
 @import "blocks/intro.css";
+@import "blocks/sudo-page.css";
+@import "./blocks/advice.css";
 @import "blocks/hud-core.css";
 @import "blocks/f-btn.css";
 @import "blocks/cybr-btn.css";
