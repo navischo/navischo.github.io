@@ -11,9 +11,12 @@ if (loadLogo) {
     const interval = setInterval(handler, 15000);
 
     const finishHandler = () => {
-        document.querySelector(".sudo-page").remove();
-        clearInterval(interval);
-        clearTimeout(loadingFinishTimeout);
+        const sudoPage = document.querySelector(".sudo-page");
+        if (sudoPage) {
+            sudoPage.remove();
+            clearInterval(interval);
+            clearTimeout(loadingFinishTimeout);
+        }
     };
     const loadingFinishTimeout = setTimeout(finishHandler, getRandomInt(30000));
     const burnSudoPage = () => {
