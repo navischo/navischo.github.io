@@ -1,51 +1,68 @@
 import { getLocationDataMarkup } from "../inInteraction/interface.inInteraction.js"
 import { win77 } from "../dne-cli.js";
-import { drawAdvice } from "../page/advice.page.js";
+import { ADVICES, drawAdvice } from "../page/advice.page.js";
+import { getRandomInt } from "../utils/getCardById.js";
 
-const DEFAULT_TIP = `
-Прототип інтерфейсу взаємодії між гравцем та навколишнім світом натхненний Cyberpunk 2077.
-The goal is: showcasing a start of a UI kit. If you've played the game, you' might be able to pick-up some similarities with the in-game menus.
-`;
+// const DEFAULT_TIP = `
+// Прототип інтерфейсу взаємодії між гравцем та навколишнім світом натхненний Cyberpunk 2077.
+// The goal is: showcasing a start of a UI kit. If you've played the game, you' might be able to pick-up some similarities with the in-game menus.
+// `;
+//
+// const getAdviceScreenMarkup = () => `
+// <div class="advice-screen">
+//     <article class="advice --bottom-left">
+//         <p>(i)Кращий спосіб заробити на Івенті - запрошувати великі компанії цікавих гостей</p>
+//     </article>
+// </div>
+// `;
 
-const ADVICES = [
-    `(i)Кращий спосіб заробити на Івенті - запрошувати великі компанії цікавих гостей`
-];
+// const initTip = (text = DEFAULT_TIP) => {
+//
+//
+//     const tipMarkup = (text) => `
+// <div class="pad">
+//     <div class="pad__body">
+//         <h4 class="text-heading3 undefined">What's this?</h4>
+//         <p class="text-paragraph1 undefined">${text}</p>
+//     </div>
+// </div>
+// `;
+//
+//     const tipsParent = document.querySelector(".app-b");
+//     const showTip = (e) => {
+//         console.log(`You ask about advice for..`, e.target, e.target.dataset.adviceId);
+//         if (e.target.dataset.adviceId) {
+//             const askedAdvice = ADVICES.find((advice) => advice.id === e.target.dataset.adviceId);
+//             console.log(`Yes, I know something about ${e.target.dataset.adviceId}. Here `, askedAdvice);
+//             drawAdvice(askedAdvice);
+//         } else {
+//             console.log(`Advice you asking for is unavailable. So i give you random`, ADVICES[getRandomInt(ADVICES.length)]);
+//         }
+//         const newEl = document.createElement("div");
+//         newEl.classList.add("pad");
+//         newEl.innerHTML = tipMarkup(text);
+//         tipsParent.appendChild(newEl);
+//     }
+//
+//     const body = document.querySelector("body");
+//     body.addEventListener("auxclick", showTip);
+// }
+//
+// initTip();
 
-const getAdviceScreenMarkup = () => `
-<div class="advice-screen">
-    <article class="advice --bottom-left">
-        <p>(i)Кращий спосіб заробити на Івенті - запрошувати великі компанії цікавих гостей</p>
-    </article>
-</div>
-`;
-
-const initTip = (text = DEFAULT_TIP) => {
-
-
-    const tipMarkup = (text) => `
-<div class="pad">
-    <div class="pad__body">
-        <h4 class="text-heading3 undefined">What's this?</h4>
-        <p class="text-paragraph1 undefined">${text}</p>
-    </div>
-</div>
-`;
-
-    const tipsParent = document.querySelector(".app-b");
-    const showTip = (e) => {
-        console.log("You ask about tip for..", e.target.textContent, e.target, e);
-        drawAdvice();
-        const newEl = document.createElement("div");
-        newEl.classList.add("pad");
-        newEl.innerHTML = tipMarkup(text);
-        tipsParent.appendChild(newEl);
+const showTip = (e) => {
+    console.log(`You ask about advice for..`, e.target, e.target.dataset.adviceId);
+    if (e.target.dataset.adviceId) {
+        const askedAdvice = ADVICES.find((advice) => advice.id === e.target.dataset.adviceId);
+        console.log(`Yes, I know something about ${e.target.dataset.adviceId}. Here `, askedAdvice);
+        drawAdvice(askedAdvice);
+    } else {
+        console.log(`Advice you asking for is unavailable. So i give you random`, ADVICES[getRandomInt(ADVICES.length)]);
     }
-
-    const body = document.querySelector("body");
-    body.addEventListener("auxclick", showTip);
 }
 
-initTip(ADVICES[0]);
+const body = document.querySelector("body");
+body.addEventListener("auxclick", showTip);
 
 const TUTORIAL_PARTS = {
     whatIsSoundCards:

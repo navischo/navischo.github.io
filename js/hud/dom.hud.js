@@ -2,12 +2,11 @@ import { win77 } from "../dne-cli.js";
 import { pokeButtonMarkup } from "../utils/pokeButtonMarkup.js";
 import { createNode } from "../utils/createNode.js";
 import { PAGE_NAMES } from "./router.hud.js";
-import { getCardElement } from "../cards/template.cards.js";
-import { drawCard, drawLootCards, updHand } from "../cards/dom.cards.js";
+import { updHand } from "../cards/dom.cards.js";
 
 const hudMarkup = (owner = win77.game.player.id ? win77.game.player.id : "navi") => `
 <h1 class="score">
-    <span id="player-score" class="js-score-val">5</span> vs <span id="versus-score" class="js-score-val">12</span>
+    <span id="player-score" class="js-score-val" data-advice-id="impact">5</span> vs <span id="versus-score" class="js-score-val" data-advice-id="expectations">12</span>
 </h1>
 <!--<video class="background-house" src="../../mp4/video-place.mp4" autoplay></video>-->
 <div id="inventory-card-display"></div>

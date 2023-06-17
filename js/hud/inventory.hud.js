@@ -6,10 +6,10 @@ import { initInventoryPopupJquery } from "../utils/initInventoryPopup.jquery.js"
 const inventoryMarkup = `
 <div class="player-obj inventory">
     player:<br>&nbsp;&nbsp;{<br>
-    &nbsp;&nbsp;class:<br>&nbsp;&nbsp;{&nbsp;
+    &nbsp;&nbsp;<span data-advice-id="class">class:</span><br>&nbsp;&nbsp;{&nbsp;
     <span id="player-class-list" class="inventory-items"></span>
     &nbsp;},
-    <br>&nbsp;&nbsp;crew:<br>&nbsp;&nbsp;{&nbsp;
+    <br>&nbsp;&nbsp;<span data-advice-id="crew">crew:</span><br>&nbsp;&nbsp;{&nbsp;
     <span id="player-crew-list" class="inventory-items"></span>
     &nbsp;}
     <br>}<br><br><div class="js-in-car"></div>
@@ -19,7 +19,7 @@ const inventoryMarkup = `
     inventory: <br>{<br>
     <span id="inventory-list" class="inventory-items"></span>
     }<br><br>
-    <span id="one-more"><button>+</button></span>sound: <br>{<br>
+    <span id="one-more"><button>+</button></span><span data-advice-id="sound">sound:</span> <br>{<br>
     <span id="sound-list" class="inventory-items"></span>
     }
 </div>
