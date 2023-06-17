@@ -4,17 +4,21 @@ const NOKIA_MENUS = [
         items: [
             {
                 href: "#",
-                text: "Green House"
-            }, {
-                href: "#",
-                text: "Purple Moon"
-            }, {
-                href: "#",
-                text: "∄"
-            }, {
-                href: "#",
-                text: "Fight Club"
+                text: "navischo"
             }
+            // {
+            //     href: "#",
+            //     text: "Green House"
+            // }, {
+            //     href: "#",
+            //     text: "Purple Moon"
+            // }, {
+            //     href: "#",
+            //     text: "∄"
+            // }, {
+            //     href: "#",
+            //     text: "Fight Club"
+            // }
         ]
     }
 ];
