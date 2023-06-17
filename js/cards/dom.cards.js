@@ -4,7 +4,7 @@ import { COMMANDS } from "./const.cards.js";
 import { drawImgLazy } from "../utils/drawImgLazy.js";
 import { createNode } from "../utils/createNode.js";
 import { initInventory } from "../hud/inventory.hud.js";
-import { moveCardById } from "../utils/getCardById.js";
+import { moveCardById, registerRent } from "../utils/getCardById.js";
 import { updBalanceNode } from "../hud/balance.hud.js";
 import { isSetHasId } from "../utils/isSetHasId.js";
 import { PAGE_NAMES } from "../hud/router.hud.js";
@@ -56,6 +56,7 @@ const initHandlers = (cardData, controls) => {
             win77.getCostFromPlayer(cardData.costObj.rent);
             updBalanceNode();
             moveCardById(cardData.id, catalog, win77.game.player[cardData.type]);
+            registerRent(cardData.id);
             initInventory();
         } else {
             console.log(`Item ${cardData.name} is already in rent`);

@@ -2,7 +2,7 @@ import { initScore, updScore } from "../hud/score.hud.js";
 import { initInventory } from "../hud/inventory.hud.js";
 import { win77 } from "../dne-cli.js";
 import { updTable, updHand } from "../cards/dom.cards.js";
-import { moveCardById } from "../utils/getCardById.js";
+import {moveCardBackAfterRent, moveCardById} from "../utils/getCardById.js";
 import { matchEventIncome } from "./const.theday.js";
 import { drawCheck } from "./check.theday.js";
 import { parseTopsString, topsString } from "./endgame.theday.js";
@@ -18,6 +18,12 @@ const reloadTheday = () => {
     document.querySelector("#dne-page-up").classList.remove("js-open");
     document.querySelector("#dne-page-up").innerHTML = "";
 
+    const inRent = win77.game.player.cardsInRentIdSet;
+    if (inRent) {
+        inRent.forEach((cardId) => {
+            moveCardBackAfterRent(cardId);
+        });
+    }
     win77.giveIncomeToPlayer(win77.game.event.result.income);
     win77.giveSkillPointsToPlayer(1);
     console.log("!win77.game.final", win77.game.final, win77.game.player.balance.skillPoints, win77.game.player.balance.skillPoints === 4);
