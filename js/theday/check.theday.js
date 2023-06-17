@@ -29,6 +29,7 @@ const drawCheck = (checkData, parent = "body") => {
 
         wrap.classList.add(`check-clone-${wrapIndex}`);
         wrap.classList.add(`check-clone`);
+        wrap.classList.add(`--glitch`);
         wrap.innerHTML = `
             <div>
                 ${keysMarkup}
