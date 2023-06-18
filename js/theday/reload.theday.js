@@ -6,6 +6,7 @@ import {moveCardBackAfterRent, moveCardById} from "../utils/getCardById.js";
 import { matchEventIncome, matchLootBonus, matchCrewBonus } from "./const.theday.js";
 import { drawCheck } from "./check.theday.js";
 import { parseTopsString, topsString } from "./endgame.theday.js";
+import { isSetHasId } from "../utils/isSetHasId.js";
 
 const reloadTheday = () => {
     Array.from(win77.game.event.settings.guests.set).forEach((smithsCard) => {
@@ -16,7 +17,19 @@ const reloadTheday = () => {
 
     const LOOT_BONUS = matchLootBonus();
     const CREW_BONUS = matchCrewBonus();
-    console.log(`Client expectation was on level ${win77.game.versusScore}. But with bonus of your loot(+${LOOT_BONUS}) and your crew(+${CREW_BONUS}) you blow up on ${win77.game.player.score + LOOT_BONUS + CREW_BONUS}! Now, receive ${win77.game.player.score - win77.game.versusScore + LOOT_BONUS + CREW_BONUS}% more income by Impact bonus!`, win77.game.event);
+    console.log(`Client expectation was on level ${win77.game.versusScore}.`, win77.game.event);
+    console.log(`But with bonus of your loot(+${LOOT_BONUS}) and your crew(+${CREW_BONUS}) you blow up on ${win77.game.player.score + LOOT_BONUS + CREW_BONUS}!`, win77.game.event);
+    console.log(`Now, receive ${win77.game.player.score - win77.game.versusScore + LOOT_BONUS + CREW_BONUS}% more income by Impact bonus!`, win77.game.event);
+
+    if (isSetHasId(win77.game.player.loot, "chaos-green") && isSetHasId(win77.game.player.npc, "shadow")) {
+        const insertedIncome = win77.game.event.result.income;
+        win77.game.event.result.income = insertedIncome * 3;
+        console.log(`Holy shit! Your income was tripled! ${insertedIncome} => ${win77.game.event.result.income}`);
+    } else if (isSetHasId(win77.game.player.loot, "chaos-green") && !isSetHasId(win77.game.player.npc, "shadow")) {
+        const insertedIncome = win77.game.event.result.income;
+        win77.game.event.result.income = insertedIncome * 2;
+        console.log(`God damn! Your income was doubled! ${insertedIncome} => ${win77.game.event.result.income}`);
+    }
 
     document.querySelector("body").classList.remove("background-single");
 
