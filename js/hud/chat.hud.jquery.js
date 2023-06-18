@@ -240,7 +240,7 @@ const initDirect = () => {
     const getDirectItemMarkup = (name) => `
 <li class="nav__item">
     <a class="nav__link" href="#">
-        <span class="conversation-link"><span class="conversation-link__icon"></span><span
+        <span class="conversation-link" data-direct="${name}"><span class="conversation-link__icon"></span><span
             class="conversation-link__element">${name}</span></span>
     </a>
 </li>

@@ -1,10 +1,26 @@
+import {win77} from "../dne-cli.js";
+
+const initDirect = (name) => {
+    const directIcon = document.querySelector(`[data-direct="${name}"]`);
+    if (directIcon) {
+        directIcon.classList.add("--online");
+    }
+}
+
 const NOKIA_MENUS = [
     {
         title: "Pokewall",
         items: [
             {
-                href: "#",
-                text: "navischo"
+                href: "#admin",
+                text: "navischo",
+                callback: (e) => {
+                    e.preventDefault();
+                    $.magnificPopup.close();
+                    win77.swiper.slidePrev();
+                    initDirect("navischo");
+                    console.log(`Direct to navischo`);
+                }
             }
             // {
             //     href: "#",
@@ -40,6 +56,9 @@ const initNokiaPopup = () => {
         const itemNode = document.createElement("a");
         itemNode.href = item.href;
         itemNode.textContent = item.text;
+
+        itemNode.addEventListener("click", item.callback);
+
         menuNode.appendChild(itemNode);
     });
     parent.appendChild(newNode);

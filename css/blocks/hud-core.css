@@ -268,7 +268,7 @@ a {
     width: 0.5em;
 }
 
-.conversation-link--online .conversation-link__icon::after {
+.conversation-link.--online .conversation-link__icon::after {
     background-color: var(--colors-active--500);
 }
 
