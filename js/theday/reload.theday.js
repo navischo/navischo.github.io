@@ -13,6 +13,7 @@ const reloadTheday = () => {
     });
 
     console.log(`Event is finished. You archive ${win77.game.event.result.income} income and some sound to play next time`, win77.game.event);
+    console.log(`Client expectation was on level ${win77.game.versusScore}. But you blow up on ${win77.game.player.score}! Now, receive ${win77.game.player.score - win77.game.versusScore}% more income by Impact bonus!`, win77.game.event);
     document.querySelector("body").classList.remove("background-single");
 
     document.querySelector("#dne-page-up").classList.remove("js-open");

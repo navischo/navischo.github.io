@@ -252,14 +252,21 @@ const matchEventIncome = (smithCard) => {
     const cashOnEnter = matchCashOnEnter(smithCard);
     win77.game.event.result.cashOnEnter = win77.game.event.result.cashOnEnter + cashOnEnter;
 
+    const IMPACT_BONUS = win77.game.player.score - win77.game.versusScore;
+    if (IMPACT_BONUS > 4) {
+        // console.log("IMPACT_BONUS", IMPACT_BONUS, Math.round(+cashOnEnter / 100 * IMPACT_BONUS), win77.game.event.result.impactBonus);
+        win77.game.event.result.impactBonus = win77.game.event.result.impactBonus + Math.round(cashOnEnter / 100 * IMPACT_BONUS);
+        console.log(`+${win77.game.event.result.impactBonus} Impact bonus`);
+    }
 
     win77.game.event.result.cashOnBar = matchCashOnBar();
 
     win77.game.event.result.income =
         +win77.game.event.result.cashOnEnter
-        + win77.game.event.result.cashOnBar;
+        + win77.game.event.result.cashOnBar
+        + win77.game.event.result.impactBonus;
 
-    console.log(`${smithCard.name}(${smithCard.enterBudget}) bring you ${cashOnEnter} income`);
+    console.log(`${smithCard.name}(${smithCard.enterBudget}) bring you ${cashOnEnter} income.`);
 }
 
 const passGuest = (smithCard) => {
