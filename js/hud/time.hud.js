@@ -24,7 +24,7 @@ createNode(body, "p", "", "time");
 //
 //         if (distance < 0) {
 //             clearInterval(x);
-//             node.innerHTML = "<a href='index.html' target='_blank'>NEXT ROUND</a>";
+//             node.innerHTML = "<a href='game.html' target='_blank'>NEXT ROUND</a>";
 //         }
 //     }, 1000);
 // }
