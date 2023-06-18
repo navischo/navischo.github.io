@@ -5,7 +5,7 @@ const checkData = {
     total: 222160
 };
 
-const clearZeroPoints = (resultObj) => {
+const hideBonusWhenItZero = (resultObj) => {
     const keys = Object.keys(resultObj);
     const newResultObj = {};
     keys.forEach((key) => {
@@ -57,7 +57,7 @@ const drawCheck = (checkData, parent = "body") => {
     const checkElement = document.createElement("section");
     checkElement.classList.add("check-screen");
     for (let i = 0; i < 4; i++) {
-        checkElement.appendChild(getCheckLayer(clearZeroPoints(checkData), i));
+        checkElement.appendChild(getCheckLayer(hideBonusWhenItZero(checkData), i));
     }
     document.querySelector(parent).appendChild(checkElement);
     // uncomment to add background
