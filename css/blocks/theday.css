@@ -21,9 +21,24 @@
 
 #setup {
     display: flex;
-    transform: rotate(90deg) translateY(225px) scale(.7);
-    transform-origin: center;
+    /*transform: rotate(90deg) translateY(225px) scale(.7);*/
+    /*transform-origin: center;*/
     position: fixed;
+    top: 0;
+    left: -165px;
+    z-index: 1;
+
+    flex-wrap: wrap;
+    max-width: 930px;
+    transform: scale(0.5) rotate(180deg) translateY(526px);
+}
+
+#setup [id*="dne-card-"] {
+    transition: .4s ease-in-out;
+}
+
+#setup [id*="dne-card-"]:hover {
+    transform: translateY(-295px) rotate(180deg);
 }
 
 #gradient {
