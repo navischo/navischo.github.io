@@ -10,7 +10,8 @@ const parseCost = (lootItem) => {
     const costObj = {
         rentAvailable: rentAvailable,
         buy: 0,
-        rent: 0
+        rent: 0,
+        sellAvailable: true
     };
     if (rentAvailable) {
         const splitCost = costString.split(separator);

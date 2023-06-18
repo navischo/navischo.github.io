@@ -63,6 +63,20 @@ const initHandlers = (cardData, controls) => {
         }
     };
 
+    const sellButtonHandler = () => {
+        const catalog = win77.game.catalog[cardData.type];
+        const playerCatalog = win77.game.player[cardData.type];
+        if (isSetHasId(playerCatalog, cardData.id) && cardData.costObj.sellAvailable) {
+            win77.giveIncomeToPlayer(cardData.costObj.buy);
+            updBalanceNode();
+            moveCardById(cardData.id, playerCatalog, catalog);
+            initInventory();
+            console.log(`${cardData.name} was successfully sold +${cardData.costObj.buy} income`);
+        } else {
+            console.log(`${cardData.name} is unavailable to sell`);
+        }
+    }
+
     const talkButtonHandler = () => {
         if (cardData.id === "felix") {
             const audioObj = new Audio("../../mp3/mur.mp3");
@@ -79,6 +93,8 @@ const initHandlers = (cardData, controls) => {
             btn.addEventListener("click", rentButtonHandler);
         } else if (btn.textContent === COMMANDS.talk) {
             btn.addEventListener("click", talkButtonHandler);
+        } else if (btn.textContent === COMMANDS.sell) {
+            btn.addEventListener("click", sellButtonHandler);
         }
     });
 }
@@ -87,8 +103,13 @@ const addCardControls = (newCard, cardData) => {
     const controls = {};
     controls.parent = newCard.querySelector(".js-card-controls");
     if (cardData.type === "loot") {
-        createNode(controls.parent, "button", COMMANDS.buy, COMMANDS.buy);
-        cardData.costObj.rentAvailable ? createNode(controls.parent, "button", COMMANDS.rent, COMMANDS.rent) : "";
+        const body = document.querySelector("body");
+        if (body.dataset.hash === "cards") {
+            createNode(controls.parent, "button", COMMANDS.buy, COMMANDS.buy);
+            cardData.costObj.rentAvailable ? createNode(controls.parent, "button", COMMANDS.rent, COMMANDS.rent) : "";
+        } else if (body.dataset.hash === "play") {
+            cardData.costObj.sellAvailable ? createNode(controls.parent, "button", COMMANDS.sell, COMMANDS.sell) : "";
+        }
     }
     if (cardData.type === "npc") {
         createNode(controls.parent, "button", COMMANDS.talk, COMMANDS.talk);

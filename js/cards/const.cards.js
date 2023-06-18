@@ -2,7 +2,8 @@ const COMMANDS = {
     plus: "+",
     buy: "buy",
     rent: "rent",
-    talk: "talk"
+    talk: "talk",
+    sell: "sell"
 };
 
 const CARD_TYPES = {
