@@ -272,6 +272,18 @@
     flex-wrap: wrap;
 }
 
+.card-catalog-wrap.--styled {
+    padding-top: 80px;
+}
+
+.card-catalog-wrap.--styled .js-cards-catalog {
+
+}
+
+.card-catalog-wrap.--styled .js-cards-catalog > * {
+    margin: 5px;
+}
+
 .catalog-controls__show-btn {
     z-index: 3;
 }

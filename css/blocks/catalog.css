@@ -13,7 +13,7 @@
     visibility: hidden;
 }
 
-.catalog-controls__filter:nth-child(n + 4)::before {
+.catalog-controls__filter[disabled="true"]::before {
     content: "🔒";
 }
 

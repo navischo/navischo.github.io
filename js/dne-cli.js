@@ -47,13 +47,16 @@ class DNECli {
 
     giveSkillPointsToPlayer(count) {
         this.game.player.balance.skillPoints = this.game.player.balance.skillPoints + count;
-        if (this.game.player.balance.skillPoints >= 10) {
+        if (this.game.player.balance.skillPoints >= 4) {
             this.game.final = {
                 result: {
                     bankroll: this.game.player.balance.bankroll
                 }
             };
+            this.game.player.lvl = this.game.player.lvl + 1;
+
             localStorage.setItem("bankroll", `${this.game.player.balance.bankroll}`);
+            localStorage.setItem("lvl", `${this.game.player.lvl}`);
             appendNewTop(this.game.player.id, this.game.player.balance.bankroll);
             console.log("Seems like you win the game. Congratulations!", win77.game);
         }

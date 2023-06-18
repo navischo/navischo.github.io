@@ -13,6 +13,7 @@ const PAGE_NAMES = {
     npc: CARD_TYPES.npc,
     class: CARD_TYPES.class,
     loot: CARD_TYPES.loot,
+    sound: CARD_TYPES.sound,
     hud: "hud",
     event: "event",
     board: "board"
@@ -51,7 +52,7 @@ win77.router = {
 
 const swipePage = (name) => {
     // console.log(`We use swiper to go on ${name}`, swiper);
-    if (name === PAGE_NAMES.npc || name === PAGE_NAMES.class || name === PAGE_NAMES.loot) {
+    if (name === PAGE_NAMES.npc || name === PAGE_NAMES.class || name === PAGE_NAMES.loot || name === PAGE_NAMES.sound) {
         swiper.slideTo(0, 0);
     } else {
         swiper.slideTo(1, 0);

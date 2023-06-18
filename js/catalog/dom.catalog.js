@@ -66,7 +66,7 @@ const catalogTypeControls = document.querySelectorAll(".js-init-catalog");
 
 const cardTypesArr = Array.from(Object.keys(CARD_TYPES));
 
-const fora = 4;
+const fora = win77.game.player.lvl;
 for (let i = 3 + fora; i < cardTypesArr.length; i++) {
     catalogTypeControls[i].setAttribute("disabled", true);
 }
