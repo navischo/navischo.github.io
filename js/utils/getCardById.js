@@ -66,4 +66,4 @@ const grabCost = (cost, from, to) => {
 
 }
 
-export { getRandomInt, getCardById, moveCardById, rememberReturnCardAfterRound, moveCardBackAfterRent, grabCost, registerRent };
+export { getRandomInt, getCardById, moveCardById, moveCardBackAfterRent, grabCost, registerRent };
