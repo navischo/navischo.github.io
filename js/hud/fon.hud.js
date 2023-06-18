@@ -1,9 +1,18 @@
 import {win77} from "../dne-cli.js";
+import { DIALOGS, TITLES_OF_DIALOGS, initDialog } from "./chat.hud.jquery.js";
 
-const initDirect = (name) => {
+
+const initDirect = (name, dialogObj) => {
     const directIcon = document.querySelector(`[data-direct="${name}"]`);
-    if (directIcon) {
+    const directTitle = document.querySelector(`.js-channel-name`);
+    if (directIcon && directTitle) {
         directIcon.classList.add("--online");
+        directTitle.textContent = `${dialogObj.title}/${name}`;
+        if (dialogObj) {
+            initDialog(dialogObj.body);
+        }
+    } else {
+        console.log(`Direct to ${name} unavailable`);
     }
 }
 
@@ -18,7 +27,10 @@ const NOKIA_MENUS = [
                     e.preventDefault();
                     $.magnificPopup.close();
                     win77.swiper.slidePrev();
-                    initDirect("navischo");
+                    initDirect("navischo", {
+                        title: TITLES_OF_DIALOGS[0],
+                        body: DIALOGS[0]
+                    });
                     console.log(`Direct to navischo`);
                 }
             }

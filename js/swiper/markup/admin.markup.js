@@ -113,7 +113,7 @@ const adminMarkup = `
                         <div class="segment-topbar__header">
                             <span class="segment-topbar__overline segment-topbar__overline">NetWire_Seed: d869db7fe62fb07c25a0403ecaea55031744b5fb</span>
                             <h4 class="text-heading4 segment-topbar__title">
-                                <span class="channel-link"><span class="channel-link__icon">#</span><span class="js-channel-name channel-link__element">Повчальна Історія</span></span>
+                                <span class="channel-link"><span class="channel-link__icon">#</span><span class="js-channel-name channel-link__element">Direct</span></span>
                             </h4>
                         </div>
                         <div class="segment-topbar__aside">
