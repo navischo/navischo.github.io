@@ -47,7 +47,7 @@ class DNECli {
 
     giveSkillPointsToPlayer(count) {
         this.game.player.balance.skillPoints = this.game.player.balance.skillPoints + count;
-        if (this.game.player.balance.skillPoints >= 4) {
+        if (this.game.player.balance.skillPoints >= 10) {
             this.game.final = {
                 result: {
                     bankroll: this.game.player.balance.bankroll

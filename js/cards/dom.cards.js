@@ -34,6 +34,22 @@ const initHandlers = (cardData, controls) => {
             moveCardById(cardData.id, catalog, win77.game.player[cardData.type]);
             initInventory();
         }
+
+        const body = document.querySelector("body");
+        if (isSetHasId(win77.game.player.sound, cardData.id) && body.dataset.hash === "play") {
+            const id = cardData.id;
+            const bonus = cardData.bonus;
+            moveCardById(id, win77.game.player.sound, win77.game.table);
+            updTable();
+
+            win77.pokeButton.dia.updScore(bonus);
+
+            initInventory();
+
+            if (win77.game.player.score > win77.game.versusScore) {
+                dialog.init(dialog.DIALOG_ID.start);
+            }
+        }
     };
 
     const buyButtonHandler = () => {
@@ -114,9 +130,15 @@ const addCardControls = (newCard, cardData) => {
     if (cardData.type === "npc") {
         createNode(controls.parent, "button", COMMANDS.talk, COMMANDS.talk);
     }
-    if (isSetHasId(win77.game.player.sound, cardData.id)) {
-        cardData.costObj.sellAvailable ? createNode(controls.parent, "button", COMMANDS.sell, COMMANDS.sell) : "";
-        console.log(`Sell button for sound created`, body.dataset.hash === "play");
+    if (cardData.type === "sound") {
+        if (isSetHasId(win77.game.player.sound, cardData.id)) {
+            cardData.costObj.sellAvailable ? createNode(controls.parent, "button", COMMANDS.sell, COMMANDS.sell) : "";
+            console.log(`Sell button for sound created`, body.dataset.hash === "play");
+        }
+        if (isSetHasId(win77.game.catalog.sound, cardData.id)) {
+            createNode(controls.parent, "button", COMMANDS.buy, COMMANDS.buy);
+            cardData.costObj.rentAvailable ? createNode(controls.parent, "button", COMMANDS.rent, COMMANDS.rent) : "";
+        }
     }
     controls.btns = controls.parent.querySelectorAll("button");
 
