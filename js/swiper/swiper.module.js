@@ -12,9 +12,9 @@ const swiper = new Swiper('.swiper', {
     centeredSlides: true,
     spaceBetween: 30,
     simulateTouch: false,
-    hashNavigation: {
-        watchState: true,
-    },
+    // hashNavigation: {
+    //     watchState: true,
+    // },
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
@@ -81,6 +81,7 @@ swiper.on('slideChange', function (e) {
         document.querySelector("body").dataset.hash = pageName;
         // console.log('slide changed', pageName, e);
         document.querySelector(".head-title").textContent = pageName.toUpperCase();
+        location.assign(`#${pageName}`);
     } else {
         document.querySelector(".head-title").textContent = "EXPLORE";
     }
