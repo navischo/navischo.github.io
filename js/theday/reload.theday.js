@@ -3,7 +3,7 @@ import { initInventory } from "../hud/inventory.hud.js";
 import { win77 } from "../dne-cli.js";
 import { updTable, updHand } from "../cards/dom.cards.js";
 import {moveCardBackAfterRent, moveCardById} from "../utils/getCardById.js";
-import { matchEventIncome, matchLootBonus } from "./const.theday.js";
+import { matchEventIncome, matchLootBonus, matchCrewBonus } from "./const.theday.js";
 import { drawCheck } from "./check.theday.js";
 import { parseTopsString, topsString } from "./endgame.theday.js";
 
@@ -13,8 +13,11 @@ const reloadTheday = () => {
     });
 
     console.log(`Event is finished. You archive ${win77.game.event.result.income} income and some sound to play next time`, win77.game.event);
+
     const LOOT_BONUS = matchLootBonus();
-    console.log(`Client expectation was on level ${win77.game.versusScore}. But with bonus of your loot(+${LOOT_BONUS}) you blow up on ${win77.game.player.score + LOOT_BONUS}! Now, receive ${win77.game.player.score - win77.game.versusScore + LOOT_BONUS}% more income by Impact bonus!`, win77.game.event);
+    const CREW_BONUS = matchCrewBonus();
+    console.log(`Client expectation was on level ${win77.game.versusScore}. But with bonus of your loot(+${LOOT_BONUS}) and your crew(+${CREW_BONUS}) you blow up on ${win77.game.player.score + LOOT_BONUS + CREW_BONUS}! Now, receive ${win77.game.player.score - win77.game.versusScore + LOOT_BONUS + CREW_BONUS}% more income by Impact bonus!`, win77.game.event);
+
     document.querySelector("body").classList.remove("background-single");
 
     document.querySelector("#dne-page-up").classList.remove("js-open");

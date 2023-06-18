@@ -257,13 +257,24 @@ const matchLootBonus = () => {
     return LOOT_BONUS;
 }
 
+const matchCrewBonus = () => {
+    let CREW_BONUS = 0;
+    win77.game.player.npc.forEach((crewItem) => {
+        console.log(`CREW_BONUS`, CREW_BONUS, crewItem.bonus);
+        CREW_BONUS = CREW_BONUS + crewItem.bonus;
+    });
+    return CREW_BONUS;
+}
+
 const matchEventIncome = (smithCard) => {
     const cashOnEnter = matchCashOnEnter(smithCard);
     win77.game.event.result.cashOnEnter = win77.game.event.result.cashOnEnter + cashOnEnter;
 
     const LOOT_BONUS = matchLootBonus();
+    const CREW_BONUS = matchCrewBonus();
 
-    const IMPACT_BONUS = win77.game.player.score - win77.game.versusScore + LOOT_BONUS;
+
+    const IMPACT_BONUS = win77.game.player.score - win77.game.versusScore + LOOT_BONUS + CREW_BONUS;
     if (IMPACT_BONUS > 4) {
         console.log("IMPACT_BONUS", IMPACT_BONUS, Math.round(+cashOnEnter / 100 * IMPACT_BONUS), win77.game.event.result.impactBonus);
         const impactIncome = Math.round(cashOnEnter / 100 * IMPACT_BONUS);
@@ -271,6 +282,7 @@ const matchEventIncome = (smithCard) => {
         win77.game.event.result.impactBonus = win77.game.event.result.impactBonus + impactIncome;
         console.log(`+${impactIncome} Impact bonus(${win77.game.event.result.impactBonus} in total)`);
     }
+
 
     win77.game.event.result.cashOnBar = matchCashOnBar();
 
@@ -380,4 +392,4 @@ const useSmithsCards = () => {
 win77.pokeButton.dia.useSmithsCards = useSmithsCards;
 // win77.pokeButton.dia.clearSmithsSet = clearSmithsSet;
 
-export { settings, matchEventIncome, matchLootBonus };
+export { settings, matchEventIncome, matchLootBonus, matchCrewBonus };
