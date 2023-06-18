@@ -45,7 +45,7 @@ const moveCardBackAfterRent = (id) => {
     const card = Array.from(from).find((lootCard) => lootCard.id === id);
     const to = win77.game.catalog[CARD_TYPES.loot];
 
-    console.log(`moveCardBackAfterRound was run`, id, card, win77.game.player);
+    // console.log(`moveCardBackAfterRound was run`, id, card, win77.game.player);
     if (card) {
         to.add(card);
         from.delete(card);

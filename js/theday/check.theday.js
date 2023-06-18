@@ -5,18 +5,18 @@ const checkData = {
     total: 222160
 };
 
-const hideBonusWhenItZero = (resultObj) => {
-    const keys = Object.keys(resultObj);
-    const newResultObj = {};
-    keys.forEach((key) => {
-        if (resultObj[key] !== 0) {
-            newResultObj[key] = resultObj[key];
-            // console.log(`${key} more then 0`, newResultObj);
-        }
-    });
-    // console.log(`resultObj was cleared from zeros`, resultObj, newResultObj);
-    return newResultObj;
-}
+// const hideBonusWhenItZero = (resultObj) => {
+//     const keys = Object.keys(resultObj);
+//     const newResultObj = {};
+//     keys.forEach((key) => {
+//         if (resultObj[key] !== 0) {
+//             newResultObj[key] = resultObj[key];
+//             // console.log(`${key} more then 0`, newResultObj);
+//         }
+//     });
+//     // console.log(`resultObj was cleared from zeros`, resultObj, newResultObj);
+//     return newResultObj;
+// }
 
 const drawCheck = (checkData, parent = "body") => {
     const getCheckLayer = (data, wrapIndex) => {
@@ -57,7 +57,7 @@ const drawCheck = (checkData, parent = "body") => {
     const checkElement = document.createElement("section");
     checkElement.classList.add("check-screen");
     for (let i = 0; i < 4; i++) {
-        checkElement.appendChild(getCheckLayer(hideBonusWhenItZero(checkData), i));
+        checkElement.appendChild(getCheckLayer(checkData, i));
     }
     document.querySelector(parent).appendChild(checkElement);
     // uncomment to add background

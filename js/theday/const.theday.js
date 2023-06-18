@@ -248,15 +248,28 @@ const matchCashOnBar = () => {
     return (basePrice * (man / 2)) + (basePrice * (woman * 3));
 }
 
+const matchLootBonus = () => {
+    let LOOT_BONUS = 0;
+    win77.game.player.loot.forEach((lootItem) => {
+        console.log(`LOOT_BONUS`, LOOT_BONUS, lootItem.bonus);
+        LOOT_BONUS = LOOT_BONUS + lootItem.bonus;
+    });
+    return LOOT_BONUS;
+}
+
 const matchEventIncome = (smithCard) => {
     const cashOnEnter = matchCashOnEnter(smithCard);
     win77.game.event.result.cashOnEnter = win77.game.event.result.cashOnEnter + cashOnEnter;
 
-    const IMPACT_BONUS = win77.game.player.score - win77.game.versusScore;
+    const LOOT_BONUS = matchLootBonus();
+
+    const IMPACT_BONUS = win77.game.player.score - win77.game.versusScore + LOOT_BONUS;
     if (IMPACT_BONUS > 4) {
-        // console.log("IMPACT_BONUS", IMPACT_BONUS, Math.round(+cashOnEnter / 100 * IMPACT_BONUS), win77.game.event.result.impactBonus);
-        win77.game.event.result.impactBonus = win77.game.event.result.impactBonus + Math.round(cashOnEnter / 100 * IMPACT_BONUS);
-        console.log(`+${win77.game.event.result.impactBonus} Impact bonus`);
+        console.log("IMPACT_BONUS", IMPACT_BONUS, Math.round(+cashOnEnter / 100 * IMPACT_BONUS), win77.game.event.result.impactBonus);
+        const impactIncome = Math.round(cashOnEnter / 100 * IMPACT_BONUS);
+        // win77.game.event.result.impactBonus = win77.game.event.result.impactBonus + impactIncome;
+        win77.game.event.result.impactBonus = win77.game.event.result.impactBonus + impactIncome;
+        console.log(`+${impactIncome} Impact bonus(${win77.game.event.result.impactBonus} in total)`);
     }
 
     win77.game.event.result.cashOnBar = matchCashOnBar();
@@ -367,4 +380,4 @@ const useSmithsCards = () => {
 win77.pokeButton.dia.useSmithsCards = useSmithsCards;
 // win77.pokeButton.dia.clearSmithsSet = clearSmithsSet;
 
-export { settings, matchEventIncome };
+export { settings, matchEventIncome, matchLootBonus };
