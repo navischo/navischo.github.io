@@ -161,6 +161,16 @@ const initDNELootArr = () => {
 
     LootArr.push(new DNELootCard("class-driver", "Драйвер", DRIVER_CLASS_LONGLINE, DRIVER_CLASS_IMG, 1, 0, "Клас", DRIVER_CLASS_SHORTLINE, "", true, "class"));
 
+    // Манчкін
+    //
+    //
+    const MUNCHKIN_LONGLINE = "Грає карти Манчкіну коли йому заманеться, згідно правил, які сам вигадує.<br><br>Можеш не розповідати йому, що це інша гра, він все одно не повірить.";
+    const MUNCHKIN_SHORTLINE = `Грає карти Манчкіну коли йому заманеться, згідно правил, які сам вигадує.`;
+    const MUNCHKIN_IMG_ID = `1MHnPkUgirqzQFRtRoWTMsjdo9zSHTA_X`;
+    const MUNCHKIN_IMG = `https://drive.google.com/uc?id=${MUNCHKIN_IMG_ID}`;
+
+    LootArr.push(new DNELootCard("class-munchkin", "Манчкін", MUNCHKIN_LONGLINE, MUNCHKIN_IMG, 1, 0, "Клас", MUNCHKIN_SHORTLINE, "", true, "class"));
+
     // Воскресіння
     //
     //

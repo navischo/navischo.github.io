@@ -1008,6 +1008,21 @@ img {
 
 }
 
+#dne-card-class-munchkin .card__preview-img {
+    transform: scale(1.25) translateY(-13px);
+}
+
+#dne-card-class-munchkin .card__header {
+    position: relative;
+    z-index: 2;
+}
+
+#dne-card-class-munchkin .card__description {
+    position: absolute;
+    z-index: 2;
+    bottom: 5px;
+}
+
 #dne-card-sleep .card__preview-img {
     transform: scale(1.35) translateY(35px);
 }
