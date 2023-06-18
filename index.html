@@ -81,6 +81,12 @@
 
 
 
+        document.querySelector("body").addEventListener("keydown", (e) => {
+            console.log(e);
+            if (e.key === "Enter") {
+                checkPassword(passwordField.value);
+            }
+        });
         submitBtn.addEventListener("click", () => {
             checkPassword(passwordField.value);
         });

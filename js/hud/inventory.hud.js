@@ -9,9 +9,9 @@ const inventoryMarkup = `
     &nbsp;&nbsp;<span data-advice-id="class">class:</span><br>&nbsp;&nbsp;{&nbsp;
     <span id="player-class-list" class="inventory-items"></span>
     &nbsp;},
-    <br>&nbsp;&nbsp;<span data-advice-id="crew">crew:</span><br>&nbsp;&nbsp;{&nbsp;
+    <br>&nbsp;&nbsp;<span data-advice-id="crew">crew:</span>&nbsp;{&nbsp;<br>
     <span id="player-crew-list" class="inventory-items"></span>
-    &nbsp;}
+    &nbsp;&nbsp;}
     <br>}<br><br><div class="js-in-car"></div>
     <a href="#nokia-popup" class="js-phone inventory-item">call me()</a>
 </div>

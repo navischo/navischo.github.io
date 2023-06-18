@@ -26,6 +26,13 @@
     background: white;
 }
 
+.card-catalog-wrap.--styled {
+    background-color: var(--colors-bg--500);
+    background-image: radial-gradient( ellipse at 33% 10%, #461616 0%, transparent 75% );
+    background-repeat: no-repeat;
+    color: var(--colors-on_bg--500);
+}
+
 .js-cards-catalog {
     width: 920px;
     max-width: max-content!important;
@@ -60,11 +67,13 @@ body .units {
 }
 
 body[data-hash="cards"] .units {
-    color: black;
+    color: white;
+    /*color: black;*/
 }
 
 body[data-hash="cards"] .inventory {
-    color: black;
+    color: white;
+    /*color: black;*/
     text-shadow: none;
 }
 
