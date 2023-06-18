@@ -1,19 +1,19 @@
-import { win77 } from "../dne-cli.js";
-import { getCardElement } from "./template.cards.js";
-import { COMMANDS } from "./const.cards.js";
-import { drawImgLazy } from "../utils/drawImgLazy.js";
-import { createNode } from "../utils/createNode.js";
-import { initInventory } from "../hud/inventory.hud.js";
-import { moveCardById, registerRent } from "../utils/getCardById.js";
-import { updBalanceNode } from "../hud/balance.hud.js";
-import { isSetHasId } from "../utils/isSetHasId.js";
-import { PAGE_NAMES } from "../hud/router.hud.js";
-import { openWithTimer } from "../hud/tab.hud.js";
-import { setExecutive } from "../hud/table.hud.js";
-import { CARD_TYPES } from "./const.cards.js";
-import { dialog } from "../hud/dialog.hud.js";
-import { openPopup } from "../popup/dom.popup.jquery.js";
-import { initOneMoreBtn } from "../utils/initOneMoreBtn.js";
+import {win77} from "../dne-cli.js";
+import {getCardElement} from "./template.cards.js";
+import {COMMANDS} from "./const.cards.js";
+import {drawImgLazy} from "../utils/drawImgLazy.js";
+import {createNode} from "../utils/createNode.js";
+import {initInventory} from "../hud/inventory.hud.js";
+import {moveCardById, registerRent} from "../utils/getCardById.js";
+import {updBalanceNode} from "../hud/balance.hud.js";
+import {isSetHasId} from "../utils/isSetHasId.js";
+import {PAGE_NAMES} from "../hud/router.hud.js";
+import {openWithTimer} from "../hud/tab.hud.js";
+import {setExecutive} from "../hud/table.hud.js";
+import {CARD_TYPES} from "./const.cards.js";
+import {dialog} from "../hud/dialog.hud.js";
+import {openPopup} from "../popup/dom.popup.jquery.js";
+import {initOneMoreBtn} from "../utils/initOneMoreBtn.js";
 
 
 const initHandlers = (cardData, controls) => {
@@ -101,9 +101,9 @@ const initHandlers = (cardData, controls) => {
 
 const addCardControls = (newCard, cardData) => {
     const controls = {};
+    const body = document.querySelector("body");
     controls.parent = newCard.querySelector(".js-card-controls");
     if (cardData.type === "loot") {
-        const body = document.querySelector("body");
         if (body.dataset.hash === "cards") {
             createNode(controls.parent, "button", COMMANDS.buy, COMMANDS.buy);
             cardData.costObj.rentAvailable ? createNode(controls.parent, "button", COMMANDS.rent, COMMANDS.rent) : "";
@@ -113,6 +113,10 @@ const addCardControls = (newCard, cardData) => {
     }
     if (cardData.type === "npc") {
         createNode(controls.parent, "button", COMMANDS.talk, COMMANDS.talk);
+    }
+    if (isSetHasId(win77.game.player.sound, cardData.id)) {
+        cardData.costObj.sellAvailable ? createNode(controls.parent, "button", COMMANDS.sell, COMMANDS.sell) : "";
+        console.log(`Sell button for sound created`, body.dataset.hash === "play");
     }
     controls.btns = controls.parent.querySelectorAll("button");
 
@@ -125,7 +129,7 @@ const drawCard = (cardContainer, getElementCallback, cardData) => {
     addCardControls(newCard, cardData);
 
     // if (win77.router.currentPage === PAGE_NAMES.hud) {
-        newCard.querySelector(".card__preview-img").src = cardData.img;
+    newCard.querySelector(".card__preview-img").src = cardData.img;
     // } else {
     //     drawImgLazy(newCard.querySelector(".card__preview-img"), cardData.img);
     // }
@@ -193,4 +197,4 @@ const updTable = () => {
 }
 updTable();
 
-export { drawLootCards, drawCard, updHand, updTable };
+export {drawLootCards, drawCard, updHand, updTable};

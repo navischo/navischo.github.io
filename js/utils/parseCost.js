@@ -1,3 +1,5 @@
+import {getRandomInt} from "./getCardById.js";
+
 const isCostShorted = () => {
 
 }
@@ -13,6 +15,7 @@ const parseCost = (lootItem) => {
         rent: 0,
         sellAvailable: true
     };
+
     if (rentAvailable) {
         const splitCost = costString.split(separator);
         const buy = splitCost[0];
@@ -42,6 +45,10 @@ const parseCost = (lootItem) => {
         } else {
             costObj.buy = +cost;
         }
+    }
+
+    if (costString === "NYP") {
+        costObj.buy = getRandomInt(4200);
     }
 
     lootItem.costObj = costObj;

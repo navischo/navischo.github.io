@@ -72,6 +72,7 @@ const initGame = () => {
 
     // parse cost
     game.catalog.loot.forEach(parseCost);
+    game.catalog.sound.forEach(parseCost);
 
     return game;
 }
