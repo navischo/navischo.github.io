@@ -1,9 +1,10 @@
 import { CARD_TYPES } from "./const.cards.js";
 import { DNECards, DNESecretCards } from "./data.cards.js";
 import { win77 } from "../dne-cli.js";
-import {getRandomInt, moveCardById} from "../utils/getCardById.js";
+import {getCardById, getRandomInt, moveCardById} from "../utils/getCardById.js";
 import { initInventory } from "../hud/inventory.hud.js";
 import { parseCost } from "../utils/parseCost.js";
+import { ContainerIn } from "../utils/initContainer.js";
 
 //=> 0. Все карты(кроме неукомплектованных), в любом кол-ве копий [done]
 //=> 1. Строгая коллекция специально для этой игры, без дублей [done]
@@ -75,6 +76,9 @@ const initGame = () => {
     // parse cost
     game.catalog.loot.forEach(parseCost);
     game.catalog.sound.forEach(parseCost);
+
+    getCardById("i-case", game.catalog.loot).containerIn = new ContainerIn("case", "21х30х10");
+    // game.catalog.loot.forEach(parseContainers);
 
     return game;
 }
