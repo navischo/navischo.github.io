@@ -172,7 +172,7 @@ const getRareGuest = () => {
 
 const drawSmitsCard = (dataObj) => {
     const rareGuest = dataObj.name === "rare" ? getRareGuest() : false;
-    console.log("isRareGuest", rareGuest);
+    // console.log("isRareGuest", rareGuest);
     if (rareGuest) {
         dataObj.name = rareGuest.name;
         dataObj.profile = rareGuest;
@@ -262,7 +262,7 @@ const matchLootBonus = () => {
 const matchCrewBonus = () => {
     let CREW_BONUS = 0;
     win77.game.player.npc.forEach((crewItem) => {
-        console.log(`CREW_BONUS`, CREW_BONUS, crewItem.bonus);
+        // console.log(`CREW_BONUS`, CREW_BONUS, crewItem.bonus);
         CREW_BONUS = CREW_BONUS + crewItem.bonus;
     });
     return CREW_BONUS;
@@ -360,11 +360,11 @@ const getScene = () => {
 
 const useSmithsCards = () => {
     const scene = getScene();
-    console.log(`${win77.game.player.id} getSceneData()`, scene);
+    // console.log(`${win77.game.player.id} getSceneData()`, scene);
     drawLootCards(scene.data.executive, scene.executiveSelector);
     const teamCards = document.querySelectorAll(`${scene.executiveSelector} .card`);
     teamCards.forEach((teamCard) => {
-        console.log(`teamCard`, teamCard, teamCard.parentNode);
+        // console.log(`teamCard`, teamCard, teamCard.parentNode);
         teamCard.parentNode.classList.add("swiper-slide");
     });
     win77.swiperExecutive = new Swiper(".swiper.executive", {

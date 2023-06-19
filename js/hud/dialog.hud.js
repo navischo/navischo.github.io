@@ -15,6 +15,7 @@ const DIALOG_QUESTIONS = [
             {
                 text: "Yep",
                 action: () => {
+                    console.log("Lets Rave");
                     document.querySelector("body").classList.remove("ready-to-start");
                     setupTheday();
                 }

@@ -6,15 +6,19 @@ import { drawTheday } from "./init.theday.js";
 
 const setupTheday = () => {
     let lineupLength = 0;
+    const cardTitleArr = document.querySelectorAll("#table .card__title");
     const limitsStrings = document.querySelectorAll("#table .card__limits");
+    const lineup = [];
 
-    limitsStrings.forEach((limitsString) => {
-        console.log("time", lineupLength, limitsString);
+    limitsStrings.forEach((limitsString, i) => {
+        // console.log("time", lineupLength, limitsString);
         const wordsArr = limitsString.textContent.split(" ");
         const time = +(wordsArr[1].replace("m", ""));
         lineupLength = lineupLength + time;
+
+        lineup.push({line: cardTitleArr[i], time: time});
     });
-    win77.setLineupLength(lineupLength);
+    win77.setLineup(lineupLength, lineup);
 
     try {
         document.querySelector("#dne-page-up").classList.add("js-open");

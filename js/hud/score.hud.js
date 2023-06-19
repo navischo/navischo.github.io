@@ -15,10 +15,10 @@ const readyToStart = () => {
     const body = document.querySelector("body");
     const className = "ready-to-start";
     const isBodyContainsClass = body.classList.contains(className);
-    console.log(body, className, !isBodyContainsClass);
+    // console.log(body, className, !isBodyContainsClass);
     if (!isBodyContainsClass) {
         body.classList.add(`${className}`);
-        console.log(`Lets show dialog`);
+        console.log(`Please, solve dialog in your HUD`);
         openPopup("#dialog-popup");
         document.querySelector("#rts-btn")
             .addEventListener("click", () => {
@@ -29,7 +29,7 @@ const readyToStart = () => {
 
 const isItWin = () => {
     if (win77.game.player.score > win77.game.versusScore) {
-        console.log("You are win");
+        console.log("You can become executive of this event. Just accept dialog");
         readyToStart();
     }
 }

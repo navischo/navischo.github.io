@@ -28,8 +28,7 @@
     left: -165px;
     z-index: 1;
 
-    flex-wrap: wrap;
-    max-width: 930px;
+    /*flex-wrap: wrap;*/
     transform: scale(0.5) rotate(180deg) translateY(526px);
 }
 

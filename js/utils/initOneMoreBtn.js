@@ -14,7 +14,7 @@ const initOneMoreBtn = () => {
     };
 
     if (cardsInYourHand.length < 5) {
-        console.log(`Take it.`);
+        // console.log(`Take it.`);
         oneMoreBtnWrap.innerHTML = "";
         oneMoreBtnWrap.innerHTML = "<button>+</button>";
         oneMoreBtnWrap.querySelector("button").addEventListener("click", clickHandler);

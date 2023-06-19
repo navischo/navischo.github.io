@@ -187,7 +187,7 @@ const updHand = () => {
         plusBtn.addEventListener("click", (e) => {
             const id = card.id.substring(9);
             const bonus = +(card.querySelector(".card__bonus").textContent);
-            console.log(win77);
+            // console.log(win77);
             openWithTimer();
             moveCardById(id, win77.game.player.hand, win77.game.table);
             updTable();

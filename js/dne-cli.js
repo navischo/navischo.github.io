@@ -22,7 +22,8 @@ class DNECli {
         this.game.table = new Set();
     }
 
-    setLineupLength(min) {
+    setLineup(min, lineup) {
+        this.game.event.lineup = lineup;
         this.game.event.lineupLength = min;
     }
 
