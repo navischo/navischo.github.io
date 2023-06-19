@@ -26,8 +26,14 @@ class House extends Room {
     }
 }
 
+const getDefaultRoom = () => new Room("default", "Default Room", "You enter room full of dark, light behind the door show few meters of space near you, its empty.", [], [], []);
+
+const getDefaultHouse = () => {
+    const newHouse = new House("default", "Default House", new Set([getDefaultRoom()]), "Its your new beginning. Use it clever.", [], [], []);
+    return newHouse;
+}
+
 const initSummerHouse = () => {
-    const rooms = new Set();
     const studio = new Room(
         "summer-studio",
         "Студія",
@@ -48,7 +54,7 @@ const initSummerHouse = () => {
     return greenHouse;
 }
 
-win77.locationsSet = new Set([initSummerHouse()]);
+win77.locationsSet.add(initSummerHouse());
 
 const getLocationDataMarkup = (data) => {
     console.log(data, data.name);
@@ -68,4 +74,17 @@ ${data.name}:<br>&nbsp;&nbsp;{<br>
     return markup;
 }
 
-export { getLocationDataMarkup };
+const playgroundSet = new Set();
+const DUNGE_NAMES = ["keller", "otel", "closer", "arsenal", "hvylyovyi", "collider", "E"];
+DUNGE_NAMES.forEach((name) => {
+    const house = getDefaultHouse();
+    house.name = name;
+
+    playgroundSet.add(name);
+
+    win77.locationsSet.add(house);
+});
+
+console.log("playgroundSet", playgroundSet, win77.locationsSet);
+
+export { DUNGE_NAMES, getLocationDataMarkup };

@@ -2,6 +2,7 @@ import { getRandomInt } from "../utils/getCardById.js";
 import { win77 } from "../dne-cli.js";
 import { reloadTheday } from "./reload.theday.js";
 import { drawLootCards } from "../cards/dom.cards.js";
+import { DUNGE_NAMES } from "../inInteraction/interface.inInteraction.js";
 
 const SMITHS_TYPES = [
     {
@@ -27,6 +28,7 @@ const SMITHS_TYPES = [
 
 const SMITHS_LETTERS = ["A", "B", "C", "D", "E"];
 const settings = {
+    dungeName: DUNGE_NAMES[getRandomInt(DUNGE_NAMES.length)],
     enterPrice: 200,
     socialPoints: 5,
     guestsCount: 0,

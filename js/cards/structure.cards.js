@@ -38,6 +38,8 @@ const initGame = () => {
         final: false
     }
 
+    win77.locationsSet = new Set();
+
     DNECards.forEach((card) => {
         switch (card.type) {
             case CARD_TYPES.npc:

@@ -27,6 +27,9 @@ const setupTheday = () => {
 
     // switchTime(win77.game.event.lineupLength); // time temporary disabled
     win77.setEventSettings(Object.assign({}, settings));
+    win77.game.event.settings.dungeObj = Array.from(win77.locationsSet).find((dungeObj) => dungeObj.name === win77.game.event.settings.dungeName);
+
+
     console.log(`Starting event..`, win77.game.event);
     drawTheday();
 }
