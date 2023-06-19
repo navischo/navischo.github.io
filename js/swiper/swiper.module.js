@@ -5,6 +5,7 @@ import { hudMarkup } from "./markup/hud.markup.js";
 import { eventMarkup } from "./markup/event.markup.js";
 
 import { win77 } from "../dne-cli.js";
+// import { initProfile } from "../hud/chat.hud.jquery.js";
 
 // API code
 const swiper = new Swiper('.swiper', {
@@ -65,7 +66,13 @@ document
     .forEach((link) => {
         link.addEventListener('click', function (e) {
             e.preventDefault();
-            swiper.slideTo(PAGES_ID[e.target.textContent.toLowerCase()], 0);
+
+            const id = PAGES_ID[e.target.textContent.toLowerCase()];
+            swiper.slideTo(id, 0);
+
+            // if (id === PAGES_ID.admin) {
+            //     initProfile();
+            // }
         });
     });
 

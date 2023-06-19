@@ -253,7 +253,7 @@ const matchCashOnBar = () => {
 const matchLootBonus = () => {
     let LOOT_BONUS = 0;
     win77.game.player.loot.forEach((lootItem) => {
-        console.log(`LOOT_BONUS`, LOOT_BONUS, lootItem.bonus);
+        // console.log(`LOOT_BONUS`, LOOT_BONUS, lootItem.bonus);
         LOOT_BONUS = LOOT_BONUS + lootItem.bonus;
     });
     return LOOT_BONUS;

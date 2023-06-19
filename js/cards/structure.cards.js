@@ -135,7 +135,8 @@ const initPlayer = () => {
         sound: new Set(),
         loot: new Set(),
         cars: new Set(),
-        cardsInRentIdSet: new Set()
+        cardsInRentIdSet: new Set(),
+        availableLocations: ["summer"]
     };
 
     moveCardById("car-cosmos-track", win77.game.catalog.anti, player.cars);

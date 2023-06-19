@@ -2,6 +2,8 @@ import { getLocationDataMarkup } from "../inInteraction/interface.inInteraction.
 import { win77 } from "../dne-cli.js";
 import { ADVICES, drawAdvice } from "../page/advice.page.js";
 import { getRandomInt } from "../utils/getCardById.js";
+import {adminMarkup, profileMarkup} from "../swiper/markup/admin.markup.js";
+import { drawLootCards } from "../cards/dom.cards.js";
 
 // const DEFAULT_TIP = `
 // Прототип інтерфейсу взаємодії між гравцем та навколишнім світом натхненний Cyberpunk 2077.
@@ -51,7 +53,7 @@ import { getRandomInt } from "../utils/getCardById.js";
 // initTip();
 
 const showTip = (e) => {
-    console.log(`You ask about advice for..`, e.target, e.target.dataset.adviceId);
+    // console.log(`You ask about advice for..`, e.target, e.target.dataset.adviceId);
     if (e.target.dataset.adviceId) {
         const askedAdvice = ADVICES.find((advice) => advice.id === e.target.dataset.adviceId);
         console.log(`Yes, I know something about ${e.target.dataset.adviceId}. Here `, askedAdvice);
@@ -206,7 +208,43 @@ const initDialog = (dialog) => {
     drawDialog(dialogData);
 }
 
+const initProfile = () => {
+    const root = document.querySelector("#root");
+    const appDOM = {
+        root: root,
+        a: root.querySelector(".app-a"),
+        main: root.querySelector(".app-main"),
+        b: root.querySelector(".app-b"),
+    }
 
+
+
+    // const inventoryMenu = document.querySelector(".js-inventory-menu");
+    // win77.game.player.loot.forEach((lootItem) => {
+        // inventoryMenu.appendChild(lootItem)
+    // });
+
+    const openBtn = document.querySelector(".js-open-profile");
+    openBtn.addEventListener("click", () => {
+        // root.innerHTML = "";
+        // root.classList.add("bg-profile");
+        root.innerHTML = "";
+        root.innerHTML = profileMarkup;
+        drawLootCards(win77.game.player.loot, ".js-inventory-menu");
+        drawLootCards(win77.game.player.npc, ".js-crew-menu");
+
+        const backBtn = document.querySelector(".js-open-direct");
+        backBtn.addEventListener("click", () => {
+            root.innerHTML = "";
+            root.innerHTML = adminMarkup;
+            initLocations();
+            initDirect();
+            initProfile();
+        });
+    });
+}
+
+initProfile();
 
 const initLocations = () => {
     const locationsParent = document.querySelector(".js-locations");
@@ -217,9 +255,8 @@ const initLocations = () => {
         </a>
     </li>
     `;
-    const availableLocations = ["Summer"];
     const initLocationsList = () => {
-        locationsParent.innerHTML = availableLocations.map((locationItem) => getLocationItemMarkup(locationItem)).join("");
+        locationsParent.innerHTML = win77.game.player.availableLocations.map((locationItem) => getLocationItemMarkup(locationItem)).join("");
     }
 
     initLocationsList();
@@ -266,4 +303,4 @@ addNewSlideButton.addEventListener("click", () => {
     ]);
 });
 
-export { DIALOGS, TITLES_OF_DIALOGS, initDialog };
+export { DIALOGS, TITLES_OF_DIALOGS, initDialog, initProfile };

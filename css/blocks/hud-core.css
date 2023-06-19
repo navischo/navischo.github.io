@@ -18,6 +18,11 @@
 
 #root * {
     box-sizing: border-box;
+    /*position: relative;*/
+}
+
+#root .button,
+#root input {
     position: relative;
 }
 
@@ -42,6 +47,73 @@
 a {
     color: inherit;
     text-decoration: none;
+}
+
+#root.bg-profile {
+    background: url("../img/bg-profile.png");
+}
+
+.profile .app-container {
+    grid-template-columns: 362px 1fr 1fr 1fr 380px;
+}
+
+.profile .app-a {
+    padding-top: 77px;
+}
+
+.profile .app-b {
+    padding-top: 77px; /*40px*/
+}
+
+.profile .app-b .card-menu {
+    padding-left: 60px;
+}
+
+.card-menu__title {
+    margin: 0;
+
+    font-size: 27px;
+    line-height: 1.2;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.card-menu__list {
+    width: 610px;
+    margin-left: -2.5px;
+    display: flex;
+    flex-wrap: wrap;
+    transform: scale(.6) translate(0, -33%);
+    transform-origin: left;
+}
+
+.card-menu__list > * {
+    margin: 2.5px;
+}
+
+.profile-field {
+    padding-left: 60px;
+    padding-top: 15px;
+}
+
+.profile-field__label {
+    margin: 0;
+    font-size: 26px;
+}
+
+.profile-field__input {
+    background: none;
+    border: none;
+
+    color: #5bece6;
+    font-family: var(--fonts-primary);
+    font-size: 42px;
+    line-height: 1.1;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-shadow: 1px 0px 2px #5bece6;
+
+    outline: none;
 }
 
 .app-skeleton {
@@ -347,6 +419,7 @@ textarea {
 }
 
 .form-control {
+    position: relative;
     background-color: var(--colors-bg--300);
     border: 1px solid var(--colors-primary--600);
     clip-path: var(--ui-notch-path);
