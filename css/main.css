@@ -20,6 +20,7 @@
 @import "blocks/check.css";
 @import "blocks/hypnosoft.css";
 @import "blocks/rts-btn.css";
+@import "blocks/credits.css";
 
 /*CUSTOMIZATION*/
 @import "./cards-customization.css";

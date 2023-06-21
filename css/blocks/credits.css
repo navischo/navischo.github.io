@@ -1,0 +1,33 @@
+.credits {
+    width: 100%;
+    height: 100%;
+    background: black;
+    perspective: 100px;
+    overflow: hidden;
+}
+
+.credits__wrapper {
+    margin: auto;
+    height: 100%;
+    width: 40%;
+    text-align: center;
+    animation: star-credits 150s infinite linear both;
+}
+
+.credits__container {
+    margin: auto;
+    font-family: "Press Start 2p", "JetBrains Mono", monospace;
+    text-align: justify;
+    color: yellow;
+    display: block;
+    font-size: 24px;
+}
+
+@keyframes star-credits {
+    from {
+        transform: rotateX(20deg) translateY(70%);
+    }
+    to {
+        transform: rotateX(20deg) translateY(-200%)
+    }
+}

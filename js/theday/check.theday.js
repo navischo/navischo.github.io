@@ -1,3 +1,5 @@
+import { initCredits } from "../utils/initCredits.js";
+
 const checkData = {
     budget: 36800,
     income: 154000,
@@ -60,19 +62,20 @@ const drawCheck = (checkData, parent = "body") => {
         checkElement.appendChild(getCheckLayer(checkData, i));
     }
     document.querySelector(parent).appendChild(checkElement);
-    // uncomment to add background
-    if (win77.game.player.balance.skillPoints % 10) {
+    const isFinalRound = win77.game.player.balance.skillPoints % 10;
+    if (isFinalRound) {
         const skyAndOcean = document.createElement("div");
         skyAndOcean.classList.add("check-screen__sky-and-ocean");
         skyAndOcean.innerHTML = getSkyAndOceanMarkup();
         checkElement.appendChild(skyAndOcean);
     } else {
-        const skyAndOcean = document.createElement("div");
-        skyAndOcean.classList.add("intro");
-        skyAndOcean.innerHTML = getIntro();
-        checkElement.appendChild(skyAndOcean);
+        const intro = document.createElement("div");
+        intro.classList.add("intro");
+        intro.innerHTML = getIntro();
+        checkElement.appendChild(intro);
     }
     checkElement.addEventListener("click", () => {
+        // isFinalRound ? initCredits() : "";
         checkElement.remove();
     });
 }
@@ -119,7 +122,7 @@ const getIntro = () => {
 
     <div class="intro__content">
         <div class="container">
-            <h1 class="intro__title"><a href="hud.html">CONTINUE</a></h1>
+            <h1 class="intro__title"><a id="js-show-credits" href="#play">CONTINUE</a></h1>
         </div>
     </div>
 <!--</div>-->
