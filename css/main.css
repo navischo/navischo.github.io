@@ -21,6 +21,7 @@
 @import "blocks/hypnosoft.css";
 @import "blocks/rts-btn.css";
 @import "blocks/credits.css";
+@import "blocks/ascii-title.css";
 
 /*CUSTOMIZATION*/
 @import "./cards-customization.css";

@@ -1,0 +1,9 @@
+.ascii-title {
+    position: fixed;
+    z-index: 50;
+    top: 0;
+    max-width: 47px;
+    text-shadow: 0 0 2px black;
+    font-size: 1.2em;
+    left: 50%;
+}

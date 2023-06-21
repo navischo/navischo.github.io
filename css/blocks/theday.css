@@ -60,6 +60,16 @@
     transform: scale(1.6) translateY(50px);
 }
 
+.js-rick-portal::after {
+    content: attr(data-to);
+
+    font-size: 1.6em;
+    text-align: center;
+    font-family: "Cyberpunk", "Press Start 2p", "JetBrains Mono", sans-serif;
+    color: white;
+    text-shadow: 0px 0px 2px black;
+}
+
 .body-cell {
     position: fixed;
     top: 0;

@@ -278,7 +278,7 @@ const matchEventIncome = (smithCard) => {
 
     const IMPACT_BONUS = win77.game.player.score - win77.game.versusScore + LOOT_BONUS + CREW_BONUS;
     if (IMPACT_BONUS > 4) {
-        console.log("IMPACT_BONUS", IMPACT_BONUS, Math.round(+cashOnEnter / 100 * IMPACT_BONUS), win77.game.event.result.impactBonus);
+        // console.log("IMPACT_BONUS", IMPACT_BONUS, Math.round(+cashOnEnter / 100 * IMPACT_BONUS), win77.game.event.result.impactBonus);
         const impactIncome = Math.round(cashOnEnter / 100 * IMPACT_BONUS);
         // win77.game.event.result.impactBonus = win77.game.event.result.impactBonus + impactIncome;
         win77.game.event.result.impactBonus = win77.game.event.result.impactBonus + impactIncome;

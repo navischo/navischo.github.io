@@ -2,6 +2,7 @@ import { swiper } from "../swiper/swiper.module.js";
 import { win77 } from "../dne-cli.js";
 import { initGradient } from "./gradient.theday.js";
 import { pokeButtonMarkup } from "../utils/pokeButtonMarkup.js";
+import {getDungeNameInASCII} from "../utils/getDungeNameInASCII.js";
 
 
 const getPortalElement = () => {
@@ -11,6 +12,8 @@ const getPortalElement = () => {
     portal.classList.add("card");
     portal.innerHTML = `<img src="img/portal.gif">`;
     portal.style.display = "none";
+
+    // portal.dataset.to = win77.game.event.settings.dungeObj.name;
 
     return portal;
 }
@@ -38,9 +41,11 @@ ${pokeButtonMarkup}
 
 
 const initTheday = () => {
+    console.log(`${win77.game.player.id} starts an Event in dunge by name..`, win77);
+    console.log(getDungeNameInASCII(win77.game.event.settings.dungeObj.name));
 
-    console.log(`${win77.game.player.id} starts an Event`, win77);
     initGradient();
+
     document.querySelector(".js-rick-portal").style.display = "block";
     win77.pokeButton.dia.useSmithsCards();
 }
