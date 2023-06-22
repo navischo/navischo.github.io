@@ -3,6 +3,7 @@ import { win77 } from "../dne-cli.js";
 import { reloadTheday } from "./reload.theday.js";
 import { drawLootCards } from "../cards/dom.cards.js";
 import { DUNGE_NAMES } from "../inInteraction/interface.inInteraction.js";
+import { matchGenreBonus } from "../utils/matchGenreBonus.js";
 
 const SMITHS_TYPES = [
     {
@@ -272,11 +273,13 @@ const matchEventIncome = (smithCard) => {
     const cashOnEnter = matchCashOnEnter(smithCard);
     win77.game.event.result.cashOnEnter = win77.game.event.result.cashOnEnter + cashOnEnter;
 
+
+    const GENRE_BONUS = matchGenreBonus(win77.game.table);
     const LOOT_BONUS = matchLootBonus();
     const CREW_BONUS = matchCrewBonus();
 
 
-    const IMPACT_BONUS = win77.game.player.score - win77.game.versusScore + LOOT_BONUS + CREW_BONUS;
+    const IMPACT_BONUS = win77.game.player.score - win77.game.versusScore + GENRE_BONUS + LOOT_BONUS + CREW_BONUS;
     if (IMPACT_BONUS > 4) {
         // console.log("IMPACT_BONUS", IMPACT_BONUS, Math.round(+cashOnEnter / 100 * IMPACT_BONUS), win77.game.event.result.impactBonus);
         const impactIncome = Math.round(cashOnEnter / 100 * IMPACT_BONUS);
