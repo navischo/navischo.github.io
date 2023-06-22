@@ -20,7 +20,7 @@ const reloadTheday = () => {
     const LOOT_BONUS = matchLootBonus();
     const CREW_BONUS = matchCrewBonus();
     console.log(`Client expectation was on level ${win77.game.versusScore}.`, win77.game.event);
-    console.log(`But with bonus of your loot(+${LOOT_BONUS}), your crew(+${CREW_BONUS}) and combination of genres(+${GENRE_BONUS}) you blow up on ${win77.game.player.score + GENRE_BONUS + LOOT_BONUS + CREW_BONUS}!`, win77.game.event);
+    console.log(`But with base(${win77.game.player.score})+bonus of your loot(+${LOOT_BONUS}), your crew(+${CREW_BONUS}) and combination of genres(+${GENRE_BONUS}) you blow up on ${win77.game.player.score + GENRE_BONUS + LOOT_BONUS + CREW_BONUS}!`, win77.game.event);
     console.log(`Now, receive ${win77.game.player.score - win77.game.versusScore + GENRE_BONUS + LOOT_BONUS + CREW_BONUS}% more income by Impact bonus!`, win77.game.event);
 
     if (isSetHasId(win77.game.player.loot, "chaos-green") && isSetHasId(win77.game.player.npc, "shadow")) {

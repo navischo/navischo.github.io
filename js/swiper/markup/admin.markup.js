@@ -165,7 +165,7 @@ const profileMarkup = `
     <div class="app-container">
         <div class="app-a">
             <div class="card-menu">
-                <h3 class="card-menu__title">Inventory</h3>
+                <h3 class="card-menu__title" data-advice-id="inventory">Inventory</h3>
                 <div class="js-inventory-menu card-menu__list">
                 </div>
             </div>
@@ -186,11 +186,11 @@ const profileMarkup = `
 <!--                CENTRAL DATABASE-->
 <!--            </h3>-->
             <div class="profile-field">
-                <h4 class="profile-field__label">CLASS UNIT</h4>
+                <h4 class="profile-field__label" data-advice-id="class">CLASS UNIT</h4>
                 <input type="text" class="profile-field__input" value="TECHIE">
             </div>
             <div class="profile-field">
-                <h4 class="profile-field__label">SPECIAL DIA</h4>
+                <h4 class="profile-field__label" data-advice-id="specialDia">SPECIAL DIA</h4>
                 <input type="text" class="profile-field__input" value="DRAW">
                 <input type="text" class="profile-field__input" value="CODE">
                 <input type="text" class="profile-field__input" value="PLAY MUSIC">

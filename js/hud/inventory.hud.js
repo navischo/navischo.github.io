@@ -16,7 +16,7 @@ const inventoryMarkup = `
     <a href="#nokia-popup" class="js-phone inventory-item">call me()</a>
 </div>
 <div class="inventory">
-    inventory: <br>{<br>
+    <span data-advice-id="inventory">inventory:</span> <br>{<br>
     <span id="inventory-list" class="inventory-items"></span>
     }<br><br>
     <span id="one-more"><button>+</button></span><span data-advice-id="sound">sound:</span> <br>{<br>
