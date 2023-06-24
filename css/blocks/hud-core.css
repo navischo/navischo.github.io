@@ -77,6 +77,11 @@ a {
     margin: 0 auto;
 }
 
+.avatar-controls {
+    width: 420px;
+    margin: 0 auto;
+}
+
 .avatar__glitch {
     position: absolute;
     top: 0;
@@ -87,6 +92,13 @@ a {
     display: block;
 
     background: red;
+}
+.avatar__exit {
+    position: absolute!important;
+    top: 0;
+    right: 0;
+    transform: translateX(160%);
+    margin-left: 10px;
 }
 
 .glitch {
@@ -356,11 +368,7 @@ a {
 }
 
 .js-open-direct {
-    position: absolute!important;
-    top: 0;
-    right: 0;
-    transform: translateX(160%);
-    margin-left: 10px;
+
 }
 
 .card-menu__title {

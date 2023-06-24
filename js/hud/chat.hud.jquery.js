@@ -233,13 +233,15 @@ const initProfile = () => {
         drawLootCards(win77.game.player.loot, ".js-inventory-menu");
         drawLootCards(win77.game.player.npc, ".js-crew-menu");
 
-        const backBtn = document.querySelector(".js-open-direct");
-        backBtn.addEventListener("click", () => {
-            root.innerHTML = "";
-            root.innerHTML = adminMarkup;
-            initLocations();
-            initDirect();
-            initProfile();
+        const backBtnArr = document.querySelectorAll(".js-open-direct");
+        backBtnArr.forEach((backBtn) => {
+            backBtn.addEventListener("click", () => {
+                root.innerHTML = "";
+                root.innerHTML = adminMarkup;
+                initLocations();
+                initDirect();
+                initProfile();
+            });
         });
     });
 }
