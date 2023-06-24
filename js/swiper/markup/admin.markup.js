@@ -171,7 +171,14 @@ const profileMarkup = `
             </div>
         </div>
         <div class="app-main">
-            <div class="avatar">
+            <div class="avatar glitch" data-img-name="avatar.jpg">
+                <div class="avatar__glitch"></div>
+                <div class="glitch__layers">
+                    <div class="glitch__layer"></div>
+                    <div class="glitch__layer"></div>
+                    <div class="glitch__layer"></div>
+                </div>
+                <span class="clipPath"></span>
                 <img src="img/avatar.jpg" alt="">
                 <a class="js-open-direct button button--default">
                     <svg class="button__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
