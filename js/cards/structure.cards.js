@@ -117,6 +117,7 @@ const initPlayer = () => {
     console.log(savedBankroll ? `Your bankroll in amount of ${savedBankroll} was restored from LocalStorage. Enjoy!` : `Your starting bankroll is 14000`, savedBankroll); // 970510
 
     const savedLvl = +localStorage.getItem("lvl");
+    savedLvl ? document.querySelector("body").dataset.lvl = savedLvl : "";
     console.log(savedLvl ? `Level ${savedLvl} was restored from LocalStorage. Good luck in your journey!` : `Your start from lvl 0`, savedBankroll);
 
     const savedLogin = localStorage.getItem("login");

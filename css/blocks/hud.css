@@ -169,11 +169,18 @@ body {
 .background-single {
     /*background: url("../../libs/screen/screen-hud--spalah-2@2x1.jpg")!important;*/
     /*background: url("../../libs/screen/screen-nohud--new-place.jpg")!important;*/
-    background: url("../../libs/screen/screen-nohud--me.jpg")!important;
     /*background: url("../../libs/screen/screen-hud--advise.jpg")!important;*/
     background-size: cover!important;
     background-repeat: no-repeat;
     background-position: center!important;
+}
+
+.background-single[data-lvl="0"] {
+    background-image: url("../../libs/screen/screen-nohud--new-place.jpg")!important;
+}
+
+.background-single[data-lvl="1"] {
+    background-image: url("../../libs/screen/screen-nohud--me.jpg")!important;
 }
 
 .background-hidden {
