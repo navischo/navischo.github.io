@@ -291,3 +291,19 @@
 .catalog-controls__hide-btn {
     z-index: 4;
 }
+
+.js-inventory-menu .card > *:not(.card__preview) {
+    display: none;
+}
+
+.build .js-inventory-menu .card {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.build .js-inventory-menu .card > .card__title {
+    display: block;
+}
