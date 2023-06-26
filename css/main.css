@@ -23,6 +23,7 @@
 @import "blocks/credits.css";
 @import "blocks/ascii-title.css";
 @import "blocks/card-builder.css";
+@import "blocks/form-field.css";
 
 /*CUSTOMIZATION*/
 @import "./cards-customization.css";

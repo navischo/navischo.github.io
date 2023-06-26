@@ -11,6 +11,14 @@ const isSetHasId = (set, cardId) => {
         }
     })
 
+    if (!objById) {
+        win77.game.catalog._custom.forEach((cardObj) => {
+            if (cardObj.id === cardId) {
+                objById = cardObj;
+            }
+        })
+    }
+
     if (set.has(objById)) {
         isIt = true;
     }

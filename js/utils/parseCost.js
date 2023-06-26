@@ -1,9 +1,5 @@
 import {getRandomInt} from "./getCardById.js";
 
-const isCostShorted = () => {
-
-}
-
 const parseCost = (lootItem) => {
     const separator = "/";
     const costString = lootItem.cost;
@@ -53,6 +49,8 @@ const parseCost = (lootItem) => {
 
     lootItem.costObj = costObj;
     console.log(lootItem.cost, lootItem.costObj, `Item loaded successfully`);
+
+    return lootItem;
 };
 
 export { parseCost };

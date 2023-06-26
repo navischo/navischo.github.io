@@ -24,7 +24,8 @@ const initGame = () => {
             [CARD_TYPES.dia]: new Set(),
             [CARD_TYPES.anti]: new Set(),
             all: DNECards,
-            _secret: DNESecretCards
+            _secret: DNESecretCards,
+            _custom: new Set()
         },
         event: {
             settings: {},
