@@ -1,0 +1,20 @@
+.card-builder {
+    display: flex;
+    width: 880px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+article.card-builder-modal {
+    max-width: 980px;
+    background-color: var(--colors-bg--500);
+    background-image: radial-gradient(
+            ellipse at 33% 10%,
+            #461616 0%,
+            transparent 75%
+    );
+}
+
+.card-builder__form {
+    margin-right: 20px;
+}

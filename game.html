@@ -14,36 +14,7 @@
     <button id="rts-btn">Press start 2P</button>
 </div>
 <div class="sudo-page">
-<!--    <div class="credits">-->
-<!--        <div class="credits__wrapper">-->
-<!--            <p class="credits__container">-->
-<!--                A long time ago, in a galaxy far, far away…-->
-<!--                <br/><br/><br/>-->
-<!--                You pass through The-->
-<!--                Mysterious Factory. Organize Rave,-->
-<!--                that shake all the city,-->
-<!--                make a lot of fun, loot-->
-<!--                and cash on it.-->
-<!--                <br/><br/><br/>-->
-<!--                Hoping to stay afloat,-->
-<!--                your competitors gathered-->
-<!--                their last cash and crew members-->
-<!--                to knock you out of the top-->
-<!--                and win back their audience.-->
-<!--                <br/><br/><br/>-->
-<!--                Without even suspecting-->
-<!--                what was happening,-->
-<!--                Grandfather and Grandson-->
-<!--                were crumbling a tasty piece of hydra,-->
-<!--                drinking milk and cookies,-->
-<!--                lying on the couch,-->
-<!--                stuck in an interdimensional cable,-->
-<!--                where just showing-->
-<!--                the latest episode-->
-<!--                of Cyberpunk: Edgerunners...-->
-<!--            </p>-->
-<!--        </div>-->
-<!--    </div>-->
+
 
         <div class="windows__bg">
             <div class="windows__bg--inner">
@@ -106,7 +77,7 @@
 <!--                <button class="js-portal catalog-controls__filter" data-portal="board">BOARD</button>-->
 <!--            </div>-->
         <header class="app-header">
-            <div class="app-header__anchor"><span class="app-header__anchor-text">Fredom-City NetWire</span></div>
+            <div class="app-header__anchor"><a class="js-open-card-builder app-header__anchor-text" href="#card-builder-popup">Fredom-City NetWire</a></div>
             <nav>
                 <ul class="nav">
                     <li class="nav__item">
@@ -167,6 +138,67 @@
                 </section>
             </div>
         </div>
+
+    <article id="card-builder-popup" class="card-builder-modal white-popup mfp-hide">
+        <div class="card-builder">
+            <div class="card-builder__form">
+                <!-- name -->
+                <div class="profile-field">
+                    <label class="profile-field__label" for="cb-name">Name</label>
+                    <input id="cb-name" class="profile-field__input --outline" type="text" name="name">
+                </div>
+                <!-- type -->
+                <div class="profile-field">
+                    <label class="profile-field__label" for="cb-type">Type</label>
+                    <input id="cb-type" class="profile-field__input --outline" type="text" name="type">
+                </div>
+                <!-- minutes -->
+                <div class="profile-field">
+                    <label class="profile-field__label" for="cb-minutes">Minutes</label>
+                    <input id="cb-minutes" class="profile-field__input --outline" type="text" name="minutes">
+                </div>
+                <!-- tags -->
+                <div class="profile-field">
+                    <label class="profile-field__label" for="cb-tags">Tags</label>
+                    <input id="cb-tags" class="profile-field__input --outline" type="text" name="tags">
+                </div>
+                <!-- img -->
+                <div class="profile-field">
+                    <label class="profile-field__label" for="cb-name">Image source</label>
+                    <small>Load it on any cloud and add link here</small>
+                    <input id="cb-img" class="profile-field__input --outline" type="text" name="img">
+                </div>
+
+            </div>
+            <div class="card-builder__card-output" style="padding-top: 40px">
+                <div id="dne-card-demo-sub-zero" style="display: block;">
+                    <article class="card" data-advice-id="sound">
+                        <div class="js-card-controls card__controls">
+                            <button>+</button>
+                            <button class="buy">buy</button></div>
+                        <header class="card__header">
+                            <div class="card__header-left">
+                                <small class="js card__id">#demo-sub-zero</small>
+                                <h2 class="card__title">Sub Zero</h2>
+                                <small class="card__limits">Демо, 12m of Hardcore Techno Gabber</small>
+                            </div>
+                            <div class="card__header-right">
+                                <b class="card__bonus">+1</b>
+                            </div>
+                        </header>
+                        <div class="card__preview">
+                            <img class="card__preview-img" src="https://lh5.googleusercontent.com/Z_4RM0MnEAAoy5LStyg6qJ3ghcVaGteTda7dlLWb61i9ZwGqhpfBqUNifGcLBjCOqG8=w2400" alt="">
+                        </div>
+                        <p class="card__description">Демо можна відправити Лейблу, зіграти на вечірці <br>або навідь видати на вінілі. <br><br>Більше людей його почують, більше шанс на нове замовлення.</p>
+                        <footer class="card__footer">
+
+                        </footer>
+                    </article>
+                </div>
+                <button class="my-cybr-btn" style="margin-top: 5px">SET</button>
+            </div>
+        </div>
+    </article>
 
     <div id="card-popup" class="card-modal card-modal--right white-popup mfp-hide">
 
@@ -232,6 +264,11 @@
         import { dialog } from "./js/hud/dialog.hud.js";
 
         initInventoryPopupJquery();
+
+        $('.js-open-card-builder').magnificPopup({
+            type: 'inline',
+            midClick: true
+        });
 
         $('.js-phone').magnificPopup({
             type: 'inline',

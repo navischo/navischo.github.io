@@ -396,14 +396,21 @@ a {
 .profile-field {
     padding-left: 60px;
     padding-top: 15px;
+
+    font-family: var(--fonts-primary);
 }
 
 .profile-field__label {
+    display: block;
     margin: 0;
+
     font-size: 26px;
+    color: var(--colors-on_bg--500);
+    font-family: var(--fonts-primary);
 }
 
 .profile-field__input {
+    display: block;
     background: none;
     border: none;
 
@@ -416,6 +423,10 @@ a {
     text-shadow: 1px 0px 2px #5bece6;
 
     outline: none;
+}
+
+.profile-field__input.--outline {
+    box-shadow: 0 0 0 2px currentColor;
 }
 
 .app-skeleton {
