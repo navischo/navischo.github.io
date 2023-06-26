@@ -97,7 +97,15 @@ const SCREEN_NAMES = [
     `screen-nohud--last-night-20`,
     `screen-nohud--last-night-21`,
     `screen-nohud--moonrise`,
-    `screen-nohud--necromant`
+    `screen-nohud--necromant`,
+    `screen-nohud--vr`,
+    `screen-nohud--deepdive`,
+    `screen-nohud--board`,
+    `screen-nohud--depo`,
+    `screen-nohud--where-is-johnny`,
+    `screen-nohud--no-tell-motel`,
+    `screen-nohud--minibot`,
+    `screen-nohud--six-street`
 ];
 
 const initScreen = () => {
