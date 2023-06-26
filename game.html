@@ -141,7 +141,7 @@
 
     <article id="card-builder-popup" class="card-builder-modal white-popup mfp-hide">
         <div class="card-builder">
-            <div class="card-builder__form">
+            <div id="card-builder-form" class="card-builder__form">
                 <!-- name -->
                 <div class="profile-field">
                     <label class="profile-field__label" for="cb-name">Name</label>
@@ -160,11 +160,11 @@
                 <!-- tags -->
                 <div class="profile-field">
                     <label class="profile-field__label" for="cb-tags">Tags</label>
-                    <input id="cb-tags" class="profile-field__input --outline" type="text" name="tags">
+                    <input id="cb-tags" class="profile-field__input --outline" type="text" name="tagsString">
                 </div>
                 <!-- img -->
                 <div class="profile-field">
-                    <label class="profile-field__label" for="cb-name">Image source</label>
+                    <label class="profile-field__label" for="cb-img">Image source</label>
                     <small>Load it on any cloud and add link here</small>
                     <input id="cb-img" class="profile-field__input --outline" type="text" name="img">
                 </div>
@@ -173,21 +173,18 @@
             <div class="card-builder__card-output" style="padding-top: 40px">
                 <div id="dne-card-demo-sub-zero" style="display: block;">
                     <article class="card" data-advice-id="sound">
-                        <div class="js-card-controls card__controls">
-                            <button>+</button>
-                            <button class="buy">buy</button></div>
                         <header class="card__header">
                             <div class="card__header-left">
                                 <small class="js card__id">#demo-sub-zero</small>
-                                <h2 class="card__title">Sub Zero</h2>
-                                <small class="card__limits">Демо, 12m of Hardcore Techno Gabber</small>
+                                <h2 class="js-output-name card__title">Sub Zero</h2>
+                                <small class="card__limits"><span class="js-output-type">Демо</span>, <span class="js-output-minutes">12</span>m of <span class="js-output-tags">Hardcore Techno Gabber</span></small>
                             </div>
                             <div class="card__header-right">
                                 <b class="card__bonus">+1</b>
                             </div>
                         </header>
                         <div class="card__preview">
-                            <img class="card__preview-img" src="https://lh5.googleusercontent.com/Z_4RM0MnEAAoy5LStyg6qJ3ghcVaGteTda7dlLWb61i9ZwGqhpfBqUNifGcLBjCOqG8=w2400" alt="">
+                            <img class="js-output-img card__preview-img" src="https://lh5.googleusercontent.com/Z_4RM0MnEAAoy5LStyg6qJ3ghcVaGteTda7dlLWb61i9ZwGqhpfBqUNifGcLBjCOqG8=w2400" alt="">
                         </div>
                         <p class="card__description">Демо можна відправити Лейблу, зіграти на вечірці <br>або навідь видати на вінілі. <br><br>Більше людей його почують, більше шанс на нове замовлення.</p>
                         <footer class="card__footer">
@@ -199,6 +196,11 @@
             </div>
         </div>
     </article>
+
+<script>
+
+</script>
+
 
     <div id="card-popup" class="card-modal card-modal--right white-popup mfp-hide">
 
@@ -259,6 +261,7 @@
 
     <script type="module">
         import { initInventoryPopupJquery } from "./js/utils/initInventoryPopup.jquery.js";
+        import { initCardBuilder } from "./js/hud/cardBuilder.hud.js";
         import { initNokiaPopup } from "./js/hud/fon.hud.js";
         import { initIntervalScreen } from "./js/page/screen.page.js";
         import { dialog } from "./js/hud/dialog.hud.js";
@@ -269,6 +272,8 @@
             type: 'inline',
             midClick: true
         });
+
+        initCardBuilder();
 
         $('.js-phone').magnificPopup({
             type: 'inline',
