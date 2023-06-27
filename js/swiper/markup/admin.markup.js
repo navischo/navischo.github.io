@@ -165,8 +165,8 @@ const profileMarkup = `
     <div class="app-container">
         <div class="app-a">
             <div class="card-menu">
-                <h3 class="card-menu__title" data-advice-id="inventory">Inventory</h3>
-                <div class="js-inventory-menu card-menu__list">
+                <h3 class="card-menu__title" data-advice-id="crew">Crew</h3>
+                <div class="js-crew-menu card-menu__list">
                 </div>
             </div>
         </div>
@@ -205,8 +205,9 @@ const profileMarkup = `
                 <input type="text" class="profile-field__input" value="CODE">
                 <input type="text" class="profile-field__input" value="PLAY MUSIC">
             </div>
-            <div class="card-menu">
-                <div class="js-crew-menu card-menu__list">
+            <div class="card-menu" data-advice-id="inventory">
+                <div class="js-inventory-menu card-menu__list">
+                
                 </div>
             </div>
         </div>
