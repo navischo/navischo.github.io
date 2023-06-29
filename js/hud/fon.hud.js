@@ -1,6 +1,7 @@
 import {win77} from "../dne-cli.js";
 import { DIALOGS, TITLES_OF_DIALOGS, initDialog } from "./chat.hud.jquery.js";
 import { initHotline } from "../utils/initHotline.js";
+import { createDialogDataObj, initDialogCli } from "./dialogCli.hud.js";
 
 
 const initDirect = (name, dialogObj) => {
@@ -41,6 +42,12 @@ const NOKIA_MENUS = [
                 callback: (e) => {
                     e.preventDefault();
                     win77.lastHotline = initHotline(1);
+                    initDialogCli(createDialogDataObj(
+                        ["Поклич Навіщо"],
+                        "Fight Club",
+                        [
+                            () => initHotline(0)
+                        ]));
                     console.log(`Hotline to Fight Club`);
                 }
             }

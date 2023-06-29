@@ -25,6 +25,20 @@ body {
     text-transform: uppercase;
 }
 
+.dialog.--vertical {
+    top: 60px;
+    left: auto;
+    right: -275px;
+    z-index: 1199;
+}
+
+.dialog.--vertical .dialog__to,
+.dialog.--vertical .dialog__bye {
+    left: auto;
+    right: 85%;
+    min-width: max-content;
+}
+
 /*.dialog::before {*/
 .dialog__to,
 .dialog__bye {

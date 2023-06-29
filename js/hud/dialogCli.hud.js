@@ -1,9 +1,7 @@
-const getDialogOptionObj = (line) =>{
+const getDialogOptionObj = (line, callback = null) =>{
     return {
         line: line,
-        callback: () => {
-            console.log(this.line);
-        }
+        callback: callback
     }
 };
 
@@ -23,7 +21,7 @@ const DIALOG_ACTIONS = {
     })
 }
 
-const dialogData = {
+const DEFAULT_DIALOG_DATA = {
     to: "Captain",
     options: [
         getDialogOptionObj("Розкажи мені про Санто-Домінго."),
@@ -35,11 +33,24 @@ const dialogData = {
     ]
 }
 
+const createDialogDataObj = (optionLinesArr, to = "unknown", optionCallbackArr) => {
+    const optionsArr = optionLinesArr
+        .map((optionLine, i) => getDialogOptionObj(optionLine, optionCallbackArr ? optionCallbackArr[i] : ""));
+    return {
+        to: to,
+        options: optionsArr,
+        actions: [
+            DIALOG_ACTIONS.bye
+        ],
+        // optionsCallbackArr: optionCallbackArr
+    }
+}
+
 const getDialogOptionMarkup = (line) => `<button class="hvr-bounce-to-right dialog__answer">${line}</button>`;
 const getDialogActionMarkup = (line) => `<button class="js-dialog-${line} dialog__bye">${line}</button>`;
 
 const getDialogCliMarkup = (dialogData) => `
-<div class="dialog" data-to="${dialogData.to}" style="display: none">
+<div class="dialog --vertical" data-to="${dialogData.to}">
     <button id="dne-cli-exe" class="dialog__to --active">${dialogData.to}</button>
     ${dialogData.actions.map((action) => getDialogActionMarkup(action.line)).join("")}
     
@@ -51,9 +62,26 @@ const getDialogCliMarkup = (dialogData) => `
 const drawDialogCli = (dialogData) => {
     const parent = document.querySelector("#dialogs-container");
     parent.innerHTML = getDialogCliMarkup(dialogData);
+
+    const optionNodeArr = parent.querySelectorAll(".dialog__answer:not(#dne-cli)");
+
+    optionNodeArr.forEach((optionNode, i) => {
+        if (dialogData.options[i]) {
+            optionNode.addEventListener("click", dialogData.options[i].callback);
+            console.log("dialogData.options[i].callback", dialogData.options[i].callback);
+        }
+    });
+
+    console.log("optionNodeArr", optionNodeArr);
+
+    // if (dialogData.optionsCallbackArr) {
+    //     dialogData.optionsCallbackArr.forEach((optionCallback, i) => {
+    //         optionNodeArr[i].addEventListener("click", optionCallback);
+    //     });
+    // }
 }
 
-const initDialogCli = () => {
+const initDialogCli = (dialogData = DEFAULT_DIALOG_DATA) => {
     drawDialogCli(dialogData);
     const dneCliExe = document.querySelector("#dne-cli-exe");
     const dneCliInput = document.querySelector("#dne-cli");
@@ -86,4 +114,4 @@ const initDialogCli = () => {
     });
 }
 
-initDialogCli();
+export { initDialogCli, createDialogDataObj };
