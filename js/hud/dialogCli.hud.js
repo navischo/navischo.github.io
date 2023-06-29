@@ -111,6 +111,11 @@ const initDialogCli = (dialogData = DEFAULT_DIALOG_DATA) => {
 
     dialogBye.addEventListener("click", () => {
         document.querySelector(".dialog").style.display = "none";
+        const dialogVertical = document.querySelector(".dialog-vertical");
+        if (dialogVertical) {
+            dialogVertical.querySelector(".channel-feed__body").innerHTML = "";
+            dialogVertical.classList.add("--zero-inbox");
+        }
     });
 }
 
