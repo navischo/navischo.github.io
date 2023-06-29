@@ -810,6 +810,11 @@ textarea {
     font-family: "JetBrains Mono", monospace;
 }
 
+.message.--blue .message__body {
+    color: #7be5fb;
+    border-color: #7be5fb;
+}
+
 .message.--light .message__body {
     border: none;
     background-color: transparent;

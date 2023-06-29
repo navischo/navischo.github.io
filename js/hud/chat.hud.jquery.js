@@ -144,12 +144,12 @@ ${TUTORIAL_PARTS.whatIsClassCards}
 Наша хвилина слави закінчилась, але в тебе ще є час. Ми для тебе дещо залишили в Ель Капітана. Щасти тобі та бережи себе, Ві.`
 ];
 
-const getMessageMarkup = (message) => `
-<div class="message">
+const getMessageMarkup = (message, mod = "") => `
+<div class="message ${mod}">
     <div class="message__body">
-        <div>${message}</div>
+        <div>${message.line ? message.line : message}</div>
     </div>
-    <div class="message__footer"><span class="message__authoring">undefined</span><span class="message__time"></span></div>
+    ${ message.credits ? `<div class="message__footer"><span class="message__authoring">${message.credits}</span><span class="message__time"></span></div>` : ``}
 </div>
 `;
 
@@ -161,8 +161,7 @@ const drawDialog = (data, clearBefore = false, parent) => {
 
     const appendMessageMarkup = (message) => {
         const newElement = document.createElement("div");
-        newElement.innerHTML = getMessageMarkup(message.line);
-        newElement.querySelector(".message__authoring").textContent = message.credits;
+        newElement.innerHTML = getMessageMarkup(message);
         messageParent.appendChild(newElement);
     }
 
@@ -308,4 +307,4 @@ addNewSlideButton.addEventListener("click", () => {
     ]);
 });
 
-export { DIALOGS, TITLES_OF_DIALOGS, initDialog, initProfile };
+export { DIALOGS, TITLES_OF_DIALOGS, initDialog, initProfile, getMessageMarkup };

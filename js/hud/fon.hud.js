@@ -1,5 +1,5 @@
 import {win77} from "../dne-cli.js";
-import { DIALOGS, TITLES_OF_DIALOGS, initDialog } from "./chat.hud.jquery.js";
+import { DIALOGS, TITLES_OF_DIALOGS, initDialog, getMessageMarkup } from "./chat.hud.jquery.js";
 import { initHotline } from "../utils/initHotline.js";
 import { createDialogDataObj, initDialogCli } from "./dialogCli.hud.js";
 
@@ -42,11 +42,18 @@ const NOKIA_MENUS = [
                 callback: (e) => {
                     e.preventDefault();
                     win77.lastHotline = initHotline(1);
+                    const OPTION_LINES = ["Поклич Навіщо", "Бачив у вас хлопця з тату черепа на всю голову. Як його імя?"];
                     initDialogCli(createDialogDataObj(
-                        ["Поклич Навіщо"],
+                        OPTION_LINES,
                         "Fight Club",
                         [
-                            () => initHotline(0)
+                            () => initHotline(0),
+                            () => {
+                                const activeChat = document.querySelector(".dialog-vertical .channel-feed__body");
+                                const newMessage = document.createElement("div");
+                                newMessage.innerHTML = getMessageMarkup(OPTION_LINES[1], "--blue");
+                                activeChat.appendChild(newMessage);
+                            }
                         ]));
                     console.log(`Hotline to Fight Club`);
                 }
