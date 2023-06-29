@@ -28,8 +28,10 @@ body {
 .dialog.--vertical {
     top: 60px;
     left: auto;
-    right: -275px;
+    right: -228px;
     z-index: 1199;
+
+    width: 630px;
 }
 
 .dialog.--vertical .dialog__to,
