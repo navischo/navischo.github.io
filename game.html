@@ -561,6 +561,13 @@
         dialog.init();
         win77.swiper.slideTo(2, 0);
         initIntervalScreen();
+
+        document.addEventListener("keydown", (e) => {
+            console.log(e.key, e);
+            if (e.key === "n") {
+                document.querySelector("body").classList.toggle("hide-hud");
+            }
+        });
     </script>
 </body>
 </html>
