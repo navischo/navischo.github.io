@@ -88,6 +88,45 @@
     text-decoration: none;
 }
 
+.inventory-item.--shake {
+    animation: shake .7s ease-in-out infinite;
+    animation-delay: 1s;
+}
+
+@keyframes shake {
+ 0% {
+     transform: rotate(0);
+ }
+
+    20% {
+        transform: rotate(-15deg);
+    }
+
+    40% {
+        transform: rotate(15deg);
+    }
+
+    60% {
+        transform: rotate(-15deg);
+    }
+
+    80% {
+        transform: rotate(15deg);
+    }
+
+    85% {
+        transform: rotate(-15deg);
+    }
+
+    80% {
+        transform: rotate(15deg);
+    }
+
+    95% {
+        transform: rotate(0);
+    }
+}
+
 .player-obj .inventory-item {
     display: inline-block;
 }

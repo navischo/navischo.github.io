@@ -546,6 +546,10 @@
             type: 'inline',
             midClick: true
         });
+        const fon = document.querySelector(".js-phone");
+        fon.addEventListener("click", () => {
+            fon.classList.remove("--shake");
+        });
 
         initNokiaPopup();
 
