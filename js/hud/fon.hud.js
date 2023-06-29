@@ -1,5 +1,6 @@
 import {win77} from "../dne-cli.js";
 import { DIALOGS, TITLES_OF_DIALOGS, initDialog } from "./chat.hud.jquery.js";
+import { initHotline } from "../utils/initHotline.js";
 
 
 const initDirect = (name, dialogObj) => {
@@ -25,13 +26,22 @@ const NOKIA_MENUS = [
                 text: "navischo",
                 callback: (e) => {
                     e.preventDefault();
-                    $.magnificPopup.close();
-                    win77.swiper.slidePrev();
-                    initDirect("navischo", {
-                        title: TITLES_OF_DIALOGS[0],
-                        body: DIALOGS[0]
-                    });
-                    console.log(`Direct to navischo`);
+                    // $.magnificPopup.close();
+                    // win77.swiper.slidePrev();
+                    win77.lastHotline = initHotline(0);
+                    // initDirect("navischo", {
+                    //     title: TITLES_OF_DIALOGS[0],
+                    //     body: DIALOGS[0]
+                    // });
+                    console.log(`Hotline to navischo`);
+                }
+            }, {
+                href: "#",
+                text: "Fight Club",
+                callback: (e) => {
+                    e.preventDefault();
+                    win77.lastHotline = initHotline(1);
+                    console.log(`Hotline to Fight Club`);
                 }
             }
             // {

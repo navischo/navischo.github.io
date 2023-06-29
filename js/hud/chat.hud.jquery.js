@@ -85,7 +85,8 @@ const TUTORIAL_PARTS = {
 };
 
 const TITLES_OF_DIALOGS = [
-  `Повчальна Історія`
+  `Повчальна Історія`,
+  `Спитай Тайлера`
 ];
 
 const DIALOGS = [
@@ -104,6 +105,8 @@ ${TUTORIAL_PARTS.whatIsNpcCards}
 ${TUTORIAL_PARTS.whatIsClassCards}
 Цього має вистачити щоб пройти кілька раундів та відчути механіку. Після відчувай себе вільно щоб запросити у мене доступ до книги правил, вставивши в адресну строку: https://www.notion.so/RULEBOOK-e1aad00713344adf86db1ad8d4368bbb?pvs=4\r
 Пам'ятай, що кожен брейнданс має свою ціну. Мої реквізити в твоєму Діректі.`,
+
+`Привіт, Тайлер слухає`,
 
 `Ти прийшла мене прикінчити?
 Ні, просто перезавантажити.
@@ -152,8 +155,8 @@ const getMessageMarkup = (message) => `
 
 
 
-const drawDialog = (data, clearBefore = false) => {
-    const messageParent = document.querySelector(".channel-feed__body");
+const drawDialog = (data, clearBefore = false, parent) => {
+    const messageParent = parent ? parent : document.querySelector(".channel-feed__body");
     clearBefore ? messageParent.innerHTML = "" : "";
 
     const appendMessageMarkup = (message) => {
@@ -169,7 +172,7 @@ const drawDialog = (data, clearBefore = false) => {
     data.forEach(appendMessageMarkup);
 }
 
-const initDialog = (dialog) => {
+const initDialog = (dialog, parent = null) => {
     const lines = dialog.split(/\r\n|\r|\n/g);
 
     const lineObj = {
@@ -205,7 +208,7 @@ const initDialog = (dialog) => {
 
     const dialogData = fillDialogData();
 
-    drawDialog(dialogData);
+    drawDialog(dialogData, parent);
 }
 
 const initProfile = () => {
