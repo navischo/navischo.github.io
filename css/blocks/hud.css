@@ -499,6 +499,7 @@ body {
 }
 
 .hud-options-list {
+    display: flex;
     padding: 0;
     margin: 0;
 
@@ -509,6 +510,10 @@ body {
     padding: 20px 10px;
     border: 2px solid var(--colors-primary--500);
     box-shadow: var(--ui-glow);
+}
+
+.hud-options-item:first-child {
+    flex-grow: 1;
 }
 
 .hud-options-item a,
