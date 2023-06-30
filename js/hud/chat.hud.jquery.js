@@ -4,6 +4,7 @@ import { ADVICES, drawAdvice } from "../page/advice.page.js";
 import { getRandomInt } from "../utils/getCardById.js";
 import {adminMarkup, profileMarkup} from "../swiper/markup/admin.markup.js";
 import { drawLootCards } from "../cards/dom.cards.js";
+import { getDialogOptionMarkup } from "./dialogCli.hud.js";
 
 // const DEFAULT_TIP = `
 // Прототип інтерфейсу взаємодії між гравцем та навколишнім світом натхненний Cyberpunk 2077.
@@ -143,6 +144,63 @@ ${TUTORIAL_PARTS.whatIsClassCards}
 Ти нас, звісно, можеш вистежити, якщо захочеш. Тому ми з тобою і зв'язались першими. Щоб ти цього не робила.
 Наша хвилина слави закінчилась, але в тебе ще є час. Ми для тебе дещо залишили в Ель Капітана. Щасти тобі та бережи себе, Ві.`
 ];
+
+const ID_KEYS = {
+    monsterIntro: 0
+}
+
+const INTERACTIVE_DIALOGS = [
+    {
+        starter: "Бачив у вас хлопця з тату черепа на всю голову. Як його імя?",
+        next: "Монстр. Доречі щойно прийшов на спаринг. Покликати?",
+        nextOptions: [
+            "Ні, дякую. Я сам зараз заїду.",
+            "Так, скажи що це стосовно гри."
+        ]
+    },
+    {
+        starter: "Ні, дякую. Я сам зараз заїду.",
+        next: "Чудово, до зустрічі"
+    }
+];
+
+const initInteractiveDialog = (option) => {
+    const dialog = INTERACTIVE_DIALOGS.find((dialog) => dialog.starter === option);
+    const activeChat = document.querySelector(".dialog-vertical .channel-feed__body");
+    const newMessage = document.createElement("div");
+    newMessage.innerHTML = getMessageMarkup(dialog.next);
+    activeChat.appendChild(newMessage);
+
+    const dialogVertical = document.querySelector(".dialog.--vertical");
+    const currentOptionNodeArr = dialogVertical.querySelectorAll(".dialog__answer.--option");
+    currentOptionNodeArr.forEach((currentOptionNode) => currentOptionNode.remove());
+
+    if (dialog.nextOptions) {
+        const newOptions = document.createElement("div");
+        newOptions.innerHTML = dialog.nextOptions.map((option) => getDialogOptionMarkup(option)).join("");
+        dialogVertical.appendChild(newOptions);
+
+        const optionNodeArr = newOptions.querySelectorAll(".dialog__answer.--option");
+        optionNodeArr.forEach((optionNode) => {
+            optionNode.addEventListener("click", () => {
+                chooseOption(optionNode.textContent);
+            });
+        });
+    }
+}
+
+const chooseOption = (option) => {
+    const activeChat = document.querySelector(".dialog-vertical .channel-feed__body");
+    const newMessage = document.createElement("div");
+    newMessage.innerHTML = getMessageMarkup(option, "--blue");
+    activeChat.appendChild(newMessage);
+
+    if (INTERACTIVE_DIALOGS.find((dialog) => dialog.starter === option)) {
+        setTimeout(() => {
+            initInteractiveDialog(option);
+        }, 5000);
+    }
+}
 
 const getMessageMarkup = (message, mod = "") => `
 <div class="message ${mod}">
@@ -307,4 +365,4 @@ addNewSlideButton.addEventListener("click", () => {
     ]);
 });
 
-export { DIALOGS, TITLES_OF_DIALOGS, initDialog, initProfile, getMessageMarkup };
+export { DIALOGS, TITLES_OF_DIALOGS, initDialog, initProfile, getMessageMarkup, initInteractiveDialog, chooseOption };

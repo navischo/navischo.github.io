@@ -42,11 +42,10 @@ const createDialogDataObj = (optionLinesArr, to = "unknown", optionCallbackArr) 
         actions: [
             DIALOG_ACTIONS.bye
         ],
-        // optionsCallbackArr: optionCallbackArr
     }
 }
 
-const getDialogOptionMarkup = (line) => `<button class="hvr-bounce-to-right dialog__answer">${line}</button>`;
+const getDialogOptionMarkup = (line) => `<button class="hvr-bounce-to-right dialog__answer --option">${line}</button>`;
 const getDialogActionMarkup = (line) => `<button class="js-dialog-${line} dialog__bye">${line}</button>`;
 
 const getDialogCliMarkup = (dialogData) => `
@@ -119,4 +118,4 @@ const initDialogCli = (dialogData = DEFAULT_DIALOG_DATA) => {
     });
 }
 
-export { initDialogCli, createDialogDataObj };
+export { initDialogCli, createDialogDataObj, getDialogOptionMarkup };

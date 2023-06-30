@@ -1,7 +1,8 @@
 // const NUMBERS = {
 //     IN_MENU: [],
 //     IN_PLAY: [],
-//     IN_SHOP: []
+//     IN_SHOP: [],
+//     IN_TALK: []
 // }
 
 const initKeyboard = () => {
