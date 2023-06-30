@@ -1,4 +1,4 @@
-import { win77 } from "../dne-cli.js";
+// import { win77 } from "../dne-cli.js";
 import { COMMANDS } from "./const.cards.js";
 import { drawImgLazy } from "../utils/drawImgLazy.js";
 import { getDoorCardElement } from "./template.cards.js";
@@ -45,6 +45,6 @@ const drawDoorCards = (cardData, parentSelector = "#dne-page") => {
     });
 }
 
-// drawDoorCards(win77.game.doors);
+// win77.drawDoors = drawDoorCards;
 
 export { drawDoorCards };
