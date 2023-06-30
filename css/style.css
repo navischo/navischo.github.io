@@ -1522,67 +1522,6 @@ h2 {
   text-shadow: 1px 0px 4px #ff6d65;
 }
 
-.fw-check-list {
-  margin: 16px 0;
-}
-
-.fw-check-list > .fw-check-row:first-child {
-  box-shadow: inset 0 1px 0 0 #5e0c08;
-}
-
-.fw-check-list > .fw-check-row:last-child {
-  box-shadow: inset 0 -1px 0 0 #5e0c08;
-}
-
-.fw-check-list > .fw-check-row:first-child,
-.fw-check-list > .fw-check-row:last-child {
-  box-shadow: inset 0 -1px 0 0 #5e0c08, inset 0 1px 0 0 #5e0c08;
-}
-
-.fw-check-row {
-    width: 100%;
-  padding: 20px 26px;
-  padding-left: 26px;
-  border: none;
-
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 1em;
-  color: #53d3dc;
-  text-transform: uppercase;
-  letter-spacing: -1.2px;
-  text-shadow: 1px 0px 2px #53d3dc;
-    text-align: left;
-
-
-  cursor: pointer;
-  background: transparent;
-}
-
-.fw-check-row:hover {
-  background-color: rgba(40, 8, 7, .6);
-}
-
-.fw-check-row::before {
-  content: '';
-
-  position: relative;
-  left: -3px;
-  bottom: -4px;
-
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  margin-right: 20px;
-
-  box-shadow: inset 0 0 0 1px #ff6d65;
-  background: #0e1116;
-}
-
-.fw-check-row--checked::before {
-  background: #ff6d65;
-  box-shadow: 0 0 4px 0px #ff6d65;
-}
-
 .fw-h1 {
   color: #ff6d65;
   text-transform: uppercase;

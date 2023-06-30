@@ -252,3 +252,9 @@ a.js-phone {
 .win77-dialog .buttons button:active p, .win98popup .buttons button:active img {
     transform: translateX(1px) translateY(1px);
 }
+
+.quest-modal.white-popup {
+    padding: 20px;
+    padding-bottom: 80px;
+    background: #0e1116;
+}
