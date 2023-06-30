@@ -66,3 +66,32 @@
     background: #ff6d65;
     box-shadow: 0 0 4px 0px #ff6d65;
 }
+
+.btn-reset {
+    padding: 0;
+    border: none;
+
+    font-size: 0;
+
+    background: transparent;
+}
+
+.fw-submit {
+    color: #4ed0d7;
+    box-shadow: 0 0 0 1px #4ed0d7;
+    background: #194045;
+
+    display: block;
+    max-width: 480px;
+    width: 100%;
+    padding: 7px;
+
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.3em;
+    color: #53d3dc;
+    text-transform: uppercase;
+    letter-spacing: -1.2px;
+    text-shadow: 1px 0px 2px #53d3dc;
+
+    cursor: pointer;
+}
