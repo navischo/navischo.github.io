@@ -1,6 +1,18 @@
 .quest {
-    max-width: 480px;
+    display: flex;
     padding: 18px 30px;
+}
+
+.quest.--max-map .quest__map-preview {
+    width: 480px;
+}
+
+.quest__left {
+    max-width: 480px;
+}
+
+.quest__right {
+    padding-left: 30px;
 }
 
 .quest__header {
@@ -18,4 +30,24 @@
     margin: 5px 0;
     font-size: 24px;
     font-family: "JetBrains Mono", sans-serif;
+}
+
+.quest__map-preview {
+    /*position: absolute;*/
+    /*left: 500px;*/
+    /*top: 40px;*/
+    /*right: 40px;*/
+    width: 100%;
+    max-width: 480px;
+    min-height: 480px;
+
+    transition: .2s ease;
+}
+
+.quest__map-preview img {
+    display: block;
+    width: 100%;
+    object-fit: contain;
+    border: 2px solid var(--colors-primary--500);
+    box-shadow: var(--ui-glow);
 }

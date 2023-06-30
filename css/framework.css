@@ -7,6 +7,8 @@
 }
 
 .fw-check-list {
+    max-height: 300px;
+    overflow: hidden;
     margin: 16px 0;
 }
 
