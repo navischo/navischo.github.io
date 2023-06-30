@@ -25,6 +25,7 @@
 @import "blocks/card-builder.css";
 @import "blocks/form-field.css";
 @import "blocks/dialog-vertical.css";
+@import "blocks/quest.css";
 
 /*CUSTOMIZATION*/
 @import "./cards-customization.css";

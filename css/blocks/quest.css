@@ -1,0 +1,25 @@
+.quest-modal {
+    padding: 20px;
+    padding-bottom: 80px;
+    background: #0e1116;
+}
+.quest {
+    max-width: 480px;
+    padding: 18px 30px;
+}
+
+.quest__header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.quest__img {
+    width: 50px;
+    height: 96px;
+}
+
+.quest__title {
+    margin: 5px 0;
+    font-size: 24px;
+}
