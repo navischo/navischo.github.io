@@ -95,3 +95,19 @@
 
     cursor: pointer;
 }
+
+.fw-h1 {
+    color: #ff6d65;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: -1.2px;
+    text-shadow: 1px 0px 10px #ff6d65;
+}
+
+.fw-p {
+    padding-left: 6px;
+    margin-top: 10px;
+    color: #ff6d65;
+    font-family: 'JetBrains Mono', monospace;
+    text-shadow: 1px 0px 4px #ff6d65;
+}
