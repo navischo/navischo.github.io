@@ -389,6 +389,19 @@
             </div>
         </div>
 
+<button id="hud-btn" class="hud-btn hud-btn--fixed">
+    <img src="img/img-hud-btn.png" alt="HUD" width="200" height="221">
+</button>
+<div class="hud-bottom hud-bottom--fixed">
+    <div id="hud-options" class="hud-options">
+        <ul class="hud-options-list">
+            <li class="js-start-vote hud-options-item">
+                <a href="#quest-popup" class="js-open-quest open-popup-link">Quest</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
     <article id="card-builder-popup" class="card-builder-modal white-popup mfp-hide">
             <div class="card-builder">
                 <div id="card-builder-form" class="card-builder__form">
@@ -463,9 +476,6 @@
             </div>
     </article>
 
-<script>
-
-</script>
 
 <div id="quest-popup" class="quest-modal white-popup mfp-hide">
     <section class="js-quest quest">
@@ -528,6 +538,7 @@
     <script type="module" src="js/hud/fon.hud.js"></script>
     <script type="module" src="js/hud/dialogCli.hud.js"></script>
     <script type="module" src="js/hud/quest.hud.js"></script>
+    <script type="module" src="js/hud/btn.hud.js"></script>
     <script type="module" src="js/page/screen.page.js"></script>
     <script type="module" src="js/page/advice.page.js"></script>
     <script type="module" src="js/inInteraction/interface.inInteraction.js"></script>
@@ -547,6 +558,7 @@
         import { initKeyboard } from "./js/utils/initKeyboard.js";
         import { initCardBuilder } from "./js/hud/cardBuilder.hud.js";
         import { initNokiaPopup } from "./js/hud/fon.hud.js";
+        import { initQuest } from "./js/hud/quest.hud.js";
         import { initIntervalScreen } from "./js/page/screen.page.js";
         import { dialog } from "./js/hud/dialog.hud.js";
 
@@ -576,6 +588,14 @@
         });
 
         dialog.init();
+
+        $('.js-open-quest').magnificPopup({
+            type: 'inline',
+            midClick: true
+        });
+
+        initQuest();
+
         win77.swiper.slideTo(2, 0);
         initIntervalScreen();
         initKeyboard();

@@ -16,6 +16,9 @@ const initKeyboard = () => {
                 const controls = document.querySelector(".js-catalog-controls")
                 controls.classList.toggle("catalog-controls--visible");
                 break;
+            case "h":
+                document.querySelector(".hud-bottom").classList.toggle("hud-bottom--open");
+                break;
         }
     });
 }

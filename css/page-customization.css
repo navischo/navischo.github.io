@@ -103,7 +103,8 @@ body.hide-hud .inventory,
 body.hide-hud .js-toggle-catalog-controls,
 body.hide-hud .swiper-button-next,
 body.hide-hud #table,
-body.hide-hud .swiper-button-prev {
+body.hide-hud .swiper-button-prev,
+body.hide-hud .hud-btn--fixed {
     display: none;
 }
 
@@ -111,4 +112,15 @@ body[data-hash="cards"] .nav__item-sublist {
     visibility: visible;
     opacity: 1;
     transform: translateX(-100%);
+}
+
+.hud-btn--fixed {
+    visibility: hidden;
+    opacity: 0;
+    transition: .2s ease;
+}
+
+body[data-hash="play"] .hud-btn--fixed {
+    visibility: visible;
+    opacity: 1;
 }
