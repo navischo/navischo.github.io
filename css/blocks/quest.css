@@ -8,6 +8,7 @@
 }
 
 .quest__left {
+    position: relative;
     max-width: 480px;
 }
 
@@ -85,3 +86,19 @@
 /*    background: #5bece6;*/
 /*    box-shadow: 0 0 5px #5bece6;*/
 /*}*/
+
+
+
+.quest__left .button-toolbar {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.quest__settings-controls {
+    display: flex;
+}
+
+.quest__settings-controls .form-field__input {
+    max-width: 150px;
+}

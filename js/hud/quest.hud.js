@@ -70,14 +70,33 @@ const newTurnCheckpointsStroke =
 Подождать, пока Нэнси позвонит на следующий день`
 ;
 
+const bossDeadCheckpointsStroke =
+`[Opt]Поповнити боєзапас
+[Opt]Домовитись дипломатично
+[або]Перебити членів банди
+Піти від переслідування`;
+
+const bossDeadAchievementsArr = [
+  {
+    name: "Тільки сталь",
+    descr: "Використай лише холодну зброю",
+    reward: "+10%"
+  },
+  {
+    name: "Тільки босс",
+    descr: "Знищ лише ватажка банди",
+    reward: "+10%"
+  }
+];
+
 const parseCheckpointsStroke = (stroke) => {
   // const checkpointsArr = stroke.split("");
   const str = 'The quck brown fox jumps over the lazy dog.';
 
-  const checkpointsArr = newTurnCheckpointsStroke.split('\n');
-  console.log(checkpointsArr[3], checkpointsArr, checkpointsArr.map((stroke) => {
-    return new DNECheckpoint(stroke);
-  }));
+  const checkpointsArr = stroke.split('\n');
+  // console.log(checkpointsArr[3], checkpointsArr, checkpointsArr.map((stroke) => {
+  //   return new DNECheckpoint(stroke);
+  // }));
   return checkpointsArr.map((stroke) => {
     return new DNECheckpoint(stroke);
   });
@@ -109,8 +128,24 @@ const newTurnQuest = new DNEQuest(
     "new-turn",
     "Новий поворот",
     "Знайти Ненсі та воскресити гурт Samurai",
-    parseCheckpointsStroke(newTurnCheckpoints)
+    parseCheckpointsStroke(newTurnCheckpointsStroke)
 );
+
+const bossDeadQuest = new DNEQuest(
+    "boss-dead",
+    "Босс мертвий",
+    "Знайти джерело галасу та розібратись",
+    parseCheckpointsStroke(bossDeadCheckpointsStroke)
+);
+
+const drawAchievements = (achievementsArr) => {
+  const wrap = document.createElement("div");
+  wrap.innerHTML = achievementsArr
+    .map((achievement) => `<p class="js-quest-descr fw-p fw-main-color">${achievement.name}(${achievement.reward}): ${achievement.descr}</p>`)
+    .join(``);
+  document.querySelector(".quest__right")
+      .appendChild(wrap);
+}
 
 const initQuest = () => {
   const questParent = document.querySelector(".js-quest");
@@ -131,9 +166,9 @@ const initQuest = () => {
   const redrawCheckpoints = (questData) => {
     const checkRowClickHandler = (e) => {
       e.target.classList.add("fw-check-row--checked");
-      newTurnQuest.nextCheckpoint();
-      redrawCheckpoints(newTurnQuest);
-      console.log(NEXT_CHECKPOINT_MESSAGE, newTurnQuest);
+      questData.nextCheckpoint();
+      redrawCheckpoints(questData);
+      console.log(NEXT_CHECKPOINT_MESSAGE, questData);
     };
 
     checkRowArr = questParent.querySelectorAll(".js-quest-checkpoint");
@@ -163,8 +198,8 @@ const initQuest = () => {
   }
 
 
-  drawQuest(newTurnQuest);
-
+  drawQuest(bossDeadQuest);
+  drawAchievements(bossDeadAchievementsArr);
 
 }
 
