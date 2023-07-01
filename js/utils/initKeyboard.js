@@ -19,6 +19,9 @@ const initKeyboard = () => {
             case "h":
                 document.querySelector(".hud-bottom").classList.toggle("hud-bottom--open");
                 break;
+            case "Escape":
+                document.querySelector(".game-menu").classList.toggle("--open");
+                break;
         }
     });
 }

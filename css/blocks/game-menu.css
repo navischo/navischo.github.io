@@ -1,0 +1,111 @@
+.game-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1202;
+
+    visibility: hidden;
+    opacity: 0;
+
+    background: radial-gradient( ellipse at 33% 10%, transparent 0%, black 75% );
+}
+
+.game-menu.--open {
+    visibility: visible;
+    opacity: 1;
+}
+
+.game-menu__key-tips {
+    position: absolute;
+    bottom: 7px;
+    right: 7px;
+
+    color: white;
+    font-family: "JetBrains Mono", monospace;
+}
+
+.game-menu__list {
+    position: relative;
+
+    max-width: 420px;
+    width: 100%;
+    height: 100%;
+    padding-top: 350px;
+    margin-left: 12vw;
+
+    align-items: baseline;
+    display: flex;
+    flex-direction: column;
+    border-left: 2px solid var(--colors-primary--500);
+    border-right: 2px solid var(--colors-primary--500);
+
+    color: rgb(232, 97, 90);
+    font-family: "JetBrains Mono", monospace;
+    text-shadow: var(--ui-glow-text);
+    text-transform: uppercase;
+
+
+}
+
+.game-menu__list::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+
+    display: block;
+    width: 420px;
+
+    background-color: var(--colors-bg--500);
+    background-image: radial-gradient( ellipse at 33% 10%, #461616 0%, transparent 75% );
+    /*box-shadow: var(--ui-glow);*/
+
+    transition: transform 0.25s;
+    opacity: .5;
+}
+
+.game-menu__list-item {
+    position: relative;
+    z-index: 1;
+
+    display: block;
+    width: 100%;
+    padding: 10px 45px;
+
+    letter-spacing: 0.035em;
+    font-family: "JetBrains Mono", monospace;
+    text-shadow: var(--ui-glow-text--dimmed);
+    text-transform: uppercase;
+    font-size: x-large;
+    font-weight: 600;
+}
+
+
+.game-menu__version {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+
+    font-size: 9px;
+    color: rgb(232, 97, 90);
+    font-family: "JetBrains Mono", monospace;
+    text-shadow: var(--ui-glow-text);
+    text-transform: uppercase;
+}
+
+.game-menu .cybr-title {
+    position: absolute;
+    top: 130px;
+    width: 666px;
+    left: -135px;
+
+    margin: 0;
+
+    font-size: 5em;
+    letter-spacing: -25px;
+}

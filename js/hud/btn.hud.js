@@ -10,8 +10,15 @@ if (hudBottom) {
 
 hudBtn.addEventListener("click", (e) => {
     hudOptionsNode.classList.toggle("hud-options--open");
-    hudBottom.classList.toggle("hud-bottom--open");
+    // hudBottom.classList.toggle("hud-bottom--open");
+    document.querySelector(".game-menu").classList.toggle("--open");
 });
-document.addEventListener("keydown", (e) => {
 
+const gameMenu = document.querySelector(".game-menu");
+const gameMenuLinksArr = document.querySelectorAll(".game-menu a");
+
+gameMenuLinksArr.forEach((gameMenuLink) => {
+    gameMenuLink.addEventListener("click", () => {
+        gameMenu.classList.remove("--open");
+    });
 });
