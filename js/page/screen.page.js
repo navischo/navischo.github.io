@@ -105,7 +105,15 @@ const SCREEN_NAMES = [
     `screen-nohud--where-is-johnny`,
     `screen-nohud--no-tell-motel`,
     `screen-nohud--minibot`,
-    `screen-nohud--six-street`
+    `screen-nohud--six-street`,
+    `screen-nohud--night-drive`,
+    `screen-nohud--waiting-room`,
+    `screen-nohud--random-garage`,
+    `screen-honud--aldecaldo-station`,
+    `screen-nohud--free-ride`,
+    `screen-nohud--morning-city`,
+    `screen-nohud--abadone-house`,
+    `screen-nohud--visit`
 ];
 
 const initScreen = () => {
