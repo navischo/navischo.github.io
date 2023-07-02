@@ -268,6 +268,7 @@
     <div class="game-menu__list">
         <h1 class="cybr-title"><a href="consume.html" target="_blank">Does Not Exist</a></h1>
         <a href="#quest-popup" class="js-open-quest game-menu__list-item">Quest</a>
+        <a href="#load-popup" class="js-open-load game-menu__list-item">Load</a>
         <a href="#card-builder-popup" class="js-open-card-builder game-menu__list-item">+Record</a>
         <small class="game-menu__version">1.4</small>
     </div>
@@ -493,6 +494,10 @@
             </div>
     </article>
 
+<div id="load-popup" class="load-modal white-popup mfp-hide">
+
+<!--    <img src="img/img-load-322.png" alt="">-->
+</div>
 
 <div id="quest-popup" class="quest-modal white-popup mfp-hide">
     <section class="js-quest quest --max-map">
@@ -612,6 +617,7 @@
     <script type="module" src="js/page/screen.page.js"></script>
     <script type="module" src="js/page/advice.page.js"></script>
     <script type="module" src="js/page/cutscene.page.js"></script>
+    <script type="module" src="js/popup/save.popup.js"></script>
     <script type="module" src="js/inInteraction/interface.inInteraction.js"></script>
     <script type="module" src="js/utils/initCybrTitle.js"></script>
     <script type="module" src="js/utils/initHypnosoftLoader.js"></script>
@@ -666,6 +672,11 @@
         });
 
         initQuest();
+
+        $('.js-open-load').magnificPopup({
+            type: 'inline',
+            midClick: true
+        });
 
         win77.swiper.slideTo(2, 0);
         initIntervalScreen();

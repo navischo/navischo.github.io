@@ -259,3 +259,10 @@ a.js-phone {
     padding: 20px;
     background: #0e1116;
 }
+
+.load-modal.white-popup {
+    max-width: 1200px;
+    padding: 0;
+    background: transparent;
+}
+
