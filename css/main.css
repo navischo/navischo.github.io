@@ -27,6 +27,7 @@
 @import "blocks/dialog-vertical.css";
 @import "blocks/quest.css";
 @import "blocks/game-menu.css";
+@import "blocks/cutscene.css";
 
 /*CUSTOMIZATION*/
 @import "./cards-customization.css";

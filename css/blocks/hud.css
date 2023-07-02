@@ -509,6 +509,8 @@ body {
 .hud-options-item {
     padding: 20px 10px;
     border: 2px solid var(--colors-primary--500);
+
+    cursor: pointer;
     box-shadow: var(--ui-glow);
 }
 
