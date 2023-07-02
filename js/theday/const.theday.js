@@ -4,6 +4,7 @@ import { reloadTheday } from "./reload.theday.js";
 import { drawLootCards } from "../cards/dom.cards.js";
 import { DUNGE_NAMES } from "../inInteraction/interface.inInteraction.js";
 import { matchGenreBonus } from "../utils/matchGenreBonus.js";
+import { logIncome } from "../utils/logIncome.js";
 
 const SMITHS_TYPES = [
     {
@@ -212,12 +213,15 @@ const drawSmitsCard = (dataObj) => {
     const controls = guest.querySelectorAll("button");
     controls.forEach((btn) => {
         if (btn.textContent === "+") {
-            btn.addEventListener("click", () => {
+            btn.addEventListener("click", (e) => {
                 guest.classList.add("slide-out-left");
                 setTimeout(() => {
                     guest.remove();
                 }, 500);
                 passGuest(dataObj);
+
+                logIncome(dataObj, e);
+
                 const message = `You pass ${dataObj.name}`;
                 console.log(message, dataObj, win77.game);
             });

@@ -539,3 +539,41 @@ body {
     border: 10px solid var(--colors-primary--500);
 }
 
+.income {
+    position: absolute;
+    z-index: 1;
+
+    transform: translateY(0);
+    transition: .2s ease;
+    animation: income-fly 2s ease;
+
+    background: -webkit-linear-gradient(var(--с1), #3e9990);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    padding: 0 8px;
+
+    font-family: 'JUSTICE3D', sans-serif;
+    font-size: 3em;
+    line-height: .8;
+
+}
+
+@keyframes income-fly {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+
+    80% {
+        opacity: 1;
+        transform: translateY(-30px);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-90px);
+    }
+}
+
