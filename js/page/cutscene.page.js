@@ -1,15 +1,21 @@
+const parent = document.querySelector("#cutscene-parent");
+
 const CUTSCENE_IDS = {
     fight: `fight`,
-    room: `room`
+    room: `room`,
+    event: `event`,
+    play: `play`
 };
 
 const CUTSCENE_FILES = {
     fight: `mp4-cutscene-fight.mp4`,
-    room: `mp4-room-mario.mp4`
+    room: `mp4-room-mario.mp4`,
+    event: `webm-cutscene-event.webm`,
+    play: `mp4-room-play.mp4`
 };
 
 const getCutsceneMarkup = (videoName) =>
-`<video class="video-cutscene" src="mp4/${videoName}" loop autoplay preload="auto"></video>`;
+`<video class="video-cutscene" src="mp4/${videoName}" loop autoplay muted preload="auto"></video>`;
 
 
 
@@ -19,7 +25,6 @@ const activateCutscene = (id) => {
 }
 
 const appendCutscene = (id) => {
-    const parent = document.querySelector("body");
     const cutsceneNode = document.createElement("article");
     cutsceneNode.classList.add("cutscene");
     cutsceneNode.innerHTML = getCutsceneMarkup(id);
@@ -30,6 +35,8 @@ const appendCutscene = (id) => {
     return cutsceneNode;
 }
 
+const clearCutscene = () => parent.innerHTML = "";
+
 
 const getCutsceneMenuItemMarkup = (id) =>
     `<li class="js-activate-cutscene hud-options-item">${id}</li>`
@@ -37,14 +44,22 @@ const getCutsceneMenuItemMarkup = (id) =>
 const initCutsceneMenu = (idArr) => {
     const parent = document.querySelector(".js-cutscene-menu");
     parent.innerHTML = idArr.map((id) => getCutsceneMenuItemMarkup(id)).join(``);
+
     const menuItems = parent.querySelectorAll(".js-activate-cutscene");
     menuItems.forEach((menuItem) => {
         menuItem.addEventListener("click", () => {
             const cutsceneId = menuItem.textContent.toLowerCase();
+            clearCutscene();
             appendCutscene(CUTSCENE_FILES[cutsceneId]);
             activateCutscene(cutsceneId);
         });
     });
+
+    const clearBtn = document.createElement("li");
+    clearBtn.classList.add("hud-options-item");
+    clearBtn.classList.add("clear-btn");
+    clearBtn.addEventListener("click", clearCutscene);
+    parent.appendChild(clearBtn);
 }
 
 initCutsceneMenu(Object.keys(CUTSCENE_IDS));

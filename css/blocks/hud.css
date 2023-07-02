@@ -525,3 +525,17 @@ body {
     text-decoration: none;
 }
 
+.clear-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 64px;
+    padding: 0;
+}
+
+.clear-btn::before {
+    content: "";
+
+    border: 10px solid var(--colors-primary--500);
+}
+

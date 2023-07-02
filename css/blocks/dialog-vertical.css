@@ -21,7 +21,7 @@
 }
 
 .dialog-vertical.--zero-inbox {
-    transform: translateY(100%);
+    transform: translateY(101%);
 }
 
 .dialog-vertical .channel-feed__body {

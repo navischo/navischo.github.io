@@ -5,7 +5,7 @@ const hudBottom = document.querySelector(".hud-bottom");
 if (hudBottom) {
     const hudHeight = hudOptionsNode.clientHeight;
     // console.log("hudHeight", hudHeight);
-    hudBottom.style.transform = `translateY(${hudHeight}px)`
+    hudBottom.style.transform = `translateY(${hudHeight + 10}px)`
 }
 
 hudBtn.addEventListener("click", (e) => {
