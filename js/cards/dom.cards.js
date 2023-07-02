@@ -14,6 +14,7 @@ import {CARD_TYPES} from "./const.cards.js";
 import {dialog} from "../hud/dialog.hud.js";
 import {openPopup} from "../popup/dom.popup.jquery.js";
 import {initOneMoreBtn} from "../utils/initOneMoreBtn.js";
+import {logIncome} from "../utils/logIncome.js";
 
 
 const initHandlers = (cardData, controls) => {
@@ -79,7 +80,7 @@ const initHandlers = (cardData, controls) => {
         }
     };
 
-    const sellButtonHandler = () => {
+    const sellButtonHandler = (e) => {
         const catalog = win77.game.catalog[cardData.type];
         const playerCatalog = win77.game.player[cardData.type];
         if (isSetHasId(playerCatalog, cardData.id) && cardData.costObj.sellAvailable) {
@@ -87,6 +88,9 @@ const initHandlers = (cardData, controls) => {
             updBalanceNode();
             moveCardById(cardData.id, playerCatalog, catalog);
             initInventory();
+
+            logIncome(cardData.costObj.buy, e);
+
             console.log(`${cardData.name} was successfully sold +${cardData.costObj.buy} income`);
         } else {
             console.log(`${cardData.name} is unavailable to sell`);

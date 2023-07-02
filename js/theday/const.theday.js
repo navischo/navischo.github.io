@@ -220,7 +220,7 @@ const drawSmitsCard = (dataObj) => {
                 }, 500);
                 passGuest(dataObj);
 
-                logIncome(dataObj, e);
+                logIncome(dataObj.enterBudget * dataObj.plusCount, e);
 
                 const message = `You pass ${dataObj.name}`;
                 console.log(message, dataObj, win77.game);
