@@ -635,7 +635,7 @@
         import { initKeyboard } from "./js/utils/initKeyboard.js";
         import { initCardBuilder } from "./js/hud/cardBuilder.hud.js";
         import { initNokiaPopup } from "./js/hud/fon.hud.js";
-        import { initQuest } from "./js/hud/quest.hud.js";
+        import { initQuest, quests } from "./js/hud/quest.hud.js";
         import { initIntervalScreen } from "./js/page/screen.page.js";
         import { dialog } from "./js/hud/dialog.hud.js";
 
@@ -671,7 +671,7 @@
             midClick: true
         });
 
-        initQuest();
+        initQuest(quests.bossDead);
 
         $('.js-open-load').magnificPopup({
             type: 'inline',

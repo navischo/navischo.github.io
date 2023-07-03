@@ -1,3 +1,6 @@
+import { initQuest, quests } from "../hud/quest.hud.js";
+import { openPopup, closePopup } from "./dom.popup.jquery.js";
+
 const popupParent = document.querySelector("#load-popup");
 
 class Save {
@@ -9,8 +12,8 @@ class Save {
 }
 
 const SAVE_ARR = [
-    new Save(322, "boss-dead", "Босс мертвий"),
-    new Save(323, "she-wants-revenge", "Вона хоче помсти")
+    new Save(322, "bossDead", "Босс мертвий"),
+    new Save(323, "sheWantsRevenge", "Вона хоче помсти")
 ];
 
 const getSaveMarkup = (saveObj) =>
@@ -38,6 +41,17 @@ const getSaveMarkup = (saveObj) =>
 const updSavePopup = () => {
     popupParent.innerHTML = ``;
     popupParent.innerHTML = SAVE_ARR.map((saveObj) => getSaveMarkup(saveObj)).join(``);
+
+    const saves = document.querySelectorAll(".save");
+    saves.forEach((save) => {
+        save.addEventListener("click", () => {
+            initQuest(quests[save.dataset.questId]);
+            closePopup();
+            setTimeout(() => {
+                openPopup(`#quest-popup`);
+            }, 1);
+        });
+    });
 }
 
 updSavePopup();
