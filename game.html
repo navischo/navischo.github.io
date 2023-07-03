@@ -10,6 +10,7 @@
 
 </head>
 <body class="build background-single" data-hash="play" data-lvl="0">
+
 <div class="dialog-vertical --styled --zero-inbox">
     <div class="custom-scrollbar --y channel-feed__body">
         <!--<div>
@@ -269,6 +270,7 @@
         <h1 class="cybr-title"><a href="consume.html" target="_blank">Does Not Exist</a></h1>
         <a href="#quest-popup" class="js-open-quest game-menu__list-item">Quest</a>
         <a href="#load-popup" class="js-open-load game-menu__list-item">Load</a>
+        <a href="#map-popup" class="js-open-map game-menu__list-item">Map</a>
         <a href="#card-builder-popup" class="js-open-card-builder game-menu__list-item">+Record</a>
         <small class="game-menu__version">1.4</small>
     </div>
@@ -506,6 +508,10 @@
 
 </div>
 
+<div id="map-popup" class="map map-modal white-popup mfp-hide">
+    <img class="map__img" src="img/img-new-local-podil--side-A.png" alt="">
+</div>
+
 <div id="nokia-popup" class="nokia nokia-modal white-popup mfp-hide">
 
 </div>
@@ -607,6 +613,11 @@
         });
 
         initQuest(quests.bossDead);
+
+        $('.js-open-map').magnificPopup({
+            type: 'inline',
+            midClick: true
+        });
 
         $('.js-open-load').magnificPopup({
             type: 'inline',

@@ -29,6 +29,7 @@
 @import "blocks/game-menu.css";
 @import "blocks/cutscene.css";
 @import "blocks/save.css";
+@import "blocks/map.css";
 
 /*CUSTOMIZATION*/
 @import "./cards-customization.css";

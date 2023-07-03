@@ -37,6 +37,9 @@ const appendCutscene = (id) => {
 
 const clearCutscene = () => parent.innerHTML = "";
 
+const pauseCutscene = () => document.querySelector(".video-cutscene")?.pause();
+const playCutscene = () => document.querySelector(".video-cutscene")?.play();
+
 
 const getCutsceneMenuItemMarkup = (id) =>
     `<li class="js-activate-cutscene hud-options-item">${id}</li>`
@@ -60,6 +63,20 @@ const initCutsceneMenu = (idArr) => {
     clearBtn.classList.add("clear-btn");
     clearBtn.addEventListener("click", clearCutscene);
     parent.appendChild(clearBtn);
+
+    const pauseBtn = document.createElement("li");
+    pauseBtn.classList.add("hud-options-item");
+    pauseBtn.classList.add("pause-btn");
+    pauseBtn.addEventListener("click", () => {
+        if (pauseBtn.classList.contains("--paused")) {
+            playCutscene();
+            pauseBtn.classList.remove("--paused");
+        } else {
+            pauseCutscene();
+            pauseBtn.classList.add("--paused");
+        }
+    });
+    parent.appendChild(pauseBtn);
 }
 
 initCutsceneMenu(Object.keys(CUTSCENE_IDS));

@@ -5,6 +5,7 @@ const hudBottom = document.querySelector(".hud-bottom");
 if (hudBottom) {
     const hudHeight = hudOptionsNode.clientHeight;
     // console.log("hudHeight", hudHeight);
+    // hudBottom.classList.toggle("--open");
     hudBottom.style.transform = `translateY(${hudHeight + 10}px)`
 }
 
