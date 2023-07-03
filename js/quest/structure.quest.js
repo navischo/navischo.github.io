@@ -1,4 +1,3 @@
-import { getQuestMarkup } from "./markup.quest.js";
 import { parseCheckpointsStroke, drawAchievements, initQuest } from "./dom.quest.js";
 import { DNEQuest, DNECheckpoint } from "./interface.quest.js";
 import { ARE_YOU_HUMAN_MESSAGE, NEXT_CHECKPOINT_MESSAGE, acidFridayCheckpointsStroke, newTurnCheckpointsStroke, bossDeadCheckpointsStroke, bossDeadAchievementsArr } from "./data.quest.js";

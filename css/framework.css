@@ -79,23 +79,36 @@
 }
 
 .fw-submit {
+    opacity: 0;
+    visibility: hidden;
+
     color: #4ed0d7;
     box-shadow: 0 0 0 1px #4ed0d7;
     background: #194045;
 
-    display: block;
+    display: none;
     max-width: 480px;
     width: 100%;
     padding: 7px;
 
     font-family: 'JetBrains Mono', monospace;
     font-size: 1.3em;
-    color: #53d3dc;
+    /*color: #53d3dc;*/
     text-transform: uppercase;
     letter-spacing: -1.2px;
     text-shadow: 1px 0px 2px #53d3dc;
 
     cursor: pointer;
+}
+
+.fw-submit.--visible {
+    opacity: 1;
+    visibility: visible;
+    display: block;
+}
+
+.fw-submit.--done {
+    filter: hue-rotate(315deg);
 }
 
 .fw-h1 {

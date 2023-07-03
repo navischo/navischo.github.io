@@ -27,7 +27,8 @@ const getQuestMarkup = () =>
                     <p class="js-quest-descr fw-p fw-main-color">Lorem ipsum Dolor sit</p>
                 </header>
 
-                <button class="js-quest-follow fw-submit btn-reset">Почати</button>
+                <button class="js-quest-follow fw-submit btn-reset --visible">Почати</button>
+                <button class="js-quest-finish fw-submit btn-reset">Готово</button>
 
                 <div class="js-quest-checkpoints-parent fw-check-list custom-scrollbar --y">
                     <button class="js-quest-checkpoint fw-check-row fw-check-row--checked">Забрать награду из магазина кассиуса райдера</button>
@@ -35,7 +36,7 @@ const getQuestMarkup = () =>
             </div>
             <div class="quest__settings">
                 <div class="quest__arsenal">
-                    <div class="quest__arsenal-preview">
+                    <div id="js-quest-arsenal" class="quest__arsenal-preview">
                         <img src="img/quest-settings--arsenal-3.png" alt="">
                     </div>
                 </div>

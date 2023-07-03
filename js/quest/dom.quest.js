@@ -1,6 +1,7 @@
 import { DNECheckpoint } from "./interface.quest.js";
 import { getQuestMarkup } from "./markup.quest.js";
 import { NEXT_CHECKPOINT_MESSAGE } from "./data.quest.js";
+import { updBalanceNode } from "../hud/balance.hud.js";
 
 const parseCheckpointsStroke = (stroke) => {
     // const checkpointsArr = stroke.split("");
@@ -35,6 +36,7 @@ const initQuest = (questObj) => {
     const title = questParent.querySelector(".js-quest-title");
     const description = questParent.querySelector(".js-quest-descr");
     const followBtn = questParent.querySelector(".js-quest-follow");
+    const finishBtn = questParent.querySelector(".js-quest-finish");
     const getCheckRowMarkup = (text) => `<button class="js-quest-checkpoint fw-check-row">${text}</button>`;
 
     const drawQuest = (questData) => {
@@ -82,6 +84,37 @@ const initQuest = (questObj) => {
     drawQuest(questObj.core);
     drawAchievements(questObj.achievements);
 
+    const budgetInput = questParent.querySelector("#quest-budget");
+    const incomeInput = questParent.querySelector("#quest-income");
+    const timeInput = questParent.querySelector("#quest-time");
+    const arsenalImgParent = questParent.querySelector("#js-quest-arsenal");
+
+    followBtn.addEventListener("click", () => {
+        win77.game.player.currentQuest = questObj;
+        win77.getCostFromPlayer(budgetInput.value);
+        updBalanceNode();
+        // start timeout
+        followBtn.classList.remove("--visible");
+        finishBtn.classList.add("--visible");
+    });
+
+    finishBtn.addEventListener("click", () => {
+        win77.giveIncomeToPlayer(+incomeInput.value);
+        updBalanceNode();
+        finishBtn.classList.remove("--visible");
+        followBtn.classList.add("--visible");
+        followBtn.classList.add("--done");
+        followBtn.textContent = "Виконано";
+    });
+
+    budgetInput.addEventListener("keyup", (e) => {
+        if (+budgetInput.value < 20000) {
+            arsenalImgParent.innerHTML = `<img src="img/quest-settings--arsenal-3.png" alt="">`;
+        } else {
+            arsenalImgParent.innerHTML = `<img src="img/quest-settings--arsenal-1.png" alt="">`;
+        }
+        console.log("keyup", +budgetInput.value, +budgetInput.value < 10000);
+    });
 }
 
 export { parseCheckpointsStroke, drawAchievements, initQuest };
