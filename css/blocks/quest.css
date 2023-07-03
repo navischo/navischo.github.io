@@ -102,3 +102,30 @@
 .quest__settings-controls .form-field__input {
     max-width: 150px;
 }
+
+.quest__time {
+    color: var(--colors-primary--500);
+    text-shadow: var(--ui-glow);
+
+    position: absolute;
+    top: 7px;
+    right: 80px;
+    left: auto;
+    transform: none;
+
+    height: 22px;
+
+    font-size: 24px;
+    white-space: nowrap;
+    font-family: "Press Start 2p", "JetBrains Mono", monospace;
+}
+
+.achievement-p {
+    cursor: pointer;
+}
+
+.achievement-p.--done {
+    background: #ff6d65;
+    color: black;
+    box-shadow: 0 0 0 4px #ff6d65;
+}

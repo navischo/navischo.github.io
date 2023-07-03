@@ -2,6 +2,8 @@ import { DNECheckpoint } from "./interface.quest.js";
 import { getQuestMarkup } from "./markup.quest.js";
 import { NEXT_CHECKPOINT_MESSAGE } from "./data.quest.js";
 import { updBalanceNode } from "../hud/balance.hud.js";
+import { setCountdown, setTimer } from "../hud/time.hud.js";
+import {win77} from "../dne-cli.js";
 
 const parseCheckpointsStroke = (stroke) => {
     // const checkpointsArr = stroke.split("");
@@ -19,7 +21,7 @@ const parseCheckpointsStroke = (stroke) => {
 const drawAchievements = (achievementsArr) => {
     const wrap = document.createElement("div");
     wrap.innerHTML = achievementsArr
-        .map((achievement) => `<p class="js-quest-descr fw-p fw-main-color">${achievement.name}(${achievement.reward}): ${achievement.descr}</p>`)
+        .map((achievement) => `<p class="achievement-p fw-p fw-main-color" data-achievement-id="${achievement.id}">${achievement.name}(${achievement.reward}): ${achievement.descr}</p>`)
         .join(``);
     document.querySelector(".quest__right")
         .appendChild(wrap);
@@ -88,14 +90,23 @@ const initQuest = (questObj) => {
     const incomeInput = questParent.querySelector("#quest-income");
     const timeInput = questParent.querySelector("#quest-time");
     const arsenalImgParent = questParent.querySelector("#js-quest-arsenal");
+    const achievementsArr = questParent.querySelectorAll(".achievement-p");
 
     followBtn.addEventListener("click", () => {
         win77.game.player.currentQuest = questObj;
         win77.getCostFromPlayer(budgetInput.value);
         updBalanceNode();
         // start timeout
+        setTimer();
         followBtn.classList.remove("--visible");
         finishBtn.classList.add("--visible");
+
+        achievementsArr.forEach((achievement) => {
+            achievement.addEventListener("click", () => {
+                achievement.classList.add("--done");
+                incomeInput.value = +incomeInput.value / 100 * 10 + +incomeInput.value;
+            });
+        });
     });
 
     finishBtn.addEventListener("click", () => {

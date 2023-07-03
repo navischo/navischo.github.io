@@ -121,4 +121,4 @@ const switchTime = (min) => {
 
 // win77.switchTime = ;
 
-export { setCountdown, switchTime };
+export { setCountdown, switchTime, setTimer };

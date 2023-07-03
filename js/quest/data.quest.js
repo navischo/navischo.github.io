@@ -58,11 +58,13 @@ const bossDeadCheckpointsStroke =
 
 const bossDeadAchievementsArr = [
     {
+        id: "steel-only",
         name: "Тільки сталь",
         descr: "Використай лише холодну зброю",
         reward: "+10%"
     },
     {
+        id: "boss-only",
         name: "Тільки босс",
         descr: "Знищ лише ватажка банди",
         reward: "+10%"
