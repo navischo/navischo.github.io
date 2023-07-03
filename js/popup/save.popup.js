@@ -1,4 +1,5 @@
-import { initQuest, quests } from "../hud/quest.hud.js";
+import { quests } from "../quest/structure.quest.js";
+import { initQuest } from "../quest/dom.quest.js";
 import { openPopup, closePopup } from "./dom.popup.jquery.js";
 
 const popupParent = document.querySelector("#load-popup");
