@@ -5,8 +5,8 @@ const logIncome = (income, e) => {
 
     if (e) {
         const mousePos = {x: e.clientX, y: e.clientY};
-        element.style.top = `${mousePos.y}px`;
-        element.style.left = `${mousePos.x}px`;
+        element.style.top = `${mousePos.y - 60}px`;
+        element.style.left = `${mousePos.x - 40}px`;
     }
 
     document.querySelector("body")
