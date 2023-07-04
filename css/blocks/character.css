@@ -1,0 +1,10 @@
+.character {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1205;
+}
+
+.character.--mini {
+    max-width: 420px;
+}
