@@ -21,7 +21,7 @@ const getCutsceneMarkup = (videoName) =>
 
 const activateCutscene = (id) => {
     const cutsceneVideo = document.querySelector(`#cutscene-${id}`);
-    cutsceneVideo.play();
+    cutsceneVideo?.play();
 }
 
 const appendCutscene = (id) => {
