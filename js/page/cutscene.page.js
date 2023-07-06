@@ -2,6 +2,7 @@ const parent = document.querySelector("#cutscene-parent");
 
 const CUTSCENE_IDS = {
     cosmohedrone: `cosmohedrone`,
+    hyrool: `hyrool`,
     fight: `fight`,
     room: `room`,
     event: `event`,
@@ -10,6 +11,7 @@ const CUTSCENE_IDS = {
 
 const CUTSCENE_FILES = {
     cosmohedrone: `mp4-cutscene-cosmohedrone.mp4`,
+    hyrool: `mp4-cutscene-hyrool.mp4`,
     fight: `mp4-cutscene-fight.mp4`,
     room: `mp4-room-mario.mp4`,
     event: `webm-cutscene-event.webm`,
