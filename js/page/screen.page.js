@@ -113,7 +113,11 @@ const SCREEN_NAMES = [
     `screen-nohud--free-ride`,
     `screen-nohud--morning-city`,
     `screen-nohud--abadone-house`,
-    `screen-nohud--visit`
+    `screen-nohud--visit`,
+    `screen-nohud--me`,
+    `screen-honud--rogue-afterlife`,
+    `screen-nohud--v-plus-judy`,
+    `screen-nohud--the-end`
 ];
 
 const initScreen = () => {
