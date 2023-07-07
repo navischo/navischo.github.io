@@ -282,3 +282,16 @@
 .map__dunge-name {
     text-transform: uppercase;
 }
+
+.map-canvas .hud-btn {
+    width: 30px;
+    height: 30px;
+    padding: 4px;
+
+    transition: .2s ease-in-out;
+}
+
+.map-canvas .hud-btn:hover {
+    z-index: 5;
+    transform: scale(1.3);
+}

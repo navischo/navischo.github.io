@@ -434,6 +434,21 @@ body {
     z-index: 10;
 }
 
+.hud-btn.--absolute {
+    position: absolute;
+}
+
+.hud-btn.--dunge-bg {
+
+    border-radius: 0;
+    border: none;
+    background-color: transparent;
+
+    background-image: url("../../img/img-hud-btn.png");
+    background-position: center center;
+    background-size: contain;
+}
+
 .hud-btn img {
     width: 100%;
     height: auto;

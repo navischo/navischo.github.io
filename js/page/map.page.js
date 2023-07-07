@@ -29,7 +29,7 @@ const PIN_TYPES = {
 // ===> MARKUP START <=== //
 
 // Object.keys(PIN_TYPES)[getRandomInt(PIN_TYPES.length)]
-const getMapPinMarkup = (type) => `<button class="map-pin" data-point="gig" data-type="${type}" style="top: ${getRandomInt(200)}px; left: ${getRandomInt(200)}px;">${type}</button>`;
+const getMapPinMarkup = (type) => `<button class="js-point map-pin" data-point="gig" data-type="${type}" style="top: ${getRandomInt(200)}px; left: ${getRandomInt(200)}px;">${type}</button>`;
 const getMapPins = () => {
     let mapPinsMarkup = ``;
 
@@ -47,12 +47,29 @@ const getDungeHexMarkup = (name) =>
     <div class="hex-1"></div>
     <div class="hex-2"></div>
 </a>`;
-const appendDunge = (name) => {
-    const parent = document.querySelector(".js-dunges-parent");
-    const dungeNode = document.createElement("div");
-    dungeNode.classList.add("swiper-slider");
-    dungeNode.innerHTML = getDungeHexMarkup(name);
-    parent.appendChild(dungeNode);
+// const appendDunge = (name) => {
+//     const parent = document.querySelector(".js-dunges-parent");
+//     const dungeNode = document.createElement("div");
+//     dungeNode.classList.add("swiper-slider");
+//     dungeNode.innerHTML = getDungeHexMarkup(name);
+//     parent.appendChild(dungeNode);
+// }
+
+const getMapLocationMarkup = () => {
+    return `
+    <button class="js-point hud-btn --absolute --dunge-bg" data-point="dunge" style="top: ${getRandomInt(200)}px; left: ${getRandomInt(200)}px;">
+    </button>
+    `
+}
+
+const getMapLocations = () => {
+    let mapLocationsMarkup = ``;
+
+    for (let i = 0; i < getRandomInt(2); i++) {
+        mapLocationsMarkup = mapLocationsMarkup + getMapLocationMarkup();
+    }
+
+    return mapLocationsMarkup;
 }
 
 
@@ -64,7 +81,8 @@ const generateSectorObj = () => {
         pointsSet: new Set(),
         playersSet: new Set(),
         getInnerHTML: () =>
-            `${getMapPins()}`
+            `${getMapPins()}
+            ${getMapLocations()}`
     }
 };
 const generateRowObj = () => {
@@ -84,6 +102,21 @@ const map = [
 
 // ===> DOM START <=== //
 
+// todo по нажатию на хаус открывается новая локация
+// todo иконка меняется на первую букву названия
+// todo за поинтом закрепляется адрес
+// todo в объект игрока попадает название открытой локации
+
+const detectSectorPoints = (node, originObj) => {
+    const pointNodeArr = node.querySelectorAll(".js-point");
+    pointNodeArr.forEach((pointNode) => {
+        originObj.pointsSet.add({
+            node: pointNode,
+            name: pointNode.dataset.point === "gig" ? pointNode.textContent : "house"
+        });
+    });
+}
+
 const redrawMap = () => {
     const parent = document.querySelector(".js-map");
     map.forEach((rowObj, rowIndex) => {
@@ -92,7 +125,6 @@ const redrawMap = () => {
             const sectorObj = rowObj[key];
             const sectorNode = document.createElement("div");
             sectorNode.classList.add("map-sector");
-            sectorNode.dataset.sector = `${keys[sectorIndex]}${rowIndex}`;
             sectorNode.innerHTML = sectorObj.getInnerHTML();
 
             if (rowIndex === 0) {
@@ -105,7 +137,13 @@ const redrawMap = () => {
                 sectorNode.dataset.labelY = rowIndex;
             }
 
+            sectorNode.dataset.sector = `${keys[sectorIndex]}${rowIndex}`;
+            const originObj = map[rowIndex][keys[sectorIndex]];
+            originObj.address = `${keys[sectorIndex]}${rowIndex}`;
+            detectSectorPoints(sectorNode, originObj);
+
             parent.appendChild(sectorNode);
+            originObj.node = sectorNode;
         });
     });
 }
@@ -153,8 +191,16 @@ const drawMapModal = () => {
             if (targetData.point === "gig") {
                 win77.dungesSwiper.virtual.appendSlide(getDungeHexMarkup(targetData.type));
                 win77.dungesSwiper.slideTo(win77.dungesSwiper.virtual.slides.length, 200, false);
+            } else if (targetData.point === "dunge") {
+                const locationsArr = Array.from(win77.locationsSet);
+                const newDunge = locationsArr[getRandomInt(locationsArr.length)];
+                console.log(newDunge, win77.locationsSet, Array.from(win77.locationsSet));
+                win77.dungesSwiper.virtual.appendSlide(getDungeHexMarkup(newDunge.name));
+                win77.dungesSwiper.slideTo(win77.dungesSwiper.virtual.slides.length, 200, false);
             }
         });
+
+    win77.map = map;
 }
 
 export { redrawMap, drawMapModal };
