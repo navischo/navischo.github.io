@@ -102,10 +102,46 @@ const map = [
 
 // ===> DOM START <=== //
 
-// todo по нажатию на хаус открывается новая локация
-// todo иконка меняется на первую букву названия
-// todo за поинтом закрепляется адрес
-// todo в объект игрока попадает название открытой локации
+const getFreshDunge = () => {
+    const locationsArr = Array.from(win77.locationsSet);
+    const visitedArr = win77.game.player.availableLocations;
+    if (visitedArr.length <= locationsArr.length) {
+        let freshDunge = locationsArr[getRandomInt(locationsArr.length)];
+        const isItVisited = (freshOne) => visitedArr.find((visitedName) => visitedName === freshOne.name);
+
+        if (isItVisited(freshDunge)) {
+            return getFreshDunge();
+        } else {
+            return freshDunge;
+        }
+    } else {
+        console.log("Congrats! You discover all locations!");
+    }
+}
+const discoverDunge = (target) => {
+    const newDungeObj = getFreshDunge();
+    if (newDungeObj) {
+        win77.game.player.availableLocations.push(newDungeObj.name);
+
+        const sectorId = target.parentNode.dataset.sector;
+        console.log(sectorId, target, target.parentNode);
+        target.dataset.sectorId = sectorId;
+        target.dataset.dungeName = newDungeObj.name;
+        target.dataset.dungeSymbol = newDungeObj.name[0];
+        target.classList.add("--discovered");
+
+        console.log("pointsSet", win77.map[sectorId[1]][sectorId[0]].pointsSet);
+        win77.map[sectorId[1]][sectorId[0]].pointsSet.forEach((point) => {
+            if (point.node.dataset.dungeName === newDungeObj.name) {
+                point.name = newDungeObj.name;
+                point.sectorId = sectorId;
+                point.houseObj = newDungeObj;
+            }
+        });
+
+        return newDungeObj;
+    }
+}
 
 const detectSectorPoints = (node, originObj) => {
     const pointNodeArr = node.querySelectorAll(".js-point");
@@ -186,17 +222,22 @@ const drawMapModal = () => {
         .addEventListener('click', function (e) {
             e.preventDefault();
             console.log(e.target, e);
-            const targetData = e.target.dataset;
+            if (!e.target.classList.contains("--discovered")) {
+                const targetData = e.target.dataset;
 
-            if (targetData.point === "gig") {
-                win77.dungesSwiper.virtual.appendSlide(getDungeHexMarkup(targetData.type));
-                win77.dungesSwiper.slideTo(win77.dungesSwiper.virtual.slides.length, 200, false);
-            } else if (targetData.point === "dunge") {
-                const locationsArr = Array.from(win77.locationsSet);
-                const newDunge = locationsArr[getRandomInt(locationsArr.length)];
-                console.log(newDunge, win77.locationsSet, Array.from(win77.locationsSet));
-                win77.dungesSwiper.virtual.appendSlide(getDungeHexMarkup(newDunge.name));
-                win77.dungesSwiper.slideTo(win77.dungesSwiper.virtual.slides.length, 200, false);
+                if (targetData.point === "gig") {
+                    win77.dungesSwiper.virtual.appendSlide(getDungeHexMarkup(targetData.type));
+                    win77.dungesSwiper.slideTo(win77.dungesSwiper.virtual.slides.length, 200, false);
+                } else if (targetData.point === "dunge") {
+                    const newDunge = discoverDunge(e.target);
+                    // console.log(newDunge, win77.locationsSet, Array.from(win77.locationsSet));
+                    win77.dungesSwiper.virtual.appendSlide(getDungeHexMarkup(newDunge.name));
+                    win77.dungesSwiper.slideTo(win77.dungesSwiper.virtual.slides.length, 200, false);
+                }
+            } else {
+                // todo просто подтянуть слайдер к уже сгенерированному слайду
+                // win77.dungesSwiper.slideTo(win77.dungesSwiper.virtual.slides.length, 200, false);
+                console.log("Dunge already discovered", e.target);
             }
         });
 

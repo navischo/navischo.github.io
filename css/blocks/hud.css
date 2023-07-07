@@ -425,6 +425,9 @@ body {
     cursor: pointer;
 
     color: white;
+    font-family: "JetBrains Mono", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
 }
 
 .hud-btn--fixed {
@@ -436,17 +439,45 @@ body {
 
 .hud-btn.--absolute {
     position: absolute;
-}
-
-.hud-btn.--dunge-bg {
 
     border-radius: 0;
     border: none;
     background-color: transparent;
+}
 
+.hud-btn.--dunge-bg {
     background-image: url("../../img/img-hud-btn.png");
     background-position: center center;
     background-size: contain;
+}
+
+.hud-btn.--discovered {
+    color: black;
+    background: transparent;
+
+    transition: .2s ease-in-out;
+}
+
+.hud-btn.--discovered::before {
+    content: attr(data-dunge-symbol);
+
+    text-transform: uppercase;
+
+    transition: .2s ease-in-out;
+}
+
+.hud-btn.--discovered:hover {
+    z-index: 7;
+
+    max-width: none;
+    font-size: 15px;
+
+    background: #fdd94d;
+    box-shadow: 0 0 0 5px #fdd94d;
+}
+
+.hud-btn.--discovered:hover::before {
+    content: attr(data-dunge-name);
 }
 
 .hud-btn img {
