@@ -152,6 +152,7 @@ const drawMapModal = () => {
 
             if (targetData.point === "gig") {
                 win77.dungesSwiper.virtual.appendSlide(getDungeHexMarkup(targetData.type));
+                win77.dungesSwiper.slideTo(win77.dungesSwiper.virtual.slides.length, 200, false);
             }
         });
 }
