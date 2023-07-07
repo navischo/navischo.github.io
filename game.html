@@ -279,30 +279,12 @@
             <h2 class="map__district-title">PODIL CITY</h2>
             <small class="map__district-descr">1 District, 55 Tips</small>
         </div>
-        <div class="map__pin-type-list">
-            <div class="map__pin-type">
-                <h3 class="map__pin-type-title">SPOT</h3>
-                <p class="map__pin-type-descr">Inspiration gig</p>
-            </div>
+        <div class="js-pin-types map__pin-type-list">
 
-            <div class="map__pin-type">
-                <h3 class="map__pin-type-title">RAVE</h3>
-                <p class="map__pin-type-descr">Music Event</p>
-            </div>
-
-            <div class="map__pin-type">
-                <h3 class="map__pin-type-title">MARKET</h3>
-                <p class="map__pin-type-descr">Food and Rare Loot</p>
-            </div>
-
-            <div class="map__pin-type">
-                <h3 class="map__pin-type-title">STUDIO</h3>
-                <p class="map__pin-type-descr">Art Service</p>
-            </div>
         </div>
         <div class="map__dunge-container color3">
             <!--todo swiper for multiply dunges-->
-            <a class="hex-box map__dunge" href="#" title="$blue">
+            <a class="hex-box map__dunge" href="#">
                 <div class="inner">
                     <h3 class="map__dunge-name">Otel`</h3>
                 </div>
@@ -347,34 +329,9 @@
             </p>
         </div>
     </div>
-    <div class="map-canvas">
-<!--        <div class="map-sector">-->
-<!--            <div class="map-pin" data-point="gig"></div>-->
-<!--            <button class="hud-btn">-->
-<!--                <img src="img/img-hud-btn.png" alt="HUD" width="200" height="221">-->
-<!--            </button>-->
-<!--        </div>-->
+    <div class="js-map map-canvas">
 
-<!--        <div class="map-sector"></div>-->
-<!--        <div class="map-sector"></div>-->
-<!--        <div class="map-sector"></div>-->
-
-<!--        <div class="map-sector"></div>-->
-<!--        <div class="map-sector"></div>-->
-<!--        <div class="map-sector"></div>-->
-<!--        <div class="map-sector"></div>-->
-
-<!--        <div class="map-sector"></div>-->
-<!--        <div class="map-sector"></div>-->
-<!--        <div class="map-sector"></div>-->
-<!--        <div class="map-sector"></div>-->
-
-<!--        <div class="map-sector"></div>-->
-<!--        <div class="map-sector"></div>-->
-<!--        <div class="map-sector"></div>-->
-<!--        <div class="map-sector"></div>-->
     </div>
-<!--    <img class="map__img" src="img/img-new-local-podil&#45;&#45;side-A.png" alt="">-->
 </div>
 <script>
 
@@ -447,7 +404,7 @@
         import { quests } from "./js/quest/structure.quest.js";
         import { initQuest } from "./js/quest/dom.quest.js";
         import { initIntervalScreen } from "./js/page/screen.page.js";
-        import { redrawMap } from "./js/page/map.page.js";
+        import { redrawMap, drawMapModal } from "./js/page/map.page.js";
         import { dialog } from "./js/hud/dialog.hud.js";
 
         initInventoryPopupJquery();
@@ -489,6 +446,7 @@
             midClick: true
         });
 
+        drawMapModal();
         redrawMap();
 
         $('.js-open-load').magnificPopup({
