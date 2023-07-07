@@ -10,6 +10,7 @@ import { initScore, updScore } from "./score.hud.js";
 
 const PAGE_NAMES = {
     enter: "enter",
+    cards: "cards",
     npc: CARD_TYPES.npc,
     class: CARD_TYPES.class,
     loot: CARD_TYPES.loot,

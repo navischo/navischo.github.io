@@ -1,4 +1,7 @@
 import { getRandomInt } from "../utils/getCardById.js";
+import { win77 } from "../dne-cli.js";
+
+// ===> DATA START <=== //
 
 const PIN_TYPES = {
     spot: {
@@ -22,6 +25,9 @@ const PIN_TYPES = {
         icon: "?"
     }
 }
+
+// ===> MARKUP START <=== //
+
 // Object.keys(PIN_TYPES)[getRandomInt(PIN_TYPES.length)]
 const getMapPinMarkup = (type) => `<button class="map-pin" data-point="gig" data-type="${type}" style="top: ${getRandomInt(200)}px; left: ${getRandomInt(200)}px;">${type}</button>`;
 const getMapPins = () => {
@@ -33,6 +39,26 @@ const getMapPins = () => {
 
     return mapPinsMarkup;
 }
+const getDungeHexMarkup = (name) =>
+`<a class="hex-box map__dunge" href="#">
+    <div class="inner">
+        <h3 class="map__dunge-name">${name}</h3>
+    </div>
+    <div class="hex-1"></div>
+    <div class="hex-2"></div>
+</a>`;
+const appendDunge = (name) => {
+    const parent = document.querySelector(".js-dunges-parent");
+    const dungeNode = document.createElement("div");
+    dungeNode.classList.add("swiper-slider");
+    dungeNode.innerHTML = getDungeHexMarkup(name);
+    parent.appendChild(dungeNode);
+}
+
+
+// ===> STRUCTURE START <=== //
+
+
 const generateSectorObj = () => {
     return {
         pointsSet: new Set(),
@@ -56,6 +82,8 @@ const map = [
     generateRowObj()
 ];
 
+// ===> DOM START <=== //
+
 const redrawMap = () => {
     const parent = document.querySelector(".js-map");
     map.forEach((rowObj, rowIndex) => {
@@ -64,16 +92,17 @@ const redrawMap = () => {
             const sectorObj = rowObj[key];
             const sectorNode = document.createElement("div");
             sectorNode.classList.add("map-sector");
+            sectorNode.dataset.sector = `${keys[sectorIndex]}${rowIndex}`;
             sectorNode.innerHTML = sectorObj.getInnerHTML();
 
             if (rowIndex === 0) {
                 sectorNode.classList.add("--index-y");
-                sectorNode.dataset.indexX = keys[sectorIndex];
+                sectorNode.dataset.labelX = keys[sectorIndex];
             }
 
             if (sectorIndex === 0) {
                 sectorNode.classList.add("--index-x");
-                sectorNode.dataset.indexY = rowIndex;
+                sectorNode.dataset.labelY = rowIndex;
             }
 
             parent.appendChild(sectorNode);
@@ -97,6 +126,34 @@ const drawPinTypes = () => {
 
 const drawMapModal = () => {
     drawPinTypes();
+    // appendDunge("Green House");
+    win77.dungesSwiper = new Swiper(".js-dunges-swiper", {
+        pagination: {
+            el: ".swiper-pagination",
+        },
+        grabCursor: true,
+        virtual: {
+            slides: (function () {
+                const slides = [];
+                for (let dungeName of win77.game.player.availableLocations) {
+                    console.log(dungeName);
+                    slides.push(getDungeHexMarkup(dungeName));
+                }
+                return slides;
+            })(),
+        }
+    });
+    document
+        .querySelector('.js-map')
+        .addEventListener('click', function (e) {
+            e.preventDefault();
+            console.log(e.target, e);
+            const targetData = e.target.dataset;
+
+            if (targetData.point === "gig") {
+                win77.dungesSwiper.virtual.appendSlide(getDungeHexMarkup(targetData.type));
+            }
+        });
 }
 
 export { redrawMap, drawMapModal };

@@ -171,7 +171,7 @@
 }
 
 .map-sector.--index-x::after {
-    content: attr(data-index-y);
+    content: attr(data-label-y);
 
     position: absolute;
     top: 50%;
@@ -193,7 +193,7 @@
 }
 
 .map-sector.--index-y::before {
-    content: attr(data-index-x);
+    content: attr(data-label-x);
 
     position: absolute;
     top: 0;
@@ -234,12 +234,39 @@
     transition: .2s ease-in-out;
 }
 
+/*.map-sector__label {*/
+/*    visibility: hidden;*/
+/*    opacity: 0;*/
+
+/*    position: absolute;*/
+/*    right: 5px;*/
+/*    bottom: 5px;*/
+/*    z-index: 4;*/
+
+/*    font-family: "JetBrains Mono", sans-serif;*/
+/*    font-size: 14px;*/
+/*    font-weight: 700;*/
+/*    text-transform: uppercase;*/
+
+/*    transition: .2s ease-in-out;*/
+/*}*/
+
+/*.map-sector__label::before {*/
+/*    content: attr(data-sector);*/
+/*}*/
+
+/*.map-sector:hover .map-sector__label {*/
+/*    visibility: visible;*/
+/*    opacity: 1;*/
+/*}*/
+
 .map-sector:hover .map-pin {
+    z-index: 5;
     font-size: 10px;
 }
 
 .map-pin:hover {
-    z-index: 5;
+    z-index: 6;
     transform: scale(1.3);
     background: #fdd94d;
     box-shadow: 0 0 0 4px #fdd94d;
@@ -250,4 +277,8 @@
     align-items: center;
     justify-content: center;
     height: 300px;
+}
+
+.map__dunge-name {
+    text-transform: uppercase;
 }

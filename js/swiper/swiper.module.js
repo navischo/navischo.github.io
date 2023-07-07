@@ -8,7 +8,7 @@ import { win77 } from "../dne-cli.js";
 // import { initProfile } from "../hud/chat.hud.jquery.js";
 
 // API code
-const swiper = new Swiper('.swiper', {
+const swiper = new Swiper('.js-swiper-screen', {
     slidesPerView: 1,
     centeredSlides: true,
     spaceBetween: 30,

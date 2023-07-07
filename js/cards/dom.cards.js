@@ -20,8 +20,8 @@ import {logIncome} from "../utils/logIncome.js";
 const initHandlers = (cardData, controls) => {
     const catalog = win77.game.catalog[cardData.type];
     const plusButtonHandler = () => {
-        const currentPage = win77.router.currentPage;
-        const isItCatalogPage = currentPage === PAGE_NAMES.npc || currentPage === PAGE_NAMES.class;
+        const currentPage = document.querySelector("body").dataset.hash;
+        const isItCatalogPage = currentPage === PAGE_NAMES.cards;
         const isItCharacterCard = cardData.type === CARD_TYPES.npc || cardData.type === CARD_TYPES.class;
         console.log(`You are ${COMMANDS.plus} ${cardData.id}`);
 

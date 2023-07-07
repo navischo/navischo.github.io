@@ -7,6 +7,8 @@
     margin: 55px 0;
 
     color: white;
+
+    transition: .2s ease-in-out;
 }
 .hex-box .inner {
     content: '';
@@ -19,29 +21,62 @@
     align-items: center;
     width: 190px;
     height: 110px;
+
+    transition: .2s ease-in-out;
 }
 .hex-box .hex-1 {
     position: absolute;
     z-index: -1;
     width: 190px;
     height: 110px;
-    -moz-transform: rotate(60deg);
-    -ms-transform: rotate(60deg);
-    -webkit-transform: rotate(60deg);
     transform: rotate(60deg);
+
+    transition: .2s ease-in-out;
 }
 .hex-box .hex-2 {
     position: absolute;
     z-index: -2;
     width: 190px;
     height: 110px;
-    -moz-transform: rotate(-60deg);
-    -ms-transform: rotate(-60deg);
-    -webkit-transform: rotate(-60deg);
     transform: rotate(-60deg);
+
+    transition: .2s ease-in-out;
 }
 
 /* colors */
+.--color-black .hex-box {
+    color: white;
+    background-color: black;
+}
+.--color-black .inner {
+    color: white;
+    background-color: black;
+}
+.--color-black .hex-1 {
+    color: white;
+    background-color: black;
+}
+.--color-black .hex-2 {
+    color: white;
+    background-color: black;
+}
+.--color-black:hover .hex-box {
+    color: black;
+    background-color: white;
+}
+.--color-black:hover .inner {
+    color: black;
+    background-color: white;
+}
+.--color-black:hover .hex-1 {
+    color: black;
+    background-color: white;
+}
+.--color-black:hover .hex-2 {
+    color: black;
+    background-color: white;
+}
+
 .color1 .hex-box {
     background-color: #2980B9;
 }
@@ -289,12 +324,12 @@
     -webkit-transition-timing-function: ease-in;
     transition-timing-function: ease-in;
 }
-.color1:active, .color2:active, .color3:active,
-.color4:active, .color5:active, .color6
-.color7:active, .color8:active, .color9:active,
-.color10:active {
-    -moz-transform: scale(1.1, 1.1);
-    -ms-transform: scale(1.1, 1.1);
-    -webkit-transform: scale(1.1, 1.1);
-    transform: scale(1.1, 1.1);
-}
+/*.color1:active, .color2:active, .color3:active,*/
+/*.color4:active, .color5:active, .color6*/
+/*.color7:active, .color8:active, .color9:active,*/
+/*.color10:active {*/
+/*    -moz-transform: scale(1.1, 1.1);*/
+/*    -ms-transform: scale(1.1, 1.1);*/
+/*    -webkit-transform: scale(1.1, 1.1);*/
+/*    transform: scale(1.1, 1.1);*/
+/*}*/
