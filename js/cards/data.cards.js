@@ -166,15 +166,6 @@ const initDNELootArr = () => {
 
     LootArr.push(new DNELootCard("class-munchkin", "Манчкін", MUNCHKIN_LONGLINE, MUNCHKIN_IMG, 1, 0, "Клас", MUNCHKIN_SHORTLINE, "", true, "class"));
 
-    // Воскресіння
-    //
-    //
-    const RESURRECTION_LONGLINE = "";
-    const RESURRECTION_SHORTLINE = `Дозволяє один раз піднятись після Смертельного удару`;
-    const RESURRECTION_IMG_ID = `1yJyUEOVQe7kjHTZUDsaSUhaUTVFt_MPX`;
-    const RESURRECTION_IMG = `https://drive.google.com/uc?id=${RESURRECTION_IMG_ID}`;
-
-    LootArr.push(new DNELootCard("resurrection", "Воскресіння", RESURRECTION_LONGLINE, RESURRECTION_IMG, 0, 0, "Дзютсу", RESURRECTION_SHORTLINE, "", true, "anti"));
 
     // Драгрейсер
     // LootArr.push(new DNELootCard("class-drugracer", "Драгрейсер", "", "", 1, 0, "Клас"));
@@ -316,7 +307,8 @@ const initDNELootArr = () => {
 
     LootArr.push(new DNELootCard("ghost-dog", "Ghost Dog", GHOST_DOG_LONGLINE, GHOST_DOG_IMG, 1, 0, "Найомничок", GHOST_DOG_SHORTLINE, "", true, "npc"));
 
-    LootArr.push(new DNELootCard("upgrade", "UPGRADE", "Після страшенних травм важко сумісних з життям ви стали учасником державної програми відновлення Апгрейд. Титанові кістки в поєднанні з надсучасним інтерфейсом карбонового спинного мозку роблять можливість в автоматичному режимі чинити опір агресору у ситуаціях рівня небезпеки S та нижче, поки ваша свідомість повністю підтримує лінгвістичні здібності.", "https://lh3.googleusercontent.com/hjjlI54RXzntVQCU3Wluj_wZMKhlxkPth3kQGXeHRqVjyHAeJunEYCI2z5LhYWMup2A=w2400", 1, 0, "", "Після страшенних травм важко сумісних з життям ви стали учасником державної програми відновлення Апгрейд.<br> Титанові кістки в поєднанні з надсучасним інтерфейсом карбонового спинного мозку роблять можливість в автоматичному режимі чинити опір агресору у ситуаціях рівня небезпеки S та нижче.<br><br> Тим часом ваша свідомість повністю підтримує лінгвістичні здібності.", "", true, "anti"));
+    // LootArr.push(new DNELootCard("upgrade", "UPGRADE", "Після страшенних травм важко сумісних з життям ви стали учасником державної програми відновлення Апгрейд. Титанові кістки в поєднанні з надсучасним інтерфейсом карбонового спинного мозку роблять можливість в автоматичному режимі чинити опір агресору у ситуаціях рівня небезпеки S та нижче, поки ваша свідомість повністю підтримує лінгвістичні здібності.", "https://lh3.googleusercontent.com/hjjlI54RXzntVQCU3Wluj_wZMKhlxkPth3kQGXeHRqVjyHAeJunEYCI2z5LhYWMup2A=w2400", 1, 0, "", "Після страшенних травм важко сумісних з життям ви стали учасником державної програми відновлення Апгрейд.<br> Титанові кістки в поєднанні з надсучасним інтерфейсом карбонового спинного мозку роблять можливість в автоматичному режимі чинити опір агресору у ситуаціях рівня небезпеки S та нижче.<br><br> Тим часом ваша свідомість повністю підтримує лінгвістичні здібності.", "", true, "anti"));
+    LootArr.push(new DNELootCard("upgrade", "UPGRADE", "Після страшенних травм важко сумісних з життям ви стали учасником державної програми відновлення Апгрейд. Титанові кістки в поєднанні з надсучасним інтерфейсом карбонового спинного мозку роблять можливість в автоматичному режимі чинити опір агресору у ситуаціях рівня небезпеки S та нижче, поки ваша свідомість повністю підтримує лінгвістичні здібності.", "https://lh3.googleusercontent.com/hjjlI54RXzntVQCU3Wluj_wZMKhlxkPth3kQGXeHRqVjyHAeJunEYCI2z5LhYWMup2A=w2400", 1, 0, "", "Після страшенних травм важко сумісних з життям ви стали учасником державної програми відновлення Апгрейд.<br> Титанові кістки в поєднанні з надсучасним інтерфейсом карбонового спинного мозку роблять можливість в автоматичному режимі чинити опір агресору у ситуаціях рівня небезпеки S та нижче.<br><br> Тим часом ваша свідомість повністю підтримує лінгвістичні здібності.", "", false, "anti"));
     LootArr.push(new DNELootCard("machete", "Мачете", "Мачете приєднався до ЗСУ щоб вбивати русню в Україні, був взятий в полон під Донецьком, де втік з конц-табору РФ і заліг на дно в Києві. Буде радий будь якій роботі, чудово впорається з охороною, фейсконтролем та зйомками в пілотних епізодах.", "https://lh5.googleusercontent.com/gExfGHO7RIkKcdu0kC-md2uTZldiZH-sD4b_ZkQ43LNGKiHngWzWKQwIq1tjSJMRKHg=w2400", 1, 0, "Найомничок", "Охоронничок від бога і співрозмовник чудовий, легко впорається навіть з баром або фейсом", "", true, "npc"));
     // LootArr.push(new DNELootCard("machete", "Мачете", "Мачете приєднався до ЗСУ щоб вбивати русню в Україні, був взятий в полон під Донецьком, де втік з конц-табору РФ і заліг на дно в Києві. Буде радий будь якій роботі, чудово впорається з охороною, фейсконтролем та зйомками в пілотних епізодах.", "https://lh5.googleusercontent.com/gExfGHO7RIkKcdu0kC-md2uTZldiZH-sD4b_ZkQ43LNGKiHngWzWKQwIq1tjSJMRKHg=w2400", 1, 0, "Найомничок", "Охоронничок від бога і співрозмовник чудовий, легко впорається навіть з баром або фейсом", "", true));
     LootArr.push(new DNELootCard("sansa-stark", "Санса Старк", "Молода та відважна рудовласа бестія з півночі. Відома шанувальниця темного етнічного звучання в важкій музиці та впевнений організатор івентів в жанрі Rock. Легендарна організаторка серії підпільних вечірок Зима Близько на підтримку ЗСУ.", "https://lh3.googleusercontent.com/s0OH3vKnb3jKHXlJSTSsxvMBqGntiTV2oIIqeBU-pkH0IDMx_6ny0TrgxD8OnMl_nRM=w2400", 1, 0, "Найомничок-Рокраннер", "Відома шанувальниця темного етнічного звучання в важкій музиці та впевнений організатор івентів в жанрі Rock.", "", true, "npc"));
@@ -413,8 +405,6 @@ const initDNELootArr = () => {
     const LISOVA_MAVKA_SHORTLINE = "Здатна створювати неймовірні напої з природніх речовин та залюбки реалізує свій продукт на твоєму івенті.";
     LootArr.push(new DNELootCard("lisova-mavka", "Лісова Діва", LISOVA_MAVKA_LONGLINE, "https://lh3.googleusercontent.com/gTtZ-rp5BXr_GyuAwIiSkTFBQWUmbwyyeFrc0G534MsQGLv_r6U8VonEkSm5eqW0z4E=w2400", 1, 0, "Найомничок", LISOVA_MAVKA_SHORTLINE, "", true, "npc"));
 
-    // Кільце влади
-    LootArr.push(new DNELootCard("power-ring", "Кільце влади", "Посилює найсильніші якості носителя, покращуючи їх до максимуму відносно обставин. Кільця влади можуть бути різної форми та рівнів могутності, залежно від майстра що його викував, рідкості матеріалу та каменю. З часом використання пробуджує темні сторони особистості носія та поступово підкоряє його власній волі. Кільце влади завжди вірне лише своєму творцю, завжди прагне до нього і чим більше наближається, тим могутнішим стає.", "https://lh4.googleusercontent.com/dWwMABhNjnvI-OOzxZDgmEqELhIfSJ25Ru8fR0hflXz1Ufd3Tr-jXDtZKTKVQ3dIxzk=w2400", 4, 0, "Драгоцінність", "Посилює найсильніші якості носителя, покращуючи їх до максимуму відносно обставин.", "", true, "anti"));
     // Убрать и отснять студию
     // Фото чистої студії приваблюють клієнтів, отримай два випадкові закази на руку та використовуй цю картку як бонус +2 для будь-якого івенту в ній. Фото на професійний фотоаппарат з широким об'єктивом привабить навіть найвибагливішу аудиторію.
 
@@ -827,15 +817,26 @@ const initDNELootArr = () => {
     // Боже втручання
     LootArr.push(new DNELootCard("god-wtf", "Боже втручання", "Ти маєш зіграти цю карту, як тільки її отримав. Усі DJ одразу отримують замовлення на вечірку на Кирилівській! Знайди карту замовлення вечірки на Кирилівській та одразу її активуй. Після проведення цієї вечірки гра закінчиться та виграє гравець з найбільшим капіталом. Якщо ти виграв за рахунок цієї карти, ти в праві підвергнути суперників нещадному реготу.", "https://lh5.googleusercontent.com/oKk0dgYD_pZfoxzwIy_FmLIWw2ffxHfpl0vJwiAXkGYei30EFVrLyMG9K-HvkSmRKRA=w2400", 0, 0, "", "Усі DJ-ї отримують рівень просто зараз, навіть якщо це переможний рівень. Якщо ти виграв за рахунок цієї карти, ти в праві підвергнути суперників нещадному реготу.", "", true, "dia"));
 
-    // Mr. Mistix
+    // Нокіа
     //
     //
-    const MR_MISTIX_LONGLINE = "";
-    const MR_MISTIX_SHORTLINE = `Присвятить життя тому щоб виконати одне твоє бажання, після чого назавжди зникне`;
-    const MR_MISTIX_IMG_ID = `1a1apWkm5lJ3YcKAdvdUnvBUcy8IKmVHB`;
-    const MR_MISTIX_IMG = `https://drive.google.com/uc?id=${MR_MISTIX_IMG_ID}`;
+    const NOKIA_LONGLINE = "";
+    const NOKIA_SHORTLINE = `Так, ще працює`;
+    const NOKIA_IMG_ID = `1pXrDMWoWJquMqkDbb5eyEAUYzOznq4pl`;
+    const NOKIA_IMG = `https://drive.google.com/uc?id=${NOKIA_IMG_ID}`;
 
-    LootArr.push(new DNELootCard("mr-mistix", "Mr. Mistix", MR_MISTIX_LONGLINE, MR_MISTIX_IMG, 0, 0, "Одноразова картка", MR_MISTIX_SHORTLINE, "", true, "anti"));
+    LootArr.push(new DNELootCard("nokia", "Нокіа", NOKIA_LONGLINE, NOKIA_IMG, 1, 0, "Фон", NOKIA_SHORTLINE, "", true, "anti"));
+
+    // Воскресіння
+    //
+    //
+    const RESURRECTION_LONGLINE = "";
+    const RESURRECTION_SHORTLINE = `Дозволяє один раз піднятись після Смертельного удару`;
+    const RESURRECTION_IMG_ID = `1yJyUEOVQe7kjHTZUDsaSUhaUTVFt_MPX`;
+    const RESURRECTION_IMG = `https://drive.google.com/uc?id=${RESURRECTION_IMG_ID}`;
+
+    // LootArr.push(new DNELootCard("resurrection", "Воскресіння", RESURRECTION_LONGLINE, RESURRECTION_IMG, 0, 0, "Дзютсу", RESURRECTION_SHORTLINE, "", true, "anti"));
+    LootArr.push(new DNELootCard("resurrection", "Воскресіння", RESURRECTION_LONGLINE, RESURRECTION_IMG, 0, 0, "Дзютсу", RESURRECTION_SHORTLINE, "", false, "anti"));
 
     // LootArr.push(new DNELootCard("soft-paws", "На м'яких лапках", "З ними ти маєш здатність переміщатись непоітно, а твої рухи стають безшумні. Втрать здатність тримати будь що, бо в тебе лапки. Лапки з Навушками створюють неймовірної сили комбо.", "", 0, 0, "", "З ними ти маєш здатність переміщатись непоітно, а твої рухи стають безшумні. Втрать здатність тримати будь що, бо в тебе лапки.", "", false, "loot"));
     // Спойлер
@@ -861,13 +862,13 @@ const initDNELootArr = () => {
     // персонажі
     // Яценко
     // LootArr.push(new DNELootCard("yats", "Яценко", "Дозволяє проводити події в Closer", "", 0, 0, ""));
-    LootArr.push(new DNELootCard("dmt-breathing", "DMT-дихання", "Максимально проста заспокійлива медитація на основі практики холотропного дихання. Нічого складного, просто повторюй за майстром та насолоджуйся. Потребує короткий проміжок часу щоб перезавантажити хімію крові та отримати певну кількість додаткової енергії. Сесія дихання може тривати від 5 до 45 хвилин, даючи тим більше енергії, чем довшою вона була. Кожен гравець що приєнується до сесії дає більше додаткової енергії усім учасникам. Дає можливість наситити тіло киснем та отримати енергії на годину. Для підтримання єфекту на задовільному рівні рекомендується використовувати не частіше одного разу на добу.", "https://lh5.googleusercontent.com/giP9SpZzE2TghZ_eEbGlFBd6rCj6KtDQdtxWqk4rArsCotYD0kUK_4drDWieWkdUfzw=w2400", 1, "5m", "Медитація", "Проста заспокійлива медитація для відновлення енергії", "", true, "anti"));
-    LootArr.push(new DNELootCard("dmt-alkaline-breathing", "Tao Te Ching", "Просунута фокусуюча медитація на основі практики холотропного дихання. Нічого складного, просто повторюй за майстром та насолоджуйся. Потребує короткий проміжок часу щоб перезавантажити хімію крові та отримати певну кількість додаткової енергії. Сесія дихання може тривати від 5 до 45 хвилин, даючи тим більше енергії, чем довшою вона була. Кожен гравець що приєнується до сесії дає більше додаткової енергії усім учасникам. Дає можливість наситити тіло киснем та отримати енергії на годину. Для підтримання єфекту на задовільному рівні рекомендується використовувати не частіше одного разу на добу.", "https://lh3.googleusercontent.com/LBMcaimOv_avTcBhSzXZnSrkvPtOQE_pAJpoQApnPQvX0c_b2hof0uFA4SllGn6Vf1U=w2400", 1, "15m", "Alkaline DMT-дихання", "Просунута тонізуюча медитація для додаткової енергії та миттевого фокусу", "", true, "anti"));
-
     const NO_RULES_DMT_IMG_ID = `1fIo3eHY8kCPqdlF-vnvfZM9iPwmxjDnU`;
     const NO_RULES_DMT_IMG = `https://drive.google.com/uc?id=${NO_RULES_DMT_IMG_ID}`;
 
     LootArr.push(new DNELootCard("dmt-breathing-no-rules", "DMT-дихання без правил", "Максимально проста заспокійлива медитація на основі практики холотропного дихання. Нічого складного, просто повторюй за майстром та насолоджуйся. Потребує короткий проміжок часу щоб перезавантажити хімію крові та отримати певну кількість додаткової енергії. Сесія дихання може тривати від 5 до 45 хвилин, даючи тим більше енергії, чем довшою вона була. Кожен гравець що приєнується до сесії дає більше додаткової енергії усім учасникам. Дає можливість наситити тіло киснем та отримати енергії на годину. Для підтримання єфекту на задовільному рівні рекомендується використовувати не частіше одного разу на добу.", NO_RULES_DMT_IMG, 1, "5m", "Медитація", "Заспокійлива медитація позбавлена будь яких правил, what ever works best", "", true, "anti"));
+
+    LootArr.push(new DNELootCard("dmt-breathing", "DMT-дихання", "Максимально проста заспокійлива медитація на основі практики холотропного дихання. Нічого складного, просто повторюй за майстром та насолоджуйся. Потребує короткий проміжок часу щоб перезавантажити хімію крові та отримати певну кількість додаткової енергії. Сесія дихання може тривати від 5 до 45 хвилин, даючи тим більше енергії, чем довшою вона була. Кожен гравець що приєнується до сесії дає більше додаткової енергії усім учасникам. Дає можливість наситити тіло киснем та отримати енергії на годину. Для підтримання єфекту на задовільному рівні рекомендується використовувати не частіше одного разу на добу.", "https://lh5.googleusercontent.com/giP9SpZzE2TghZ_eEbGlFBd6rCj6KtDQdtxWqk4rArsCotYD0kUK_4drDWieWkdUfzw=w2400", 1, "5m", "Медитація", "Проста заспокійлива медитація для відновлення енергії", "", true, "anti"));
+    LootArr.push(new DNELootCard("dmt-alkaline-breathing", "Tao Te Ching", "Просунута фокусуюча медитація на основі практики холотропного дихання. Нічого складного, просто повторюй за майстром та насолоджуйся. Потребує короткий проміжок часу щоб перезавантажити хімію крові та отримати певну кількість додаткової енергії. Сесія дихання може тривати від 5 до 45 хвилин, даючи тим більше енергії, чем довшою вона була. Кожен гравець що приєнується до сесії дає більше додаткової енергії усім учасникам. Дає можливість наситити тіло киснем та отримати енергії на годину. Для підтримання єфекту на задовільному рівні рекомендується використовувати не частіше одного разу на добу.", "https://lh3.googleusercontent.com/LBMcaimOv_avTcBhSzXZnSrkvPtOQE_pAJpoQApnPQvX0c_b2hof0uFA4SllGn6Vf1U=w2400", 1, "15m", "Alkaline DMT-дихання", "Просунута тонізуюча медитація для додаткової енергії та миттевого фокусу", "", true, "anti"));
 
     LootArr.push(new DNELootCard("dmt-shamanic-technic", "Шаманічне дихання", "Просунута дворівнева техніка дихання через рот, що складається з двох швидких вдохів на половину легень та повний видих в кінці ітерації.", "https://lh6.googleusercontent.com/0oclNbVaoBfebNJiioiBHMNjiFptXElUd4yvLE2_0NPgYH0PVw4Qg0AUVuGwu7fxK4c=w2400", 1, "", "Техніка", "Просунута техніка дихання через рот, що складається з двох швидких вдохів. +1 до медитацій з нею", "", true, "anti"));
     LootArr.push(new DNELootCard("dmt-wim-hof-technic", "Дихання Віма-Хова", "Просунута дворівнева техніка дихання через рот, що складається з двох швидких вдохів на половину легень та повний видих в кінці ітерації.", "https://lh3.googleusercontent.com/jLq3nGiyHFsvIQP0N8z8NScEgURv7gK013bVtKGeutejfw2xJRUspz36x4pjzXQD7yM=w2400", 1, "", "Техніка", "Просунута техніка дихання, що складається з одного глибокого вдоху через рот. Отримай +1 до усіх медитацій з цією технікою", "", true, "anti"));
@@ -883,7 +884,6 @@ const initDNELootArr = () => {
     LootArr.push(new DNELootCard("forest-day", "День лісу", FOREST_DAY_LONGLINE, "https://lh5.googleusercontent.com/yHJa_BdTAaNBdmpnu5nKnYPAxLus_KsoYAtcPPEXL91qSxo19S71EkVU0JdgQ30h3Ow=w2400", 1, "1⚡ 12h", "Пригода", FOREST_DAY_SHORTLINE, "", true, "anti"));
 
     LootArr.push(new DNELootCard("flower", "Квітка", "Насичує повітря киснем коли ти спиш, та ласує погляд коли прокидаєшся", "https://lh4.googleusercontent.com/G6o_Ys9Md86JRahzppRJv9QauONxab3IBGV05cSE1BoOBarZSPnUmadf0BJJbtaTojg=w2400", 0, "", "", "Насичує повітря киснем коли ти спиш, та ласує погляд коли прокидаєшся", "", true, "anti"));
-    LootArr.push(new DNELootCard("unprompted-trip", "Спонтанна подорож", "Дає відчути справжній смак життя та розвиває вміння швидко адаптуватися до нових умов. Використовуючи цю карту ти відпускаєш жагу контролю над власним життям та довіряєш свою долю випадку.", "https://lh5.googleusercontent.com/zjsNPBT05XWGt1ThEvkQqxAXhtBDCgdYYiziaXQQcexhtb3rutoHbuk7yTPqaAxR698=w2400", 0, "", "", "Дає відчути справжній смак життя та розвиває вміння швидко адаптуватися до нових умов. Відпусти жагу контролю над життям та довірся випадку.", "", true, "anti"));
 
     LootArr.push(new DNELootCard("dia-draw", "Малювання", "Використовуй час та енергію для отримання малюнків. Чим більше енергії та часу ти в них вкладеш, тим сильнішими вони будуть. Створення графічного зображення є однією з найдревніших медетацій винайдених людством. Від печерних малюнків кров'ю, до чорнил на папері перенесення власного бачення в матеріальний світ заворожувала людину. Просто бери та починай малювати, уява зробить усе інше.", "https://lh3.googleusercontent.com/oprP-CtoxAG5IWogg2Gn56Pu9MBNfNt35n4gQave2BvFfVA7YlExQdgtjL6t9r_kMsg=w2400", 1, "1⚡ 1h", "Дія", "Використай час та енергію для створення малюнку.<br><br> Чим більше енергії та часу ти в нього вкладеш, тим кращий результат чекатиме на тебе в кінці.<br><br>+1 малюнок в твою коллекцію", "", true, "dia"));
 
@@ -906,6 +906,31 @@ const initDNELootArr = () => {
     const FON_IMG = `https://drive.google.com/uc?id=${FON_IMG_ID}`;
 
     LootArr.push(new DNELootCard("ifon", "Фон", FON_LONGLINE, FON_IMG, 1, 4200, "", FON_SHORTLINE, "", true, "anti"));
+
+    LootArr.push(new DNELootCard("unprompted-trip", "Спонтанна подорож", "Дає відчути справжній смак життя та розвиває вміння швидко адаптуватися до нових умов. Використовуючи цю карту ти відпускаєш жагу контролю над власним життям та довіряєш свою долю випадку.", "https://lh5.googleusercontent.com/zjsNPBT05XWGt1ThEvkQqxAXhtBDCgdYYiziaXQQcexhtb3rutoHbuk7yTPqaAxR698=w2400", 0, "", "", "Дає відчути справжній смак життя та розвиває вміння швидко адаптуватися до нових умов. Відпусти жагу контролю над життям та довірся випадку.", "", true, "anti"));
+
+    // GAMEBOY
+    //
+    //
+    const GAMEBOY_LONGLINE = "Дозволяє зберегти свій прогрес на GAMEBOY. Перезаписуй збереження скільки завгодно разів, та в тебе тільки один слот. Використовуй в будь який момент свого ходу щоб зберегтись або завантажитись. У випадку смерті ти просто завантажуєшся з останнього збереження. Цей предмет не можна обміняти або купити, лише подарувати, отримавши цю картку від Майстра на початку гри";
+    const GAMEBOY_SHORTLINE = `Дозволяє зберегти свій прогрес на GAMEBOY. В будь який момент створи збереження та за потреби використай свій GAMEBOY щоб до нього завантажитись.`;
+    const GAMEBOY_IMG = `https://lh4.googleusercontent.com/sN9l6r5xenQZTyUKE5O138NHImoBEvUqKk5LT3A5T8VRifLeSY9WcaPSsCgm_bAobrQ=w2400`;
+
+    LootArr.push(new DNELootCard("gameboy", "GAMEBOY", GAMEBOY_LONGLINE, GAMEBOY_IMG, 0, 0, "", GAMEBOY_SHORTLINE, "", true, "anti"));
+
+    // Mr. Mistix
+    //
+    //
+    const MR_MISTIX_LONGLINE = "";
+    const MR_MISTIX_SHORTLINE = `Присвятить життя тому щоб виконати одне твоє бажання, після чого назавжди зникне`;
+    const MR_MISTIX_IMG_ID = `1a1apWkm5lJ3YcKAdvdUnvBUcy8IKmVHB`;
+    const MR_MISTIX_IMG = `https://drive.google.com/uc?id=${MR_MISTIX_IMG_ID}`;
+
+    LootArr.push(new DNELootCard("mr-mistix", "Mr. Mistix", MR_MISTIX_LONGLINE, MR_MISTIX_IMG, 0, 0, "Одноразова картка", MR_MISTIX_SHORTLINE, "", true, "anti"));
+
+    // Кільце влади
+    LootArr.push(new DNELootCard("power-ring", "Кільце влади", "Посилює найсильніші якості носителя, покращуючи їх до максимуму відносно обставин. Кільця влади можуть бути різної форми та рівнів могутності, залежно від майстра що його викував, рідкості матеріалу та каменю. З часом використання пробуджує темні сторони особистості носія та поступово підкоряє його власній волі. Кільце влади завжди вірне лише своєму творцю, завжди прагне до нього і чим більше наближається, тим могутнішим стає.", "https://lh4.googleusercontent.com/dWwMABhNjnvI-OOzxZDgmEqELhIfSJ25Ru8fR0hflXz1Ufd3Tr-jXDtZKTKVQ3dIxzk=w2400", 4, 0, "Драгоцінність", "Посилює найсильніші якості носителя, покращуючи їх до максимуму відносно обставин.", "", true, "anti"));
+
 
     // Почіта
     //
@@ -937,14 +962,6 @@ const initDNELootArr = () => {
 
     LootArr.push(new DNELootCard("sleep", "Сон", SLEEP_LONGLINE, SLEEP_IMG, 1, "8h", "Дія", SLEEP_SHORTLINE, "", true, "dia"));
 
-    // GAMEBOY
-    //
-    //
-    const GAMEBOY_LONGLINE = "Дозволяє зберегти свій прогрес на GAMEBOY. Перезаписуй збереження скільки завгодно разів, та в тебе тільки один слот. Використовуй в будь який момент свого ходу щоб зберегтись або завантажитись. У випадку смерті ти просто завантажуєшся з останнього збереження. Цей предмет не можна обміняти або купити, лише подарувати, отримавши цю картку від Майстра на початку гри";
-    const GAMEBOY_SHORTLINE = `Дозволяє зберегти свій прогрес на GAMEBOY. В будь який момент створи збереження та за потреби використай свій GAMEBOY щоб до нього завантажитись.`;
-    const GAMEBOY_IMG = `https://lh4.googleusercontent.com/sN9l6r5xenQZTyUKE5O138NHImoBEvUqKk5LT3A5T8VRifLeSY9WcaPSsCgm_bAobrQ=w2400`;
-
-    LootArr.push(new DNELootCard("gameboy", "GAMEBOY", GAMEBOY_LONGLINE, GAMEBOY_IMG, 0, 0, "", GAMEBOY_SHORTLINE, "", true, "anti"));
 
     // 1UP
     //
@@ -953,17 +970,8 @@ const initDNELootArr = () => {
     const IUP_SHORTLINE = `Ще одне життя. Так, ти можеш почати усе з початку. Використай цю картку щоб врятувати від Смерті побратима.`;
     const IUP_IMG = `https://lh4.googleusercontent.com/Tp-OCYgwdmmEESRTfr5pVRypB46latBy3uAIOqbhsKlghxUsKAPN48RuUD_leLquyEM=w2400`;
 
-    LootArr.push(new DNELootCard("iup", "1UP", IUP_LONGLINE, IUP_IMG, 0, 0, "", IUP_SHORTLINE, "", true, "anti"));
-
-    // Нокіа
-    //
-    //
-    const NOKIA_LONGLINE = "";
-    const NOKIA_SHORTLINE = `Так, ще працює`;
-    const NOKIA_IMG_ID = `1pXrDMWoWJquMqkDbb5eyEAUYzOznq4pl`;
-    const NOKIA_IMG = `https://drive.google.com/uc?id=${NOKIA_IMG_ID}`;
-
-    LootArr.push(new DNELootCard("nokia", "Нокіа", NOKIA_LONGLINE, NOKIA_IMG, 1, 0, "Фон", NOKIA_SHORTLINE, "", true, "anti"));
+    // LootArr.push(new DNELootCard("iup", "1UP", IUP_LONGLINE, IUP_IMG, 0, 0, "", IUP_SHORTLINE, "", true, "anti"));
+    LootArr.push(new DNELootCard("iup", "1UP", IUP_LONGLINE, IUP_IMG, 0, 0, "", IUP_SHORTLINE, "", false, "anti"));
 
     LootArr.push(new DNELootCard("tea-break", "Перерва на чай", "Дозволяє структурувати думки та наповнитись теплом чаю. Отримай свіжу енергію.", "https://lh6.googleusercontent.com/8MI06infbLkWNJCmXKTVbMgdTpssFnCfwu4A_MdURrkFaJyzWMlbNzd6GOulWRXYUz0=w2400", 1, "15m", ""));
     LootArr.push(new DNELootCard("moving", "Переїзд", "Використай зв'язки щоб позбавити іншого гравця студії. Він одразу пропускає хід та має витратити 3К щоб перевести свої великі речі на склад, інакше їх буде втрачено.", "https://lh4.googleusercontent.com/6E7iqRHUF0X_5GHgRrD35Zwg0FYMhvc-DdqoZOYlQ44dAbHP79XfUTAnVueigimk_Ts=w2400", 4, 0, "Проблема!"));
