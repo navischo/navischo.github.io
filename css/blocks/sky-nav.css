@@ -1,0 +1,90 @@
+.sky-nav {
+    /*position: fixed;*/
+    /*top: 0;*/
+    /*right: 0;*/
+    /*bottom: 0;*/
+    /*left: 0;*/
+
+    transform: rotate(45deg);
+
+    width: 100vh;
+    height: 100vh;
+    margin: 0 auto;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.sky-nav-item {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 50%;
+    padding: 100px;
+
+    font-family: "Press Start 2p", "JetBrains Mono", monospace;
+    font-size: 3.4em;
+
+    transition: .2s ease-in-out;
+    cursor: pointer;
+}
+
+.sky-nav-item:hover {
+    background: #00f0ff;
+}
+
+.sky-nav-item__text {
+    transform-origin: center;
+}
+
+/*.sky-nav-item:first-child::before {*/
+/*    content: "";*/
+
+/*    position: absolute;*/
+/*    bottom: 0;*/
+/*    right: 0;*/
+/*    transform: rotate(-45deg) translate(-10px, -10px);*/
+
+/*    display: block;*/
+/*    width: 140px;*/
+/*    height: 10px;*/
+/*    background: #00f0ff;*/
+/*    !*justify-content: flex-end;*!*/
+/*    !*align-items: flex-end;*!*/
+/*}*/
+
+.sky-nav-item:nth-child(1) .sky-nav-item__text {
+    transform: rotate(-45deg);
+}
+
+/*.sky-nav-item:nth-child(2) {*/
+/*    justify-content: flex-start;*/
+/*    align-items: flex-end;*/
+/*}*/
+
+.sky-nav-item:nth-child(2) .sky-nav-item__text {
+    transform: rotate(-45deg);
+}
+
+/*.sky-nav-item:nth-child(3) {*/
+/*    justify-content: flex-end;*/
+/*    align-items: flex-start;*/
+/*}*/
+
+.sky-nav-item:nth-child(3) .sky-nav-item__text {
+    transform: rotate(-45deg);
+}
+
+/*.sky-nav-item:nth-child(4) {*/
+/*    justify-content: flex-start;*/
+/*    align-items: flex-start;*/
+/*}*/
+
+.sky-nav-item:nth-child(4) .sky-nav-item__text {
+    transform: rotate(-45deg);
+}
