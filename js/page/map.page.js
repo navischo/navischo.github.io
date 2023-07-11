@@ -104,14 +104,37 @@ const map = [
 
 const getRandomSector = () => win77.map[getRandomInt(4)][[`a`, `b`, `c`, `d`][getRandomInt(4)]];
 
+class Chess {
+    constructor(id, address) {
+        this.id = id;
+        this.address = address;
+    }
+}
+
+const getChessId = () => {
+    if (!win77.chess) {
+        return `king`
+    } else {
+        if (win77.chess.size > 8) {
+            return [`T`, `H`, `E`][getRandomInt(3)];
+        } else {
+            return `i`;
+        }
+    }
+}
+
 const initChess = () => {
+    if (!win77.chess) {
+        win77.chess = new Set();
+    }
+
     const sector = getRandomSector();
     sector.playersSet.add(win77.game.player);
     sector.node.classList.add("--player-in");
 
     const chess = document.createElement("button");
     chess.classList.add("chess");
-    chess.classList.add(`--char-${win77.game.player.lvl}`);
+    chess.classList.add(win77.chess.size === 0 ? `--char-king` : `--char-${win77.game.player.lvl}`);
 
     chess.style.position = `absolute`;
     chess.style.top = `${getRandomInt(150)}px`;
@@ -120,8 +143,9 @@ const initChess = () => {
     chess.dataset.playerId = win77.game.player.id;
 
     sector.node.appendChild(chess);
+    win77.chess.add(new Chess(getChessId(), sector.node.dataset.sector));
 
-    console.log(`${win77.game.player.id} enter map on sector ${sector.address}`, win77.game.player, sector);
+    console.log(`${win77.game.player.id} enter map on sector ${sector.address}`, win77.game.player, sector, win77.chess);
 }
 
 const getFreshDunge = () => {

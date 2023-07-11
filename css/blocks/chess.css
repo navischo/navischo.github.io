@@ -9,6 +9,14 @@
     transition: .2s ease;
 }
 
+.chess.--char-king {
+    width: 106px;
+    height: 109px;
+
+    background-image: url("../../img/icon-chess-sprite.png");
+    background-position: -13px -15px;
+}
+
 .chess.--char-0,
 .chess.--char-1,
 .chess.--char-2,
