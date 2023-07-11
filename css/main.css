@@ -32,6 +32,7 @@
 @import "blocks/map.css";
 @import "blocks/hex-btn.css";
 @import "blocks/sky-nav.css";
+@import "blocks/chess.css";
 
 /*CUSTOMIZATION*/
 @import "./cards-customization.css";

@@ -29,6 +29,10 @@
     padding-top: 100px;
 }
 
+.map__logo.--link {
+    cursor: pointer;
+}
+
 .map__district-title {
     margin: 0;
 }
@@ -164,6 +168,10 @@
     background: white;
 
     transition: .2s ease;
+}
+
+.map-sector.--player-in {
+    background: #fdd94d;
 }
 
 .map-sector:hover {

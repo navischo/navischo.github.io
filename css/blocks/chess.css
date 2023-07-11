@@ -1,0 +1,55 @@
+.chess {
+    padding: 0;
+    border: none;
+
+    font-size: 0;
+
+    background: transparent;
+
+    transition: .2s ease;
+}
+
+.chess.--char-0,
+.chess.--char-1,
+.chess.--char-2,
+.chess.--char-3,
+.chess.--char-4,
+.chess.--char-5,
+.chess.--char-6,
+.chess.--char-7 {
+    width: 73px;
+    height: 96px;
+
+    background-image: url("../../img/icon-chess-sprite.png");
+    background-position: 105px -24px;
+}
+
+.map .chess {
+    transform: scale(0.3);
+}
+
+.map .chess:hover {
+    transform: scale(0.5);
+}
+
+.map .chess::before {
+    content: attr(data-player-id);
+
+    visibility: hidden;
+    opacity: 0;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: translateY(100%);
+
+    font-family: "JetBrains Mono", sans-serif;
+    font-size: 32px;
+    text-align: center;
+}
+
+.map .chess:hover::before {
+    visibility: visible;
+    opacity: 1;
+}

@@ -102,6 +102,28 @@ const map = [
 
 // ===> DOM START <=== //
 
+const getRandomSector = () => win77.map[getRandomInt(4)][[`a`, `b`, `c`, `d`][getRandomInt(4)]];
+
+const initChess = () => {
+    const sector = getRandomSector();
+    sector.playersSet.add(win77.game.player);
+    sector.node.classList.add("--player-in");
+
+    const chess = document.createElement("button");
+    chess.classList.add("chess");
+    chess.classList.add(`--char-${win77.game.player.lvl}`);
+
+    chess.style.position = `absolute`;
+    chess.style.top = `${getRandomInt(150)}px`;
+    chess.style.left = `${getRandomInt(180)}px`;
+
+    chess.dataset.playerId = win77.game.player.id;
+
+    sector.node.appendChild(chess);
+
+    console.log(`${win77.game.player.id} enter map on sector ${sector.address}`, win77.game.player, sector);
+}
+
 const getFreshDunge = () => {
     const locationsArr = Array.from(win77.locationsSet);
     const visitedArr = win77.game.player.availableLocations;
@@ -217,6 +239,7 @@ const drawMapModal = () => {
             })(),
         }
     });
+
     document
         .querySelector('.js-map')
         .addEventListener('click', function (e) {
@@ -240,6 +263,13 @@ const drawMapModal = () => {
                 console.log("Dunge already discovered", e.target);
             }
         });
+
+    const enterBtn = document.querySelector(".js-enter-map");
+    enterBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        initChess();
+    });
 
     win77.map = map;
 }
