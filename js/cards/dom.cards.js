@@ -15,6 +15,7 @@ import {dialog} from "../hud/dialog.hud.js";
 import {openPopup} from "../popup/dom.popup.jquery.js";
 import {initOneMoreBtn} from "../utils/initOneMoreBtn.js";
 import {logIncome} from "../utils/logIncome.js";
+import {sendInvite} from "../utils/sendInvite.js";
 
 
 const initHandlers = (cardData, controls) => {
@@ -30,10 +31,11 @@ const initHandlers = (cardData, controls) => {
         }
 
         if (isItCatalogPage && isSetHasId(catalog, cardData.id)) {
-            win77.getSkillPointsFromPlayer(1);
-            win77.updBalanceHUD();
-            moveCardById(cardData.id, catalog, win77.game.player[cardData.type]);
-            initInventory();
+            // win77.getSkillPointsFromPlayer(1);
+            // win77.updBalanceHUD();
+            // moveCardById(cardData.id, catalog, win77.game.player[cardData.type]);
+            // initInventory();
+            sendInvite(cardData);
         }
 
         const body = document.querySelector("body");
