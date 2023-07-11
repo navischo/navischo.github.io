@@ -401,6 +401,16 @@ const initDNELootArr = () => {
     LootArr.push(new DNELootCard("v", "V", "Так, поклич цього хлопця, що може піти не так?)", "https://lh6.googleusercontent.com/TGoJYG0KoqQ1oSf45SIKkFmp_6skZRJ9pmmR1vEWo6_xyFoHuCqZWI01Pi58MzRBKgg=w2400", 1, 0, "Найомничок", "Виглядає як порядний Охороничок та вправний Водій", "", true, "npc"));
     LootArr.push(new DNELootCard("wolf", "THE WOLF", "I solve problems", "https://lh3.googleusercontent.com/hgUIik77UVkI226aXYkYt7gtuvicht-KY4ytgoTuwB47f7gzrG93-9QI-rhgw5Y7RAk=w2400", 1, 0, "Найомничок", "I solve problems", "", true, "npc"));
 
+    // D
+    //
+    //
+    const GENDALF_LONGLINE = "";
+    const GENDALF_SHORTLINE = ``;
+    const GENDALF_IMG_ID = `1xPCA3ckLOBJTJ_cfQ2SZNbkACdnwGiUc`;
+    const GENDALF_IMG = `https://drive.google.com/uc?id=${GENDALF_IMG_ID}`;
+
+    LootArr.push(new DNELootCard("gendalf", "GENDALF", GENDALF_LONGLINE, GENDALF_IMG, 1, 0, "Найомничок", GENDALF_SHORTLINE, "", true, "npc"));
+
     const LISOVA_MAVKA_LONGLINE = "";
     const LISOVA_MAVKA_SHORTLINE = "Здатна створювати неймовірні напої з природніх речовин та залюбки реалізує свій продукт на твоєму івенті.";
     LootArr.push(new DNELootCard("lisova-mavka", "Лісова Діва", LISOVA_MAVKA_LONGLINE, "https://lh3.googleusercontent.com/gTtZ-rp5BXr_GyuAwIiSkTFBQWUmbwyyeFrc0G534MsQGLv_r6U8VonEkSm5eqW0z4E=w2400", 1, 0, "Найомничок", LISOVA_MAVKA_SHORTLINE, "", true, "npc"));
