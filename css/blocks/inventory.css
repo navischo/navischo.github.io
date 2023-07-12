@@ -131,7 +131,8 @@
     display: inline-block;
 }
 
-#player-crew-list .inventory-item {
+#player-crew-list .inventory-item,
+#player-dia-list .inventory-item {
     display: block;
     padding-left: 40px;
 }

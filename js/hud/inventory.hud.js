@@ -11,7 +11,10 @@ const inventoryMarkup = `
     &nbsp;},
     <br>&nbsp;&nbsp;<span data-advice-id="crew">crew:</span>&nbsp;{&nbsp;<br>
     <span id="player-crew-list" class="inventory-items"></span>
-    &nbsp;&nbsp;}
+    &nbsp;&nbsp;}<span class="js-dia-wrap fw-d-none">,
+    <br>&nbsp;&nbsp;<span data-advice-id="dia">dia:</span>&nbsp;{&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;<span id="player-dia-list" class="inventory-items"></span>
+    &nbsp;&nbsp;}</span>
     <br>}<br><br><div class="js-in-car"></div>
     <a href="#nokia-popup" class="js-phone inventory-item">call me()</a>
 </div>
@@ -40,13 +43,15 @@ const inventoryList = document.querySelector("#inventory-list");
 const soundList = document.querySelector("#sound-list");
 const playerClassList = document.querySelector("#player-class-list");
 const playerCrewList = document.querySelector("#player-crew-list");
+const playerDiaList = document.querySelector("#player-dia-list");
 
 
 const cardNodesByType = {
     [CARD_TYPES.loot]: inventoryList,
     [CARD_TYPES.sound]: soundList,
     [CARD_TYPES.class]: playerClassList,
-    [CARD_TYPES.npc]: playerCrewList
+    [CARD_TYPES.npc]: playerCrewList,
+    [CARD_TYPES.dia]: playerDiaList
 }
 
 
@@ -70,6 +75,7 @@ const inventory = {
         cardNodesByType.class.innerHTML = ``;
         cardNodesByType.npc.innerHTML = ``;
         cardNodesByType.sound.innerHTML = ``;
+        cardNodesByType.dia.innerHTML = ``;
     }
 }
 
@@ -107,9 +113,17 @@ const initInventory = () => {
         appendCardToInventory(soundCard, CARD_TYPES.sound);
     });
 
+    player.dia?.forEach((diaCard) => {
+        appendCardToInventory(diaCard, CARD_TYPES.dia);
+    });
+
     player.cars.forEach((carCard) => {
         initCarInventory(carCard);
     });
+
+    if (win77.game.player.lvl >= 3) {
+        document.querySelector(".js-dia-wrap").classList.remove("fw-d-none");
+    }
 
     initInventoryPopupJquery();
 }

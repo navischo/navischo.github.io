@@ -461,6 +461,29 @@ const initDNELootArr = () => {
     // Записати сет
     LootArr.push(new DNELootCard("make-live", "Запустити трансляцію", "Дає можливість привабити відвідувачів до події або показати важливий матеріал. Потребує камери та підключення до інтернету. Приваблює додаткових відвідувачів, виклади дві додаткові карти аудиторії.", "https://lh3.googleusercontent.com/2Ax7PXdSpzk73m3ANSMV11awPuvp-QAH9o-tm4_mFqahF4jie5h3XfBzofp8wZ9UkIo=w2400", 1, "1⚡ 1h", "Дія", "Приваблює додаткових відвідувачів, виклади дві додаткові карти <br>аудиторії.", "", true, "dia"));
 
+    LootArr.push(new DNELootCard("dia-draw", "Малювання", "Використовуй час та енергію для отримання малюнків. Чим більше енергії та часу ти в них вкладеш, тим сильнішими вони будуть. Створення графічного зображення є однією з найдревніших медетацій винайдених людством. Від печерних малюнків кров'ю, до чорнил на папері перенесення власного бачення в матеріальний світ заворожувала людину. Просто бери та починай малювати, уява зробить усе інше.", "https://lh3.googleusercontent.com/oprP-CtoxAG5IWogg2Gn56Pu9MBNfNt35n4gQave2BvFfVA7YlExQdgtjL6t9r_kMsg=w2400", 1, "1⚡ 1h", "Дія", "Використай час та енергію для створення малюнку.<br><br> Чим більше енергії та часу ти в нього вкладеш, тим кращий результат чекатиме на тебе в кінці.<br><br>+1 малюнок в твою коллекцію", "", true, "dia"));
+
+    // Код
+    //
+    //
+    const DIA_CODE_LONGLINE = "Використовуй час, енергію та свої навички программування, щоб написати апку на js та html/css. Чим більше енергії та часу ти в них вкладеш, тим кориснішою вона буде.";
+    const DIA_CODE_SHORTLINE = `Використай час, енергію та свої навички программування для створення коду.<br><br> Чим більше енергії та часу ти в нього вкладеш, тим кращий результат чекатиме на тебе в кінці.<br><br>+1 кодпен в твою коллекцію`;
+    const DIA_CODE_IMG_ID = `1_xdG_U2HiygsrK20rd5EvpVAd5IactFi`;
+    const DIA_CODE_IMG = `https://drive.google.com/uc?id=${DIA_CODE_IMG_ID}`;
+
+    LootArr.push(new DNELootCard("dia-code", "Код", DIA_CODE_LONGLINE, DIA_CODE_IMG, 1, "1⚡ 1h", "Dia", DIA_CODE_SHORTLINE, "", true, "dia"));
+
+    // Сон
+    //
+    //
+    const SLEEP_LONGLINE = "";
+    const SLEEP_SHORTLINE = `Відпочинь щоб відновити сили. Загорнись у теплий пледик разом с подругою на величезному ліжку, щоб отримати додаткові +1 за кожен пункт на протязі усього наступного дня.`;
+    const SLEEP_IMG_ID = `1OBgmNUQd927sMFp0XkK69PNf8GqASh0i`;
+    const SLEEP_IMG = `https://drive.google.com/uc?id=${SLEEP_IMG_ID}`;
+
+    LootArr.push(new DNELootCard("sleep", "Сон", SLEEP_LONGLINE, SLEEP_IMG, 1, "8h", "Дія", SLEEP_SHORTLINE, "", true, "dia"));
+
+
     // Флоп
     const FLOP_SHORTLINE = "Швидкий, характерно недбалий, закрас та контур за лічені хвилини, опціонально тінь.<br><br>Як правило достатньо двох банок(високий слім+низький фет) контрастних кольорів.<br><br>Намалювати скетч заздалегідь буде супер";
     const FLOP_LONGLINE = ` $Універсальний солдат в арсеналі Вандала, що з двох банок здатен зробити швидкий закрас та контур за лічені хвилини. Опціонально можна намалювати скетч і впевнитись у результаті до початку роботи.`;
@@ -895,18 +918,6 @@ const initDNELootArr = () => {
 
     LootArr.push(new DNELootCard("flower", "Квітка", "Насичує повітря киснем коли ти спиш, та ласує погляд коли прокидаєшся", "https://lh4.googleusercontent.com/G6o_Ys9Md86JRahzppRJv9QauONxab3IBGV05cSE1BoOBarZSPnUmadf0BJJbtaTojg=w2400", 0, "", "", "Насичує повітря киснем коли ти спиш, та ласує погляд коли прокидаєшся", "", true, "anti"));
 
-    LootArr.push(new DNELootCard("dia-draw", "Малювання", "Використовуй час та енергію для отримання малюнків. Чим більше енергії та часу ти в них вкладеш, тим сильнішими вони будуть. Створення графічного зображення є однією з найдревніших медетацій винайдених людством. Від печерних малюнків кров'ю, до чорнил на папері перенесення власного бачення в матеріальний світ заворожувала людину. Просто бери та починай малювати, уява зробить усе інше.", "https://lh3.googleusercontent.com/oprP-CtoxAG5IWogg2Gn56Pu9MBNfNt35n4gQave2BvFfVA7YlExQdgtjL6t9r_kMsg=w2400", 1, "1⚡ 1h", "Дія", "Використай час та енергію для створення малюнку.<br><br> Чим більше енергії та часу ти в нього вкладеш, тим кращий результат чекатиме на тебе в кінці.<br><br>+1 малюнок в твою коллекцію", "", true, "dia"));
-
-    // Код
-    //
-    //
-    const DIA_CODE_LONGLINE = "Використовуй час, енергію та свої навички программування, щоб написати апку на js та html/css. Чим більше енергії та часу ти в них вкладеш, тим кориснішою вона буде.";
-    const DIA_CODE_SHORTLINE = `Використай час, енергію та свої навички программування для створення коду.<br><br> Чим більше енергії та часу ти в нього вкладеш, тим кращий результат чекатиме на тебе в кінці.<br><br>+1 кодпен в твою коллекцію`;
-    const DIA_CODE_IMG_ID = `1_xdG_U2HiygsrK20rd5EvpVAd5IactFi`;
-    const DIA_CODE_IMG = `https://drive.google.com/uc?id=${DIA_CODE_IMG_ID}`;
-
-    LootArr.push(new DNELootCard("dia-code", "Код", DIA_CODE_LONGLINE, DIA_CODE_IMG, 1, "1⚡ 1h", "Dia", DIA_CODE_SHORTLINE, "", true, "dia"));
-
     // Фон
     //
     //
@@ -961,17 +972,6 @@ const initDNELootArr = () => {
     const FELIX_IMG = `https://drive.google.com/uc?id=${FELIX_IMG_ID}`;
 
     LootArr.push(new DNELootCard("felix", "Фелікс", FELIX_LONGLINE, FELIX_IMG, 1, 0, "Тваринка-DJ", FELIX_SHORTLINE, "", true, "npc"));
-
-    // Сон
-    //
-    //
-    const SLEEP_LONGLINE = "";
-    const SLEEP_SHORTLINE = `Відпочинь щоб відновити сили. Загорнись у теплий пледик разом с подругою на величезному ліжку, щоб отримати додаткові +1 за кожен пункт на протязі усього наступного дня.`;
-    const SLEEP_IMG_ID = `1OBgmNUQd927sMFp0XkK69PNf8GqASh0i`;
-    const SLEEP_IMG = `https://drive.google.com/uc?id=${SLEEP_IMG_ID}`;
-
-    LootArr.push(new DNELootCard("sleep", "Сон", SLEEP_LONGLINE, SLEEP_IMG, 1, "8h", "Дія", SLEEP_SHORTLINE, "", true, "dia"));
-
 
     // 1UP
     //

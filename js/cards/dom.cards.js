@@ -24,18 +24,33 @@ const initHandlers = (cardData, controls) => {
         const currentPage = document.querySelector("body").dataset.hash;
         const isItCatalogPage = currentPage === PAGE_NAMES.cards;
         const isItCharacterCard = cardData.type === CARD_TYPES.npc || cardData.type === CARD_TYPES.class;
+        const isItDiaCard = cardData.type === CARD_TYPES.dia;
         console.log(`You are ${COMMANDS.plus} ${cardData.id}`);
 
         if (isItCharacterCard && currentPage === PAGE_NAMES.hud) {
             setExecutive(cardData.name);
         }
 
+        // if (isItCatalogPage && isItDiaCard && isSetHasId(catalog, cardData.id)) {
+        //     win77.getSkillPointsFromPlayer(1);
+        //     win77.updBalanceHUD();
+        //     moveCardById(cardData.id, catalog, win77.game.player[cardData.type]);
+        //     initInventory();
+        // }
+
         if (isItCatalogPage && isSetHasId(catalog, cardData.id)) {
             // win77.getSkillPointsFromPlayer(1);
             // win77.updBalanceHUD();
             // moveCardById(cardData.id, catalog, win77.game.player[cardData.type]);
             // initInventory();
-            sendInvite(cardData);
+            if (isItCharacterCard) {
+                sendInvite(cardData);
+            } else if (isItDiaCard) {
+                win77.getSkillPointsFromPlayer(1);
+                win77.updBalanceHUD();
+                moveCardById(cardData.id, catalog, win77.game.player[cardData.type]);
+                initInventory();
+            }
         }
 
         const body = document.querySelector("body");

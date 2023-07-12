@@ -134,6 +134,7 @@ const initPlayer = () => {
         hand: new Set(),
         npc: new Set(),
         class: new Set(),
+        dia: new Set(),
         sound: new Set(),
         loot: new Set(),
         cars: new Set(),
@@ -159,6 +160,8 @@ const initPlayer = () => {
     moveCardById("plx500", win77.game.catalog.loot, player.loot);
     moveCardById("ddjxp2", win77.game.catalog.loot, player.loot);
     // moveCardById("nokia", win77.game.catalog.anti, player.loot);
+
+    moveCardById("dia-play", win77.game.catalog.dia, player.dia);
 
     console.log(`${player.id} join the game`, player);
     return player;
