@@ -47,7 +47,25 @@ const NOKIA_MENUS = [
                         OPTION_LINES,
                         "Fight Club",
                         [
-                            () => initHotline(0),
+                            () => {
+                                win77.lastHotline = initHotline(0);
+                                console.log(`Hotline to navischo`);
+                                const OPTION_LINES = ["Дякую за пояснення!", `Що ти таке?`, `Приємно познайомитись, Навіщо! Мене звуть ${win77.game.player.id}`];
+                                initDialogCli(createDialogDataObj(
+                                    OPTION_LINES,
+                                    "navischo",
+                                    [
+                                        () => {
+                                            chooseOption(OPTION_LINES[0], "--blue");
+                                        },
+                                        () => {
+                                            chooseOption(OPTION_LINES[1], "--blue");
+                                        },
+                                        () => {
+                                            chooseOption(OPTION_LINES[2], "--blue");
+                                        }
+                                    ]));
+                            },
                             () => {
                                 chooseOption(OPTION_LINES[1], "--blue");
                             }

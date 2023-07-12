@@ -1,5 +1,10 @@
 .f-btn {
-    border-color: #2be4ea;
+    padding: 2px 7px;
+    border: 1.3p x solid #2be4ea;
+
+    font-family: "JetBrains Mono", sans-serif;
+    font-size: 15px;
+    color: black;
     /*background-color: rgba(80, 233, 239, 0.7)!important;*/
     background-color: rgba(80, 233, 239, 0.7)!important;
     cursor: pointer;

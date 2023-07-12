@@ -165,6 +165,21 @@ const INTERACTIVE_DIALOGS = [
     {
         starter: "Так, скажи що це стосовно гри.",
         next: "Каже зараз зайнятий. Набере тебе за можливості."
+    },
+    {
+        starter: "Що ти таке?",
+        next: "Я розумна машина розроблена щоб допомогти тобі опанувати гру.",
+        nextOptions: [
+            "Дякую за пояснення!",
+            `Приємно познайомитись, Навіщо! Клич мене ${win77.game.player.id}`
+        ]
+    },
+    {
+        starter: `Приємно познайомитись, Навіщо! Клич мене ${win77.game.player.id}`,
+        next: `Радий вітати знову, ${win77.game.player.id}! Відчувай себе вільно щоб звертатись до мене в будь-який момент гри.`,
+        nextOptions: [
+            "Знову? Ми вже зустрічались?"
+        ]
     }
 ];
 
@@ -193,10 +208,10 @@ const initInteractiveDialog = (option) => {
     }
 }
 
-const chooseOption = (option) => {
+const chooseOption = (option, mod = "") => {
     const activeChat = document.querySelector(".dialog-vertical .channel-feed__body");
     const newMessage = document.createElement("div");
-    newMessage.innerHTML = getMessageMarkup(option, "--blue");
+    newMessage.innerHTML = getMessageMarkup(option, mod);
     activeChat.appendChild(newMessage);
 
     if (INTERACTIVE_DIALOGS.find((dialog) => dialog.starter === option)) {
