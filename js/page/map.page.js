@@ -144,6 +144,7 @@ const initChess = () => {
         win77.chess.add(chessObj);
 
         chess.dataset.chessId = chessId;
+        chess.dataset.playerId = win77.game.player.id;
 
         // chess.addEventListener("click", () => {
         //     moveChess(chessObj.id, getRandomSector().address);
@@ -165,6 +166,7 @@ const initChess = () => {
             win77.chess.add(chessObj);
 
             chess.dataset.chessId = chessId;
+            chess.dataset.playerId = chessCard.name;
 
             // chess.addEventListener("click", () => {
             //     moveChess(chessObj.id, getRandomSector().address);
@@ -182,10 +184,30 @@ const initChess = () => {
 
 const getSectorByAddress = (sectorId) => win77.map[sectorId[1]][sectorId[0]];
 
+const makeNextAddressNotSame = (lastAddress) => {
+    let nextAddress = getRandomSector().address;
+
+    if (lastAddress === nextAddress) {
+        makeNextAddressNotSame(lastAddress);
+    } else {
+        return nextAddress;
+    }
+}
+
 const moveChess = (chessId, nextAddress) => {
     const chessToMove = Array.from(win77.chess).find((chessObj) => chessObj.id === chessId);
     const lastAddress = chessToMove.address;
-    win77.chess[chessToMove].address = nextAddress;
+
+    if (lastAddress === nextAddress) {
+        nextAddress = makeNextAddressNotSame(lastAddress);
+    }
+
+    // win77.chess[chessToMove].address = nextAddress;
+    win77.chess.forEach((chess) => {
+        if (chess === chessToMove) {
+            chess.address = nextAddress;
+        }
+    })
 
     const lastSectorObj = getSectorByAddress(lastAddress);
     const nextSectorObj = getSectorByAddress(nextAddress);
