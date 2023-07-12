@@ -131,7 +131,6 @@ const initChess = () => {
     chess.classList.add("chess");
     chess.classList.add(win77.chess.size === 0 ? `--char-king` : `--char-${win77.game.player.lvl}`);
 
-    chess.style.position = `absolute`;
     chess.style.top = `${getRandomInt(150)}px`;
     chess.style.left = `${getRandomInt(180)}px`;
 

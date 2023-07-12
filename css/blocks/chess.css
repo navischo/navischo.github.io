@@ -33,6 +33,9 @@
 }
 
 .map .chess {
+    position: absolute;
+    z-index: 5;
+
     transform: scale(0.3);
 }
 
