@@ -108,7 +108,7 @@ body.hide-hud .hud-btn--fixed {
     display: none;
 }
 
-body[data-hash="cards"] .nav__item-sublist {
+body[data-hash="cards"] .nav__item-sublist:not("--right") {
     visibility: visible;
     opacity: 1;
     transform: translateX(-100%);
