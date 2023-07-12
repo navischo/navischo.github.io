@@ -12,7 +12,13 @@
     background-repeat: no-repeat;
     background-size: cover;
 
+    cursor: pointer;
+
     transition: 1.2s ease-in-out;
+}
+
+.wall.--sprayable:hover {
+    cursor: url("../../img/icon-spray@52px.png"), pointer;
 }
 
 .wall.--open {

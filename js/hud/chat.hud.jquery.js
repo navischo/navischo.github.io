@@ -5,6 +5,7 @@ import { getRandomInt } from "../utils/getCardById.js";
 import {adminMarkup, profileMarkup} from "../swiper/markup/admin.markup.js";
 import { drawLootCards } from "../cards/dom.cards.js";
 import { getDialogOptionMarkup } from "./dialogCli.hud.js";
+import { isSetHasId } from "../utils/isSetHasId.js";
 
 // const DEFAULT_TIP = `
 // Прототип інтерфейсу взаємодії між гравцем та навколишнім світом натхненний Cyberpunk 2077.
@@ -289,6 +290,7 @@ const initDialog = (dialog, parent = null) => {
 
 const initProfile = () => {
     const root = document.querySelector("#root");
+    const wall = root.querySelector(".js-wall");
     const appDOM = {
         root: root,
         a: root.querySelector(".app-a"),
@@ -296,6 +298,10 @@ const initProfile = () => {
         b: root.querySelector(".app-b"),
     }
 
+    isSetHasId(win77.game.player.class, "class-writer") ? wall.classList.add("--sprayable") : "";
+    wall.addEventListener("click", () => {
+        wall.remove();
+    });
 
 
     // const inventoryMenu = document.querySelector(".js-inventory-menu");

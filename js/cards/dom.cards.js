@@ -31,20 +31,24 @@ const initHandlers = (cardData, controls) => {
             setExecutive(cardData.name);
         }
 
-        // if (isItCatalogPage && isItDiaCard && isSetHasId(catalog, cardData.id)) {
-        //     win77.getSkillPointsFromPlayer(1);
-        //     win77.updBalanceHUD();
-        //     moveCardById(cardData.id, catalog, win77.game.player[cardData.type]);
-        //     initInventory();
-        // }
-
         if (isItCatalogPage && isSetHasId(catalog, cardData.id)) {
             // win77.getSkillPointsFromPlayer(1);
             // win77.updBalanceHUD();
             // moveCardById(cardData.id, catalog, win77.game.player[cardData.type]);
             // initInventory();
-            if (isItCharacterCard) {
+            if (cardData.type === CARD_TYPES.npc) {
                 sendInvite(cardData);
+            } else if (cardData.type === CARD_TYPES.class) {
+                win77.getSkillPointsFromPlayer(1);
+                win77.updBalanceHUD();
+                moveCardById(cardData.id, catalog, win77.game.player[cardData.type]);
+                initInventory();
+
+                // todo makeWallSpreyable.util.js
+                const wall = document.querySelector(".js-wall");
+                if (wall && isSetHasId(win77.game.player.class, "class-writer")) {
+                    wall.classList.add("--sprayable");
+                }
             } else if (isItDiaCard) {
                 win77.getSkillPointsFromPlayer(1);
                 win77.updBalanceHUD();
