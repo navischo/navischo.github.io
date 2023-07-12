@@ -285,22 +285,27 @@ const drawMapModal = () => {
         .addEventListener('click', function (e) {
             e.preventDefault();
             console.log(e.target, e);
-            if (!e.target.classList.contains("--discovered")) {
-                const targetData = e.target.dataset;
 
-                if (targetData.point === "gig") {
-                    win77.dungesSwiper.virtual.appendSlide(getDungeHexMarkup(targetData.type));
-                    win77.dungesSwiper.slideTo(win77.dungesSwiper.virtual.slides.length, 200, false);
-                } else if (targetData.point === "dunge") {
-                    const newDunge = discoverDunge(e.target);
-                    // console.log(newDunge, win77.locationsSet, Array.from(win77.locationsSet));
-                    win77.dungesSwiper.virtual.appendSlide(getDungeHexMarkup(newDunge.name));
-                    win77.dungesSwiper.slideTo(win77.dungesSwiper.virtual.slides.length, 200, false);
+            const sectorId = e.target.parentNode.dataset.sector;
+            const playersInSector = win77.map[sectorId[1]][sectorId[0]].playersSet;
+            if (playersInSector.size > 0) {
+                if (!e.target.classList.contains("--discovered")) {
+                    const targetData = e.target.dataset;
+
+                    if (targetData.point === "gig") {
+                        win77.dungesSwiper.virtual.appendSlide(getDungeHexMarkup(targetData.type));
+                        win77.dungesSwiper.slideTo(win77.dungesSwiper.virtual.slides.length, 200, false);
+                    } else if (targetData.point === "dunge") {
+                        const newDunge = discoverDunge(e.target);
+                        // console.log(newDunge, win77.locationsSet, Array.from(win77.locationsSet));
+                        win77.dungesSwiper.virtual.appendSlide(getDungeHexMarkup(newDunge.name));
+                        win77.dungesSwiper.slideTo(win77.dungesSwiper.virtual.slides.length, 200, false);
+                    }
+                } else {
+                    // todo просто подтянуть слайдер к уже сгенерированному слайду
+                    // win77.dungesSwiper.slideTo(win77.dungesSwiper.virtual.slides.length, 200, false);
+                    console.log("Dunge already discovered", e.target);
                 }
-            } else {
-                // todo просто подтянуть слайдер к уже сгенерированному слайду
-                // win77.dungesSwiper.slideTo(win77.dungesSwiper.virtual.slides.length, 200, false);
-                console.log("Dunge already discovered", e.target);
             }
         });
 
