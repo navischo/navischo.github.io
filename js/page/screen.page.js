@@ -117,7 +117,8 @@ const SCREEN_NAMES = [
     `screen-nohud--me`,
     `screen-honud--rogue-afterlife`,
     `screen-nohud--v-plus-judy`,
-    `screen-nohud--the-end`
+    `screen-nohud--the-end`,
+    `screen-nohud--patronus`
 ];
 
 const initScreen = () => {
