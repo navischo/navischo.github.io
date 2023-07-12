@@ -1,4 +1,4 @@
-import { getRandomInt } from "../utils/getCardById.js";
+import {getCardById, getRandomInt} from "../utils/getCardById.js";
 import { win77 } from "../dne-cli.js";
 
 // ===> DATA START <=== //
@@ -105,32 +105,26 @@ const map = [
 const getRandomSector = () => win77.map[getRandomInt(4)][[`a`, `b`, `c`, `d`][getRandomInt(4)]];
 
 class Chess {
-    constructor(id, address) {
+    constructor(id, address, card, player) {
         this.id = id;
         this.address = address;
+        this.card = card;
+        this.player = player;
     }
 }
 
 const getChessId = () => {
-    if (!win77.chess) {
-        return `king`
+    if (win77.chess.size > 8) {
+        return [`T`, `H`, `E`][getRandomInt(3)];
     } else {
-        if (win77.chess.size > 8) {
-            return [`T`, `H`, `E`][getRandomInt(3)];
-        } else {
-            return `i`;
-        }
+        return `i`;
     }
 }
 
-const initChess = () => {
-    if (!win77.chess) {
-        win77.chess = new Set();
-    }
+win77.chess = new Set();
 
+const initChess = () => {
     const sector = getRandomSector();
-    sector.playersSet.add(win77.game.player);
-    sector.node.classList.add("--player-in");
 
     const chess = document.createElement("button");
     chess.classList.add("chess");
@@ -140,12 +134,34 @@ const initChess = () => {
     chess.style.top = `${getRandomInt(150)}px`;
     chess.style.left = `${getRandomInt(180)}px`;
 
-    chess.dataset.playerId = win77.game.player.id;
+    if (win77.chess.size === 0) {
+        const chessObj = new Chess(`A`, sector.node.dataset.sector, getCardById(`gm`, win77.game.catalog.all), win77.game.player);
+        sector.playersSet.add(chessObj);
+        win77.chess.add(chessObj);
 
-    sector.node.appendChild(chess);
-    win77.chess.add(new Chess(getChessId(), sector.node.dataset.sector));
+        chess.dataset.playerId = win77.game.player.id;
+        sector.node.appendChild(chess);
+        sector.node.classList.add("--player-in");
 
-    console.log(`${win77.game.player.id} enter map on sector ${sector.address}`, win77.game.player, sector, win77.chess);
+        console.log(`${win77.game.player.id} successfully enter map on sector ${sector.address}`, win77.game.player, sector, win77.chess);
+
+    } else if (win77.game.player.npc.size > 0 && win77.chess.size > 0) {
+        const chessCard = Array.from(win77.game.player.npc)[win77.chess.size - 1];
+
+        if (chessCard) {
+            const chessObj = new Chess(getChessId(), sector.node.dataset.sector, chessCard, win77.game.player);
+            sector.playersSet.add(chessObj);
+            win77.chess.add(chessObj);
+
+            chess.dataset.playerId = chessCard.name;
+            sector.node.appendChild(chess);
+            sector.node.classList.add("--player-in");
+
+            console.log(`${chessCard.name} successfully enter map on sector ${sector.address}`, win77.game.player, sector, win77.chess);
+        } else {
+            console.log(`All crew already on map`);
+        }
+    }
 }
 
 const getFreshDunge = () => {
