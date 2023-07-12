@@ -17,6 +17,7 @@ const getCardById = (id, set) => {
     }
 }
 
+// also work for Chess
 const moveCardById = (id, from, to, callback) => {
     // console.log(`Trying to move #${id} from to`, from, to);
 
