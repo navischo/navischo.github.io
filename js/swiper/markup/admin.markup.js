@@ -1,5 +1,6 @@
 const adminMarkup = `
 <div id="root" class="build"><!-- style='background: url("img/bg-profile.png")!important;'-->
+    <div class="wall"></div>
     <div class="app-skeleton">
         
         <div class="app-container">
