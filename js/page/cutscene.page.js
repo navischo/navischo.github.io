@@ -7,7 +7,8 @@ const CUTSCENE_IDS = {
     room: `room`,
     event: `event`,
     play: `play`,
-    arasaka: `arasaka`
+    arasaka: `arasaka`,
+    nightplay: `nightplay`
 };
 
 const CUTSCENE_FILES = {
@@ -18,6 +19,7 @@ const CUTSCENE_FILES = {
     event: `webm-cutscene-event.webm`,
     play: `mp4-room-play.mp4`,
     arasaka: `mp4-cutscene-arasaka.mp4`,
+    nightplay: `mp4-room-night-play.mp4`
 };
 
 const getCutsceneMarkup = (videoName) =>
