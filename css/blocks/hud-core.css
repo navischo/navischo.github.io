@@ -551,6 +551,22 @@ a {
     transition: .15s ease-in;
 }
 
+.nav__item-sublist.--right {
+    transform: translateX(0);
+    padding-left: 5px;
+    z-index: 0;
+}
+
+.nav__item .nav__link {
+    position: relative;
+    z-index: 2;
+}
+
+.nav__item:hover .nav__item-sublist.--right {
+    transform: translateX(58%);
+    z-index: 3;
+}
+
 .nav__item:hover .nav__item-sublist {
     visibility: visible;
     opacity: 1;

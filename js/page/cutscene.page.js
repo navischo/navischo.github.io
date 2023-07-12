@@ -6,7 +6,8 @@ const CUTSCENE_IDS = {
     fight: `fight`,
     room: `room`,
     event: `event`,
-    play: `play`
+    play: `play`,
+    arasaka: `arasaka`
 };
 
 const CUTSCENE_FILES = {
@@ -15,7 +16,8 @@ const CUTSCENE_FILES = {
     fight: `mp4-cutscene-fight.mp4`,
     room: `mp4-room-mario.mp4`,
     event: `webm-cutscene-event.webm`,
-    play: `mp4-room-play.mp4`
+    play: `mp4-room-play.mp4`,
+    arasaka: `mp4-cutscene-arasaka.mp4`,
 };
 
 const getCutsceneMarkup = (videoName) =>
