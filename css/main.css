@@ -34,8 +34,10 @@
 @import "blocks/sky-nav.css";
 @import "blocks/chess.css";
 @import "blocks/wall.css";
+@import "blocks/hypno.css";
 
 /*CUSTOMIZATION*/
+@import "./i-customization.css";
 @import "./cards-customization.css";
 @import "./page-customization.css";
 @import "./modals-customization.css";

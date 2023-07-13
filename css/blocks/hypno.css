@@ -1,0 +1,13 @@
+.hypno-wrap {
+    width: 620px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.hypno-input {
+    background: transparent;
+    width: 100%;
+    margin-top: 10px;
+}
