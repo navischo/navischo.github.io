@@ -8,6 +8,14 @@
     animation: glitch 5s step-end infinite alternate, glitch-skew 5s step-end infinite alternate;
 }
 
+.cybr-title a,
+.cybr-title a:hover,
+.cybr-title a:visited,
+.cybr-title a:active {
+    color: inherit;
+    text-decoration: none;
+}
+
 .cybr-action {
     font-family: "Press Start 2p", sans-serif;
     line-height: 1.2;

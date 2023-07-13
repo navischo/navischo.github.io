@@ -1,0 +1,18 @@
+.cybr-title {
+    margin: 0;
+    font-size: 3em;
+    letter-spacing: -5.2px;
+    line-height: 1.3em;
+}
+
+body {
+    /* max-width: 1200px; */
+    min-width: 1000px;
+    margin: 0 auto;
+    color: var(--color);
+    line-height: 2em;
+    text-shadow: 0px 0px 4px var(--color);
+    font-family: "Roboto", "Arial", sans-serif;
+    font-size: 16px;
+    background-color: #002939;
+}

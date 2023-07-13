@@ -1,0 +1,16 @@
+@font-face {
+    font-family: "Cyberpunk";
+    src:
+            url(https://assets.codepen.io/2585/Cyberpunk-Regular.svg#Cyberpunk) format('svg'),
+            url(https://assets.codepen.io/2585/Cyberpunk-Regular.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --color: #11dbab;
+    --light-color: #5ff3d0;
+    --transparent-color: rgba(17, 219, 171, 0.21);
+    --dark-color: #0a7c61;
+    --skew: 1deg;
+}
