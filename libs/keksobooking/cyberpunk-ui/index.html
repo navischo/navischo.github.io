@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PEN CYBERPUNK-UI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="cyberpunk-ui">
+<div class="flex row w-100 ml-2" style="max-width:1200px;">
+    <div class="column w-65 p-1">
+        <h2 class="play-once">Character</h2>
+        <div class="row w-100">
+            <div class="field w-59">
+                <label class="glow text">Name</label>
+                <input type="text" pattern="\w+" />
+            </div>
+            <div class="field w-39">
+                <label class="glow text">Metatype</label>
+                <select>
+                    <option value="human">Human</option>
+                    <option value="human">Dwarf</option>
+                    <option value="human">Elf</option>
+                    <option value="human">Orc</option>
+                    <option value="human">Troll</option>
+                </select>
+            </div>
+        </div>
+        <div class="flex row w-100 justify-space-between flex-wrap">
+            <div class="field w-24 error">
+                <label class="glow text">Height</label>
+                <input />
+            </div>
+            <div class="field w-24" data-unit="Lbs">
+                <label class="glow text">Weight</label>
+                <input type="number" />
+            </div>
+            <div class="field w-24">
+                <label class="glow text">Sex</label>
+                <input />
+            </div>
+            <div class="field w-24" data-unit="Yrs">
+                <label class="glow text">Age</label>
+                <input type="number" />
+            </div>
+        </div>
+        <h2>ATTRIBUTES</h2>
+        <div class="yellow mb-1">
+            <div class="flex row w-100 justify-space-between">
+                <div class="field w-24">
+                    <label class="glow text">BOD</label>
+                    <input type="number" />
+                </div>
+                <div class="field w-24">
+                    <label class="glow text">AGI</label>
+                    <input type="number" />
+                </div>
+                <div class="field w-24">
+                    <label class="glow text">REA</label>
+                    <input type="number" />
+                </div>
+                <div class="field w-24">
+                    <label class="glow text">STR</label>
+                    <input type="number" />
+                </div>
+            </div>
+            <div class="flex row w-100 justify-space-between">
+                <div class="field w-24">
+                    <label class="glow text">WIL</label>
+                    <input type="number" />
+                </div>
+                <div class="field w-24">
+                    <label class="glow text">LOG</label>
+                    <input type="number" />
+                </div>
+                <div class="field w-24">
+                    <label class="glow text">INT</label>
+                    <input type="number" />
+                </div>
+                <div class="field w-24">
+                    <label class="glow text">CHA</label>
+                    <input type="number" />
+                </div>
+            </div>
+            <div class="flex row w-100 justify-space-between">
+                <div class="field w-24">
+                    <label class="glow text">EDG</label>
+                    <input type="number" />
+                </div>
+                <div class="field w-24">
+                    <label class="glow text">ESS</label>
+                    <input type="number" />
+                </div>
+                <div class="field w-24">
+                    <label class="glow text">MAG/RES</label>
+                    <input type="number" />
+                </div>
+                <div class="w-24"></div>
+            </div>
+        </div>
+        <h2></h2>
+        <div class="flex row mt-1">
+            <button class="green">Accept</button>
+            <button class="red">Cancel</button>
+            <button class="blue">Info</button>
+            <button class="yellow">WARN</button>
+        </div>
+    </div>
+
+    <div class="flex column w-32 p-1">
+        <h2>Gear</h2>
+        <div class="flex column mb-1 hoverable">
+            <div class="glow text flex row justify-space-between">
+                <strong>
+                    Ares Predator II
+                </strong>
+                <strong>
+                    ¥800
+                </strong>
+            </div>
+            <div class="glow flex column p-1 pb-2">
+                <div class="flex row justify-space-between flex-wrap">
+                    <div class="flex column">
+                        <strong>DV</strong>
+                        <span class="glow text">12</span>
+                    </div>
+                    <div class="flex column px-1">
+                        <strong>MODES</strong>
+                        <span class="glow text">SA/BF</span>
+                    </div>
+                    <div class="flex column px-1">
+                        <strong>AR</strong>
+                        <span class="glow text">9/9/7/-/-</span>
+                    </div>
+                    <div class="flex column px-1">
+                        <strong>AMMO</strong>
+                        <span class="glow text">15(c)</span>
+                    </div>
+                    <div class="flex column px-1">
+                        <strong>AVAIL</strong>
+                        <span class="glow text">2(L)</span>
+                    </div>
+                </div>
+            </div>
+            <div class="flex row module right-bottom reveal mt-2">
+                <button class="fill">
+                    ¥ BUY
+                </button>
+            </div>
+        </div>
+        <div class="flex column mb-1 hoverable yellow">
+            <div class="flex column module right reveal mt-2">
+                <button class="green fill">
+                    BUY
+                </button>
+                <button class="blue fill">
+                    SAVE
+                </button>
+            </div>
+            <div class="flex justify-space-between w-100 glow text">
+                <strong>
+                    Ares Predator II
+                </strong>
+                <strong>
+                    ¥800
+                </strong>
+            </div>
+            <div class="glow flex row justify-space-between p-1 pb-2 flex-wrap">
+                <div class="flex column px-1">
+                    <strong>DV</strong>
+                    <span class="glow text">12</span>
+                </div>
+                <div class="flex column px-1">
+                    <strong>MODES</strong>
+                    <span class="glow text">SA/BF</span>
+                </div>
+                <div class="flex column px-1">
+                    <strong>AR</strong>
+                    <span class="glow text">9/9/7/-/-</span>
+                </div>
+                <div class="flex column px-1">
+                    <strong>AMMO</strong>
+                    <span class="glow text">15(c)</span>
+                </div>
+                <div class="flex column px-1">
+                    <strong>AVAIL</strong>
+                    <span class="glow text">2(L)</span>
+                </div>
+            </div>
+        </div>
+        <div class="flex column mb-1 hoverable blue">
+            <div class="flex row module bottom reveal mt-2">
+                <button class="green fill">
+                    BUY
+                </button>
+                <button class="blue fill">
+                    SAVE
+                </button>
+            </div>
+            <div class="flex justify-space-between w-100 glow text">
+                <strong>
+                    Ares Predator II
+                </strong>
+                <strong>
+                    ¥800
+                </strong>
+            </div>
+            <div class="glow flex row justify-space-between p-1 pb-2 flex-wrap">
+                <div class="flex column px-1">
+                    <strong>DV</strong>
+                    <span class="glow text">12</span>
+                </div>
+                <div class="flex column px-1">
+                    <strong>MODES</strong>
+                    <span class="glow text">SA/BF</span>
+                </div>
+                <div class="flex column px-1">
+                    <strong>AR</strong>
+                    <span class="glow text">9/9/7/-/-</span>
+                </div>
+                <div class="flex column px-1">
+                    <strong>AMMO</strong>
+                    <span class="glow text">15(c)</span>
+                </div>
+                <div class="flex column px-1">
+                    <strong>AVAIL</strong>
+                    <span class="glow text">2(L)</span>
+                </div>
+            </div>
+        </div>
+        <div class="flex column mb-1 hoverable red">
+            <div class="flex column module left reveal mt-2">
+                <button class="green fill">
+                    BUY
+                </button>
+                <button class="blue fill">
+                    SAVE
+                </button>
+            </div>
+            <div class="flex justify-space-between w-100 glow text">
+                <strong>
+                    Ares Predator II
+                </strong>
+                <strong>
+                    ¥800
+                </strong>
+            </div>
+            <div class="glow flex row justify-space-between p-1 pb-2 flex-wrap">
+                <div class="flex column px-1">
+                    <strong>DV</strong>
+                    <span class="glow text">12</span>
+                </div>
+                <div class="flex column px-1">
+                    <strong>MODES</strong>
+                    <span class="glow text">SA/BF</span>
+                </div>
+                <div class="flex column px-1">
+                    <strong>AR</strong>
+                    <span class="glow text">9/9/7/-/-</span>
+                </div>
+                <div class="flex column px-1">
+                    <strong>AMMO</strong>
+                    <span class="glow text">15(c)</span>
+                </div>
+                <div class="flex column px-1">
+                    <strong>AVAIL</strong>
+                    <span class="glow text">2(L)</span>
+                </div>
+            </div>
+        </div>
+        <div class="flex column hoverable purple">
+            <div class="flex row module bottom-right reveal mt-2">
+                <button class="green fill">
+                    BUY
+                </button>
+                <button class="blue fill">
+                    SAVE
+                </button>
+            </div>
+            <div class="flex justify-space-between w-100 glow text">
+                <strong>
+                    Ares Predator II
+                </strong>
+                <strong>
+                    ¥800
+                </strong>
+            </div>
+            <div class="glow flex row justify-space-between p-1 pb-2 flex-wrap">
+                <div class="flex column px-1">
+                    <strong>DV</strong>
+                    <span class="glow text">12</span>
+                </div>
+                <div class="flex column px-1">
+                    <strong>MODES</strong>
+                    <span class="glow text">SA/BF</span>
+                </div>
+                <div class="flex column px-1">
+                    <strong>AR</strong>
+                    <span class="glow text">9/9/7/-/-</span>
+                </div>
+                <div class="flex column px-1">
+                    <strong>AMMO</strong>
+                    <span class="glow text">15(c)</span>
+                </div>
+                <div class="flex column px-1">
+                    <strong>AVAIL</strong>
+                    <span class="glow text">2(L)</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal glow" hidden>
+    <header>
+        Complete this purchase?
+    </header>
+    <section>
+
+    </section>
+    <footer>
+        <button class="cancel">
+            Cancel
+        </button>
+        <button class="accept">
+            Yes
+        </button>
+    </footer>
+</div>
+</body>
+</html>

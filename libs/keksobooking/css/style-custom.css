@@ -1,6 +1,9 @@
 @import "./style.css";
 @import "./dne-global.css";
+
 @import "../../../css/blocks/cybr-title.css";
+@import "../cyberpunk-ui/style.css";
+
 @import "./dne-customization.css";
 
 
