@@ -2,6 +2,7 @@
 @import "./dne-global.css";
 
 @import "../../../css/blocks/cybr-title.css";
+@import "../../../css/blocks/custom-scrollbar.css";
 @import "../cyberpunk-ui/style.css";
 
 @import "./dne-customization.css";

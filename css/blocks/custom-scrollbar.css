@@ -1,0 +1,37 @@
+.custom-scrollbar {
+    -webkit-overflow-scrolling: inherit;
+    transform: translate3d(0, 0, 0);
+}
+
+.custom-scrollbar.--x {
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.custom-scrollbar.--y {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    height: 9px;
+    width: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-button:end:increment,
+.custom-scrollbar::-webkit-scrollbar-button:start:decrement {
+    background: 0 0;
+    display: none;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track-piece {
+    background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:horizontal,
+.custom-scrollbar::-webkit-scrollbar-thumb:vertical {
+    background: var(--colors-tertiary--500);
+    border-radius: 5px;
+    display: block;
+    height: 50px;
+}

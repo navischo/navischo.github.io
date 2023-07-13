@@ -67,3 +67,13 @@ option {
     margin-right: 0;
     margin-bottom: 14px;
 }
+
+.custom-scrollbar::-webkit-scrollbar {
+    width: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:horizontal,
+.custom-scrollbar::-webkit-scrollbar-thumb:vertical {
+    background: yellow;
+    border-radius: 0;
+}
