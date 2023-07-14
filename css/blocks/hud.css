@@ -366,20 +366,35 @@ body {
     right: 55px;
     z-index: 21;
 
+    width: 200px;
+    padding-top: 19px;
+
     color: inherit;
     font-family: "JetBrains Mono", monospace;
     font-size: 14px;
+    text-align: right;
 }
 
-.units-skill {
+.units-skill,
+.units-bankroll,
+.units-energy {
     position: relative;
+    padding-left: 24px;
+}
+
+.units-bankroll {
+    padding-left: 40px;
+}
+
+.units-energy {
+    padding-left: 17px;
 }
 
 .units-skill::before {
     content: "";
 
     position: absolute;
-    left: -24px;
+    left: 0;
     top: 50%;
     transform: translateY(-50%);
 
@@ -397,8 +412,10 @@ body {
 .units-energy::before {
     content: "⚡";
 
-    position: relative;
-    top: 2px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
 
     font-size: 1.4em;
 }
@@ -406,8 +423,9 @@ body {
 .units-bankroll::before {
     content: "💳";
 
-    position: relative;
-    /*top: -4px;*/
+    position: absolute;
+    left: 0;
+    top: -16px;
 
     font-size: 2em;
 }

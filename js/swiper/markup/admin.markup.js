@@ -206,7 +206,7 @@ const profileMarkup = `
                 <input type="text" class="profile-field__input" value="TECHIE">
             </div>
             <div class="profile-field">
-                <h4 class="profile-field__label" data-advice-id="specialDia">SPECIAL DIA</h4>
+                <h4 class="profile-field__label" data-advice-id="dia">SPECIAL DIA</h4>
                 <input type="text" class="profile-field__input" value="DRAW">
                 <input type="text" class="profile-field__input" value="CODE">
                 <input type="text" class="profile-field__input" value="PLAY MUSIC">
