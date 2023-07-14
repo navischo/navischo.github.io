@@ -1,4 +1,6 @@
 .hypno-wrap {
+    display: none;
+
     width: 620px;
     position: absolute;
     top: 40%;

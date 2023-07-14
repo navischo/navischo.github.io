@@ -8,7 +8,8 @@
     transform: translateY(0) scale(1);
 
     background-attachment: fixed;
-    background-image: url(../../img/bg-wall.jpg);
+    /*background-image: url(../../img/bg-wall.jpg);*/
+    background-image: url(../../img/layout-week.png);
     background-repeat: no-repeat;
     background-size: cover;
 
