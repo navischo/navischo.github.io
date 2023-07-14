@@ -83,6 +83,14 @@ class DNECli {
         this.pokeButton.dia.drawCard(cardParent, getCardElement, cardData);
         console.log(cardData.id, cardParent);
     }
+
+    getEnergyPointsFromPlayer(count) {
+        this.game.player.balance.energy = this.game.player.balance.energy - count;
+    }
+
+    giveEnergyPointsToPlayer(count) {
+        this.game.player.balance.energy = this.game.player.balance.energy + count;
+    }
 }
 
 const win77 = new DNECli();

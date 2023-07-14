@@ -16,6 +16,7 @@ import {openPopup} from "../popup/dom.popup.jquery.js";
 import {initOneMoreBtn} from "../utils/initOneMoreBtn.js";
 import {logIncome} from "../utils/logIncome.js";
 import {sendInvite} from "../utils/sendInvite.js";
+import {makeWallSprayable} from "../utils/makeWallSprayable.js";
 
 
 const initHandlers = (cardData, controls) => {
@@ -44,17 +45,19 @@ const initHandlers = (cardData, controls) => {
                 moveCardById(cardData.id, catalog, win77.game.player[cardData.type]);
                 initInventory();
 
-                // todo makeWallSpreyable.util.js
-                const wall = document.querySelector(".js-wall");
-                if (wall && isSetHasId(win77.game.player.class, "class-writer")) {
-                    wall.classList.add("--sprayable");
-                }
+                makeWallSprayable();
             } else if (isItDiaCard) {
                 win77.getSkillPointsFromPlayer(1);
                 win77.updBalanceHUD();
                 moveCardById(cardData.id, catalog, win77.game.player[cardData.type]);
                 initInventory();
             }
+        }
+
+        if (isSetHasId(win77.game.player.dia, cardData.id)) {
+            // win77.getEnergyPointsFromPlayer(1);
+            win77.giveEnergyPointsToPlayer(cardData.bonus);
+            win77.updBalanceHUD();
         }
 
         const body = document.querySelector("body");
