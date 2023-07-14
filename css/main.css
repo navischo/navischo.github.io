@@ -36,6 +36,8 @@
 @import "blocks/wall.css";
 @import "blocks/hypno.css";
 @import "blocks/custom-scrollbar.css";
+@import "blocks/week.css";
+@import "blocks/your-day.css";
 
 /*CUSTOMIZATION*/
 @import "./i-customization.css";

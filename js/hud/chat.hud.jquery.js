@@ -377,6 +377,33 @@ const initProfile = () => {
         // },
     });
 
+    win77.weekSwiper = new Swiper(".swiper.--week", {
+        slidesPerView: 6,
+        spaceBetween: 8,
+        navigation: {
+            nextEl: '.your-day-next',
+            prevEl: '.your-day-prev',
+        },
+    });
+
+    const weekTabs = document.querySelectorAll(".js-swipe-to-week");
+    weekTabs.forEach((weekTab) => {
+        weekTab.addEventListener("click", (e) => {
+            win77.weekSwiper.slideTo(+e.target.dataset.weekNumber * 6, 200, false);
+        });
+    });
+
+    win77.weekSwiper.on('slideChange', function () {
+        const weekNumber = Math.floor(win77.weekSwiper.activeIndex / 6);
+        weekTabs.forEach((weekTab, index) => {
+            weekTab.classList.remove("--current");
+
+            if (weekNumber === index) {
+                weekTab.classList.add("--current");
+            }
+        });
+    });
+
     initLocations();
     initDirect();
 

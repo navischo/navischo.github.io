@@ -48,6 +48,17 @@
 /*    left: 50%;*/
 /*}*/
 
+.swiper.--week {
+    width: 72vw;
+    height: 530px;
+    padding-top: 65px;
+    margin: 0;
+}
+
+.swiper.--week .swiper-slide {
+
+}
+
 .append-buttons {
     /*position: fixed;*/
     /*left: 50%;*/
