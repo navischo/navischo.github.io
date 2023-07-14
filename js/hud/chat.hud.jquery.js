@@ -385,9 +385,9 @@ const initProfile = () => {
 
     const wall = document.querySelector(".js-wall");
     isSetHasId(win77.game.player.class, "class-writer") ? wall.classList.add("--sprayable") : "";
-    wall.addEventListener("click", () => {
-        wall.remove();
-    });
+    // wall.addEventListener("click", () => {
+    //     wall.remove();
+    // });
 }
 
 initProfile();
