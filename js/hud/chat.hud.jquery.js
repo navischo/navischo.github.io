@@ -2,7 +2,8 @@ import { getLocationDataMarkup } from "../inInteraction/interface.inInteraction.
 import { win77 } from "../dne-cli.js";
 import { ADVICES, drawAdvice } from "../page/advice.page.js";
 import { getRandomInt } from "../utils/getCardById.js";
-import {adminMarkup, profileMarkup} from "../swiper/markup/admin.markup.js";
+import { adminMarkup } from "../swiper/markup/admin.markup.js";
+import { adminProfileMarkup } from "../swiper/markup/admin/adminProfile.markup.js";
 import { drawLootCards } from "../cards/dom.cards.js";
 import { getDialogOptionMarkup } from "./dialogCli.hud.js";
 import { isSetHasId } from "../utils/isSetHasId.js";
@@ -288,51 +289,6 @@ const initDialog = (dialog, parent = null) => {
     drawDialog(dialogData, parent);
 }
 
-const initProfile = () => {
-    const root = document.querySelector("#root");
-    const wall = root.querySelector(".js-wall");
-    const appDOM = {
-        root: root,
-        a: root.querySelector(".app-a"),
-        main: root.querySelector(".app-main"),
-        b: root.querySelector(".app-b"),
-    }
-
-    isSetHasId(win77.game.player.class, "class-writer") ? wall.classList.add("--sprayable") : "";
-    wall.addEventListener("click", () => {
-        wall.remove();
-    });
-
-
-    // const inventoryMenu = document.querySelector(".js-inventory-menu");
-    // win77.game.player.loot.forEach((lootItem) => {
-        // inventoryMenu.appendChild(lootItem)
-    // });
-
-    const openBtn = document.querySelector(".js-open-profile");
-    openBtn.addEventListener("click", () => {
-        // root.innerHTML = "";
-        // root.classList.add("bg-profile");
-        root.innerHTML = "";
-        root.innerHTML = profileMarkup;
-        drawLootCards(win77.game.player.loot, ".js-inventory-menu");
-        drawLootCards(win77.game.player.npc, ".js-crew-menu");
-
-        const backBtnArr = document.querySelectorAll(".js-open-direct");
-        backBtnArr.forEach((backBtn) => {
-            backBtn.addEventListener("click", () => {
-                root.innerHTML = "";
-                root.innerHTML = adminMarkup;
-                initLocations();
-                initDirect();
-                initProfile();
-            });
-        });
-    });
-}
-
-initProfile();
-
 const initLocations = () => {
     const locationsParent = document.querySelector(".js-locations");
     const getLocationItemMarkup = (name) => `
@@ -361,7 +317,7 @@ const initLocations = () => {
         });
 }
 
-initLocations();
+// initLocations();
 
 const initDirect = () => {
     const directParent = document.querySelector(".js-direct");
@@ -381,13 +337,59 @@ const initDirect = () => {
     initDirectsList();
 }
 
-initDirect();
+// initDirect();
 
-const addNewSlideButton = document.querySelector(".js-add-slide");
-addNewSlideButton.addEventListener("click", () => {
-    win77.swiper.virtual.prependSlide([
-        `hello world`
-    ]);
-});
+const initNewSlideBtn = () => {
+    const addNewSlideButton = document.querySelector(".js-add-slide");
+    addNewSlideButton.addEventListener("click", () => {
+        win77.swiper.virtual.prependSlide([
+            `hello world`
+        ]);
+    });
+}
+
+const initProfile = () => {
+    const root = document.querySelector("#root-direct");
+    const appDOM = {
+        root: root,
+        a: root.querySelector(".app-a"),
+        main: root.querySelector(".app-main"),
+        b: root.querySelector(".app-b"),
+    }
+
+
+    // const inventoryMenu = document.querySelector(".js-inventory-menu");
+    // win77.game.player.loot.forEach((lootItem) => {
+        // inventoryMenu.appendChild(lootItem)
+    // });
+
+    win77.adminSwiper = new Swiper(".swiper.--sub", {
+        direction: "vertical",
+        spaceBetween: 50,
+        effect: "flip",
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        // pagination: {
+        //     el: ".swiper-pagination",
+        //     clickable: true,
+        // },
+    });
+
+    initLocations();
+    initDirect();
+
+    drawLootCards(win77.game.player.loot, ".js-inventory-menu");
+    drawLootCards(win77.game.player.npc, ".js-crew-menu");
+
+    const wall = document.querySelector(".js-wall");
+    isSetHasId(win77.game.player.class, "class-writer") ? wall.classList.add("--sprayable") : "";
+    wall.addEventListener("click", () => {
+        wall.remove();
+    });
+}
+
+initProfile();
 
 export { DIALOGS, TITLES_OF_DIALOGS, initDialog, initProfile, getMessageMarkup, initInteractiveDialog, chooseOption };

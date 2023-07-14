@@ -26,6 +26,28 @@
     top: 96% !important;
 }
 
+.swiper-button-next.--up {
+    top: 45px!important;
+    transform: translate(-100%, 0) rotate(-90deg);
+/* transform: rotate(-90deg); */
+    left: 50%;
+}
+
+.swiper-button-prev.--up {
+    top: 45px!important;
+    transform: translate(100%, 0) rotate(-90deg);
+    /* transform: rotate(-90deg); */
+    left: 50%;
+}
+
+/*.swiper-button-prev.--down {*/
+/*    top: auto!important;*/
+/*    bottom: 15px;*/
+/*    transform: translate(-50%, 0) rotate(-90deg);*/
+/*    !* transform: rotate(-90deg); *!*/
+/*    left: 50%;*/
+/*}*/
+
 .append-buttons {
     /*position: fixed;*/
     /*left: 50%;*/

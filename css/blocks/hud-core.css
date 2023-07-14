@@ -16,17 +16,17 @@
     color: white;
 }
 
-#root * {
+.root-admin * {
     box-sizing: border-box;
     /*position: relative;*/
 }
 
-#root .button,
-#root input {
+.root-admin .button,
+.root-admin input {
     position: relative;
 }
 
-#root {
+.root-admin {
 
 
     background-color: var(--colors-bg--500);
@@ -49,7 +49,7 @@ a {
     text-decoration: none;
 }
 
-#root.bg-profile {
+.root-admin.bg-profile {
     background: url("../img/bg-profile.png");
 }
 
