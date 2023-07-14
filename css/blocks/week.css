@@ -1,6 +1,6 @@
 .week-wrap {
     background-color: var(--colors-bg--500);
-    background-image: radial-gradient( ellipse at 33% 10%, #461616 0%, transparent 75% );
+    /*background-image: radial-gradient( ellipse at 33% 10%, #461616 0%, transparent 75% );*/
     background-repeat: no-repeat;
     /*color: var(--colors-on_bg--500);*/
     color: white;
@@ -16,7 +16,7 @@
     left: 0;
     z-index: 0;
 
-    background: url("../../img/bg-asphalt.jpg");
+    /*background: url("../../img/bg-asphalt.jpg");*/
     background-size: cover;
     opacity: .2;
 }

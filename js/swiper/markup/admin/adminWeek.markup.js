@@ -24,7 +24,7 @@ const adminWeekMarkup =
                 <img src="img/img-car-week.png" class="week__car-preview-img" alt="">
             </div>
             <div class="week__main">
-                <div class="swiper --week">
+                <div class="js-your-days-touch swiper --week">
                     <div class="swiper-wrapper">
                       ${concatYourDaysMarkup()}
                       ${concatYourDaysMarkup()}

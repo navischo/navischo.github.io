@@ -404,6 +404,19 @@ const initProfile = () => {
         });
     });
 
+    // const weekSwiperTouch = document.querySelector(".js-your-days-touch");
+    // weekSwiperTouch.addEventListener("click", (e) => {
+    //     console.log(e.target);
+    //
+    //     if (e.target.classList.contains("your-your-day__first")) {
+    //         e.target.classList.add("--cross");
+    //     }
+    //
+    //     if (e.target.classList.contains("your-day__second")) {
+    //         e.target.classList.add("--round");
+    //     }
+    // });
+
     initLocations();
     initDirect();
 
