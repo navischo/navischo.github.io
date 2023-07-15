@@ -1,0 +1,38 @@
+.your-event {
+    padding: 20px 30px;
+}
+
+.your-event__title {
+    margin: 0;
+    margin-bottom: 20px;
+
+    font-size: 55px;
+}
+
+.your-event__day {
+    font-size: 36px;
+    text-transform: uppercase;
+}
+
+.your-event__require-list {
+    margin-top: 194px; /*t*/
+
+    font-family: "JetBrains Mono", sans-serif;
+    font-size: 32px;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: -2.1px;
+}
+
+.your-event__require-item + .your-event__require-item {
+    margin-top: 12px;
+}
+
+.your-event__require-item {
+    display: flex;
+    margin: 0;
+}
+
+.your-event__require-label {
+    margin-right: auto;
+}

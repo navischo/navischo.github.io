@@ -19,7 +19,7 @@ const concatYourDaysMarkup = () => {
 const adminWeekMarkup =
     `<div class="js-wall wall week-wrap">
         <section class="week">
-            <h2 class="week__title">Sunday</h2>
+            <h2 class="js-day-name week__title">Sunday</h2>
             <div class="week__car-preview">
                 <img src="img/img-car-week.png" class="week__car-preview-img" alt="">
             </div>
@@ -40,7 +40,7 @@ const adminWeekMarkup =
                         <button class="your-day-next">NEXT</button>
                     </div>
                 </div>
-                <div class="week__event"></div>
+                <div class="js-current-event week__event"></div>
             </div>
         </section>
         <div class="hypno-wrap">

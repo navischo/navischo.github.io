@@ -5,6 +5,7 @@ import {getCardById, getRandomInt, moveCardById} from "../utils/getCardById.js";
 import { initInventory } from "../hud/inventory.hud.js";
 import { parseCost } from "../utils/parseCost.js";
 import { ContainerIn } from "../utils/initContainer.js";
+import { initCalendar } from "../hud/calendar.hud.js";
 
 //=> 0. Все карты(кроме неукомплектованных), в любом кол-ве копий [done]
 //=> 1. Строгая коллекция специально для этой игры, без дублей [done]
@@ -140,7 +141,8 @@ const initPlayer = () => {
         cars: new Set(),
         cardsInRentIdSet: new Set(),
         availableLocations: ["summer"],
-        currentQuest: null
+        currentQuest: null,
+        calendar: initCalendar()
     };
 
     moveCardById("car-cosmos-track", win77.game.catalog.anti, player.cars);

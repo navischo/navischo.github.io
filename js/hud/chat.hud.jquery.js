@@ -7,6 +7,7 @@ import { adminProfileMarkup } from "../swiper/markup/admin/adminProfile.markup.j
 import { drawLootCards } from "../cards/dom.cards.js";
 import { getDialogOptionMarkup } from "./dialogCli.hud.js";
 import { isSetHasId } from "../utils/isSetHasId.js";
+import { drawCurrentEvent, trackYourDays } from "./calendar.hud.js";
 
 // const DEFAULT_TIP = `
 // Прототип інтерфейсу взаємодії між гравцем та навколишнім світом натхненний Cyberpunk 2077.
@@ -403,6 +404,11 @@ const initProfile = () => {
             }
         });
     });
+
+    drawCurrentEvent();
+    trackYourDays();
+    win77.finishDay();
+    win77.setCurrentDay();
 
     // const weekSwiperTouch = document.querySelector(".js-your-days-touch");
     // weekSwiperTouch.addEventListener("click", (e) => {

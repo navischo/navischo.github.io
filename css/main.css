@@ -38,6 +38,7 @@
 @import "blocks/custom-scrollbar.css";
 @import "blocks/week.css";
 @import "blocks/your-day.css";
+@import "blocks/your-event.css";
 
 /*CUSTOMIZATION*/
 @import "./i-customization.css";
