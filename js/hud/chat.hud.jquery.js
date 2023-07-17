@@ -364,7 +364,7 @@ const initProfile = () => {
         // inventoryMenu.appendChild(lootItem)
     // });
 
-    win77.adminSwiper = new Swiper(".swiper.--sub", {
+    win77.adminSwiper = new Swiper("#admin-swiper", {
         direction: "vertical",
         spaceBetween: 50,
         effect: "flip",

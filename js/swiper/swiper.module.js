@@ -82,6 +82,21 @@ swiper.virtual.prependSlide([
     adminMarkup,
     cardCatalogMarkup
 ]);
+
+win77.eventSwiper = new Swiper("#event-swiper", {
+    direction: "vertical",
+    spaceBetween: 50,
+    effect: "flip",
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    // pagination: {
+    //     el: ".swiper-pagination",
+    //     clickable: true,
+    // },
+});
+
 swiper.on('slideChange', function (e) {
     if (Object.keys(PAGES_ID)[e.activeIndex]) {
         const pageName = Object.keys(PAGES_ID)[e.activeIndex];
