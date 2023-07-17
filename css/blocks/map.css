@@ -25,6 +25,8 @@
 }
 
 .map__logo {
+    position: relative;
+
     max-width: 70%;
     padding-top: 100px;
 }

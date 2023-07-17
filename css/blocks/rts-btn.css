@@ -10,7 +10,20 @@
     transition: .2s ease-in-out;
 }
 
-#rts-btn {
+.map__rts-btn-wrap {
+    visibility: visible;
+    opacity: 1;
+
+    position: absolute;
+    top: 55px;
+    left: 50%;
+    z-index: 39;
+    transform: translate(-50%, 50%) scale(.7);
+    transition: .2s ease-in-out;
+    white-space: nowrap;
+}
+
+.rts-btn {
     padding: 0;
     border: none;
     background: none;
