@@ -17,7 +17,14 @@ const adminMarkup = `
             ${adminDirectMarkup}
         </div>
     </div>
-    <div class="swiper-slide">Vertical Slide 4</div>
+    <div class="swiper-slide">
+        <div class="sky-nav">
+            <a class="sky-nav-item"><span class="sky-nav-item__text">HEALTH</span></a>
+            <a class="sky-nav-item"><span class="sky-nav-item__text">TECH</span></a>
+            <a class="sky-nav-item"><span class="sky-nav-item__text">CREATIVE</span></a>
+            <a class="sky-nav-item"><span class="sky-nav-item__text">BANKROLL</span></a>
+        </div>
+    </div>
     <div class="swiper-slide">Vertical Slide 5</div>
   </div>
   <div class="swiper-button-next --up"></div>
