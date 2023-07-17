@@ -72,7 +72,8 @@ a {
 .avatar {
     position: relative;
 
-    width: 420px;
+    /*width: 420px;*/
+    width: 600px;
     border: 10px solid black;
     margin: 0 auto;
 }

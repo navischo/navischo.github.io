@@ -6,7 +6,7 @@ const markup = `
 <div class="js-balance">
     <a class="js-skill-points-balance units-skill" data-advice-id="souls">3</a>
     <a class="js-bankroll-balance units-bankroll" data-advice-id="bankroll">12000</a>
-    <a class="js-energy-balance units-energy fw-d-none" data-advice-id="energy">40</a>
+    <a class="js-energy-balance units-energy fw-d-none" data-advice-id="energy">7</a>
  </div>
 <div class="controls">
 

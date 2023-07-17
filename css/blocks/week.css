@@ -44,7 +44,8 @@
 }
 
 .week__title.--large {
-    font-size: 342px;
+    /*font-size: 342px;*/
+    font-size: 292px;
 }
 
 .week__main {

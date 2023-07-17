@@ -1,5 +1,6 @@
-import {getCardById, getRandomInt, moveCardById} from "../utils/getCardById.js";
+import { getCardById, getRandomInt, moveCardById } from "../utils/getCardById.js";
 import { win77 } from "../dne-cli.js";
+import { updBalanceNode } from "../hud/balance.hud.js";
 
 // ===> DATA START <=== //
 
@@ -224,7 +225,10 @@ const moveChess = (chessId, nextAddress) => {
         nextSectorObj.node.classList.add("--player-in");
     }
 
-    console.log(`${win77.game.player.id} move ${chessToMove.id} to ${nextAddress} from ${lastAddress}`);
+    win77.getEnergyPointsFromPlayer(1);
+    updBalanceNode();
+
+    console.log(`${win77.game.player.id} move ${chessToMove.id} to ${nextAddress} from ${lastAddress} using 1⚡`);
 }
 
 const getFreshDunge = () => {

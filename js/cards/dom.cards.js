@@ -17,6 +17,7 @@ import {initOneMoreBtn} from "../utils/initOneMoreBtn.js";
 import {logIncome} from "../utils/logIncome.js";
 import {sendInvite} from "../utils/sendInvite.js";
 import {makeWallSprayable} from "../utils/makeWallSprayable.js";
+import {getEnergyForExtraSound} from "../utils/getEnergyForExtraSound.js";
 
 
 const initHandlers = (cardData, controls) => {
@@ -64,6 +65,7 @@ const initHandlers = (cardData, controls) => {
         if (isSetHasId(win77.game.player.sound, cardData.id) && body.dataset.hash === "play") {
             const id = cardData.id;
             const bonus = cardData.bonus;
+            getEnergyForExtraSound(); // experiment
             moveCardById(id, win77.game.player.sound, win77.game.table);
             updTable();
 
@@ -217,6 +219,7 @@ const updHand = () => {
             const bonus = +(card.querySelector(".card__bonus").textContent);
             // console.log(win77);
             openWithTimer();
+            getEnergyForExtraSound(); // experiment
             moveCardById(id, win77.game.player.hand, win77.game.table);
             updTable();
 

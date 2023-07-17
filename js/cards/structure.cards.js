@@ -128,7 +128,7 @@ const initPlayer = () => {
         id: savedLogin ? savedLogin : "navi",
         lvl: savedLvl ? savedLvl : 0,
         balance: {
-            energy: 40,
+            energy: 7,
             bankroll: savedBankroll ? savedBankroll : 14000,
             skillPoints: 3
         },
