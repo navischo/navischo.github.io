@@ -100,6 +100,14 @@
     background-position: center;
 }
 
+.card__preview[href]:hover {
+    cursor: zoom-in;
+}
+
+[data-advice-id]:hover {
+    cursor: help;
+}
+
 .card__controls {
     position: absolute;
     bottom: 0;

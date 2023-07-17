@@ -4,23 +4,23 @@ const getCardElement = (cardData) => {
     newCard.id = `dne-card-${cardData.id}`;
 
     newCard.innerHTML = `
-<article class="card" data-advice-id="${cardData.type}">
+<article class="card">
     <div class="js-card-controls card__controls">
         <button>+</button>
     </div>
     <header class="card__header">
         <div class="card__header-left">
             <small class="js card__id">#${cardData.id}</small>
-            <h2 class="card__title">${cardData.name}</h2>
+            <h2 class="card__title">${cardData.name}</h2><!-- data-advice-id="${cardData.type}" -->
             <small class="card__limits">${cardData.limits}</small>
         </div>
         <div class="card__header-right">
             ${cardData.bonus !== 0 ? `<b class="card__bonus">+${cardData.bonus}</b>` : ``}
         </div>
     </header>
-    <div class="card__preview">
+    <a class="card__preview" ${cardData.credits ? `href="${cardData.credits}" target="_blank"` :  ``}>
         <img class="card__preview-img" src="" alt="">
-    </div>
+    </a>
     <p class="card__description">${cardData.longline ? cardData.longline : cardData.description.slice(0, 50)}</p>
     <footer class="card__footer">
         ${cardData.cost !== 0 ? `<b class="card__price">${cardData.cost}</b>` : ``}
