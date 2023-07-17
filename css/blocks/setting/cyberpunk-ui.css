@@ -1,17 +1,16 @@
-html,
-body {
+.cp-body {
     background: #002939;
     font: 62.5%/1.4 Hack, monospace;
 }
 
-body {
+.cp-body {
     color: white;
     font-size: 1.6em;
 }
 
 input,
 select,
-button {
+.cp-button {
     appearance: none;
     background: none;
     border: none;
@@ -1787,12 +1786,12 @@ button {
     --skew: 1deg;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+.cp-h1,
+.cp-h2,
+.cp-h3,
+.cp-h4,
+.cp-h5,
+.cp-h6 {
     color: var(--color);
     line-height: 1.1em;
     margin-bottom: 0.4em;
@@ -1801,12 +1800,12 @@ h6 {
     text-shadow: 0 0 2px var(--light-color);
     text-transform: uppercase;
 }
-h1:empty,
-h2:empty,
-h3:empty,
-h4:empty,
-h5:empty,
-h6:empty {
+.cp-h1:empty,
+.cp-h2:empty,
+.cp-h3:empty,
+.cp-h4:empty,
+.cp-h5:empty,
+.cp-h6:empty {
     line-height: 0;
     margin: 0;
 }
@@ -2029,29 +2028,34 @@ select {
     background-repeat: no-repeat;
 }
 
-button {
-    background: transparent;
-    cursor: pointer;
+.cp-button {
     padding: 0.2em 0.5em;
-    transition: transform 0.15s ease, opacity 0.15s ease;
-    opacity: 0.7;
-    transform: scale(0.9);
+    border-left: 2px solid var(--light-color);
+
+    font-family: "JetBrains Mono", sans-serif;
     text-transform: uppercase;
     font-weight: bold;
-    border-left: 2px solid var(--light-color);
+    color: black;
+
+    opacity: 0.7;
+    background: transparent;
+    cursor: pointer;
+
+    transition: transform 0.15s ease, opacity 0.15s ease;
+    transform: scale(0.9);
 }
-button.fill {
+.cp-button.fill {
     border-left: none;
     background-color: var(--color);
 }
-button:hover {
+.cp-button:hover {
     animation: 0.8s ease-out infinite alternate glowing;
     background: var(--color);
     transform: scale(1) rotateZ(var(--skew));
     transition: transform 0.05s ease, opacity 0.15s ease;
     opacity: 1;
 }
-button:active {
+.cp-button:active {
     background-color: var(--dark-color);
     transition-duration: 0.1s;
     color: #ddd;

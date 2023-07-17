@@ -6,7 +6,17 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title class="head-title">DNE</title>
+
+    <link rel="stylesheet" href="libs/keksobooking/css/normalize.css">
+
     <link rel="stylesheet" href="css/main.css">
+
+<!--    <link rel="stylesheet" href="libs/setting/css/style.css">-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
+          integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
+          crossorigin=""/>
+    <link rel="stylesheet" href="https://unpkg.com/nouislider@14.6.3/distribute/nouislider.min.css">
+<!--    <link rel="stylesheet" href="libs/setting/css/style-custom.css">-->
 
 </head>
 <body class="build background-single" data-hash="play" data-lvl="0">
@@ -27,6 +37,7 @@
 <div class="game-menu">
     <div class="game-menu__list">
         <h1 class="cybr-title"><a href="consume.html" target="_blank">Does Not Exist</a></h1>
+        <a href="#setting-popup" class="js-open-setting game-menu__list-item">Setting</a>
         <a href="#quest-popup" class="js-open-quest game-menu__list-item">Quest</a>
         <a href="#load-popup" class="js-open-load game-menu__list-item">Load</a>
         <a href="#map-popup" class="js-open-map game-menu__list-item">Map</a>
@@ -92,9 +103,9 @@
 </div>
 
 
-<button class="f-btn js-toggle-catalog-controls catalog-controls__show-btn" type="button">S</button>
+<button class="cp-button f-btn js-toggle-catalog-controls catalog-controls__show-btn" type="button">S</button>
 <div class="js-catalog-controls catalog-controls">
-    <button class="f-btn js-toggle-catalog-controls catalog-controls__hide-btn" type="button">X</button>
+    <button class="cp-button f-btn js-toggle-catalog-controls catalog-controls__hide-btn" type="button">X</button>
     <span class="js-toggle-chip chip chip--active">#card-id</span>
 
     <!--            <div class="js-portals-parent catalog-controls__item">-->
@@ -111,13 +122,13 @@
                     <a class="js-swipe-page slide-250 nav__link"><span class="nav__link__element">CARDS</span></a>
                     <div class="nav__item-sublist">
                         <div class="catalog-controls__item">
-                            <button class="f-btn js-init-catalog catalog-controls__filter">NPC</button>
-                            <button class="f-btn js-init-catalog catalog-controls__filter">CLASS</button>
-                            <button class="f-btn js-init-catalog catalog-controls__filter">LOOT</button>
-                            <button class="f-btn js-init-catalog catalog-controls__filter">SOUND</button>
-                            <button class="f-btn js-init-catalog catalog-controls__filter">PRJ</button>
-                            <button class="f-btn js-init-catalog catalog-controls__filter">DIA</button>
-                            <button class="f-btn js-init-catalog catalog-controls__filter">ANTI</button>
+                            <button class="cp-button f-btn js-init-catalog catalog-controls__filter">NPC</button>
+                            <button class="cp-button f-btn js-init-catalog catalog-controls__filter">CLASS</button>
+                            <button class="cp-button f-btn js-init-catalog catalog-controls__filter">LOOT</button>
+                            <button class="cp-button f-btn js-init-catalog catalog-controls__filter">SOUND</button>
+                            <button class="cp-button f-btn js-init-catalog catalog-controls__filter">PRJ</button>
+                            <button class="cp-button f-btn js-init-catalog catalog-controls__filter">DIA</button>
+                            <button class="cp-button f-btn js-init-catalog catalog-controls__filter">ANTI</button>
                         </div>
                     </div>
                 </li>
@@ -137,8 +148,7 @@
                     <a class="js-swipe-page slide-200 nav__link" href="#"><span class="nav__link__element">EVENT</span></a>
                     <div class="nav__item-sublist --right">
                         <div class="catalog-controls__item">
-                            <!-- todo кнопка ведет на страницу с формой инвента или окрывает её в поп-апе карты -->
-                            <a href="libs/keksobooking/index.html" class="f-btn catalog-controls__filter" target="_blank">SETTING</a>
+                            <a href="#setting-popup" class="js-open-setting cp-button f-btn catalog-controls__filter">SETTING</a>
                         </div>
                     </div>
                 </li>
@@ -172,7 +182,7 @@
     </div>
 </div>
 
-<button id="hud-btn" class="hud-btn hud-btn--fixed">
+<button id="hud-btn" class="cp-button hud-btn hud-btn--fixed">
     <img src="img/img-hud-btn.png" alt="HUD" width="200" height="221">
 </button>
 
@@ -366,6 +376,226 @@
 
 </div>
 
+<div id="setting-popup" class="cp-body setting-modal white-popup mfp-hide"><!--custom-scrollbar --y-->
+
+<main>
+    <!-- Карта объявлений -->
+    <section class="keks-map" style="display: none">
+
+        <!-- Блок для вставки карты -->
+        <div class="keks-map__canvas" id="map-canvas"></div>
+
+        <!-- Фильтрация объявлений -->
+        <div class="keks-map__filters-container">
+            <form action="#" class="keks-map__filters" autocomplete="off">
+                <select name="housing-type" id="housing-type" class="keks-map__filter">
+                    <option value="any" selected>Будь-який тип локації</option>
+                    <option value="street">Бунгало</option>
+                    <option value="factory">Квартира</option>
+                    <option value="club">Отель</option>
+                    <option value="house">Дом</option>
+                    <option value="palace">Дворец</option>
+                </select>
+                <select name="housing-price" id="housing-price" class="keks-map__filter">
+                    <option value="any" selected>Будь-який бюджет</option>
+                    <option value="middle">10000 - 50000&#x20bd;</option>
+                    <option value="low">до 10000&#x20bd;</option>
+                    <option value="high">от 50000&#x20bd;</option>
+                </select>
+                <select name="housing-rooms" id="housing-rooms" class="keks-map__filter">
+                    <option value="any" selected>Будь-який простір</option>
+                    <option value="1">Одна комната</option>
+                    <option value="2">Две комнаты</option>
+                    <option value="3">Три комнаты</option>
+                </select>
+                <select name="housing-guests" id="housing-guests" class="keks-map__filter">
+                    <option value="any" selected>Будь-яка кількість гостей</option>
+                    <option value="2">Два гостя</option>
+                    <option value="1">Один гость</option>
+                    <option value="0">Не для гостей</option>
+                </select>
+                <fieldset id="housing-features" class="keks-map__features">
+                    <input type="checkbox" name="features" value="wifi" id="filter-wifi" class="keks-map__checkbox visually-hidden">
+                    <label class="keks-map__feature keks-map__feature--wifi" for="filter-wifi">Wi-Fi</label>
+                    <input type="checkbox" name="features" value="dishwasher" id="filter-dishwasher" class="keks-map__checkbox visually-hidden">
+                    <label class="keks-map__feature keks-map__feature--dishwasher" for="filter-dishwasher">Посудомоечная машина</label>
+                    <input type="checkbox" name="features" value="parking" id="filter-parking" class="keks-map__checkbox visually-hidden">
+                    <label class="keks-map__feature keks-map__feature--parking" for="filter-parking">Парковка</label>
+                    <input type="checkbox" name="features" value="washer" id="filter-washer" class="keks-map__checkbox visually-hidden">
+                    <label class="keks-map__feature keks-map__feature--washer" for="filter-washer">Стиральная машина</label>
+                    <input type="checkbox" name="features" value="elevator" id="filter-elevator" class="keks-map__checkbox visually-hidden">
+                    <label class="keks-map__feature keks-map__feature--elevator" for="filter-elevator">Лифт</label>
+                    <input type="checkbox" name="features" value="conditioner" id="filter-conditioner" class="keks-map__checkbox visually-hidden">
+                    <label class="keks-map__feature keks-map__feature--conditioner" for="filter-conditioner">Кондиционер</label>
+                </fieldset>
+            </form>
+        </div>
+    </section>
+
+    <!-- Форма объявления -->
+    <section class="notice">
+        <h2 class="cp-h2 notice__title">Ваш івент</h2>
+        <form class="ad-form" action='https://27.javascript.pages.academy/keksobooking' method="post" enctype="multipart/form-data" autocomplete="off">
+            <fieldset class="ad-form-header">
+                <legend class="ad-form-header__title">Постер (для анонсу)</legend>
+                <div class="ad-form-header__upload">
+                    <div class="ad-form-header__preview">
+                        <img src="img/muffin-grey.svg" alt="Постер події" width="40" height="44">
+                    </div>
+                    <div class="ad-form__field">
+                        <input type="file" id="avatar" name="avatar" class="ad-form-header__input visually-hidden" accept="image/png, image/jpeg">
+                        <label class="ad-form-header__drop-zone" for="avatar">Завантажити<br>фото...</label>
+                    </div>
+                    <p class="ad-form-header__info">Заповніть усі необхідні поля, оберіть вартість входу, завантажте флаєр та мапу локації. Вигадайте цікавий опис. Він зробить івент більш живим та привабливим.<br>
+                        <br>Обличчя івенту має давати гостям повне уявлення про його зміст.</p>
+                </div>
+            </fieldset>
+            <fieldset class="field ad-form__element ad-form__element--wide">
+                <label class="ad-form__label glow text" for="title">Заголовок івенту</label>
+                <input id="title" name="title" type="text" placeholder="Вечірка твоїх друзів" required>
+            </fieldset>
+            <fieldset class="field ad-form__element ad-form__element--wide" style="display: none">
+                <label class="ad-form__label glow text" for="address">Адреса (координати)</label>
+                <input id="address" name="address" type="text" value='50.45466, 30.5238' required readonly>
+            </fieldset>
+            <fieldset class="field ad-form__element ad-form__element--wide">
+                <label class="ad-form__label glow text" for="address">Адреса (сектор)</label>
+                <input id="sector" name="sector" type="text" value='a0' required readonly>
+            </fieldset>
+            <fieldset class="field ad-form__element">
+                <label class="ad-form__label glow text" for="type">Тип приміщення</label>
+                <select id="type" name="type">
+                    <option value="street">Вулиця</option>
+                    <option value="factory" selected>Фабрика</option>
+                    <option value="loft">Лофт</option>
+                    <option value="bar">Бар</option>
+                    <option value="club">Клуб</option>
+                    <option value="studio">Студія</option>
+                    <option value="palace">Палац</option>
+                </select>
+            </fieldset>
+            <fieldset class="field ad-form__element">
+                <label class="ad-form__label glow text" for="price">Ціна за вхід</label>
+                <input id="price" name="price" type="number" step="100" placeholder="200"required>
+                <div class="ad-form__slider"></div>
+            </fieldset>
+            <fieldset class="field ad-form__element ad-form__element--time">
+                <label class="ad-form__label glow text" for="timein">Час входу та виходу</label>
+                <select id="timein" name="timein">
+                    <option value="12:00" selected>Після 17</option>
+                    <option value="13:00">Після 16</option>
+                    <option value="14:00">Після 15</option>
+                </select>
+                <select id="timeout" name="timeout" title="Time to go out">
+                    <option value="12:00" selected>Вихід до 19</option>
+                    <option value="13:00">Вихід до 20</option>
+                    <option value="14:00">Вихід до 21</option>
+                </select>
+            </fieldset>
+            <fieldset class="field ad-form__element">
+                <label class="ad-form__label glow text" for="room_number">Кількість кімнат</label>
+                <select id="room_number" name="rooms">
+                    <option value="1" selected>1 кімната</option>
+                    <option value="2">2 кімнати</option>
+                    <option value="3">3 кімнати</option>
+                    <option value="100">Безмежний простір</option>
+                </select>
+            </fieldset>
+            <fieldset class="field ad-form__element">
+                <label class="ad-form__label glow text" for="capacity">Кількість місць</label>
+                <select id="capacity" name="capacity">
+                    <option value="10">до 10 гостей</option>
+                    <option value="60">для 60 гостей</option>
+                    <option value="200" selected>для 200 гостей</option>
+                    <option value="400">від 400 гостей</option>
+                </select>
+            </fieldset>
+            <div class="ad-form__element--wide"></div>
+
+            <fieldset class="field ad-form__element ad-form__element--wide">
+                <label class="ad-form__label glow text" for="description">Опис</label>
+                <textarea id="description" name="description" placeholder="Розкажи про те, що мені дасть візит до твого івенту та навіщо мені це потрібно"></textarea>
+            </fieldset>
+
+            <fieldset class="ad-form__element ad-form__element--wide features" style="margin-top: 40px; display: none">
+                <legend>Доступність: танцмайдан, вулиця, Wi-Fi, фудкорт, майстерня, тату, маркетплейс, чіл-зона</legend>
+                <input class="features__checkbox visually-hidden" type="checkbox" name="feature" value="wifi" id="feature-wifi">
+                <label class="features__label features__label--wifi" for="feature-wifi">Wi-Fi</label>
+                <input class="features__checkbox visually-hidden" type="checkbox" name="feature" value="dishwasher" id="feature-dishwasher">
+                <label class="features__label features__label--dishwasher" for="feature-dishwasher">Посудомоечная машина</label>
+                <input class="features__checkbox visually-hidden" type="checkbox" name="feature" value="parking" id="feature-parking">
+                <label class="features__label features__label--parking" for="feature-parking">Парковка</label>
+                <input class="features__checkbox visually-hidden" type="checkbox" name="feature" value="washer" id="feature-washer">
+                <label class="features__label features__label--washer" for="feature-washer">Стиральная машина</label>
+                <input class="features__checkbox visually-hidden" type="checkbox" name="feature" value="elevator" id="feature-elevator">
+                <label class="features__label features__label--elevator" for="feature-elevator">Лифт</label>
+                <input class="features__checkbox visually-hidden" type="checkbox" name="feature" value="conditioner" id="feature-conditioner">
+                <label class="features__label features__label--conditioner" for="feature-conditioner">Кондиционер</label>
+            </fieldset>
+
+            <fieldset class="ad-form__element ad-form__element--wide" style="margin-top: 40px">
+                <label class="ad-form__label glow text">Додаткові фото</label>
+                <div class="ad-form__photo-container">
+                    <div class="ad-form__upload">
+                        <input type="file" id="images" name="images" class="ad-form__input visually-hidden">
+                        <label for="images" class="ad-form__drop-zone">Завантажити<br>фото...</label>
+                    </div>
+                    <div class="ad-form__photo"></div>
+                </div>
+            </fieldset>
+            <fieldset class="ad-form__element ad-form__element--submit">
+                <button class="cp-button ad-form__submit" type="submit">
+                    <span class="submit">Створити</span>
+                </button>
+                або <button class="cp-button ad-form__reset" type="reset">очистити</button>
+            </fieldset>
+        </form>
+    </section>
+</main>
+<!--  <footer class="footer container">-->
+<!--  </footer>-->
+
+<!-- Карточка объявления -->
+<template id="card">
+    <article class="popup">
+        <img src="img/avatars/user01.png" class="popup__avatar" width="70" height="70" alt="Аватар пользователя">
+        <h3 class="popup__title">Уютное гнездышко для молодоженов</h3>
+        <p class="popup__text popup__text--address">102-0082 Tōkyō-to, Chiyoda-ku, Ichibanchō, 14−3</p>
+        <p class="popup__text popup__text--price">5200 <span>₽/ночь</span></p>
+        <h4 class="popup__type">Квартира</h4>
+        <p class="popup__text popup__text--capacity">2 комнаты для 3 гостей</p>
+        <p class="popup__text popup__text--time">Заезд после 14:00, выезд до 10:00</p>
+        <ul class="popup__features">
+            <li class="popup__feature popup__feature--parking"></li>
+            <li class="popup__feature popup__feature--conditioner"></li>
+            <li class="popup__feature popup__feature--wifi"></li>
+            <li class="popup__feature popup__feature--dishwasher"></li>
+            <li class="popup__feature popup__feature--washer"></li>
+            <li class="popup__feature popup__feature--elevator"></li>
+        </ul>
+        <p class="popup__description">Великолепная квартира-студия в центре Токио. Подходит как туристам, так и бизнесменам. Квартира полностью укомплектована и недавно отремонтирована.</p>
+        <div class="popup__photos">
+            <img src="" class="popup__photo" width="45" height="40" alt="Фотография жилья">
+        </div>
+    </article>
+</template>
+
+<!-- Сообщение об успешном создании объявления -->
+<template id="success">
+    <div class="success">
+        <p class="success__message">Ваше объявление<br>успешно размещено!</p>
+    </div>
+</template>
+
+<!-- Сообщение об ошибке создания объявления -->
+<template id="error">
+    <div class="error">
+        <p class="error__message">Ошибка размещения объявления</p>
+        <button type="button" class="error__button">Попробовать снова</button>
+    </div>
+</template>
+</div>
+
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
 <script type="module" src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
@@ -380,6 +610,15 @@
 <script src="libs/magnific-popup/jquery.magnific-popup.js"></script>
 <script type="module" src="js/utils/initInventoryPopup.jquery.js"></script>
 <script src="libs/lazyload.js"></script>
+
+<!-- Keksobooking JS files -->
+<script src="libs/keksobooking/vendor/pristine/pristine.min.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
+        integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg="
+        crossorigin=""></script>
+<script src="https://unpkg.com/nouislider@14.6.3/distribute/nouislider.min.js"></script>
+<script type="module" src="js/setting/setting.module.js" ></script>
+
 
 <script type="module" src="js/dne-cli.js"></script>
 <script type="module" src="js/swiper/swiper.module.js"></script>
@@ -471,6 +710,11 @@
     redrawMap();
 
     $('.js-open-load').magnificPopup({
+        type: 'inline',
+        midClick: true
+    });
+
+    $('.js-open-setting').magnificPopup({
         type: 'inline',
         midClick: true
     });

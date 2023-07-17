@@ -1,0 +1,79 @@
+.cybr-title {
+    margin: 0;
+    font-size: 3em;
+    letter-spacing: -5.2px;
+    line-height: 1.3em;
+     border-bottom: none;
+     opacity: 1;
+    text-shadow: 0 0 2px var(--light-color), 4px 5px 0 yellow;
+    text-transform: uppercase;
+}
+
+.cp-body {
+    /* max-width: 1200px; */
+    min-width: 1000px;
+    margin: 0 auto;
+    color: var(--color);
+    line-height: 1.4;
+    text-shadow: 0px 0px 4px var(--color);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 1.6em;
+    letter-spacing: 1.3px;
+    background-color: #002939;
+}
+
+.notice {
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.map__filters {
+    max-width: 1020px;
+    width: 100%;
+}
+
+.map__filter {
+    height: 44px;
+}
+
+/*.ad-form__element input, .ad-form__element select, .ad-form__element textarea,*/
+/*.ad-form__submit {*/
+/*    background: transparent;*/
+/*}*/
+
+textarea,
+.ad-form__submit {
+    background: transparent;
+}
+
+option {
+    background: #002939;
+}
+
+.ad-form__element input, .ad-form__element select, .ad-form__element textarea {
+    height: 49px;
+}
+
+.ad-form-header__upload {
+    flex-wrap: wrap;
+}
+
+.ad-form-header__info {
+    margin-left: 0;
+    margin-top: 20px;
+}
+
+.ad-form__element--time select:first-of-type {
+    margin-right: 0;
+    margin-bottom: 14px;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    width: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:horizontal,
+.custom-scrollbar::-webkit-scrollbar-thumb:vertical {
+    background: yellow;
+    border-radius: 0;
+}

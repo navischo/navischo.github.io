@@ -9,27 +9,28 @@
     transition: .2s ease;
 }
 
+/*.chess.--char-0,*/
+/*.chess.--char-1,*/
+/*.chess.--char-2,*/
+/*.chess.--char-3,*/
+/*.chess.--char-4,*/
+/*.chess.--char-5,*/
+/*.chess.--char-6,*/
+/*.chess.--char-7*/
+.chess {
+    width: 73px;
+    height: 96px;
+
+    background-image: url("../../img/icon-chess-sprite.png");
+    background-position: 105px -24px;
+}
+
 .chess.--char-king {
     width: 106px;
     height: 109px;
 
     background-image: url("../../img/icon-chess-sprite.png");
     background-position: -13px -15px;
-}
-
-.chess.--char-0,
-.chess.--char-1,
-.chess.--char-2,
-.chess.--char-3,
-.chess.--char-4,
-.chess.--char-5,
-.chess.--char-6,
-.chess.--char-7 {
-    width: 73px;
-    height: 96px;
-
-    background-image: url("../../img/icon-chess-sprite.png");
-    background-position: 105px -24px;
 }
 
 .map .chess {

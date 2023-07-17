@@ -7,6 +7,10 @@
     margin: 20px auto;
 }
 
+.white-popup.cp-body {
+    background-color: #002939;
+}
+
 .white-popup .mfp-close {
     position: absolute;
     top: auto;
@@ -141,6 +145,10 @@ a.js-phone {
 .dialog-modal {
     max-width: 266px;
     padding: 0;
+}
+
+.setting-modal {
+    max-width: 45vw;
 }
 
 .win77-dialog {
