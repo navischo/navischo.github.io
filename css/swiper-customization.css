@@ -28,14 +28,14 @@
 
 .swiper-button-next.--up {
     top: 45px!important;
-    transform: translate(-100%, 0) rotate(-90deg);
+    transform: translate(-150%, 0) rotate(-90deg);
 /* transform: rotate(-90deg); */
     left: 50%;
 }
 
 .swiper-button-prev.--up {
     top: 45px!important;
-    transform: translate(100%, 0) rotate(-90deg);
+    transform: translate(50%, 0) rotate(-90deg);
     /* transform: rotate(-90deg); */
     left: 50%;
 }

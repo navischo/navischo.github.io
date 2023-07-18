@@ -5,6 +5,7 @@ import { drawLootCards } from "../cards/dom.cards.js";
 import { DUNGE_NAMES } from "../inInteraction/interface.inInteraction.js";
 import { matchGenreBonus } from "../utils/matchGenreBonus.js";
 import { logIncome } from "../utils/logIncome.js";
+import { initLineup } from "../utils/initLineup.js";
 
 const SMITHS_TYPES = [
     {
@@ -380,6 +381,7 @@ const useSmithsCards = () => {
     });
     drawLootCards(scene.data.controller, scene.setup.controllerSelector);
     drawLootCards(scene.data.lineup, scene.setup.lineupSelector);
+    initLineup();
     document.querySelector(`${scene.setup.lineupSelector}`).classList.add("--play");
     const inviteGuestByInterval = () => {
         const socialPoints = win77.game.event.settings.socialPoints;

@@ -42,6 +42,7 @@
 @import "blocks/setting.css";
 @import "blocks/collector.css";
 @import "blocks/collection.css";
+@import "blocks/hand-timer.css";
 
 /*CUSTOMIZATION*/
 @import "./i-customization.css";

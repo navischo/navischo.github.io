@@ -18,7 +18,7 @@ const initCollector = () => {
         win77.collector.body = $('#collector-body');
         win77.collector.scene = $('#collector-body .scene');
         win77.collector.title = $('#collector-body .title');
-        console.log("scene, title", win77.collector.scene, win77.collector.title);
+        // console.log("scene, title", win77.collector.scene, win77.collector.title);
     }
 
     win77.queryScene();

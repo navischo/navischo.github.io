@@ -4,6 +4,7 @@ import { switchTime } from "../hud/time.hud.js";
 import { settings } from "./const.theday.js";
 import { drawTheday } from "./init.theday.js";
 
+
 const setupTheday = () => {
     let lineupLength = 0;
     const cardTitleArr = document.querySelectorAll("#table .card__title");
@@ -32,7 +33,10 @@ const setupTheday = () => {
     // switchTime(win77.game.event.lineupLength); // time temporary disabled
     win77.setEventSettings(Object.assign({}, settings));
     win77.game.event.settings.dungeObj = Array.from(win77.locationsSet).find((dungeObj) => dungeObj.name === win77.game.event.settings.dungeName);
-
+    if (win77.setting) {
+        win77.game.event.settings.booking = win77.setting;
+        console.log(win77.game.event.settings);
+    }
 
     console.log(`Starting event..`, win77.game.event);
     drawTheday();

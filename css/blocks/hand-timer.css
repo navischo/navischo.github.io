@@ -1,0 +1,8 @@
+.hand-timer {
+    position: fixed;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 80px);
+    font-size: 32px;
+    font-family: "Press Start 2p", "JetBrains Mono", monospace;
+}
