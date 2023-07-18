@@ -3,6 +3,7 @@ import { adminMarkup } from "./markup/admin.markup.js";
 import { cardCatalogMarkup } from "./markup/cardCatalog.markup.js";
 import { hudMarkup } from "./markup/hud.markup.js";
 import { eventMarkup } from "./markup/event.markup.js";
+import { initCollector } from "../utils/initCollector.js";
 
 import { win77 } from "../dne-cli.js";
 // import { initProfile } from "../hud/chat.hud.jquery.js";
@@ -96,7 +97,18 @@ win77.eventSwiper = new Swiper("#event-swiper", {
     //     clickable: true,
     // },
 });
-
+win77.eventSwiper.on("slideChange", (e) => {
+    console.log("e.activeIndex", e, e.activeIndex);
+    if (e.activeIndex === 1) {
+        if (!win77.collector) {
+            win77.startCollector();
+        } else {
+            win77.collector.resume();
+        }
+    } else {
+        win77.pauseCollector();
+    }
+});
 swiper.on('slideChange', function (e) {
     if (Object.keys(PAGES_ID)[e.activeIndex]) {
         const pageName = Object.keys(PAGES_ID)[e.activeIndex];
