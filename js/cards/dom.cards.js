@@ -62,6 +62,13 @@ const initHandlers = (cardData, controls) => {
         }
 
         const body = document.querySelector("body");
+        if (isSetHasId(win77.game.player.loot, cardData.id) && cardData.collection === "food" && body.dataset.hash === "play") {
+            // win77.getEnergyPointsFromPlayer(1);
+            win77.giveEnergyPointsToPlayer(cardData.bonus);
+            win77.getCostFromPlayer(cardData.cost);
+            win77.updBalanceHUD();
+        }
+
         if (isSetHasId(win77.game.player.sound, cardData.id) && body.dataset.hash === "play") {
             const id = cardData.id;
             const bonus = cardData.bonus;
