@@ -1,8 +1,9 @@
-import {sendData} from './api.js';
+import { saveDataLocally, sendData} from './api.js';
 import {resetMap} from './map.js';
 import {clearFilter} from './filter.js';
 import {isEscapeKey} from './util.js';
 import {resetSlider} from './slider.js';
+import {closePopup} from "../popup/dom.popup.jquery.js";
 
 const bodyNode = document.body;
 const offerForm = document.querySelector('.ad-form');
@@ -145,6 +146,15 @@ const getSuccessfullSending = () => {
   makeSubmitButtonEnabled();
 };
 
+const getSuccessfullLocalSave = () => {
+  clearForm();
+  resetMap();
+  clearFilter();
+  showSubmitFormMessage(successMessageForm);
+  makeSubmitButtonEnabled();
+  closePopup();
+};
+
 const getFailureSending = () => {
   showSubmitFormMessage(errorMessageForm);
   makeSubmitButtonEnabled();
@@ -157,7 +167,8 @@ offerForm.addEventListener('submit', (evt) => {
   const isValid = pristine.validate();
   if(isValid) {
     makeSubmitButtonDisabled();
-    sendData(getSuccessfullSending, getFailureSending, formData);
+    saveDataLocally(evt.target);
+    // sendData(getSuccessfullSending, getFailureSending, formData);
   }
 });
 
@@ -167,5 +178,7 @@ resetButtonForm.onclick = () => {
   clearFilter();
   resetSlider();
 };
+
+export { getSuccessfullSending, getSuccessfullLocalSave };
 
 

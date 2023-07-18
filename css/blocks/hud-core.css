@@ -564,7 +564,7 @@ a {
 }
 
 .nav__item:hover .nav__item-sublist.--right {
-    transform: translateX(58%);
+    transform: translateX(32%);
     z-index: 3;
 }
 
