@@ -103,14 +103,14 @@ const eventMarkup = `
             </div>
         </div>
     </div>
-    <div class="swiper-slide">
-        <div class="sky-nav">
-            <a class="sky-nav-item"><span class="sky-nav-item__text">TIME</span></a>
-            <a class="sky-nav-item"><span class="sky-nav-item__text">LOCATION</span></a>
-            <a class="sky-nav-item"><span class="sky-nav-item__text">SETTING</span></a>
-            <a class="sky-nav-item"><span class="sky-nav-item__text">SOUND</span></a>
-        </div>
-    </div>
+<!--    <div class="swiper-slide">-->
+<!--        <div class="sky-nav">-->
+<!--            <a class="sky-nav-item"><span class="sky-nav-item__text">TIME</span></a>-->
+<!--            <a class="sky-nav-item"><span class="sky-nav-item__text">LOCATION</span></a>-->
+<!--            <a class="sky-nav-item"><span class="sky-nav-item__text">SETTING</span></a>-->
+<!--            <a class="sky-nav-item"><span class="sky-nav-item__text">SOUND</span></a>-->
+<!--        </div>-->
+<!--    </div>-->
   </div>
   <div class="swiper-button-next --up"></div>
   <div class="swiper-button-prev --up"></div>
