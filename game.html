@@ -325,9 +325,10 @@
                 </svg>
             </a>
         </div>
-        <p class="map__descr">Ми створили цю карту із власних спогадів про час, проведений у затишних місцях
-            нескінченного вирію творчої сцени Києва. Переміщуйся між секторами щоб відкривати нові точки інтересу,
-            локації, персонажів та саунд.</p>
+        <p class="map__descr">
+            Ми створили цю карту із власних спогадів про час, проведений у затишних місцях нескінченного вирію творчої сцени Києва.<br>
+            Тицяй на шахи і переміщуйся між секторами, щоб відкривати нові поінти інтересу, локації, персонажів та саунд.
+        </p>
     </div>
     <div class="map__nav">
         <h2 class="map__nav-title">Points from creators</h2>
@@ -457,6 +458,11 @@
             <fieldset class="field ad-form__element ad-form__element--wide">
                 <label class="ad-form__label glow text" for="title">Заголовок івенту</label>
                 <input id="title" name="title" type="text" placeholder="Вечірка твоїх друзів" required>
+
+                <label class="ad-form__label glow text" for="executive">Виконавець</label>
+                <select class="" id="executive" name="executive">
+                    <option value="you">You</option>
+                </select>
             </fieldset>
             <fieldset class="field ad-form__element ad-form__element--wide" style="display: none">
                 <label class="ad-form__label glow text" for="address">Адреса (координати)</label>
@@ -464,7 +470,22 @@
             </fieldset>
             <fieldset class="field ad-form__element ad-form__element--wide">
                 <label class="ad-form__label glow text" for="address">Адреса (сектор)</label>
-                <input id="sector" name="sector" type="text" value='a0' required readonly>
+                <select id="sector" name="sector">
+                    <option value="a0">a0</option>
+                </select>
+<!--                <input id="sector" name="sector" type="text" placeholder='a0' required>-->
+
+                <label class="fw-d-none ad-form__label glow text" for="point">Поінт</label>
+                <select class="fw-d-none" id="point" name="point">
+                    <option value="spot">Spot</option>
+                    <option value="market">Market</option>
+                    <option value="rave" selected>Rave</option>
+                    <option value="gig">Gig</option>
+                </select>
+<!--                <input class="fw-d-none" id="point" name="point" type="text" value='a0' required>-->
+
+
+<!--                <input class="fw-d-none" id="executive" name="executive" type="text" value='a0' required>-->
             </fieldset>
             <fieldset class="field ad-form__element">
                 <label class="ad-form__label glow text" for="type">Тип приміщення</label>
@@ -672,6 +693,7 @@
     import {redrawMap, drawMapModal} from "./js/page/map.page.js";
     import {dialog} from "./js/hud/dialog.hud.js";
     import { initCollector } from "./js/utils/initCollector.js";
+    import { initSettingOptionsUpdate } from "./js/utils/updSettingOptions.js";
 
     initInventoryPopupJquery();
 
@@ -729,6 +751,7 @@
     initIntervalScreen();
     initKeyboard();
     initCollector();
+    initSettingOptionsUpdate();
 </script>
 </body>
 </html>

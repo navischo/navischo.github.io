@@ -135,38 +135,18 @@ const initChess = () => {
     chess.style.top = `${getRandomInt(150)}px`;
     chess.style.left = `${getRandomInt(180)}px`;
 
-    if (win77.chess.size === 0) {
-        const chessCard = getCardById(`gm`, win77.game.catalog.all);
-        const chessType = `A`;
-        const chessId = `${chessType.toLowerCase()}-${chessCard.id}`;
-        const chessObj = new Chess(chessId, chessType, sector.node.dataset.sector, chessCard, win77.game.player);
-        sector.playersSet.add(chessObj);
-        win77.chess.add(chessObj);
-
-        chess.dataset.chessId = chessId;
-        chess.dataset.playerId = win77.game.player.id;
-
-        // chess.addEventListener("click", () => {
-        //     moveChess(chessObj.id, getRandomSector().address);
-        // });
-
-        sector.node.appendChild(chess);
-        sector.node.classList.add("--player-in");
-
-        console.log(`${win77.game.player.id} successfully enter map on sector ${sector.address}`, win77.game.player, sector, win77.chess);
-
-    } else if (win77.game.player.npc.size > 0 && win77.chess.size > 0) {
-        const chessCard = Array.from(win77.game.player.npc)[win77.chess.size - 1];
-        const chessType = getChessType();
-        const chessId = `${chessType.toLowerCase()}-${chessCard.id}`;
-
-        if (chessCard) {
+    console.log(win77.game.player.npc.size, win77.chess.size);
+    if (win77.game.player.npc.size >= win77.chess.size) {
+        if (win77.chess.size === 0) {
+            const chessCard = getCardById(`gm`, win77.game.catalog.all);
+            const chessType = `A`;
+            const chessId = `${chessType.toLowerCase()}-${chessCard.id}`;
             const chessObj = new Chess(chessId, chessType, sector.node.dataset.sector, chessCard, win77.game.player);
             sector.playersSet.add(chessObj);
             win77.chess.add(chessObj);
 
             chess.dataset.chessId = chessId;
-            chess.dataset.playerId = chessCard.name;
+            chess.dataset.playerId = win77.game.player.id;
 
             // chess.addEventListener("click", () => {
             //     moveChess(chessObj.id, getRandomSector().address);
@@ -175,10 +155,35 @@ const initChess = () => {
             sector.node.appendChild(chess);
             sector.node.classList.add("--player-in");
 
-            console.log(`${chessCard.name} successfully enter map on sector ${sector.address}`, win77.game.player, sector, win77.chess);
-        } else {
-            console.log(`All crew already on map`);
+            console.log(`${win77.game.player.id} successfully enter map on sector ${sector.address}`, win77.game.player, sector, win77.chess);
+
+        } else if (win77.game.player.npc.size > 0 && win77.chess.size > 0) {
+            const chessCard = Array.from(win77.game.player.npc)[win77.chess.size - 1];
+            const chessType = getChessType();
+            const chessId = `${chessType.toLowerCase()}-${chessCard.id}`;
+
+            if (chessCard) {
+                const chessObj = new Chess(chessId, chessType, sector.node.dataset.sector, chessCard, win77.game.player);
+                sector.playersSet.add(chessObj);
+                win77.chess.add(chessObj);
+
+                chess.dataset.chessId = chessId;
+                chess.dataset.playerId = chessCard.name;
+
+                // chess.addEventListener("click", () => {
+                //     moveChess(chessObj.id, getRandomSector().address);
+                // });
+
+                sector.node.appendChild(chess);
+                sector.node.classList.add("--player-in");
+
+                console.log(`${chessCard.name} successfully enter map on sector ${sector.address}`, win77.game.player, sector, win77.chess);
+            } else {
+                console.log(`All crew already on map`);
+            }
         }
+    } else {
+        console.log("Looks like all your crew already on map");
     }
 }
 
@@ -279,6 +284,16 @@ const detectSectorPoints = (node, originObj) => {
             node: pointNode,
             name: pointNode.dataset.point === "gig" ? pointNode.textContent : "house"
         });
+
+        // по клику на поинт
+        // если в ячейке если фигура
+        // фигура становится над ним
+        // или
+        // открывается форма
+        // игрок выбирает
+        // сектор в селекте
+        // поинт в селекте
+        // исполнителя в селекте
     });
 }
 
@@ -387,6 +402,7 @@ const drawMapModal = () => {
         e.preventDefault();
 
         initChess();
+        win77.isPlayerOnMap = true;
     });
 
     win77.map = map;

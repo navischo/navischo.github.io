@@ -331,6 +331,10 @@ fieldset {
     font-size: 14px;
 }
 
+.ad-form__element select {
+    text-transform: capitalize;
+}
+
 .ad-form__element--wide {
     -ms-flex-preferred-size: 50%;
     flex-basis: 50%;
@@ -340,6 +344,11 @@ fieldset {
 .ad-form__label {
     display: block;
     padding-bottom: 5px;
+}
+
+#sector:valid ~ .ad-form__label,
+#sector:valid ~ .fw-d-none {
+    display: block!important;
 }
 
 .ad-form__element input,

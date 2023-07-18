@@ -3,7 +3,9 @@ import { getCardElement } from "./cards/template.cards.js";
 import { appendNewTop } from "./theday/endgame.theday.js";
 
 class DNECli {
-    constructor() {}
+    constructor() {
+        this.isPlayerOnMap = false;
+    }
 
     log(command) {
         return console.log(command);
