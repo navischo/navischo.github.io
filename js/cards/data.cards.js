@@ -36,6 +36,15 @@ const initDNELootArr = () => {
     LootArr.push(new DNELootCard("i-shwabra", "Швабра", "Дає можливість залишити послання великого розміру", "https://lh3.googleusercontent.com/lQP_8BMVMOuETxH4z16PjtG7P7O3xhGfVAM4MqkKLzfP8bIWdiQwmy9c5vZddHzEw7c=w2400", 2, 400, "Бонус для Райтера"));
 
     const FOOD_LONGLINE = (paste) => `Можливість насолодитися ${paste} в компанії друзів просто зараз. Ефект подвоюється якщо разом з нею використати Спалах`;
+    // Банан
+    //
+    //
+    const BANAN_LONGLINE = FOOD_LONGLINE("солодким Бананом");
+    const BANAN_SHORTLINE = `Satisfaction`;
+    const BANAN_IMG_ID = `15vp8EgurcWCoE6szd6JCMGD_GJ2tw_k1`;
+    const BANAN_IMG = `https://drive.google.com/uc?id=${BANAN_IMG_ID}`;
+
+    LootArr.push(new DNELootCard("i-banan", "Банан", BANAN_LONGLINE, BANAN_IMG, 1, 50, "", BANAN_SHORTLINE, "", true, "loot"));
 
     // Сінабон
     //
@@ -403,7 +412,7 @@ const initDNELootArr = () => {
     LootArr.push(new DNELootCard("v", "V", "Так, поклич цього хлопця, що може піти не так?)", "https://lh6.googleusercontent.com/TGoJYG0KoqQ1oSf45SIKkFmp_6skZRJ9pmmR1vEWo6_xyFoHuCqZWI01Pi58MzRBKgg=w2400", 1, 0, "Найомничок", "Виглядає як порядний Охороничок та вправний Водій", "", true, "npc"));
     LootArr.push(new DNELootCard("wolf", "THE WOLF", "I solve problems", "https://lh3.googleusercontent.com/hgUIik77UVkI226aXYkYt7gtuvicht-KY4ytgoTuwB47f7gzrG93-9QI-rhgw5Y7RAk=w2400", 1, 0, "Найомничок", "I solve problems", "", true, "npc"));
 
-    // D
+    // GENDALF
     //
     //
     const GENDALF_LONGLINE = "";
@@ -416,6 +425,16 @@ const initDNELootArr = () => {
     const LISOVA_MAVKA_LONGLINE = "";
     const LISOVA_MAVKA_SHORTLINE = "Здатна створювати неймовірні напої з природніх речовин та залюбки реалізує свій продукт на твоєму івенті.";
     LootArr.push(new DNELootCard("lisova-mavka", "Лісова Діва", LISOVA_MAVKA_LONGLINE, "https://lh3.googleusercontent.com/gTtZ-rp5BXr_GyuAwIiSkTFBQWUmbwyyeFrc0G534MsQGLv_r6U8VonEkSm5eqW0z4E=w2400", 1, 0, "Найомничок", LISOVA_MAVKA_SHORTLINE, "", true, "npc"));
+
+    // SHAMAN
+    //
+    //
+    const SHAMAN_LONGLINE = "";
+    const SHAMAN_SHORTLINE = ``;
+    const SHAMAN_IMG_ID = `1J_SfvUvfA1lRbiHsosm-0Hn32JaQ1HGr`;
+    const SHAMAN_IMG = `https://drive.google.com/uc?id=${SHAMAN_IMG_ID}`;
+
+    LootArr.push(new DNELootCard("shaman", "SHAMAN", SHAMAN_LONGLINE, SHAMAN_IMG, 1, 0, "Найомничок", SHAMAN_SHORTLINE, "", true, "npc"));
 
     // Убрать и отснять студию
     // Фото чистої студії приваблюють клієнтів, отримай два випадкові закази на руку та використовуй цю картку як бонус +2 для будь-якого івенту в ній. Фото на професійний фотоаппарат з широким об'єктивом привабить навіть найвибагливішу аудиторію.
