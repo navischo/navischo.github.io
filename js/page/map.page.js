@@ -41,13 +41,13 @@ const getMapPins = () => {
     return mapPinsMarkup;
 }
 const getDungeHexMarkup = (name) =>
-`<a class="hex-box map__dunge" href="#">
+`<section class="hex-box map__dunge">
     <div class="inner">
         <h3 class="map__dunge-name">${name}</h3>
     </div>
     <div class="hex-1"></div>
     <div class="hex-2"></div>
-</a>`;
+</section>`;
 // const appendDunge = (name) => {
 //     const parent = document.querySelector(".js-dunges-parent");
 //     const dungeNode = document.createElement("div");

@@ -283,13 +283,35 @@
 }
 
 .map__dunge-container {
+    position: relative;
+
     display: flex;
     align-items: center;
     justify-content: center;
     height: 300px;
 }
 
+.map__dunge-setting {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 4;
+
+    border-color: black;
+
+    cursor: pointer;
+}
+
+.map__dunge-setting svg {
+    fill: black;
+}
+
+.map__dunge-setting:hover {
+    background: transparent;
+}
+
 .map__dunge-name {
+    display: block;
     text-transform: uppercase;
 }
 
