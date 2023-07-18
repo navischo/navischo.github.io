@@ -424,18 +424,7 @@
     background: #f1f0ec;
 }
 
-#dne-card-i-sinabon .card__footer {
-    position: absolute;
-    bottom: 0;
-    z-index: 2;
-}
 
-#dne-card-i-sinabon .card__description {
-    position: absolute;
-    z-index: 3;
-    top: 300px;
-    color: white;
-}
 
 #dne-card-i-sinabon .card__price {
     color: white;

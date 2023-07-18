@@ -456,6 +456,13 @@
     color: white;
 }
 
+#dne-card-i-sinabon .card__description {
+    position: absolute;
+    z-index: 3;
+    top: 300px;
+    color: white;
+}
+
 #dne-card-support-supports .card__header-left {
     max-width: 86%;
 }

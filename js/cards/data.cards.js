@@ -8,21 +8,50 @@ const initDNELootArr = () => {
     const LootArr = [];
 
 
-    LootArr.push(new DNELootCard("ddj400", "DDJ-400", "Дозволяє зводити дві стежки, задовольняючи потреби 80% аудиторії будь-якого івенту.", "https://lh3.googleusercontent.com/0FZHsm4sbeaFrstYVngi54Th4WRf2ZnGpz_4hUnuaOwMDfDfld2QfzwRRbgFgQciVlk=w2400", 2, "16K/400", "Бонус для DJ-їв", "Дозволяє зводити дві стежки, модифікувати та записувати музику", "", true));
-    LootArr.push(new DNELootCard("plx500", "PLX-500", "Дозволяє зводити на одну стежку вінілу більше, за наявності Мікшера, задовольняючи потреби 100% аудиторії та підвищуючи задоволення діджеїв від івенту до високого рівня. З ним починаючі артисти готові грати безкоштовно", "https://lh3.googleusercontent.com/KN2qxZnH-hXNEHgObCGjs5LZ0ZGYecDDhdQITXMEm664nSvrjALLo-mqsfuYaPzqaD0=w2400", 3, "16K/400", "Бонус для DJ-їв", "Дозволяє зводити на одну стежку вінілу більше, за наявності Мікшера, модифікувати та записувати музику.", "", true, "loot"));
-    LootArr.push(new DNELootCard("ddjrev1", "DDJ-REV1", "Дозволяє зводити дві стежки, задовольняючи потреби 100% аудиторії та підвищуючи задоволення діджеїв від івенту до високого рівня. З ним починаючі артисти готові грати безкоштовно", "https://lh6.googleusercontent.com/bCCZKzLEoTr1u-IZlLjIlJUhGc7tE_H7YlxQVYs6-RKfarQLmOnExKK_e2gBIh0Ezd8=w2400", 2, "17K/400", "Бонус для DJ-їв", "Дозволяє зводити дві стежки, модифікувати та записувати музику.", "", true, "loot"));
-    LootArr.push(new DNELootCard("djflx6", "DJ-FLX6", "Дозволяє зводити чотири стежки, задовольняючи потреби 100% аудиторії та підвищуючи задоволення діджеїв від івенту до високого рівня. З ним починаючі артисти готові грати безкоштовно", "https://lh4.googleusercontent.com/KV3fJtCjjs85CosfaTKUf_9px7PL119Gm60ImACWyKEcZr47izhkTZoSXkeTodhBv0Q=w2400", 4, "36K/700", "Бонус для DJ-їв", "Дозволяє зводити чотири стежки, модифікувати та записувати музику.", "", true, "loot"));
-    LootArr.push(new DNELootCard("ddjxp2", "DDJ-XP2", "Додає сетапу ще 32 перформанс пади, що дозволять гнучкіше маніпулювати та модифікувати стежки на льоту. З ним починаючі артисти готові грати безкоштовно", "https://lh3.googleusercontent.com/IAkFezRRdHo3SI4bKJf2MhUi5Pn6hcNFKdjZ2Sohw1Tltj_rCNGjEb6gfSOPuxoZKhw=w2400", 2, "19K/300", "Бонус для DJ-їв", "Додає сетапу ще 32 перформанс пади, що дозволять гнучкіше маніпулювати та модифікувати стежки на льоту.", "", true, "loot"));
+    const ddj400 = new DNELootCard("ddj400", "DDJ-400", "Дозволяє зводити дві стежки, задовольняючи потреби 80% аудиторії будь-якого івенту.", "https://lh3.googleusercontent.com/0FZHsm4sbeaFrstYVngi54Th4WRf2ZnGpz_4hUnuaOwMDfDfld2QfzwRRbgFgQciVlk=w2400", 2, "16K/400", "Бонус для DJ-їв", "Дозволяє зводити дві стежки, модифікувати та записувати музику", "", true, "loot");
+    ddj400.collection = "soundTool";
+    LootArr.push(ddj400);
+
+    const plx500 = new DNELootCard("plx500", "PLX-500", "Дозволяє зводити на одну стежку вінілу більше, за наявності Мікшера, задовольняючи потреби 100% аудиторії та підвищуючи задоволення діджеїв від івенту до високого рівня. З ним починаючі артисти готові грати безкоштовно", "https://lh3.googleusercontent.com/KN2qxZnH-hXNEHgObCGjs5LZ0ZGYecDDhdQITXMEm664nSvrjALLo-mqsfuYaPzqaD0=w2400", 3, "16K/400", "Бонус для DJ-їв", "Дозволяє зводити на одну стежку вінілу більше, за наявності Мікшера, модифікувати та записувати музику.", "", true, "loot");
+    plx500.collection = "soundTool";
+    LootArr.push(plx500);
+
+    const ddjrev1 = new DNELootCard("ddjrev1", "DDJ-REV1", "Дозволяє зводити дві стежки, задовольняючи потреби 100% аудиторії та підвищуючи задоволення діджеїв від івенту до високого рівня. З ним починаючі артисти готові грати безкоштовно", "https://lh6.googleusercontent.com/bCCZKzLEoTr1u-IZlLjIlJUhGc7tE_H7YlxQVYs6-RKfarQLmOnExKK_e2gBIh0Ezd8=w2400", 2, "17K/400", "Бонус для DJ-їв", "Дозволяє зводити дві стежки, модифікувати та записувати музику.", "", true, "loot");
+    ddjrev1.collection = "soundTool";
+    LootArr.push(ddjrev1);
+
+    const djflx6 = new DNELootCard("djflx6", "DJ-FLX6", "Дозволяє зводити чотири стежки, задовольняючи потреби 100% аудиторії та підвищуючи задоволення діджеїв від івенту до високого рівня. З ним починаючі артисти готові грати безкоштовно", "https://lh4.googleusercontent.com/KV3fJtCjjs85CosfaTKUf_9px7PL119Gm60ImACWyKEcZr47izhkTZoSXkeTodhBv0Q=w2400", 4, "36K/700", "Бонус для DJ-їв", "Дозволяє зводити чотири стежки, модифікувати та записувати музику.", "", true, "loot");
+    djflx6.collection = "soundTool";
+    LootArr.push(djflx6);
+
+    const ddjxp2 = new DNELootCard("ddjxp2", "DDJ-XP2", "Додає сетапу ще 32 перформанс пади, що дозволять гнучкіше маніпулювати та модифікувати стежки на льоту. З ним починаючі артисти готові грати безкоштовно", "https://lh3.googleusercontent.com/IAkFezRRdHo3SI4bKJf2MhUi5Pn6hcNFKdjZ2Sohw1Tltj_rCNGjEb6gfSOPuxoZKhw=w2400", 2, "19K/300", "Бонус для DJ-їв", "Додає сетапу ще 32 перформанс пади, що дозволять гнучкіше маніпулювати та модифікувати стежки на льоту.", "", true, "loot");
+    ddjxp2.collection = "soundTool";
+    LootArr.push(ddjxp2);
 
     const AORUS_SHORTLINE = "Відкриває можливість в режимі реального часу переглядати цифровий свій цифровий худ, статистику гравця та можливість зберігати прогрес в LocalStorage. Дає особливі здібності для кожного класу."; // todo добавить возможность шерить на других игроков
     const AORUS_LONGLINE = `Портативний компьютер на прямому нейронному інтерфейсі, дозволяє пірнати в Кібер-простір, отримуючи так чином доступ до усіх переваг доступних профессійним Нетраннерам. ${AORUS_SHORTLINE}`;
     LootArr.push(new DNELootCard("aorus5-se4", "AORUS 5 SE4", AORUS_LONGLINE, "https://lh3.googleusercontent.com/-8zozTgk_gMZXuEodcSS5zaBawwHmRZU-0OO9ym3ZOiy3CAYComQSPZqHgZrE_5WXak=w2400", 3, 66999, "", AORUS_SHORTLINE, "", true, "loot")); // todo додати в майбутньому каталог, систему прокачки та особливі здібності для кожного классу, що має цей айтем
 
-    LootArr.push(new DNELootCard("cdj3000", "CDJ-3000", "Дозволяє зводити на одну стежку більше, за наявності Мікшера, задовольняючи потреби 100% аудиторії та підвищуючи задоволення діджеїв від івенту до високого рівня. З ним починаючі артисти готові грати безкоштовно", "https://lh3.googleusercontent.com/I48oibRzq_d66ig_NMxfN7snaHm6Y9EZifZvJeMqlsbJSM9tn7ipwZlhAneW8O7J1pI=w2400", 3, "130K/1K", "Бонус для DJ-їв", "Дозволяє зводити на одну стежку більше, за наявності Мікшера, модифікувати та записувати музику.", "", true, "loot"));
-    LootArr.push(new DNELootCard("djm250mk2", "DJM-250MK2", "Дозволяє зводити дві стежки, як з вінілових, так із цифрових програвачів, модифікувати та записувати музику.", "https://lh5.googleusercontent.com/jvQ8mSu_KZDU5TUFnqx74vCdhm3BZR1W4X8vV9Cm5ZSchihgHRf4PmeTaxTz7rgxJfU=w2400", 2, "12K/200", "Бонус для DJ-їв", "Дозволяє зводити дві стежки, як з вінілових, так із цифрових програвачів, модифікувати та записувати музику.", "", true, "loot"));
-    LootArr.push(new DNELootCard("djm750mk2", "DJM-750MK2", "Дозволяє зводити чотири стежки, як з вінілових, так із цифрових програвачів, модифікувати та записувати музику.", "https://lh6.googleusercontent.com/P-urxZ4DMOTdvX6mHrfjtDgkd4pAje03DYu51pxrPhs2S5i9iX28anwdDpDAr36kaDo=w2400", 4, "39K/400", "Бонус для DJ-їв", "Дозволяє зводити чотири стежки, як з вінілових, так із цифрових програвачів, модифікувати та записувати музику.", "", true, "loot"));
-    LootArr.push(new DNELootCard("djms11", "DJM-S11", "Дозволяє зводити чотири стежки, як з вінілових, так із цифрових програвачів, модифікувати та записувати музику.", "https://lh3.googleusercontent.com/v3iDqUuvWRbLjgb-ILH0yP-S-NMZtYN_6AR_s8miYuUUSPGwvAAouw66GRkNmMpn-Lk=w2400", 4, "87K/800", "Бонус для DJ-їв", "Дозволяє зводити чотири стежки, як з вінілових, так із цифрових програвачів, модифікувати та записувати музику.", "", true, "loot"));
-    LootArr.push(new DNELootCard("sps-585", "SPS-585", "", "https://lh4.googleusercontent.com/bqJZTshGqWQIuNYeYIdqBFQHLjPYv1dFGhstCVnbOBYEuPUIoajBYK569wf-gEMt9As=w2400", 2, "2300", "+2 з DDJ-400", "Проста та надійна акустична система на 3.5мм, з якою впорається навіть маля.<br><br>Чудово поєднується з DDJ-400, отримай +2 та ще +1, якщо ти DJ.", "", true, "loot"));
+    const cdj3000 = new DNELootCard("cdj3000", "CDJ-3000", "Дозволяє зводити на одну стежку більше, за наявності Мікшера, задовольняючи потреби 100% аудиторії та підвищуючи задоволення діджеїв від івенту до високого рівня. З ним починаючі артисти готові грати безкоштовно", "https://lh3.googleusercontent.com/I48oibRzq_d66ig_NMxfN7snaHm6Y9EZifZvJeMqlsbJSM9tn7ipwZlhAneW8O7J1pI=w2400", 3, "130K/1K", "Бонус для DJ-їв", "Дозволяє зводити на одну стежку більше, за наявності Мікшера, модифікувати та записувати музику.", "", true, "loot");
+    cdj3000.collection = "soundTool";
+    LootArr.push(cdj3000);
+
+    const djm250mk2 = new DNELootCard("djm250mk2", "DJM-250MK2", "Дозволяє зводити дві стежки, як з вінілових, так із цифрових програвачів, модифікувати та записувати музику.", "https://lh5.googleusercontent.com/jvQ8mSu_KZDU5TUFnqx74vCdhm3BZR1W4X8vV9Cm5ZSchihgHRf4PmeTaxTz7rgxJfU=w2400", 2, "12K/200", "Бонус для DJ-їв", "Дозволяє зводити дві стежки, як з вінілових, так із цифрових програвачів, модифікувати та записувати музику.", "", true, "loot");
+    djm250mk2.collection = "soundTool";
+    LootArr.push(djm250mk2);
+
+    const djm750mk2 = new DNELootCard("djm750mk2", "DJM-750MK2", "Дозволяє зводити чотири стежки, як з вінілових, так із цифрових програвачів, модифікувати та записувати музику.", "https://lh6.googleusercontent.com/P-urxZ4DMOTdvX6mHrfjtDgkd4pAje03DYu51pxrPhs2S5i9iX28anwdDpDAr36kaDo=w2400", 4, "39K/400", "Бонус для DJ-їв", "Дозволяє зводити чотири стежки, як з вінілових, так із цифрових програвачів, модифікувати та записувати музику.", "", true, "loot");
+    djm750mk2.collection = "soundTool";
+    LootArr.push(djm750mk2);
+
+    const djms11 = new DNELootCard("djms11", "DJM-S11", "Дозволяє зводити чотири стежки, як з вінілових, так із цифрових програвачів, модифікувати та записувати музику.", "https://lh3.googleusercontent.com/v3iDqUuvWRbLjgb-ILH0yP-S-NMZtYN_6AR_s8miYuUUSPGwvAAouw66GRkNmMpn-Lk=w2400", 4, "87K/800", "Бонус для DJ-їв", "Дозволяє зводити чотири стежки, як з вінілових, так із цифрових програвачів, модифікувати та записувати музику.", "", true, "loot");
+    djms11.collection = "soundTool";
+    LootArr.push(djms11);
+
+    const sps585 = new DNELootCard("sps585", "SPS-585", "", "https://lh4.googleusercontent.com/bqJZTshGqWQIuNYeYIdqBFQHLjPYv1dFGhstCVnbOBYEuPUIoajBYK569wf-gEMt9As=w2400", 2, "2300", "+2 з DDJ-400", "Проста та надійна акустична система на 3.5мм, з якою впорається навіть маля.<br><br>Чудово поєднується з DDJ-400, отримай +2 та ще +1, якщо ти DJ.", "", true, "loot");
+    sps585.collection = "soundTool";
+    LootArr.push(sps585);
+
     // GOPRO
     LootArr.push(new DNELootCard("i-gopro", "GOPRO", "Дозволяє знімати широкоформатне відео з високою кількістю кадрів на секунду. З відповідними аксесуарами доступне відео від першого лиця, відео з руки та корпусу", "https://lh5.googleusercontent.com/1k2kOk7TOG2p0UjrV6WXnhOnzBtXJUoEMv9XPE-wejGTYDcIU-PkaGZmAeMeXuS08YU=w2400", 2, "20К/500", "Бонус для Відеомейкер"));
     // CASE
@@ -43,8 +72,9 @@ const initDNELootArr = () => {
     const BANAN_SHORTLINE = `Satisfaction`;
     const BANAN_IMG_ID = `15vp8EgurcWCoE6szd6JCMGD_GJ2tw_k1`;
     const BANAN_IMG = `https://drive.google.com/uc?id=${BANAN_IMG_ID}`;
-
-    LootArr.push(new DNELootCard("i-banan", "Банан", BANAN_LONGLINE, BANAN_IMG, 1, 50, "", BANAN_SHORTLINE, "", true, "loot"));
+    const iBanan = new DNELootCard("i-banan", "Банан", BANAN_LONGLINE, BANAN_IMG, 1, 50, "", BANAN_SHORTLINE, "", true, "loot");
+    iBanan.collection = "food";
+    LootArr.push(iBanan);
 
     // Сінабон
     //
@@ -53,24 +83,57 @@ const initDNELootArr = () => {
     const SINABON_SHORTLINE = `Eat me`;
     const SINABON_IMG_ID = `1z7MOOmRtCbp2jFVXrDweMNxU77xPSZcJ`;
     const SINABON_IMG = `https://drive.google.com/uc?id=${SINABON_IMG_ID}`;
+    const iSinabon = new DNELootCard("i-sinabon", "Сінабон", SINABON_LONGLINE, SINABON_IMG, 1, 100, "", SINABON_SHORTLINE, "", true, "loot")
+    iSinabon.collection = "food";
+    LootArr.push(iSinabon);
 
-    LootArr.push(new DNELootCard("i-sinabon", "Сінабон", SINABON_LONGLINE, SINABON_IMG, 1, 100, "", SINABON_SHORTLINE, "", true, "loot"));
+    const iHappy = new DNELootCard("i-happy", "Хеппі-Міл", FOOD_LONGLINE("смачнющим Хеппі-Міл"), "https://lh4.googleusercontent.com/f3gSMMyUE42eUPgXA0zv_ayBKF9_NbJulPBf97MQKgS3TsqNNPVq5WIAl9KDupFUuCk=w2400", 1, 180, "", "Знаю, ти мене хочеш", "", true, "loot");
+    iHappy.collection = "food";
+    LootArr.push(iHappy);
 
-    LootArr.push(new DNELootCard("i-happy", "Хеппі-Міл", FOOD_LONGLINE("смачнющим Хеппі-Міл"), "https://lh4.googleusercontent.com/f3gSMMyUE42eUPgXA0zv_ayBKF9_NbJulPBf97MQKgS3TsqNNPVq5WIAl9KDupFUuCk=w2400", 1, 180, "", "Знаю, ти мене хочеш", "", true, "loot"));
-    LootArr.push(new DNELootCard("i-macmenu", "Мак-Меню", FOOD_LONGLINE("смачнющим Мак-Меню"), "https://lh4.googleusercontent.com/y5P2jbhCxlBTx9wSx0md0AfubamFyoZ0MbBF9Hm_BZyb1sPP3D8-sA1CooxoeZE41eI=w2400", 1, 240, "", "О так, візьми мене", "", true, "loot"));
+    const iMacMenu = new DNELootCard("i-macmenu", "Мак-Меню", FOOD_LONGLINE("смачнющим Мак-Меню"), "https://lh4.googleusercontent.com/y5P2jbhCxlBTx9wSx0md0AfubamFyoZ0MbBF9Hm_BZyb1sPP3D8-sA1CooxoeZE41eI=w2400", 1, 240, "", "О так, візьми мене", "", true, "loot");
+    iMacMenu.collection = "food";
+    LootArr.push(iMacMenu);
 
-    LootArr.push(new DNELootCard("i-pizza", "Піца", FOOD_LONGLINE("смачнющою Тоні Пепероні з Домінос"), "https://lh3.googleusercontent.com/GQ1YskWL7s-W0WwpNfDYWF7PwMjnfqSaBn2K2prOh8Ga4NX2GOwNKk_PzN_bGLxdKyc=w2400", 2, 420, "", "Смачнюща Тоні Пепероні вже стукає в твої двері. Не змушуй її чекати", "", true, "loot"));
+    const iPizza = new DNELootCard("i-pizza", "Піца", FOOD_LONGLINE("смачнющою Тоні Пепероні з Домінос"), "https://lh3.googleusercontent.com/GQ1YskWL7s-W0WwpNfDYWF7PwMjnfqSaBn2K2prOh8Ga4NX2GOwNKk_PzN_bGLxdKyc=w2400", 2, 420, "", "Смачнюща Тоні Пепероні вже стукає в твої двері. Не змушуй її чекати", "", true, "loot");
+    iPizza.collection = "food";
+    LootArr.push(iPizza);
 
+    const iRegularSound = new DNELootCard("i-regular-sound", "Потужний звук", "Професійний сет звукового обладнання потужністю в 600вт, в який входить: монітор, мікшер Yamaha, два безпровідні мікро, дим машина, штатив та дротова система що живиться від розетки 220V. З якісним контроллером та Діджеєм може розкачати натовп до 50 людей, чудово підходить для невеликих приміщень.", "https://lh3.googleusercontent.com/zSIxmWk_sBxfUJH9MDJaOpa1VMjdTuHSS-AXw-C1tTURrS_coBvFOY4VpFF3XF1oCvE=w2400", 6, "40K/1800", "Велика", "Звук дає можливість ділитися своєю музикою з натовпом. Чим гучніше, тим більше людей зачепить.", "", true, "loot");
+    iRegularSound.collection = "soundSystem";
+    LootArr.push(iRegularSound);
 
-    LootArr.push(new DNELootCard("i-regular-sound", "Потужний звук", "Професійний сет звукового обладнання потужністю в 600вт, в який входить: монітор, мікшер Yamaha, два безпровідні мікро, дим машина, штатив та дротова система що живиться від розетки 220V. З якісним контроллером та Діджеєм може розкачати натовп до 50 людей, чудово підходить для невеликих приміщень.", "https://lh3.googleusercontent.com/zSIxmWk_sBxfUJH9MDJaOpa1VMjdTuHSS-AXw-C1tTURrS_coBvFOY4VpFF3XF1oCvE=w2400", 6, "40K/1800", "Велика", "Звук дає можливість ділитися своєю музикою з натовпом. Чим гучніше, тим більше людей зачепить.", "", true, "loot"));
-    LootArr.push(new DNELootCard("i-vinyl-sound", "Потужний вініловий звук", "Професійний сет звукового обладнання потужністю в 600вт, в який входить: два монітори, мікшер та два вінілові програвачі, дим машина, штатив та дротова система що живиться від розетки 220V. З якісним контроллером та Діджеєм може підтримувати в тонусі або розкачати натовп до 100 людей, чудово підходить для невеликих та середніх приміщень.", "https://lh4.googleusercontent.com/kRz3BiDfIYHwBYj1Rr_jae4H1MxOXKsQ8IXu8e1E9ardUxIL3goX42y7cTThQGHcZyE=w2400", 7, "60K/2800", "Велика", "Звук дає можливість ділитися своєю музикою з натовпом. Чим гучніше, тим більше людей зачепить.<br><br> Дозволяє грати вініл.", "", true, "loot"));
-    LootArr.push(new DNELootCard("i-powerful-sound", "Надпотужний звук", "Професійний сет звукового обладнання потужністю в 1200вт, в який входить: два монітори, мікшер Yamaha, два безпровідні мікро, дим машина, штатив та дротова система що живиться від розетки 220V. З якісним контроллером та Діджеєм може розкачати натовп до 200 людей, чудово підходить для невеликих та середіх приміщень. В житлових зонах на таке обладнання можуть скаржитись сусіди.", "https://lh5.googleusercontent.com/ikLJs1LtUQRgNei8RBjBvT_CMR8kM8YpiRSdrilyIL6N6CKTM5wzW24q4MRz3S9DEGQ=w2400", 10, "70K/3200", "Тільки для DJ. Велика", "Звук дає можливість ділитися своєю музикою з натовпом. Чим гучніше, тим більше людей зачепить.", "", true, "loot"));
-    LootArr.push(new DNELootCard("i-spaceful-sound", "Просторий звук", "Професійний сет звукового обладнання потужністю в 2000вт, спецільно для якісного наповнення звуком просторих приміщень в який входить: п'ять моніторів, мікшер Yamaha, два безпровідні мікро, дві потужні дим машини, штативи та дротова система що живиться від розетки 220V. З якісним контроллером та Діджеєм може розкачати натовп до 300 людей, чудово підходить для середіх та великих приміщень.", "https://lh4.googleusercontent.com/PgwB0JeWhLsKU4KtxkCantInRPu6B9cx6OVvCJbr9zKw7NOL9_Qs-D3iiIp72__QBVU=w2400", 16, "270K/5800", "Тільки для DJ. Велика", "Звук дає можливість ділитися своєю музикою з натовпом. Чим гучніше, тим більше людей зачепить.", "", true, "loot"));
-    LootArr.push(new DNELootCard("i-gamer-sound", "Стрімерський звук", "Професійний сет звукового обладнання потужністю в 400вт, в який входить: два монітори, один вініловий програвач, касетний плеєр, мікшер Yamaha, два бездротові мікро, дим машина, штатив та дротова система що живиться від розетки 220V. З якісним контроллером та Діджеєм може розкачати натовп до 40 людей та підтримувати його в тонусі, чудово підходить для невеликих приміщень. Завдяки звукоізоляціі навіть в житлових зонах на таке обладнання не буде скарг від сусідів.", "https://lh3.googleusercontent.com/cRVIaT5RkZiuYTlpQXRqJVzdZg1HFBYpEi-WiQyVgi_CqS5ydcVr0t9GljmyJ2N6XMo=w2400", 8, "120K/3400", "Велика", "Звук дає можливість ділитися своєю музикою з натовпом. Чим гучніше, тим більше людей зачепить.", "", true, "loot"));
-    LootArr.push(new DNELootCard("i-silent-sound", "Ізольований b2b звук", "Професійний сет звукового обладнання потужністю в 900вт, в який входить: два монітори, мікшер Yamaha, два підвішені мікро, дим машина, штатив та дротова система що живиться від розетки 220V. З якісним контроллером та Діджеєм може розкачати натовп до 100 людей, чудово підходить для невеликих та середіх приміщень. Спеціальзується на одночасному записі, може вмістити до 4х артистів. Завдяки звукоізоляціі навіть в житлових зонах на таке обладнання не буде скарг від сусідів.", "https://lh4.googleusercontent.com/l6lpA8YVQLDObWm_ZJmv0QDxTa45w1X8mTAgdl4G7EhPvf2zPMCn4SysHbg-GEeqwm0=w2400", 9, "90K/2800", "Велика", "Звук дає можливість ділитися своєю музикою з натовпом. Чим гучніше, тим більше людей зачепить.", "", true, "loot"));
-    LootArr.push(new DNELootCard("i-legacy-sound", "Професійний звук минулого", "Раритетний сет звукового обладнання потужністю в 300вт, в який входить: монітор, мікшер, касетний програвач та дротова система що живиться від розетки 220V. З якісним контроллером та Діджеєм може розкачати невеличкий натовп до 80 людей, дає широкі можливості для своєї вартості.", "https://lh5.googleusercontent.com/p63-RSBO5TxBjDjWZIbMJ-U-nr1bOKCIefdIbYj_OBR2PycPyoSeuD_LvwOnAibyCk8=w2400", 4, "15K/400", "Велика", "Звук дає можливість ділитися своєю музикою з натовпом. Чим гучніше, тим більше людей зачепить.", "", true, "loot"));
-    LootArr.push(new DNELootCard("i-fathers-sound", "Батьків звук", "Раритетний сет звукового обладнання потужністю в 200вт, в який входить: монітор, мікшер та дротова система що живиться від розетки 220V. З якісним контроллером та Діджеєм може розкачати невеличкий натовп до 30 людей, дає широкі можливості для своєї вартості.", "https://lh3.googleusercontent.com/v2R3CPQL-GvaR4XGIPQa6MumoK02LiwWSF45vvL5etQfcEX4qSPQa6OAA04fyWEpIpE=w2400", 3, "2K/300", "Велика", "Звук дає можливість ділитися своєю музикою з натовпом. Чим гучніше, тим більше людей зачепить.", "", true, "loot"));
-    LootArr.push(new DNELootCard("i-bunny-sound", "Преміум звук", "Професійний сет домашнього звукового обладнання преміального классу потужністю в 500вт, в який входить: два монітор, мікшер, дим машина та дротова система що живиться від розетки 220V. З якісним контроллером та Діджеєм може підтримувати в тонусі невелике приміщення людей до 30 осіб. Чудово підходить для середніх частот в невеличкому просторі затишних приміщеннь.", "https://lh6.googleusercontent.com/8fTLZWHk-ttKuc5cug7UfnzEfUj19MQJHHns_s1hV-Hkvl96PtkFydoA_bq7bNpVU3M=w2400", 5, "80K/1200", "Велика", "Звук дає можливість ділитися своєю музикою з натовпом. Чим гучніше, тим більше людей зачепить.", "", true, "loot"));
+    const iVinylSound = new DNELootCard("i-vinyl-sound", "Потужний вініловий звук", "Професійний сет звукового обладнання потужністю в 600вт, в який входить: два монітори, мікшер та два вінілові програвачі, дим машина, штатив та дротова система що живиться від розетки 220V. З якісним контроллером та Діджеєм може підтримувати в тонусі або розкачати натовп до 100 людей, чудово підходить для невеликих та середніх приміщень.", "https://lh4.googleusercontent.com/kRz3BiDfIYHwBYj1Rr_jae4H1MxOXKsQ8IXu8e1E9ardUxIL3goX42y7cTThQGHcZyE=w2400", 7, "60K/2800", "Велика", "Звук дає можливість ділитися своєю музикою з натовпом. Чим гучніше, тим більше людей зачепить.<br><br> Дозволяє грати вініл.", "", true, "loot");
+    iVinylSound.collection = "soundSystem";
+    LootArr.push(iVinylSound);
+
+    const iPowerfulSound = new DNELootCard("i-powerful-sound", "Надпотужний звук", "Професійний сет звукового обладнання потужністю в 1200вт, в який входить: два монітори, мікшер Yamaha, два безпровідні мікро, дим машина, штатив та дротова система що живиться від розетки 220V. З якісним контроллером та Діджеєм може розкачати натовп до 200 людей, чудово підходить для невеликих та середіх приміщень. В житлових зонах на таке обладнання можуть скаржитись сусіди.", "https://lh5.googleusercontent.com/ikLJs1LtUQRgNei8RBjBvT_CMR8kM8YpiRSdrilyIL6N6CKTM5wzW24q4MRz3S9DEGQ=w2400", 10, "70K/3200", "Тільки для DJ. Велика", "Звук дає можливість ділитися своєю музикою з натовпом. Чим гучніше, тим більше людей зачепить.", "", true, "loot");
+    iPowerfulSound.collection = "soundSystem";
+    LootArr.push(iPowerfulSound);
+
+    const iSpacefulSound = new DNELootCard("i-spaceful-sound", "Просторий звук", "Професійний сет звукового обладнання потужністю в 2000вт, спецільно для якісного наповнення звуком просторих приміщень в який входить: п'ять моніторів, мікшер Yamaha, два безпровідні мікро, дві потужні дим машини, штативи та дротова система що живиться від розетки 220V. З якісним контроллером та Діджеєм може розкачати натовп до 300 людей, чудово підходить для середіх та великих приміщень.", "https://lh4.googleusercontent.com/PgwB0JeWhLsKU4KtxkCantInRPu6B9cx6OVvCJbr9zKw7NOL9_Qs-D3iiIp72__QBVU=w2400", 16, "270K/5800", "Тільки для DJ. Велика", "Звук дає можливість ділитися своєю музикою з натовпом. Чим гучніше, тим більше людей зачепить.", "", true, "loot");
+    iSpacefulSound.collection = "soundSystem";
+    LootArr.push(iSpacefulSound);
+
+    const iGamerSound = new DNELootCard("i-gamer-sound", "Стрімерський звук", "Професійний сет звукового обладнання потужністю в 400вт, в який входить: два монітори, один вініловий програвач, касетний плеєр, мікшер Yamaha, два бездротові мікро, дим машина, штатив та дротова система що живиться від розетки 220V. З якісним контроллером та Діджеєм може розкачати натовп до 40 людей та підтримувати його в тонусі, чудово підходить для невеликих приміщень. Завдяки звукоізоляціі навіть в житлових зонах на таке обладнання не буде скарг від сусідів.", "https://lh3.googleusercontent.com/cRVIaT5RkZiuYTlpQXRqJVzdZg1HFBYpEi-WiQyVgi_CqS5ydcVr0t9GljmyJ2N6XMo=w2400", 8, "120K/3400", "Велика", "Звук дає можливість ділитися своєю музикою з натовпом. Чим гучніше, тим більше людей зачепить.", "", true, "loot");
+    iGamerSound.collection = "soundSystem";
+    LootArr.push(iGamerSound);
+
+    const iSilentSound = new DNELootCard("i-silent-sound", "Ізольований b2b звук", "Професійний сет звукового обладнання потужністю в 900вт, в який входить: два монітори, мікшер Yamaha, два підвішені мікро, дим машина, штатив та дротова система що живиться від розетки 220V. З якісним контроллером та Діджеєм може розкачати натовп до 100 людей, чудово підходить для невеликих та середіх приміщень. Спеціальзується на одночасному записі, може вмістити до 4х артистів. Завдяки звукоізоляціі навіть в житлових зонах на таке обладнання не буде скарг від сусідів.", "https://lh4.googleusercontent.com/l6lpA8YVQLDObWm_ZJmv0QDxTa45w1X8mTAgdl4G7EhPvf2zPMCn4SysHbg-GEeqwm0=w2400", 9, "90K/2800", "Велика", "Звук дає можливість ділитися своєю музикою з натовпом. Чим гучніше, тим більше людей зачепить.", "", true, "loot");
+    iSilentSound.collection = "soundSystem";
+    LootArr.push(iSilentSound);
+
+    const iLegacySound = new DNELootCard("i-legacy-sound", "Професійний звук минулого", "Раритетний сет звукового обладнання потужністю в 300вт, в який входить: монітор, мікшер, касетний програвач та дротова система що живиться від розетки 220V. З якісним контроллером та Діджеєм може розкачати невеличкий натовп до 80 людей, дає широкі можливості для своєї вартості.", "https://lh5.googleusercontent.com/p63-RSBO5TxBjDjWZIbMJ-U-nr1bOKCIefdIbYj_OBR2PycPyoSeuD_LvwOnAibyCk8=w2400", 4, "15K/400", "Велика", "Звук дає можливість ділитися своєю музикою з натовпом. Чим гучніше, тим більше людей зачепить.", "", true, "loot");
+    iLegacySound.collection = "soundSystem";
+    LootArr.push(iLegacySound);
+
+    const iFathersSound = new DNELootCard("i-fathers-sound", "Батьків звук", "Раритетний сет звукового обладнання потужністю в 200вт, в який входить: монітор, мікшер та дротова система що живиться від розетки 220V. З якісним контроллером та Діджеєм може розкачати невеличкий натовп до 30 людей, дає широкі можливості для своєї вартості.", "https://lh3.googleusercontent.com/v2R3CPQL-GvaR4XGIPQa6MumoK02LiwWSF45vvL5etQfcEX4qSPQa6OAA04fyWEpIpE=w2400", 3, "2K/300", "Велика", "Звук дає можливість ділитися своєю музикою з натовпом. Чим гучніше, тим більше людей зачепить.", "", true, "loot");
+    iFathersSound.collection = "soundSystem";
+    LootArr.push(iFathersSound);
+
+    const iBunnySound = new DNELootCard("i-bunny-sound", "Преміум звук", "Професійний сет домашнього звукового обладнання преміального классу потужністю в 500вт, в який входить: два монітор, мікшер, дим машина та дротова система що живиться від розетки 220V. З якісним контроллером та Діджеєм може підтримувати в тонусі невелике приміщення людей до 30 осіб. Чудово підходить для середніх частот в невеличкому просторі затишних приміщеннь.", "https://lh6.googleusercontent.com/8fTLZWHk-ttKuc5cug7UfnzEfUj19MQJHHns_s1hV-Hkvl96PtkFydoA_bq7bNpVU3M=w2400", 5, "80K/1200", "Велика", "Звук дає можливість ділитися своєю музикою з натовпом. Чим гучніше, тим більше людей зачепить.", "", true, "loot");
+    iBunnySound.collection = "soundSystem";
+    LootArr.push(iBunnySound);
     // LootArr.push(new DNELootCard("i-from-paris-wl", "Ваза кокаїну", "Так, це зовсім незаконно. Цю картку можна просто скинути.<br><br> А можна і залишити)", "https://lh4.googleusercontent.com/3EXp5XTiFmNzh17E373Q5eRFptHUJYDzeGaIRMhG07HXXJynWKqbrqZgVzSVKdyqhco=w2400", "13", "800K", "Шериф цим зацікавиться"));
     // LootArr.push(new DNELootCard("i-from-kherson-wl", "Центнер бошок", "Боже правий", "https://lh6.googleusercontent.com/p-HwPSacUlld8yDTA-4yajUhEsUznscnT7M5xfsA1e7K1JpEMGs9vrHr0eT1SpiBqDk=w2400", "25", "5КK", "Шериф цим серйозно зацікавиться"));
     // LootArr.push(new DNELootCard("i-censored-mod", "На любое дерьмо", "Дає можливість отримати легендарні карти неймовірної сили та цінності. Їх використання може призвести до будь-яких наслідків, давай собі в цьому розуміння, якщо наважишся це робити.", "https://lh6.googleusercontent.com/p-HwPSacUlld8yDTA-4yajUhEsUznscnT7M5xfsA1e7K1JpEMGs9vrHr0eT1SpiBqDk=w2400", 0, 0, "Мод"));

@@ -1,9 +1,10 @@
 class DNECard {
-    constructor(id, name, description, img) {
+    constructor(id, name, description, img, collection = "all") {
         this.id = id;
         this.name = name;
         this.description = description;
         this.img = img;
+        this.collection = collection;
     }
 }
 

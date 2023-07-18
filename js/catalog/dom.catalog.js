@@ -5,6 +5,7 @@ import { drawDoorCards } from "../cards/doorDom.cards.js";
 import { clearChips, drawChips } from "./chips.catalog.js";
 import { splitDoorsAndLoot } from "../utils/setToArr.js";
 import { swiper } from "../swiper/swiper.module.js";
+import { initCollections, appendFilterButton } from "../utils/initCollection.js";
 
 const catalogSaveCeil = "currentCatalog";
 const saveCatalog = (currentType) => {
@@ -32,6 +33,10 @@ const initCatalog = (type) => {
     } else {
         const DNENewCardsArr = Array.from(win77.game.catalog.all).filter(card => card.type === type);
         drawLootCards(DNENewCardsArr, ".js-cards-catalog");
+
+        if (type === "loot") {
+            appendFilterButton();
+        }
     }
 
     // console.log(type, win77);
@@ -57,3 +62,5 @@ catalogTypeControls.forEach((catalogTypeControl) => {
         initCatalog(CARD_TYPES[type]);
     });
 });
+
+export { initCatalog, loadCatalog };

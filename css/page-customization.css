@@ -34,9 +34,20 @@
 }
 
 .js-cards-catalog {
+    position: relative;
+
     width: 930px;
     max-width: max-content!important;
     justify-content: center;
+}
+
+.js-filter-by-collection {
+    position: absolute;
+    top: 0;
+    left: -10px;
+    transform: translateX(-100%);
+
+    margin: 0!important;
 }
 
 .build .js-cards-catalog[data-hash="hud"] {
