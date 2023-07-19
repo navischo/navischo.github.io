@@ -129,7 +129,7 @@ const initPlayer = () => {
         lvl: savedLvl ? savedLvl : 0,
         balance: {
             energy: 7,
-            bankroll: savedBankroll ? savedBankroll : 14000,
+            bankroll: 14000, // savedBankroll ? savedBankroll :
             skillPoints: 3
         },
         hand: new Set(),
