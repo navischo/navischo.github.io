@@ -43,6 +43,8 @@
 @import "blocks/collector.css";
 @import "blocks/collection.css";
 @import "blocks/hand-timer.css";
+@import "blocks/card-preview.css";
+@import "blocks/bank.css";
 
 /*CUSTOMIZATION*/
 @import "./i-customization.css";

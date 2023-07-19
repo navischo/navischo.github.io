@@ -1,6 +1,7 @@
 import { adminWeekMarkup } from "./admin/adminWeek.markup.js";
 import { adminDirectMarkup } from "./admin/adminDirect.markup.js";
 import { adminProfileMarkup } from "./admin/adminProfile.markup.js";
+import { adminBankMarkup } from "./admin/adminBank.markup.js";
 const adminMarkup = `
 <div id="admin-swiper" class="swiper --sub">
   <div class="swiper-wrapper">
@@ -16,6 +17,9 @@ const adminMarkup = `
         <div id="root-direct" class="root-admin" class="build"><!-- style='background: url("img/bg-profile.png")!important;'-->
             ${adminDirectMarkup}
         </div>
+    </div>
+    <div class="swiper-slide">
+        ${adminBankMarkup}
     </div>
 <!--    <div class="swiper-slide">-->
 <!--        <div class="sky-nav">-->

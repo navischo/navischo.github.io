@@ -1,0 +1,111 @@
+.bank {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    /*max-width: 1420px;*/
+    width: 100%;
+    padding: 0 40px;
+    margin: 0 auto;
+
+    background-color: var(--colors-bg--500);
+    background-image: radial-gradient( ellipse at 33% 10%, var(--color) 0%, transparent 75% );
+    background-repeat: no-repeat;
+    /*color: var(--colors-on_bg--500);*/
+    color: var(--color);
+    text-shadow: 0px 0px 4px var(--color);
+}
+
+.bank__header {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 110px;
+
+    font-family: "JetBrains Mono", monospace;
+}
+
+.bank__hypers {
+    position: absolute;
+    top: 100px;
+    z-index: 3;
+
+    width: 620px;
+}
+
+.bank__balance {
+    position: absolute;
+    top: 100px;
+    z-index: 3;
+    right: 40px;
+}
+
+.bank__hypers-title {
+    margin-top: 0;
+    margin-bottom: 40px;
+    font-family: "Press Start 2p", "JetBrains Mono", monospace;
+    font-size: 70px;
+    text-shadow: 4px 3px 3px black;
+}
+
+.bank__hypers-list {
+
+
+}
+
+.bank__hypers-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+
+    font-family: "Press Start 2p", "JetBrains Mono", monospace;
+    font-size: 36px;
+    text-shadow: 4px 3px 3px black;
+}
+
+.bank__balance {
+    font-family: "Press Start 2p", "JetBrains Mono", monospace;
+    font-size: 50px;
+    text-shadow: 4px 3px 3px black;
+}
+
+.bank__coin-wrap {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bank__coin {
+    padding: 0;
+    border: none;
+
+
+    width: 40vh;
+    height: 40vh;
+    background: yellow;
+    border-radius: 50%;
+
+    color: black;
+    font-family: "Press Start 2p", "JetBrains Mono", monospace;
+    font-size: 20vh;
+}
+
+.bank__coin:hover .bank__coin-symbol {
+    color: white;
+}
+
+.bank__coin-symbol {
+    position: relative;
+    right: -1.7vh;
+    top: 1.4vh;
+
+    color: var(--color);
+}
