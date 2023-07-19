@@ -88,6 +88,15 @@
     text-align: left;
 }
 
+#project-details-list {
+    display: block;
+    padding-left: 40px;
+}
+
+.project-detail {
+    display: block;
+}
+
 .project-obj .inventory-item {
     display: inline;
 }

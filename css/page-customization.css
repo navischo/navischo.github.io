@@ -93,7 +93,7 @@ body[data-hash="cards"] .js-car-name {
 }
 
 body[data-hash="admin"] .inventory,
-body[data-hash="event"] .inventory {
+body[data-hash="event"] .inventory:not(.project-obj) {
     display: none;
 }
 

@@ -77,6 +77,7 @@ const reloadTheday = () => {
 
     win77.finishDay();
     win77.setCurrentDay();
+    win77.resetSetting();
 }
 
 win77.reloadTheday = reloadTheday;

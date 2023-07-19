@@ -3,15 +3,23 @@ import { win77 } from "../dne-cli.js";
 import { initInventoryPopupJquery } from "../utils/initInventoryPopup.jquery.js";
 
 
+
 const inventoryMarkup = `
 <div id="project-obj" class="fw-d-none project-obj inventory">
     project:&nbsp;&nbsp;{<br>
-    &nbsp;&nbsp;<span data-advice-id="class">name:</span>&nbsp;
+    &nbsp;&nbsp;<span>name:</span>&nbsp;
     <span class="js-prj-name">Electro Exhibition</span>,
-    <br>&nbsp;&nbsp;<span data-advice-id="crew">executive:</span>&nbsp;
-    <span class="js-prj-executive">Navi</span><span class="">,
-    <br>&nbsp;&nbsp;<span data-advice-id="dia">point:</span>&nbsp;
-    <span class="js-prj-point">Keller</span>
+    <br>&nbsp;&nbsp;<span>executive:</span>&nbsp;
+    <span class="js-prj-executive">Navi</span><span>,
+    <br>&nbsp;&nbsp;<span>point:</span>&nbsp;
+    <span class="js-prj-point">Keller</span>,<span class="fw-d-none js-prj-details">
+    <br>&nbsp;&nbsp;<span>details:</span>&nbsp;{
+    &nbsp;&nbsp;&nbsp;&nbsp;<span id="project-details-list" class="inventory-items">
+        
+    </span>
+    &nbsp;&nbsp;},
+    </span>
+    <br>&nbsp;&nbsp;<button class="js-open-details cp-button">Details()</button>
     &nbsp;&nbsp;&nbsp;&nbsp;
     &nbsp;&nbsp;<br>}</span>
 </div>
@@ -58,7 +66,6 @@ const playerDiaList = document.querySelector("#player-dia-list");
 
 const projectExecutiveList = document.querySelector(".js-prj-executive");
 
-
 const cardNodesByType = {
     [CARD_TYPES.loot]: inventoryList,
     [CARD_TYPES.sound]: soundList,
@@ -67,7 +74,6 @@ const cardNodesByType = {
     [CARD_TYPES.dia]: playerDiaList,
     executive: projectExecutiveList
 }
-
 
 const appendCardToInventory = (cardData, cardType = CARD_TYPES.loot) => {
     const newListItem = document.createElement("a");
