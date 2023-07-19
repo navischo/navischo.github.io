@@ -48,7 +48,7 @@ const timeOutField = document.querySelector('#timeout');
 
 
 //Функции валидации:
-const validateTitle = () => titleField.value.length >= 30 && titleField.value.length <= 100;
+const validateTitle = () => titleField.value.length >= 10 && titleField.value.length <= 100;
 const validatePrice = () => priceField.value >= MIN_PRICES_FOR_TYPES[typeField.value] && priceField.value <= 100000;
 
 //Генерируем сообщение об ошибке:
@@ -59,7 +59,7 @@ const priceErrorMessage = () => `Не менше ${MIN_PRICES_FOR_TYPES[typeFiel
 pristine.addValidator(
   titleField,
   validateTitle,
-  'Від 30 до 100 символів'
+  'Від 10 до 100 символів'
 );
 
 pristine.addValidator(

@@ -80,6 +80,18 @@
     text-align: left;
 }
 
+.inventory.project-obj {
+    right: auto;
+    left: 0;
+    top: 260px;
+
+    text-align: left;
+}
+
+.project-obj .inventory-item {
+    display: inline;
+}
+
 .inventory-item {
     transition: .1s ease-in;
 

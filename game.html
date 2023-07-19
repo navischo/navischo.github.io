@@ -458,35 +458,36 @@
             <fieldset class="field ad-form__element ad-form__element--wide">
                 <label class="ad-form__label glow text" for="title">Заголовок івенту</label>
                 <input id="title" name="title" type="text" placeholder="Вечірка твоїх друзів" required>
-
-                <label class="ad-form__label glow text" for="executive">Виконавець</label>
-                <select class="" id="executive" name="executive">
-                    <option value="you">You</option>
-                </select>
             </fieldset>
             <fieldset class="field ad-form__element ad-form__element--wide" style="display: none">
                 <label class="ad-form__label glow text" for="address">Адреса (координати)</label>
                 <input id="address" name="address" type="text" value='50.45466, 30.5238' required readonly>
             </fieldset>
+
             <fieldset class="field ad-form__element ad-form__element--wide">
                 <label class="ad-form__label glow text" for="address">Адреса (сектор)</label>
                 <select id="sector" name="sector">
                     <option value="a0">a0</option>
                 </select>
-<!--                <input id="sector" name="sector" type="text" placeholder='a0' required>-->
+            </fieldset>
 
-                <label class="fw-d-none ad-form__label glow text" for="point">Поінт</label>
-                <select class="fw-d-none" id="point" name="point">
+            <fieldset class="field ad-form__element ad-form__element--wide">
+                <label class="ad-form__label glow text" for="executive">Виконавець</label>
+                <select class="" id="executive" name="executive">
+                    <option value="you">You</option>
+                </select>
+            </fieldset>
+
+            <fieldset class="field ad-form__element ad-form__element--wide">
+                <label class="ad-form__label glow text" for="point">Поінт</label>
+                <select class="" id="point" name="point">
                     <option value="spot">Spot</option>
                     <option value="market">Market</option>
                     <option value="rave" selected>Rave</option>
                     <option value="gig">Gig</option>
                 </select>
-<!--                <input class="fw-d-none" id="point" name="point" type="text" value='a0' required>-->
-
-
-<!--                <input class="fw-d-none" id="executive" name="executive" type="text" value='a0' required>-->
             </fieldset>
+
             <fieldset class="field ad-form__element">
                 <label class="ad-form__label glow text" for="type">Тип приміщення</label>
                 <select id="type" name="type">
@@ -569,7 +570,7 @@
                 </div>
             </fieldset>
             <fieldset class="ad-form__element ad-form__element--submit">
-                <button class="cp-button ad-form__submit" type="submit">
+                <button class="js-set-setting cp-button ad-form__submit" type="submit">
                     <span class="submit">Створити</span>
                 </button>
                 або <button class="cp-button ad-form__reset" type="reset">очистити</button>
@@ -608,14 +609,14 @@
 <!-- Сообщение об успешном создании объявления -->
 <template id="success">
     <div class="success">
-        <p class="success__message">Ваше объявление<br>успешно размещено!</p>
+        <p class="success__message">Кастомний івент<br>успішно анонсований!</p>
     </div>
 </template>
 
 <!-- Сообщение об ошибке создания объявления -->
 <template id="error">
     <div class="error">
-        <p class="error__message">Ошибка размещения объявления</p>
+        <p class="error__message">Помилка збереження, перевір консоль</p>
         <button type="button" class="error__button">Попробовать снова</button>
     </div>
 </template>

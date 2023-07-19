@@ -34,7 +34,7 @@ const setupTheday = () => {
     win77.setEventSettings(Object.assign({}, settings));
     win77.game.event.settings.dungeObj = Array.from(win77.locationsSet).find((dungeObj) => dungeObj.name === win77.game.event.settings.dungeName);
     if (win77.setting) {
-        win77.game.event.settings.booking = win77.setting;
+        win77.game.event.settings.setting = win77.setting;
         console.log(win77.game.event.settings);
     }
 

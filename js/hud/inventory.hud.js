@@ -4,6 +4,17 @@ import { initInventoryPopupJquery } from "../utils/initInventoryPopup.jquery.js"
 
 
 const inventoryMarkup = `
+<div id="project-obj" class="fw-d-none project-obj inventory">
+    project:&nbsp;&nbsp;{<br>
+    &nbsp;&nbsp;<span data-advice-id="class">name:</span>&nbsp;
+    <span class="js-prj-name">Electro Exhibition</span>,
+    <br>&nbsp;&nbsp;<span data-advice-id="crew">executive:</span>&nbsp;
+    <span class="js-prj-executive">Navi</span><span class="">,
+    <br>&nbsp;&nbsp;<span data-advice-id="dia">point:</span>&nbsp;
+    <span class="js-prj-point">Keller</span>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;<br>}</span>
+</div>
 <div class="player-obj inventory">
     player:<br>&nbsp;&nbsp;{<br>
     &nbsp;&nbsp;<span data-advice-id="class">class:</span><br>&nbsp;&nbsp;{&nbsp;
@@ -45,13 +56,16 @@ const playerClassList = document.querySelector("#player-class-list");
 const playerCrewList = document.querySelector("#player-crew-list");
 const playerDiaList = document.querySelector("#player-dia-list");
 
+const projectExecutiveList = document.querySelector(".js-prj-executive");
+
 
 const cardNodesByType = {
     [CARD_TYPES.loot]: inventoryList,
     [CARD_TYPES.sound]: soundList,
     [CARD_TYPES.class]: playerClassList,
     [CARD_TYPES.npc]: playerCrewList,
-    [CARD_TYPES.dia]: playerDiaList
+    [CARD_TYPES.dia]: playerDiaList,
+    executive: projectExecutiveList
 }
 
 
@@ -66,6 +80,8 @@ const appendCardToInventory = (cardData, cardType = CARD_TYPES.loot) => {
     });
 
     cardNodesByType[cardType].appendChild(newListItem);
+
+    return newListItem;
 }
 
 const inventory = {
@@ -128,4 +144,4 @@ const initInventory = () => {
     initInventoryPopupJquery();
 }
 
-export { initInventory, inventoryMarkup };
+export { initInventory, inventoryMarkup, appendCardToInventory };

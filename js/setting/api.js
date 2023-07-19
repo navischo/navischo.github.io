@@ -1,6 +1,7 @@
 import { win77 } from "../dne-cli.js";
 import { showAlert } from './util.js';
 import { getSuccessfullLocalSave } from './form.js';
+import { setSetting } from '../utils/setSetting.js';
 
 export const getData = (onSuccess) => {
   fetch('https://27.javascript.pages.academy/keksobooking/data')
@@ -35,7 +36,9 @@ export const sendData = (onSuccess, onFail, body) => {
 export const saveDataLocally = (formNode) => {
     const settingObj = {
         title: formNode.querySelector("#title").value,
+        executive: formNode.querySelector("#executive").value,
         sector: formNode.querySelector("#sector").value,
+        point: formNode.querySelector("#point").value,
         dungeType: formNode.querySelector("#type").value,
         enterPrice: +formNode.querySelector("#price").value,
         roomNumber: +formNode.querySelector("#room_number").value,
@@ -52,23 +55,8 @@ export const saveDataLocally = (formNode) => {
 
     if (win77.setting) {
         getSuccessfullLocalSave();
+        setSetting(settingObj);
         // Отразить введенные данные в виде проекта
         // closePopup();
     }
-    // fetch('https://27.javascript.pages.academy/keksobooking',
-    //     {
-    //         method: 'POST',
-    //         body
-    //     }
-    // )
-    //     .then((response) => {
-    //         if(response.ok) {
-    //             onSuccess();
-    //         } else {
-    //             onFail();
-    //         }
-    //     })
-    //     .catch(() => {
-    //         onFail();
-    //     });
 };

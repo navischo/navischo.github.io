@@ -92,6 +92,7 @@ win77.eventSwiper = new Swiper("#event-swiper", {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
+    grab: false
     // pagination: {
     //     el: ".swiper-pagination",
     //     clickable: true,

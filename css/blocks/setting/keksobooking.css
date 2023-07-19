@@ -331,7 +331,7 @@ fieldset {
     font-size: 14px;
 }
 
-.ad-form__element select {
+#executive, #point {
     text-transform: capitalize;
 }
 
