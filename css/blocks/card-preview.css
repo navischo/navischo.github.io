@@ -28,7 +28,7 @@
     z-index: -1;
 }
 
-.card {
+.card-preview .card {
     left: 0;
     top: 0;
     perspective: 400px;
@@ -43,7 +43,7 @@
     -webkit-user-select: none;
     -ms-user-select: none;
 }
-.card:active {
+.card-preview .card:active {
     cursor: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/836/hearthstone-grab.png) 10 2, auto;
 }
 
