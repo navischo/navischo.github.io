@@ -15,7 +15,8 @@ const initHotline = (number) => {
             }
 
             if (dialogObj) {
-                initDialog(dialogObj.body, dialogVertical);
+                const hotlineParent = document.querySelector(".js-vertical-feed");
+                initDialog(dialogObj.body, hotlineParent);
             }
         }
     }

@@ -966,6 +966,7 @@ fieldset {
     position: relative;
 
     color: #ffffff;
+    font-family: "Press Start 2p", "JetBrains Mono", monospace;
     font-size: 50px;
     font-weight: 700;
 }

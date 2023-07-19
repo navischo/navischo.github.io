@@ -166,7 +166,7 @@ const adminDirectMarkup =
                                 </div>
                             </div>
                         </div>
-                        <div class="custom-scrollbar --y channel-feed__body">
+                        <div id="admin-dialog" class="custom-scrollbar --y channel-feed__body">
 
                         </div>
                         <div class="channel-feed__footer">

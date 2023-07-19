@@ -287,7 +287,7 @@ const initDialog = (dialog, parent = null) => {
 
     const dialogData = fillDialogData();
 
-    drawDialog(dialogData, parent);
+    drawDialog(dialogData, true, parent);
 }
 
 const initLocations = () => {
@@ -325,7 +325,7 @@ const initDirect = () => {
     const getDirectItemMarkup = (name) => `
 <li class="nav__item">
     <a class="nav__link" href="#">
-        <span class="conversation-link" data-direct="${name}"><span class="conversation-link__icon"></span><span
+        <span class="js-start-direct conversation-link" data-direct="${name}"><span class="conversation-link__icon"></span><span
             class="conversation-link__element">${name}</span></span>
     </a>
 </li>
@@ -336,6 +336,15 @@ const initDirect = () => {
     }
 
     initDirectsList();
+
+    const directStarters = directParent.querySelectorAll(".js-start-direct");
+    directStarters.forEach((directStarter) => {
+        directStarter.addEventListener("click", () => {
+            const dialogParent = document.querySelector("#admin-dialog");
+            console.log("initDialog(DIALOGS[0])", dialogParent);
+            initDialog(DIALOGS[0], dialogParent);
+        });
+    })
 }
 
 // initDirect();
@@ -376,6 +385,15 @@ const initProfile = () => {
         //     el: ".swiper-pagination",
         //     clickable: true,
         // },
+    });
+
+    win77.adminSwiper.on('slideChange', function (e) {
+        console.log(e, e.activeIndex, e.activeIndex === 3);
+        if (e.activeIndex === 2) {
+            const dialogParent = document.querySelector("#admin-dialog");
+            console.log("initDialog(DIALOGS[0])", dialogParent);
+            initDialog(DIALOGS[0], dialogParent);
+        }
     });
 
     win77.weekSwiper = new Swiper(".swiper.--week", {
