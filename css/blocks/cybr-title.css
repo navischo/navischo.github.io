@@ -1,3 +1,5 @@
+
+
 .cybr-title {
     font-family: "Cyberpunk", "Press Start 2p", sans-serif;
     font-size: 12vw;
@@ -6,6 +8,10 @@
     letter-spacing: -25.2px;
     text-shadow: 4px 5px 0 yellow;
     animation: glitch 5s step-end infinite alternate, glitch-skew 5s step-end infinite alternate;
+}
+
+.cybr-title.--cs-logo {
+    /*logo cs*/
 }
 
 .cybr-title a,

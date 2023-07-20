@@ -39,8 +39,7 @@
         <h1 class="cybr-title"><a href="consume.html" target="_blank">Does Not Exist</a></h1>
         <a href="#setting-popup" class="js-open-setting game-menu__list-item">Setting</a>
         <a href="#map-popup" class="js-open-map game-menu__list-item">Map</a>
-        <a href="#quest-popup" class="js-open-quest game-menu__list-item">Gig</a>
-        <a href="#load-popup" class="js-open-load game-menu__list-item">Load</a>
+        <a href="#cs-popup" class="js-open-cs game-menu__list-item">Gig</a>
         <a href="wall.html" class="game-menu__list-item" target="_blank">Wall</a>
         <a href="#card-builder-popup" class="js-open-card-builder game-menu__list-item">+Record</a>
         <small class="game-menu__version">0.5</small>
@@ -51,7 +50,6 @@
 </div>
 
 <div class="sudo-page">
-
 <!--    <div class="card-preview">-->
 <!--        <div class="card">-->
 <!--            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/836/hearthstone-ragnaros.png" class="card-image" draggable="false">-->
@@ -386,246 +384,267 @@
 
 </div>
 
+<!--<div id="cs-popup" class="cyber-strike-popup cyber-strike-modal white-popup mfp-hide">-->
+<!--    -->
+<!--</div>-->
+
+
 <div id="setting-popup" class="cp-body setting-modal white-popup mfp-hide"><!--custom-scrollbar --y-->
 
-<main>
-    <!-- Карта объявлений -->
-    <section class="keks-map" style="display: none">
+    <main>
+        <!-- Карта объявлений -->
+        <section class="keks-map" style="display: none">
 
-        <!-- Блок для вставки карты -->
-        <div class="keks-map__canvas" id="map-canvas"></div>
+            <!-- Блок для вставки карты -->
+            <div class="keks-map__canvas" id="map-canvas"></div>
 
-        <!-- Фильтрация объявлений -->
-        <div class="keks-map__filters-container">
-            <form action="#" class="keks-map__filters" autocomplete="off">
-                <select name="housing-type" id="housing-type" class="keks-map__filter">
-                    <option value="any" selected>Будь-який тип локації</option>
-                    <option value="street">Бунгало</option>
-                    <option value="factory">Квартира</option>
-                    <option value="club">Отель</option>
-                    <option value="house">Дом</option>
-                    <option value="palace">Дворец</option>
-                </select>
-                <select name="housing-price" id="housing-price" class="keks-map__filter">
-                    <option value="any" selected>Будь-який бюджет</option>
-                    <option value="middle">10000 - 50000&#x20bd;</option>
-                    <option value="low">до 10000&#x20bd;</option>
-                    <option value="high">от 50000&#x20bd;</option>
-                </select>
-                <select name="housing-rooms" id="housing-rooms" class="keks-map__filter">
-                    <option value="any" selected>Будь-який простір</option>
-                    <option value="1">Одна комната</option>
-                    <option value="2">Две комнаты</option>
-                    <option value="3">Три комнаты</option>
-                </select>
-                <select name="housing-guests" id="housing-guests" class="keks-map__filter">
-                    <option value="any" selected>Будь-яка кількість гостей</option>
-                    <option value="2">Два гостя</option>
-                    <option value="1">Один гость</option>
-                    <option value="0">Не для гостей</option>
-                </select>
-                <fieldset id="housing-features" class="keks-map__features">
-                    <input type="checkbox" name="features" value="wifi" id="filter-wifi" class="keks-map__checkbox visually-hidden">
-                    <label class="keks-map__feature keks-map__feature--wifi" for="filter-wifi">Wi-Fi</label>
-                    <input type="checkbox" name="features" value="dishwasher" id="filter-dishwasher" class="keks-map__checkbox visually-hidden">
-                    <label class="keks-map__feature keks-map__feature--dishwasher" for="filter-dishwasher">Посудомоечная машина</label>
-                    <input type="checkbox" name="features" value="parking" id="filter-parking" class="keks-map__checkbox visually-hidden">
-                    <label class="keks-map__feature keks-map__feature--parking" for="filter-parking">Парковка</label>
-                    <input type="checkbox" name="features" value="washer" id="filter-washer" class="keks-map__checkbox visually-hidden">
-                    <label class="keks-map__feature keks-map__feature--washer" for="filter-washer">Стиральная машина</label>
-                    <input type="checkbox" name="features" value="elevator" id="filter-elevator" class="keks-map__checkbox visually-hidden">
-                    <label class="keks-map__feature keks-map__feature--elevator" for="filter-elevator">Лифт</label>
-                    <input type="checkbox" name="features" value="conditioner" id="filter-conditioner" class="keks-map__checkbox visually-hidden">
-                    <label class="keks-map__feature keks-map__feature--conditioner" for="filter-conditioner">Кондиционер</label>
+            <!-- Фильтрация объявлений -->
+            <div class="keks-map__filters-container">
+                <form action="#" class="keks-map__filters" autocomplete="off">
+                    <select name="housing-type" id="housing-type" class="keks-map__filter">
+                        <option value="any" selected>Будь-який тип локації</option>
+                        <option value="street">Бунгало</option>
+                        <option value="factory">Квартира</option>
+                        <option value="club">Отель</option>
+                        <option value="house">Дом</option>
+                        <option value="palace">Дворец</option>
+                    </select>
+                    <select name="housing-price" id="housing-price" class="keks-map__filter">
+                        <option value="any" selected>Будь-який бюджет</option>
+                        <option value="middle">10000 - 50000&#x20bd;</option>
+                        <option value="low">до 10000&#x20bd;</option>
+                        <option value="high">от 50000&#x20bd;</option>
+                    </select>
+                    <select name="housing-rooms" id="housing-rooms" class="keks-map__filter">
+                        <option value="any" selected>Будь-який простір</option>
+                        <option value="1">Одна комната</option>
+                        <option value="2">Две комнаты</option>
+                        <option value="3">Три комнаты</option>
+                    </select>
+                    <select name="housing-guests" id="housing-guests" class="keks-map__filter">
+                        <option value="any" selected>Будь-яка кількість гостей</option>
+                        <option value="2">Два гостя</option>
+                        <option value="1">Один гость</option>
+                        <option value="0">Не для гостей</option>
+                    </select>
+                    <fieldset id="housing-features" class="keks-map__features">
+                        <input type="checkbox" name="features" value="wifi" id="filter-wifi" class="keks-map__checkbox visually-hidden">
+                        <label class="keks-map__feature keks-map__feature--wifi" for="filter-wifi">Wi-Fi</label>
+                        <input type="checkbox" name="features" value="dishwasher" id="filter-dishwasher" class="keks-map__checkbox visually-hidden">
+                        <label class="keks-map__feature keks-map__feature--dishwasher" for="filter-dishwasher">Посудомоечная машина</label>
+                        <input type="checkbox" name="features" value="parking" id="filter-parking" class="keks-map__checkbox visually-hidden">
+                        <label class="keks-map__feature keks-map__feature--parking" for="filter-parking">Парковка</label>
+                        <input type="checkbox" name="features" value="washer" id="filter-washer" class="keks-map__checkbox visually-hidden">
+                        <label class="keks-map__feature keks-map__feature--washer" for="filter-washer">Стиральная машина</label>
+                        <input type="checkbox" name="features" value="elevator" id="filter-elevator" class="keks-map__checkbox visually-hidden">
+                        <label class="keks-map__feature keks-map__feature--elevator" for="filter-elevator">Лифт</label>
+                        <input type="checkbox" name="features" value="conditioner" id="filter-conditioner" class="keks-map__checkbox visually-hidden">
+                        <label class="keks-map__feature keks-map__feature--conditioner" for="filter-conditioner">Кондиционер</label>
+                    </fieldset>
+                </form>
+            </div>
+        </section>
+
+        <!-- Форма объявления -->
+        <section class="notice">
+            <h2 class="cp-h2 notice__title">Ваш івент</h2>
+            <form class="ad-form" action='https://27.javascript.pages.academy/keksobooking' method="post" enctype="multipart/form-data" autocomplete="off">
+                <fieldset class="ad-form-header">
+                    <legend class="ad-form-header__title">Постер (для анонсу)</legend>
+                    <div class="ad-form-header__upload">
+                        <div class="ad-form-header__preview">
+                            <img src="img/muffin-grey.svg" alt="Постер події" width="40" height="44">
+                        </div>
+                        <div class="ad-form__field">
+                            <input type="file" id="avatar" name="avatar" class="ad-form-header__input visually-hidden" accept="image/png, image/jpeg">
+                            <label class="ad-form-header__drop-zone" for="avatar">Завантажити<br>фото...</label>
+                        </div>
+                        <p class="ad-form-header__info">Заповніть усі необхідні поля, оберіть вартість входу, завантажте флаєр та мапу локації. Вигадайте цікавий опис. Він зробить івент більш живим та привабливим.<br>
+                            <br>Обличчя івенту має давати гостям повне уявлення про його зміст.</p>
+                    </div>
+                </fieldset>
+                <fieldset class="field ad-form__element ad-form__element--wide">
+                    <label class="ad-form__label glow text" for="title">Заголовок івенту</label>
+                    <input id="title" name="title" type="text" placeholder="Вечірка твоїх друзів" value="Ma perfect event" required>
+                </fieldset>
+                <fieldset class="field ad-form__element ad-form__element--wide" style="display: none">
+                    <label class="ad-form__label glow text" for="address">Адреса (координати)</label>
+                    <input id="address" name="address" type="text" value='50.45466, 30.5238' required readonly>
+                </fieldset>
+
+                <fieldset class="field ad-form__element ad-form__element--wide">
+                    <label class="ad-form__label glow text" for="address">Адреса (сектор)</label>
+                    <select id="sector" name="sector">
+                        <option value="a0">a0</option>
+                    </select>
+                </fieldset>
+
+                <fieldset class="field ad-form__element ad-form__element--wide">
+                    <label class="ad-form__label glow text" for="executive">Виконавець</label>
+                    <select class="" id="executive" name="executive">
+                        <option value="you">You</option>
+                    </select>
+                </fieldset>
+
+                <fieldset class="field ad-form__element ad-form__element--wide">
+                    <label class="ad-form__label glow text" for="point">Поінт</label>
+                    <select class="" id="point" name="point">
+                        <option value="spot">Spot</option>
+                        <option value="market">Market</option>
+                        <option value="rave" selected>Rave</option>
+                        <option value="gig">Gig</option>
+                    </select>
+                </fieldset>
+
+                <fieldset class="field ad-form__element">
+                    <label class="ad-form__label glow text" for="type">Тип приміщення</label>
+                    <select id="type" name="type">
+                        <option value="street">Вулиця</option>
+                        <option value="factory" selected>Фабрика</option>
+                        <option value="loft">Лофт</option>
+                        <option value="bar">Бар</option>
+                        <option value="club">Клуб</option>
+                        <option value="studio">Студія</option>
+                        <option value="palace">Палац</option>
+                    </select>
+                </fieldset>
+                <fieldset class="field ad-form__element">
+                    <label class="ad-form__label glow text" for="price">Ціна за вхід</label>
+                    <input id="price" name="price" type="number" step="100" placeholder="200"required>
+                    <div class="ad-form__slider"></div>
+                </fieldset>
+                <fieldset class="field ad-form__element ad-form__element--time">
+                    <label class="ad-form__label glow text" for="timein">Час входу та виходу</label>
+                    <select id="timein" name="timein">
+                        <option value="12:00" selected>Після 17</option>
+                        <option value="13:00">Після 16</option>
+                        <option value="14:00">Після 15</option>
+                    </select>
+                    <select id="timeout" name="timeout" title="Time to go out">
+                        <option value="12:00" selected>Вихід до 19</option>
+                        <option value="13:00">Вихід до 20</option>
+                        <option value="14:00">Вихід до 21</option>
+                    </select>
+                </fieldset>
+                <fieldset class="field ad-form__element">
+                    <label class="ad-form__label glow text" for="room_number">Кількість сцен</label>
+                    <select id="room_number" name="rooms">
+                        <option value="1" selected>1 сцена</option>
+                        <option value="2">2 сцени</option>
+                        <option value="3">3 сцени</option>
+                        <option value="100">Безмежний простір</option>
+                    </select>
+                </fieldset>
+                <fieldset class="field ad-form__element">
+                    <label class="ad-form__label glow text" for="capacity">Кількість місць</label>
+                    <select id="capacity" name="capacity">
+                        <option value="10">до 10 гостей</option>
+                        <option value="60">для 60 гостей</option>
+                        <option value="200" selected>для 200 гостей</option>
+                        <option value="400">від 400 гостей</option>
+                    </select>
+                </fieldset>
+                <div class="ad-form__element--wide"></div>
+
+                <fieldset class="field ad-form__element ad-form__element--wide">
+                    <label class="ad-form__label glow text" for="description">Опис</label>
+                    <textarea id="description" name="description" placeholder="Розкажи про те, що мені дасть візит до твого івенту та навіщо мені це потрібно"></textarea>
+                </fieldset>
+
+                <fieldset class="ad-form__element ad-form__element--wide features" style="margin-top: 40px; display: none">
+                    <legend>Доступність: танцмайдан, вулиця, Wi-Fi, фудкорт, майстерня, тату, маркетплейс, чіл-зона</legend>
+                    <input class="features__checkbox visually-hidden" type="checkbox" name="feature" value="wifi" id="feature-wifi">
+                    <label class="features__label features__label--wifi" for="feature-wifi">Wi-Fi</label>
+                    <input class="features__checkbox visually-hidden" type="checkbox" name="feature" value="dishwasher" id="feature-dishwasher">
+                    <label class="features__label features__label--dishwasher" for="feature-dishwasher">Посудомоечная машина</label>
+                    <input class="features__checkbox visually-hidden" type="checkbox" name="feature" value="parking" id="feature-parking">
+                    <label class="features__label features__label--parking" for="feature-parking">Парковка</label>
+                    <input class="features__checkbox visually-hidden" type="checkbox" name="feature" value="washer" id="feature-washer">
+                    <label class="features__label features__label--washer" for="feature-washer">Стиральная машина</label>
+                    <input class="features__checkbox visually-hidden" type="checkbox" name="feature" value="elevator" id="feature-elevator">
+                    <label class="features__label features__label--elevator" for="feature-elevator">Лифт</label>
+                    <input class="features__checkbox visually-hidden" type="checkbox" name="feature" value="conditioner" id="feature-conditioner">
+                    <label class="features__label features__label--conditioner" for="feature-conditioner">Кондиционер</label>
+                </fieldset>
+
+                <fieldset class="ad-form__element ad-form__element--wide" style="margin-top: 40px">
+                    <label class="ad-form__label glow text">Додаткові фото</label>
+                    <div class="ad-form__photo-container">
+                        <div class="ad-form__upload">
+                            <input type="file" id="images" name="images" class="ad-form__input visually-hidden">
+                            <label for="images" class="ad-form__drop-zone">Завантажити<br>фото...</label>
+                        </div>
+                        <div class="ad-form__photo"></div>
+                    </div>
+                </fieldset>
+                <fieldset class="ad-form__element ad-form__element--submit">
+                    <button class="js-set-setting cp-button ad-form__submit" type="submit">
+                        <span class="submit">Створити</span>
+                    </button>
+                    або <button class="cp-button ad-form__reset" type="reset">очистити</button>
                 </fieldset>
             </form>
+        </section>
+    </main>
+    <!--  <footer class="footer container">-->
+    <!--  </footer>-->
+
+    <!-- Карточка объявления -->
+    <template id="card">
+        <article class="popup">
+            <img src="img/avatars/user01.png" class="popup__avatar" width="70" height="70" alt="Аватар пользователя">
+            <h3 class="popup__title">Уютное гнездышко для молодоженов</h3>
+            <p class="popup__text popup__text--address">102-0082 Tōkyō-to, Chiyoda-ku, Ichibanchō, 14−3</p>
+            <p class="popup__text popup__text--price">5200 <span>₽/ночь</span></p>
+            <h4 class="popup__type">Квартира</h4>
+            <p class="popup__text popup__text--capacity">2 комнаты для 3 гостей</p>
+            <p class="popup__text popup__text--time">Заезд после 14:00, выезд до 10:00</p>
+            <ul class="popup__features">
+                <li class="popup__feature popup__feature--parking"></li>
+                <li class="popup__feature popup__feature--conditioner"></li>
+                <li class="popup__feature popup__feature--wifi"></li>
+                <li class="popup__feature popup__feature--dishwasher"></li>
+                <li class="popup__feature popup__feature--washer"></li>
+                <li class="popup__feature popup__feature--elevator"></li>
+            </ul>
+            <p class="popup__description">Великолепная квартира-студия в центре Токио. Подходит как туристам, так и бизнесменам. Квартира полностью укомплектована и недавно отремонтирована.</p>
+            <div class="popup__photos">
+                <img src="" class="popup__photo" width="45" height="40" alt="Фотография жилья">
+            </div>
+        </article>
+    </template>
+
+    <!-- Сообщение об успешном создании объявления -->
+    <template id="success">
+        <div class="success">
+            <p class="success__message">Кастомний івент<br>успішно анонсований!</p>
         </div>
-    </section>
+    </template>
 
-    <!-- Форма объявления -->
-    <section class="notice">
-        <h2 class="cp-h2 notice__title">Ваш івент</h2>
-        <form class="ad-form" action='https://27.javascript.pages.academy/keksobooking' method="post" enctype="multipart/form-data" autocomplete="off">
-            <fieldset class="ad-form-header">
-                <legend class="ad-form-header__title">Постер (для анонсу)</legend>
-                <div class="ad-form-header__upload">
-                    <div class="ad-form-header__preview">
-                        <img src="img/muffin-grey.svg" alt="Постер події" width="40" height="44">
-                    </div>
-                    <div class="ad-form__field">
-                        <input type="file" id="avatar" name="avatar" class="ad-form-header__input visually-hidden" accept="image/png, image/jpeg">
-                        <label class="ad-form-header__drop-zone" for="avatar">Завантажити<br>фото...</label>
-                    </div>
-                    <p class="ad-form-header__info">Заповніть усі необхідні поля, оберіть вартість входу, завантажте флаєр та мапу локації. Вигадайте цікавий опис. Він зробить івент більш живим та привабливим.<br>
-                        <br>Обличчя івенту має давати гостям повне уявлення про його зміст.</p>
-                </div>
-            </fieldset>
-            <fieldset class="field ad-form__element ad-form__element--wide">
-                <label class="ad-form__label glow text" for="title">Заголовок івенту</label>
-                <input id="title" name="title" type="text" placeholder="Вечірка твоїх друзів" value="Ma perfect event" required>
-            </fieldset>
-            <fieldset class="field ad-form__element ad-form__element--wide" style="display: none">
-                <label class="ad-form__label glow text" for="address">Адреса (координати)</label>
-                <input id="address" name="address" type="text" value='50.45466, 30.5238' required readonly>
-            </fieldset>
-
-            <fieldset class="field ad-form__element ad-form__element--wide">
-                <label class="ad-form__label glow text" for="address">Адреса (сектор)</label>
-                <select id="sector" name="sector">
-                    <option value="a0">a0</option>
-                </select>
-            </fieldset>
-
-            <fieldset class="field ad-form__element ad-form__element--wide">
-                <label class="ad-form__label glow text" for="executive">Виконавець</label>
-                <select class="" id="executive" name="executive">
-                    <option value="you">You</option>
-                </select>
-            </fieldset>
-
-            <fieldset class="field ad-form__element ad-form__element--wide">
-                <label class="ad-form__label glow text" for="point">Поінт</label>
-                <select class="" id="point" name="point">
-                    <option value="spot">Spot</option>
-                    <option value="market">Market</option>
-                    <option value="rave" selected>Rave</option>
-                    <option value="gig">Gig</option>
-                </select>
-            </fieldset>
-
-            <fieldset class="field ad-form__element">
-                <label class="ad-form__label glow text" for="type">Тип приміщення</label>
-                <select id="type" name="type">
-                    <option value="street">Вулиця</option>
-                    <option value="factory" selected>Фабрика</option>
-                    <option value="loft">Лофт</option>
-                    <option value="bar">Бар</option>
-                    <option value="club">Клуб</option>
-                    <option value="studio">Студія</option>
-                    <option value="palace">Палац</option>
-                </select>
-            </fieldset>
-            <fieldset class="field ad-form__element">
-                <label class="ad-form__label glow text" for="price">Ціна за вхід</label>
-                <input id="price" name="price" type="number" step="100" placeholder="200"required>
-                <div class="ad-form__slider"></div>
-            </fieldset>
-            <fieldset class="field ad-form__element ad-form__element--time">
-                <label class="ad-form__label glow text" for="timein">Час входу та виходу</label>
-                <select id="timein" name="timein">
-                    <option value="12:00" selected>Після 17</option>
-                    <option value="13:00">Після 16</option>
-                    <option value="14:00">Після 15</option>
-                </select>
-                <select id="timeout" name="timeout" title="Time to go out">
-                    <option value="12:00" selected>Вихід до 19</option>
-                    <option value="13:00">Вихід до 20</option>
-                    <option value="14:00">Вихід до 21</option>
-                </select>
-            </fieldset>
-            <fieldset class="field ad-form__element">
-                <label class="ad-form__label glow text" for="room_number">Кількість сцен</label>
-                <select id="room_number" name="rooms">
-                    <option value="1" selected>1 сцена</option>
-                    <option value="2">2 сцени</option>
-                    <option value="3">3 сцени</option>
-                    <option value="100">Безмежний простір</option>
-                </select>
-            </fieldset>
-            <fieldset class="field ad-form__element">
-                <label class="ad-form__label glow text" for="capacity">Кількість місць</label>
-                <select id="capacity" name="capacity">
-                    <option value="10">до 10 гостей</option>
-                    <option value="60">для 60 гостей</option>
-                    <option value="200" selected>для 200 гостей</option>
-                    <option value="400">від 400 гостей</option>
-                </select>
-            </fieldset>
-            <div class="ad-form__element--wide"></div>
-
-            <fieldset class="field ad-form__element ad-form__element--wide">
-                <label class="ad-form__label glow text" for="description">Опис</label>
-                <textarea id="description" name="description" placeholder="Розкажи про те, що мені дасть візит до твого івенту та навіщо мені це потрібно"></textarea>
-            </fieldset>
-
-            <fieldset class="ad-form__element ad-form__element--wide features" style="margin-top: 40px; display: none">
-                <legend>Доступність: танцмайдан, вулиця, Wi-Fi, фудкорт, майстерня, тату, маркетплейс, чіл-зона</legend>
-                <input class="features__checkbox visually-hidden" type="checkbox" name="feature" value="wifi" id="feature-wifi">
-                <label class="features__label features__label--wifi" for="feature-wifi">Wi-Fi</label>
-                <input class="features__checkbox visually-hidden" type="checkbox" name="feature" value="dishwasher" id="feature-dishwasher">
-                <label class="features__label features__label--dishwasher" for="feature-dishwasher">Посудомоечная машина</label>
-                <input class="features__checkbox visually-hidden" type="checkbox" name="feature" value="parking" id="feature-parking">
-                <label class="features__label features__label--parking" for="feature-parking">Парковка</label>
-                <input class="features__checkbox visually-hidden" type="checkbox" name="feature" value="washer" id="feature-washer">
-                <label class="features__label features__label--washer" for="feature-washer">Стиральная машина</label>
-                <input class="features__checkbox visually-hidden" type="checkbox" name="feature" value="elevator" id="feature-elevator">
-                <label class="features__label features__label--elevator" for="feature-elevator">Лифт</label>
-                <input class="features__checkbox visually-hidden" type="checkbox" name="feature" value="conditioner" id="feature-conditioner">
-                <label class="features__label features__label--conditioner" for="feature-conditioner">Кондиционер</label>
-            </fieldset>
-
-            <fieldset class="ad-form__element ad-form__element--wide" style="margin-top: 40px">
-                <label class="ad-form__label glow text">Додаткові фото</label>
-                <div class="ad-form__photo-container">
-                    <div class="ad-form__upload">
-                        <input type="file" id="images" name="images" class="ad-form__input visually-hidden">
-                        <label for="images" class="ad-form__drop-zone">Завантажити<br>фото...</label>
-                    </div>
-                    <div class="ad-form__photo"></div>
-                </div>
-            </fieldset>
-            <fieldset class="ad-form__element ad-form__element--submit">
-                <button class="js-set-setting cp-button ad-form__submit" type="submit">
-                    <span class="submit">Створити</span>
-                </button>
-                або <button class="cp-button ad-form__reset" type="reset">очистити</button>
-            </fieldset>
-        </form>
-    </section>
-</main>
-<!--  <footer class="footer container">-->
-<!--  </footer>-->
-
-<!-- Карточка объявления -->
-<template id="card">
-    <article class="popup">
-        <img src="img/avatars/user01.png" class="popup__avatar" width="70" height="70" alt="Аватар пользователя">
-        <h3 class="popup__title">Уютное гнездышко для молодоженов</h3>
-        <p class="popup__text popup__text--address">102-0082 Tōkyō-to, Chiyoda-ku, Ichibanchō, 14−3</p>
-        <p class="popup__text popup__text--price">5200 <span>₽/ночь</span></p>
-        <h4 class="popup__type">Квартира</h4>
-        <p class="popup__text popup__text--capacity">2 комнаты для 3 гостей</p>
-        <p class="popup__text popup__text--time">Заезд после 14:00, выезд до 10:00</p>
-        <ul class="popup__features">
-            <li class="popup__feature popup__feature--parking"></li>
-            <li class="popup__feature popup__feature--conditioner"></li>
-            <li class="popup__feature popup__feature--wifi"></li>
-            <li class="popup__feature popup__feature--dishwasher"></li>
-            <li class="popup__feature popup__feature--washer"></li>
-            <li class="popup__feature popup__feature--elevator"></li>
-        </ul>
-        <p class="popup__description">Великолепная квартира-студия в центре Токио. Подходит как туристам, так и бизнесменам. Квартира полностью укомплектована и недавно отремонтирована.</p>
-        <div class="popup__photos">
-            <img src="" class="popup__photo" width="45" height="40" alt="Фотография жилья">
+    <!-- Сообщение об ошибке создания объявления -->
+    <template id="error">
+        <div class="error">
+            <p class="error__message">Помилка збереження, перевір консоль</p>
+            <button type="button" class="error__button">Попробовать снова</button>
         </div>
-    </article>
-</template>
-
-<!-- Сообщение об успешном создании объявления -->
-<template id="success">
-    <div class="success">
-        <p class="success__message">Кастомний івент<br>успішно анонсований!</p>
-    </div>
-</template>
-
-<!-- Сообщение об ошибке создания объявления -->
-<template id="error">
-    <div class="error">
-        <p class="error__message">Помилка збереження, перевір консоль</p>
-        <button type="button" class="error__button">Попробовать снова</button>
-    </div>
-</template>
+    </template>
 </div>
+
+
+<div id="cs-game">
+    <div class="cyber-strike" style="">
+        <div class="cyber-strike__lobby">
+            <div class="cyber-strike__menu">
+                <a href="#quest-popup" class="js-open-quest cyber-strike__menu-link">New Gig</a>
+                <a href="#load-popup" class="js-open-load cyber-strike__menu-link">Load</a>
+                <a href="#" class="cyber-strike__menu-link">Options</a>
+                <a href="#" class="js-close-cs cyber-strike__menu-link">Quit</a>
+                <a href="#" class="cybr-title --cs-logo cyber-strike__menu-link">Cyber Strike</a>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
 <script type="module" src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
@@ -748,6 +767,35 @@
     $('.js-open-load').magnificPopup({
         type: 'inline',
         midClick: true
+    });
+
+    // $('.js-open-cs').magnificPopup({
+    //     type: 'inline',
+    //     midClick: true
+    // });
+    // $(".js-close-cs").on("click", () => {
+    //     $('.js-open-cs').magnificPopup.close();
+    // });
+    //
+    const getGamePage = () => {
+        const gamePage = document.querySelector("#cs-game");
+        gamePage.classList.add("--visible");
+        return gamePage;
+    };
+
+    const drawGame = () => {
+        const parent = getGamePage();
+        const closeBtn = parent.querySelector(".js-close-cs");
+        const closeBtnHandler = () => {
+            parent.classList.remove("--visible");
+            closeBtn.removeEventListener("click", closeBtnHandler);
+        };
+        closeBtn.addEventListener("click", closeBtnHandler);
+    }
+
+    const openCSBtn = document.querySelector(".js-open-cs");
+    openCSBtn.addEventListener("click", () => {
+        drawGame();
     });
 
     $('.js-open-setting').magnificPopup({
