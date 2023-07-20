@@ -2,8 +2,9 @@ import { DNECheckpoint } from "./interface.quest.js";
 import { getQuestMarkup } from "./markup.quest.js";
 import { NEXT_CHECKPOINT_MESSAGE } from "./data.quest.js";
 import { updBalanceNode } from "../hud/balance.hud.js";
-import { setCountdown, setTimer } from "../hud/time.hud.js";
+import { setCountdown, setTimer, clearTimer } from "../hud/time.hud.js";
 import {win77} from "../dne-cli.js";
+import { updScore } from "../hud/score.hud.js";
 
 const parseCheckpointsStroke = (stroke) => {
     // const checkpointsArr = stroke.split("");
@@ -37,6 +38,9 @@ const initQuest = (questObj) => {
     let checkRowArr = questParent.querySelectorAll(".js-quest-checkpoint");
     const title = questParent.querySelector(".js-quest-title");
     const description = questParent.querySelector(".js-quest-descr");
+    const bonus = questParent.querySelector(".js-quest-bonus");
+    const minimap = questParent.querySelector(".js-quest-minimap");
+
     const followBtn = questParent.querySelector(".js-quest-follow");
     const finishBtn = questParent.querySelector(".js-quest-finish");
     const getCheckRowMarkup = (text) => `<button class="js-quest-checkpoint fw-check-row">${text}</button>`;
@@ -44,6 +48,8 @@ const initQuest = (questObj) => {
     const drawQuest = (questData) => {
         title.textContent = questData.name;
         description.textContent = questData.description;
+        bonus.textContent = `+${questData.bonus}`;
+        // minimap.src = questData.minimap;
 
         redrawCheckpoints(questData);
     }
@@ -80,6 +86,15 @@ const initQuest = (questObj) => {
             }
             checkRow.addEventListener("click", checkRowClickHandler);
         });
+
+        if (checkRowArr.length > 0 && checkRowArr.length === questData.checkpointsArr.length) {
+            const lastCheckpoint = checkRowArr[checkRowArr.length - 1];
+            lastCheckpoint.classList.add("--last-checkpoint");
+            lastCheckpoint.addEventListener("click", () => {
+                console.log(`You reach last checkpoint!`);
+                finishBtn.disabled = false;
+            });
+        }
     }
 
 
@@ -100,6 +115,7 @@ const initQuest = (questObj) => {
         setTimer();
         followBtn.classList.remove("--visible");
         finishBtn.classList.add("--visible");
+        finishBtn.disabled = true;
 
         achievementsArr.forEach((achievement) => {
             achievement.addEventListener("click", () => {
@@ -111,7 +127,13 @@ const initQuest = (questObj) => {
 
     finishBtn.addEventListener("click", () => {
         win77.giveIncomeToPlayer(+incomeInput.value);
+        win77.giveSkillPointsToPlayer(1);
         updBalanceNode();
+
+        win77.game.player.score = win77.game.player.score + questObj.core.bonus;
+        updScore();
+        clearTimer();
+
         finishBtn.classList.remove("--visible");
         followBtn.classList.add("--visible");
         followBtn.classList.add("--done");

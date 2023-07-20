@@ -100,7 +100,12 @@
 }
 
 .quest__settings-controls .form-field__input {
-    max-width: 150px;
+    max-width: 190px;
+    padding: 14px 10px;
+}
+
+.quest__settings-controls .form-field:last-child .form-field__input {
+    max-width: 100px;
 }
 
 .quest__time {

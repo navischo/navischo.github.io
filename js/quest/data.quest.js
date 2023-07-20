@@ -71,4 +71,9 @@ const bossDeadAchievementsArr = [
     }
 ];
 
-export { ARE_YOU_HUMAN_MESSAGE, NEXT_CHECKPOINT_MESSAGE, acidFridayCheckpointsStroke, newTurnCheckpointsStroke, bossDeadCheckpointsStroke, bossDeadAchievementsArr };
+const MINIMAP = {
+    bossDead: "img/img-map--boss-dead.png",
+    sheWantsRevenge: ""
+}
+
+export { ARE_YOU_HUMAN_MESSAGE, NEXT_CHECKPOINT_MESSAGE, acidFridayCheckpointsStroke, newTurnCheckpointsStroke, bossDeadCheckpointsStroke, bossDeadAchievementsArr, MINIMAP };

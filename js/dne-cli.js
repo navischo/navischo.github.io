@@ -5,6 +5,31 @@ import { appendNewTop } from "./theday/endgame.theday.js";
 class DNECli {
     constructor() {
         this.isPlayerOnMap = false;
+        this.inQuestTime = 0;
+    }
+
+    timer(h, m, s, maxSec, maxMin, maxHour) {
+        return () => {
+            if (s > maxSec) {
+                m++;
+                if (m > maxMin) {
+                    h++;
+                    if (h > maxHour) {
+                        h = 0;
+                        m = 0;
+                        s = 0;
+                    }
+                    m = 0;
+                }
+                s = 0;
+            }
+
+            const node = document.querySelector(".time");
+            node.innerHTML = `${h ? `${h}h` : ``} ${m ? `${m}m` : ``} ${s ? `${s}s` : ``}`;
+
+            s++;
+
+        };
     }
 
     log(command) {

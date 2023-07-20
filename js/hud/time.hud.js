@@ -79,30 +79,16 @@ const setTimer = () => {
         let m = 0;
         let h = 0;
 
-        win77.time = setInterval(() => {
-            if (s > maxSec) {
-                m++;
-                if (m > maxMin) {
-                    h++;
-                    if (h > maxHour) {
-                        h = 0;
-                        m = 0;
-                        s = 0;
-                    }
-                    m = 0;
-                }
-                s = 0;
-            }
-
-            const node = document.querySelector(".time");
-            node.innerHTML = `${h ? `${h}h` : ``} ${m ? `${m}m` : ``} ${s ? `${s}s` : ``}`;
-
-            s++;
-
-        }, 1000);
+        win77.inQuestTime = setInterval(win77.timer(h, m, s, maxSec, maxMin, maxHour), 1000);
     }
 
     jpTimer();
+}
+
+const clearTimer = () => {
+    clearInterval(win77.inQuestTime);
+    // release our intervalID from the variable
+    win77.inQuestTime = null;
 }
 
 // setTimer();
@@ -121,4 +107,4 @@ const switchTime = (min) => {
 
 // win77.switchTime = ;
 
-export { setCountdown, switchTime, setTimer };
+export { setCountdown, switchTime, setTimer, clearTimer };
