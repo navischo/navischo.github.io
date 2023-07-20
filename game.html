@@ -632,7 +632,7 @@
 
 
 <div id="cs-game">
-    <div class="cyber-strike" style="">
+    <div class="cyber-strike --mp4" style="">
         <div class="cyber-strike__lobby">
             <div class="cyber-strike__menu">
                 <a href="#quest-popup" class="js-open-quest cyber-strike__menu-link">Gig</a>
@@ -641,6 +641,9 @@
                 <a href="#" class="js-close-cs cyber-strike__menu-link">Quit</a>
                 <a href="#" class="cybr-title --cs-logo cyber-strike__menu-link">Cyber Strike</a>
             </div>
+        </div>
+        <div class="cyber-strike__mp4-bg">
+
         </div>
     </div>
 </div>
@@ -703,6 +706,7 @@
 <script type="module" src="js/utils/initCredits.js"></script>
 <script type="module" src="js/utils/matchGenreBonus.js"></script>
 <script type="module" src="js/utils/initHotline.js"></script>
+<script type="module" src="js/utils/initGameBoy.js"></script>
 
 <script type="module" src="js/hud/chat.hud.jquery.js"></script>
 
@@ -721,6 +725,7 @@
     import {dialog} from "./js/hud/dialog.hud.js";
     import { initCollector } from "./js/utils/initCollector.js";
     import { initSettingOptionsUpdate } from "./js/utils/updSettingOptions.js";
+    import { initGameBoy } from "./js/utils/initGameBoy.js";
 
     initInventoryPopupJquery();
 
@@ -769,35 +774,6 @@
         midClick: true
     });
 
-    // $('.js-open-cs').magnificPopup({
-    //     type: 'inline',
-    //     midClick: true
-    // });
-    // $(".js-close-cs").on("click", () => {
-    //     $('.js-open-cs').magnificPopup.close();
-    // });
-    //
-    const getGamePage = () => {
-        const gamePage = document.querySelector("#cs-game");
-        gamePage.classList.add("--visible");
-        return gamePage;
-    };
-
-    const drawGame = () => {
-        const parent = getGamePage();
-        const closeBtn = parent.querySelector(".js-close-cs");
-        const closeBtnHandler = () => {
-            parent.classList.remove("--visible");
-            closeBtn.removeEventListener("click", closeBtnHandler);
-        };
-        closeBtn.addEventListener("click", closeBtnHandler);
-    }
-
-    const openCSBtn = document.querySelector(".js-open-cs");
-    openCSBtn.addEventListener("click", () => {
-        drawGame();
-    });
-
     $('.js-open-setting').magnificPopup({
         type: 'inline',
         midClick: true
@@ -808,6 +784,7 @@
     initKeyboard();
     initCollector();
     initSettingOptionsUpdate();
+    initGameBoy();
 </script>
 </body>
 </html>

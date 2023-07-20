@@ -1,3 +1,5 @@
+import { win77 } from "../dne-cli.js";
+
 const parent = document.querySelector("#cutscene-parent");
 
 const CUTSCENE_IDS = {
@@ -10,6 +12,7 @@ const CUTSCENE_IDS = {
     arasaka: `arasaka`,
     nightplay: `nightplay`,
     smok: `smok`,
+    cs: `cs`
 };
 
 const CUTSCENE_FILES = {
@@ -21,7 +24,8 @@ const CUTSCENE_FILES = {
     play: `mp4-room-play.mp4`,
     arasaka: `mp4-cutscene-arasaka.mp4`,
     nightplay: `mp4-room-night-play.mp4`,
-    smok: `mp4-room-smok.mp4`
+    smok: `mp4-room-smok.mp4`,
+    cs: `mp4-bg-cyber-strike.mp4`
 };
 
 const getCutsceneMarkup = (videoName) =>
@@ -45,11 +49,21 @@ const appendCutscene = (id) => {
     return cutsceneNode;
 }
 
-const clearCutscene = () => parent.innerHTML = "";
+const clearCutscene = () => {
+    parent.innerHTML = "";
+    parent.classList.remove("--up");
+}
+win77.clearCutscene = clearCutscene;
 
 const pauseCutscene = () => document.querySelector(".video-cutscene")?.pause();
 const playCutscene = () => document.querySelector(".video-cutscene")?.play();
 
+win77.startCutscene = (id, up = false) => {
+    clearCutscene();
+    appendCutscene(CUTSCENE_FILES[id]);
+    up ? parent.classList.add("--up") : "";
+    activateCutscene(id);
+}
 
 const getCutsceneMenuItemMarkup = (id) =>
     `<li class="js-activate-cutscene hud-options-item">${id}</li>`
@@ -61,10 +75,7 @@ const initCutsceneMenu = (idArr) => {
     const menuItems = parent.querySelectorAll(".js-activate-cutscene");
     menuItems.forEach((menuItem) => {
         menuItem.addEventListener("click", () => {
-            const cutsceneId = menuItem.textContent.toLowerCase();
-            clearCutscene();
-            appendCutscene(CUTSCENE_FILES[cutsceneId]);
-            activateCutscene(cutsceneId);
+            win77.startCutscene(menuItem.textContent.toLowerCase());
         });
     });
 

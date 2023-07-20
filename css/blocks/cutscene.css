@@ -6,6 +6,10 @@
     left: 0;
 }
 
+#cutscene-parent.--up .cutscene {
+    z-index: 40;
+}
+
 .cutscene video {
     width: 100%;
 }

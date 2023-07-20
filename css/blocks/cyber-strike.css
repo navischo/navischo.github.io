@@ -1,13 +1,52 @@
+#cs-game {
+    visibility: hidden;
+    z-index: -1;
+    opacity: 0;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    /*background: rgba(0, 0, 0, .6);*/
+
+    transition: .2s ease-in-out;
+}
+
+#cs-game.--visible {
+    visibility: visible;
+    z-index: 40;
+    opacity: 1;
+}
+
 .cyber-strike {
+    position: relative;
+
     display: block;
     width: 100vw;
     height: 100vh;
     background-size: contain;
 
-    background: url('../../img/layout-cyber-strike.png');
+    /*background: url('../../img/layout-cyber-strike.png');*/
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
+}
+
+.cyber-strike::after {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+
+    /*background-color: var(--colors-bg--500);*/
+    /*background-image: radial-gradient( ellipse at 33% 10%, #461616 0%, transparent 75% );*/
+    background-image: radial-gradient( ellipse at 15% 95%, #461616 0%, transparent 75% ), radial-gradient( ellipse at 3% 10%, #461616 0%, transparent 75% ), radial-gradient( ellipse at 1% 85%, black 0%, transparent 75% );
+    background-repeat: no-repeat;
 }
 
 .cyber-strike__lobby {
@@ -17,8 +56,8 @@
     height: 100vh;
     margin: 0 auto;
 
-    background-color: var(--colors-bg--500);
-    background-image: radial-gradient( ellipse at 33% 10%, #461616 0%, transparent 75% );
+    /*background-color: var(--colors-bg--500);*/
+    /*background-image: radial-gradient( ellipse at 33% 10%, #461616 0%, transparent 75% );*/
     background-repeat: no-repeat;
     color: var(--colors-on_bg--500);
 }
