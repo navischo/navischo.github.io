@@ -17,7 +17,7 @@ const concatYourDaysMarkup = () => {
 }
 
 const adminWeekMarkup =
-    `<div class="js-wall wall week-wrap">
+    `<div class="week-wrap">
         <section class="week">
             <h2 class="js-day-name week__title">Sunday</h2>
             <div class="week__car-preview">

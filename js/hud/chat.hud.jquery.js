@@ -426,7 +426,7 @@ const initProfile = () => {
 
     drawCurrentEvent();
     trackYourDays();
-    win77.finishDay();
+    // win77.finishDay();
     win77.setCurrentDay();
 
     // const weekSwiperTouch = document.querySelector(".js-your-days-touch");

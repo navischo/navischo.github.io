@@ -1,9 +1,29 @@
 .week-wrap {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    transform: translateY(0) scale(1);
+
+
+    /*background-image: url(../../img/bg-wall.jpg);*/
+    /*background-image: url(../../img/layout-week.png);*/
+
+    /*color: var(--colors-on_bg--500);*/
+    color: white;
+    cursor: pointer;
+
+    transition: 1.2s ease-in-out;
+
     background-color: var(--colors-bg--500);
     background-image: radial-gradient( ellipse at 33% 10%, #461616 0%, transparent 75% );
     background-repeat: no-repeat;
-    /*color: var(--colors-on_bg--500);*/
-    color: white;
+    background-size: cover;
+    background-attachment: fixed;
+
+    overflow: hidden;
 }
 
 .week-wrap::after {
