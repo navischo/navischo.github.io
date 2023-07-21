@@ -19,9 +19,8 @@ const getPortalElement = () => {
 }
 
 const thedayMarkup = `
-<!--setup-->
+<code id="ascii-title" class="theday__dunge-title"></code>
 <div id="main-scene">
-    
     <div class="swiper executive">
         <div id="executive" class="swiper-wrapper"></div>
     </div>
@@ -42,7 +41,15 @@ ${pokeButtonMarkup}
 
 const initTheday = () => {
     console.log(`${win77.game.player.id} starts an Event in dunge by name..`, win77);
-    console.log(getDungeNameInASCII(win77.game.event.settings.dungeObj.name));
+
+    const dungeASCII = getDungeNameInASCII(win77.game.event.settings.dungeObj.name);
+    const dungeTitle = document.querySelector(`#ascii-title`);
+    dungeTitle.innerHTML = `${win77.game.event.settings.dungeObj.name}`;
+    dungeTitle.classList.add("--visible");
+    setTimeout(() => {
+        dungeTitle.classList.remove("--visible");
+    }, 5000);
+    console.log(dungeASCII);
 
     initGradient();
 

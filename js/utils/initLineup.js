@@ -15,6 +15,10 @@ const initLineup = () => {
             console.log(countdown, +countdown - 1, timerNode.textContent);
             countdown--;
             timerNode.textContent = countdown;
+
+            if (win77.game.event.settings.socialPoints < 5) {
+                win77.game.event.settings.socialPoints++;
+            }
         } else {
             timerNode.remove();
             clearInterval(interval);

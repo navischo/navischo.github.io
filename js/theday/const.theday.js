@@ -236,8 +236,8 @@ const drawSmitsCard = (dataObj) => {
                     guest.remove();
                 }, 450);
                 console.log(`You say not today to ${dataObj.name}`, dataObj, win77.game);
-                win77.game.event.settings.socialPoints++;
-                inviteGuest();
+                // win77.game.event.settings.socialPoints++;
+                // inviteGuest();
             });
         }
     });
@@ -392,7 +392,7 @@ const useSmithsCards = () => {
             clearInterval(interval);
         }
     };
-    const interval = setInterval(inviteGuestByInterval, 3000);
+    const interval = setInterval(inviteGuestByInterval, 5000);
 }
 
 // const clearSmithsSet = () => {
