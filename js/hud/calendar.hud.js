@@ -134,7 +134,7 @@ const updCalendarNode = () => {
     console.log(allDayNodes);
 }
 
-const finishDay = () => {
+const finishDay = (income = null) => {
     let dayChecked = false;
 
     win77.game.player.calendar.weekArr.forEach((week) => {
@@ -148,6 +148,11 @@ const finishDay = () => {
 
                 firstHalf.classList.add("--cross");
                 secondHalf.classList.remove("--round");
+
+                if (income) {
+                    const shorted = `${`${income}`.slice(0, -3)}K`;
+                    firstHalf.textContent = shorted;
+                }
             }
         });
     });

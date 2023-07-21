@@ -75,7 +75,7 @@ const reloadTheday = () => {
     win77.putCardAtPlayersHand(5 - win77.game.player.hand.size);
     updHand();
 
-    win77.finishDay();
+    win77.finishDay(win77.game.event.result.income);
     win77.setCurrentDay();
     win77.resetSetting();
 }
