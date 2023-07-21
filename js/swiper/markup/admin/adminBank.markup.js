@@ -19,9 +19,9 @@ const adminBankMarkup = `
                 </a>
             </div>
         </div>
-        <div class="bank__balance">0</div>
+        <div class="js-btc-balance bank__balance">0</div>
         <div class="bank__coin-wrap">
-            <button class="rts-btn cp-button glow glowtext bank__coin">
+            <button class="js-save-bankroll rts-btn cp-button glow glowtext bank__coin">
                 <span class=" bank__coin-symbol">B</span>
             </button>
         </div>

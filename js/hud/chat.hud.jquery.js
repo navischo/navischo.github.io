@@ -8,6 +8,7 @@ import { drawLootCards } from "../cards/dom.cards.js";
 import { getDialogOptionMarkup } from "./dialogCli.hud.js";
 import { isSetHasId } from "../utils/isSetHasId.js";
 import { drawCurrentEvent, trackYourDays } from "./calendar.hud.js";
+import { initBank } from "../utils/initBank.js";
 
 // const DEFAULT_TIP = `
 // Прототип інтерфейсу взаємодії між гравцем та навколишнім світом натхненний Cyberpunk 2077.
@@ -443,6 +444,7 @@ const initProfile = () => {
 
     initLocations();
     initDirect();
+    initBank();
 
     drawLootCards(win77.game.player.loot, ".js-inventory-menu");
     drawLootCards(win77.game.player.npc, ".js-crew-menu");
