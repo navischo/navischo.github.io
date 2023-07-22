@@ -103,6 +103,7 @@
             <header class="cart__header">
                 Your cart: <div class="js-price-order cart__total-price"></div>
             </header>
+            <input class="js-text-order" type="text">
             <div class="js-pack-order cart__in">
 
             </div>
@@ -113,7 +114,7 @@
             <div class="cart__controls">
                 <button class="js-copy-order cart__controls-item cart__copy">Скопіювати своє замовлення</button>
 
-                <button class="cart__controls-item cart__direct">Надіслати його мені в <br>будь-який зручний для тебе месенджер</button>
+                <a href="https://t.me/beast_hotline" class="cart__controls-item cart__direct" target="_blank">Надіслати його мені в телеграм</a>
             </div>
             <p class="cart__advice">
                 Дякую!
@@ -126,17 +127,44 @@
 </div>
 <script>
     const getOrderMessage = () => {
-        return `Its your order, buddy`
+        const orderInput = document.querySelector(".js-text-order");
+        const orderNodes = document.querySelectorAll(".cart-item");
+        const packCounter = {
+            bunny: 0,
+            basic: 0,
+            regular: 0
+        };
+        orderNodes.forEach((orderNode) => {
+            const packName = orderNode.querySelector(".cart-item__name").textContent;
+            packCounter[packName]++;
+        });
+        let orderString = `Привіт, Навіщо! Хочу замовити пак карт, а саме ${packCounter.bunny > 0 ? `Bunny(${packCounter.bunny}шт)` : ""}${packCounter.bunny > 0 || packCounter.basic > 0 || packCounter.regular > 0 ? `, ` : ""}${packCounter.basic > 0 ? `Basic(${packCounter.basic}шт)` : ""}${packCounter.bunny > 0 && packCounter.basic > 0 && packCounter.regular > 0 ? ` та ` : ""}${packCounter.regular > 0 ? `Regular(${packCounter.regular}шт)` : ""}. Дякую!`;
+        orderInput.value = orderString;
+        orderInput.select();
+        document.execCommand("copy");
         // https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard
     }
     const appendPackInCart = (name, price) => {
         const parent = document.querySelector(".js-pack-order");
         const newElement = document.createElement("div");
         newElement.classList.add("cart-item");
+        newElement.classList.add(`--${name}`);
         newElement.innerHTML = `
                 <b class="cart-item__name">${name}</b>
                 <b class="cart-item__price">${price}€</b>`;
         parent.appendChild(newElement);
+    }
+
+    const removePackFromCart = (name) => {
+        const parent = document.querySelector(".js-pack-order");
+        const packToRemove = parent.querySelector(`.--${name}`);
+        console.log(packToRemove);
+        if (packToRemove) {
+            packToRemove.remove();
+            return true;
+        } else {
+            return false;
+        }
     }
 
     const initPackBuyer = () => {
@@ -149,6 +177,7 @@
         const addBtns = document.querySelectorAll(".js-add-pack");
         const subBtns = document.querySelectorAll(".js-sub-pack");
         const consumeBtn = document.querySelector(".js-confirm-order");
+        const copyOrderBtn = document.querySelector(".js-copy-order");
         const cartNode = document.querySelector(".js-cart");
         const orderNode = document.querySelector(".js-order");
 
@@ -198,8 +227,10 @@
         });
 
         subBtns.forEach((subBtn) => {
-            subBtn.addEventListener("click", () => {
-                if (solved > 0) {
+            subBtn.addEventListener("click", (e) => {
+                const packToRemove = removePackFromCart(e.target.dataset.packType);
+                console.log(e.target.dataset.packType, packToRemove);
+                if (solved > 0 && packToRemove) {
                     solved = solved - cardsNumInPack[subBtn.dataset.packType];
                     totalPrice = +totalPrice - +subBtn.dataset.packPrice;
                     updateBarLength();
@@ -211,6 +242,10 @@
 
         consumeBtn.addEventListener("click", () => {
             cartNode.classList.add("--visible");
+        });
+
+        copyOrderBtn.addEventListener("click", () => {
+            getOrderMessage();
         });
 
         totalTag.textContent = total;
@@ -245,7 +280,7 @@
     </div>
 </div>
 <div  class="story-demo">
-    <a href="https://navischo.github.io/" id="rts-btn" class="rts-btn" target="_blank">START DEMO</a>
+    <a href="https://navischo.github.io/" id="rts-btn" class="rts-btn" target="_blank">PLAY DEMO</a>
 </div>
 <footer>
     <p style="padding: 10px; text-align: center">(c)2023, all rights received. Continue is an Art</p>

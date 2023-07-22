@@ -412,3 +412,9 @@
 .confirm-wrap .rts-btn {
     font-size: 100px;
 }
+
+.js-text-order {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
