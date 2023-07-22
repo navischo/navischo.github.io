@@ -129,3 +129,286 @@
     padding: 20px;
     margin-bottom: 77px;
 }
+
+:root {
+
+    --bar-color: #38b000;
+    --bar-wrap-back-color: white;
+}
+
+.status-info {
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+    padding-bottom: 110px;
+
+}
+
+.bar-info {
+    position: relative;
+
+}
+
+.bar-info .line.--order {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.bar-info .line.--total {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.bar-info .line.--price {
+    position: absolute;
+    bottom: -230px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    font-family: "Press Start 2p", "JetBrains Mono", sans-serif;
+    font-size: 130px;
+    color: cyan;
+
+    text-shadow: 6px 5px 0 yellow;
+}
+
+.bar-wrap {
+    padding: 6px;
+    margin-top: 50px;
+
+    border-radius: 100px;
+
+    background-color: var(--bar-wrap-back-color);
+}
+
+.js-bar {
+    max-width: 100%;
+    width: 0%;
+    height: 15px;
+
+    transition: width .15s ease-out;
+
+    background-color: var(--bar-color);
+    border-radius: 100px;
+    box-shadow: inset -1px -1px 10px rgb(0 0 0 / .5);
+}
+
+.js-percentage {
+    align-self: center;
+
+    margin: 10px 0 25px;
+
+    font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+
+    color: var(--text-color);
+}
+
+.line {
+    margin: 0;
+
+    font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+
+    color: var(--text-color);
+}
+
+.number {
+    font-size: 1.4em;
+    /*margin-left: 8px;*/
+    /*font-family: 'Montserrat', sans-serif;*/
+    /*font-size: clamp(1.8rem, 3vw, 2.2rem);*/
+}
+
+.btn-wrap {
+    align-self: center;
+}
+
+.btn-buy {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    width: min(15vw, 70px);
+    height: min(15vw, 70px);
+    border: 3px solid white;
+    margin: 1rem;
+
+    font-size: 4.8rem;
+
+    transition: background .15s, color .15s;
+
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+}
+
+.btn-buy:active {
+    background-color: white;
+    color: black;
+}
+
+.order {
+    visibility: hidden;
+    opacity: 0;
+    display: none;
+
+    transition: .2s ease-in-out;
+}
+
+.order.--visible {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+}
+
+.cart {
+    visibility: hidden;
+    opacity: 0;
+    z-index: -1;
+
+    position: fixed;
+    top: 0;
+    right: 20px;
+
+    display: flex;
+    flex-direction: column;
+    width: 420px;
+    min-height: 620px;
+    padding: 20px;
+
+    background-color: black;
+    border: 3px solid white;
+    transition: .2s ease-in-out;
+}
+
+.cart.--visible {
+    visibility: visible;
+    opacity: 1;
+    z-index: 3;
+}
+
+.cart__header {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+
+.cart__in {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 30px;
+    padding: 5px 20px;
+}
+
+.cart-item__name {
+    text-transform: capitalize;
+}
+
+.cart__advice {
+    margin: 10px;
+    line-height: 1.4;
+}
+
+.cart__advice:last-child {
+    margin: 0;
+    font-size: 30px;
+    line-height: 1;
+}
+
+.cart__controls {
+    padding: 10px;
+    padding-left: 20px;
+}
+
+.cart__controls-item {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    padding-left: 20px;
+    border: 2px solid white;
+
+    background: black;
+    color: white;
+
+    font-family: "JetBrains Mono", monospace;
+    text-align: left;
+    font-size: 14px;
+}
+
+.cart__controls-item + .cart__controls-item {
+    margin-top: 10px;
+}
+
+.cart__copy::before {
+    content: "";
+
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    padding: 10px;
+    border: none;
+    margin-right: 10px;
+
+    background: black url("../../img/buy/icon-copy.png") center no-repeat;
+    background-size: contain;
+}
+
+.cart__copy::after {
+    content: "1";
+
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(-72%, -30%);
+
+    font-family: "Press Start 2p", "JetBrains Mono", sans-serif;
+    font-size: 40px;
+}
+
+.cart__direct::before {
+    content: "";
+
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    border: none;
+    margin-right: 10px;
+
+    background: black url("../../img/buy/icon-mail.png") center no-repeat;
+    background-size: contain;
+}
+
+.cart__direct::after {
+    content: "2";
+
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(-72%, -30%);
+
+    font-family: "Press Start 2p", "JetBrains Mono", sans-serif;
+    font-size: 40px;
+}
+
+.confirm-wrap {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 77px;
+}
+
+.confirm-wrap .rts-btn {
+    font-size: 100px;
+}

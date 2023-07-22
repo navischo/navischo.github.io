@@ -8,8 +8,18 @@
     <title>CONSUME</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/blocks/buy-page.css">
+    <link rel="stylesheet" href="css/blocks/sale.css">
 </head>
 <body class="buy-body">
+<header class="sale">
+    <div class="sale__banner">
+        <img class="sale__banner-img" src="img/buy/summer-sale.png" alt="">
+        <div class="sale__banner-screen">
+            <h2 class="sale__banner-title">Літній розпродаж</h2>
+            <p class="sale__banner-date">З 1 до 11 серпня, 20:00 за Києвом</p>
+        </div>
+    </div>
+</header>
 <div class="buy">
     <h1 class="cybr-title buy__title">Does Not Exist</h1>
     <p class="buy__subtitle">Competitive Board-n-Web Game...<br> about creating Rave of your Dream</p>
@@ -31,9 +41,10 @@
                 </ul>
                 <p>Вистачить щоб відчути гру на смак</p>
             </div>
-            <button class="cybr-btn buy__action">UA</button>
-            <button class="cybr-btn buy__action">EU</button>
-            <button class="cybr-btn buy__action">US</button>
+            <button class="js-add-pack btn-buy" data-pack-type="bunny" data-pack-price="7" type="button">&plus;</button>
+            <button class="js-sub-pack btn-buy" data-pack-type="bunny" data-pack-price="7" type="button">&minus;</button>
+<!--            <button class="cybr-btn buy__action">+</button>-->
+<!--            <button class="cybr-btn buy__action">-</button>-->
         </li>
         <li class="buy__bundle">
             <h3 class="buy__bundle-title">Basic</h3>
@@ -48,9 +59,10 @@
                 </ul>
                 <p>Грубо кажучи "Bunny" помножений на три</p>
             </div>
-            <button class="cybr-btn buy__action">UA</button>
-            <button class="cybr-btn buy__action">EU</button>
-            <button class="cybr-btn buy__action">US</button>
+            <button class="js-add-pack btn-buy" data-pack-type="basic" data-pack-price="17" type="button">&plus;</button>
+            <button class="js-sub-pack btn-buy" data-pack-type="basic" data-pack-price="17" type="button">&minus;</button>
+<!--            <button class="cybr-btn buy__action">+</button>-->
+<!--            <button class="cybr-btn buy__action">-</button>-->
         </li>
         <li class="buy__bundle">
             <h3 class="buy__bundle-title">Regular</h3>
@@ -65,12 +77,150 @@
                 </ul>
                 <p>Грубо кажучи "Basic" помножений на сім</p>
             </div>
-            <button class="cybr-btn buy__action">UA</button>
-            <button class="cybr-btn buy__action">EU</button>
-            <button class="cybr-btn buy__action">US</button>
+            <button class="js-add-pack btn-buy" data-pack-type="regular" data-pack-price="117" type="button">&plus;</button>
+            <button class="js-sub-pack btn-buy" data-pack-type="regular" data-pack-price="117" type="button">&minus;</button>
+<!--            <button class="cybr-btn buy__action">+</button>-->
+<!--            <button class="cybr-btn buy__action">-</button>-->
         </li>
     </ul>
 </div>
+<div class="js-order order">
+    <div class="status-info container">
+        <div class="bar-info">
+            <p class="line --order">Ordered cards: <span class="js-cards-order number"></span></p>
+            <p class="line --total">Complete deck: <span class="js-cards-total number"></span></p>
+
+            <div class="bar-wrap">
+                <div class="js-bar"></div>
+            </div>
+
+            <p class="line --price"><span class="js-price-order"></span></p>
+        </div>
+        <span class="js-percentage"></span>
+
+
+        <article class="js-cart cart">
+            <header class="cart__header">
+                Your cart: <div class="js-price-order cart__total-price"></div>
+            </header>
+            <div class="js-pack-order cart__in">
+
+            </div>
+            <p class="cart__advice">
+                Нажаль в мене немає можливості підімкнути онлайн оплату<br>
+                тому я прошу тебе зробити два прості кроки:
+            </p>
+            <div class="cart__controls">
+                <button class="js-copy-order cart__controls-item cart__copy">Скопіювати своє замовлення</button>
+
+                <button class="cart__controls-item cart__direct">Надіслати його мені в <br>будь-який зручний для тебе месенджер</button>
+            </div>
+            <p class="cart__advice">
+                Дякую!
+            </p>
+        </article>
+    </div>
+    <div class="confirm-wrap">
+    <button class="js-confirm-order rts-btn">CONSUME</button>
+</div>
+</div>
+<script>
+    const getOrderMessage = () => {
+        return `Its your order, buddy`
+        // https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard
+    }
+    const appendPackInCart = (name, price) => {
+        const parent = document.querySelector(".js-pack-order");
+        const newElement = document.createElement("div");
+        newElement.classList.add("cart-item");
+        newElement.innerHTML = `
+                <b class="cart-item__name">${name}</b>
+                <b class="cart-item__price">${price}€</b>`;
+        parent.appendChild(newElement);
+    }
+
+    const initPackBuyer = () => {
+        const bar = document.querySelector(".js-bar");
+        const percentageTag = document.querySelector(".js-percentage");
+        const totalTag = document.querySelector(".js-cards-total");
+        const solvedTag = document.querySelector(".js-cards-order");
+        const totalPriceTags = document.querySelectorAll(".js-price-order");
+
+        const addBtns = document.querySelectorAll(".js-add-pack");
+        const subBtns = document.querySelectorAll(".js-sub-pack");
+        const consumeBtn = document.querySelector(".js-confirm-order");
+        const cartNode = document.querySelector(".js-cart");
+        const orderNode = document.querySelector(".js-order");
+
+        const total = 189;
+        let solved = 0;
+        let totalPrice = 0;
+        const cardsNumInPack = {
+            bunny: 9,
+            basic: 27,
+            regular: 189
+        }
+
+        const ruleOfThree = (num1, num2) => {
+            const proportion = (num2 * 100) / num1;
+            return Math.round(proportion * 10) / 10;
+        };
+
+        const updateBarLength = () => {
+            const percentage = ruleOfThree(total, solved);
+            bar.style.width = percentage + "%";
+        };
+
+        const updateText = () => {
+            solvedTag.textContent = solved;
+            percentageTag.textContent = ruleOfThree(total, solved) + "%";
+        };
+
+        const updatePrice = () => {
+            totalPriceTags.forEach((totalPriceTag) => {
+                totalPriceTag.textContent = `${totalPrice}€`;
+            });
+        };
+
+        addBtns.forEach((addBtn) => {
+            addBtn.addEventListener("click", () => {
+                orderNode.classList.add("--visible");
+
+                // if (solved < total) {
+                    solved = solved + cardsNumInPack[addBtn.dataset.packType];
+                    totalPrice = +totalPrice + +addBtn.dataset.packPrice;
+                    appendPackInCart(addBtn.dataset.packType, addBtn.dataset.packPrice);
+                    updateBarLength();
+                    updateText();
+                    updatePrice();
+                // }
+            });
+        });
+
+        subBtns.forEach((subBtn) => {
+            subBtn.addEventListener("click", () => {
+                if (solved > 0) {
+                    solved = solved - cardsNumInPack[subBtn.dataset.packType];
+                    totalPrice = +totalPrice - +subBtn.dataset.packPrice;
+                    updateBarLength();
+                    updateText();
+                    updatePrice();
+                }
+            });
+        });
+
+        consumeBtn.addEventListener("click", () => {
+            cartNode.classList.add("--visible");
+        });
+
+        totalTag.textContent = total;
+        solvedTag.textContent = solved;
+        percentageTag.textContent = ruleOfThree(total, solved) + "%";
+        totalPrice.textContent = `${totalPrice}€`;
+    }
+
+    initPackBuyer();
+</script>
 <div class="story">
     <h2 class="story__title">Introduction</h2>
     <div class="story__textfield">
@@ -95,7 +245,7 @@
     </div>
 </div>
 <div  class="story-demo">
-    <a href="https://navischo.github.io/" id="rts-btn" target="_blank">START DEMO</a>
+    <a href="https://navischo.github.io/" id="rts-btn" class="rts-btn" target="_blank">START DEMO</a>
 </div>
 <footer>
     <p style="padding: 10px; text-align: center">(c)2023, all rights received. Continue is an Art</p>
