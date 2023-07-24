@@ -1887,6 +1887,18 @@ body, h1, h2, h3, h4, h5, h6, p {
     background-size: cover
 }
 
+.p-news.custom-scrollbar::-webkit-scrollbar {
+    height: 9px;
+    width: 6px;
+}
+
+.p-news.custom-scrollbar::-webkit-scrollbar-track-piece {
+    /*background: yellow;*/
+    /*border-radius: 5px;*/
+    /*display: block;*/
+    /*height: 50px;*/
+}
+
 @media screen and (max-width: 1440px) {
     .p-news {
         background-image: url(/build/images/bg-about-1440-c951e0d3.jpg)

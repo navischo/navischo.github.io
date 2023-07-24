@@ -30,7 +30,7 @@
 
 .custom-scrollbar::-webkit-scrollbar-thumb:horizontal,
 .custom-scrollbar::-webkit-scrollbar-thumb:vertical {
-    background: var(--colors-tertiary--500);
+    background: yellow;
     border-radius: 5px;
     display: block;
     height: 50px;
