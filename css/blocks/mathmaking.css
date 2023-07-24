@@ -1,0 +1,271 @@
+.matchmaking {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 41;
+
+    /*background: url("../../img/bg-matchmaking.jpg");*/
+    background-size: cover;
+    background-position: bottom center;
+}
+
+.matchmaking__controls {
+    position: absolute;
+    bottom: 66px;
+    left: 60px;
+}
+
+.matchmaking__start {
+    position: relative;
+
+    min-width: 460px;
+    min-height: 140px;
+    padding: 30px 10px;
+    border: none;
+
+    font-size: 0;
+    font-family: "Press Start 2p", "JetBrains Mono", monospace;
+    text-align: center;
+    text-shadow: var(--ui-glow);
+    text-transform: uppercase;
+
+    /*background: transparent;*/
+    background-color: var(--colors-bg--500);
+    background-image: radial-gradient( ellipse at 33% 10%, #461616 0%, transparent 75% );
+    box-shadow: inset 0 0 0 3px var(--colors-primary--500);
+}
+
+.matchmaking__start::before {
+    content: "start";
+
+    font-size: 40px;
+}
+
+.matchmaking__start::after {
+    content: "";
+
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    z-index: -1;
+
+    background-color: var(--colors-primary--500);
+    box-shadow: var(--ui-glow);
+    /*height: 2px;*/
+    /*width: 100%;*/
+}
+
+.matchmaking__start.--active::before {
+    content: "cancel";
+}
+
+.matchmaking__start.--active {
+    color: var(--colors-primary--500);
+}
+
+.matchmaking__settings {
+    position: relative;
+
+    min-width: 460px;
+    min-height: 240px;
+    padding: 15px 20px;
+    border: none;
+    margin-bottom: 20px;
+
+    font-size: 20px;
+    font-family: "JetBrains Mono", monospace;
+
+    /*background: transparent;*/
+    background-color: var(--colors-bg--500);
+    background-image: radial-gradient( ellipse at 33% 10%, #461616 0%, transparent 75% );
+    box-shadow: inset 0 0 0 3px var(--colors-primary--500);
+}
+
+.matchmaking__settings.--search .settings-btn {
+    display: none;
+}
+
+.matchmaking__settings.--search .loader {
+    display: block;
+}
+
+.matchmaking__settings::after {
+    content: "";
+
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    z-index: -1;
+
+    background-color: var(--colors-primary--500);
+    box-shadow: var(--ui-glow);
+    /*height: 2px;*/
+    /*width: 100%;*/
+}
+
+.matchmaking__settings-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 75px;
+}
+
+.matchmaking__mode-name {
+    margin: 0;
+    margin-bottom: 30px;
+
+    font-size: 28px;
+    font-family: "Press Start 2p", "JetBrains Mono", monospace;
+}
+
+.matchmaking__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    min-height: 50px;
+}
+
+.matchmaking__status {
+    margin: 0;
+}
+
+.matchmaking__loader {
+    display: flex;
+    min-width: 90px;
+}
+
+.matchmaking__loader .settings-btn {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border: none;
+    margin-left: auto;
+
+    font-size: 0;
+
+    background: url("../../img/icon-settings.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.loader, .loader::before, .loader::after {
+    box-sizing: border-box;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: solid 3px transparent;
+}
+
+.loader {
+    display: none;
+
+    position: relative;
+    top: 1px;
+
+    margin: auto;
+    margin-bottom: 10px;
+
+    text-align: center;
+
+    border-bottom-color: #f6f6f6;
+
+    animation: waver-second 1s infinite ease-in-out;
+}
+
+.loader::before,
+.loader::after {
+    content: '';
+    display: block;
+    position: absolute;
+}
+
+.loader::before {
+    border-bottom-color: #f6f6f6;
+    left: -28px;
+    top: -3px;
+    animation: waver-first 1s infinite ease-in-out;
+}
+
+.loader::after {
+    border-bottom-color: #f6f6f6;
+    left: 23px;
+    top: -3px;
+    animation: waver-third 1s infinite ease-in-out;
+}
+
+@keyframes waver-first {
+    0% {
+        border-radius: 0 0 0 0;
+    }
+    15% {
+        border-radius: 0 0 20px 20px;
+    }
+    30% {
+        border-radius: 0 0 0 0;
+    }
+    45% {
+        border-radius: 0 0 20px 0;
+    }
+    60% {
+        border-radius: 0 0 0 0;
+    }
+    75% {
+        border-radius: 0 0 0 0;
+    }
+    100% {
+        border-radius: 0 0 0 0;
+    }
+}
+@keyframes waver-second {
+    0% {
+        border-radius: 0 0 0 0;
+    }
+    15% {
+        border-radius: 0 0 0 20px;
+    }
+    30% {
+        border-radius: 0 0 0 0;
+    }
+    45% {
+        border-radius: 0 0 20px 20px;
+    }
+    60% {
+        border-radius: 0 0 0 0;
+    }
+    70% {
+        border-radius: 0 0 20px 0;
+    }
+    100% {
+        border-radius: 0 0 0 0;
+    }
+}
+@keyframes waver-third {
+    0% {
+        border-radius: 0 0 0 0;
+    }
+    15% {
+        border-radius: 0 0 0 0;
+    }
+    30% {
+        border-radius: 0 0 0 0;
+    }
+    45% {
+        border-radius: 0 0 0 20px;
+    }
+    60% {
+        border-radius: 0 0 0 0;
+    }
+    70% {
+        border-radius: 0 0 20px 20px;
+    }
+    100% {
+        border-radius: 0 0 0 0;
+    }
+}

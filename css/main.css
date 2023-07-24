@@ -46,6 +46,8 @@
 @import "blocks/card-preview.css";
 @import "blocks/bank.css";
 @import "blocks/cyber-strike.css";
+@import "blocks/mathmaking.css";
+@import "blocks/squad.css";
 
 /*CUSTOMIZATION*/
 @import "./i-customization.css";

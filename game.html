@@ -50,37 +50,106 @@
 </div>
 
 <div class="sudo-page">
-<!--    <div class="card-preview">-->
-<!--        <div class="card">-->
-<!--            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/836/hearthstone-ragnaros.png" class="card-image" draggable="false">-->
-<!--        </div>-->
-<!--    </div>-->
-    <div class="windows__bg">
-        <div class="windows__bg--inner">
-            <div id="load-logo" class="windows__logo">
-                <div class="windows__logo--inner red"></div>
-                <div class="windows__logo--inner green"></div>
-                <div class="windows__logo--inner blue"></div>
-                <div class="windows__logo--inner yellow"></div>
+    <div class="matchmaking">
+        <div class="squad matchmaking__squad">
+            <div class="squad__cell">
+                <button class="cp-button squad__plus">+</button>
             </div>
-            <script>
+            <section class="squad__cell">
+                <header class="js-player-matchmaking squad__player">
+                    <b class="squad__player-lvl"><span>5</span></b>
+                    <h3 class="squad__player-name">navischo</h3>
+                </header>
+                <div id="dne-card-class-ttter" style="display: block;">
+                    <article class="card">
+                        <div class="js-card-controls card__controls">
+                            <button>+</button>
+                        </div>
+                        <header class="card__header">
+                            <div class="card__header-left">
+                                <small class="js card__id">#class-ttter</small>
+                                <h2 class="card__title">Татуєр</h2><!-- data-advice-id="class" -->
+                                <small class="card__limits">Клас</small>
+                            </div>
+                            <div class="card__header-right">
+                                <b class="card__bonus">+1</b>
+                            </div>
+                        </header>
+                        <a class="card__preview">
+                            <img class="card__preview-img" src="https://lh5.googleusercontent.com/WUvRRRJpFIACJw50hOycHsKNnwSB3SdJSs-_5JQk11pKHMoDstW_n9nzWwb28y_wTUU=w2400" alt="">
+                        </a>
+                        <p class="card__description">Наб'є тобі татуху. Кожне тату дає власнику особливу властивість до кінця гри, яку саме дізнаєшся лише згодом.</p>
+                        <footer class="card__footer">
 
-            </script>
-            <div class="windows__name">
-                <p>Hypnosoft</p>
-                <div class="windows__name--inner">
-                    Win<span>77</span>
+                        </footer>
+                    </article>
                 </div>
-            </div>
-            <div class="windows__bg--loading">
-                <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
+            </section>
+            <div class="squad__cell">
+                <button class="cp-button squad__plus">+</button>
             </div>
         </div>
+        <div class="matchmaking__controls">
+            <section class="js-set-matchmaking matchmaking__settings">
+                <header class="matchmaking__settings-header">
+                    <b class="matchmaking__net-type">LAN</b>
+                    <b class="matchmaking__next-match">Next in..</b>
+                </header>
+                <h3 class="matchmaking__mode-name">CREATIVE</h3>
+                <footer class="matchmaking__footer">
+                    <h3 class="matchmaking__status">Matchmaking...</h3>
+                    <div class="matchmaking__loader">
+                        <button class="settings-btn">Settings</button>
+                        <div class="loader"></div>
+                    </div>
+                </footer>
+            </section>
+            <button class="js-start-matchmaking matchmaking__start">START</button>
+        </div>
     </div>
+    <script>
+        const startMatchmakingBtn = document.querySelector(".js-start-matchmaking");
+        const setMatchmakingBtn = document.querySelector(".js-set-matchmaking");
+        const playerMatchmakingBtn = document.querySelector(".js-player-matchmaking");
+        startMatchmakingBtn.addEventListener("click", () => {
+            setMatchmakingBtn.classList.toggle("--search");
+            startMatchmakingBtn.classList.toggle("--active");
+            playerMatchmakingBtn.classList.toggle("--ready");
+        });
+    </script>
+
+<!--    <div class="windows__bg">-->
+<!--        <div class="windows__bg&#45;&#45;inner">-->
+<!--            <div id="load-logo" class="windows__logo">-->
+<!--                <div class="windows__logo&#45;&#45;inner red"></div>-->
+<!--                <div class="windows__logo&#45;&#45;inner green"></div>-->
+<!--                <div class="windows__logo&#45;&#45;inner blue"></div>-->
+<!--                <div class="windows__logo&#45;&#45;inner yellow"></div>-->
+<!--            </div>-->
+<!--            <script>-->
+
+<!--            </script>-->
+<!--            <div class="windows__name">-->
+<!--                <p>Hypnosoft</p>-->
+<!--                <div class="windows__name&#45;&#45;inner">-->
+<!--                    Win<span>77</span>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="windows__bg&#45;&#45;loading">-->
+<!--                <ul>-->
+<!--                    <li></li>-->
+<!--                    <li></li>-->
+<!--                    <li></li>-->
+<!--                </ul>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+    <!--    <div class="card-preview">-->
+    <!--        <div class="card">-->
+    <!--            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/836/hearthstone-ragnaros.png" class="card-image" draggable="false">-->
+    <!--        </div>-->
+    <!--    </div>-->
 </div>
 
 <div id="dialogs-container">
