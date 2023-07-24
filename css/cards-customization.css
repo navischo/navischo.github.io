@@ -1120,6 +1120,61 @@ img {
     transform: scale(.9);
 }
 
+#dne-card-hired .card__title {
+    text-shadow: 2px 3px 0 black;
+}
+
+#dne-card-hired .card__header {
+    position: absolute;
+    z-index: 2;
+    color: white;
+}
+
+#dne-card-hired .card__description {
+    position: absolute;
+    bottom: 20px;
+    z-index: 2;
+    color: white;
+}
+
+#dne-card-hired .card__preview {
+    transform: scale(1.6) translateY(48px);
+}
+
+#dne-card-snoop-dog .card__header {
+    position: absolute;
+    z-index: 2;
+    color: white;
+}
+
+#dne-card-snoop-dog .card__description {
+    position: absolute;
+    bottom: 20px;
+    z-index: 2;
+    color: white;
+}
+
+#dne-card-snoop-dog .card__preview {
+    transform: scale(1.4) translateY(43px);
+}
+
+#dne-card-rebeca .card__header {
+    position: absolute;
+    z-index: 2;
+    color: white;
+}
+
+#dne-card-rebeca .card__description {
+    position: absolute;
+    bottom: 20px;
+    z-index: 2;
+    color: white;
+}
+
+#dne-card-rebeca .card__preview {
+    transform: scale(1.15) translateY(18px);
+}
+
 #dne-card-doll .card__header {
     position: absolute;
     z-index: 2;

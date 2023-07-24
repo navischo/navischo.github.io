@@ -286,6 +286,37 @@ const initDNELootArr = () => {
 
     LootArr.push(new DNELootCard("support", "Найомничок", "Можеш застосувати на нього ще один клас та дати йому одну шмотку. Якщо втрачаєш Найомничка, клас до тебе повертається, та шмотку втрачаєш із ним. Можеш підставити Найомничка щоб піти від відповідальності за провальний івент. Тримай Найомничка перед собой поряд с іншими айтемами.", "https://lh4.googleusercontent.com/SMs5epImEfomWNvE5FJFJgtvVK3inDgX5oGiaQmwvORuLEMhIkBFn6qaUgMDN216x8U=w2400", 1, 0, "", STRINGS.COMPANION_LONGLINE, "", true, "npc"));
 
+    // Хайред
+    //
+    //
+    const HIRED_LONGLINE = "";
+    const HIRED_SHORTLINE = `Молодий стажер з Пекла, не боїться важкої праці та чудово керує персоналом.`;
+    const HIRED_IMG_ID = `1croBMIMlSuDqFjHU9U5Z1IQP_87SGrLG`;
+    const HIRED_IMG = `https://drive.google.com/uc?id=${HIRED_IMG_ID}`;
+
+    LootArr.push(new DNELootCard("hired", "Хайред", HIRED_LONGLINE, HIRED_IMG, 1, 0, "Найомничок", HIRED_SHORTLINE, "", true, "npc"));
+
+    // Снуп
+    //
+    //
+    const SNOOP_LONGLINE = "";
+    const SNOOP_SHORTLINE = `Легенда Хіп-Хоп культури, завжди на висоті і готовий до фристайлу, завжди привітний і перманентно палає.`;
+    const SNOOP_IMG_ID = `1_LtxoMzbS3aPCJ3ASGmHtK_tdojGRbFd`;
+    const SNOOP_IMG = `https://drive.google.com/uc?id=${SNOOP_IMG_ID}`;
+
+    LootArr.push(new DNELootCard("snoop-dog", "Снуп Дог", SNOOP_LONGLINE, SNOOP_IMG, 1, 0, "Найомничок-MC", SNOOP_SHORTLINE, "", true, "npc"));
+
+    // Ребека
+    //
+    //
+    const REBECA_LONGLINE = "";
+    const REBECA_SHORTLINE = `Вона повернулась, щоб змінити свою долю назавжди.`;
+    const REBECA_IMG_ID = `1d2_a75c3KIiNDvajEy8-1VUJXaNsX-2B`;
+    const REBECA_IMG = `https://drive.google.com/uc?id=${REBECA_IMG_ID}`;
+
+    LootArr.push(new DNELootCard("rebeca", "Ребека", REBECA_LONGLINE, REBECA_IMG, 1, 0, "Найомничок", REBECA_SHORTLINE, "", true, "npc"));
+
+
     // Лялька
     //
     //
@@ -479,11 +510,11 @@ const initDNELootArr = () => {
     //
     //
     const GENDALF_LONGLINE = "";
-    const GENDALF_SHORTLINE = ``;
+    const GENDALF_SHORTLINE = `Старий чарівник пристосувався до нових умов.`;
     const GENDALF_IMG_ID = `1xPCA3ckLOBJTJ_cfQ2SZNbkACdnwGiUc`;
     const GENDALF_IMG = `https://drive.google.com/uc?id=${GENDALF_IMG_ID}`;
 
-    LootArr.push(new DNELootCard("gendalf", "GENDALF", GENDALF_LONGLINE, GENDALF_IMG, 1, 0, "Найомничок", GENDALF_SHORTLINE, "", true, "npc"));
+    LootArr.push(new DNELootCard("gendalf", "Гендальф", GENDALF_LONGLINE, GENDALF_IMG, 1, 0, "Найомничок", GENDALF_SHORTLINE, "", true, "npc"));
 
     const LISOVA_MAVKA_LONGLINE = "";
     const LISOVA_MAVKA_SHORTLINE = "Здатна створювати неймовірні напої з природніх речовин та залюбки реалізує свій продукт на твоєму івенті.";
@@ -493,11 +524,11 @@ const initDNELootArr = () => {
     //
     //
     const SHAMAN_LONGLINE = "";
-    const SHAMAN_SHORTLINE = ``;
+    const SHAMAN_SHORTLINE = `Майстер дихання та традиційної китайської чайної церемонії.`;
     const SHAMAN_IMG_ID = `1J_SfvUvfA1lRbiHsosm-0Hn32JaQ1HGr`;
     const SHAMAN_IMG = `https://drive.google.com/uc?id=${SHAMAN_IMG_ID}`;
 
-    LootArr.push(new DNELootCard("shaman", "SHAMAN", SHAMAN_LONGLINE, SHAMAN_IMG, 1, 0, "Найомничок", SHAMAN_SHORTLINE, "", true, "npc"));
+    LootArr.push(new DNELootCard("shaman", "Шаман", SHAMAN_LONGLINE, SHAMAN_IMG, 1, 0, "Найомничок", SHAMAN_SHORTLINE, "", true, "npc"));
 
     // Убрать и отснять студию
     // Фото чистої студії приваблюють клієнтів, отримай два випадкові закази на руку та використовуй цю картку як бонус +2 для будь-якого івенту в ній. Фото на професійний фотоаппарат з широким об'єктивом привабить навіть найвибагливішу аудиторію.

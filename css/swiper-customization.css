@@ -19,6 +19,7 @@
     text-align: left;
     font-size: 18px;
     /*background: #fff;*/
+    overflow: hidden;
 }
 
 .swiper-button-next,
