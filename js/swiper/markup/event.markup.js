@@ -103,6 +103,9 @@ const eventMarkup = `
             </div>
         </div>
     </div>
+    <div class="swiper-slide">
+        <div class="wall"></div>
+    </div>
 <!--    <div class="swiper-slide">-->
 <!--        <div class="sky-nav">-->
 <!--            <a class="sky-nav-item"><span class="sky-nav-item__text">TIME</span></a>-->
