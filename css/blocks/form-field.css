@@ -24,6 +24,8 @@
 
 .form-field__input {
     display: block;
+    padding: 10px 20px;
+
     background: none;
     border: none;
 
@@ -51,5 +53,7 @@
 }
 
 .form-field__checkbox input {
+    width: 20px;
+    height: 20px;
     cursor: pointer;
 }

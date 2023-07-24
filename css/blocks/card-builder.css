@@ -6,7 +6,7 @@
 }
 
 article.card-builder-modal {
-    max-width: 855px;
+    max-width: 905px;
     background-color: var(--colors-bg--500);
     background-image: radial-gradient(
             ellipse at 33% 10%,
