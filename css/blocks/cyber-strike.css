@@ -1,3 +1,7 @@
+.js-open-cs {
+    cursor: pointer;
+}
+
 #cs-game {
     visibility: hidden;
     z-index: -1;

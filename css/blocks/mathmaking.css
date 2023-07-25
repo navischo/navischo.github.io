@@ -1,14 +1,44 @@
-.matchmaking {
+.js-open-matchmaking {
+    cursor: pointer;
+}
+
+#matchmaking {
+    visibility: hidden;
+    z-index: -1;
+    opacity: 0;
+
     position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
+
+    /*background-color: var(--colors-bg--500);*/
+    background-color: #191a1e80;
+    background-image: radial-gradient( ellipse at 33% 10%, #461616 0%, transparent 75% );
+
+    transition: .2s ease-in-out;
+}
+
+#matchmaking.--visible {
+    visibility: visible;
     z-index: 41;
+
+    opacity: 1;
+}
+
+.matchmaking {
 
     /*background: url("../../img/bg-matchmaking.jpg");*/
     background-size: cover;
     background-position: bottom center;
+}
+
+.matchmaking .hud-btn {
+    position: absolute;
+    left: 7px;
+    top: 7px;
+    z-index: 11;
 }
 
 .matchmaking__controls {
