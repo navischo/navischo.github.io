@@ -353,6 +353,17 @@ const initDNELootArr = () => {
 
     LootArr.push(new DNELootCard("alise", "Aліс`е", "Проклятий янгол з сумними очима. Чудово продає речі, бо здатна відрізнити оригінал від підробки та цінує свій відсоток.", "https://lh4.googleusercontent.com/a-hieOJkrw-3bWjz8EawHojHcLcH78bHvYAFnIN9rew2VPZUxg8mTzcrMJb791fwPL4=w2400", 1, 0, "Найомничок", "Проклятий янгол з сумними очима. Чудово продає речі, бо здатна відрізнити оригінал від підробки та цінує свій відсоток.", "", true, "npc"));
 
+    // Макіма
+    //
+    //
+    const MAKIMA_LONGLINE = "";
+    const MAKIMA_SHORTLINE = `Високопоставлений мисливець на демонів, що служить у Бюро Громадської Безпеки.`;
+    const MAKIMA_IMG_ID = `1DiP8r8WrcyiHnKjJct9VymEEeETT1WjT`;
+    const MAKIMA_IMG = `https://drive.google.com/uc?id=${MAKIMA_IMG_ID}`;
+
+    LootArr.push(new DNELootCard("makima", "Макіма", MAKIMA_LONGLINE, MAKIMA_IMG, 1, 0, "Найомничок", MAKIMA_SHORTLINE, "", true, "npc"));
+
+
     // Мисливець
     //
     //
@@ -362,6 +373,17 @@ const initDNELootArr = () => {
     const HUNTER_IMG = `https://drive.google.com/uc?id=${HUNTER_IMG_ID}`;
 
     LootArr.push(new DNELootCard("lilith", "Ліліт", HUNTER_LONGLINE, HUNTER_IMG, 1, 0, "Найомничок", HUNTER_SHORTLINE, "", true, "npc"));
+
+    // Діксі
+    //
+    //
+    const DIXI_LONGLINE = "";
+    const DIXI_SHORTLINE = `Професійний боєць проїздом з Найт-Сіті. Має найдсучасне кібернетичне тіло та схильність до Кіберпсихозу.<br><br> Її дії не передбачувані, а зброя смертоносна.`;
+    const DIXI_IMG_ID = `1fuTZ9EWIwGcrhbLsUtMFm5J_YYdY_95X`;
+    const DIXI_IMG = `https://drive.google.com/uc?id=${DIXI_IMG_ID}`;
+
+    LootArr.push(new DNELootCard("dixi", "Діксі", DIXI_LONGLINE, DIXI_IMG, 1, 0, "Найомничок", DIXI_SHORTLINE, "", true, "npc"));
+
 
     // i2B
     //
@@ -1155,6 +1177,17 @@ DNELootArr.forEach((card) => {
 
 const initDNEDoorArr = () => {
     const DoorArr = [];
+
+    // 1AM LOFI SESSION
+    //
+    //
+    const BALANCE_LONGLINE = "Старі друзі вриваються на Нижньоюрківську з масштабним івентом на два Клуби та запрошують тебе увірватись разом.";
+    const BALANCE_SHORTLINE = `${BALANCE_LONGLINE}`;
+    const BALANCE_IMG_ID = `1HmI00iUUFcUbDLR-Vln4RWVKh8vWdWjc`;
+    const BALANCE_IMG = `https://drive.google.com/uc?id=${BALANCE_IMG_ID}`;
+
+    DoorArr.push(new DNEDoorCard("prj-balance", "БАЛАНС", BALANCE_LONGLINE, BALANCE_IMG, 7, "16h", "Tea Unity", "DJ,Гейм-майстер,Чайний майстер,Zen-інструктор", "", "?", "Усі доступні", BALANCE_SHORTLINE, "", true, "prj"));
+
 
     // 1AM LOFI SESSION
     //

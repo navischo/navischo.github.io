@@ -41,6 +41,7 @@
     position: absolute;
 
     left: 65px;
+    bottom: 66px;
 }
 
 #matchmaking.--search .matchmaking__controls {

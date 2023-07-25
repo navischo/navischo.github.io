@@ -1141,6 +1141,44 @@ img {
     transform: scale(1.6) translateY(48px);
 }
 
+#dne-card-makima .card__header {
+    position: absolute;
+    z-index: 2;
+    color: black;
+}
+
+#dne-card-makima .card__description {
+    position: absolute;
+    bottom: 20px;
+    z-index: 2;
+    color: white;
+    text-shadow: 1px 2px 5px black;
+}
+
+#dne-card-makima .card__preview {
+    transform: scale(1.1) translateY(47px);
+}
+
+#dne-card-dixi .card__header {
+    position: absolute;
+    z-index: 2;
+    color: white;
+    text-shadow: 1px 2px 5px black;
+}
+
+#dne-card-dixi .card__description {
+    position: absolute;
+    bottom: 20px;
+    z-index: 2;
+    color: white;
+    text-shadow: 1px 2px 5px black;
+}
+
+#dne-card-dixi .card__preview {
+    transform: scale(1.58) translateY(50px);
+}
+
+
 #dne-card-snoop-dog .card__header {
     position: absolute;
     z-index: 2;
