@@ -3,15 +3,14 @@
 }
 
 #matchmaking {
-    visibility: hidden;
-    z-index: -1;
-    opacity: 0;
+    transform: translateY(-100%);
 
     position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
+    z-index: 41;
 
     /*background-color: var(--colors-bg--500);*/
     background-color: #191a1e80;
@@ -21,10 +20,7 @@
 }
 
 #matchmaking.--visible {
-    visibility: visible;
-    z-index: 41;
-
-    opacity: 1;
+    transform: translateY(0);
 }
 
 .matchmaking {
@@ -43,8 +39,49 @@
 
 .matchmaking__controls {
     position: absolute;
+
+    left: 65px;
+}
+
+#matchmaking.--search .matchmaking__controls {
+    bottom: -225px;
+}
+
+#matchmaking.--search.--ready .matchmaking__controls {
+    bottom: -415px;
+}
+
+#matchmaking.--search.--ready .matchmaking__start::before {
+    content: "accept";
+}
+
+#matchmaking.--search .matchmaking__next-match::before {
+    content: "Next in..";
+}
+
+#matchmaking.--search.--ready .matchmaking__next-match::before {
+    content: "Start in..";
+}
+
+/* #11dbab */
+
+#matchmaking.--search.--ready .matchmaking__start {
+    color: white;
+    text-shadow: 0 0 5px var(--color);
+
+    background-color: white;
+    background-image: radial-gradient( ellipse at 33% 10%, var(--color) 0%, transparent 75% );
+    box-shadow: inset 0 0 0 3px var(--color);
+}
+
+#matchmaking.--search.--ready .matchmaking__start::after {
+    background-color: var(--color);
+    box-shadow: 0 0 5px var(--color);
+}
+
+#matchmaking.--visible .matchmaking__controls,
+#matchmaking.--visible.--search .matchmaking__controls {
     bottom: 66px;
-    left: 60px;
 }
 
 .matchmaking__start {

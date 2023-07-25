@@ -97,6 +97,16 @@
     transform: rotate(45deg);
 }
 
+.squad__player-lvl.--double {
+    font-size: 30px;
+}
+
+.squad__player-lvl.--double span {
+    position: relative;
+    left: -10px;
+    top: -2px;
+}
+
 .squad__player-name {
     width: 100%;
     padding-top: 25px;

@@ -73,7 +73,7 @@ const bossDeadAchievementsArr = [
 
 const MINIMAP = {
     bossDead: "img/img-map--boss-dead.png",
-    sheWantsRevenge: ""
+    sheWantsRevenge: "img/img-map--she-wants-revenge.png"
 }
 
 export { ARE_YOU_HUMAN_MESSAGE, NEXT_CHECKPOINT_MESSAGE, acidFridayCheckpointsStroke, newTurnCheckpointsStroke, bossDeadCheckpointsStroke, bossDeadAchievementsArr, MINIMAP };
