@@ -115,6 +115,102 @@ const rareGuestsArr = [{
     enterBudget: 1000,
     maxPlusCount: 20,
     isOnBoard: false
+}, {
+    name: "garry",
+    img: "rare-guest-9",
+    enterBudget: 1000,
+    maxPlusCount: 20,
+    isOnBoard: false
+}, {
+    name: "fred-and-jorge",
+    img: "rare-guest-10",
+    enterBudget: 1000,
+    maxPlusCount: 20,
+    isOnBoard: false
+}, {
+    name: "hagrid",
+    img: "rare-guest-11",
+    enterBudget: 1000,
+    maxPlusCount: 20,
+    isOnBoard: false
+}, {
+    name: "germiona",
+    img: "rare-guest-12",
+    enterBudget: 1000,
+    maxPlusCount: 20,
+    isOnBoard: false
+}, {
+    name: "polumna",
+    img: "rare-guest-13",
+    enterBudget: 1000,
+    maxPlusCount: 20,
+    isOnBoard: false
+}, {
+    name: "snape",
+    img: "rare-guest-14",
+    enterBudget: 1000,
+    maxPlusCount: 20,
+    isOnBoard: false
+}, {
+    name: "garry-w",
+    img: "rare-guest-15",
+    enterBudget: 1000,
+    maxPlusCount: 20,
+    isOnBoard: false
+}, {
+    name: "draco-w",
+    img: "rare-guest-16",
+    enterBudget: 1000,
+    maxPlusCount: 20,
+    isOnBoard: false
+}, {
+    name: "dambldor-w",
+    img: "rare-guest-17",
+    enterBudget: 1000,
+    maxPlusCount: 20,
+    isOnBoard: false
+}, {
+    name: "germiona-w",
+    img: "rare-guest-18",
+    enterBudget: 1000,
+    maxPlusCount: 20,
+    isOnBoard: false
+}, {
+    name: "ron-w",
+    img: "rare-guest-19",
+    enterBudget: 1000,
+    maxPlusCount: 20,
+    isOnBoard: false
+}, {
+    name: "belatrice-w",
+    img: "rare-guest-20",
+    enterBudget: 1000,
+    maxPlusCount: 20,
+    isOnBoard: false
+}, {
+    name: "snape-w",
+    img: "rare-guest-21",
+    enterBudget: 1000,
+    maxPlusCount: 20,
+    isOnBoard: false
+}, {
+    name: "hagrid-w",
+    img: "rare-guest-22",
+    enterBudget: 1000,
+    maxPlusCount: 20,
+    isOnBoard: false
+}, {
+    name: "voldemort-w",
+    img: "rare-guest-23",
+    enterBudget: 1000,
+    maxPlusCount: 20,
+    isOnBoard: false
+}, {
+    name: "moody-w",
+    img: "rare-guest-24",
+    enterBudget: 1000,
+    maxPlusCount: 20,
+    isOnBoard: false
 }];
 const rareGuestsSet = new Set();
 win77.game.player.rareGuestsSet = rareGuestsSet;
