@@ -2,6 +2,23 @@ import { win77 } from "../dne-cli.js";
 import { drawCard } from "../cards/dom.cards.js";
 import { getCardElement } from "../cards/template.cards.js";
 
+class DNEPlayer {
+    constructor(id, avatar, description) { // дія чи результат?
+        this.id = id;
+        this.avatar = avatar;
+        this.description = description;
+    }
+}
+
+const DNEPlayersSet = new Set();
+
+const initDNEPlayersSet = () => {
+    DNEPlayersSet.add(new DNEPlayer("navischo", "", "Just another player"));
+    DNEPlayersSet.add(new DNEPlayer("yo", "", "Just another player"));
+    DNEPlayersSet.add(new DNEPlayer("denmc", "", "Just another player"));
+    DNEPlayersSet.add(new DNEPlayer("videoegor", "", "Just another player"));
+}
+
 const updPlayer = () => {
     const playerLvlNode = document.querySelector(".js-player-lvl");
     const playerNameNode = document.querySelector(".js-player-name");
