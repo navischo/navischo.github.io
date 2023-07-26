@@ -10,14 +10,22 @@ class DNEPlayer {
     }
 }
 
-const DNEPlayersSet = new Set();
+const PLAYERS_AVATAR_PATH = `libs/players/`; // avatar-1.jpg
 
 const initDNEPlayersSet = () => {
-    DNEPlayersSet.add(new DNEPlayer("navischo", "", "Just another player"));
-    DNEPlayersSet.add(new DNEPlayer("yo", "", "Just another player"));
-    DNEPlayersSet.add(new DNEPlayer("denmc", "", "Just another player"));
-    DNEPlayersSet.add(new DNEPlayer("videoegor", "", "Just another player"));
+    const DNEPlayersSet = new Set();
+
+    DNEPlayersSet.add(new DNEPlayer("navischo", `${PLAYERS_AVATAR_PATH}avatar-1.jpg`, "Блазень - це карта відкриття та несподіванки. Кожен із нас трохи блазень."));
+    DNEPlayersSet.add(new DNEPlayer("yo", `${PLAYERS_AVATAR_PATH}avatar-2.jpg`, "Обожнюю себе натхненного 🌈"));
+    DNEPlayersSet.add(new DNEPlayer("videoegor", `${PLAYERS_AVATAR_PATH}avatar-3.jpg`, "Мафіозник"));
+    DNEPlayersSet.add(new DNEPlayer("microdozer", `${PLAYERS_AVATAR_PATH}avatar-4.jpg`, "👉💦🍄"));
+    DNEPlayersSet.add(new DNEPlayer("olivye", `${PLAYERS_AVATAR_PATH}avatar-5.jpg`, "Jackass нет правил"));
+    DNEPlayersSet.add(new DNEPlayer("echomateriya", `${PLAYERS_AVATAR_PATH}avatar-6.jpg`, "visual artist and sculptor"));
+
+    return DNEPlayersSet;
 }
+
+win77.players = initDNEPlayersSet();
 
 const updPlayer = () => {
     const playerLvlNode = document.querySelector(".js-player-lvl");
