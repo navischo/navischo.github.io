@@ -211,6 +211,24 @@ const rareGuestsArr = [{
     enterBudget: 1000,
     maxPlusCount: 20,
     isOnBoard: false
+}, {
+    name: "pantera",
+    img: "rare-guest-25",
+    enterBudget: 1000,
+    maxPlusCount: 20,
+    isOnBoard: false
+}, {
+    name: "neuropunk",
+    img: "rare-guest-26",
+    enterBudget: 1000,
+    maxPlusCount: 20,
+    isOnBoard: false
+}, {
+    name: "neuropunk-2",
+    img: "rare-guest-27",
+    enterBudget: 1000,
+    maxPlusCount: 20,
+    isOnBoard: false
 }];
 const rareGuestsSet = new Set();
 win77.game.player.rareGuestsSet = rareGuestsSet;
