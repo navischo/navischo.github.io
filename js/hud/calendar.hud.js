@@ -110,7 +110,7 @@ const trackYourDays = () => {
 
     win77.currentDayNode = document.querySelector(".js-day-name");
 
-    console.log(allDayNodes);
+    // console.log(allDayNodes);
 }
 
 const updCalendarNode = () => {
@@ -131,7 +131,7 @@ const updCalendarNode = () => {
         }
     })
 
-    console.log(allDayNodes);
+    // console.log(allDayNodes);
 }
 
 const finishDay = (income = null) => {

@@ -16,7 +16,7 @@ const parseCost = (lootItem) => {
         const splitCost = costString.split(separator);
         const buy = splitCost[0];
         const rent = splitCost[1];
-        console.log(`${buy} - ${rent}`);
+        // console.log(`${buy} - ${rent}`);
 
         const isCostShorted = `${buy}`.includes("K");
         // console.log("isCostShorted", isCostShorted, buy.replace("K", "000"));
@@ -27,7 +27,7 @@ const parseCost = (lootItem) => {
         }
 
         const isRentShorted = `${rent}`.includes("K");
-        console.log("isRentShorted", isRentShorted, rent.replace("K", "000"));
+        // console.log("isRentShorted", isRentShorted, rent.replace("K", "000"));
         if (isCostShorted) {
             costObj.rent = +rent.replace("K", "000");
         } else {
@@ -48,7 +48,7 @@ const parseCost = (lootItem) => {
     }
 
     lootItem.costObj = costObj;
-    console.log(lootItem.cost, lootItem.costObj, `Item loaded successfully`);
+    // console.log(lootItem.cost, lootItem.costObj, `Item loaded successfully`);
 
     return lootItem;
 };

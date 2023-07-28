@@ -9,7 +9,7 @@ const parseTopsString = (string) => {
         topsArr.push({name: name, score: score});
     });
     topsArr.sort((a, b) => b.score - a.score);
-    console.log("topsArr", topsArr);
+    // console.log("topsArr", topsArr);
 
     const topsObj = {};
     topsArr.forEach((topObj) => {
@@ -35,6 +35,6 @@ const appendNewTop = (name, score) => {
 
 // appendNewTop("navi", 999999);
 
-console.log(parseTopsString(topsString), topsString);
+// console.log(parseTopsString(topsString), topsString);
 
 export { topsString, parseTopsString, appendNewTop };

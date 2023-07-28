@@ -449,11 +449,7 @@ const initProfile = () => {
     drawLootCards(win77.game.player.loot, ".js-inventory-menu");
     drawLootCards(win77.game.player.npc, ".js-crew-menu");
 
-    const wall = document.querySelector(".js-wall");
-    isSetHasId(win77.game.player.class, "class-writer") ? wall.classList.add("--sprayable") : "";
-    // wall.addEventListener("click", () => {
-    //     wall.remove();
-    // });
+
 }
 
 initProfile();

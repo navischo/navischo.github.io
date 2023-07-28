@@ -19,7 +19,7 @@ const initOneMoreBtn = () => {
         oneMoreBtnWrap.innerHTML = "<button>+</button>";
         oneMoreBtnWrap.querySelector("button").addEventListener("click", clickHandler);
     } else {
-        console.log(`You have enough cards now. See you later.`);
+        // console.log(`You have enough cards now. See you later.`);
         oneMoreBtnWrap.innerHTML = "";
     }
 };

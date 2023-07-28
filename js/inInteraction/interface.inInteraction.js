@@ -85,6 +85,6 @@ DUNGE_NAMES.forEach((name) => {
     win77.locationsSet.add(house);
 });
 
-console.log("playgroundSet", playgroundSet, win77.locationsSet);
+// console.log("playgroundSet", playgroundSet, win77.locationsSet);
 
 export { DUNGE_NAMES, getLocationDataMarkup };

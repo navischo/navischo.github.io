@@ -354,7 +354,7 @@ const drawMapModal = () => {
             slides: (function () {
                 const slides = [];
                 for (let dungeName of win77.game.player.availableLocations) {
-                    console.log(dungeName);
+                    // console.log(dungeName);
                     slides.push(getDungeHexMarkup(dungeName));
                 }
                 return slides;

@@ -48,7 +48,7 @@ const updExecutiveOptions = () => {
 }
 
 const updSettingOptions = () => {
-    console.log(win77.game.player.id, win77.game.player.npc);
+    // console.log(win77.game.player.id, win77.game.player.npc);
     updSectorOptions();
     updExecutiveOptions();
 }

@@ -7,7 +7,7 @@
 
 const initKeyboard = () => {
     document.addEventListener("keydown", (e) => {
-        console.log(e.key, e);
+        // console.log(e.key, e);
         switch (e.key) {
             case "n":
                 document.querySelector("body").classList.toggle("hide-hud");
