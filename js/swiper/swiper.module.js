@@ -125,7 +125,6 @@ swiper.on('slideChange', function (e) {
 });
 // swiper.slideTo(0, 0);
 win77.swiper = swiper;
-
 // single exports output
 export { swiper };
 

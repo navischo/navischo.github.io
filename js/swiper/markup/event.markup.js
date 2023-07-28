@@ -104,7 +104,7 @@ const eventMarkup = `
         </div>
     </div>
     <div class="swiper-slide">
-        <div class="wall"></div>
+        <div class="js-wall wall"></div>
     </div>
 <!--    <div class="swiper-slide">-->
 <!--        <div class="sky-nav">-->

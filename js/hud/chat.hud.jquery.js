@@ -448,8 +448,6 @@ const initProfile = () => {
 
     drawLootCards(win77.game.player.loot, ".js-inventory-menu");
     drawLootCards(win77.game.player.npc, ".js-crew-menu");
-
-
 }
 
 initProfile();
