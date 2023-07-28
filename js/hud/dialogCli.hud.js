@@ -112,7 +112,7 @@ const initDialogCli = (dialogData = DEFAULT_DIALOG_DATA) => {
         document.querySelector(".dialog").style.display = "none";
         const dialogVertical = document.querySelector(".dialog-vertical");
         if (dialogVertical) {
-            dialogVertical.querySelector(".channel-feed__body").innerHTML = "";
+            dialogVertical.querySelector(".js-vertical-feed").innerHTML = "";
             dialogVertical.classList.add("--zero-inbox");
         }
     });

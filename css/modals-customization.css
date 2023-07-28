@@ -1,3 +1,7 @@
+html {
+    margin-right: 0!important;
+}
+
 .white-popup {
     position: relative;
     background: #FFF;

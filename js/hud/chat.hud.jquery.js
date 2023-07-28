@@ -189,7 +189,7 @@ const INTERACTIVE_DIALOGS = [
 
 const initInteractiveDialog = (option) => {
     const dialog = INTERACTIVE_DIALOGS.find((dialog) => dialog.starter === option);
-    const activeChat = document.querySelector(".dialog-vertical .channel-feed__body");
+    const activeChat = document.querySelector(".js-vertical-feed");
     const newMessage = document.createElement("div");
     newMessage.innerHTML = getMessageMarkup(dialog.next);
     activeChat.appendChild(newMessage);
@@ -213,7 +213,7 @@ const initInteractiveDialog = (option) => {
 }
 
 const chooseOption = (option, mod = "") => {
-    const activeChat = document.querySelector(".dialog-vertical .channel-feed__body");
+    const activeChat = document.querySelector(".js-vertical-feed");
     const newMessage = document.createElement("div");
     newMessage.innerHTML = getMessageMarkup(option, mod);
     activeChat.appendChild(newMessage);
