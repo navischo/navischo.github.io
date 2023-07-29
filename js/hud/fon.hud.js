@@ -1,5 +1,5 @@
 import {win77} from "../dne-cli.js";
-import { DIALOGS, TITLES_OF_DIALOGS, initDialog, getMessageMarkup, initInteractiveDialog, chooseOption } from "./chat.hud.jquery.js";
+import { DIALOGS, TITLES_OF_DIALOGS, initDialog, getMessageMarkup, initInteractiveDialog, chooseOption } from "./chat.hud.js";
 import { initHotline } from "../utils/initHotline.js";
 import { createDialogDataObj, initDialogCli } from "./dialogCli.hud.js";
 

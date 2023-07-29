@@ -1,4 +1,4 @@
-import { initDialog, TITLES_OF_DIALOGS, DIALOGS } from "../hud/chat.hud.jquery.js";
+import { initDialog, TITLES_OF_DIALOGS, DIALOGS } from "../hud/chat.hud.js";
 
 const initHotline = (number) => {
     const dialogObj = {

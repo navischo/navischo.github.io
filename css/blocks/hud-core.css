@@ -74,9 +74,17 @@ a {
 
     /*width: 420px;*/
     /*width: 600px;*/
-    width: 100%;
+    width: 94%;
     border: 10px solid black;
     margin: 0 auto;
+}
+
+.avatar.--custom {
+    width: 465px;
+}
+
+.avatar.--custom .clipPath {
+    background-image: url("../../img/avatar.jpg");
 }
 
 .avatar-controls {

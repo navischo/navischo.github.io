@@ -8,8 +8,8 @@ import { drawLootCards } from "../cards/dom.cards.js";
 import { getDialogOptionMarkup } from "./dialogCli.hud.js";
 import { isSetHasId } from "../utils/isSetHasId.js";
 import { drawCurrentEvent, trackYourDays } from "./calendar.hud.js";
-import { initBank } from "../utils/initBank.js";
 import { ProfilePage } from "../structure/admin/profilePage.structure.js";
+import { BankPage } from "../structure/admin/bankPage.structure.js";
 
 // const DEFAULT_TIP = `
 // Прототип інтерфейсу взаємодії між гравцем та навколишнім світом натхненний Cyberpunk 2077.
@@ -452,8 +452,7 @@ const initProfile = () => {
 
     initLocations();
     initDirect();
-    initBank();
-
+    BankPage.init();
     ProfilePage.init();
 }
 

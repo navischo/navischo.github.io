@@ -1,5 +1,6 @@
-import { win77 } from "../dne-cli.js";
-import { updBalanceNode } from "../hud/balance.hud.js";
+import { Page } from "../core.structure.js";
+import { win77 } from "../../dne-cli.js";
+import { updBalanceNode } from "../../hud/balance.hud.js";
 
 const updBankBalanceNode = () => {
     const element = document.querySelector(".js-btc-balance");
@@ -29,13 +30,23 @@ const saveBankroll = () => {
     }
 };
 
-const initBank = () => {
-    const saveBtn = document.querySelector(".js-save-bankroll");
-    saveBtn.addEventListener("click", () => {
-        saveBankroll();
-    });
+const initBankPage = () => {
+    const parent = document.querySelector(".js-bank-page");
+    const link = () => {
+        console.log("Go to Profile page");
+    }
+    const init = () => {
+        // run all scripts to make Bank work
+        const saveBtn = document.querySelector(".js-save-bankroll");
+        saveBtn.addEventListener("click", () => {
+            saveBankroll();
+        });
 
-    updBankBalanceNode();
+        updBankBalanceNode();
+    };
+
+    return new Page(parent, link, init);
 }
+const BankPage = initBankPage();
 
-export { initBank };
+export { BankPage };

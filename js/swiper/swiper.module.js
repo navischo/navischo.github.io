@@ -7,7 +7,7 @@ import { initCollector } from "../utils/initCollector.js";
 
 import { win77 } from "../dne-cli.js";
 import { makeWallSprayable } from "../utils/makeWallSprayable.js";
-// import { initProfile } from "../hud/chat.hud.jquery.js";
+// import { initProfile } from "../hud/chat.hud.js";
 
 // API code
 const swiper = new Swiper('.js-swiper-screen', {
