@@ -1,4 +1,4 @@
-import { initDialog, TITLES_OF_DIALOGS, DIALOGS } from "../hud/chat.hud.js";
+import { TITLES_OF_DIALOGS, DIALOGS } from "../hud/chat.hud.js";
 
 const initHotline = (number) => {
     const dialogObj = {
@@ -16,7 +16,7 @@ const initHotline = (number) => {
 
             if (dialogObj) {
                 const hotlineParent = document.querySelector(".js-vertical-feed");
-                initDialog(dialogObj.body, hotlineParent);
+                // todo initDialog(dialogObj.body, hotlineParent);
             }
         }
     }

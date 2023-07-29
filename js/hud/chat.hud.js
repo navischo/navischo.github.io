@@ -10,6 +10,8 @@ import { isSetHasId } from "../utils/isSetHasId.js";
 import { drawCurrentEvent, trackYourDays } from "./calendar.hud.js";
 import { ProfilePage } from "../structure/admin/profilePage.structure.js";
 import { BankPage } from "../structure/admin/bankPage.structure.js";
+import { SchedulePage } from "../structure/admin/schedulePage.structure.js";
+import { DirectPage } from "../structure/admin/directPage.structure.js";
 
 // const DEFAULT_TIP = `
 // Прототип інтерфейсу взаємодії між гравцем та навколишнім світом натхненний Cyberpunk 2077.
@@ -244,144 +246,7 @@ const getMessageMarkup = (message, mod = "") => `
 
 
 
-const drawDialog = (data, clearBefore = false, parent) => {
-    const messageParent = parent ? parent : document.querySelector(".channel-feed__body");
-    clearBefore ? messageParent.innerHTML = "" : "";
-
-    const appendMessageMarkup = (message) => {
-        const newElement = document.createElement("div");
-        newElement.innerHTML = getMessageMarkup(message);
-        messageParent.appendChild(newElement);
-    }
-
-    // console.log(data, data.length);
-
-    // data.length > 1 ? data.forEach(appendMessageMarkup) : appendMessageMarkup(data);
-    data.forEach(appendMessageMarkup);
-}
-
-const initDialog = (dialog, parent = null) => {
-    const lines = dialog.split(/\r\n|\r|\n/g);
-
-    const lineObj = {
-        line: "",
-        credits: "",
-        date: "",
-        callback: "",
-        chat: "",
-        checked: false
-    };
-
-    // const dialogCredits = [
-    //     "falko",
-    //     "falko",
-    //     "v",
-    //     "falko",
-    //     "falko",
-    //     "falko",
-    //     "falko",
-    //     "falko",
-    //     "falko",
-    //     "falko"
-    // ];
-
-    const fillDialogData = () => {
-        return lines.map((line, i) => {
-            const newLineObj = Object.assign({}, lineObj);
-            newLineObj.line = line;
-            // newLineObj.credits = dialogCredits[i];
-            return newLineObj;
-        })
-    }
-
-    const dialogData = fillDialogData();
-
-    drawDialog(dialogData, true, parent);
-}
-
-const initLocations = () => {
-    const locationsParent = document.querySelector(".js-locations");
-    const getLocationItemMarkup = (name) => `
-    <li class="nav__item">
-        <a class="js-open-room nav__link">
-            <span class="channel-link"><span class="channel-link__icon">#</span><span class="channel-link__element">${name}</span></span>
-        </a>
-    </li>
-    `;
-    const initLocationsList = () => {
-        locationsParent.innerHTML = win77.game.player.availableLocations.map((locationItem) => getLocationItemMarkup(locationItem)).join("");
-    }
-
-    initLocationsList();
-    document.querySelector(".js-open-room")
-        .addEventListener("click", () => {
-            console.log(win77.locationsSet, [...win77.locationsSet][0], getLocationDataMarkup([...win77.locationsSet][0]));
-            const data = [...win77.locationsSet][0];
-            drawDialog([
-                {
-                    line: getLocationDataMarkup(data),
-                    credits: "win77"
-                }
-            ], true);
-            document.querySelector(".js-channel-name").textContent = data.name;
-        });
-}
-
-// initLocations();
-
-const initDirect = () => {
-    const directParent = document.querySelector(".js-direct");
-    const getDirectItemMarkup = (name) => `
-<li class="nav__item">
-    <a class="nav__link" href="#">
-        <span class="js-start-direct conversation-link" data-direct="${name}"><span class="conversation-link__icon"></span><span
-            class="conversation-link__element">${name}</span></span>
-    </a>
-</li>
-`;
-    const availableDirects = ["Rick C-137", "navischo"];
-    const initDirectsList = () => {
-        directParent.innerHTML = availableDirects.map((locationItem) => getDirectItemMarkup(locationItem)).join("");
-    }
-
-    initDirectsList();
-
-    const directStarters = directParent.querySelectorAll(".js-start-direct");
-    directStarters.forEach((directStarter) => {
-        directStarter.addEventListener("click", () => {
-            const dialogParent = document.querySelector("#admin-dialog");
-            console.log("initDialog(DIALOGS[0])", dialogParent);
-            initDialog(DIALOGS[0], dialogParent);
-        });
-    })
-}
-
-// initDirect();
-
-const initNewSlideBtn = () => {
-    const addNewSlideButton = document.querySelector(".js-add-slide");
-    addNewSlideButton.addEventListener("click", () => {
-        win77.swiper.virtual.prependSlide([
-            `hello world`
-        ]);
-    });
-}
-
-const initProfile = () => {
-    const root = document.querySelector("#root-direct");
-    const appDOM = {
-        root: root,
-        a: root.querySelector(".app-a"),
-        main: root.querySelector(".app-main"),
-        b: root.querySelector(".app-b"),
-    }
-
-
-    // const inventoryMenu = document.querySelector(".js-inventory-menu");
-    // win77.game.player.loot.forEach((lootItem) => {
-        // inventoryMenu.appendChild(lootItem)
-    // });
-
+const initAdmin = () => {
     win77.adminSwiper = new Swiper("#admin-swiper", {
         direction: "vertical",
         spaceBetween: 50,
@@ -401,61 +266,16 @@ const initProfile = () => {
         if (e.activeIndex === 2) {
             const dialogParent = document.querySelector("#admin-dialog");
             console.log("initDialog(DIALOGS[0])", dialogParent);
-            initDialog(DIALOGS[0], dialogParent);
+            // initDialog(DIALOGS[0], dialogParent);
         }
     });
 
-    win77.weekSwiper = new Swiper(".swiper.--week", {
-        slidesPerView: 6,
-        spaceBetween: 8,
-        navigation: {
-            nextEl: '.your-day-next',
-            prevEl: '.your-day-prev',
-        },
-    });
-
-    const weekTabs = document.querySelectorAll(".js-swipe-to-week");
-    weekTabs.forEach((weekTab) => {
-        weekTab.addEventListener("click", (e) => {
-            win77.weekSwiper.slideTo(+e.target.dataset.weekNumber * 6, 200, false);
-        });
-    });
-
-    win77.weekSwiper.on('slideChange', function () {
-        const weekNumber = Math.floor(win77.weekSwiper.activeIndex / 6);
-        weekTabs.forEach((weekTab, index) => {
-            weekTab.classList.remove("--current");
-
-            if (weekNumber === index) {
-                weekTab.classList.add("--current");
-            }
-        });
-    });
-
-    drawCurrentEvent();
-    trackYourDays();
-    // win77.finishDay();
-    win77.setCurrentDay();
-
-    // const weekSwiperTouch = document.querySelector(".js-your-days-touch");
-    // weekSwiperTouch.addEventListener("click", (e) => {
-    //     console.log(e.target);
-    //
-    //     if (e.target.classList.contains("your-your-day__first")) {
-    //         e.target.classList.add("--cross");
-    //     }
-    //
-    //     if (e.target.classList.contains("your-day__second")) {
-    //         e.target.classList.add("--round");
-    //     }
-    // });
-
-    initLocations();
-    initDirect();
+    SchedulePage.init();
+    DirectPage.init();
     BankPage.init();
     ProfilePage.init();
 }
 
-initProfile();
+initAdmin();
 
-export { DIALOGS, TITLES_OF_DIALOGS, initDialog, initProfile, getMessageMarkup, initInteractiveDialog, chooseOption };
+export { DIALOGS, TITLES_OF_DIALOGS, getMessageMarkup, initInteractiveDialog, chooseOption };

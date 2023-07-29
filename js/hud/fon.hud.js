@@ -1,22 +1,8 @@
 import {win77} from "../dne-cli.js";
-import { DIALOGS, TITLES_OF_DIALOGS, initDialog, getMessageMarkup, initInteractiveDialog, chooseOption } from "./chat.hud.js";
+import { DIALOGS, TITLES_OF_DIALOGS, getMessageMarkup, initInteractiveDialog, chooseOption } from "./chat.hud.js";
 import { initHotline } from "../utils/initHotline.js";
 import { createDialogDataObj, initDialogCli } from "./dialogCli.hud.js";
 
-
-const initDirect = (name, dialogObj) => {
-    const directIcon = document.querySelector(`[data-direct="${name}"]`);
-    const directTitle = document.querySelector(`.js-channel-name`);
-    if (directIcon && directTitle) {
-        directIcon.classList.add("--online");
-        directTitle.textContent = `${dialogObj.title}/${name}`;
-        if (dialogObj) {
-            initDialog(dialogObj.body);
-        }
-    } else {
-        console.log(`Direct to ${name} unavailable`);
-    }
-}
 
 const NOKIA_MENUS = [
     {

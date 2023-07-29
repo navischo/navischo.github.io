@@ -9,7 +9,7 @@ const adminDirectMarkup =
                         </div>
                         <div class="segment-topbar__aside">
                             <div class="button-toolbar">
-                                <a class="js-add-slide button button--primary button--size-lg">
+                                <a class="button button--primary button--size-lg">
                                     <svg class="button__icon" xmlns="http://www.w3.org/2000/svg"
                                          viewBox="0 0 24 24">
                                         <path d="M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z"></path>
@@ -84,7 +84,7 @@ const adminDirectMarkup =
                             <h2 class="nav-section__title">Direct</h2>
                         </div>
                         <div class="nav-section__body">
-                            <ul class="js-direct nav">
+                            <ul class="js-direct-contacts nav">
                                 <li class="nav__item">
                                     <a class="nav__link" href="#">
                                     <span
