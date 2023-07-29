@@ -1,5 +1,5 @@
 const adminProfileMarkup = `
-<div class="app-skeleton profile">
+<div class="js-profile-page app-skeleton profile">
     <div class="app-container">
         <div class="app-a">
             <div class="card-menu">
