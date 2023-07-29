@@ -1,5 +1,5 @@
 import { TITLES_OF_DIALOGS, DIALOGS } from "../hud/chat.hud.js";
-
+import { parseDialogBody } from "../structure/admin/direct.page.js";
 const initHotline = (number) => {
     const dialogObj = {
         title: TITLES_OF_DIALOGS[number],
@@ -15,8 +15,7 @@ const initHotline = (number) => {
             }
 
             if (dialogObj) {
-                const hotlineParent = document.querySelector(".js-vertical-feed");
-                // todo initDialog(dialogObj.body, hotlineParent);
+                parseDialogBody(dialogObj.body, ".js-vertical-feed");
             }
         }
     }

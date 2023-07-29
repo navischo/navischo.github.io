@@ -8,10 +8,11 @@ import { drawLootCards } from "../cards/dom.cards.js";
 import { getDialogOptionMarkup } from "./dialogCli.hud.js";
 import { isSetHasId } from "../utils/isSetHasId.js";
 import { drawCurrentEvent, trackYourDays } from "./calendar.hud.js";
-import { ProfilePage } from "../structure/admin/profilePage.structure.js";
-import { BankPage } from "../structure/admin/bankPage.structure.js";
-import { SchedulePage } from "../structure/admin/schedulePage.structure.js";
-import { DirectPage } from "../structure/admin/directPage.structure.js";
+import { ProfilePage } from "../structure/admin/profile.page.js";
+import { BankPage } from "../structure/admin/bank.page.js";
+import { SchedulePage } from "../structure/admin/schedule.page.js";
+import { DirectPage } from "../structure/admin/direct.page.js";
+import { AdminSwiper } from "../structure/admin/admin.swiper.js";
 
 // const DEFAULT_TIP = `
 // Прототип інтерфейсу взаємодії між гравцем та навколишнім світом натхненний Cyberpunk 2077.
@@ -246,36 +247,6 @@ const getMessageMarkup = (message, mod = "") => `
 
 
 
-const initAdmin = () => {
-    win77.adminSwiper = new Swiper("#admin-swiper", {
-        direction: "vertical",
-        spaceBetween: 50,
-        effect: "flip",
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        // pagination: {
-        //     el: ".swiper-pagination",
-        //     clickable: true,
-        // },
-    });
-
-    win77.adminSwiper.on('slideChange', function (e) {
-        console.log(e, e.activeIndex, e.activeIndex === 3);
-        if (e.activeIndex === 2) {
-            const dialogParent = document.querySelector("#admin-dialog");
-            console.log("initDialog(DIALOGS[0])", dialogParent);
-            // initDialog(DIALOGS[0], dialogParent);
-        }
-    });
-
-    SchedulePage.init();
-    DirectPage.init();
-    BankPage.init();
-    ProfilePage.init();
-}
-
-initAdmin();
+AdminSwiper.init();
 
 export { DIALOGS, TITLES_OF_DIALOGS, getMessageMarkup, initInteractiveDialog, chooseOption };

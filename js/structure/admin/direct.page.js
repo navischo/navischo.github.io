@@ -19,8 +19,8 @@ const appendAllMessages = (data, clearBefore = false, parent) => {
     data.forEach(appendMessageMarkup);
 }
 
-const parseDialogBody = (dialog) => {
-    const parent = document.querySelector("#admin-dialog");
+const parseDialogBody = (dialog, parentSelector = "#admin-dialog") => {
+    const parent = document.querySelector(parentSelector);
     const lines = dialog.split(/\r\n|\r|\n/g);
 
     const lineObj = {
@@ -152,4 +152,4 @@ const initDirectPage = () => {
 }
 const DirectPage = initDirectPage();
 
-export { DirectPage };
+export { DirectPage, parseDialogBody };

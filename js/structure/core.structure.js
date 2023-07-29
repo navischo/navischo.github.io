@@ -1,7 +1,7 @@
 /* STRUCTURE MAP
 * 3. All Pages
-* 2. Swipers contains Pages
-* 1. Core contain Swipers
+* 2. SwiperCells contains Pages
+* 1. SwiperCore contain all SwiperCells
 * */
 
 class Page {
@@ -12,4 +12,10 @@ class Page {
     }
 }
 
-export { Page };
+class SwiperCell {
+    constructor(init) {
+        this.init = init;
+    }
+}
+
+export { Page, SwiperCell };
