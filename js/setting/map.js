@@ -16,6 +16,7 @@ export const map = L.map('map-canvas')
     lat: 50.45466,
     lng: 30.5238
   }, 10);
+toggleForm();
 
 L.tileLayer(
   'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
