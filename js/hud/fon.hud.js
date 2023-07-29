@@ -72,6 +72,24 @@ const NOKIA_MENUS = [
                         ]));
                     console.log(`Hotline to Fight Club`);
                 }
+            },
+            {
+                href: "#",
+                text: "Rick C-137",
+                callback: (e) => {
+                    e.preventDefault();
+                    win77.lastHotline = initHotline(2);
+                    const OPTION_LINES = ["Давай, коли хочеш зустрітись?"];
+                    initDialogCli(createDialogDataObj(
+                        OPTION_LINES,
+                        "Rick C-137",
+                        [
+                            () => {
+                                chooseOption(OPTION_LINES[0], "--blue");
+                            }
+                        ]));
+                    console.log(`Hotline to Rick C-137`);
+                }
             }
             // {
             //     href: "#",
