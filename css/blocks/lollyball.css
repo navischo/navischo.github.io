@@ -1,0 +1,45 @@
+.js-open-lollyball {
+    cursor: pointer;
+}
+
+#lollyball {
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 41;
+
+    /*background-color: var(--colors-bg--500);*/
+    background-color: #191a1e80;
+    background-image: radial-gradient( ellipse at 33% 10%, #461616 0%, transparent 75% );
+
+    transition: .2s ease-in-out;
+}
+
+#lollyball.--visible {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+.lollyball {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.lollyball__exit {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.lollyball .tinder {
+    /*height: 100%;*/
+}

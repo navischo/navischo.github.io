@@ -113,4 +113,29 @@ const initTinder = () => {
     love.addEventListener('click', loveListener);
 }
 
-export { initTinder };
+const initLollyball = () => {
+    const parent = document.querySelector("#lollyball");
+
+    const openLollyballPage = () => {
+        parent.classList.add("--visible");
+        return parent;
+    };
+
+    const initHandlers = () => {
+        const closeBtn = parent.querySelector(".js-exit-lollyball");
+
+        const closeBtnHandler = () => {
+            parent.classList.remove("--visible");
+        };
+
+        closeBtn.addEventListener("click", closeBtnHandler);
+    }
+
+    initHandlers();
+    const openLollyballBtn = document.querySelector(".js-open-lollyball");
+    openLollyballBtn.addEventListener("click", () => {
+        openLollyballPage();
+    });
+}
+
+export { initTinder, initLollyball };

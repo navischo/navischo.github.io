@@ -1,7 +1,7 @@
 .tinder {
     width: 460px;
     height: 970px;
-    overflow: hidden;
+    /*overflow: hidden;*/
     display: flex;
     flex-direction: column;
     position: relative;
