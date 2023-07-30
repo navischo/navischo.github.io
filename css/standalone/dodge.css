@@ -1,0 +1,60 @@
+.dodge {
+    position: fixed;
+
+    z-index: 5;
+
+    transition: 1s ease-in-out;
+
+    padding: 0 20px;
+}
+
+.dodge.--bottom-right {
+    bottom: 0;
+    right: 0;
+
+    transform: translate(-60px, 50%);
+    animation: bottom-right 15s ease-in-out;
+}
+
+@keyframes bottom-right {
+    0% {
+        transform: translate(-60px, 200%);
+    }
+
+    80% {
+        transform: translate(-60px, 200%);
+    }
+
+    100% {
+        transform: translate(-60px, 50%);
+    }
+}
+
+
+.dodge:hover .dodge__message {
+    opacity: 1;
+}
+
+.dodge__message {
+    opacity: 0;
+
+    position: absolute;
+    top: 0;
+    left: -65px;
+    right: -65px;
+    transform: translateY(-40%);
+
+    padding-left: 20px;
+    margin: 0;
+
+    font-size: 30px;
+    text-shadow: 3px 4px 0 black;
+
+    transition: .2s ease-in-out;
+}
+
+.dodge__img {
+    width: 300px;
+    filter: drop-shadow(3px 4px 8px black);
+    cursor: pointer;
+}
