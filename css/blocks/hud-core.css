@@ -458,6 +458,22 @@ a {
     padding-right: 178px;
 }
 
+.app-header.--lollyball {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 66px;
+    padding: 0 15px;
+
+    background-color: var(--colors-bg--500);
+    background-image: radial-gradient( ellipse at 33% 10%, #461616 0%, transparent 75% );
+}
+
 .app-header::after {
     background-color: var(--colors-primary--500);
     box-shadow: var(--ui-glow);

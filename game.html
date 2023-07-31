@@ -132,11 +132,6 @@
                         </div>
                     </div>
                 </li>
-                <!--                    <li class="nav__item">-->
-                <!--                        <a class="nav__link nav__link&#45;&#45;active" href="#">-->
-                <!--                            <span class="nav__link__element">BOARD</span><span class="nav__link__element"><span class="badge">11</span></span>-->
-                <!--                        </a>-->
-                <!--                    </li>-->
                 <li class="nav__item">
                     <a class="js-swipe-page slide-500 nav__link"><span class="nav__link__element">ADMIN</span></a>
                 </li>
@@ -723,13 +718,31 @@
         <button class="js-exit-lollyball lollyball__exit cp-button hud-btn">
             <img src="img/img-hud-btn.png" alt="HUD" width="200" height="221">
         </button>
-        <div class="tinder">
-            <div class="tinder--status">
+        <header class="app-header --lollyball">
+            <nav>
+                <ul class="nav">
+                    <li class="nav__item">
+                        <a class="nav__link"><span class="nav__link__element">CARDS</span></a>
+                        <div class="nav__item-sublist">
+                            <div class="catalog-controls__item">
+                                <button class="js-change-lollyball cp-button f-btn catalog-controls__filter">NPC</button>
+                                <button class="js-change-lollyball cp-button f-btn catalog-controls__filter">SOUND</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav__item">
+                        <a class="js-players-lollyball nav__link"><span class="nav__link__element">PLAYERS</span></a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div class="js-tinder-wrapper tinder">
+            <div class="tinder-status">
                 <i class="fa fa-remove"></i>
                 <i class="fa fa-heart"></i>
             </div>
 
-            <div class="js-tinder-cards tinder--cards">
+            <div class="js-tinder-cards tinder-cards">
 
                 <!--            <div class="tinder&#45;&#45;card">-->
                 <!--                <img src="https://placeimg.com/600/300/animals">-->
@@ -753,7 +766,7 @@
                 <!--            </div>-->
             </div>
 
-            <div class="tinder--buttons">
+            <div class="tinder-buttons">
                 <button id="nope"><i class="fa fa-remove"></i></button>
                 <button id="love"><i class="fa fa-heart"></i></button>
             </div>
@@ -914,7 +927,7 @@
     initSettingOptionsUpdate();
     initGameBoy();
     initMatchMaking();
-    initTinder();
+    // initTinder();
     initLollyball();
     makeWallSprayable();
 </script>

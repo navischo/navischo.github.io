@@ -38,8 +38,9 @@
     position: absolute;
     top: 10px;
     left: 10px;
+    z-index: 2;
 }
 
-.lollyball .tinder {
-    /*height: 100%;*/
+.lollyball-header {
+
 }

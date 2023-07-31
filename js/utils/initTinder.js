@@ -1,28 +1,41 @@
-const getCardMarkup = (title, img, description) =>
-    `<div class="tinder--card">
+import { win77 } from "../dne-cli.js";
+import { drawLootCards } from "../cards/dom.cards.js";
+import { CARD_TYPES } from "../cards/const.cards.js";
+
+
+
+const appendCards = (type) => {
+    const parent = document.querySelector(".js-tinder-cards");
+    parent.innerHTML = ``;
+    const DNENewCardsArr = Array.from(win77.game.catalog.all).filter(card => card.type === type);
+    drawLootCards(DNENewCardsArr, ".js-tinder-cards");
+}
+
+const getPlayerCardMarkup = (title, img, description) =>
+    `<div class="tinder-card --player">
         <img src="${img}">
         <h3>${title}</h3>
-        <p>${description}</p>
+        <p class="tinder-card__description">${description}</p>
     </div>`;
 
 
-const appendCard = () => {
+const appendPlayersCards = () => {
     const parent = document.querySelector(".js-tinder-cards");
+    const wrap = document.querySelector(".js-tinder-wrapper");
+    wrap.classList.add("--players");
     parent.innerHTML = Array.from(win77.players)
-        .map((playerObj) => getCardMarkup(playerObj.id, playerObj.avatar, playerObj.description))
+        .map((playerObj) => getPlayerCardMarkup(playerObj.id, playerObj.avatar, playerObj.description))
         .join("");
 }
 
 const initTinder = () => {
-    appendCard();
-
     let tinderContainer = document.querySelector('.tinder');
-    let allCards = document.querySelectorAll('.tinder--card');
+    let allCards = document.querySelectorAll('.tinder-card');
     let nope = document.getElementById('nope');
     let love = document.getElementById('love');
 
     function initCards(card, index) {
-        let newCards = document.querySelectorAll('.tinder--card:not(.removed)');
+        let newCards = document.querySelectorAll('.tinder-card:not(.removed)');
 
         newCards.forEach(function (card, index) {
             card.style.zIndex = allCards.length - index;
@@ -43,17 +56,19 @@ const initTinder = () => {
         });
 
         hammertime.on('pan', function (event) {
-            if (event.deltaX === 0) return;
-            if (event.center.x === 0 && event.center.y === 0) return;
+            // if (event.target.classList.contains("tinder-card")) {
+                if (event.deltaX === 0) return;
+                if (event.center.x === 0 && event.center.y === 0) return;
 
-            tinderContainer.classList.toggle('tinder_love', event.deltaX > 0);
-            tinderContainer.classList.toggle('tinder_nope', event.deltaX < 0);
+                tinderContainer.classList.toggle('tinder_love', event.deltaX > 0);
+                tinderContainer.classList.toggle('tinder_nope', event.deltaX < 0);
 
-            let xMulti = event.deltaX * 0.03;
-            let yMulti = event.deltaY / 80;
-            let rotate = xMulti * yMulti;
+                let xMulti = event.deltaX * 0.03;
+                let yMulti = event.deltaY / 80;
+                let rotate = xMulti * yMulti;
 
-            event.target.style.transform = 'translate(' + event.deltaX + 'px, ' + event.deltaY + 'px) rotate(' + rotate + 'deg)';
+                event.target.style.transform = 'translate(' + event.deltaX + 'px, ' + event.deltaY + 'px) rotate(' + rotate + 'deg)';
+            // }
         });
 
         hammertime.on('panend', function (event) {
@@ -85,7 +100,7 @@ const initTinder = () => {
 
     function createButtonListener(love) {
         return function (event) {
-            let cards = document.querySelectorAll('.tinder--card:not(.removed)');
+            let cards = document.querySelectorAll('.tinder-card:not(.removed)');
             let moveOutWidth = document.body.clientWidth * 1.5;
 
             if (!cards.length) return false;
@@ -117,18 +132,44 @@ const initLollyball = () => {
     const parent = document.querySelector("#lollyball");
 
     const openLollyballPage = () => {
+        appendPlayersCards();
+        initTinder();
+
         parent.classList.add("--visible");
         return parent;
     };
 
     const initHandlers = () => {
         const closeBtn = parent.querySelector(".js-exit-lollyball");
+        const changeToPlayersBtn = parent.querySelector(".js-players-lollyball");
+        const changeBtns = document.querySelectorAll(".js-change-lollyball");
 
         const closeBtnHandler = () => {
             parent.classList.remove("--visible");
         };
 
         closeBtn.addEventListener("click", closeBtnHandler);
+
+        changeToPlayersBtn.addEventListener("click", () => {
+            appendPlayersCards();
+            initTinder();
+        });
+
+        changeBtns.forEach((changeBtn) => {
+            changeBtn.addEventListener("click", () => {
+                const type = changeBtn.textContent.toLowerCase();
+                console.log("type", type);
+                appendCards(CARD_TYPES[type]);
+                const wrap = document.querySelector(".js-tinder-wrapper");
+                wrap.classList.remove("--players");
+                const newCards = document.querySelectorAll(".js-tinder-cards > *");
+                newCards.forEach((newCard) => {
+                    newCard.classList.add(`tinder-card`);
+                    newCard.classList.add(`--game-card`);
+                });
+                initTinder();
+            });
+        });
     }
 
     initHandlers();
