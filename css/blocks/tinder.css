@@ -103,12 +103,12 @@
     cursor: grabbing;
 }
 
-.tinder-card img {
+.tinder-card__img {
     max-width: 100%;
     pointer-events: none;
 }
 
-.tinder-card h3 {
+.tinder-card__title {
     padding: 0 16px;
     margin-top: 32px;
 

@@ -2,8 +2,6 @@ import { win77 } from "../dne-cli.js";
 import { drawLootCards } from "../cards/dom.cards.js";
 import { CARD_TYPES } from "../cards/const.cards.js";
 
-
-
 const appendCards = (type) => {
     const parent = document.querySelector(".js-tinder-cards");
     parent.innerHTML = ``;
@@ -13,8 +11,8 @@ const appendCards = (type) => {
 
 const getPlayerCardMarkup = (title, img, description) =>
     `<div class="tinder-card --player">
-        <img src="${img}">
-        <h3>${title}</h3>
+        <img class="tinder-card__img" src="${img}">
+        <h3 class="tinder-card__title">${title}</h3>
         <p class="tinder-card__description">${description}</p>
     </div>`;
 
@@ -142,31 +140,31 @@ const initLollyball = () => {
     const initHandlers = () => {
         const closeBtn = parent.querySelector(".js-exit-lollyball");
         const changeToPlayersBtn = parent.querySelector(".js-players-lollyball");
-        const changeBtns = document.querySelectorAll(".js-change-lollyball");
+        const changeToGameCardsBtns = document.querySelectorAll(".js-change-lollyball");
 
         const closeBtnHandler = () => {
             parent.classList.remove("--visible");
         };
-
-        closeBtn.addEventListener("click", closeBtnHandler);
-
-        changeToPlayersBtn.addEventListener("click", () => {
+        const changeToPlayersBtnHandler = () => {
             appendPlayersCards();
             initTinder();
-        });
+        };
 
-        changeBtns.forEach((changeBtn) => {
+        closeBtn.addEventListener("click", closeBtnHandler);
+        changeToPlayersBtn.addEventListener("click", changeToPlayersBtnHandler);
+        changeToGameCardsBtns.forEach((changeBtn) => {
             changeBtn.addEventListener("click", () => {
                 const type = changeBtn.textContent.toLowerCase();
-                console.log("type", type);
-                appendCards(CARD_TYPES[type]);
                 const wrap = document.querySelector(".js-tinder-wrapper");
-                wrap.classList.remove("--players");
                 const newCards = document.querySelectorAll(".js-tinder-cards > *");
+
                 newCards.forEach((newCard) => {
                     newCard.classList.add(`tinder-card`);
                     newCard.classList.add(`--game-card`);
                 });
+
+                wrap.classList.remove("--players");
+                appendCards(CARD_TYPES[type]);
                 initTinder();
             });
         });
