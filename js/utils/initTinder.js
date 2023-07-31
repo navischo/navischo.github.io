@@ -156,15 +156,15 @@ const initLollyball = () => {
             changeBtn.addEventListener("click", () => {
                 const type = changeBtn.textContent.toLowerCase();
                 const wrap = document.querySelector(".js-tinder-wrapper");
+
+                appendCards(CARD_TYPES[type]);
                 const newCards = document.querySelectorAll(".js-tinder-cards > *");
 
                 newCards.forEach((newCard) => {
                     newCard.classList.add(`tinder-card`);
                     newCard.classList.add(`--game-card`);
                 });
-
                 wrap.classList.remove("--players");
-                appendCards(CARD_TYPES[type]);
                 initTinder();
             });
         });
