@@ -19,6 +19,12 @@
     text-shadow: 1px 2px 5px black;
 }
 
+#dne-card-shaman .card__description {
+    position: absolute;
+    top: 60px;
+    color: white;
+}
+
 #dne-card-gm .card__header-left {
     max-width: 100%;
 }
