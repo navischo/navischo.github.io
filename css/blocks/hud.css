@@ -182,6 +182,50 @@ body {
     transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
 }
 
+.js-open-background-select {
+    cursor: pointer;
+}
+
+.all-background {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    /*background-color: var(--colors-bg--500);*/
+    /*background-image: radial-gradient( ellipse at 33% 10%, #461616 0%, transparent 75% );*/
+}
+
+.all-background.--select {
+    z-index: 50;
+
+}
+
+.all-background.--select .background-in-all {
+    transition: .2s ease;
+    cursor: pointer;
+}
+
+.all-background.--select .background-in-all:hover {
+    transform: translateY(-2px);
+    box-shadow: 2px 7px 15px 1px black;
+}
+
+.background-in-all {
+    display: flex;
+    width: 160px;
+    height: 90px;
+
+    background-size: cover!important;
+    background-repeat: no-repeat;
+    background-position: center!important;
+}
+
 .background-single {
     /*background: url("../../libs/screen/screen-hud--spalah-2@2x1.jpg")!important;*/
     /*background: url("../../libs/screen/screen-nohud--new-place.jpg")!important;*/
