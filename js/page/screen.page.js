@@ -109,13 +109,13 @@ const SCREEN_NAMES = [
     `screen-nohud--night-drive`,
     `screen-nohud--waiting-room`,
     `screen-nohud--random-garage`,
-    `screen-honud--aldecaldo-station`,
+    `screen-nohud--aldecaldo-station`,
     `screen-nohud--free-ride`,
     `screen-nohud--morning-city`,
     `screen-nohud--abadone-house`,
     `screen-nohud--visit`,
     `screen-nohud--me`,
-    `screen-honud--rogue-afterlife`,
+    `screen-nohud--rogue-afterlife`,
     `screen-nohud--v-plus-judy`,
     `screen-nohud--the-end`,
     `screen-nohud--patronus`,
@@ -131,7 +131,7 @@ const initScreen = (all = false, select = false) => {
         const wrap = document.createElement("div");
         wrap.classList.add("all-background");
         SCREEN_NAMES.forEach((SCREEN_NAME, i) => {
-            console.log(`Background ${SCREEN_NAME.slice(0, 12)} successfully loaded ${i + 1} of ${backgroundsCount}`);
+            console.log(`Background ${SCREEN_NAME.replace(`screen-nohud`, "")} successfully loaded ${i + 1} of ${backgroundsCount}`);
             const backgroundInAllNode = document.createElement("div");
             backgroundInAllNode.classList.add("background-in-all");
             backgroundInAllNode.style.backgroundImage = `url("./libs/screen/${SCREEN_NAME}.jpg")`;
