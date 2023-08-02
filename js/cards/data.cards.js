@@ -1062,7 +1062,7 @@ const initDNELootArr = () => {
     const GORILLAZ_X_HOUSE_DEMO_IMG_ID = `16iDFhUcwmUj-175sQTCg2cXg2j26iLqX`;
     const GORILLAZ_X_HOUSE_DEMO_IMG = `https://drive.google.com/uc?id=${GORILLAZ_X_HOUSE_DEMO_IMG_ID}`;
 
-    LootArr.push(new DNELootCard("demo-gorillaz-x-house", "Gorillaz X House Mix", GORILLAZ_X_HOUSE_DEMO_LONGLINE, GORILLAZ_X_HOUSE_DEMO_IMG, 1, 0, "Демо, 38m of House", GORILLAZ_X_HOUSE_DEMO_SHORTLINE, "", true, "sound", "https://youtu.be/k8WpsRa3iB0"));
+    LootArr.push(new DNELootCard("demo-gorillaz-x-house", "Gorillaz X House Mix", GORILLAZ_X_HOUSE_DEMO_LONGLINE, GORILLAZ_X_HOUSE_DEMO_IMG, 1, 0, "Демо, 38m of Abstract Hip-Hop House", GORILLAZ_X_HOUSE_DEMO_SHORTLINE, "", true, "sound", "https://youtu.be/k8WpsRa3iB0"));
 
     // Psycho Tropical Berlin
     //
