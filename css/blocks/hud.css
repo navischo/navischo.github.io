@@ -186,7 +186,17 @@ body {
     cursor: pointer;
 }
 
+.js-close-background-select {
+    position: absolute;
+    left: 7px;
+    top: 7px;
+}
+
 .all-background {
+    visibility: hidden;
+    opacity: 0;
+    transition: .2s ease-in;
+
     position: fixed;
     top: 0;
     right: 0;
@@ -200,6 +210,11 @@ body {
 
     /*background-color: var(--colors-bg--500);*/
     /*background-image: radial-gradient( ellipse at 33% 10%, #461616 0%, transparent 75% );*/
+}
+
+.all-background.--visible {
+    visibility: visible;
+    opacity: 1;
 }
 
 .all-background.--select {

@@ -135,6 +135,7 @@ const initScreen = (all = false, select = false) => {
             const backgroundInAllNode = document.createElement("div");
             backgroundInAllNode.classList.add("background-in-all");
             backgroundInAllNode.style.backgroundImage = `url("./libs/screen/${SCREEN_NAME}.jpg")`;
+            backgroundInAllNode.dataset.screenName = `${SCREEN_NAME}`;
             wrap.appendChild(backgroundInAllNode);
 
         });
@@ -155,13 +156,19 @@ const initScreen = (all = false, select = false) => {
             wrap.innerHTML =
                 wrap.innerHTML +
                 `
-                    <button class="js-close-background-select cp-button hud-btn hud-btn--fixed">
+                    <button class="js-close-background-select cp-button hud-btn">
                         <img src="img/img-hud-btn.png" alt="HUD" width="200" height="221">
                     </button>
                 `;
             const closeBtn = wrap.querySelector(".js-close-background-select");
             closeBtn.addEventListener("click", () => {
-                wrap.remove();
+                wrap.classList.remove("--visible");
+            });
+            wrap.addEventListener("click", (e) => {
+                if (e.target.classList.contains("background-in-all")) {
+                    body.style.backgroundImage = `url('./libs/screen/${e.target.dataset.screenName}.jpg')`;
+                    wrap.classList.remove("--visible");
+                }
             });
         }
 
@@ -182,7 +189,8 @@ const initIntervalScreen = (all = false, select = false) => {
 
     const openAllBackgroundSelectBtn = document.querySelector(".js-open-background-select");
     openAllBackgroundSelectBtn.addEventListener("click", () => {
-        initIntervalScreen(true, true);
+        document.querySelector(".all-background")
+            .classList.add("--visible");
     });
 }
 
