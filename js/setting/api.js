@@ -10,7 +10,7 @@ export const getData = (onSuccess) => {
       onSuccess(objects);
     })
     .catch(() => {
-      showAlert('Данные не загружены :(');
+      // showAlert('Данные не загружены :(');
     });
 };
 
