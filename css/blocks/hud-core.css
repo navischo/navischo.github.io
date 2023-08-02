@@ -572,7 +572,9 @@ a {
     position: absolute;
     top: 0;
     left: 0;
-    transform: translateX(0);
+    z-index: 43;
+
+    transform: translate(-100%, -100%);
     visibility: hidden;
     opacity: 0;
     transition: .15s ease-in;
@@ -589,15 +591,17 @@ a {
     z-index: 2;
 }
 
+.nav__item.--active .nav__item-sublist.--right,
 .nav__item:hover .nav__item-sublist.--right {
     transform: translateX(32%);
     z-index: 3;
 }
 
+.nav__item.--active .nav__item-sublist,
 .nav__item:hover .nav__item-sublist {
     visibility: visible;
     opacity: 1;
-    transform: translateX(-100%);
+    transform: translate(-100%, 0);
 }
 
 .catalog-controls__item {

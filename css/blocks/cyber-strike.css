@@ -77,6 +77,15 @@
 
     font-family: "JetBrains Mono", monospace;
     font-size: 24px;
+    cursor: auto;
+}
+
+.cyber-strike__menu-link[href] {
+    cursor: pointer;
+}
+
+.cyber-strike__menu-link:hover {
+    color: yellow;
 }
 
 .cyber-strike__menu-link + .cyber-strike__menu-link {
@@ -84,10 +93,19 @@
 }
 
 .cyber-strike__menu-link.--cs-logo {
+    min-width: 371px;
     margin-top: 20px;
 
     font-family: "Cyberpunk", "Press Start 2p", "JetBrains Mono", sans-serif;
     font-size: 38px;
+}
+
+.cyber-strike__menu-link.--cs-logo::before {
+    content: "Cyber Strike";
+}
+
+.cyber-strike__menu-link.--cs-logo:hover::before {
+    content: "Cyber Punk";
 }
 
 .cyber-strike__menu-link.--cs-logo::after {
