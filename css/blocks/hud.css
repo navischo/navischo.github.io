@@ -208,8 +208,8 @@ body {
     flex-wrap: wrap;
     align-content: flex-start;
 
-    /*background-color: var(--colors-bg--500);*/
-    /*background-image: radial-gradient( ellipse at 33% 10%, #461616 0%, transparent 75% );*/
+    background-color: var(--colors-bg--500);
+    background-image: radial-gradient( ellipse at 33% 10%, #461616 0%, transparent 75% );
 }
 
 .all-background.--visible {
