@@ -1527,7 +1527,9 @@ body #CybotCookiebotDialogBodyLevelButtonLevelOptinAllowallSelectionWrapper {
     right: 0;
     top: 0;
     width: 100%;
-    z-index: 4
+    z-index: 4;
+    max-width: 1240px;
+    margin: 0 auto;
 }
 
 @media screen and (max-width: 600px) {
@@ -1621,7 +1623,7 @@ body #CybotCookiebotDialogBodyLevelButtonLevelOptinAllowallSelectionWrapper {
 
 .l-news__header-wrapper:before {
     background-color: #000;
-    content: "";
+    /*content: "";*/
     height: 100%;
     position: absolute;
     right: 100%;
