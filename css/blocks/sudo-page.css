@@ -7,3 +7,7 @@
     z-index: 40;
     background: rgba(0, 0, 0, .6);
 }
+
+.sudo-page.--win77 {
+    z-index: 1333;
+}

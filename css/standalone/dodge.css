@@ -16,6 +16,10 @@
     animation: bottom-right 15s ease-in-out;
 }
 
+.dodge.--hidden {
+    transform: translate(-60px, 200%);
+}
+
 @keyframes bottom-right {
     0% {
         transform: translate(-60px, 200%);

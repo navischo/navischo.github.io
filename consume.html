@@ -207,14 +207,19 @@
         </div>
     </div>
 </div>
-<div class="dodge --bottom-right">
-    <p class="dodge__message">Like to swipe?</p>
+<div class="js-dodge dodge --bottom-right">
+    <p class="dodge__message"><a href="pokeball.html" target="_blank">Like to swipe?</a></p>
     <img class="dodge__img" src="img/dodge.png" alt="Dodge want you to swipe!" width="383" height="468">
 </div>
 
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-
+<script>
+    const dodgeNode = document.querySelector(".js-dodge");
+    setInterval(() => {
+        dodgeNode.classList.toggle("--hidden");
+    }, 30000);
+</script>
 <script>
     var menuButton = document.querySelector('.menu-button');
     var openMenu = function () {

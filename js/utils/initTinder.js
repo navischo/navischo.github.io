@@ -130,12 +130,26 @@ const initLollyball = () => {
     const parent = document.querySelector("#lollyball");
 
     const openLollyballPage = () => {
-        appendPlayersCards();
+        appendGameCards(`sound`);
         initTinder();
 
         parent.classList.add("--visible");
         return parent;
     };
+
+    const appendGameCards = (type) => {
+        const wrap = document.querySelector(".js-tinder-wrapper");
+
+        appendCards(CARD_TYPES[type]);
+        const newCards = document.querySelectorAll(".js-tinder-cards > *");
+
+        newCards.forEach((newCard) => {
+            newCard.classList.add(`tinder-card`);
+            newCard.classList.add(`--game-card`);
+        });
+        wrap.classList.remove("--players");
+        initTinder();
+    }
 
     const initHandlers = () => {
         const closeBtn = parent.querySelector(".js-exit-lollyball");
@@ -155,17 +169,7 @@ const initLollyball = () => {
         changeToGameCardsBtns.forEach((changeBtn) => {
             changeBtn.addEventListener("click", () => {
                 const type = changeBtn.textContent.toLowerCase();
-                const wrap = document.querySelector(".js-tinder-wrapper");
-
-                appendCards(CARD_TYPES[type]);
-                const newCards = document.querySelectorAll(".js-tinder-cards > *");
-
-                newCards.forEach((newCard) => {
-                    newCard.classList.add(`tinder-card`);
-                    newCard.classList.add(`--game-card`);
-                });
-                wrap.classList.remove("--players");
-                initTinder();
+                appendGameCards(type);
             });
         });
     }
@@ -175,6 +179,8 @@ const initLollyball = () => {
     openLollyballBtn.addEventListener("click", () => {
         openLollyballPage();
     });
+
+    win77.openLollyball = openLollyballPage;
 }
 
 export { initTinder, initLollyball };
