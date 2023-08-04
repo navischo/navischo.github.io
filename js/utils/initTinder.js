@@ -158,6 +158,7 @@ const initLollyball = () => {
 
         const closeBtnHandler = () => {
             parent.classList.remove("--visible");
+            localStorage.setItem("tinder", "false");
         };
         const changeToPlayersBtnHandler = () => {
             appendPlayersCards();
@@ -181,6 +182,11 @@ const initLollyball = () => {
     });
 
     win77.openLollyball = openLollyballPage;
+    const isTinder = localStorage.getItem("tinder");
+    console.log("isTinder", isTinder);
+    if (isTinder === "true") {
+        win77.openLollyball();
+    }
 }
 
 export { initTinder, initLollyball };

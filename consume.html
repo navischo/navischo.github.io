@@ -208,7 +208,7 @@
     </div>
 </div>
 <div class="js-dodge dodge --bottom-right">
-    <p class="dodge__message"><a href="pokeball.html" target="_blank">Like to swipe?</a></p>
+    <p class="dodge__message"><a target="_blank">Like to swipe?</a></p>
     <img class="dodge__img" src="img/dodge.png" alt="Dodge want you to swipe!" width="383" height="468">
 </div>
 
@@ -219,6 +219,10 @@
     setInterval(() => {
         dodgeNode.classList.toggle("--hidden");
     }, 30000);
+    dodgeNode.addEventListener("click", () => {
+        localStorage.setItem("tinder", "true");
+        location.href = "game.html";
+    });
 </script>
 <script>
     var menuButton = document.querySelector('.menu-button');
