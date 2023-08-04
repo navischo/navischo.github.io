@@ -155,6 +155,10 @@ const initLollyball = () => {
         const closeBtn = parent.querySelector(".js-exit-lollyball");
         const changeToPlayersBtn = parent.querySelector(".js-players-lollyball");
         const changeToGameCardsBtns = document.querySelectorAll(".js-change-lollyball");
+        const changeToMyBtn = parent.querySelector(".js-my-lollyball");
+
+        const myNode = document.querySelector(".js-my");
+        const tinderNode = document.querySelector(".js-tinder-wrapper");
 
         const closeBtnHandler = () => {
             parent.classList.remove("--visible");
@@ -163,7 +167,36 @@ const initLollyball = () => {
         const changeToPlayersBtnHandler = () => {
             appendPlayersCards();
             initTinder();
+
+            tinderNode.classList.add("--visible");
+            myNode.classList.remove("--visible");
         };
+
+        const changeToMyBtnHandler = () => {
+            const my = {
+                name: document.querySelector(".js-my-name"),
+                soundSwiper: document.querySelector(".js-my-sound-swiper"),
+                soundWrap: document.querySelector(".js-my-sound-wrapper"),
+                npc: document.querySelector(".js-my-npc"),
+            };
+            my.name.textContent = win77.game.player.id;
+            // my.soundWrap.innerHTML = ``;
+            // const soundCardsArr = Array.from(win77.game.player.npc);
+            // console.log(soundCardsArr, my.soundWrap);
+            // drawLootCards(soundCardsArr, ".js-my-sound-wrapper");
+            // const soundCards = my.soundWrap.querySelectorAll(`.card`);
+            // soundCards.forEach((soundCard) => {
+            //     // console.log(`teamCard`, teamCard, teamCard.parentNode);
+            //     soundCard.parentNode.classList.add("swiper-slide");
+            // });
+            // win77.soundSwiper = new Swiper(".js-my-sound-swiper", {
+            //     effect: "cards",
+            //     grabCursor: true,
+            // });
+
+            tinderNode.classList.remove("--visible");
+            myNode.classList.add("--visible");
+        }
 
         closeBtn.addEventListener("click", closeBtnHandler);
         changeToPlayersBtn.addEventListener("click", changeToPlayersBtnHandler);
@@ -171,8 +204,11 @@ const initLollyball = () => {
             changeBtn.addEventListener("click", () => {
                 const type = changeBtn.textContent.toLowerCase();
                 appendGameCards(type);
+                tinderNode.classList.add("--visible");
+                myNode.classList.remove("--visible");
             });
         });
+        changeToMyBtn.addEventListener("click", changeToMyBtnHandler);
     }
 
     initHandlers();

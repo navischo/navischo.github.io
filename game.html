@@ -749,7 +749,7 @@
                         </div>
                     </li>
                     <li class="nav__item">
-                        <a class="js-players-lollyball nav__link"><span class="nav__link__element">My</span></a>
+                        <a class="js-my-lollyball nav__link"><span class="nav__link__element">My</span></a>
                     </li>
                     <li class="nav__item">
                         <a class="js-players-lollyball nav__link"><span class="nav__link__element">PLAYERS</span></a>
@@ -757,7 +757,7 @@
                 </ul>
             </nav>
         </header>
-        <div class="js-tinder-wrapper tinder">
+        <div class="js-tinder-wrapper tinder --visible">
             <div class="tinder-status">
                 <i class="fa fa-remove"></i>
                 <i class="fa fa-heart"></i>
@@ -791,6 +791,21 @@
                 <button id="nope"><i class="fa fa-remove"></i></button>
                 <button id="love"><i class="fa fa-heart"></i></button>
             </div>
+        </div>
+        <div class="js-my my">
+            <div class="my-game-cards">
+                <div class="js-my-sound-swiper swiper">
+                    <div class="js-my-sound-wrapper swiper-wrapper">
+
+                    </div>
+                </div>
+            </div>
+            <div class="my-card">
+                <img class="js-my-img my-card__img" src="${img}">
+                <h3 class="js-my-name my-card__title">${title}</h3>
+                <p class="js-my-description my-card__description">${description}</p>
+            </div>
+            <div class="js-my-npc my-game-cards"></div>
         </div>
     </div>
 </div>

@@ -1,0 +1,71 @@
+.my {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.my-card {
+    position: absolute;
+
+    display: inline-block;
+    width: 90vw;
+    max-width: 400px;
+    height: 70vh;
+
+    background: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0px 3px 20px 3px #000000d9;
+    padding-bottom: 40px;
+
+    color: black;
+
+    overflow: hidden;
+    cursor: -webkit-grab;
+    cursor: -moz-grab;
+    cursor: grab;
+
+    will-change: transform;
+    transition: all 0.3s ease-in-out;
+}
+
+.my-card__img {
+    max-width: 100%;
+    pointer-events: none;
+}
+
+.my-card__title {
+    padding: 0 16px;
+    margin-top: 32px;
+
+    font-family: "Press Start 2p", "JetBrains Mono", monospace;
+    font-size: 32px;
+    text-align: left;
+
+    pointer-events: none;
+}
+
+.my-card__description {
+    padding: 0 16px;
+    margin-top: 24px;
+
+    font-family: "JetBrains Mono", monospace;
+    font-size: 20px;
+    text-align: left;
+
+    pointer-events: none;
+}
+
+/*.my-game-cards {*/
+/*    position: absolute;*/
+/*    top: 30%;*/
+/*    left: 20px;*/
+
+/*    width: 400px;*/
+/*}*/

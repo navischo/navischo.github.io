@@ -50,6 +50,7 @@
 @import "blocks/squad.css";
 @import "blocks/tinder.css";
 @import "blocks/lollyball.css";
+@import "blocks/my.css";
 
 /*CUSTOMIZATION*/
 @import "./i-customization.css";
