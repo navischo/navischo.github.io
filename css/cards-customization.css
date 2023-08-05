@@ -92,6 +92,31 @@
     color: white;
 }
 
+#dne-card-vinyl-cyberpunk-triple .card__header {
+    position: relative;
+    z-index: 2;
+}
+
+#dne-card-vinyl-cyberpunk-triple .card__description {
+    position: absolute;
+    z-index: 2;
+    bottom: 35px;
+}
+
+#dne-card-vinyl-cyberpunk-triple .card__footer {
+    position: absolute;
+    z-index: 2;
+    bottom: 5px;
+}
+
+#dne-card-vinyl-cyberpunk-triple .card__preview {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    transform: scale(1.1);
+}
+
 #dne-card-v .card__preview-img {
     position: relative;
     z-index: 0;
