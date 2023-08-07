@@ -3,6 +3,8 @@
 }
 
 #lollyball {
+    display: none;
+
     transform: translateY(-100%);
     opacity: 0;
     visibility: hidden;
@@ -22,6 +24,7 @@
 }
 
 #lollyball.--visible {
+    display: block;
     transform: translateY(0);
     opacity: 1;
     visibility: visible;

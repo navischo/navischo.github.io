@@ -130,8 +130,8 @@ const initQuest = (questObj) => {
         win77.giveSkillPointsToPlayer(1);
         updBalanceNode();
 
-        win77.game.player.score = win77.game.player.score + questObj.core.bonus;
-        updScore();
+        // win77.game.player.score = win77.game.player.score + questObj.core.bonus;
+        // updScore();
         clearTimer();
 
         finishBtn.classList.remove("--visible");

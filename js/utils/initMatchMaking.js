@@ -21,6 +21,7 @@ const initDNEPlayersSet = () => {
     DNEPlayersSet.add(new DNEPlayer("microdozer", `${PLAYERS_AVATAR_PATH}avatar-4.jpg`, "👉💦🍄"));
     DNEPlayersSet.add(new DNEPlayer("olivye", `${PLAYERS_AVATAR_PATH}avatar-5.jpg`, "Jackass нет правил"));
     DNEPlayersSet.add(new DNEPlayer("echomateriya", `${PLAYERS_AVATAR_PATH}avatar-6.jpg`, "visual artist and sculptor"));
+    DNEPlayersSet.add(new DNEPlayer("asura", `${PLAYERS_AVATAR_PATH}avatar-7.png`, "Читати думки"));
 
     return DNEPlayersSet;
 }
