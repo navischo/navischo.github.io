@@ -60,7 +60,7 @@
         <a class="js-open-matchmaking game-menu__list-item">Matchmaking</a>
         <a href="#setting-popup" class="js-open-setting game-menu__list-item">Setting</a>
         <a class="js-open-lollyball game-menu__list-item">Roller</a>
-<!--        <a class="game-menu__list-item">Solo</a>-->
+        <a href="#terminal-popup" class="js-open-terminal game-menu__list-item">Solo</a>
         <a href="#map-popup" class="js-open-map game-menu__list-item">Map</a>
         <a class="js-open-cs game-menu__list-item">Gig</a>
 <!--        <a class="game-menu__list-item">Mod</a>-->
@@ -404,6 +404,12 @@
 
 <div id="pokeball-popup" class="pokeball-modal white-popup mfp-hide">
 
+</div>
+
+<div id="terminal-popup" class="terminal-modal white-popup mfp-hide">
+    <div class="terminal">
+        <div class="js-terminal screen"></div>
+    </div>
 </div>
 
 
@@ -910,6 +916,7 @@
     import { initMatchMaking } from "./js/utils/initMatchMaking.js";
     import { initTinder, initRoller } from "./js/utils/initTinder.js";
     import { makeWallSprayable } from "./js/utils/makeWallSprayable.js";
+    import { initTerminal } from "./js/utils/initTerminal.js";
 
     initInventoryPopupJquery();
 
@@ -937,6 +944,11 @@
     });
 
     dialog.init();
+
+    $('.js-open-terminal').magnificPopup({
+        type: 'inline',
+        midClick: true
+    });
 
     $('.js-open-quest').magnificPopup({
         type: 'inline',
@@ -978,7 +990,7 @@
     initMatchMaking();
     initRoller();
     makeWallSprayable();
-
+    initTerminal();
 </script>
 </body>
 </html>
