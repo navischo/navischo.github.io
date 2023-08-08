@@ -21,7 +21,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
-    <link rel="manifest" href="img/favicon/manifest.json">
+<!--    <link rel="manifest" href="img/favicon/manifest.json">-->
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
@@ -800,14 +800,24 @@
                     <div class="js-my-sound-wrapper swiper-wrapper">
 
                     </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
                 </div>
             </div>
             <div class="my-card">
-                <img class="js-my-img my-card__img" src="${img}">
+                <img class="js-my-img my-card__img" src="libs/players/avatar-1.jpg"> <!--${img}-->
                 <h3 class="js-my-name my-card__title">${title}</h3>
-                <p class="js-my-description my-card__description">${description}</p>
+                <p class="js-my-description my-card__description">Насолоджуйся мною не поспішаючи</p>
             </div>
-            <div class="js-my-npc my-game-cards"></div>
+            <div class="js-my-npc my-game-cards --right">
+                <div class="js-my-npc-swiper swiper">
+                    <div class="js-my-npc-wrapper swiper-wrapper">
+
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -898,7 +908,7 @@
     import { initSettingOptionsUpdate } from "./js/utils/updSettingOptions.js";
     import { initGameBoy } from "./js/utils/initGameBoy.js";
     import { initMatchMaking } from "./js/utils/initMatchMaking.js";
-    import { initTinder, initLollyball } from "./js/utils/initTinder.js";
+    import { initTinder, initRoller } from "./js/utils/initTinder.js";
     import { makeWallSprayable } from "./js/utils/makeWallSprayable.js";
 
     initInventoryPopupJquery();
@@ -966,8 +976,7 @@
     initSettingOptionsUpdate();
     initGameBoy();
     initMatchMaking();
-    // initTinder();
-    initLollyball();
+    initRoller();
     makeWallSprayable();
 
 </script>
