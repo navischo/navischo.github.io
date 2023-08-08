@@ -6,7 +6,9 @@ import {getCardById} from "./getCardById.js";
 const appendCards = (type) => {
     const parent = document.querySelector(".js-tinder-cards");
     parent.innerHTML = ``;
-    const DNENewCardsArr = Array.from(win77.game.catalog.all).filter(card => card.type === type);
+    const DNENewCardsArr = Array.from(win77.my.available[type]).map(cardId => getCardById(cardId, win77.game.catalog.all));
+    console.log("DNENewCardsArr", DNENewCardsArr);
+    // const DNENewCardsArr = Array.from(win77.game.catalog.all).filter(card => card.type === type);
     drawLootCards(DNENewCardsArr, ".js-tinder-cards");
 }
 
@@ -30,11 +32,14 @@ const appendPlayersCards = () => {
 win77.my = {
     npc: new Set(),
     sound: new Set(),
-    player: new Set()
+    player: new Set(),
+    available: null
 }
 
 const addToMy = (collection, id) => {
     win77.my[collection].add(id);
+    // todo remove added id from available
+    console.log(win77.my.available, win77.my.available[collection]);
 }
 
 const initMySwiper = (cardType, nodeObj) => {
@@ -170,6 +175,15 @@ const initTinder = () => {
 
 const initRoller = () => {
     const parent = document.querySelector("#lollyball");
+    win77.my.available = {
+        npc: Array.from(win77.game.catalog.all)
+            .filter(card => card.type === `npc`)
+            .map(card => card.id),
+        sound: Array.from(win77.game.catalog.all)
+            .filter(card => card.type === `sound`)
+            .map(card => card.id),
+        player: new Set()
+    }
 
     const openRollerPage = () => {
         appendGameCards(`sound`);
