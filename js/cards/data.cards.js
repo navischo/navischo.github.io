@@ -937,7 +937,7 @@ const initDNELootArr = () => {
     const DEMO_PATIENCE_SHORTLINE = `${STRINGS.DEMO_LONGLINE}`;
     const DEMO_PATIENCE_IMG = `https://lh3.googleusercontent.com/bcu13OJqk1khEZOvbIrxWXsCzvm1XSCgXy1G2wQHtgjapTpC394qTNhZmp2DucuMPCM=w2400`;
 
-    LootArr.push(new DNELootCard("demo-patience", "P A T I E N C E", DEMO_PATIENCE_LONGLINE, DEMO_PATIENCE_IMG, 2, 0, "Демо, 39m of Chillwave Syntwave Retrowave", DEMO_PATIENCE_SHORTLINE, "", true, "sound"));
+    LootArr.push(new DNELootCard("demo-patience", "P A T I E N C E", DEMO_PATIENCE_LONGLINE, DEMO_PATIENCE_IMG, 2, 0, "Демо, 39m of Chillwave Synthwave Retrowave", DEMO_PATIENCE_SHORTLINE, "", true, "sound"));
 
     // HARDWAVE PHONK MIX
     //
@@ -1109,6 +1109,37 @@ const initDNELootArr = () => {
     const HYRULE_LOFI_DEMO_IMG = `https://drive.google.com/uc?id=${HYRULE_LOFI_DEMO_IMG_ID}`;
 
     LootArr.push(new DNELootCard("demo-hyrule-lofi", `Hyrule<br> Lo-Fi`, HYRULE_LOFI_DEMO_LONGLINE, HYRULE_LOFI_DEMO_IMG, 1, 0, "Демо, 34m of Lo-Fi", HYRULE_LOFI_DEMO_SHORTLINE, "", true, "sound", "https://youtu.be/NXqr-zpDnMc"));
+
+    // Level Select
+    //
+    //
+    const LEVEL_SELECT_DEMO_LONGLINE = "";
+    const LEVEL_SELECT_DEMO_SHORTLINE = `${STRINGS.DEMO_LONGLINE}`;
+    const LEVEL_SELECT_DEMO_IMG_ID = `1f4UA4u3Ebn5AFoVLvWBGz8qV1UgKKIfL`;
+    const LEVEL_SELECT_DEMO_IMG = `https://drive.google.com/uc?id=${LEVEL_SELECT_DEMO_IMG_ID}`;
+
+    LootArr.push(new DNELootCard("demo-level-select", `Level Select`, LEVEL_SELECT_DEMO_LONGLINE, LEVEL_SELECT_DEMO_IMG, 3, 0, "Демо, 57m of Dub Jungle", LEVEL_SELECT_DEMO_SHORTLINE, "", true, "sound", "https://youtu.be/Oa4MT9LPcaU"));
+
+    // Slowed Mr. Robot vol.6-7
+    //
+    //
+    const SLOWED_ROBOT_DEMO_LONGLINE = "";
+    const SLOWED_ROBOT_DEMO_SHORTLINE = `${STRINGS.DEMO_LONGLINE}`;
+    const SLOWED_ROBOT_DEMO_IMG_ID = `1Zh0a-EZKSApRlCddW397kLEex0fQWVUP`;
+    const SLOWED_ROBOT_DEMO_IMG = `https://drive.google.com/uc?id=${SLOWED_ROBOT_DEMO_IMG_ID}`;
+
+    LootArr.push(new DNELootCard("demo-mr-robot-6-7", `Mr. Robot vol.6&7`, SLOWED_ROBOT_DEMO_LONGLINE, SLOWED_ROBOT_DEMO_IMG, 1, 0, "Демо, 55m of Ambient Downtempo", SLOWED_ROBOT_DEMO_SHORTLINE, "", true, "sound", "https://youtu.be/OytfbywcMNs"));
+
+    // Level Select
+    //
+    //
+    const EXODUS_DEMO_LONGLINE = "";
+    const EXODUS_DEMO_SHORTLINE = `${STRINGS.DEMO_LONGLINE}`;
+    const EXODUS_DEMO_IMG_ID = `1gzZoNLbGksrrg1Z9TrA_4VG_wsUdi5Wx`;
+    const EXODUS_DEMO_IMG = `https://drive.google.com/uc?id=${EXODUS_DEMO_IMG_ID}`;
+
+    LootArr.push(new DNELootCard("demo-exodus", `EXODUS`, EXODUS_DEMO_LONGLINE, EXODUS_DEMO_IMG, 3, 0, "Демо, 135m of Synthwave Retrowave Chillwave", EXODUS_DEMO_SHORTLINE, "", true, "sound", "https://youtu.be/cCTaiJZAZak"));
+
 
 
     // LootArr.push(new DNELootCard("i-blank-hoodie", "Бланковий худік", "", "", 1, 1500, ""));
