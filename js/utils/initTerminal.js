@@ -14,10 +14,11 @@ const STRINGS = [
         
         Залишилось тільки все підготувати, це як раз на тобі,<br>
         Початок через годину
-    `
+    `,
+    `I miss this feeling so much. Waking up on a warm summer day with minecraft being the only thing i had to worry about. I will remember those time forever`
 ]
 
-const initTerminal = (nextString = STRINGS[1]) => {
+const initTerminal = (nextString = STRINGS[2]) => {
     const terminal = document.querySelector(".js-terminal");
     terminal.innerHTML = `${nextString}`;
 
