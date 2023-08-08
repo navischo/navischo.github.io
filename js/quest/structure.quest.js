@@ -7,7 +7,7 @@ import {
     newTurnCheckpointsStroke,
     bossDeadCheckpointsStroke,
     bossDeadAchievementsArr,
-    MINIMAP
+    MINIMAP, dealWithMoneyCheckpointsStroke
 } from "./data.quest.js";
 
 const newTurnCheckpoints = [
@@ -59,15 +59,28 @@ const sheWantsRevengeQuest = new DNEQuest(
     MINIMAP.sheWantsRevenge
 );
 
+const dealWithMoney = new DNEQuest(
+    "deal-with-money",
+    "Розібратись з грошима",
+    "Терміново влаштувати вечірку по проханню Ріка",
+    parseCheckpointsStroke(dealWithMoneyCheckpointsStroke),
+    3,
+    1
+);
+
 const quests = {
-  bossDead: {
-    core: bossDeadQuest,
-    achievements: bossDeadAchievementsArr
-  },
-  sheWantsRevenge: {
-    core: sheWantsRevengeQuest,
-    achievements: bossDeadAchievementsArr
-  }
+    bossDead: {
+        core: bossDeadQuest,
+        achievements: bossDeadAchievementsArr
+    },
+    sheWantsRevenge: {
+        core: sheWantsRevengeQuest,
+        achievements: bossDeadAchievementsArr
+    },
+    dealWithMoney: {
+        core: dealWithMoney,
+        achievements: bossDeadAchievementsArr
+    }
 }
 
 export { quests };

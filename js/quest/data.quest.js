@@ -56,6 +56,12 @@ const bossDeadCheckpointsStroke =
 [або]Перебити членів банди
 Піти від переслідування`;
 
+const dealWithMoneyCheckpointsStroke =
+    `[Opt]Арендувати більше апаратури
+    [Opt]Покликати друзів
+    Зібрати лайнап
+    Почати івент`;
+
 const bossDeadAchievementsArr = [
     {
         id: "steel-only",
@@ -76,4 +82,4 @@ const MINIMAP = {
     sheWantsRevenge: "img/img-map--she-wants-revenge.png"
 }
 
-export { ARE_YOU_HUMAN_MESSAGE, NEXT_CHECKPOINT_MESSAGE, acidFridayCheckpointsStroke, newTurnCheckpointsStroke, bossDeadCheckpointsStroke, bossDeadAchievementsArr, MINIMAP };
+export { ARE_YOU_HUMAN_MESSAGE, NEXT_CHECKPOINT_MESSAGE, acidFridayCheckpointsStroke, newTurnCheckpointsStroke, bossDeadCheckpointsStroke, bossDeadAchievementsArr, dealWithMoneyCheckpointsStroke, MINIMAP };

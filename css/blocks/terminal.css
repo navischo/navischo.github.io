@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=PT+Mono");
 
 .terminal {
+    display: block;
     width: 100vw;
     height: 100vh;
     background: #1e1e1e;
@@ -9,6 +10,15 @@
     line-height: 1.5;
     font-family: "PT Mono", "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", "JetBrains Mono", monospace;
     font-size: 16px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.terminal:hover,
+.terminal:active,
+.terminal:visited {
+    text-decoration: none;
+    color: inherit;
 }
 
 .screen {

@@ -15,11 +15,15 @@ hudBtn.addEventListener("click", (e) => {
     document.querySelector(".game-menu").classList.toggle("--open");
 });
 
-const gameMenu = document.querySelector(".game-menu");
+const closeGameMenu = () => {
+    const gameMenu = document.querySelector("#game-menu");
+    gameMenu.classList.remove("--open");
+}
+
 const gameMenuLinksArr = document.querySelectorAll(".game-menu a");
 
 gameMenuLinksArr.forEach((gameMenuLink) => {
-    gameMenuLink.addEventListener("click", () => {
-        gameMenu.classList.remove("--open");
-    });
+    gameMenuLink.addEventListener("click", closeGameMenu);
 });
+
+export { closeGameMenu };

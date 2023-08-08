@@ -49,7 +49,9 @@ const initQuest = (questObj) => {
         title.textContent = questData.name;
         description.textContent = questData.description;
         bonus.textContent = `+${questData.bonus}`;
-        minimap.src = questData.minimap;
+        if (questData.minimap) {
+            minimap.src = questData.minimap;
+        }
 
         redrawCheckpoints(questData);
     }
