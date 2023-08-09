@@ -28,6 +28,10 @@ const selectFirstSetup = (player) => {
 
     moveCardById("dia-play", win77.game.catalog.dia, player.dia);
 
+    Array.from(win77.game.catalog._custom).forEach((customCard) => {
+        player.sound.add(customCard);
+    });
+
     console.log(`Player select first setup via js/utils/selectFirstSetup.js`, player);
 }
 

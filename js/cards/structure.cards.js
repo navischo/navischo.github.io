@@ -7,6 +7,7 @@ import { parseCost } from "../utils/parseCost.js";
 import { ContainerIn } from "../utils/initContainer.js";
 import { initCalendar } from "../hud/calendar.hud.js";
 import { selectFirstSetup } from "../utils/selectFirstSetup.js";
+import { uploadCustomCards } from "../utils/uploadCustomCards.js";
 
 //=> 0. Все карты(кроме неукомплектованных), в любом кол-ве копий [done]
 //=> 1. Строгая коллекция специально для этой игры, без дублей [done]
@@ -27,7 +28,7 @@ const initGame = () => {
             [CARD_TYPES.anti]: new Set(),
             all: DNECards,
             _secret: DNESecretCards,
-            _custom: new Set()
+            _custom: uploadCustomCards()
         },
         event: {
             settings: {},
