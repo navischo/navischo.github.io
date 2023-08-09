@@ -11,6 +11,8 @@ const catalogControlsToggleArr = document.querySelectorAll(".js-toggle-catalog-c
 catalogControlsToggleArr.forEach((catalogControlsToggle) => {
     catalogControlsToggle.addEventListener("click", () => {
         catalogControls.classList.toggle("catalog-controls--visible");
+        const cardsNavLink = document.querySelector(".js-cards-nav-link")
+        cardsNavLink.classList.remove("--active");
     });
 });
 

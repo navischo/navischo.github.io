@@ -16,13 +16,13 @@ const loadCatalog = () => {
     return localStorage.getItem(catalogSaveCeil);
 }
 
-const initCatalog = (type) => {
+const initCatalog = (type = null) => {
     let currentCatalogSave = loadCatalog();
 
-    if (!currentCatalogSave) {
+    if (!currentCatalogSave && type) {
         saveCatalog(type);
     } else {
-        type = currentCatalogSave;
+        type = currentCatalogSave || `npc`;
     }
 
     document.querySelector(".js-cards-catalog").innerHTML = "";
