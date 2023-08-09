@@ -39,4 +39,21 @@ class DNEDoorCard extends DNECard {
     }
 }
 
-export { DNELootCard, DNEDoorCard };
+class DNEMonsterCard {
+    constructor(id, name, level, description) {
+        this.id = id;
+        this.name = name;
+        this.level = level;
+        this.description = description;
+    }
+
+    getQuest() {
+        console.log(`New quest from ${this.name}`);
+    }
+
+    fight() {
+        console.log(`You invite ${this.name} to fight with you`);
+    }
+}
+
+export { DNELootCard, DNEDoorCard, DNEMonsterCard };

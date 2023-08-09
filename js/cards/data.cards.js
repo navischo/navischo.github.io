@@ -1,4 +1,4 @@
-import { DNELootCard, DNEDoorCard } from "./interface.cards.js";
+import { DNELootCard, DNEDoorCard, DNEMonsterCard } from "./interface.cards.js";
 import { setSoundStat } from "../utils/setSoundStat.js";
 import { STRINGS } from "./const.cards.js";
 
@@ -1414,22 +1414,6 @@ const DNEDoorArr = initDNEDoorArr().filter(card => card.isBuild);
 
 const DNECards = new Set(DNELootArr.concat(DNEDoorArr));
 
-class DNEMonsterCard {
-    constructor(id, name, level, description) {
-        this.id = id;
-        this.name = name;
-        this.level = level;
-        this.description = description;
-    }
-
-    getQuest() {
-        console.log(`New quest from ${this.name}`);
-    }
-
-    fight() {
-        console.log(`You invite ${this.name} to fight with you`);
-    }
-}
 const initMonsterArr = () => {
     const MonstersArr = [];
 

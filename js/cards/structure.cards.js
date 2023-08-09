@@ -1,16 +1,17 @@
 import { CARD_TYPES } from "./const.cards.js";
 import { DNECards, DNESecretCards } from "./data.cards.js";
 import { win77 } from "../dne-cli.js";
-import {getCardById, getRandomInt, moveCardById} from "../utils/getCardById.js";
+import { getCardById } from "../utils/getCardById.js";
 import { initInventory } from "../hud/inventory.hud.js";
 import { parseCost } from "../utils/parseCost.js";
 import { ContainerIn } from "../utils/initContainer.js";
 import { initCalendar } from "../hud/calendar.hud.js";
+import { selectFirstSetup } from "../utils/selectFirstSetup.js";
 
 //=> 0. Все карты(кроме неукомплектованных), в любом кол-ве копий [done]
 //=> 1. Строгая коллекция специально для этой игры, без дублей [done]
-//=> 2. Игрок выбрал стартовые карты, остальное в магазин
-//=> 3. Игрок использует карты
+//=> 2. Игрок выбрал стартовые карты, остальное в магазин [done]
+//=> 3. Игрок использует карты [done]
 //=> 4. Карты со стола распределяются между игроком и магазином
 
 //=> 1.1. Запуск игры
@@ -145,30 +146,7 @@ const initPlayer = () => {
         calendar: initCalendar()
     };
 
-    moveCardById("car-cosmos-track", win77.game.catalog.anti, player.cars);
-    moveCardById("rick", win77.game.catalog.npc, player.npc);
-    moveCardById("felix", win77.game.catalog.npc, player.npc);
-    // moveCardById("gm", win77.game.catalog.npc, player.npc);
-    // moveCardById("gabe", win77.game.catalog.npc, player.npc);
-    // moveCardById("support", win77.game.catalog.npc, player.npc);
-
-    const getRandomClassId = () => {
-        const classIdsArr = [...win77.game.catalog.class].map((classObj) => classObj.id);
-        return classIdsArr[getRandomInt(classIdsArr.length)];
-    };
-    moveCardById("class-writer", win77.game.catalog.class, player.class);
-    // moveCardById(getRandomClassId(), win77.game.catalog.class, player.class);
-
-
-    moveCardById("sps585", win77.game.catalog.loot, player.loot);
-
-    moveCardById("ddj400", win77.game.catalog.loot, player.loot);
-    // moveCardById("plx500", win77.game.catalog.loot, player.loot);
-    // moveCardById("ddjxp2", win77.game.catalog.loot, player.loot);
-    // moveCardById("nokia", win77.game.catalog.anti, player.loot);
-
-    moveCardById("dia-play", win77.game.catalog.dia, player.dia);
-
+    selectFirstSetup(player);
     console.log(`${player.id} join the game`, player);
     return player;
 }
@@ -177,7 +155,3 @@ win77.setPlayer(initPlayer());
 initInventory();
 
 //=> 3. Игрок использует карты
-
-// todo показать карточку аудитории с анимацией slide-in-blurred-right
-
-
