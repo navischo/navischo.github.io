@@ -2,8 +2,6 @@ import { CARD_TYPES } from "../cards/const.cards.js";
 import { win77 } from "../dne-cli.js";
 import { initInventoryPopupJquery } from "../utils/initInventoryPopup.jquery.js";
 
-
-
 const inventoryMarkup = `
 <div id="project-obj" class="fw-d-none project-obj inventory">
     project:&nbsp;&nbsp;{<br>

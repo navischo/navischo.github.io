@@ -1,5 +1,4 @@
 import { DNELootCard } from "../cards/interface.cards.js";
-import { getRandomInt } from "../utils/getCardById.js";
 import { isSetHasId } from "../utils/isSetHasId.js";
 import { updBalanceNode } from "./balance.hud.js";
 import { setSoundStat } from "../utils/setSoundStat.js";

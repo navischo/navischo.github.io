@@ -2,11 +2,9 @@ import { swiper } from "../swiper/swiper.module.js";
 import { win77 } from "../dne-cli.js";
 import { CARD_TYPES } from "../cards/const.cards.js";
 
-import { hudMarkup, initHud } from "./dom.hud.js";
+import { hudMarkup } from "./dom.hud.js";
 import { updHand } from "../cards/dom.cards.js";
-import { initIntervalScreen } from "../page/screen.page.js";
 import { initScore, updScore } from "./score.hud.js";
-// import { HUDModule } from "./hud.module.js";
 
 const PAGE_NAMES = {
     enter: "enter",
@@ -25,8 +23,6 @@ const isItCardsPage = (name) => name === PAGE_NAMES.npc || name === PAGE_NAMES.c
 const pipeline = [PAGE_NAMES.enter, PAGE_NAMES.npc, PAGE_NAMES.class, PAGE_NAMES.loot, PAGE_NAMES.hud, PAGE_NAMES.event, PAGE_NAMES.board];
 const body = document.querySelector("body");
 const title = document.querySelector(".head-title");
-// todo по-умолчанию худ не отрисовывается, открыт каталог звука
-// todo если открыт hud => запустить генерацию худа
 let currentPage = PAGE_NAMES.hud;
 
 const initNav = () => {

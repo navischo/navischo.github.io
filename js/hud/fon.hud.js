@@ -1,5 +1,5 @@
 import {win77} from "../dne-cli.js";
-import { DIALOGS, TITLES_OF_DIALOGS, getMessageMarkup, initInteractiveDialog, chooseOption } from "./chat.hud.js";
+import { chooseOption } from "./chat.hud.js";
 import { initHotline } from "../utils/initHotline.js";
 import { createDialogDataObj, initDialogCli } from "./dialogCli.hud.js";
 
@@ -13,13 +13,7 @@ const NOKIA_MENUS = [
                 text: "navischo",
                 callback: (e) => {
                     e.preventDefault();
-                    // $.magnificPopup.close();
-                    // win77.swiper.slidePrev();
                     win77.lastHotline = initHotline(0);
-                    // initDirect("navischo", {
-                    //     title: TITLES_OF_DIALOGS[0],
-                    //     body: DIALOGS[0]
-                    // });
                     console.log(`Hotline to navischo`);
                 }
             }, {

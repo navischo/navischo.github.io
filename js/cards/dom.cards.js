@@ -8,7 +8,7 @@ import { moveCardById , registerRent} from "../utils/getCardById.js";
 import { updBalanceNode } from "../hud/balance.hud.js";
 import { isSetHasId } from "../utils/isSetHasId.js";
 import { PAGE_NAMES } from "../hud/router.hud.js";
-import { openWithTimer } from "../hud/tab.hud.js";
+// import { openWithTimer } from "../hud/tab.hud.js";
 import { setExecutive } from "../hud/table.hud.js";
 import { CARD_TYPES } from "./const.cards.js";
 import { dialog } from "../hud/dialog.hud.js";
@@ -225,7 +225,7 @@ const updHand = () => {
             const id = card.id.substring(9);
             const bonus = +(card.querySelector(".card__bonus").textContent);
             // console.log(win77);
-            openWithTimer();
+            // openWithTimer();
             getEnergyForExtraSound(); // experiment
             moveCardById(id, win77.game.player.hand, win77.game.table);
             updTable();

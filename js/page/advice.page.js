@@ -114,4 +114,18 @@ const drawAdvice = (advice = ADVICES[getRandomInt(ADVICES.length)]) => {
         .appendChild(parent);
 }
 
+const showTip = (e) => {
+    // console.log(`You ask about advice for..`, e.target, e.target.dataset.adviceId);
+    if (e.target.dataset.adviceId) {
+        const askedAdvice = ADVICES.find((advice) => advice.id === e.target.dataset.adviceId);
+        console.log(`Yes, I know something about ${e.target.dataset.adviceId}. Here `, askedAdvice);
+        drawAdvice(askedAdvice);
+    } else {
+        console.log(`Advice you asking for is unavailable. So i give you random`, ADVICES[getRandomInt(ADVICES.length)]);
+    }
+}
+
+const body = document.querySelector("body");
+body.addEventListener("auxclick", showTip);
+
 export { ADVICES, drawAdvice };
