@@ -20,7 +20,7 @@ const sprayWall = (event) => {
 
         const newSpray = document.createElement("div");
         newSpray.classList.add("spray");
-        newSpray.classList.add(`--${getRandomInt(4)}`);
+        newSpray.classList.add(`--${getRandomInt(7)}`);
         newSpray.style.left = `${event.clientX}px`;
         newSpray.style.top = `${event.clientY}px`;
 

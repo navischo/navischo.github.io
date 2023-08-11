@@ -65,6 +65,24 @@
     background-image: url("../../img/sprays/spray-3.png");
 }
 
+.spray.--4 {
+    width: 420px;
+    height: 454px;
+    background-image: url("../../img/sprays/spray-4.png");
+}
+
+.spray.--5 {
+    width: 600px;
+    height: 162px;
+    background-image: url("../../img/sprays/spray-5.png");
+}
+
+.spray.--6 {
+    width: 240px;
+    height: 115px;
+    background-image: url("../../img/sprays/spray-5.png");
+}
+
 .spray.--drying {
     animation: drying 2s ease-in-out;
 }
