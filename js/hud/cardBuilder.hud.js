@@ -100,7 +100,7 @@ const buildCard = (builderData) => {
         updBalanceNode();
         win77.game.catalog._custom.add(cardData);
         // moveCardById(cardData.id, allCards, win77.game.player[cardData.type]);
-        localStorage.setItem(`my-${cardData.id}`, JSON.stringify(cardData));
+        localStorage.setItem(`custom-${cardData.id}`, JSON.stringify(cardData));
         win77.game.player.sound.add(cardData);
         initInventory();
     } else {

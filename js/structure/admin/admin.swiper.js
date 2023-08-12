@@ -2,6 +2,7 @@ import { win77 } from "../../dne-cli.js";
 import { SchedulePage } from "./schedule.page.js";
 import { DirectPage } from "./direct.page.js";
 import { BankPage } from "./bank.page.js";
+import { HousePage } from "./house.page.js";
 import { ProfilePage } from "./profile.page.js";
 import { SwiperCell } from "../core.structure.js";
 
@@ -28,11 +29,17 @@ const initAdminSwiper = () => {
                 console.log("initDialog(DIALOGS[0])", dialogParent);
                 // initDialog(DIALOGS[0], dialogParent);
             }
+
+            if (e.activeIndex === 4) {
+                HousePage.init();
+                // initDialog(DIALOGS[0], dialogParent);
+            }
         });
 
         SchedulePage.init();
         DirectPage.init();
         BankPage.init();
+        HousePage.init();
         ProfilePage.init();
     }
     return new SwiperCell(init);

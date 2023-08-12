@@ -1,0 +1,15 @@
+.house {
+    position: relative;
+    height: 100vh;
+}
+
+.house__name {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    font-family: "Press Start 2p", "JetBrains Mono", monospace;
+    font-size: 3em;
+    line-height: 0;
+}

@@ -2,6 +2,7 @@ import { adminWeekMarkup } from "./admin/adminWeek.markup.js";
 import { adminDirectMarkup } from "./admin/adminDirect.markup.js";
 import { adminProfileMarkup } from "./admin/adminProfile.markup.js";
 import { adminBankMarkup } from "./admin/adminBank.markup.js";
+import { adminHouseMarkup } from "./admin/adminHouse.markup.js";
 const adminMarkup = `
 <div id="admin-swiper" class="swiper --sub">
   <div class="swiper-wrapper">
@@ -20,6 +21,9 @@ const adminMarkup = `
     </div>
     <div class="swiper-slide">
         ${adminBankMarkup}
+    </div>
+    <div class="swiper-slide">
+        ${adminHouseMarkup}
     </div>
 <!--    <div class="swiper-slide">-->
 <!--        <div class="sky-nav">-->

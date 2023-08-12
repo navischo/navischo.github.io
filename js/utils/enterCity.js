@@ -1,3 +1,5 @@
+import {win77} from "../dne-cli.js";
+
 const initForm3D = () => {
     const btn = document.querySelectorAll(".btn span");
     const inputs = document.querySelectorAll(".cube__face input");
@@ -48,6 +50,8 @@ const initForm3D = () => {
         document.querySelector(".form-scene").classList.add("end");
 
         document.querySelector(".welcome").classList.add("show");
+        win77.swiper.slideTo(1, 0);
+        win77.adminSwiper.slideTo(4, 0);
     });
 
     for (let i = 0; i < inputs.length; i++) {

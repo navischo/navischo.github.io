@@ -255,7 +255,8 @@ body {
     background-image: url("../../libs/screen/screen-nohud--new-place.jpg")!important;
 }
 
-.background-single[data-lvl="1"] {
+.background-single[data-lvl="1"],
+.background-single.--me {
     background-image: url("../../libs/screen/screen-nohud--me.jpg")!important;
 }
 
