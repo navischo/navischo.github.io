@@ -1,0 +1,34 @@
+.enter-city.--visible {
+    display: block;
+}
+
+.enter-city {
+    display: none;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+
+    background: yellow;
+}
+
+.enter-city__header {
+    padding: 40px;
+}
+
+.enter-city__title {
+    margin-top: .5em;
+    margin-bottom: 1em;
+
+    font-family: "Press Start 2p", "JetBrains Mono", monospace;
+    color: black;
+    font-size: 2.5em;
+    line-height: 1.1;
+}
+
+.enter-city__description {
+    color: black;
+}

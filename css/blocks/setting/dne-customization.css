@@ -77,27 +77,3 @@ option {
     background: yellow;
     border-radius: 0;
 }
-
-.enter-city {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 2;
-
-    background: yellow;
-}
-
-.enter-city__header {
-    padding: 40px;
-}
-
-.enter-city__title {
-    font-family: "Press Start 2p", "JetBrains Mono", monospace;
-    color: black;
-}
-
-.enter-city__description {
-    color: black;
-}

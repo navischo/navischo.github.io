@@ -414,17 +414,61 @@
 
 
 <div id="setting-popup" class="cp-body setting-modal white-popup mfp-hide"><!--custom-scrollbar --y-->
-    <div class="enter-city">
+    <div class="js-enter-city enter-city">
         <header class="enter-city__header">
             <h2 class="enter-city__title">Ласкаво просимо<br>у Freedom City</h2>
             <p class="enter-city__description">
                 Найбільше Українське місто<br> на головному супутнику планети Земля - Луні.<br><br>
 
-                Ти маєш право на надання простору для життя і роботи за своїм id громадянина.<br><br>
+                Ти маєш право на надання простору для життя і роботи,<br>
+                який буде закріплено за твоїм id - <b class="js-enter-player-id"></b>.<br><br>
 
-                Для найшвидшої подорожі у місто дай, будь ласка, відповідь на декілька запитань:
+                Для найшвидшої подорожі у свій простір дай, будь ласка, відповідь на декілька запитань:
             </p>
         </header>
+        <div class="enter-city__form">
+            <div class="form-scene">
+                <div class="cube">
+                    <nav class="steps">
+                        <div class="dot step_1 done"></div>
+                        <div class="dot step_2"></div>
+                        <div class="dot step_3"></div>
+                        <div class="dot step_4"></div>
+                    </nav>
+                    <div class="cube__face cube__face--front" id="step__1">
+                        <div class="container">
+                            <input id="my-space-id" type="text" placeholder="Вигадай назву для свого простору">
+                            <div class="btn">
+                                <span data-step="1">Continue</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cube__face cube__face--bottom" id="step__2">
+                        <div class="container">
+                            <input type="number" placeholder="Його місячний бюджет?">
+                            <div class="btn">
+                                <span data-step="2">Continue</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cube__face" id="step__3">
+                        <div class="container" style="display: flex;">
+                            <input type="text" class="label" placeholder="Ви неймовірні?" disabled>
+                            <div class="right">
+                                <label>Ні</label>
+                                <div class="checkbox">
+                                    <div class="circle"></div>
+                                </div>
+                                <label>Так</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="welcome">
+                <div class="content">Welcome !</div>
+            </div>
+        </div>
     </div>
 
     <main>
@@ -929,6 +973,7 @@
     import { initTinder, initRoller } from "./js/utils/initTinder.js";
     import { makeWallSprayable } from "./js/utils/makeWallSprayable.js";
     import { initTerminal } from "./js/utils/initTerminal.js";
+    import { enterCity } from "./js/utils/enterCity.js";
 
     initInventoryPopupJquery();
 
@@ -1003,6 +1048,7 @@
     initRoller();
     makeWallSprayable();
     initTerminal();
+    enterCity();
 </script>
 </body>
 </html>
