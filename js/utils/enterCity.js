@@ -1,4 +1,5 @@
-import {win77} from "../dne-cli.js";
+import { win77 } from "../dne-cli.js";
+import { closePopup } from "../popup/dom.popup.jquery.js";
 
 const initForm3D = () => {
     const btn = document.querySelectorAll(".btn span");
@@ -52,6 +53,7 @@ const initForm3D = () => {
         document.querySelector(".welcome").classList.add("show");
         win77.swiper.slideTo(1, 0);
         win77.adminSwiper.slideTo(4, 0);
+        closePopup();
     });
 
     for (let i = 0; i < inputs.length; i++) {
@@ -93,6 +95,10 @@ const enterCity = () => {
         enterForm.classList.add("--visible");
         initForm3D();
     }
+}
+
+win77.clearHouse = () => {
+    localStorage.removeItem("my-space-id");
 }
 
 export { enterCity };
