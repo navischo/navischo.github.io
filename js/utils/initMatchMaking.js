@@ -1,6 +1,7 @@
 import { win77 } from "../dne-cli.js";
 import { drawCard } from "../cards/dom.cards.js";
 import { getCardElement } from "../cards/template.cards.js";
+import { getRandomInt } from "./getCardById.js";
 
 class DNEPlayer {
     constructor(id, avatar, description) { // дія чи результат?
@@ -27,26 +28,79 @@ const initDNEPlayersSet = () => {
 }
 
 win77.players = initDNEPlayersSet();
+win77.lobby = new Set();
 
-const updPlayer = () => {
-    const playerLvlNode = document.querySelector(".js-player-lvl");
-    const playerNameNode = document.querySelector(".js-player-name");
-    const playerCardNode = document.querySelector(".js-player-card");
-    const playerClass = Array.from(win77.game.player.class)[0];
-    console.log("win77.game.player", playerClass, win77.game.player);
-    playerCardNode.innerHTML = ``;
-    drawCard(playerCardNode, getCardElement, playerClass);
-
-    const playerLvl = win77.game.player.lvl;
-    if (playerLvl > 9) {
-        playerLvlNode.parentNode.classList.add("--double");
+const invitePlayer = (id) => {
+    const playerById = Array.from(win77.players).find((DNEPlayer) => DNEPlayer.id === id);
+    console.log("playerById", playerById);
+    if (playerById) {
+        win77.lobby.add(playerById);
+        const mateCell = document.querySelector(".js-squad-mate:not(.--active)");
+        if (mateCell) {
+            mateCell.dataset.playerId = id;
+            mateCell.innerHTML = ``;
+            mateCell.innerHTML = getPlayerMarkup();
+            updPlayer(id);
+            mateCell.classList.add("--active");
+        } else {
+            console.log("All mate slots are full");
+        }
+    } else {
+        console.log(`Player with id ${id} does not exits`);
     }
-    playerLvlNode.textContent = playerLvl;
-    playerNameNode.textContent = win77.game.player.id;
+}
+
+win77.invite = invitePlayer;
+
+const getPlayerMarkup = () => `
+    <header class="js-player-matchmaking squad__player">
+        <b class="squad__player-lvl"><span class="js-player-lvl"></span></b>
+        <h3 class="js-player-name squad__player-name"></h3>
+    </header>
+    <div class="js-player-card">
+    </div>
+`;
+
+const updPlayer = (id) => {
+    const parent = document.querySelector(`[data-player-id="${id}"]`);
+    const playerLvlNode = parent.querySelector(".js-player-lvl");
+    const playerNameNode = parent.querySelector(".js-player-name");
+    const playerCardNode = parent.querySelector(".js-player-card");
+
+    if (win77.game.player.id === id) {
+        const playerClass = Array.from(win77.game.player.class)[0];
+        console.log("win77.game.player", playerClass, win77.game.player);
+        playerCardNode.innerHTML = ``;
+        drawCard(playerCardNode, getCardElement, playerClass);
+
+        const playerLvl = win77.game.player.lvl;
+        if (playerLvl > 9) {
+            playerLvlNode.parentNode.classList.add("--double");
+        }
+        playerLvlNode.textContent = playerLvl;
+        playerNameNode.textContent = win77.game.player.id;
+    } else {
+        // win77.lobby
+        const mateClass = Array.from(win77.game.catalog.class)[getRandomInt(win77.game.catalog.class.size)];
+        console.log("win77.game.player", mateClass, win77.lobby);
+        playerCardNode.innerHTML = ``;
+        drawCard(playerCardNode, getCardElement, mateClass);
+
+        const playerLvl = 0;
+        if (playerLvl > 9) {
+            playerLvlNode.parentNode.classList.add("--double");
+        }
+        playerLvlNode.textContent = playerLvl;
+        playerNameNode.textContent = id;
+    }
 }
 
 const initMatchMaking = () => {
     const parent = document.querySelector("#matchmaking");
+    const hostNode = document.querySelector(".js-squad-host");
+    // const mateNodes = document.querySelectorAll(".js-squad-mate");
+
+    hostNode.dataset.playerId = win77.game.player.id;
 
     const openMatchmakingPage = () => {
         parent.classList.add("--visible");
@@ -59,6 +113,7 @@ const initMatchMaking = () => {
         const startMatchmakingBtn = document.querySelector(".js-start-matchmaking");
         const setMatchmakingBtn = document.querySelector(".js-set-matchmaking");
         const playerMatchmakingBtn = document.querySelector(".js-player-matchmaking");
+        const inviteRandomBtns = document.querySelectorAll(".js-invite-random");
 
         const closeBtnHandler = () => {
             parent.classList.remove("--visible");
@@ -77,12 +132,18 @@ const initMatchMaking = () => {
 
         closeBtn.addEventListener("click", closeBtnHandler);
         startMatchmakingBtn.addEventListener("click", startBtnHandler);
+        inviteRandomBtns.forEach((inviteRandomBtn) => {
+            inviteRandomBtn.addEventListener("click", () => {
+                // todo invite random player not from lobby
+                // win77.invite(Array.from(win77.players)[getRandomInt(win77.players.size)].id);
+            });
+        });
     }
 
     initHandlers();
     const openMatchmakingBtn = document.querySelector(".js-open-matchmaking");
     openMatchmakingBtn.addEventListener("click", () => {
-        updPlayer();
+        updPlayer(win77.game.player.id);
         openMatchmakingPage();
     });
 }
