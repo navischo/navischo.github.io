@@ -2,10 +2,12 @@ import { win77 } from "../dne-cli.js";
 import { updHand } from "../cards/dom.cards.js";
 import { closePopup } from "../popup/dom.popup.jquery.js";
 import { setupTheday } from "../theday/setup.theday.js";
+import { getMatchMakingOptionsMarkup } from "../utils/initMatchMaking.js";
 
 const DIALOG_ID = {
     start: 0,
-    oneMore: 1
+    oneMore: 1,
+    options: 2
 }
 
 const DIALOG_QUESTIONS = [
@@ -52,6 +54,32 @@ const DIALOG_QUESTIONS = [
                     updHand();
                     win77.updBalanceHUD();
                     closePopup();
+                }
+            }
+        ]
+    },
+    {
+        question: getMatchMakingOptionsMarkup(),
+        answersId: {
+            start: 0,
+            cancel: 1
+        },
+        answers: [
+            {
+                text: "Start",
+                action: (e) => {
+                    console.log("Start");
+                    win77.startMatchmaking();
+                    closePopup();
+                    // save new options
+                }
+            },
+            {
+                text: "Cancel",
+                action: (e) => {
+                    console.log("Cancel");
+                    closePopup();
+                    // clean changes
                 }
             }
         ]

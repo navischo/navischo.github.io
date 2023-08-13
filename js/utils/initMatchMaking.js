@@ -7,6 +7,8 @@ import { updScore } from "../hud/score.hud.js";
 import { updBalanceNode } from "../hud/balance.hud.js";
 import { initInventory } from "../hud/inventory.hud.js";
 import { setExecutive } from "../hud/table.hud.js";
+import { dialog } from "../hud/dialog.hud.js";
+import { openPopup } from "../popup/dom.popup.jquery.js";
 
 class DNEPlayer {
     constructor(id, avatar, description) { // дія чи результат?
@@ -121,6 +123,42 @@ const updPlayer = (id) => {
     }
 }
 
+const getMatchMakingOptionsMarkup = () => `
+    <fieldset class="field --dialog">
+        <label class="glow text" for="win-condition">Win conditions</label>
+        <select id="win-condition">
+            <option value="highest-bankroll" selected>Highest bankroll</option>
+        </select>
+    </fieldset>
+    
+    <fieldset class="field --dialog">
+        <label class="glow text" for="fin-condition">Fin conditions</label>
+        <select id="fin-condition">
+            <option value="round-limit" selected>Reach round limit</option>
+        </select>
+    </fieldset>
+
+    <fieldset class="field --dialog">
+        <label class="glow text" for="round-limit">Round limit</label>
+        <input id="round-limit" type="number" placeholder="7">
+    </fieldset>
+    
+    <fieldset class="field --dialog">
+        <label class="glow text" for="max-time-per-round">Max time per round</label>
+        <input id="max-time-per-round" type="number" placeholder="unlimited">
+    </fieldset>
+    
+    <fieldset class="field --dialog">
+        <label class="glow text" for="start-bankroll">Starting bankroll</label>
+        <input id="start-bankroll" type="number" placeholder="16000">
+    </fieldset>
+    
+    <fieldset class="field --dialog">
+        <label class="glow text" for="start-souls">Starting souls</label>
+        <input id="start-souls" type="number" placeholder="3">
+    </fieldset>
+`;
+
 const initMatchMaking = () => {
     const parent = document.querySelector("#matchmaking");
     const hostNode = document.querySelector(".js-squad-host");
@@ -139,6 +177,7 @@ const initMatchMaking = () => {
         const startMatchmakingBtn = document.querySelector(".js-start-matchmaking");
         const setMatchmakingBtn = document.querySelector(".js-set-matchmaking");
         const playerMatchmakingBtn = document.querySelector(".js-player-matchmaking");
+        const openSettingsBtn = document.querySelector(".js-open-mm-settings");
         const inviteRandomBtns = document.querySelectorAll(".js-invite-random");
 
         const closeBtnHandler = () => {
@@ -156,8 +195,16 @@ const initMatchMaking = () => {
             playerMatchmakingBtn.classList.toggle("--ready");
         }
 
+        const openSettingsHandler = () => {
+            console.log(openSettingsBtn, dialog);
+            dialog.init(dialog.DIALOG_ID.options);
+            openPopup("#dialog-popup");
+        }
+
         closeBtn.addEventListener("click", closeBtnHandler);
         startMatchmakingBtn.addEventListener("click", startBtnHandler);
+        win77.startMatchmaking = startBtnHandler;
+        openSettingsBtn.addEventListener("click", openSettingsHandler);
         inviteRandomBtns.forEach((inviteRandomBtn) => {
             inviteRandomBtn.addEventListener("click", () => {
                 // todo invite random player not from lobby
@@ -174,4 +221,4 @@ const initMatchMaking = () => {
     });
 }
 
-export { initMatchMaking };
+export { initMatchMaking, getMatchMakingOptionsMarkup };
