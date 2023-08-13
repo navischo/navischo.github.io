@@ -40,6 +40,7 @@ const initGame = () => {
                 income: 0
             }
         },
+        calendar: initCalendar(),
         final: false
     }
 
@@ -144,7 +145,6 @@ const initPlayer = (id = null) => {
         cardsInRentIdSet: new Set(),
         availableLocations: ["summer"],
         currentQuest: null,
-        calendar: initCalendar(),
         score: 0,
         isOnMap: false
     };

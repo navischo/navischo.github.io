@@ -231,7 +231,7 @@ const rareGuestsArr = [{
     isOnBoard: false
 }];
 const rareGuestsSet = new Set();
-win77.game.player.rareGuestsSet = rareGuestsSet;
+win77.game.rareGuestsSet = rareGuestsSet;
 rareGuestsArr.forEach((rareGuest) => {
    rareGuestsSet.add(rareGuest);
 });

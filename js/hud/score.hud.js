@@ -7,6 +7,13 @@ const initScore = () => {
     let soundPoints = 0;
     let lootPoints = 0;
 
+
+    if (win77.lobby.size > 0) {
+        win77.lobby.forEach((mate) => {
+            mate.score = 0;
+        });
+    }
+
     win77.game.player.score = crewPoints + soundPoints + lootPoints;
     win77.game.totalScore = 0;
     win77.game.versusScore = getRandomInt(20);

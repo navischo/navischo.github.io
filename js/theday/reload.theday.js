@@ -58,7 +58,7 @@ const reloadTheday = () => {
     updScore();
     // win77.pokeButton.dia.clearSmithsSet();
     win77.game.event.settings.guests.set.clear();
-    win77.game.player.rareGuestsSet.forEach((guest) => {
+    win77.game.rareGuestsSet.forEach((guest) => {
         guest.isOnBoard = false;
     });
 
