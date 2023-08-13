@@ -4,7 +4,7 @@ import { updBalanceNode } from "../../hud/balance.hud.js";
 
 const updBankBalanceNode = () => {
     const element = document.querySelector(".js-btc-balance");
-    const localSave = localStorage.getItem("btc");
+    const localSave = localStorage.getItem(`${win77.game.player.id}-btc`);
     if (localSave) {
         element.textContent = localSave;
     } else {
@@ -15,18 +15,18 @@ const updBankBalanceNode = () => {
 const saveBankroll = () => {
     const bankroll = win77.game.player.balance.bankroll;
     if (bankroll > 1111111) {
-        const localSave = localStorage.getItem("btc");
+        const localSave = localStorage.getItem(`${win77.game.player.id}-btc`);
         if (localSave) {
-            localStorage.setItem("btc", `${+localSave + 1}`);
+            localStorage.setItem(`${win77.game.player.id}-btc`, `${+localSave + 1}`);
         } else {
-            localStorage.setItem("btc", `1`);
+            localStorage.setItem(`${win77.game.player.id}-btc`, `1`);
         }
         win77.game.player.balance.bankroll = win77.game.player.balance.bankroll - 1000000;
         updBalanceNode();
         updBankBalanceNode();
-        console.log("You successfully save 1BTC from your bankroll", localStorage.getItem("btc"), win77.game.player.balance.bankroll);
+        console.log("You successfully save 1BTC from your bankroll", localStorage.getItem(`${win77.game.player.id}-btc`), win77.game.player.balance.bankroll);
     } else {
-        console.log("You need at least 1111111 to save 1BTC from your bankroll", localStorage.getItem("btc"), win77.game.player.balance.bankroll);
+        console.log("You need at least 1111111 to save 1BTC from your bankroll", localStorage.getItem(`${win77.game.player.id}-btc`), win77.game.player.balance.bankroll);
     }
 };
 

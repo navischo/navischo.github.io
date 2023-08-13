@@ -83,8 +83,8 @@ class DNECli {
             };
             this.game.player.lvl = this.game.player.lvl + 1;
 
-            localStorage.setItem("bankroll", `${this.game.player.balance.bankroll}`);
-            localStorage.setItem("lvl", `${this.game.player.lvl}`);
+            // localStorage.setItem("bankroll", `${this.game.player.balance.bankroll}`);
+            localStorage.setItem(`${this.game.player.id}-lvl`, `${this.game.player.lvl}`);
             appendNewTop(this.game.player.id, this.game.player.balance.bankroll);
             console.log("Seems like you win the game. Congratulations!", win77.game);
         }

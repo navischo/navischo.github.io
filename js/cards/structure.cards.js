@@ -117,18 +117,18 @@ const initPlayer = () => {
 //                                   \\/____/                  \\/____/                  \\/____/                          \\/____/                                       \\/____/                  \\|___|                                        \\/____/
 //
 // `);
-    const savedBankroll = +localStorage.getItem("bankroll");
+    const savedLogin = localStorage.getItem("login") ? localStorage.getItem("login") : "navi";
+    // const savedBankroll = +localStorage.getItem("bankroll");
     // console.log(savedBankroll ? `Your bankroll in amount of ${savedBankroll} was restored from LocalStorage. Enjoy!` : `Your starting bankroll is 14000`, savedBankroll); // 970510
 
-    const savedLvl = +localStorage.getItem("lvl");
-    savedLvl ? document.querySelector("body").dataset.lvl = savedLvl : "";
+    const savedLvl = +localStorage.getItem(`${savedLogin}-lvl`) ? +localStorage.getItem(`${savedLogin}-lvl`) : 0;
+    document.querySelector("body").dataset.lvl = `${savedLvl}`;
     // console.log(savedLvl ? `Level ${savedLvl} was restored from LocalStorage. Good luck in your journey!` : `Your start from lvl 0`, savedBankroll);
 
-    const savedLogin = localStorage.getItem("login");
 
     const player = {
-        id: savedLogin ? savedLogin : "navi",
-        lvl: savedLvl ? savedLvl : 0,
+        id: savedLogin,
+        lvl: savedLvl,
         balance: {
             energy: 7,
             bankroll: 14000, // savedBankroll ? savedBankroll :
