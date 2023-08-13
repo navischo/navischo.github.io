@@ -37,7 +37,7 @@ const setSetting = (settingObj) => {
 
 
     console.log(settingObj.executive, getCardById(settingObj.executive, win77.game.catalog.all), win77.game.catalog.all);
-    if (!win77.isPlayerOnMap) {
+    if (!win77.game.player.isOnMap) {
         executive.textContent = settingObj.executive;
     } else {
         executive.innerHTML = ``;

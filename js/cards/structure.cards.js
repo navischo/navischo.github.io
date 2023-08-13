@@ -145,7 +145,8 @@ const initPlayer = (id = null) => {
         availableLocations: ["summer"],
         currentQuest: null,
         calendar: initCalendar(),
-        score: 0
+        score: 0,
+        isOnMap: false
     };
 
     selectFirstSetup(player);

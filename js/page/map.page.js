@@ -126,21 +126,22 @@ const getChessType = () => {
 win77.chess = new Set();
 
 const initChess = () => {
+    const playersChess = Array.from(win77.chess).filter((chess) => chess.player.id === win77.game.player.id);
     const sector = getRandomSector();
 
     const chess = document.createElement("button");
     chess.classList.add("chess");
-    chess.classList.add(win77.chess.size === 0 ? `--char-king` : `--char-${win77.game.player.lvl}`);
+    chess.classList.add(playersChess.length === 0 ? `--char-king` : `--char-${win77.game.player.lvl}`);
 
     chess.style.top = `${getRandomInt(150)}px`;
     chess.style.left = `${getRandomInt(180)}px`;
 
     console.log(win77.game.player.npc.size, win77.chess.size);
-    if (win77.game.player.npc.size >= win77.chess.size) {
-        if (win77.chess.size === 0) {
+    if (win77.game.player.npc.size >= playersChess.length) {
+        if (playersChess.length === 0) {
             const chessCard = getCardById(`gm`, win77.game.catalog.all);
             const chessType = `A`;
-            const chessId = `${chessType.toLowerCase()}-${chessCard.id}`;
+            const chessId = `${chessType.toLowerCase()}-${win77.game.player.id}`;
             const chessObj = new Chess(chessId, chessType, sector.node.dataset.sector, chessCard, win77.game.player);
             sector.playersSet.add(chessObj);
             win77.chess.add(chessObj);
@@ -157,8 +158,8 @@ const initChess = () => {
 
             console.log(`${win77.game.player.id} successfully enter map on sector ${sector.address}`, win77.game.player, sector, win77.chess);
 
-        } else if (win77.game.player.npc.size > 0 && win77.chess.size > 0) {
-            const chessCard = Array.from(win77.game.player.npc)[win77.chess.size - 1];
+        } else if (win77.game.player.npc.size > 0 && playersChess.length > 0) {
+            const chessCard = Array.from(win77.game.player.npc)[playersChess.length - 1];
             const chessType = getChessType();
             const chessId = `${chessType.toLowerCase()}-${chessCard.id}`;
 
@@ -368,30 +369,33 @@ const drawMapModal = () => {
             e.preventDefault();
             console.log(e.target, e);
 
-            if (e.target.dataset.chessId) {
-                moveChess(e.target.dataset.chessId, getRandomSector().address);
-            } else if (!e.target.classList.contains("map-sector")) {
-                const sectorId = e.target.parentNode.dataset.sector;
-                const playersInSector = win77.map[sectorId[1]][sectorId[0]].playersSet;
-                if (playersInSector.size > 0) {
-                    if (!e.target.classList.contains("--discovered")) {
-                        const targetData = e.target.dataset;
+            const sectorId = e.target.parentNode.dataset.sector;
+            const playersInSector = win77.map[sectorId[1]][sectorId[0]].playersSet;
+            const isCurrentPlayerInSector = Array.from(playersInSector).find((chess) => chess.player.id === win77.game.player.id);
+            if (isCurrentPlayerInSector) {
+                if (e.target.dataset.chessId) {
+                    moveChess(e.target.dataset.chessId, getRandomSector().address);
+                } else if (!e.target.classList.contains("map-sector")) {
+                    if (playersInSector.size > 0) {
+                        if (!e.target.classList.contains("--discovered")) {
+                            const targetData = e.target.dataset;
 
-                        if (targetData.point === "gig") {
-                            win77.dungesSwiper.virtual.appendSlide(getDungeHexMarkup(targetData.type));
-                            win77.dungesSwiper.slideTo(win77.dungesSwiper.virtual.slides.length, 200, false);
-                        } else if (targetData.point === "dunge") {
-                            const newDunge = discoverDunge(e.target);
-                            if (newDunge !== undefined) {
-                                // console.log(newDunge, win77.locationsSet, Array.from(win77.locationsSet));
-                                win77.dungesSwiper.virtual.appendSlide(getDungeHexMarkup(newDunge.name));
+                            if (targetData.point === "gig") {
+                                win77.dungesSwiper.virtual.appendSlide(getDungeHexMarkup(targetData.type));
                                 win77.dungesSwiper.slideTo(win77.dungesSwiper.virtual.slides.length, 200, false);
+                            } else if (targetData.point === "dunge") {
+                                const newDunge = discoverDunge(e.target);
+                                if (newDunge !== undefined) {
+                                    // console.log(newDunge, win77.locationsSet, Array.from(win77.locationsSet));
+                                    win77.dungesSwiper.virtual.appendSlide(getDungeHexMarkup(newDunge.name));
+                                    win77.dungesSwiper.slideTo(win77.dungesSwiper.virtual.slides.length, 200, false);
+                                }
                             }
+                        } else {
+                            // todo просто подтянуть слайдер к уже сгенерированному слайду
+                            // win77.dungesSwiper.slideTo(win77.dungesSwiper.virtual.slides.length, 200, false);
+                            console.log("Dunge already discovered", e.target);
                         }
-                    } else {
-                        // todo просто подтянуть слайдер к уже сгенерированному слайду
-                        // win77.dungesSwiper.slideTo(win77.dungesSwiper.virtual.slides.length, 200, false);
-                        console.log("Dunge already discovered", e.target);
                     }
                 }
             }
@@ -402,7 +406,7 @@ const drawMapModal = () => {
         e.preventDefault();
 
         initChess();
-        win77.isPlayerOnMap = true;
+        win77.game.player.isOnMap = true;
     });
 
     win77.map = map;

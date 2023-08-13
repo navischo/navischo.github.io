@@ -4,7 +4,7 @@ const parent = document.querySelector("#setting-popup");
 const getNewOption = (value, label) => `<option value="${value.toLowerCase()}">${label.toLowerCase()}</option>`;
 
 const updSectorOptions = () => {
-    if (win77.isPlayerOnMap) {
+    if (win77.game.player.isOnMap) {
         let currentSector = "a0";
         const availableSectorArr = [];
         const availablePointsSetsObj = {};

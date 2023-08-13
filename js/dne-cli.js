@@ -4,7 +4,6 @@ import { appendNewTop } from "./theday/endgame.theday.js";
 
 class DNECli {
     constructor() {
-        this.isPlayerOnMap = false;
         this.inQuestTime = 0;
     }
 
