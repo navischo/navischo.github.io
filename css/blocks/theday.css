@@ -67,7 +67,7 @@
     /*transform-origin: center;*/
     position: fixed;
     top: 0;
-    left: -165px;
+    left: 0px;
     z-index: 1;
 
     /*flex-wrap: wrap;*/

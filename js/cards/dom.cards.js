@@ -80,7 +80,7 @@ const initHandlers = (cardData, controls) => {
 
             initInventory();
 
-            if (win77.game.player.score > win77.game.versusScore) {
+            if (win77.game.totalScore > win77.game.versusScore) {
                 dialog.init(dialog.DIALOG_ID.start);
             }
         }
@@ -236,7 +236,7 @@ const updHand = () => {
 
             initOneMoreBtn();
 
-            if (win77.game.player.score <= win77.game.versusScore && win77.game.player.hand.size === 0) {
+            if (win77.game.totalScore <= win77.game.versusScore && win77.game.player.hand.size === 0) {
                 dialog.init(dialog.DIALOG_ID.oneMore);
                 openPopup("#dialog-popup");
             } else {
