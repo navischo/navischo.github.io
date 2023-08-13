@@ -92,7 +92,7 @@ const initGame = () => {
 win77.setGame(initGame());
 
 //=> 2. Игрок выбрал стартовые карты
-const initPlayer = () => {
+const initPlayer = (id = null) => {
     // console.log(`
     //       _____                    _____                    _____                    _____                            _____                _____                    _____                    _____                _____                    _____
     //      /\\    \\                  /\\    \\                  /\\    \\                  /\\    \\                          /\\    \\              /\\    \\                  /\\    \\                  /\\    \\              /\\    \\                  /\\    \\
@@ -117,7 +117,7 @@ const initPlayer = () => {
 //                                   \\/____/                  \\/____/                  \\/____/                          \\/____/                                       \\/____/                  \\|___|                                        \\/____/
 //
 // `);
-    const savedLogin = localStorage.getItem("login") ? localStorage.getItem("login") : "navi";
+    const savedLogin = id ? id : localStorage.getItem("login") ? localStorage.getItem("login") : "navi";
     // const savedBankroll = +localStorage.getItem("bankroll");
     // console.log(savedBankroll ? `Your bankroll in amount of ${savedBankroll} was restored from LocalStorage. Enjoy!` : `Your starting bankroll is 14000`, savedBankroll); // 970510
 
@@ -144,7 +144,8 @@ const initPlayer = () => {
         cardsInRentIdSet: new Set(),
         availableLocations: ["summer"],
         currentQuest: null,
-        calendar: initCalendar()
+        calendar: initCalendar(),
+        score: 0
     };
 
     selectFirstSetup(player);
@@ -154,5 +155,7 @@ const initPlayer = () => {
 win77.setPlayer(initPlayer());
 
 initInventory();
+
+export { initPlayer };
 
 //=> 3. Игрок использует карты
