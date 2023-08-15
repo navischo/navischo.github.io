@@ -19,7 +19,7 @@ const loadCatalog = () => {
 const initCatalog = (type = null) => {
     let currentCatalogSave = loadCatalog();
 
-    if (!currentCatalogSave && type) {
+    if (type) {
         saveCatalog(type);
     } else {
         type = currentCatalogSave || `npc`;

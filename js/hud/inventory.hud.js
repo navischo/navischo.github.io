@@ -141,7 +141,7 @@ const initInventory = () => {
         initCarInventory(carCard);
     });
 
-    if (win77.game.player.lvl >= 3) {
+    if (win77.game.player.lvl >= 3 && win77.game.player.dia.size > 0) {
         document.querySelector(".js-dia-wrap").classList.remove("fw-d-none");
     }
 

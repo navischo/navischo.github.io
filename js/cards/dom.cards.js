@@ -247,6 +247,8 @@ const updHand = () => {
 }
 
 win77.putCardAtPlayersHand(5);
+
+// preparePlayPage();
 win77.pokeButton.dia.goToPage("hud");
 
 

@@ -491,6 +491,34 @@ body {
     font-size: 2em;
 }
 
+button.next-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 50px;
+    padding: 7px;
+    /* border-right: 2px solid var(--light-color); */
+
+    overflow: hidden;
+    cursor: pointer;
+
+    color: white;
+    font-family: "Press Start 2P", "JetBrains Mono", sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+
+border-radius: 0;
+
+}
+
+.next-btn--fixed {
+    position: fixed;
+    right: 20px;
+    top: 68px;
+    z-index: 10;
+}
+
 .hud-btn {
     display: flex;
     align-items: center;
