@@ -946,6 +946,16 @@ const initDNELootArr = () => {
     LootArr.push(new DNELootCard("demo-phonk-sesh-4", "P H O N K <br>S E S H 4", "Демо дає можливість показати лейблам що ти хочеш записати. Можливо тобі пощастить знайти простір з якісною аппаратурою, зробити реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу. Бонус цього демо подвоюється, якщо його грати на окремій Rock сцені.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії.", "https://lh4.googleusercontent.com/654SFzeubpegErNPhQDo5wdrUdd4EaggVTxLdCTI2g24W8MjOGNGY3D5nsDCmOr0K40=w2400", 1, 0, "Демо, 85m of Phonk Trap", STRINGS.DEMO_LONGLINE, "", true, "sound", "https://youtu.be/f292QkgJMYc"));
     LootArr.push(new DNELootCard("demo-enter-void", "ENTER THE VOID 2", "Демо дає можливість показати лейблам що ти хочеш записати. Можливо тобі пощастить знайти простір з якісною аппаратурою, зробити реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу. Бонус цього демо подвоюється, якщо його грати на окремій Rock сцені.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії.", "https://lh3.googleusercontent.com/SWCAFtVMEBd7flzl7L1olK6xDf_N5kHOs8kUHDiqB0_BVZDj9wDM13JdnekFX4AB9Xk=w2400", 1, 0, "Демо, 18m of Experimental Ambient", STRINGS.DEMO_LONGLINE, "", true, "sound", "https://youtu.be/aeIZnAaHL88"));
 
+    // Phonk Fridays 010
+    //
+    //
+    const CYBER_PHONK_DEMO_LONGLINE = "";
+    const CYBER_PHONK_DEMO_SHORTLINE = `${STRINGS.DEMO_LONGLINE}`;
+    const CYBER_PHONK_DEMO_IMG_ID = `1YB2SvhUkEr2l4QBxztc8zNbCSZxN9NFc`;
+    const CYBER_PHONK_DEMO_IMG = `https://drive.google.com/uc?id=${CYBER_PHONK_DEMO_IMG_ID}`;
+
+    LootArr.push(new DNELootCard("demo-cyber-phonk", "Cyberphonk", CYBER_PHONK_DEMO_LONGLINE, CYBER_PHONK_DEMO_IMG, 3, 0, "Демо, 28m of  of Phonk Trap Electronic", CYBER_PHONK_DEMO_SHORTLINE, "", true, "sound", "https://youtu.be/OhvmwTpiRIw"));
+
     const TRAPPIN_JAPAN_DEMO_IMG_ID = `1jICz5dgKLfs4Y-sATRuifkxgQtmfnhLX`;
     const TRAPPIN_JAPAN_DEMO_IMG = `https://drive.google.com/uc?id=${TRAPPIN_JAPAN_DEMO_IMG_ID}`;
 
@@ -980,16 +990,6 @@ const initDNELootArr = () => {
 
     LootArr.push(new DNELootCard("demo-patience", "P A T I E N C E", DEMO_PATIENCE_LONGLINE, DEMO_PATIENCE_IMG, 2, 0, "Демо, 39m of Chillwave Synthwave Retrowave", DEMO_PATIENCE_SHORTLINE, "", true, "sound", "https://youtu.be/Vd-tURJ4ThM"));
 
-    // HARDWAVE PHONK MIX
-    //
-    //
-    const HARDWAVE_DEMO_LONGLINE = "";
-    const HARDWAVE_DEMO_SHORTLINE = `${STRINGS.DEMO_LONGLINE}`;
-    const HARDWAVE_DEMO_IMG_ID = `12xpLKOEc3Zj2XNh0DmlPZGIENrA8K2xL`;
-    const HARDWAVE_DEMO_IMG = `https://drive.google.com/uc?id=${HARDWAVE_DEMO_IMG_ID}`;
-
-    LootArr.push(new DNELootCard("demo-hardwave", "HARDWAVE PHONK MIX", HARDWAVE_DEMO_LONGLINE, HARDWAVE_DEMO_IMG, 1, 0, "Демо, 76m of Hardwave Phonk", HARDWAVE_DEMO_SHORTLINE, "", true, "sound", "https://youtu.be/9GDnI1tCoZM"));
-
     // CHILL DUDE HERE
     //
     //
@@ -999,6 +999,36 @@ const initDNELootArr = () => {
     const CHILL_DUDE_HERE_DEMO_IMG = `https://drive.google.com/uc?id=${CHILL_DUDE_HERE_DEMO_IMG_ID}`;
 
     LootArr.push(new DNELootCard("demo-chill-dude-here", "CHILL DUDE HERE", CHILL_DUDE_HERE_DEMO_LONGLINE, CHILL_DUDE_HERE_DEMO_IMG, 2, 0, "Демо, 242m of Ambient Chillwave", CHILL_DUDE_HERE_DEMO_SHORTLINE, "", true, "sound"));
+
+    // Eighties Music... but it has been turned medieval!
+    //
+    //
+    const BARDCORE_80_DEMO_LONGLINE = "";
+    const BARDCORE_80_DEMO_SHORTLINE = `${STRINGS.DEMO_LONGLINE_SHORT}`;
+    const BARDCORE_80_DEMO_IMG_ID = `1jqi5ZEiuMJLJtWltsixQYzjwvHpSpJEc`;
+    const BARDCORE_80_DEMO_IMG = `https://drive.google.com/uc?id=${BARDCORE_80_DEMO_IMG_ID}`;
+
+    LootArr.push(new DNELootCard("demo-medieval-80", "Eighties Music... but it has been turned medieval!", BARDCORE_80_DEMO_LONGLINE, BARDCORE_80_DEMO_IMG, 2, 0, "Демо, 92m of Bardcore Ambient", BARDCORE_80_DEMO_SHORTLINE, "", true, "sound", "https://youtu.be/d47Wr2Gcpko"));
+
+    // Dr. Dre Beats but they're MEDIEVAL
+    //
+    //
+    const MEDIAEVAL_DRE_DEMO_LONGLINE = "";
+    const MEDIAEVAL_DRE_DEMO_SHORTLINE = `${STRINGS.DEMO_LONGLINE}`;
+    const MEDIAEVAL_DRE_DEMO_IMG_ID = `1iZkCjwKMZb87yi23bT-vL3ew9m9-1Dk_`;
+    const MEDIAEVAL_DRE_DEMO_IMG = `https://drive.google.com/uc?id=${MEDIAEVAL_DRE_DEMO_IMG_ID}`;
+
+    LootArr.push(new DNELootCard("demo-medieval-dre", "Dr. Dre Beats but they're MEDIEVAL", MEDIAEVAL_DRE_DEMO_LONGLINE, MEDIAEVAL_DRE_DEMO_IMG, 2, 0, "Демо, 58m of Bardcore Hip-Hop", MEDIAEVAL_DRE_DEMO_SHORTLINE, "", true, "sound", "https://youtu.be/R1rVTOHWhYc"));
+
+    // HARDWAVE PHONK MIX
+    //
+    //
+    const HARDWAVE_DEMO_LONGLINE = "";
+    const HARDWAVE_DEMO_SHORTLINE = `${STRINGS.DEMO_LONGLINE}`;
+    const HARDWAVE_DEMO_IMG_ID = `12xpLKOEc3Zj2XNh0DmlPZGIENrA8K2xL`;
+    const HARDWAVE_DEMO_IMG = `https://drive.google.com/uc?id=${HARDWAVE_DEMO_IMG_ID}`;
+
+    LootArr.push(new DNELootCard("demo-hardwave", "HARDWAVE PHONK MIX", HARDWAVE_DEMO_LONGLINE, HARDWAVE_DEMO_IMG, 1, 0, "Демо, 76m of Hardwave Phonk", HARDWAVE_DEMO_SHORTLINE, "", true, "sound", "https://youtu.be/9GDnI1tCoZM"));
 
     // Sing Me a Lullaby, My Sweet Temptation
     //
