@@ -491,6 +491,13 @@ body {
     font-size: 2em;
 }
 
+.next-btns.--fixed {
+    position: fixed;
+    right: 20px;
+    top: 68px;
+    z-index: 10;
+}
+
 button.next-btn {
     display: flex;
     align-items: center;
@@ -510,13 +517,6 @@ button.next-btn {
 
 border-radius: 0;
 
-}
-
-.next-btn--fixed {
-    position: fixed;
-    right: 20px;
-    top: 68px;
-    z-index: 10;
 }
 
 .hud-btn {

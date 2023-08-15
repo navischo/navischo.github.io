@@ -6,6 +6,7 @@ import { hudMarkup } from "./dom.hud.js";
 import { updHand } from "../cards/dom.cards.js";
 import { initScore, updScore } from "./score.hud.js";
 import {initCatalog} from "../catalog/dom.catalog.js";
+import {openPopup} from "../popup/dom.popup.jquery.js";
 
 const PAGE_NAMES = {
     enter: "enter",
@@ -18,7 +19,9 @@ const PAGE_NAMES = {
     hud: "hud",
     event: "event",
     admin: "admin",
-    board: "board"
+    board: "board",
+    map: "map",
+    setting: "setting",
 };
 
 const isItCardsPage = (name) => name === PAGE_NAMES.npc || name === PAGE_NAMES.class || name === PAGE_NAMES.loot;
@@ -26,7 +29,8 @@ const isItCardsPage = (name) => name === PAGE_NAMES.npc || name === PAGE_NAMES.c
 
 const PIPELINES = {
     init: [PAGE_NAMES.enter, PAGE_NAMES.npc, PAGE_NAMES.class, PAGE_NAMES.loot, PAGE_NAMES.hud, PAGE_NAMES.event, PAGE_NAMES.board],
-    easy: [PAGE_NAMES.play, PAGE_NAMES.event, PAGE_NAMES.admin, PAGE_NAMES.loot]
+    easy: [PAGE_NAMES.play, PAGE_NAMES.event, PAGE_NAMES.admin, PAGE_NAMES.loot],
+    bunny: [PAGE_NAMES.play, PAGE_NAMES.map, PAGE_NAMES.setting, PAGE_NAMES.event, PAGE_NAMES.admin, PAGE_NAMES.loot],
 };
 
 const body = document.querySelector("body");
@@ -52,7 +56,7 @@ win77.router = {
     isLogin: true,
     pipeline: PIPELINES.easy,
     currentPage: currentPage,
-    nextPageIndex: 0,
+    nextPageIndex: 1,
     nav: initNav()
 };
 
@@ -68,13 +72,12 @@ const swipePage = (name) => {
         swiper.slideTo(3, 0);
     } else if (name === PAGE_NAMES.admin) {
         swiper.slideTo(1, 0);
+    } else if (name === PAGE_NAMES.map) {
+        openPopup(`#map-popup`);
+    } else if (name === PAGE_NAMES.setting) {
+        openPopup(`#setting-popup`);
     } else {
         swiper.slideTo(1, 0);
-    }
-
-    win77.router.nextPageIndex++;
-    if (win77.router.nextPageIndex >= win77.router.pipeline.length) {
-        win77.router.nextPageIndex = 0;
     }
 }
 
@@ -101,17 +104,45 @@ win77.pokeButton.dia.goToPage = goToPage;
 const nextBtn = document.querySelector("#next-btn");
 nextBtn.addEventListener("click", () => {
     win77.pokeButton.dia.goToPage(win77.router.pipeline[win77.router.nextPageIndex]);
+
+    win77.router.nextPageIndex++;
+    if (win77.router.nextPageIndex >= win77.router.pipeline.length) {
+        win77.router.nextPageIndex = 0;
+    }
+
+    nextBtn.textContent = win77.router.pipeline[win77.router.nextPageIndex];
+
     win77.router.nextPageIndex !== 1 ? hideArrows() : showArrows();
 });
 
 const hideArrows = () => body.classList.add("hide-arrows");
 const showArrows = () => body.classList.remove("hide-arrows");
 
-const startPipe = () => {
-    hideArrows();
+const startPipe = (id) => {
+    win77.router.pipeline = PIPELINES[id];
+    win77.router.nextPageIndex = 1;
+    addOptionalNextBtn(`loot`);
+
+    return win77.router;
 }
 
 win77.startPipe = startPipe;
+
+const addOptionalNextBtn = (pageToGo) => {
+    const parent = document.querySelector(".js-next-btns");
+    const btn = document.createElement("button");
+    btn.classList.add("js-optional-next");
+    btn.classList.add("cp-button");
+    btn.classList.add("next-btn");
+    btn.textContent = pageToGo;
+
+    btn.addEventListener("click", () => {
+        win77.pokeButton.dia.goToPage(pageToGo);
+        btn.remove();
+    });
+
+    parent.appendChild(btn);
+}
 
 // const portalParent = document.querySelector(".js-portals-parent");
 // const portalNodes = portalParent.querySelectorAll(".js-portal");
