@@ -328,10 +328,19 @@ video {
 
 @media screen and (max-width: 1000px) {
     .description-box {
-        display: none !important;
+        left: 10px;
+        bottom: 10px;
+        right: 10px;
+        max-width: none!important;
+        max-height: 60vw;
+    }
+
+    .carousel-item .title {
+        font-size: 22px;
     }
 
     .name {
+        top: 10px!important;
         left: 30px;
         text-align: left;
         font-size: clamp(35px, 8vw, 130px);
@@ -376,9 +385,9 @@ video {
         -moz-osx-font-smoothing: grayscale;
     }
 
-    .description-box {
-        display: none !important;
-    }
+    /*.description-box {*/
+    /*    display: none !important;*/
+    /*}*/
 
     /* LAYOUT */
 
