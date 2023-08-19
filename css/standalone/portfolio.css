@@ -188,6 +188,7 @@ body {
     text-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
     font-size: 28px;
     font-family: "Press Start 2P", "Bungee", sans-serif;
+    word-break: break-word;
 }
 
 .carousel-item .num {
@@ -342,12 +343,18 @@ video {
     .name {
         top: 10px!important;
         left: 30px;
-        text-align: left;
+        text-align: right;
         font-size: clamp(35px, 8vw, 130px);
         position: absolute;
         margin-left: auto;
         padding-top: 28px !important;
         z-index: 4;
+    }
+
+    .layout .box {
+        top: 160px;
+        bottom: auto;
+        text-align: right;
     }
 
     .description {
@@ -403,7 +410,7 @@ video {
 
     .layout .box {
         position: absolute;
-        bottom: 0;
+        /*bottom: 0;*/
         left: 12px;
         color: #00ffb4;
         transform-origin: 0% 10%;
