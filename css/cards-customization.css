@@ -19,6 +19,21 @@
     text-shadow: 1px 2px 5px black;
 }
 
+#dne-card-sonya-xb77 .card__preview {
+    position: absolute;
+    max-width: 65%;
+    left: 50%;
+    transform: scale(.9) translate(-126px, -53px);
+}
+
+#dne-card-sonya-xb77 .card__description {
+    position: absolute;
+    z-index: 2;
+    color: black;
+    bottom: 20px;
+    text-shadow: 1px 1px 0px white;
+}
+
 #dne-card-shaman .card__description {
     position: absolute;
     top: 60px;
