@@ -90,8 +90,8 @@ const enterCity = () => {
     console.log("playerSpaceId", playerSpaceId);
     if (playerSpaceId === null) {
         const enterForm = document.querySelector(".js-enter-city");
-        const playerId = document.querySelector(".js-enter-player-id");
-        playerId.textContent = win77.game.player.id;
+        // const playerId = document.querySelector(".js-enter-player-id");
+        // playerId.textContent = win77.game.player.id;
         enterForm.classList.add("--visible");
         initForm3D();
     }
@@ -99,6 +99,7 @@ const enterCity = () => {
 
 win77.clearHouse = () => {
     localStorage.removeItem("my-space-id");
+    enterCity();
 }
 
 export { enterCity };
