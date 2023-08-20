@@ -4,6 +4,8 @@ body {
     overflow: hidden;
     font-family: 'Press Start 2P', cursive;
     height: 100vh;
+    margin: 0;
+
     background: linear-gradient(135deg, #222222, 10%, #161616);
     cursor: none !important;
     line-height: 200%;
