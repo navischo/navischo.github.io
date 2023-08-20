@@ -1,0 +1,67 @@
+.js-open-key-map {
+    cursor: pointer;
+}
+
+#key-map {
+    visibility: hidden;
+    z-index: -1;
+    opacity: 0;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .6);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: .2s ease-in-out;
+}
+
+#key-map.--visible {
+    visibility: visible;
+    z-index: 1350;
+    opacity: 1;
+}
+
+.ctrl-keys {
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+
+    font-size: 36px;
+    line-height: 48px;
+}
+
+.ctrl-key {
+    width: 30vw;
+    font-family: "JetBrains Mono", monospace;
+    display: flex;
+    justify-content: center;
+}
+
+.ctrl-key__descr {
+    max-width: 50%;
+    width: 100%;
+    margin-left: 10px;
+
+    font-weight: 400;
+}
+
+.ctrl-key__sign {
+    padding: 0;
+    max-width: 50%;
+    width: 100%;
+    border: none;
+
+    text-align: right;
+    font-weight: 700;
+    color: yellow;
+    background: transparent;
+    box-shadow: none;
+    cursor: default;
+}

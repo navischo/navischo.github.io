@@ -65,6 +65,7 @@
         <a class="js-open-cs game-menu__list-item">Gig</a>
 <!--        <a class="game-menu__list-item">Mod</a>-->
         <a href="walls/wall.html" class="game-menu__list-item" target="_blank">Wall</a>
+        <a class="js-open-key-map game-menu__list-item">Keyboard</a>
         <a href="#card-builder-popup" class="js-open-card-builder game-menu__list-item" data-advice-id="loadSound">+Sound</a>
         <a class="js-open-background-select game-menu__list-item" data-advice-id="selectBackground">+Background</a>
         <small class="game-menu__version">0.5</small>
@@ -418,7 +419,6 @@
     </a>
 </div>
 
-
 <div id="setting-popup" class="cp-body setting-modal white-popup mfp-hide"><!--custom-scrollbar --y-->
     <div class="js-enter-city enter-city">
         <header class="enter-city__header">
@@ -762,6 +762,16 @@
     </script>
 </div>
 
+
+<div id="key-map">
+    <ul class="js-keys ctrl-keys">
+
+    </ul>
+    <div class="key-tips">
+        <b>[Esc] Close</b>
+    </div>
+</div>
+
 <div id="cs-game">
     <div class="cyber-strike --mp4" style="">
         <div class="cyber-strike__lobby">
@@ -985,6 +995,11 @@
     });
 
     dialog.init();
+
+    $('.js-open-keyboard').magnificPopup({
+        type: 'inline',
+        midClick: true
+    });
 
     $('.js-open-terminal').magnificPopup({
         type: 'inline',

@@ -17,7 +17,8 @@
     opacity: 1;
 }
 
-.game-menu__key-tips {
+.game-menu__key-tips,
+.key-tips {
     position: absolute;
     bottom: 7px;
     right: 7px;

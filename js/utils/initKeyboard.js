@@ -7,6 +7,58 @@ import { win77 } from "../dne-cli.js";
 //     IN_TALK: []
 // }
 
+const KEYS = [
+    {
+        sign: `Shift`,
+        descr: `Head menu`
+    },
+    {
+        sign: `N`,
+        descr: `Hide HUD`
+    },
+    {
+        sign: `H`,
+        descr: `Cutscenes menu`
+    },
+    {
+        sign: `C`,
+        descr: `Cards catalog`
+    }
+];
+
+const keyItemMarkup = (sign, descr) =>
+    `
+        <li class="ctrl-key">
+            <button class="ctrl-key__sign">${sign}</button>
+            <b class="ctrl-key__descr">${descr}</b>
+        </li>
+    `;
+
+const initKeyMap = () => {
+    const listParent = document.querySelector(".js-keys");
+    listParent.innerHTML = KEYS.map((keyObj) => keyItemMarkup(keyObj.sign, keyObj.descr)).join(``);
+
+    const keyMapParent = document.querySelector("#key-map");
+    const closeKeyMapHandler = () => {
+        keyMapParent.classList.remove("--visible");
+        return keyMapParent;
+    };
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+            closeKeyMapHandler();
+        }
+    });
+
+    const openKeyMapBtn = document.querySelector(".js-open-key-map");
+
+    const openKeyMapHandler = () => {
+        keyMapParent.classList.add("--visible");
+        return keyMapParent;
+    };
+
+    openKeyMapBtn.addEventListener("click", openKeyMapHandler);
+}
+
 const initKeyboard = () => {
     document.addEventListener("keydown", (e) => {
         // console.log(e.key, e);
@@ -28,6 +80,8 @@ const initKeyboard = () => {
             cardsNavLink.classList.add("--active");
         }
     });
+
+    initKeyMap();
 }
 
 export { initKeyboard };
