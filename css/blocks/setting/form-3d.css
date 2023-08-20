@@ -113,8 +113,8 @@
     display: none;
 }
 
-input:not([type="radio"]),
-select {
+.form-scene input:not([type="radio"]),
+.form-scene select {
     display: block;
     margin: 0;
     /*     padding: 0 0 0.15em; */
@@ -135,7 +135,7 @@ select:focus {
     outline: none;
 }
 
-input::placeholder {
+.form-scene input::placeholder {
     color: #a0a0a0;
 }
 
@@ -147,15 +147,15 @@ input::placeholder {
     padding-left: 50px;
 }
 
-div.btn.show {
+.form-scene .btn.show {
     opacity: 1 !important;
 }
 
-div.btn.show span {
+.form-scene .btn.show span {
     display: block !important;
 }
 
-div.btn {
+.form-scene .btn {
     position: absolute;
     right: 10px;
     top: 0;
@@ -165,7 +165,7 @@ div.btn {
     opacity: 0;
 }
 
-div.btn span {
+.form-scene .btn span {
     color: #e90052;
     font-size: 1.25rem;
     padding: 10px 25px;
@@ -178,12 +178,12 @@ div.btn span {
     display: none;
 }
 
-div.btn span:hover {
+.form-scene .btn span:hover {
     color: #ffffff !important;
     background: #e90052;
 }
 
-input.label::placeholder {
+.form-scene input.label::placeholder {
     color: #202020 !important;
 }
 
@@ -193,12 +193,12 @@ input.label::placeholder {
     padding-right: 10px;
 }
 
-.radio {
+.form-scene .radio {
     display: flex;
     align-items: center;
 }
 
-.item {
+.form-scene .item {
     width: 46px;
     height: 46px;
     margin: 2px;
@@ -207,91 +207,91 @@ input.label::placeholder {
     border-radius: 4px;
 }
 
-.item:hover {
+.form-scene .item:hover {
     transform: scale(1.2);
 }
 
-body.blue,
-.item.blue {
+.form-scene.blue,
+.form-scene .item.blue {
     background: #04f5ff;
 }
 
-body.yellow,
-.item.yellow {
+.form-scene.yellow,
+.form-scene .item.yellow {
     background: #ebff00;
 }
 
-body.purple,
-.item.purple {
+.form-scene.purple,
+.form-scene .item.purple {
     background: #e90052;
 }
 
-body.green,
-.item.green {
+.form-scene.green,
+.form-scene .item.green {
     background: #00ff85;
 }
 
-body.violet,
-.item.violet {
+.form-scene.violet,
+.form-scene .item.violet {
     background: #38003c;
 }
 
-div.btn.blue span {
+.form-scene .btn.blue span {
     color: #04f5ff;
     border-color: #04f5ff;
 }
 
-div.btn.blue span:hover {
+.form-scene .btn.blue span:hover {
     background: #04f5ff;
 }
 
-div.btn.yellow span {
+.form-scene .btn.yellow span {
     color: #ebff00;
     border-color: #ebff00;
 }
 
-div.btn.yellow span:hover {
+.form-scene .btn.yellow span:hover {
     background: #ebff00;
 }
 
-div.btn.purple span {
+.form-scene .btn.purple span {
     color: #e90052;
     border-color: #e90052;
 }
 
-div.btn.purple span:hover {
+.form-scene .btn.purple span:hover {
     background: #e90052;
 }
 
-div.btn.green span {
+.form-scene .btn.green span {
     color: #00ff85;
     border-color: #00ff85;
 }
 
-div.btn.green span:hover {
+.form-scene .btn.green span:hover {
     background: #00ff85;
 }
 
-div.btn.violet span {
+.form-scene .btn.violet span {
     color: #38003c;
     border-color: #38003c;
 }
 
-div.btn.violet span:hover {
+.form-scene .btn.violet span:hover {
     background: #38003c;
 }
 
-.right {
+.form-scene .right {
     display: flex;
     align-items: center;
 }
 
-.right label {
+.form-scene .right label {
     font-size: 1.5rem;
     font-weight: normal;
 }
 
-.checkbox {
+.form-scene .checkbox {
     padding: 4px;
     border: 3px solid #e90052;
     display: inline-block;
@@ -300,7 +300,7 @@ div.btn.violet span:hover {
     margin: auto 8px;
 }
 
-.checkbox .circle {
+.form-scene .checkbox .circle {
     height: 25px;
     width: 25px;
     border-radius: 100%;
@@ -310,71 +310,71 @@ div.btn.violet span:hover {
     transition: transform 0.25s ease, background 0.25s ease;
 }
 
-.checkbox.checked {
+.form-scene .checkbox.checked {
     background: #e90052;
 }
 
-.checkbox.checked .circle {
+.form-scene .checkbox.checked .circle {
     transform: translateX(25px);
     background: white !important;
 }
 
-.checkbox.blue {
+.form-scene .checkbox.blue {
     border-color: #04f5ff;
 }
 
-.checkbox.blue .circle {
+.form-scene .checkbox.blue .circle {
     background: #04f5ff;
 }
 
-.checkbox.checked.blue {
+.form-scene .checkbox.checked.blue {
     background: #04f5ff;
 }
 
-.checkbox.yellow {
+.form-scene .checkbox.yellow {
     border-color: #ebff00;
 }
 
-.checkbox.yellow .circle {
+.form-scene .checkbox.yellow .circle {
     background: #ebff00;
 }
 
-.checkbox.checked.yellow {
+.form-scene .checkbox.checked.yellow {
     background: #ebff00;
 }
 
-.checkbox.purple {
+.form-scene .checkbox.purple {
     border-color: #e90052;
 }
 
-.checkbox.purple .circle {
+.form-scene .checkbox.purple .circle {
     background: #e90052;
 }
 
-.checkbox.checked.purple {
+.form-scene .checkbox.checked.purple {
     background: #e90052;
 }
 
-.checkbox.green {
+.form-scene .checkbox.green {
     border-color: #00ff85;
 }
 
-.checkbox.green .circle {
+.form-scene .checkbox.green .circle {
     background: #00ff85;
 }
 
-.checkbox.checked.green {
+.form-scene .checkbox.checked.green {
     background: #00ff85;
 }
 
-.checkbox.violet {
+.form-scene .checkbox.violet {
     border-color: #38003c;
 }
 
-.checkbox.violet .circle {
+.form-scene .checkbox.violet .circle {
     background: #38003c;
 }
 
-.checkbox.checked.violet {
+.form-scene .checkbox.checked.violet {
     background: #38003c;
 }
