@@ -526,7 +526,10 @@ body {
 }
 
 button.next-btn {
-    display: flex;
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+
     align-items: center;
     justify-content: center;
     width: 200px;
@@ -542,8 +545,13 @@ button.next-btn {
     font-weight: 700;
     font-size: 22px;
 
-border-radius: 0;
+    border-radius: 0;
+}
 
+button.next-btn.--visible {
+    display: flex;
+    visibility: visible;
+    opacity: 1;
 }
 
 .hud-btn {

@@ -20,6 +20,7 @@ const DIALOG_QUESTIONS = [
                     console.log("Lets Rave");
                     document.querySelector("body").classList.remove("ready-to-start");
                     setupTheday();
+                    win77.router.nextStep();
                 }
             },
             {

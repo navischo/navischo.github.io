@@ -240,6 +240,7 @@ const updHand = () => {
                 dialog.init(dialog.DIALOG_ID.oneMore);
                 openPopup("#dialog-popup");
             } else {
+                win77.router.enableNext();
                 dialog.init(dialog.DIALOG_ID.start);
             }
         });

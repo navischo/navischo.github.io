@@ -38,11 +38,14 @@ const PIPELINES = {
     easy: [{
         pageId: PAGE_NAMES.play,
         line: "Prepare to play",
-        sec: 30
-    }, {
+        sec: 30,
+        disableNext: false
+    },
+    {
         pageId: PAGE_NAMES.play,
         line: "Select lineup",
-        sec: 120
+        sec: 120,
+        disableNext: true
     },
         // todo запустить после диалога "твой лайнап отличный"
         // todo подставить тайминг лайнапа
@@ -51,12 +54,14 @@ const PIPELINES = {
     {
         pageId: PAGE_NAMES.event,
         line: "Meet guests",
-        sec: 120
+        sec: 120,
+        disableNext: false
     },
     {
         pageId: PAGE_NAMES.admin,
         line: "Get ready for next round",
-        sec: 30
+        sec: 30,
+        disableNext: false
     }],
     bunny: [PAGE_NAMES.play, PAGE_NAMES.map, PAGE_NAMES.setting, PAGE_NAMES.event, PAGE_NAMES.admin, PAGE_NAMES.loot],
 };
@@ -142,17 +147,21 @@ const setTiming = (pipeObj) => {
         `;
     const secondsDisplayNode = timingNode.querySelector(".js-timing-sec");
     let sec = pipeObj.sec;
-    win77.router.finishExecution = () => {
-        clearInterval(win77.secInterval);
-        clearTimingNodes();
-        win77.router.changePage(setTiming);
+    win77.router.nextStep = () => {
+        const currentPipeObj = win77.router.nextPageIndex === 0 ? win77.router.nextPageIndex : win77.router.pipeline[win77.router.nextPageIndex - 1];
+        console.log("currentPipeObj", win77.router.pipeline, win77.router.currentPage, currentPipeObj);
+        if (!currentPipeObj.disableNext) {
+            clearInterval(win77.secInterval);
+            clearTimingNodes();
+            win77.router.changePage(setTiming);
+        }
     }
     const secIntervalHandler = () => {
         console.log(`win77.secInterval`, win77.secInterval);
         sec = sec - 1;
         secondsDisplayNode.textContent = sec;
         if (sec === 0) {
-            win77.router.finishExecution();
+            win77.router.nextStep();
         }
     };
     win77.secInterval = setInterval(secIntervalHandler, 1000);
@@ -161,36 +170,44 @@ const setTiming = (pipeObj) => {
     return timingNode;
 }
 
+win77.router.enableNext = () => {
+    win77.router.pipeline[win77.router.nextPageIndex - 1].disableNext = false;
+}
+
 const initNextBtn = () => {
     // условие работы
     // игрок сделал целевое действие
 
-    const nextBtn = document.querySelector("#next-btn");
+    win77.router.nextBtn = document.querySelector("#next-btn");
+    win77.router.nextBtn.classList.add("--visible");
+    win77.router.currentPage = "play";
 
     win77.router.changePage = (changePageCallback = null) => {
         console.log(win77.secInterval);
-        const pipeObj = win77.router.pipeline[win77.router.nextPageIndex];
-        win77.pokeButton.dia.goToPage(pipeObj.pageId);
+        const currentPipeObj = win77.router.nextPageIndex === 0 ? win77.router.nextPageIndex : win77.router.pipeline[win77.router.nextPageIndex - 1];
+        if (currentPipeObj.disableNext) {
+            win77.router.nextBtn.setAttribute("disable", "true");
+        } else {
+            const nextPipeObj = win77.router.pipeline[win77.router.nextPageIndex];
+            win77.pokeButton.dia.goToPage(nextPipeObj.pageId);
 
-        win77.router.nextPageIndex++;
-        if (win77.router.nextPageIndex >= win77.router.pipeline.length) {
-            win77.router.nextPageIndex = 0;
+            win77.router.nextPageIndex++;
+            if (win77.router.nextPageIndex >= win77.router.pipeline.length) {
+                win77.router.nextPageIndex = 0;
+            }
+
+            win77.router.nextBtn.textContent = win77.router.pipeline[win77.router.nextPageIndex].pageId;
+
+            if (changePageCallback) {
+                changePageCallback(nextPipeObj);
+            }
+
+            win77.router.nextPageIndex !== 1 ? hideArrows() : showArrows();
         }
-
-        nextBtn.textContent = pipeObj.pageId;
-
-        if (changePageCallback) {
-            changePageCallback(pipeObj);
-        }
-
-        win77.router.nextPageIndex !== 1 ? hideArrows() : showArrows();
     }
 
-    win77.router.nextBtn = nextBtn;
-    win77.router.nextBtn.addEventListener("click", win77.router.finishExecution);
+    win77.router.nextBtn.addEventListener("click", win77.router.nextStep);
 }
-
-initNextBtn();
 
 const hideArrows = () => body.classList.add("hide-arrows");
 const showArrows = () => body.classList.remove("hide-arrows");
