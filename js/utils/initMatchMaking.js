@@ -9,7 +9,7 @@ import { initInventory } from "../hud/inventory.hud.js";
 import { setExecutive } from "../hud/table.hud.js";
 import { dialog } from "../hud/dialog.hud.js";
 import { openPopup } from "../popup/dom.popup.jquery.js";
-import { setTiming, initNextBtn, PAGE_NAMES } from "../hud/router.hud.js";
+import { setTiming, initNextBtn } from "../hud/router.hud.js";
 
 class DNEPlayer {
     constructor(id, avatar, description) { // дія чи результат?
@@ -207,7 +207,7 @@ const startMatch = () => {
 
     toggleSearch();
     setTiming(win77.router.pipeline[0]);
-    initNextBtn(setTiming);
+    initNextBtn();
 }
 
 const initMatchMaking = () => {

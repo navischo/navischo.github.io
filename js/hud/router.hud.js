@@ -129,17 +129,9 @@ const goToPage = (name) => {
 }
 win77.pokeButton.dia.goToPage = goToPage;
 
-const clearTimingNodes = () => {
-    const timing = document.querySelector(".timing");
-    timing.remove();
-    // const nodes = document.querySelectorAll(".timing");
-    // nodes.forEach((timing) => {
-    //     timing.remove();
-    // });
-}
+const clearTimingNodes = () => document.querySelector(".timing").remove();
 
 const setTiming = (pipeObj) => {
-    // todo зачистка по нажанию на некст-бтн
     const parent = document.querySelector("body");
     const timingNode = document.createElement("section");
     timingNode.classList.add("timing");
@@ -169,9 +161,8 @@ const setTiming = (pipeObj) => {
     return timingNode;
 }
 
-const initNextBtn = (changePageCallback = null) => {
+const initNextBtn = () => {
     // условие работы
-    // таймер закончился
     // игрок сделал целевое действие
 
     const nextBtn = document.querySelector("#next-btn");
