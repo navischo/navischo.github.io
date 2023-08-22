@@ -54,6 +54,7 @@
 @import "blocks/house.css";
 @import "blocks/terminal.css";
 @import "blocks/ctrl-keys.css";
+@import "blocks/player-for-mm.css";
 
 /*CUSTOMIZATION*/
 @import "./i-customization.css";

@@ -1,0 +1,98 @@
+.players-for-mm {
+    position: absolute;
+    right: 65px;
+    bottom: 65px;
+
+    max-width: 460px;
+    width: 100%;
+    min-height: 240px;
+    padding: 15px 20px;
+    border: none;
+    font-size: 20px;
+    font-family: "JetBrains Mono", monospace;
+    /* background: transparent; */
+    background-color: var(--colors-bg--500);
+    background-image: radial-gradient( ellipse at 33% 10%, #461616 0%, transparent 75% );
+    box-shadow: inset 0 0 0 3px var(--colors-primary--500);
+}
+
+.players-for-mm::after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    z-index: -1;
+    background-color: var(--colors-primary--500);
+    box-shadow: var(--ui-glow);
+}
+
+.player-for-mm {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.player-for-mm__controls {
+    margin-right: 10px;
+}
+
+.player-for-mm__controls > button {
+    font-size: 20px;
+    padding: 0 10px;
+    font-weight: 700;
+    color: black;
+    border: 2px solid black;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 2px;
+    clip-path: var(--ui-notch-path);
+    cursor: pointer;
+    display: inline-block;
+    font-family: var(--fonts-primary);
+    letter-spacing: 0.045em;
+    text-align: left;
+    text-transform: uppercase;
+    transform: translateY(0);
+    transition: .1s ease-in;
+}
+
+.player-for-mm__controls > button::before {
+    background-color: black;
+    bottom: 10px;
+    content: "";
+    display: block;
+    height: 3px;
+    position: absolute;
+    right: 2px;
+    top: auto;
+    transform: rotate(315deg) translateY(10px);
+    width: var(--ui-notch-hypotenuse);
+    z-index: 31;
+    transition: .1s ease-in;
+}
+
+.player-for-mm__controls > button:hover {
+    background-color: rgba(80, 233, 239, 0.7)!important;
+    border-color: var(--colors-secondary--500);
+}
+
+.player-for-mm__controls > button:hover::before {
+    background-color: var(--colors-secondary--500);
+}
+
+.player-for-mm__controls > button:active {
+    transform: translateY(1px);
+}
+
+.player-for-mm__id {
+    margin-right: 10px;
+}
+
+.player-for-mm__lvl {
+    width: 100%;
+    text-align: right;
+}
+
+.player-for-mm__lvl::before {
+    content: "lvl";
+}

@@ -37,6 +37,16 @@
     z-index: 11;
 }
 
+.matchmaking__players {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.matchmaking__players.--visible {
+    visibility: visible;
+    opacity: 1;
+}
+
 .matchmaking__controls {
     position: absolute;
 

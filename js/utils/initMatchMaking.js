@@ -61,6 +61,35 @@ const invitePlayer = (id) => {
 
 win77.invite = invitePlayer;
 
+const getPlayerItemMarkup = (playerObj) =>
+    `
+        <div class="player-for-mm">
+            <div class="player-for-mm__controls">
+                <button class="js-invite" data-id="${playerObj.id}">+</button>
+            </div>
+            <div class="player-for-mm__id">${playerObj.id}</div>
+        </div>
+    `;
+
+const initPlayersList = () => {
+    const parent = document.querySelector(".js-players-matchmaking");
+    parent.innerHTML = Array.from(win77.players).map((playerObj) => getPlayerItemMarkup(playerObj)).join(``);
+    parent.addEventListener("click", (e) => {
+        if (e.target.classList.contains("js-invite")) {
+            const newPlayerId = e.target.dataset.id;
+            const isPlayerInLobby = Array.from(win77.lobby).find((playerObj) => playerObj.id === newPlayerId);
+            if (!isPlayerInLobby) {
+                win77.invite(newPlayerId);
+            }
+        }
+    });
+};
+
+const showPlayersList = () => {
+    const parent = document.querySelector(".js-players-wrap");
+    parent.classList.add("--visible");
+}
+
 const switchPlayer = (id) => {
     const playerById = Array.from(win77.lobby).find((PlayerObj) => PlayerObj.id === id);
     const prevPlayer = win77.game.player;
@@ -207,10 +236,12 @@ const initMatchMaking = () => {
         openSettingsBtn.addEventListener("click", openSettingsHandler);
         inviteRandomBtns.forEach((inviteRandomBtn) => {
             inviteRandomBtn.addEventListener("click", () => {
+                showPlayersList();
                 // todo invite random player not from lobby
                 // win77.invite(Array.from(win77.players)[getRandomInt(win77.players.size)].id);
             });
         });
+        initPlayersList();
     }
 
     initHandlers();
