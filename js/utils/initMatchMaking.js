@@ -9,6 +9,7 @@ import { initInventory } from "../hud/inventory.hud.js";
 import { setExecutive } from "../hud/table.hud.js";
 import { dialog } from "../hud/dialog.hud.js";
 import { openPopup } from "../popup/dom.popup.jquery.js";
+import { setTiming, initNextBtn, PAGE_NAMES } from "../hud/router.hud.js";
 
 class DNEPlayer {
     constructor(id, avatar, description) { // дія чи результат?
@@ -188,6 +189,27 @@ const getMatchMakingOptionsMarkup = () => `
     </fieldset>
 `;
 
+const toggleSearch = () => {
+    const parent = document.querySelector("#matchmaking");
+    const startMatchmakingBtn = document.querySelector(".js-start-matchmaking");
+    const setMatchmakingBtn = document.querySelector(".js-set-matchmaking");
+    const playerMatchmakingBtn = document.querySelector(".js-player-matchmaking");
+
+    parent.classList.toggle("--search");
+    setMatchmakingBtn.classList.toggle("--search");
+    startMatchmakingBtn.classList.toggle("--active");
+    playerMatchmakingBtn.classList.toggle("--ready");
+}
+
+const startMatch = () => {
+    const matchmakingWindow = document.querySelector("#matchmaking");
+    matchmakingWindow.classList.remove("--visible");
+
+    toggleSearch();
+    setTiming(win77.router.pipeline[0]);
+    initNextBtn(setTiming);
+}
+
 const initMatchMaking = () => {
     const parent = document.querySelector("#matchmaking");
     const hostNode = document.querySelector(".js-squad-host");
@@ -204,8 +226,6 @@ const initMatchMaking = () => {
         const closeBtn = parent.querySelector(".js-exit-matchmaking");
 
         const startMatchmakingBtn = document.querySelector(".js-start-matchmaking");
-        const setMatchmakingBtn = document.querySelector(".js-set-matchmaking");
-        const playerMatchmakingBtn = document.querySelector(".js-player-matchmaking");
         const openSettingsBtn = document.querySelector(".js-open-mm-settings");
         const inviteRandomBtns = document.querySelectorAll(".js-invite-random");
 
@@ -218,10 +238,12 @@ const initMatchMaking = () => {
         };
 
         const startBtnHandler = () => {
-            parent.classList.toggle("--search");
-            setMatchmakingBtn.classList.toggle("--search");
-            startMatchmakingBtn.classList.toggle("--active");
-            playerMatchmakingBtn.classList.toggle("--ready");
+            toggleSearch();
+
+            const startTimeout = setTimeout(() => {
+                startMatch();
+                clearTimeout(startTimeout);
+            }, 3000);
         }
 
         const openSettingsHandler = () => {

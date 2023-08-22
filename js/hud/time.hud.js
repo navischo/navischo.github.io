@@ -1,8 +1,8 @@
-import { createNode } from "../utils/createNode.js";
+// import { createNode } from "../utils/createNode.js";
 import { win77 } from "../dne-cli.js";
 
-const body = document.querySelector("body");
-createNode(body, "p", "", "time");
+// const body = document.querySelector("body");
+// createNode(body, "p", "", "js-timing");
 
 // const setCountdown = () => {
 //     const countDownDate = new Date("2023-04-30T00:00:00Z").getTime();

@@ -27,9 +27,37 @@ const PAGE_NAMES = {
 const isItCardsPage = (name) => name === PAGE_NAMES.npc || name === PAGE_NAMES.class || name === PAGE_NAMES.loot;
 
 
+// const PIPELINES = {
+//     init: [PAGE_NAMES.enter, PAGE_NAMES.npc, PAGE_NAMES.class, PAGE_NAMES.loot, PAGE_NAMES.hud, PAGE_NAMES.event, PAGE_NAMES.board],
+//     easy: [PAGE_NAMES.play, PAGE_NAMES.event, PAGE_NAMES.admin, PAGE_NAMES.loot],
+//     bunny: [PAGE_NAMES.play, PAGE_NAMES.map, PAGE_NAMES.setting, PAGE_NAMES.event, PAGE_NAMES.admin, PAGE_NAMES.loot],
+// };
+
 const PIPELINES = {
     init: [PAGE_NAMES.enter, PAGE_NAMES.npc, PAGE_NAMES.class, PAGE_NAMES.loot, PAGE_NAMES.hud, PAGE_NAMES.event, PAGE_NAMES.board],
-    easy: [PAGE_NAMES.play, PAGE_NAMES.event, PAGE_NAMES.admin, PAGE_NAMES.loot],
+    easy: [{
+        pageId: PAGE_NAMES.play,
+        line: "Prepare to play",
+        sec: 30
+    }, {
+        pageId: PAGE_NAMES.play,
+        line: "Select lineup",
+        sec: 120
+    },
+        // todo запустить после диалога "твой лайнап отличный"
+        // todo подставить тайминг лайнапа
+        // todo срезать тайминг если он больше максимального
+        // todo дизейбл кнопки пока не будет завершен ивент
+    {
+        pageId: PAGE_NAMES.event,
+        line: "Meet guests",
+        sec: 120
+    },
+    {
+        pageId: PAGE_NAMES.admin,
+        line: "Get ready for next round",
+        sec: 30
+    }],
     bunny: [PAGE_NAMES.play, PAGE_NAMES.map, PAGE_NAMES.setting, PAGE_NAMES.event, PAGE_NAMES.admin, PAGE_NAMES.loot],
 };
 
@@ -41,10 +69,10 @@ const initNav = () => {
     const nav = {};
     nav.pipe = PIPELINES.easy;
 
-    nav.pipe.forEach((page) => {
-        nav[page] = {};
-        nav[page].go = () => {
-            goToPage(page);
+    nav.pipe.forEach((step) => {
+        nav[step.pageId] = {};
+        nav[step.pageId].go = () => {
+            goToPage(step.pageId);
         };
     });
 
@@ -101,19 +129,77 @@ const goToPage = (name) => {
 }
 win77.pokeButton.dia.goToPage = goToPage;
 
-const nextBtn = document.querySelector("#next-btn");
-nextBtn.addEventListener("click", () => {
-    win77.pokeButton.dia.goToPage(win77.router.pipeline[win77.router.nextPageIndex]);
+const clearTimingNodes = () => {
+    const timing = document.querySelector(".timing");
+    timing.remove();
+    // const nodes = document.querySelectorAll(".timing");
+    // nodes.forEach((timing) => {
+    //     timing.remove();
+    // });
+}
 
-    win77.router.nextPageIndex++;
-    if (win77.router.nextPageIndex >= win77.router.pipeline.length) {
-        win77.router.nextPageIndex = 0;
+const setTiming = (pipeObj) => {
+    // todo зачистка по нажанию на некст-бтн
+    const parent = document.querySelector("body");
+    const timingNode = document.createElement("section");
+    timingNode.classList.add("timing");
+    timingNode.innerHTML =
+        `
+            <div class="js-timing-sec timing__sec">${pipeObj.sec}</div>
+            <div class="timing__line">${pipeObj.line}</div>
+        `;
+    const secondsDisplayNode = timingNode.querySelector(".js-timing-sec");
+    let sec = pipeObj.sec;
+    win77.router.finishExecution = () => {
+        clearInterval(win77.secInterval);
+        clearTimingNodes();
+        win77.router.changePage(setTiming);
+    }
+    const secIntervalHandler = () => {
+        console.log(`win77.secInterval`, win77.secInterval);
+        sec = sec - 1;
+        secondsDisplayNode.textContent = sec;
+        if (sec === 0) {
+            win77.router.finishExecution();
+        }
+    };
+    win77.secInterval = setInterval(secIntervalHandler, 1000);
+
+    parent.appendChild(timingNode);
+    return timingNode;
+}
+
+const initNextBtn = (changePageCallback = null) => {
+    // условие работы
+    // таймер закончился
+    // игрок сделал целевое действие
+
+    const nextBtn = document.querySelector("#next-btn");
+
+    win77.router.changePage = (changePageCallback = null) => {
+        console.log(win77.secInterval);
+        const pipeObj = win77.router.pipeline[win77.router.nextPageIndex];
+        win77.pokeButton.dia.goToPage(pipeObj.pageId);
+
+        win77.router.nextPageIndex++;
+        if (win77.router.nextPageIndex >= win77.router.pipeline.length) {
+            win77.router.nextPageIndex = 0;
+        }
+
+        nextBtn.textContent = pipeObj.pageId;
+
+        if (changePageCallback) {
+            changePageCallback(pipeObj);
+        }
+
+        win77.router.nextPageIndex !== 1 ? hideArrows() : showArrows();
     }
 
-    nextBtn.textContent = win77.router.pipeline[win77.router.nextPageIndex];
+    win77.router.nextBtn = nextBtn;
+    win77.router.nextBtn.addEventListener("click", win77.router.finishExecution);
+}
 
-    win77.router.nextPageIndex !== 1 ? hideArrows() : showArrows();
-});
+initNextBtn();
 
 const hideArrows = () => body.classList.add("hide-arrows");
 const showArrows = () => body.classList.remove("hide-arrows");
@@ -155,4 +241,4 @@ const addOptionalNextBtn = (pageToGo) => {
 //     });
 // });
 
-export { goToPage, PAGE_NAMES, isItCardsPage };
+export { goToPage, PAGE_NAMES, isItCardsPage, initNextBtn, setTiming };

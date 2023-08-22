@@ -395,15 +395,42 @@ body {
 }
 
 
-.time {
+.timing {
     position: fixed;
-    bottom: 0;
+    top: 14px;
+    right: 228px;
     z-index: 30;
-    left: 50%;
-    transform: translateX(-50%);
+    /*left: 50%;*/
+    /*transform: translateX(-50%);*/
+
+    display: flex;
+    max-width: 360px;
+    width: 100%;
 
     font-family: "JetBrains Mono", monospace;
+}
 
+.timing__sec {
+    margin-right: 6px;
+    padding: 8px 12px;
+
+    color: yellow;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    background: rgba(0, 0, 0, .6);
+    border-radius: 3px;
+}
+
+.timing__line {
+    padding: 8px 12px;
+
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    background: rgba(0, 0, 0, .6);
+    border-radius: 3px;
 }
 
 .hud-top {
