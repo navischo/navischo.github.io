@@ -20,6 +20,8 @@ const setupTheday = () => {
         lineup.push({line: cardTitleArr[i], time: time});
     });
     win77.setLineup(lineupLength, lineup);
+    console.log("win77.router", win77.router);
+    win77.router.pipeline[win77.router.nextPageIndex].sec = lineupLength;
 
     try {
         document.querySelector("#dne-page-up").classList.add("js-open");

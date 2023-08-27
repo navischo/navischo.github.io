@@ -21,6 +21,7 @@ const DIALOG_QUESTIONS = [
                     document.querySelector("body").classList.remove("ready-to-start");
                     setupTheday();
                     win77.router.nextStep();
+                    // todo начать ивент сразу
                 }
             },
             {
