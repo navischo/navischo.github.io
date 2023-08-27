@@ -72,9 +72,11 @@ class DNECli {
         body.querySelector(".js-bankroll-balance").textContent = win77.game.player.balance.bankroll;
     }
 
-    giveSkillPointsToPlayer(count) {
-        this.game.player.balance.skillPoints = this.game.player.balance.skillPoints + count;
-        if (this.game.player.balance.skillPoints >= 10) {
+    finishRound() {
+        this.game.round = this.game.round + 1;
+        const maxRounds = win77.game.options?.roundLimit ? win77.game.options.roundLimit : 7;
+
+        if (this.game.round >= maxRounds) {
             this.game.final = {
                 result: {
                     bankroll: this.game.player.balance.bankroll
@@ -87,7 +89,10 @@ class DNECli {
             appendNewTop(this.game.player.id, this.game.player.balance.bankroll);
             console.log("Seems like you win the game. Congratulations!", win77.game);
         }
+    }
 
+    giveSkillPointsToPlayer(count) {
+        this.game.player.balance.skillPoints = this.game.player.balance.skillPoints + count;
         return this.game.player.balance.skillPoints;
     }
 

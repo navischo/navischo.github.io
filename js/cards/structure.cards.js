@@ -41,6 +41,7 @@ const initGame = () => {
             }
         },
         calendar: initCalendar(),
+        round: 0,
         final: false
     }
 

@@ -174,7 +174,7 @@ const getMatchMakingOptionsMarkup = () => `
     </fieldset>
     
     <fieldset class="field --dialog">
-        <label class="glow text" for="max-time-per-round">Max time per round</label>
+        <label class="glow text" for="max-time-per-round">Max time per round(sec)</label>
         <input id="max-time-per-round" type="number" placeholder="unlimited">
     </fieldset>
     
@@ -238,13 +238,18 @@ const initMatchMaking = () => {
         };
 
         const setOptions = () => {
+            const roundLimitInput = document.querySelector("#round-limit");
             const maxTimeInput = document.querySelector("#max-time-per-round");
             const startBankrollInput = document.querySelector("#start-bankroll");
             const startSoulsInput = document.querySelector("#start-souls");
             const options = {
+                roundLimit: null,
                 maxTime: null,
                 startBankroll: null,
                 startSouls: null,
+            }
+            if (+roundLimitInput?.value >= 2) {
+                options.roundLimit = +roundLimitInput.value;
             }
             if (+maxTimeInput?.value > 5) {
                 options.maxTime = +maxTimeInput.value;
