@@ -71,6 +71,8 @@ const DIALOG_QUESTIONS = [
                 text: "Start",
                 action: (e) => {
                     console.log("Start");
+                    // todo применить настройки матча
+                    win77.setMatchmakingOptions();
                     win77.startMatchmaking();
                     closePopup();
                     // save new options

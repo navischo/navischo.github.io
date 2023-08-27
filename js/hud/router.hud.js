@@ -48,7 +48,6 @@ const PIPELINES = {
         disableNext: true
     },
         // todo срезать тайминг если он больше максимального
-        // todo дизейбл кнопки пока не будет завершен ивент
     {
         pageId: PAGE_NAMES.event,
         line: "Meet guests",

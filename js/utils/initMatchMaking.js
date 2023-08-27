@@ -237,6 +237,37 @@ const initMatchMaking = () => {
             // }
         };
 
+        const setOptions = () => {
+            const maxTimeInput = document.querySelector("#max-time-per-round");
+            const startBankrollInput = document.querySelector("#start-bankroll");
+            const startSoulsInput = document.querySelector("#start-souls");
+            const options = {
+                maxTime: null,
+                startBankroll: null,
+                startSouls: null,
+            }
+            if (+maxTimeInput?.value > 5) {
+                options.maxTime = +maxTimeInput.value;
+            }
+            if (+startBankrollInput?.value > 1000) {
+                options.startBankroll = +startBankrollInput.value;
+            }
+            if (+startSoulsInput?.value >= 0) {
+                options.startSouls = +startSoulsInput.value;
+            }
+            win77.game.options = options;
+            win77.game.player.balance.bankroll = win77.game.options.startBankroll;
+            win77.game.player.balance.skillPoints = win77.game.options.startSouls;
+            if (win77.lobby.size > 0) {
+                win77.lobby.forEach((player) => {
+                    player.balance.bankroll = win77.game.options.startBankroll;
+                    player.balance.skillPoints = win77.game.options.startSouls;
+                });
+            }
+            updBalanceNode();
+            console.log("win77.game.options", win77.game.options, win77);
+        }
+
         const startBtnHandler = () => {
             toggleSearch();
 
@@ -252,6 +283,7 @@ const initMatchMaking = () => {
             openPopup("#dialog-popup");
         }
 
+        win77.setMatchmakingOptions = setOptions;
         closeBtn.addEventListener("click", closeBtnHandler);
         startMatchmakingBtn.addEventListener("click", startBtnHandler);
         win77.startMatchmaking = startBtnHandler;

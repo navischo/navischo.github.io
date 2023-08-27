@@ -19,6 +19,11 @@ const setupTheday = () => {
 
         lineup.push({line: cardTitleArr[i], time: time});
     });
+
+    if (win77.game.options?.maxTime < lineupLength) {
+        lineupLength = win77.game.options?.maxTime;
+    }
+
     win77.setLineup(lineupLength, lineup);
     console.log("win77.router", win77.router);
     win77.router.pipeline[win77.router.nextPageIndex].sec = lineupLength;
