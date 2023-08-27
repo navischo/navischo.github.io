@@ -47,15 +47,13 @@ const PIPELINES = {
         sec: 120,
         disableNext: true
     },
-        // todo запустить после диалога "твой лайнап отличный"
-        // todo подставить тайминг лайнапа
         // todo срезать тайминг если он больше максимального
         // todo дизейбл кнопки пока не будет завершен ивент
     {
         pageId: PAGE_NAMES.event,
         line: "Meet guests",
         sec: 120,
-        disableNext: false
+        disableNext: true
     },
     {
         pageId: PAGE_NAMES.admin,

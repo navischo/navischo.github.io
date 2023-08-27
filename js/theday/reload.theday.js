@@ -53,6 +53,7 @@ const reloadTheday = () => {
     } else {
         drawCheck(parseTopsString(localStorage.getItem("tops")), "#dne-page-up");
     }
+    win77.router.enableNext();
 
     initScore();
     updScore();
