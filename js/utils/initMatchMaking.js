@@ -243,10 +243,10 @@ const initMatchMaking = () => {
             const startBankrollInput = document.querySelector("#start-bankroll");
             const startSoulsInput = document.querySelector("#start-souls");
             const options = {
-                roundLimit: null,
+                roundLimit: 7,
                 maxTime: null,
-                startBankroll: null,
-                startSouls: null,
+                startBankroll: 14000,
+                startSouls: 3,
             }
             if (+roundLimitInput?.value >= 2) {
                 options.roundLimit = +roundLimitInput.value;
@@ -257,7 +257,7 @@ const initMatchMaking = () => {
             if (+startBankrollInput?.value > 1000) {
                 options.startBankroll = +startBankrollInput.value;
             }
-            if (+startSoulsInput?.value >= 0) {
+            if (+startSoulsInput?.value >= 0 && startSoulsInput?.value !== "") {
                 options.startSouls = +startSoulsInput.value;
             }
             win77.game.options = options;
