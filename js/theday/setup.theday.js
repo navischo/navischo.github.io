@@ -2,7 +2,7 @@ import { win77 } from "../dne-cli.js";
 import { closePopup } from "../popup/dom.popup.jquery.js";
 import { switchTime } from "../hud/time.hud.js";
 import { settings } from "./const.theday.js";
-import { drawTheday } from "./init.theday.js";
+import { drawTheday, initTheday } from "./init.theday.js";
 
 
 const setupTheday = () => {
@@ -42,6 +42,7 @@ const setupTheday = () => {
 
     console.log(`Starting event..`, win77.game.event);
     drawTheday();
+    initTheday();
 }
 
 export { setupTheday };

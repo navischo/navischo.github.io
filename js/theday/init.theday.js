@@ -32,7 +32,6 @@ const thedayMarkup = `
 </div>
 <!--executive-->
 <div id="queue"></div>
-${pokeButtonMarkup}
 <div id="lineup" class="hand"></div>
 <div id="gradient" style=""/>
 `;
@@ -60,12 +59,6 @@ const initTheday = () => {
 const getThedayElement = () => {
     const pageUpContainer = document.createElement("section");
     pageUpContainer.innerHTML = thedayMarkup;
-    const pokeButton = pageUpContainer.querySelector("#poke-button");
-    const clickHandler = () => {
-        pokeButton.removeEventListener("click", clickHandler);
-        initTheday();
-    };
-    pokeButton.addEventListener("click", clickHandler);
     pageUpContainer.appendChild(getPortalElement());
 
     return pageUpContainer;
@@ -78,4 +71,4 @@ const drawTheday = () => {
     parent.appendChild(getThedayElement());
 }
 
-export { drawTheday };
+export { drawTheday, initTheday };
