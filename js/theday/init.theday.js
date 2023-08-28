@@ -19,6 +19,12 @@ const getPortalElement = () => {
 }
 
 const thedayMarkup = `
+<code id="player-title" class="theday__player-title">
+    <span class="theday__player-title-text"></span>
+</code>
+<code id="round-title" class="theday__round-title">
+    <span class="theday__round-title-text"></span>
+</code>
 <code id="ascii-title" class="theday__dunge-title"></code>
 <div id="main-scene">
     <div class="swiper executive">
@@ -42,13 +48,34 @@ const initTheday = () => {
     console.log(`${win77.game.player.id} starts an Event in dunge by name..`, win77);
 
     const dungeASCII = getDungeNameInASCII(win77.game.event.settings.dungeObj.name);
-    const dungeTitle = document.querySelector(`#ascii-title`);
-    dungeTitle.innerHTML = `${win77.game.event.settings.dungeObj.name}`;
-    dungeTitle.classList.add("--visible");
+    const playerTitleElement = document.querySelector(`#player-title`);
+    const playerTitleTextElement = document.querySelector(`#player-title .theday__player-title-text`);
+    const roundTitleElement = document.querySelector(`#round-title`);
+    const roundTitleTextElement = document.querySelector(`#round-title .theday__round-title-text`);
+    const dungeTitleElement = document.querySelector(`#ascii-title`);
+
+    dungeTitleElement.innerHTML = `${win77.game.event.settings.dungeObj.name}`;
+    dungeTitleElement.classList.add("--visible");
     setTimeout(() => {
-        dungeTitle.classList.remove("--visible");
-    }, 5000);
+        dungeTitleElement.classList.remove("--visible");
+    }, 3000);
     console.log(dungeASCII);
+
+    playerTitleTextElement.innerHTML = `${win77.game.player.id}`;
+    playerTitleTextElement.dataset.playerId = `${win77.game.player.id}`;
+    playerTitleElement.classList.add("--visible");
+    setTimeout(() => {
+        playerTitleElement.classList.remove("--visible");
+
+        roundTitleTextElement.innerHTML = `${win77.game.round}`;
+        roundTitleElement.classList.add("--visible");
+        setTimeout(() => {
+            roundTitleElement.classList.add("--fade-out");
+            roundTitleElement.classList.remove("--visible");
+        }, 7000);
+    }, 3000);
+
+
 
     initGradient();
 

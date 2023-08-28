@@ -161,7 +161,7 @@ const setTiming = (pipeObj) => {
         sec = sec - 1;
         secondsDisplayNode.textContent = sec;
         if (sec === 0) {
-            win77.router.nextStep();
+            win77.router.matchmaking ? win77.router.nextStep() : "";
         }
     };
     win77.secInterval = setInterval(secIntervalHandler, 1000);
@@ -180,9 +180,7 @@ win77.router.resetDisable = () => {
 }
 
 const initNextBtn = () => {
-    // условие работы
-    // игрок сделал целевое действие
-
+    win77.router.matchmaking = true;
     win77.router.nextBtn = document.querySelector("#next-btn");
     win77.router.nextBtn.classList.add("--visible");
     win77.router.currentPage = "play";
