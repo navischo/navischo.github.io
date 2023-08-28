@@ -236,6 +236,11 @@ const updHand = () => {
 
             initOneMoreBtn();
 
+            const currentPipeObj = win77.router.nextPageIndex === 0 ? win77.router.pipeline[win77.router.nextPageIndex] : win77.router.pipeline[win77.router.nextPageIndex - 1];
+            if (currentPipeObj.stepId === "easy-prepare") {
+                win77.router.nextStep();
+            }
+
             if (win77.game.totalScore <= win77.game.versusScore && win77.game.player.hand.size === 0) {
                 dialog.init(dialog.DIALOG_ID.oneMore);
                 openPopup("#dialog-popup");

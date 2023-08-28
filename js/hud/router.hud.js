@@ -36,25 +36,28 @@ const isItCardsPage = (name) => name === PAGE_NAMES.npc || name === PAGE_NAMES.c
 const PIPELINES = Object.freeze({
     init: [PAGE_NAMES.enter, PAGE_NAMES.npc, PAGE_NAMES.class, PAGE_NAMES.loot, PAGE_NAMES.hud, PAGE_NAMES.event, PAGE_NAMES.board],
     easy: [{
+        stepId: "easy-prepare",
         pageId: PAGE_NAMES.play,
         line: "Prepare to play",
         sec: 30,
         disableNext: false
     },
     {
+        stepId: "easy-lineup",
         pageId: PAGE_NAMES.play,
         line: "Select lineup",
         sec: 120,
         disableNext: true
     },
-        // todo срезать тайминг если он больше максимального
     {
+        stepId: "easy-event",
         pageId: PAGE_NAMES.event,
         line: "Meet guests",
         sec: 120,
         disableNext: true
     },
     {
+        stepId: "easy-admin",
         pageId: PAGE_NAMES.admin,
         line: "Get ready for next round",
         sec: 30,
