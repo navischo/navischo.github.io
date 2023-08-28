@@ -59,7 +59,7 @@ const initDNELootArr = () => {
     // CASE KEY
     // LootArr.push(new DNELootCard("i-case-key", "Ключ до кейсу", "Дозволяє отримати доступ до предметів у Кейсі", "https://lh3.googleusercontent.com/JppmmdWBUa0cYPA3LgPLsN2KEvuQTUNuaQkg_lR7ZK-C1YRFiLVSvfda2KOyIbHI1Mo=w2400", 0, 0, ""));
     LootArr.push(new DNELootCard("i-fishyey", "Око риби", "Дозволяє знімати надширокоформатне відео з середньою роздільною здатністю та середнім фпс", "https://lh4.googleusercontent.com/q6kgHPE-JmWkcHsVXc0Gm_XEV98LUQODkdlxKSPSkuqkNeYXCVA1y2FAY_3s_bJg5oc=w2400", 1, "5К", "Бонус для Відеомейкер"));
-    LootArr.push(new DNELootCard("i-canon", "Професійний фотоапарат", "Дозволяє робити високоякісні цифрові знімки, що можуть бути корисними в різних обставинах. З кожним новим івентом отримуєш атмосферні знімки", "https://lh3.googleusercontent.com/nP83qKzVByeQIgVJLh4uVr-rZ7l-myqfawvze-rAd2bLgvmNl2aLGF7D_zhWk4s9Ajg=w2400", 2, "70К/500", "", "Дозволяє робити високоякісні цифрові знімки, що можуть бути корисними в різних обставинах. З кожним новим івентом отримуєш атмосферні знімки", "", true, "loot"));
+    LootArr.push(new DNELootCard("i-canon", "Професійний фотоапарат", "Дозволяє робити високоякісні цифрові знімки, що можуть бути корисними в різних обставинах. З кожним новим івентом отримуєш атмосферні знімки", "https://lh3.googleusercontent.com/nP83qKzVByeQIgVJLh4uVr-rZ7l-myqfawvze-rAd2bLgvmNl2aLGF7D_zhWk4s9Ajg=w2400", 2, "70K/500", "", "Дозволяє робити високоякісні цифрові знімки, що можуть бути корисними в різних обставинах. З кожним новим івентом отримуєш атмосферні знімки", "", true, "loot"));
 
     const I_LAMP_IMG_ID = `1d8WtQSXTKoc10IC21YmCHqNnatnadFRK`;
     const I_LAMP_IMG = `https://drive.google.com/uc?id=${I_LAMP_IMG_ID}`;

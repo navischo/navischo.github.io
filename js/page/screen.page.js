@@ -131,7 +131,7 @@ const initScreen = (all = false, select = false) => {
         const wrap = document.createElement("div");
         wrap.classList.add("all-background");
         SCREEN_NAMES.forEach((SCREEN_NAME, i) => {
-            console.log(`Background ${SCREEN_NAME.replace(`screen-nohud`, "")} successfully loaded ${i + 1} of ${backgroundsCount}`);
+            // console.log(`Background ${SCREEN_NAME.replace(`screen-nohud`, "")} successfully loaded ${i + 1} of ${backgroundsCount}`);
             const backgroundInAllNode = document.createElement("div");
             backgroundInAllNode.classList.add("background-in-all");
             backgroundInAllNode.style.backgroundImage = `url("./libs/screen/${SCREEN_NAME}.jpg")`;
