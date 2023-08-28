@@ -79,7 +79,7 @@ const initPlayersList = () => {
         if (e.target.classList.contains("js-invite")) {
             const newPlayerId = e.target.dataset.id;
             const isPlayerInLobby = Array.from(win77.lobby).find((playerObj) => playerObj.id === newPlayerId);
-            if (!isPlayerInLobby) {
+            if (!isPlayerInLobby && newPlayerId !== win77.game.player.id) {
                 win77.invite(newPlayerId);
             }
         }
