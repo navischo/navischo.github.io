@@ -33,7 +33,7 @@ const isItCardsPage = (name) => name === PAGE_NAMES.npc || name === PAGE_NAMES.c
 //     bunny: [PAGE_NAMES.play, PAGE_NAMES.map, PAGE_NAMES.setting, PAGE_NAMES.event, PAGE_NAMES.admin, PAGE_NAMES.loot],
 // };
 
-const PIPELINES = {
+const PIPELINES = Object.freeze({
     init: [PAGE_NAMES.enter, PAGE_NAMES.npc, PAGE_NAMES.class, PAGE_NAMES.loot, PAGE_NAMES.hud, PAGE_NAMES.event, PAGE_NAMES.board],
     easy: [{
         pageId: PAGE_NAMES.play,
@@ -61,7 +61,7 @@ const PIPELINES = {
         disableNext: false
     }],
     bunny: [PAGE_NAMES.play, PAGE_NAMES.map, PAGE_NAMES.setting, PAGE_NAMES.event, PAGE_NAMES.admin, PAGE_NAMES.loot],
-};
+});
 
 const body = document.querySelector("body");
 const title = document.querySelector(".head-title");
@@ -84,7 +84,7 @@ const initNav = () => {
 
 win77.router = {
     isLogin: true,
-    pipeline: PIPELINES.easy,
+    pipeline: PIPELINES.easy.map(el => el),
     currentPage: currentPage,
     nextPageIndex: 1,
     nav: initNav()
@@ -145,7 +145,7 @@ const setTiming = (pipeObj) => {
     const secondsDisplayNode = timingNode.querySelector(".js-timing-sec");
     let sec = pipeObj.sec;
     win77.router.nextStep = () => {
-        const currentPipeObj = win77.router.nextPageIndex === 0 ? win77.router.nextPageIndex : win77.router.pipeline[win77.router.nextPageIndex - 1];
+        const currentPipeObj = win77.router.nextPageIndex === 0 ? win77.router.pipeline[win77.router.nextPageIndex] : win77.router.pipeline[win77.router.nextPageIndex - 1];
         console.log("currentPipeObj", win77.router.pipeline, win77.router.currentPage, currentPipeObj);
         if (!currentPipeObj.disableNext) {
             clearInterval(win77.secInterval);
@@ -171,6 +171,11 @@ win77.router.enableNext = () => {
     win77.router.pipeline[win77.router.nextPageIndex - 1].disableNext = false;
 }
 
+win77.router.resetDisable = () => {
+    win77.router.pipeline[1].disableNext = true;
+    win77.router.pipeline[2].disableNext = true;
+}
+
 const initNextBtn = () => {
     // условие работы
     // игрок сделал целевое действие
@@ -180,8 +185,14 @@ const initNextBtn = () => {
     win77.router.currentPage = "play";
 
     win77.router.changePage = (changePageCallback = null) => {
-        console.log(win77.secInterval);
-        const currentPipeObj = win77.router.nextPageIndex === 0 ? win77.router.nextPageIndex : win77.router.pipeline[win77.router.nextPageIndex - 1];
+        let currentPipeObj;
+        if (win77.router.nextPageIndex === 0) {
+            win77.router.resetDisable();
+            currentPipeObj = win77.router.pipeline[win77.router.nextPageIndex];
+        } else {
+            currentPipeObj = win77.router.pipeline[win77.router.nextPageIndex - 1];
+        }
+        // const currentPipeObj = win77.router.nextPageIndex === 0 ? win77.router.pipeline[win77.router.nextPageIndex] : win77.router.pipeline[win77.router.nextPageIndex - 1];
         if (currentPipeObj.disableNext) {
             win77.router.nextBtn.setAttribute("disable", "true");
         } else {
