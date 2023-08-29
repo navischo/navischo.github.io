@@ -161,6 +161,7 @@ const setTiming = (pipeObj) => {
         sec = sec - 1;
         secondsDisplayNode.textContent = sec;
         if (sec === 0) {
+            secondsDisplayNode.remove();
             win77.router.matchmaking ? win77.router.nextStep() : "";
         }
     };
