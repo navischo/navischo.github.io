@@ -16,6 +16,8 @@ const initLineup = () => {
         } else {
             clearInterval(interval);
             console.log("Your door time is complete!");
+            const exitPortal = document.querySelector(".js-rick-portal");
+            exitPortal ? exitPortal.classList.add("--exit-label") : "";
         }
     }, 1000);
 }

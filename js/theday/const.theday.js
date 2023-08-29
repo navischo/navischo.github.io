@@ -421,6 +421,15 @@ const matchEventIncome = (smithCard) => {
 const passGuest = (smithCard) => {
     win77.game.event.settings.guestsCount = win77.game.event.settings.guestsCount + smithCard.plusCount;
     win77.game.event.settings.guests[`${isMale(smithCard.name)}Count`] = win77.game.event.settings.guests[`${isMale(smithCard.name)}Count`] + smithCard.plusCount;
+
+    if (win77.game.event.settings.guests.set.size !== 0) {
+        const prevGuest = Array.from(win77.game.event.settings.guests.set)[win77.game.event.settings.guests.set.size - 1];
+        if (prevGuest.name === smithCard.name) {
+            win77.game.event.settings.socialPoints++;
+            console.log(`Guest by name ${smithCard.name} meet yourself from another universe. Get +1 social point! Your social points:`, win77.game.event.settings.socialPoints);
+        }
+    }
+
     win77.game.event.settings.guests.set.add(smithCard);
 }
 
@@ -447,6 +456,7 @@ const useSmithsCard = (interval = undefined) => {
         const portalToClose = document.querySelector(".js-rick-portal");
         if (portalToClose) {
             portalToClose.addEventListener("click", reloadTheday);
+            portalToClose.classList.add("--exit-label");
         }
     }
 }

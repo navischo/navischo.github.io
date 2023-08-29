@@ -30,7 +30,7 @@ Ready to start event?
                     console.log("Lets Rave");
                     const budgetInput = document.querySelector("#event-budget");
                     const eventBudget = budgetInput.value !== "" && budgetInput.value > 0 ? budgetInput.value : 5000;
-                    if (win77.game.player.balance.bankroll > eventBudget) {
+                    if (win77.game.player.balance.bankroll >= eventBudget) {
                         win77.game.player.balance.bankroll = win77.game.player.balance.bankroll - eventBudget;
                         updBalanceNode();
                         document.querySelector("body").classList.remove("ready-to-start");

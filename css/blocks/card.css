@@ -27,6 +27,30 @@
     background: white;
 }
 
+.card.--exit-label {
+    overflow: visible;
+}
+
+.card.--exit-label::before {
+    content: "EXIT=>";
+
+    position: absolute;
+    top: -66px;
+    left: 20px;
+
+    font-family: "Press Start 2p", "JetBrains Mono", monospace;
+    font-size: 42px;
+    font-weight: 700;
+    text-shadow:
+    2px 3px 0 black,
+    3px 4px 0 white,
+    5px 7px 0 black;
+
+    cursor: pointer;
+
+    animation: bounce-left 2.8s both infinite;
+}
+
 .card.--smith {
     visibility: hidden;
     opacity: 0;
@@ -319,4 +343,44 @@
 
 .build .js-inventory-menu .card > .card__title {
     display: block;
+}
+
+@keyframes bounce-left {
+    0% {
+        transform: translateX(-48px);
+        animation-timing-function: ease-in;
+        opacity: 1;
+    }
+    24% {
+        opacity: 1;
+    }
+    40% {
+        transform: translateX(-26px);
+        animation-timing-function: ease-in;
+    }
+    65% {
+        transform: translateX(-13px);
+        animation-timing-function: ease-in;
+    }
+    82% {
+        transform: translateX(-6.5px);
+        animation-timing-function: ease-in;
+    }
+    93% {
+        transform: translateX(-4px);
+        animation-timing-function: ease-in;
+    }
+    25%,
+    45%,
+    65%,
+    77%,
+    88% {
+        transform: translateX(0px);
+        animation-timing-function: ease-out;
+    }
+    100% {
+        transform: translateX(-48px);
+        animation-timing-function: ease-out;
+        opacity: 1;
+    }
 }
