@@ -516,7 +516,8 @@ const useSmithsCards = () => {
             clearInterval(interval);
         }
     };
-    const interval = setInterval(inviteGuestByInterval, 5000);
+    const secToNext = getRandomInt(7);
+    const interval = setInterval(inviteGuestByInterval, +`${secToNext > 3 ? secToNext : 3}000`);
 }
 
 // const clearSmithsSet = () => {
