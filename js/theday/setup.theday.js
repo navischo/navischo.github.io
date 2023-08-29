@@ -5,7 +5,7 @@ import { settings } from "./const.theday.js";
 import { drawTheday, initTheday } from "./init.theday.js";
 
 
-const setupTheday = () => {
+const setupTheday = (budget = 5000) => {
     let lineupLength = 0;
     const cardTitleArr = document.querySelectorAll("#table .card__title");
     const limitsStrings = document.querySelectorAll("#table .card__limits");
@@ -38,6 +38,7 @@ const setupTheday = () => {
     closePopup();
 
     // switchTime(win77.game.event.lineupLength); // time temporary disabled
+    settings.socialPoints = budget / 1000;
     win77.setEventSettings(Object.assign({}, settings));
     win77.game.event.settings.dungeObj = Array.from(win77.locationsSet).find((dungeObj) => dungeObj.name === win77.game.event.settings.dungeName);
     if (win77.setting) {

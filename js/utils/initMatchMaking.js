@@ -189,6 +189,13 @@ const getMatchMakingOptionsMarkup = () => `
     </fieldset>
 `;
 
+const getEventParamsMarkup = () => `
+    <fieldset class="field --dialog">
+        <label class="glow text" for="event-budget">Event budget</label>
+        <input id="event-budget" type="number" placeholder="5000">
+    </fieldset>
+`;
+
 const toggleSearch = () => {
     const parent = document.querySelector("#matchmaking");
     const startMatchmakingBtn = document.querySelector(".js-start-matchmaking");
@@ -311,4 +318,4 @@ const initMatchMaking = () => {
     });
 }
 
-export { initMatchMaking, getMatchMakingOptionsMarkup };
+export { initMatchMaking, getMatchMakingOptionsMarkup, getEventParamsMarkup };

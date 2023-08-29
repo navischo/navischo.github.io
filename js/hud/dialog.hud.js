@@ -2,7 +2,8 @@ import { win77 } from "../dne-cli.js";
 import { updHand } from "../cards/dom.cards.js";
 import { closePopup } from "../popup/dom.popup.jquery.js";
 import { setupTheday } from "../theday/setup.theday.js";
-import { getMatchMakingOptionsMarkup } from "../utils/initMatchMaking.js";
+import { getMatchMakingOptionsMarkup, getEventParamsMarkup } from "../utils/initMatchMaking.js";
+import { updBalanceNode } from "./balance.hud.js";
 
 const DIALOG_ID = {
     start: 0,
@@ -12,16 +13,32 @@ const DIALOG_ID = {
 
 const DIALOG_QUESTIONS = [
     {
-        question: `<p>Your lineup is awesome. Ready to start event?</p>`,
+        question:
+`<p>
+Your lineup is awesome.<br>
+It remains to choose budget:
+</p>
+ ${getEventParamsMarkup()}
+ <p>
+Ready to start event?
+</p>
+`,
         answers: [
             {
                 text: "Yep",
                 action: () => {
                     console.log("Lets Rave");
-                    document.querySelector("body").classList.remove("ready-to-start");
-                    setupTheday();
-                    win77.router.matchmaking ? win77.router.nextStep() : "";
-                    // todo начать ивент сразу
+                    const budgetInput = document.querySelector("#event-budget");
+                    const eventBudget = budgetInput.value !== "" && budgetInput.value > 0 ? budgetInput.value : 5000;
+                    if (win77.game.player.balance.bankroll > eventBudget) {
+                        win77.game.player.balance.bankroll = win77.game.player.balance.bankroll - eventBudget;
+                        updBalanceNode();
+                        document.querySelector("body").classList.remove("ready-to-start");
+                        setupTheday(eventBudget);
+                        win77.router.matchmaking ? win77.router.nextStep() : "";
+                    } else {
+                        console.log("..but your bankroll is not enouch to start event");
+                    }
                 }
             },
             {

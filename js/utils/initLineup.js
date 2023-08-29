@@ -6,12 +6,13 @@ const initLineup = () => {
     lineupNode.style.animation = `slideLineup ${countdown}s linear`;
 
     const interval = setInterval(() => {
-        if (+countdown > 20) {
+        if (+countdown > 0) {
             countdown--;
 
-            if (win77.game.event.settings.socialPoints < 5) {
-                win77.game.event.settings.socialPoints++;
-            }
+            // infinite social points temporary off
+            // if (win77.game.event.settings.socialPoints < 5) {
+            //     win77.game.event.settings.socialPoints++;
+            // }
         } else {
             clearInterval(interval);
             console.log("Your door time is complete!");
