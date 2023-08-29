@@ -12,6 +12,48 @@ const updBankBalanceNode = () => {
     }
 }
 
+const HYPERS = [
+    {
+        id: "tusk",
+        value: 7407407
+    },
+    {
+        id: "gates",
+        value: 4218518
+    },
+    {
+        id: "gabe",
+        value: 144444
+    }
+]
+
+const getHyperItemMarkup = (id, value) =>
+`
+<a class="bank__hypers-item">
+    <span class="bank__hypers-name">${id.toUpperCase()}</span>
+    <span class="bank__hypers-value">${value}</span>
+</a>
+`;
+
+const updHypersList = () => {
+    const parent = document.querySelector(".js-hypers");
+
+    const localHypers = [];
+    const localStorageObj = { ...localStorage };
+    Object.keys(localStorageObj).forEach((localStorageKey) => {
+        if (localStorageKey.slice(-4) === "-btc") {
+            localHypers.push({
+                id: localStorageKey.slice(0, -4),
+                value: +localStorageObj[localStorageKey]
+            });
+        }
+    });
+
+    parent.innerHTML =
+        `${HYPERS.map((hyper) => getHyperItemMarkup(hyper.id, hyper.value)).join("")}
+         ${localHypers.sort((a, b) => b.value - a.value).map((hyper) => getHyperItemMarkup(hyper.id, hyper.value)).join("")}`;
+}
+
 const saveBankroll = () => {
     const bankroll = win77.game.player.balance.bankroll;
     if (bankroll > 1111111) {
@@ -40,9 +82,11 @@ const initBankPage = () => {
         const saveBtn = document.querySelector(".js-save-bankroll");
         saveBtn.addEventListener("click", () => {
             saveBankroll();
+            updHypersList();
         });
 
         updBankBalanceNode();
+        updHypersList();
     };
 
     return new Page(parent, link, init);
