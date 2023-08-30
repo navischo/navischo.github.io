@@ -1,4 +1,5 @@
 import { getRandomInt, moveCardById } from "./utils/getCardById.js";
+import { finishRoundForPlayer } from "./utils/finishRoundForPlayer.js";
 import { getCardElement } from "./cards/template.cards.js";
 import { appendNewTop } from "./theday/endgame.theday.js";
 
@@ -72,10 +73,8 @@ class DNECli {
         body.querySelector(".js-bankroll-balance").textContent = win77.game.player.balance.bankroll;
     }
 
-    finishRound() {
-        this.game.round = this.game.round + 1;
+    matchGameResult() {
         const maxRounds = win77.game.options?.roundLimit ? win77.game.options.roundLimit : 7;
-
         if (this.game.round >= maxRounds) {
             this.game.final = {
                 result: {

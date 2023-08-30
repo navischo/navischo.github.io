@@ -3,6 +3,7 @@ import { win77 } from "../dne-cli.js";
 import { drawLootCards } from "../cards/dom.cards.js";
 import { initInventory } from "../hud/inventory.hud.js";
 import { rentCard } from "./rentCard.js";
+import { PAGE_NAMES } from "../hud/router.hud.js";
 
 const drawCardsReward = () => {
     const parent = document.querySelector("body");
@@ -47,6 +48,8 @@ const giveCardsReward = (count = 2) => {
                 cardWrap.remove();
                 document.querySelector("#cards-reward").remove();
                 initInventory();
+                win77.pokeButton.dia.goToPage(PAGE_NAMES.play);
+                win77.router.enableNext();
             }, 500);
         });
     });

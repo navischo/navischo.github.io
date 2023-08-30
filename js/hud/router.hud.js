@@ -5,8 +5,9 @@ import { CARD_TYPES } from "../cards/const.cards.js";
 import { hudMarkup } from "./dom.hud.js";
 import { updHand } from "../cards/dom.cards.js";
 import { initScore, updScore } from "./score.hud.js";
-import {initCatalog} from "../catalog/dom.catalog.js";
-import {openPopup} from "../popup/dom.popup.jquery.js";
+import { initCatalog } from "../catalog/dom.catalog.js";
+import { openPopup } from "../popup/dom.popup.jquery.js";
+import { finishRoundForPlayer } from "../utils/finishRoundForPlayer.js";
 
 const PAGE_NAMES = {
     enter: "enter",
@@ -90,7 +91,9 @@ win77.router = {
     pipeline: PIPELINES.easy.map(el => el),
     currentPage: currentPage,
     nextPageIndex: 1,
-    nav: initNav()
+    nav: initNav(),
+    currentPlayer: win77.game.player.id,
+    playersQueue: [win77.game.player.id]
 };
 
 const swipePage = (name) => {
@@ -147,6 +150,7 @@ const setTiming = (pipeObj) => {
         `;
     const secondsDisplayNode = timingNode.querySelector(".js-timing-sec");
     let sec = pipeObj.sec;
+
     win77.router.nextStep = () => {
         const currentPipeObj = win77.router.nextPageIndex === 0 ? win77.router.pipeline[win77.router.nextPageIndex] : win77.router.pipeline[win77.router.nextPageIndex - 1];
         console.log("currentPipeObj", win77.router.pipeline, win77.router.currentPage, currentPipeObj);
@@ -156,6 +160,7 @@ const setTiming = (pipeObj) => {
             win77.router.changePage(setTiming);
         }
     }
+
     const secIntervalHandler = () => {
         console.log(`win77.secInterval`, win77.secInterval);
         sec = sec - 1;
@@ -181,12 +186,14 @@ win77.router.resetDisable = () => {
 }
 
 const initNextBtn = () => {
+    setTiming(win77.router.pipeline[0]);
+
     win77.router.matchmaking = true;
     win77.router.nextBtn = document.querySelector("#next-btn");
     win77.router.nextBtn.classList.add("--visible");
     win77.router.currentPage = "play";
 
-    win77.router.changePage = (changePageCallback = null) => {
+    win77.router.changePage = (setTimingByCallback = null) => {
         let currentPipeObj;
         if (win77.router.nextPageIndex === 0) {
             win77.router.resetDisable();
@@ -208,11 +215,16 @@ const initNextBtn = () => {
 
             win77.router.nextBtn.textContent = win77.router.pipeline[win77.router.nextPageIndex].pageId;
 
-            if (changePageCallback) {
-                changePageCallback(nextPipeObj);
+            if (setTimingByCallback) {
+                setTimingByCallback(nextPipeObj);
             }
 
-            win77.router.nextPageIndex !== 1 ? hideArrows() : showArrows();
+            if (win77.router.nextPageIndex === 1) {
+                finishRoundForPlayer();
+                showArrows();
+            } else {
+                hideArrows();
+            }
         }
     }
 
@@ -259,4 +271,4 @@ const addOptionalNextBtn = (pageToGo) => {
 //     });
 // });
 
-export { goToPage, PAGE_NAMES, isItCardsPage, initNextBtn, setTiming };
+export { goToPage, PAGE_NAMES, isItCardsPage, initNextBtn };

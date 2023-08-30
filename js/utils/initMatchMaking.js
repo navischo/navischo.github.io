@@ -9,7 +9,7 @@ import { initInventory } from "../hud/inventory.hud.js";
 import { setExecutive } from "../hud/table.hud.js";
 import { dialog } from "../hud/dialog.hud.js";
 import { openPopup } from "../popup/dom.popup.jquery.js";
-import { setTiming, initNextBtn } from "../hud/router.hud.js";
+import { initNextBtn } from "../hud/router.hud.js";
 
 class DNEPlayer {
     constructor(id, avatar, description) { // дія чи результат?
@@ -44,7 +44,8 @@ const invitePlayer = (id) => {
     if (playerById) {
         const playerObj = initPlayer(playerById.id);
         win77.lobby.add(playerObj);
-        console.log("playerObj", playerObj, win77.lobby);
+        win77.router.playersQueue.push(playerObj.id);
+        console.log("playerObj", playerObj, win77.lobby, win77.router.playersQueue);
         const mateCell = document.querySelector(".js-squad-mate:not(.--active)");
         if (mateCell) {
             mateCell.dataset.playerId = id;
@@ -97,7 +98,8 @@ const switchPlayer = (id) => {
     win77.lobby.delete(playerById);
     win77.lobby.add(prevPlayer);
     win77.game.player = playerById;
-    console.log("win77.game.player", win77.game.player, win77.lobby);
+    win77.router.currentPlayer = win77.game.player.id;
+    console.log("win77.game.player", win77.game.player, win77.lobby, win77.router.currentPlayer);
     updScore();
     updBalanceNode();
     initInventory();
@@ -213,7 +215,7 @@ const startMatch = () => {
     matchmakingWindow.classList.remove("--visible");
 
     toggleSearch();
-    setTiming(win77.router.pipeline[0]);
+    // setTiming(win77.router.pipeline[0]);
     initNextBtn();
 }
 

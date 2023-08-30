@@ -47,14 +47,13 @@ const reloadTheday = () => {
     win77.giveIncomeToPlayer(win77.game.event.result.income);
     win77.giveSkillPointsToPlayer(1);
     win77.giveEnergyPointsToPlayer(1);
-    win77.finishRound();
     console.log("!win77.game.final", win77.game.final, win77.game.player.balance.skillPoints, win77.game.player.balance.skillPoints === 4);
     if (win77.game.final === false) { // win77.game.player.balance.skillPoints % 10
+        win77.matchGameResult();
         drawCheck(win77.game.event.result, "#dne-page-up");
     } else {
         drawCheck(parseTopsString(localStorage.getItem("tops")), "#dne-page-up");
     }
-    win77.router.enableNext();
 
     initScore();
     updScore();
