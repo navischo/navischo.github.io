@@ -1,4 +1,5 @@
 import { initCredits } from "../utils/initCredits.js";
+import { drawCardsReward } from "../utils/giveCardsReward.js";
 
 const checkData = {
     budget: 36800,
@@ -77,6 +78,7 @@ const drawCheck = (checkData, parent = "body") => {
     checkElement.addEventListener("click", () => {
         // isFinalRound ? initCredits() : "";
         checkElement.remove();
+        drawCardsReward();
     });
 }
 

@@ -18,6 +18,7 @@ import { logIncome } from "../utils/logIncome.js";
 import { sendInvite } from "../utils/sendInvite.js";
 import { makeWallSprayable } from "../utils/makeWallSprayable.js";
 import { getEnergyForExtraSound } from "../utils/getEnergyForExtraSound.js";
+import { rentCard } from "../utils/rentCard.js";
 
 
 const initHandlers = (cardData, controls) => {
@@ -101,16 +102,7 @@ const initHandlers = (cardData, controls) => {
     };
 
     const rentButtonHandler = () => {
-        const catalog = win77.game.catalog[cardData.type];
-        if (isSetHasId(catalog, cardData.id) && cardData.costObj.rentAvailable) {
-            win77.getCostFromPlayer(cardData.costObj.rent);
-            updBalanceNode();
-            moveCardById(cardData.id, catalog, win77.game.player[cardData.type]);
-            registerRent(cardData.id);
-            initInventory();
-        } else {
-            console.log(`Item ${cardData.name} is already in rent`);
-        }
+        rentCard(cardData);
     };
 
     const sellButtonHandler = (e) => {

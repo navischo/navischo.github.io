@@ -67,4 +67,9 @@ const grabCost = (cost, from, to) => {
 
 }
 
-export { getRandomInt, getCardById, moveCardById, moveCardBackAfterRent, grabCost, registerRent };
+const getRandomId = (collection) => {
+    const idsArr = [...collection].map((obj) => obj.id);
+    return idsArr[getRandomInt(idsArr.length)];
+};
+
+export { getRandomInt, getCardById, moveCardById, moveCardBackAfterRent, grabCost, registerRent, getRandomId };

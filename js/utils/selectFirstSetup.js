@@ -1,10 +1,5 @@
 import { win77 } from "../dne-cli.js";
-import { getRandomInt, moveCardById } from "./getCardById.js";
-
-const getRandomId = (collection) => {
-    const idsArr = [...collection].map((obj) => obj.id);
-    return idsArr[getRandomInt(idsArr.length)];
-};
+import { getRandomId, moveCardById } from "./getCardById.js";
 
 const selectFirstSetup = (player) => {
     // moveCardById("car-cosmos-track", win77.game.catalog.anti, player.cars);
