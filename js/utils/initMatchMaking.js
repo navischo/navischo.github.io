@@ -10,6 +10,7 @@ import { setExecutive } from "../hud/table.hud.js";
 import { dialog } from "../hud/dialog.hud.js";
 import { openPopup } from "../popup/dom.popup.jquery.js";
 import { initNextBtn } from "../hud/router.hud.js";
+import { lightWalkingPlayer } from "../utils/finishRoundForPlayer.js";
 
 class DNEPlayer {
     constructor(id, avatar, description) { // дія чи результат?
@@ -203,16 +204,19 @@ const toggleSearch = () => {
     const startMatchmakingBtn = document.querySelector(".js-start-matchmaking");
     const setMatchmakingBtn = document.querySelector(".js-set-matchmaking");
     const playerMatchmakingBtn = document.querySelector(".js-player-matchmaking");
+    const playersList = document.querySelector(".js-players-wrap");
 
     parent.classList.toggle("--search");
     setMatchmakingBtn.classList.toggle("--search");
     startMatchmakingBtn.classList.toggle("--active");
     playerMatchmakingBtn.classList.toggle("--ready");
+    playersList.classList.remove("--visible");
 }
 
 const startMatch = () => {
     const matchmakingWindow = document.querySelector("#matchmaking");
     matchmakingWindow.classList.remove("--visible");
+    matchmakingWindow.classList.add("--running");
 
     toggleSearch();
     // setTiming(win77.router.pipeline[0]);
@@ -237,9 +241,11 @@ const initMatchMaking = () => {
         const startMatchmakingBtn = document.querySelector(".js-start-matchmaking");
         const openSettingsBtn = document.querySelector(".js-open-mm-settings");
         const inviteRandomBtns = document.querySelectorAll(".js-invite-random");
+        const playersList = document.querySelector(".js-players-wrap");
 
         const closeBtnHandler = () => {
             parent.classList.remove("--visible");
+            playersList.classList.remove("--visible");
             // closeBtn.removeEventListener("click", closeBtnHandler);
             // if (!parent.classList.contains("--search")) {
             //     startMatchmakingBtn.removeEventListener("click", startBtnHandler);
@@ -279,6 +285,11 @@ const initMatchMaking = () => {
                 });
             }
             updBalanceNode();
+
+            const roundLimitOutput = document.querySelector(".js-round-limit");
+            roundLimitOutput.textContent = win77.game.options.roundLimit;
+
+            lightWalkingPlayer();
             console.log("win77.game.options", win77.game.options, win77);
         }
 

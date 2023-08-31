@@ -6,9 +6,6 @@
     margin: 0 auto;
 }
 
-.squad__cell {
-}
-
 .squad__cell + .squad__cell {
     margin-left: 160px;
 }
@@ -21,6 +18,14 @@
     justify-content: center;
     width: 300px;
     /*padding-top: 20px;*/
+}
+
+.squad__cell.--walking {
+    transform: scale(1.2);
+}
+
+.squad__cell .card__controls {
+    display: none;
 }
 
 .squad__plus {

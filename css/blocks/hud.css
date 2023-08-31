@@ -311,6 +311,19 @@ body.js-tab {
     text-shadow: 3px 2px black;
 }
 
+.score.--round {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+
+    display: flex;
+    font-size: 36px;
+}
+
+.score.--round > * {
+    margin: 0 25px;
+}
+
 .score input {
     width: 120px;
     padding: 0;
