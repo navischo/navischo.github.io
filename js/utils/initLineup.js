@@ -18,6 +18,7 @@ const initLineup = () => {
             console.log("Your door time is complete!");
             const exitPortal = document.querySelector(".js-rick-portal");
             exitPortal ? exitPortal.classList.add("--exit-label") : "";
+            win77.getSocialPointsFromPlayer(win77.game.event.settings.socialPoints);
             win77.game.event.settings.socialPoints = 0;
         }
     }, 1000);

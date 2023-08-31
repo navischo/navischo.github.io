@@ -18,6 +18,31 @@ const getPortalElement = () => {
     return portal;
 }
 
+const getSocialPointsMarkup = () => {
+    console.log("win77.game.event.settings.socialPoints", win77.game.event.settings);
+    let markup = ``;
+    for (let i = 0; i < win77.game.event.settings.socialPoints; i++) {
+        markup = markup + `<div class="squad-unit__bars-item"></div>`;
+        console.log("markup", markup);
+    }
+    return markup;
+}
+
+const getSquadUnitElement = () => {
+    const element = document.createElement("section");
+    element.classList.add("squad-unit");
+    element.innerHTML = `
+    <b class="squad-unit__lvl"><span>${win77.game.player.lvl}</span></b>
+    <div class="squad-unit__stats">
+        <div class="js-player-social-points squad-unit__bars">
+            ${getSocialPointsMarkup()}
+        </div>
+        <h3 class="squad-unit__name">${win77.game.player.id}</h3>
+    </div>
+    `;
+    return element;
+}
+
 const thedayMarkup = `
 <code id="player-title" class="theday__player-title">
     <span class="theday__player-title-text"></span>
@@ -37,6 +62,7 @@ const thedayMarkup = `
     </div>
 </div>
 <!--executive-->
+<div id="squad"></div>
 <div id="queue"></div>
 <div id="lineup" class="hand"></div>
 <div id="gradient" style=""/>
@@ -96,6 +122,7 @@ const drawTheday = () => {
     const parent = document.querySelector("#dne-page-up");
     parent.innerHTML = "";
     parent.appendChild(getThedayElement());
+    parent.appendChild(getSquadUnitElement());
 }
 
 export { drawTheday, initTheday };

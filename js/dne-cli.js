@@ -122,6 +122,24 @@ class DNECli {
     giveEnergyPointsToPlayer(count) {
         this.game.player.balance.energy = this.game.player.balance.energy + count;
     }
+
+    getSocialPointsFromPlayer(count = 1) {
+        this.game.event.settings.socialPoints = +win77.game.event.settings.socialPoints - +count;
+
+        for (let i = 0; i < count; i++) {
+            const bar = document.querySelector(".js-player-social-points > *:last-child");
+            bar?.remove();
+        }
+    }
+
+    giveSocialPointToPlayer() {
+        this.game.event.settings.socialPoints++;
+
+        const parent = document.querySelector(".js-player-social-points");
+        const bar = document.createElement("div");
+        bar.classList.add("squad-unit__bars-item");
+        parent?.appendChild(bar);
+    }
 }
 
 const win77 = new DNECli();

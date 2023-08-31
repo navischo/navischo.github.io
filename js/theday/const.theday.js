@@ -350,7 +350,7 @@ const drawSmitsCard = (dataObj) => {
                     guest.remove();
                 }, 450);
                 console.log(`You say not today to ${dataObj.name}`, dataObj, win77.game);
-                win77.game.event.settings.socialPoints++;
+                win77.giveSocialPointToPlayer();
                 // inviteGuest();
             });
         }
@@ -425,7 +425,7 @@ const passGuest = (smithCard) => {
     if (win77.game.event.settings.guests.set.size !== 0) {
         const prevGuest = Array.from(win77.game.event.settings.guests.set)[win77.game.event.settings.guests.set.size - 1];
         if (prevGuest.name === smithCard.name) {
-            win77.game.event.settings.socialPoints++;
+            win77.giveSocialPointToPlayer();
             console.log(`Guest by name ${smithCard.name} meet yourself from another universe. Get +1 social point! Your social points:`, win77.game.event.settings.socialPoints);
         }
     }
@@ -445,7 +445,7 @@ const useSmithsCard = (interval = undefined) => {
         smithCard.plusCount = getRandomInt(14);
         console.log(`Security: Seems like ${smithCard.name} coming to your Event from strange portal with ${smithCard.plusCount} friends. Let them pass?`);
 
-        win77.game.event.settings.socialPoints--;
+        win77.getSocialPointsFromPlayer(1);
 
         drawSmitsCard(smithCard);
     } else {
