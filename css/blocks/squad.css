@@ -23,7 +23,20 @@
 }
 
 .squad__cell.--walking {
-    transform: scale(1.2);
+    animation: rotate-in-2-fwd-ccw 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation-delay: .3s;
+    transform: translateZ(0) rotate(0) scale(1.2);
+}
+
+@keyframes rotate-in-2-fwd-ccw {
+    0% {
+        transform: translateZ(-200px) rotate(45deg) scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: translateZ(0) rotate(0) scale(1.2);
+        opacity: 1;
+    }
 }
 
 .squad__cell .card__controls {

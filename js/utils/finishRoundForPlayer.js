@@ -1,11 +1,17 @@
 import { win77 } from "../dne-cli.js";
 
 const lightWalkingPlayer = () => {
+    win77.mm.open();
+
     const squadCellNodes = document.querySelectorAll(`.js-squad-cell`);
     squadCellNodes.forEach((squadCellNode) => {
         squadCellNode.classList.remove("--walking");
         squadCellNode.dataset.playerId === win77.router.currentPlayer ? squadCellNode.classList.add("--walking") : "";
     });
+
+    setTimeout(() => {
+        win77.mm.close();
+    }, 3000);
 }
 
 const finishRoundForPlayer = () => {

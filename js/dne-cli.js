@@ -6,6 +6,7 @@ import { appendNewTop } from "./theday/endgame.theday.js";
 class DNECli {
     constructor() {
         this.inQuestTime = 0;
+        this.mm = null;
     }
 
     timer(h, m, s, maxSec, maxMin, maxHour) {

@@ -10,7 +10,7 @@ import { setExecutive } from "../hud/table.hud.js";
 import { dialog } from "../hud/dialog.hud.js";
 import { openPopup } from "../popup/dom.popup.jquery.js";
 import { initNextBtn } from "../hud/router.hud.js";
-import { lightWalkingPlayer } from "../utils/finishRoundForPlayer.js";
+import { lightWalkingPlayer } from "./finishRoundForPlayer.js";
 
 class DNEPlayer {
     constructor(id, avatar, description) { // дія чи результат?
@@ -233,6 +233,7 @@ const initMatchMaking = () => {
     hostNode.dataset.playerId = win77.game.player.id;
 
     const openMatchmakingPage = () => {
+        updPlayer(win77.game.player.id);
         parent.classList.add("--visible");
         return parent;
     };
@@ -248,10 +249,6 @@ const initMatchMaking = () => {
         const closeBtnHandler = () => {
             parent.classList.remove("--visible");
             playersList.classList.remove("--visible");
-            // closeBtn.removeEventListener("click", closeBtnHandler);
-            // if (!parent.classList.contains("--search")) {
-            //     startMatchmakingBtn.removeEventListener("click", startBtnHandler);
-            // }
         };
 
         const setOptions = () => {
@@ -310,27 +307,25 @@ const initMatchMaking = () => {
             openPopup("#dialog-popup");
         }
 
-        win77.setMatchmakingOptions = setOptions;
         closeBtn.addEventListener("click", closeBtnHandler);
         startMatchmakingBtn.addEventListener("click", startBtnHandler);
-        win77.startMatchmaking = startBtnHandler;
         openSettingsBtn.addEventListener("click", openSettingsHandler);
         inviteRandomBtns.forEach((inviteRandomBtn) => {
-            inviteRandomBtn.addEventListener("click", () => {
-                showPlayersList();
-                // todo invite random player not from lobby
-                // win77.invite(Array.from(win77.players)[getRandomInt(win77.players.size)].id);
-            });
+            inviteRandomBtn.addEventListener("click", showPlayersList);
         });
         initPlayersList();
+
+        win77.mm = {
+            open: openMatchmakingPage,
+            close: closeBtnHandler,
+            setOptions: setOptions,
+            start: startBtnHandler
+        }
     }
 
     initHandlers();
     const openMatchmakingBtn = document.querySelector(".js-open-matchmaking");
-    openMatchmakingBtn.addEventListener("click", () => {
-        updPlayer(win77.game.player.id);
-        openMatchmakingPage();
-    });
+    openMatchmakingBtn.addEventListener("click", openMatchmakingPage);
 }
 
 export { initMatchMaking, getMatchMakingOptionsMarkup, getEventParamsMarkup };

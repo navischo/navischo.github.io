@@ -89,8 +89,8 @@ Ready to start event?
                 action: (e) => {
                     console.log("Start");
                     // todo применить настройки матча
-                    win77.setMatchmakingOptions();
-                    win77.startMatchmaking();
+                    win77.mm.setOptions();
+                    win77.mm.start();
                     closePopup();
                     // save new options
                 }
