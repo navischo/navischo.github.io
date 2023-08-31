@@ -42,6 +42,18 @@
     color: white;
 }
 
+#dne-card-class-collector .card__preview {
+    transform: scale(2.5) translateY(45px);
+}
+
+#dne-card-class-collector .card__description {
+    position: absolute;
+    bottom: 20px;
+
+    color: white;
+    text-shadow: 2px 1px 0 black;
+}
+
 #dne-card-gm .card__header-left {
     max-width: 100%;
 }
