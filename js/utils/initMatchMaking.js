@@ -203,13 +203,15 @@ const toggleSearch = () => {
     const parent = document.querySelector("#matchmaking");
     const startMatchmakingBtn = document.querySelector(".js-start-matchmaking");
     const setMatchmakingBtn = document.querySelector(".js-set-matchmaking");
-    const playerMatchmakingBtn = document.querySelector(".js-player-matchmaking");
+    const playerMatchmakingBtnArr = document.querySelectorAll(".js-player-matchmaking");
     const playersList = document.querySelector(".js-players-wrap");
 
     parent.classList.toggle("--search");
     setMatchmakingBtn.classList.toggle("--search");
     startMatchmakingBtn.classList.toggle("--active");
-    playerMatchmakingBtn.classList.toggle("--ready");
+    playerMatchmakingBtnArr.forEach((playerMatchmakingBtn) => {
+        playerMatchmakingBtn.classList.toggle("--ready");
+    });
     playersList.classList.remove("--visible");
 }
 

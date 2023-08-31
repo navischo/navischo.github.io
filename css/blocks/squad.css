@@ -18,6 +18,8 @@
     justify-content: center;
     width: 300px;
     /*padding-top: 20px;*/
+
+    transition: .2s ease-in-out;
 }
 
 .squad__cell.--walking {
