@@ -328,6 +328,17 @@ const initDNELootArr = () => {
     LootArr.push(new DNELootCard("rebeca", "Ребека", REBECA_LONGLINE, REBECA_IMG, 1, 0, "Найомничок", REBECA_SHORTLINE, "", true, "npc"));
 
 
+    //  Лусіо
+    //
+    //
+    const LUCIO_LONGLINE = "";
+    const LUCIO_SHORTLINE = `Try to match <br>this BPM!`;
+    const LUCIO_IMG_ID = `1TwF8NwC7gpd2NJQY4lEi0c48npZx4b0F`;
+    const LUCIO_IMG = `https://drive.google.com/uc?id=${LUCIO_IMG_ID}`;
+
+    LootArr.push(new DNELootCard("lucio", "Лусіо", LUCIO_LONGLINE, LUCIO_IMG, 1, 0, "Найомничок-DJ", LUCIO_SHORTLINE, "", true, "npc"));
+
+
     // Лялька
     //
     //
