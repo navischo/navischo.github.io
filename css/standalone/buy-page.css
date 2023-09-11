@@ -494,5 +494,6 @@
 
 .buy-content {
     height: 100vh;
+    padding-top: 100px;
     background: black;
 }
