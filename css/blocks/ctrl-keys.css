@@ -28,6 +28,7 @@
 }
 
 .ctrl-keys {
+    width: 100%;
     padding: 0;
     margin: 0;
 
@@ -38,7 +39,7 @@
 }
 
 .ctrl-key {
-    width: 30vw;
+    /*width: 30vw;*/
     font-family: "JetBrains Mono", monospace;
     display: flex;
     justify-content: center;
