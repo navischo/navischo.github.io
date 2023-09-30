@@ -243,6 +243,7 @@ const initMatchMaking = () => {
 
         const startMatchmakingBtn = document.querySelector(".js-start-matchmaking");
         const openSettingsBtn = document.querySelector(".js-open-mm-settings");
+        const switchPlayerBtn = document.querySelector(".js-switch-player");
         const inviteRandomBtns = document.querySelectorAll(".js-invite-random");
         const playersList = document.querySelector(".js-players-wrap");
 
@@ -307,9 +308,15 @@ const initMatchMaking = () => {
             openPopup("#dialog-popup");
         }
 
+        const switchPlayerHandler = () => {
+            console.log(win77.lobby, win77);
+            // win77.switchPlayer();
+        }
+
         closeBtn.addEventListener("click", closeBtnHandler);
         startMatchmakingBtn.addEventListener("click", startBtnHandler);
         openSettingsBtn.addEventListener("click", openSettingsHandler);
+        switchPlayerBtn.addEventListener("click", switchPlayerHandler);
         inviteRandomBtns.forEach((inviteRandomBtn) => {
             inviteRandomBtn.addEventListener("click", showPlayersList);
         });

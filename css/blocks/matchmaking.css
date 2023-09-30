@@ -27,6 +27,12 @@
     display: none;
 }
 
+#matchmaking.--running .matchmaking__players-controls {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+}
+
 #matchmaking.--running .score.--round {
     visibility: visible;
     opacity: 1;
@@ -219,6 +225,17 @@
 
 .matchmaking__status {
     margin: 0;
+}
+
+.matchmaking__players-controls {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+
+    position: absolute;
+    bottom: 200px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .matchmaking__loader {
