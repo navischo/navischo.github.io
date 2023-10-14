@@ -122,6 +122,22 @@ body {
     height: 100%
 }
 
+.holder.--mobile {
+    display: block;
+}
+
+.holder.--desktop {
+    display: none;
+}
+
+body:not(.js-mobile) .holder.--desktop {
+    display: block;
+}
+
+body:not(.js-mobile) .holder.--mobile {
+    display: none;
+}
+
 .content .holder {
     left: 0;
     right: 0;

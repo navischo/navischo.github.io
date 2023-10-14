@@ -39,7 +39,15 @@
             <div class="box">
                 <div class="box--inner">
                     <div class="content">
-                        <div class="holder">
+                        <div class="holder --mobile">
+                            <b>Welcome to DNE</b> — the high-performance brainware solutions with&nbsp;a&nbsp;soul.
+                            <br>
+                            <br>
+                            You need a bigger device to enter.<br>
+                            Please open link
+                            from desktop.
+                        </div>
+                        <div class="holder --desktop">
                             <b>Welcome to DNE</b> — the high-performance brainware solutions with&nbsp;a&nbsp;soul.
                             Please enter your
                             DNE player credentials.
@@ -80,41 +88,47 @@
 </div>
 
 <script type="module">
-    const loginField = document.querySelector("#login");
-    const passwordField = document.querySelector("#password");
-    const submitBtn = document.querySelector("#submit");
+    console.log(window.innerWidth);
+    if (window.innerWidth < 994) {
+        const body = document.querySelector("body");
+        body.classList.add("js-mobile");
+    } else {
+        const loginField = document.querySelector("#login");
+        const passwordField = document.querySelector("#password");
+        const submitBtn = document.querySelector("#submit");
 
-    const checkPassword = (password) => {
-        if (password === "continueisanart") {
-            console.log("Login success", password);
-            console.log(`Welcome, ${loginField.value.toLowerCase()}!`);
-            localStorage.setItem("login", loginField.value.toLowerCase());
-            loginField.focus();
-            let countdown = 3;
-            setInterval(() => {
-                if (countdown === 0) {
-                    location.href = "game.html";
-                } else {
-                    console.log(`The Game will begin in ${countdown}`);
-                    countdown--
-                }
-            }, 1000);
-            return true;
-        } else {
-            console.log("Password is invalid", password);
+        const checkPassword = (password) => {
+            if (password === "continueisanart") {
+                console.log("Login success", password);
+                console.log(`Welcome, ${loginField.value.toLowerCase()}!`);
+                localStorage.setItem("login", loginField.value.toLowerCase());
+                loginField.focus();
+                let countdown = 3;
+                setInterval(() => {
+                    if (countdown === 0) {
+                        location.href = "game.html";
+                    } else {
+                        console.log(`The Game will begin in ${countdown}`);
+                        countdown--
+                    }
+                }, 1000);
+                return true;
+            } else {
+                console.log("Password is invalid", password);
+            }
         }
-    }
 
 
-    document.querySelector("body").addEventListener("keydown", (e) => {
-        console.log(e);
-        if (e.key === "Enter") {
+        document.querySelector("body").addEventListener("keydown", (e) => {
+            console.log(e);
+            if (e.key === "Enter") {
+                checkPassword(passwordField.value);
+            }
+        });
+        submitBtn.addEventListener("click", () => {
             checkPassword(passwordField.value);
-        }
-    });
-    submitBtn.addEventListener("click", () => {
-        checkPassword(passwordField.value);
-    });
+        });
+    }
 </script>
 <!--PLAYGROUND-->
 <script>
