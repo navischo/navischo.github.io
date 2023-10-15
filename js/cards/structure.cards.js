@@ -126,7 +126,7 @@ const initPlayer = (id = null) => {
     const savedLvl = +localStorage.getItem(`${savedLogin}-lvl`) ? +localStorage.getItem(`${savedLogin}-lvl`) : 0;
     document.querySelector("body").dataset.lvl = `${savedLvl}`;
     // console.log(savedLvl ? `Level ${savedLvl} was restored from LocalStorage. Good luck in your journey!` : `Your start from lvl 0`, savedBankroll);
-
+    const playerSpaceId = localStorage.getItem("my-space-id");
 
     const player = {
         id: savedLogin,
@@ -144,7 +144,7 @@ const initPlayer = (id = null) => {
         loot: new Set(),
         cars: new Set(),
         cardsInRentIdSet: new Set(),
-        availableLocations: ["summer"],
+        availableLocations: [playerSpaceId ? playerSpaceId : "spawn"],
         currentQuest: null,
         score: 0,
         isOnMap: false
