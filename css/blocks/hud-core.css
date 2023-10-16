@@ -6,6 +6,16 @@
     background-image: radial-gradient( ellipse at 33% 10%, #461616 0%, transparent 75% );
 }
 
+.catalog-controls.--enter {
+    opacity: .7;
+
+    background-color: transparent;
+}
+
+.catalog-controls.--enter .app-header::after {
+    display: none;
+}
+
 .units a,
 .app-header__anchor-text {
     transition: .15s ease-in;
@@ -449,11 +459,13 @@ a {
 }
 
 .app-header {
+    position: relative;
+
     align-items: center;
     display: flex;
     grid-area: header;
     justify-content: space-between;
-    margin-bottom: 1rem;
+    padding-bottom: 1rem;
     padding-top: 15px;
     padding-right: 178px;
 }
@@ -541,17 +553,22 @@ a {
 }
 
 .nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
 .nav__link {
+    font-size: 1rem;
     line-height: 1.4rem;
     cursor: pointer;
 }
 
-.nav__link__element + .nav__link__element {
+.nav__link-element + .nav__link-element {
     margin-left: 0.5rem;
 }
 

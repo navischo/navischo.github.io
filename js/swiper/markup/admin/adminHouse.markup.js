@@ -8,7 +8,7 @@ const adminHouseMarkup = `
 <!--            <nav>-->
 <!--                <ul class="nav">-->
 <!--                    <li class="nav__item">-->
-<!--                        <a class="js-open-map nav__link"><span class="nav__link__element">Map</span></a>-->
+<!--                        <a class="js-open-map nav__link"><span class="nav__link-element">Map</span></a>-->
 <!--                    </li>-->
 <!--                </ul>-->
 <!--            </nav>-->

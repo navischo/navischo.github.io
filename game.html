@@ -17,11 +17,11 @@
     <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
     <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/favicon/android-icon-192x192.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
-<!--    <link rel="manifest" href="img/favicon/manifest.json">-->
+    <!--    <link rel="manifest" href="img/favicon/manifest.json">-->
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
@@ -31,12 +31,12 @@
 
     <link rel="stylesheet" href="css/main.css">
 
-<!--    <link rel="stylesheet" href="libs/setting/css/style.css">-->
+    <!--    <link rel="stylesheet" href="libs/setting/css/style.css">-->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
           integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
           crossorigin=""/>
     <link rel="stylesheet" href="https://unpkg.com/nouislider@14.6.3/distribute/nouislider.min.css">
-<!--    <link rel="stylesheet" href="libs/setting/css/style-custom.css">-->
+    <!--    <link rel="stylesheet" href="libs/setting/css/style-custom.css">-->
 
 </head>
 <body class="build background-single" data-hash="play" data-lvl="0">
@@ -60,10 +60,10 @@
         <a class="js-open-matchmaking game-menu__list-item">Matchmaking</a>
         <a href="#setting-popup" class="js-open-setting game-menu__list-item">Setting</a>
         <a class="js-open-lollyball game-menu__list-item">Roller</a>
-<!--        <a href="#terminal-popup" class="js-open-terminal game-menu__list-item">Solo</a>-->
+        <!--        <a href="#terminal-popup" class="js-open-terminal game-menu__list-item">Solo</a>-->
         <a href="#map-popup" class="js-open-map game-menu__list-item">Map</a>
         <a class="js-open-cs game-menu__list-item">Gig</a>
-<!--        <a class="game-menu__list-item">Mod</a>-->
+        <!--        <a class="game-menu__list-item">Mod</a>-->
         <a href="walls/wall.html" class="game-menu__list-item" target="_blank">Wall</a>
         <a class="js-open-key-map game-menu__list-item">+Keyboard</a>
         <a href="#card-builder-popup" class="js-open-card-builder game-menu__list-item" data-advice-id="loadSound">+Sound</a>
@@ -137,41 +137,38 @@
     <header class="app-header">
         <div class="app-header__anchor"><span class="app-header__anchor-text" data-advice-id="freedomCityNet">Freedom City NetWire</span>
         </div>
-        <nav>
-            <ul class="nav">
-                <li class="js-cards-nav-link nav__item">
-                    <a class="js-swipe-page slide-250 nav__link"><span class="nav__link__element">CARDS</span></a>
-                    <div class="nav__item-sublist">
-                        <div class="catalog-controls__item">
-                            <button class="cp-button f-btn js-init-catalog catalog-controls__filter">NPC</button>
-                            <button class="cp-button f-btn js-init-catalog catalog-controls__filter">CLASS</button>
-                            <button class="cp-button f-btn js-init-catalog catalog-controls__filter">LOOT</button>
-                            <button class="cp-button f-btn js-init-catalog catalog-controls__filter">SOUND</button>
-                            <button class="cp-button f-btn js-init-catalog catalog-controls__filter">PRJ</button>
-                            <button class="cp-button f-btn js-init-catalog catalog-controls__filter">DIA</button>
-                            <button class="cp-button f-btn js-init-catalog catalog-controls__filter">ANTI</button>
-                        </div>
+        <ul class="nav">
+            <li class="js-cards-nav-link nav__item">
+                <a class="js-swipe-page slide-250 nav__link"><span class="nav__link-element">CARDS</span></a>
+                <div class="nav__item-sublist">
+                    <div class="catalog-controls__item">
+                        <button class="cp-button f-btn js-init-catalog catalog-controls__filter">NPC</button>
+                        <button class="cp-button f-btn js-init-catalog catalog-controls__filter">CLASS</button>
+                        <button class="cp-button f-btn js-init-catalog catalog-controls__filter">LOOT</button>
+                        <button class="cp-button f-btn js-init-catalog catalog-controls__filter">SOUND</button>
+                        <button class="cp-button f-btn js-init-catalog catalog-controls__filter">PRJ</button>
+                        <button class="cp-button f-btn js-init-catalog catalog-controls__filter">DIA</button>
+                        <button class="cp-button f-btn js-init-catalog catalog-controls__filter">ANTI</button>
                     </div>
-                </li>
-                <li class="nav__item">
-                    <a class="js-swipe-page slide-500 nav__link"><span class="nav__link__element">ADMIN</span></a>
-                </li>
-                <li class="nav__item">
-                    <a class="js-swipe-page slide-150 nav__link" href="#"><span
-                            class="nav__link__element">PLAY</span></a>
-                </li>
-                <li class="nav__item">
-                    <a class="js-swipe-page slide-200 nav__link" href="#"><span class="nav__link__element">EVENT</span></a>
-                    <div class="nav__item-sublist --right">
-                        <div class="catalog-controls__item">
-                            <a href="#setting-popup" class="js-open-setting cp-button f-btn catalog-controls__filter">SETTING</a>
-                            <a href="#map-popup" class="js-open-map cp-button f-btn catalog-controls__filter">MAP</a>
-                        </div>
+                </div>
+            </li>
+            <li class="nav__item">
+                <a class="js-swipe-page slide-500 nav__link"><span class="nav__link-element">ADMIN</span></a>
+            </li>
+            <li class="nav__item">
+                <a class="js-swipe-page slide-150 nav__link" href="#"><span
+                        class="nav__link-element">PLAY</span></a>
+            </li>
+            <li class="nav__item">
+                <a class="js-swipe-page slide-200 nav__link" href="#"><span class="nav__link-element">EVENT</span></a>
+                <div class="nav__item-sublist --right">
+                    <div class="catalog-controls__item">
+                        <a href="#setting-popup" class="js-open-setting cp-button f-btn catalog-controls__filter">SETTING</a>
+                        <a href="#map-popup" class="js-open-map cp-button f-btn catalog-controls__filter">MAP</a>
                     </div>
-                </li>
-            </ul>
-        </nav>
-        <div></div>
+                </div>
+            </li>
+        </ul>
     </header>
     <!--            <p class="append-buttons">-->
     <!--                &lt;!&ndash;        <a href="#" class="prepend-2-slides">Prepend 2 Slides</a>&ndash;&gt;-->
@@ -354,8 +351,10 @@
             </a>
         </div>
         <p class="map__descr">
-            Ми створили цю карту із власних спогадів про час, проведений у затишних місцях нескінченного вирію творчої сцени Києва.<br>
-            Тицяй на шахи і переміщуйся між секторами, щоб відкривати нові поінти інтересу, локації, персонажів та саунд.
+            Ми створили цю карту із власних спогадів про час, проведений у затишних місцях нескінченного вирію творчої
+            сцени Києва.<br>
+            Тицяй на шахи і переміщуйся між секторами, щоб відкривати нові поінти інтересу, локації, персонажів та
+            саунд.
         </p>
     </div>
     <div class="map__nav">
@@ -516,17 +515,26 @@
                         <option value="0">Не для гостей</option>
                     </select>
                     <fieldset id="housing-features" class="keks-map__features">
-                        <input type="checkbox" name="features" value="wifi" id="filter-wifi" class="keks-map__checkbox visually-hidden">
+                        <input type="checkbox" name="features" value="wifi" id="filter-wifi"
+                               class="keks-map__checkbox visually-hidden">
                         <label class="keks-map__feature keks-map__feature--wifi" for="filter-wifi">Wi-Fi</label>
-                        <input type="checkbox" name="features" value="dishwasher" id="filter-dishwasher" class="keks-map__checkbox visually-hidden">
-                        <label class="keks-map__feature keks-map__feature--dishwasher" for="filter-dishwasher">Посудомоечная машина</label>
-                        <input type="checkbox" name="features" value="parking" id="filter-parking" class="keks-map__checkbox visually-hidden">
-                        <label class="keks-map__feature keks-map__feature--parking" for="filter-parking">Парковка</label>
-                        <input type="checkbox" name="features" value="washer" id="filter-washer" class="keks-map__checkbox visually-hidden">
-                        <label class="keks-map__feature keks-map__feature--washer" for="filter-washer">Стиральная машина</label>
-                        <input type="checkbox" name="features" value="elevator" id="filter-elevator" class="keks-map__checkbox visually-hidden">
+                        <input type="checkbox" name="features" value="dishwasher" id="filter-dishwasher"
+                               class="keks-map__checkbox visually-hidden">
+                        <label class="keks-map__feature keks-map__feature--dishwasher" for="filter-dishwasher">Посудомоечная
+                            машина</label>
+                        <input type="checkbox" name="features" value="parking" id="filter-parking"
+                               class="keks-map__checkbox visually-hidden">
+                        <label class="keks-map__feature keks-map__feature--parking"
+                               for="filter-parking">Парковка</label>
+                        <input type="checkbox" name="features" value="washer" id="filter-washer"
+                               class="keks-map__checkbox visually-hidden">
+                        <label class="keks-map__feature keks-map__feature--washer" for="filter-washer">Стиральная
+                            машина</label>
+                        <input type="checkbox" name="features" value="elevator" id="filter-elevator"
+                               class="keks-map__checkbox visually-hidden">
                         <label class="keks-map__feature keks-map__feature--elevator" for="filter-elevator">Лифт</label>
-                        <input type="checkbox" name="features" value="conditioner" id="filter-conditioner" class="keks-map__checkbox visually-hidden">
+                        <input type="checkbox" name="features" value="conditioner" id="filter-conditioner"
+                               class="keks-map__checkbox visually-hidden">
                         <label class="keks-map__feature keks-map__feature--conditioner" for="filter-conditioner">Кондиционер</label>
                     </fieldset>
                 </form>
@@ -544,16 +552,19 @@
                             <img src="img/muffin-grey.svg" alt="Постер події" width="40" height="44">
                         </div>
                         <div class="ad-form__field">
-                            <input type="file" id="avatar" name="avatar" class="ad-form-header__input visually-hidden" accept="image/png, image/jpeg">
+                            <input type="file" id="avatar" name="avatar" class="ad-form-header__input visually-hidden"
+                                   accept="image/png, image/jpeg">
                             <label class="ad-form-header__drop-zone" for="avatar">Завантажити<br>фото...</label>
                         </div>
-                        <p class="ad-form-header__info">Заповніть усі необхідні поля, оберіть вартість входу, завантажте флаєр та мапу локації. Вигадайте цікавий опис. Він зробить івент більш живим та привабливим.<br>
+                        <p class="ad-form-header__info">Заповніть усі необхідні поля, оберіть вартість входу, завантажте
+                            флаєр та мапу локації. Вигадайте цікавий опис. Він зробить івент більш живим та привабливим.<br>
                             <br>Обличчя івенту має давати гостям повне уявлення про його зміст.</p>
                     </div>
                 </fieldset>
                 <fieldset class="field ad-form__element ad-form__element--wide">
                     <label class="ad-form__label glow text" for="title">Заголовок івенту</label>
-                    <input id="title" name="title" type="text" placeholder="Вечірка твоїх друзів" value="Ma perfect event" required>
+                    <input id="title" name="title" type="text" placeholder="Вечірка твоїх друзів"
+                           value="Ma perfect event" required>
                 </fieldset>
                 <fieldset class="field ad-form__element ad-form__element--wide" style="display: none">
                     <label class="ad-form__label glow text" for="address">Адреса (координати)</label>
@@ -598,7 +609,7 @@
                 </fieldset>
                 <fieldset class="field ad-form__element">
                     <label class="ad-form__label glow text" for="price">Ціна за вхід</label>
-                    <input id="price" name="price" type="number" step="100" placeholder="200"required>
+                    <input id="price" name="price" type="number" step="100" placeholder="200" required>
                     <div class="ad-form__slider"></div>
                 </fieldset>
                 <fieldset class="field ad-form__element ad-form__element--time">
@@ -636,23 +647,35 @@
 
                 <fieldset class="field ad-form__element ad-form__element--wide">
                     <label class="ad-form__label glow text" for="description">Опис</label>
-                    <textarea id="description" name="description" placeholder="Розкажи про те, що мені дасть візит до твого івенту та навіщо мені це потрібно"></textarea>
+                    <textarea id="description" name="description"
+                              placeholder="Розкажи про те, що мені дасть візит до твого івенту та навіщо мені це потрібно"></textarea>
                 </fieldset>
 
-                <fieldset class="ad-form__element ad-form__element--wide features" style="margin-top: 40px; display: none">
-                    <legend>Доступність: танцмайдан, вулиця, Wi-Fi, фудкорт, майстерня, тату, маркетплейс, чіл-зона</legend>
-                    <input class="features__checkbox visually-hidden" type="checkbox" name="feature" value="wifi" id="feature-wifi">
+                <fieldset class="ad-form__element ad-form__element--wide features"
+                          style="margin-top: 40px; display: none">
+                    <legend>Доступність: танцмайдан, вулиця, Wi-Fi, фудкорт, майстерня, тату, маркетплейс, чіл-зона
+                    </legend>
+                    <input class="features__checkbox visually-hidden" type="checkbox" name="feature" value="wifi"
+                           id="feature-wifi">
                     <label class="features__label features__label--wifi" for="feature-wifi">Wi-Fi</label>
-                    <input class="features__checkbox visually-hidden" type="checkbox" name="feature" value="dishwasher" id="feature-dishwasher">
-                    <label class="features__label features__label--dishwasher" for="feature-dishwasher">Посудомоечная машина</label>
-                    <input class="features__checkbox visually-hidden" type="checkbox" name="feature" value="parking" id="feature-parking">
+                    <input class="features__checkbox visually-hidden" type="checkbox" name="feature" value="dishwasher"
+                           id="feature-dishwasher">
+                    <label class="features__label features__label--dishwasher" for="feature-dishwasher">Посудомоечная
+                        машина</label>
+                    <input class="features__checkbox visually-hidden" type="checkbox" name="feature" value="parking"
+                           id="feature-parking">
                     <label class="features__label features__label--parking" for="feature-parking">Парковка</label>
-                    <input class="features__checkbox visually-hidden" type="checkbox" name="feature" value="washer" id="feature-washer">
-                    <label class="features__label features__label--washer" for="feature-washer">Стиральная машина</label>
-                    <input class="features__checkbox visually-hidden" type="checkbox" name="feature" value="elevator" id="feature-elevator">
+                    <input class="features__checkbox visually-hidden" type="checkbox" name="feature" value="washer"
+                           id="feature-washer">
+                    <label class="features__label features__label--washer" for="feature-washer">Стиральная
+                        машина</label>
+                    <input class="features__checkbox visually-hidden" type="checkbox" name="feature" value="elevator"
+                           id="feature-elevator">
                     <label class="features__label features__label--elevator" for="feature-elevator">Лифт</label>
-                    <input class="features__checkbox visually-hidden" type="checkbox" name="feature" value="conditioner" id="feature-conditioner">
-                    <label class="features__label features__label--conditioner" for="feature-conditioner">Кондиционер</label>
+                    <input class="features__checkbox visually-hidden" type="checkbox" name="feature" value="conditioner"
+                           id="feature-conditioner">
+                    <label class="features__label features__label--conditioner"
+                           for="feature-conditioner">Кондиционер</label>
                 </fieldset>
 
                 <fieldset class="ad-form__element ad-form__element--wide" style="margin-top: 40px">
@@ -669,7 +692,8 @@
                     <button class="js-set-setting cp-button ad-form__submit" type="submit">
                         <span class="submit">Створити</span>
                     </button>
-                    або <button class="cp-button ad-form__reset" type="reset">очистити</button>
+                    або
+                    <button class="cp-button ad-form__reset" type="reset">очистити</button>
                 </fieldset>
             </form>
         </section>
@@ -695,7 +719,8 @@
                 <li class="popup__feature popup__feature--washer"></li>
                 <li class="popup__feature popup__feature--elevator"></li>
             </ul>
-            <p class="popup__description">Великолепная квартира-студия в центре Токио. Подходит как туристам, так и бизнесменам. Квартира полностью укомплектована и недавно отремонтирована.</p>
+            <p class="popup__description">Великолепная квартира-студия в центре Токио. Подходит как туристам, так и
+                бизнесменам. Квартира полностью укомплектована и недавно отремонтирована.</p>
             <div class="popup__photos">
                 <img src="" class="popup__photo" width="45" height="40" alt="Фотография жилья">
             </div>
@@ -790,7 +815,8 @@
                 <a href="#load-popup" class="js-open-load cyber-strike__menu-link">Load</a>
                 <a class="cyber-strike__menu-link">Options</a>
                 <a href="#" class="js-close-cs cyber-strike__menu-link">Quit</a>
-                <a href="https://www.cyberpunk.net/ua/en/" class="cybr-title --cs-logo cyber-strike__menu-link" target="_blank"></a>
+                <a href="https://www.cyberpunk.net/ua/en/" class="cybr-title --cs-logo cyber-strike__menu-link"
+                   target="_blank"></a>
             </div>
         </div>
         <div class="cyber-strike__mp4-bg">
@@ -808,19 +834,21 @@
             <nav>
                 <ul class="nav">
                     <li class="nav__item">
-                        <a class="nav__link"><span class="nav__link__element">CARDS</span></a>
+                        <a class="nav__link"><span class="nav__link-element">CARDS</span></a>
                         <div class="nav__item-sublist">
                             <div class="catalog-controls__item">
-                                <button class="js-change-lollyball cp-button f-btn catalog-controls__filter">NPC</button>
-                                <button class="js-change-lollyball cp-button f-btn catalog-controls__filter">SOUND</button>
+                                <button class="js-change-lollyball cp-button f-btn catalog-controls__filter">NPC
+                                </button>
+                                <button class="js-change-lollyball cp-button f-btn catalog-controls__filter">SOUND
+                                </button>
                             </div>
                         </div>
                     </li>
                     <li class="nav__item">
-                        <a class="js-my-lollyball nav__link"><span class="nav__link__element">My</span></a>
+                        <a class="js-my-lollyball nav__link"><span class="nav__link-element">My</span></a>
                     </li>
                     <li class="nav__item">
-                        <a class="js-players-lollyball nav__link"><span class="nav__link__element">PLAYERS</span></a>
+                        <a class="js-players-lollyball nav__link"><span class="nav__link-element">PLAYERS</span></a>
                     </li>
                 </ul>
             </nav>
@@ -911,7 +939,7 @@
         integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg="
         crossorigin=""></script>
 <script src="https://unpkg.com/nouislider@14.6.3/distribute/nouislider.min.js"></script>
-<script type="module" src="js/setting/setting.module.js" ></script>
+<script type="module" src="js/setting/setting.module.js"></script>
 
 <!-- require for initTinder.js -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -961,23 +989,23 @@
 
 
 <script type="module">
-    import { initInventoryPopupJquery } from "./js/utils/initInventoryPopup.jquery.js";
-    import { initKeyboard } from "./js/utils/initKeyboard.js";
-    import { initCardBuilder } from "./js/hud/cardBuilder.hud.js";
-    import { initNokiaPopup } from "./js/hud/fon.hud.js";
-    import { quests } from "./js/quest/structure.quest.js";
-    import { initQuest } from "./js/quest/dom.quest.js";
-    import { initIntervalScreen } from "./js/page/screen.page.js";
-    import { redrawMap, drawMapModal } from "./js/page/map.page.js";
-    import { dialog } from "./js/hud/dialog.hud.js";
-    import { initCollector } from "./js/utils/initCollector.js";
-    import { initSettingOptionsUpdate } from "./js/utils/updSettingOptions.js";
-    import { initGameBoy } from "./js/utils/initGameBoy.js";
-    import { initMatchMaking } from "./js/utils/initMatchMaking.js";
-    import { initRoller } from "./js/utils/initTinder.js";
-    import { makeWallSprayable } from "./js/utils/makeWallSprayable.js";
-    import { initTerminal } from "./js/utils/initTerminal.js";
-    import { enterCity } from "./js/utils/enterCity.js";
+    import {initInventoryPopupJquery} from "./js/utils/initInventoryPopup.jquery.js";
+    import {initKeyboard} from "./js/utils/initKeyboard.js";
+    import {initCardBuilder} from "./js/hud/cardBuilder.hud.js";
+    import {initNokiaPopup} from "./js/hud/fon.hud.js";
+    import {quests} from "./js/quest/structure.quest.js";
+    import {initQuest} from "./js/quest/dom.quest.js";
+    import {initIntervalScreen} from "./js/page/screen.page.js";
+    import {redrawMap, drawMapModal} from "./js/page/map.page.js";
+    import {dialog} from "./js/hud/dialog.hud.js";
+    import {initCollector} from "./js/utils/initCollector.js";
+    import {initSettingOptionsUpdate} from "./js/utils/updSettingOptions.js";
+    import {initGameBoy} from "./js/utils/initGameBoy.js";
+    import {initMatchMaking} from "./js/utils/initMatchMaking.js";
+    import {initRoller} from "./js/utils/initTinder.js";
+    import {makeWallSprayable} from "./js/utils/makeWallSprayable.js";
+    import {initTerminal} from "./js/utils/initTerminal.js";
+    import {enterCity} from "./js/utils/enterCity.js";
 
     initInventoryPopupJquery();
 
