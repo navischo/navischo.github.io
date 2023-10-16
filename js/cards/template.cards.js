@@ -4,7 +4,7 @@ const getCardElement = (cardData) => {
     newCard.id = `dne-card-${cardData.id}`;
 
     newCard.innerHTML = `
-<article class="card">
+<article class="card"><!--${cardData.isHide ? "--hide": ""}-->
     <div class="js-card-controls card__controls">
         <button>+</button>
     </div>
@@ -37,7 +37,7 @@ const getDoorCardElement = (cardData) => {
     newCard.id = `dne-card-${cardData.id}`;
 
     newCard.innerHTML = `
-    <article class="card card--door">
+    <article class="card card--door"><!--${cardData.isHide ? "--hide": ""}-->
         <div class="js-card-controls card__controls">
             <button>+</button>
         </div>

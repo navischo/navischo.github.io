@@ -9,7 +9,7 @@ class DNECard {
 }
 
 class DNELootCard extends DNECard {
-    constructor(id, name, description, img, bonus, cost, limits, longline, qr, isBuild, type = "loot", credits = null) {
+    constructor(id, name, description, img, bonus, cost, limits, longline, qr, isBuild, isHide, type = "loot", credits = null) {
         super(id, name, description, img);
         this.bonus = bonus;
         this.cost = cost;
@@ -17,13 +17,14 @@ class DNELootCard extends DNECard {
         this.longline = longline;
         this.qr = qr;
         this.isBuild = isBuild;
+        this.isHide = isHide;
         this.type = type;
         this.credits = credits;
     }
 }
 
 class DNEDoorCard extends DNECard {
-    constructor(id, name, description, img, level, budget, client, roles, penalty, profit, profitOrigins, longline, qr, isBuild, type = "door") {
+    constructor(id, name, description, img, level, budget, client, roles, penalty, profit, profitOrigins, longline, qr, isBuild, isHide, type = "door") {
         super(id, name, description, img);
         this.level = level;
         this.budget = budget;
@@ -35,6 +36,7 @@ class DNEDoorCard extends DNECard {
         this.longline = longline;
         this.qr = qr;
         this.isBuild = isBuild;
+        this.isHide = isHide;
         this.type = type;
     }
 }
