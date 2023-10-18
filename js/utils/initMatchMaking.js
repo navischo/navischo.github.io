@@ -232,9 +232,18 @@ const initMatchMaking = () => {
 
     hostNode.dataset.playerId = win77.game.player.id;
 
+    const closeMatchmakingPageHandler = (e) => {
+        if (e.key === "Escape") {
+            parent.classList.remove("--visible");
+        }
+
+        document.removeEventListener("keydown", closeMatchmakingPageHandler);
+    };
     const openMatchmakingPage = () => {
         updPlayer(win77.game.player.id);
         parent.classList.add("--visible");
+
+        document.addEventListener("keydown", closeMatchmakingPageHandler);
         return parent;
     };
 

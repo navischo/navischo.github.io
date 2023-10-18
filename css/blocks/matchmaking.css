@@ -64,29 +64,32 @@
 
 .matchmaking__controls {
     position: absolute;
-
     left: 65px;
     bottom: 66px;
+    z-index: 2;
+
+    transform: scale(.8);
+    transform-origin: bottom left;
 }
 
 #matchmaking.--search .matchmaking__controls {
-    bottom: -225px;
+bottom: -225px;
 }
 
 #matchmaking.--search.--ready .matchmaking__controls {
-    bottom: -415px;
+bottom: -415px;
 }
 
 #matchmaking.--search.--ready .matchmaking__start::before {
-    content: "accept";
+content: "accept";
 }
 
 #matchmaking.--search .matchmaking__next-match::before {
-    content: "Next in..";
+content: "Next in..";
 }
 
 #matchmaking.--search.--ready .matchmaking__next-match::before {
-    content: "Start in..";
+content: "Start in..";
 }
 
 /* #11dbab */
