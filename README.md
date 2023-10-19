@@ -1,5 +1,9 @@
 # DNE
 
+Download this repository to play the game offline
+
+https://navischo.github.io/
+
 Hello and welcome to the original adventure!
 
 Introduction
