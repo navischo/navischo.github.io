@@ -389,6 +389,7 @@ const matchCrewBonus = () => {
 }
 
 const matchEventIncome = (smithCard) => {
+    console.log("win77.game.event.result.income", win77.game.event.result.income);
     const cashOnEnter = matchCashOnEnter(smithCard);
     win77.game.event.result.cashOnEnter = win77.game.event.result.cashOnEnter + cashOnEnter;
 

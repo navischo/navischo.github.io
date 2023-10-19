@@ -10,6 +10,7 @@ import { isSetHasId } from "../utils/isSetHasId.js";
 import { matchGenreBonus } from "../utils/matchGenreBonus.js";
 
 const reloadTheday = () => {
+    console.log("win77.game.event.result", win77.game.event.result);
     Array.from(win77.game.event.settings.guests.set).forEach((smithsCard) => {
         matchEventIncome(smithsCard);
     });
@@ -59,8 +60,12 @@ const reloadTheday = () => {
     updScore();
     // win77.pokeButton.dia.clearSmithsSet();
     win77.game.event.settings.guests.set.clear();
-    // win77.game.event.settings.guests.manCount = 0;
-    // win77.game.event.settings.guests.womanCount = 0;
+    win77.game.event.result.income = 0;
+    win77.game.event.result.cashOnEnter = 0;
+    win77.game.event.result.cashOnBar = 0;
+    win77.game.event.result.impactBonus = 0;
+    win77.game.event.settings.guests.manCount = 0;
+    win77.game.event.settings.guests.womanCount = 0;
     win77.game.rareGuestsSet.forEach((guest) => {
         guest.isOnBoard = false;
     });
