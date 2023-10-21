@@ -34,6 +34,7 @@ win77.router = {
     isLogin: true,
     matchmaking: false,
     pipeline: PIPELINES.easy.map(el => el),
+    currentPipe: false,
     currentPage: currentPage,
     nextPageIndex: 1,
     nav: initNav(),
@@ -97,9 +98,8 @@ const setTiming = (pipeObj) => {
     let sec = pipeObj.sec;
 
     win77.router.nextStep = () => {
-        const currentPipeObj = win77.router.nextPageIndex === 0 ? win77.router.pipeline[win77.router.nextPageIndex] : win77.router.pipeline[win77.router.nextPageIndex - 1];
-        console.log("currentPipeObj", win77.router.pipeline, win77.router.currentPage, currentPipeObj);
-        if (!currentPipeObj.disableNext) {
+        console.log("currentPipe", win77.router.pipeline, win77.router.currentPage, win77.router.currentPipe);
+        if (!win77.router.currentPipe.disableNext) {
             clearInterval(win77.secInterval);
             clearTimingNodes();
             win77.router.changePage(setTiming);
@@ -137,22 +137,19 @@ const initNextBtn = () => {
     win77.router.nextBtn = document.querySelector("#next-btn");
     win77.router.nextBtn.classList.add("--visible");
     win77.router.currentPage = "play";
+    win77.router.currentPipe = win77.router.pipeline[0];
 
     win77.router.changePage = (setTimingByCallback = null) => {
-        let currentPipeObj;
         if (win77.router.nextPageIndex === 0) {
             win77.router.resetDisable();
-            currentPipeObj = win77.router.pipeline[win77.router.nextPageIndex];
-        } else {
-            currentPipeObj = win77.router.pipeline[win77.router.nextPageIndex - 1];
         }
-        // const currentPipeObj = win77.router.nextPageIndex === 0 ? win77.router.pipeline[win77.router.nextPageIndex] : win77.router.pipeline[win77.router.nextPageIndex - 1];
-        if (currentPipeObj.disableNext) {
+        if (win77.router.currentPipe.disableNext) {
             win77.router.nextBtn.setAttribute("disable", "true");
         } else {
             const nextPipeObj = win77.router.pipeline[win77.router.nextPageIndex];
             win77.pokeButton.dia.goToPage(nextPipeObj.pageId);
 
+            win77.router.currentPipe = win77.router.pipeline[win77.router.nextPageIndex];
             win77.router.nextPageIndex++;
             if (win77.router.nextPageIndex >= win77.router.pipeline.length) {
                 win77.router.nextPageIndex = 0;

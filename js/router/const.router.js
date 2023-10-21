@@ -1,4 +1,5 @@
 import { CARD_TYPES } from "../cards/const.cards.js";
+import {win77} from "../dne-cli.js";
 
 const PAGE_NAMES = {
     enter: "enter",
@@ -23,29 +24,33 @@ const PIPELINES = Object.freeze({
         pageId: PAGE_NAMES.play,
         line: "Prepare to play",
         sec: 30,
-        disableNext: false
+        disableNext: false,
+        conditionNext: () => true
     },
-        {
-            stepId: "easy-lineup",
-            pageId: PAGE_NAMES.play,
-            line: "Select lineup",
-            sec: 120,
-            disableNext: true
-        },
-        {
-            stepId: "easy-event",
-            pageId: PAGE_NAMES.event,
-            line: "Meet guests",
-            sec: 120,
-            disableNext: true
-        },
-        {
-            stepId: "easy-admin",
-            pageId: PAGE_NAMES.admin,
-            line: "Get ready for next round",
-            sec: 30,
-            disableNext: false
-        }],
+    {
+        stepId: "easy-lineup",
+        pageId: PAGE_NAMES.play,
+        line: "Select lineup",
+        sec: 120,
+        disableNext: true,
+        conditionNext: () => win77.game.totalScore > win77.game.versusScore
+    },
+    {
+        stepId: "easy-event",
+        pageId: PAGE_NAMES.event,
+        line: "Meet guests",
+        sec: 120,
+        disableNext: true,
+        conditionNext: () => true
+    },
+    {
+        stepId: "easy-admin",
+        pageId: PAGE_NAMES.admin,
+        line: "Get ready for next round",
+        sec: 30,
+        disableNext: false,
+        conditionNext: () => true
+    }],
     bunny: [PAGE_NAMES.play, PAGE_NAMES.map, PAGE_NAMES.setting, PAGE_NAMES.event, PAGE_NAMES.admin, PAGE_NAMES.loot],
 });
 
