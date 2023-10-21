@@ -238,7 +238,7 @@ const updHand = () => {
                 openPopup("#dialog-popup");
             }
 
-            if (win77.router.pipeline[win77.router.nextPageIndex - 1].conditionNext()) {
+            if (win77.router.matchmaking && win77.router.currentPipe.conditionNext()) {
                 win77.router.enableNext();
                 dialog.init(dialog.DIALOG_ID.start);
             }
