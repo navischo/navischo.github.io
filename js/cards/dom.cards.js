@@ -153,7 +153,8 @@ const addCardControls = (newCard, cardData) => {
             createNode(controls.parent, "button", COMMANDS.buy, COMMANDS.buy);
             cardData.costObj.rentAvailable ? createNode(controls.parent, "button", COMMANDS.rent, COMMANDS.rent) : "";
         } else if (body.dataset.hash === "play") {
-            cardData.costObj.sellAvailable ? createNode(controls.parent, "button", COMMANDS.sell, COMMANDS.sell) : "";
+            const isItemInRent = win77.game.player.cardsInRentIdSet.has(cardData.id);
+            cardData.costObj.sellAvailable && !isItemInRent ? createNode(controls.parent, "button", COMMANDS.sell, COMMANDS.sell) : "";
         }
     }
     if (cardData.type === "npc") {
