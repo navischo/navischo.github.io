@@ -992,7 +992,8 @@
     import {initInventoryPopupJquery} from "./js/utils/initInventoryPopup.jquery.js";
     import {initKeyboard} from "./js/utils/initKeyboard.js";
     import {initCardBuilder} from "./js/hud/cardBuilder.hud.js";
-    import {initNokiaPopup} from "./js/hud/fon.hud.js";
+    import { NOKIA_MENUS } from "./js/hud/fon.hud.js";
+    import { initNokiaPopup } from "./js/hud/nokia.hud.js";
     import {quests} from "./js/quest/structure.quest.js";
     import {initQuest} from "./js/quest/dom.quest.js";
     import {initIntervalScreen} from "./js/page/screen.page.js";
@@ -1025,7 +1026,7 @@
         fon.classList.remove("--shake");
     });
 
-    initNokiaPopup();
+    initNokiaPopup(NOKIA_MENUS[0]);
 
     $('.js-dialog').magnificPopup({
         type: 'inline',

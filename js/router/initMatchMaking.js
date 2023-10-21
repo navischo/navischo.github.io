@@ -96,6 +96,7 @@ const showPlayersList = () => {
 const switchPlayer = (id) => {
     const playerById = Array.from(win77.lobby).find((PlayerObj) => PlayerObj.id === id);
     const prevPlayer = win77.game.player;
+    const isItAllianceCreator = win77.game.alliance.creator === playerById.id;
     win77.lobby.delete(playerById);
     win77.lobby.add(prevPlayer);
     win77.game.player = playerById;
@@ -104,7 +105,8 @@ const switchPlayer = (id) => {
     updScore();
     updBalanceNode();
     initInventory();
-    if (win77.game.player.hand.size < 5) {
+    console.log("dont give cards", isItAllianceCreator, win77.game.alliance.creator, playerById, win77.game.player.hand.size < 5, !isItAllianceCreator, win77.game.player.hand.size < 5 && !isItAllianceCreator);
+    if (win77.game.player.hand.size < 5 && !isItAllianceCreator) {
         win77.putCardAtPlayersHand(5 - win77.game.player.hand.size);
     }
     updHand();

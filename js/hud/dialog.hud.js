@@ -152,7 +152,7 @@ const dialogPopupMarkup = (question, answers) => `
 </div>
 `;
 
-const initDialogPopup = (index = 0) => {
+const initDialogPopup = (index = 0, callback) => {
     const parent = document.querySelector("#dialog-popup");
     const newNode = document.createElement("div");
     newNode.classList.add("win77-dialog");
@@ -160,6 +160,9 @@ const initDialogPopup = (index = 0) => {
     newNode.innerHTML = dialogPopupMarkup(DIALOG_QUESTIONS[index].question, DIALOG_QUESTIONS[index].answers);
     initAnswersActions(DIALOG_QUESTIONS[index].answers, newNode);
     parent.appendChild(newNode);
+    if (callback) {
+        callback();
+    }
 }
 
 const dialog = {

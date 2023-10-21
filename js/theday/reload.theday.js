@@ -8,6 +8,7 @@ import { drawCheck } from "./check.theday.js";
 import { parseTopsString, topsString } from "./endgame.theday.js";
 import { isSetHasId } from "../utils/isSetHasId.js";
 import { matchGenreBonus } from "../utils/matchGenreBonus.js";
+import { giveIncomeTo } from "../utils/giveIncomeTo.js";
 
 const reloadTheday = () => {
     console.log("win77.game.event.result", win77.game.event.result);
@@ -45,7 +46,16 @@ const reloadTheday = () => {
             moveCardBackAfterRent(cardId);
         });
     }
-    win77.giveIncomeToPlayer(win77.game.event.result.income);
+
+    if (win77.game.alliance) {
+        const half = Math.round(win77.game.event.result.income / 2);
+        win77.giveIncomeToPlayer(half);
+        giveIncomeTo(win77.game.alliance.savior, half);
+        win77.game.alliance = false;
+    } else {
+        win77.giveIncomeToPlayer(win77.game.event.result.income);
+    }
+
     win77.giveSkillPointsToPlayer(1);
     win77.giveEnergyPointsToPlayer(1);
     console.log("!win77.game.final", win77.game.final, win77.game.player.balance.skillPoints, win77.game.player.balance.skillPoints === 4);

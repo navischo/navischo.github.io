@@ -234,11 +234,25 @@ const updHand = () => {
             }
 
             if (win77.game.totalScore <= win77.game.versusScore && win77.game.player.hand.size === 0) {
-                dialog.init(dialog.DIALOG_ID.oneMore);
+                dialog.init(dialog.DIALOG_ID.oneMore, () => {
+                    const answerBtns = document.querySelectorAll(".js-answer");
+                    console.log(answerBtns);
+                    if (win77.router.matchmaking) {
+                        answerBtns[0].style.display = "none";
+                        if (win77.game.alliance) {
+                            answerBtns[2].style.display = "none";
+                        }
+                    } else {
+                        answerBtns[2].style.display = "none";
+                    }
+                });
                 openPopup("#dialog-popup");
             }
 
             if (win77.router.matchmaking && win77.router.currentPipe.conditionNext()) {
+                if (win77.game.alliance) {
+                    win77.switchPlayer(win77.game.alliance.creator);
+                }
                 win77.router.enableNext();
                 dialog.init(dialog.DIALOG_ID.start);
             }
