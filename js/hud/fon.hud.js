@@ -95,13 +95,13 @@ const nokiaMenuMarkup = (title) => `
 </div>
 `;
 
-const initNokiaPopup = () => {
+const initNokiaPopup = (menu = NOKIA_MENUS[0]) => {
     const parent = document.querySelector("#nokia-popup");
     const newNode = document.createElement("div");
     newNode.classList.add("nokia__preview");
     newNode.innerHTML = nokiaMenuMarkup(NOKIA_MENUS[0].title);
     const menuNode = newNode.querySelector(".menu");
-    NOKIA_MENUS[0].items.forEach((item) => {
+    menu.items.forEach((item) => {
         const itemNode = document.createElement("a");
         itemNode.href = item.href;
         itemNode.textContent = item.text;

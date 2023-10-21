@@ -2,8 +2,9 @@ import { win77 } from "../dne-cli.js";
 import { updHand } from "../cards/dom.cards.js";
 import { closePopup } from "../popup/dom.popup.jquery.js";
 import { setupTheday } from "../theday/setup.theday.js";
-import { getMatchMakingOptionsMarkup, getEventParamsMarkup } from "../router/initMatchMaking.router.js";
+import { getMatchMakingOptionsMarkup, getEventParamsMarkup } from "../router/initMatchMaking.js";
 import { updBalanceNode } from "./balance.hud.js";
+import { callFriend } from "../router/callFriend.js";
 
 const DIALOG_ID = {
     start: 0,
@@ -54,7 +55,8 @@ Ready to start event?
         question: `<p>Seems you dont have enouch sound. Wanna give up or buy some more?</p>`,
         answersId: {
             giveUp: 0,
-            oneMore: 1
+            oneMore: 1,
+            callFriend: 2
         },
         answers: [
             {
@@ -73,6 +75,13 @@ Ready to start event?
                     updHand();
                     win77.updBalanceHUD();
                     closePopup();
+                }
+            },
+            {
+                text: "Call friend",
+                action: (e) => {
+                    console.log("Call friend");
+                    callFriend();
                 }
             }
         ]
@@ -105,7 +114,7 @@ Ready to start event?
             }
         ]
     }
-]
+];
 
 const dialogPopupAnswerMarkup = (answer) => `
 <button class="js-answer shadow"><img src="https://raw.githubusercontent.com/mbledkowski/win98popup/master/outline.svg" alt="" width="66.9" height="15"><p>${answer.text}</p></button>

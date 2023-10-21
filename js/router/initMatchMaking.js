@@ -225,7 +225,7 @@ const startMatch = () => {
     initNextBtn();
 }
 
-const initMatchMakingRouter = () => {
+const initMatchMaking = () => {
     const parent = document.querySelector("#matchmaking");
     const hostNode = document.querySelector(".js-squad-host");
     // const mateNodes = document.querySelectorAll(".js-squad-mate");
@@ -344,4 +344,4 @@ const initMatchMakingRouter = () => {
     openMatchmakingBtn.addEventListener("click", openMatchmakingPage);
 }
 
-export { initMatchMakingRouter, getMatchMakingOptionsMarkup, getEventParamsMarkup };
+export { initMatchMaking, getMatchMakingOptionsMarkup, getEventParamsMarkup };
