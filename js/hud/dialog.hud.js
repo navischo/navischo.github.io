@@ -2,7 +2,7 @@ import { win77 } from "../dne-cli.js";
 import { updHand } from "../cards/dom.cards.js";
 import { closePopup } from "../popup/dom.popup.jquery.js";
 import { setupTheday } from "../theday/setup.theday.js";
-import { getMatchMakingOptionsMarkup, getEventParamsMarkup } from "../utils/initMatchMaking.js";
+import { getMatchMakingOptionsMarkup, getEventParamsMarkup } from "../router/initMatchMaking.router.js";
 import { updBalanceNode } from "./balance.hud.js";
 
 const DIALOG_ID = {

@@ -7,7 +7,7 @@ import { initInventory } from "../hud/inventory.hud.js";
 import { moveCardById , registerRent} from "../utils/getCardById.js";
 import { updBalanceNode } from "../hud/balance.hud.js";
 import { isSetHasId } from "../utils/isSetHasId.js";
-import { PAGE_NAMES } from "../hud/router.hud.js";
+import { PAGE_NAMES } from "../router/router.module.js";
 // import { openWithTimer } from "../hud/tab.hud.js";
 import { setExecutive } from "../hud/table.hud.js";
 import { CARD_TYPES } from "./const.cards.js";

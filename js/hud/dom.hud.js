@@ -1,7 +1,7 @@
 import { win77 } from "../dne-cli.js";
 import { pokeButtonMarkup } from "../utils/pokeButtonMarkup.js";
 import { createNode } from "../utils/createNode.js";
-import { PAGE_NAMES } from "./router.hud.js";
+import { PAGE_NAMES } from "../router/router.module.js";
 import { updHand } from "../cards/dom.cards.js";
 
 const hudMarkup = (owner = win77.game.player.id ? win77.game.player.id : "navi") => `

@@ -1,7 +1,7 @@
 import { win77 } from "../dne-cli.js";
 import { drawCard, updHand } from "../cards/dom.cards.js";
 import { getCardElement } from "../cards/template.cards.js";
-import { getRandomInt } from "./getCardById.js";
+import { getRandomInt } from "../utils/getCardById.js";
 import { initPlayer } from "../cards/structure.cards.js";
 import { updScore } from "../hud/score.hud.js";
 import { updBalanceNode } from "../hud/balance.hud.js";
@@ -9,8 +9,8 @@ import { initInventory } from "../hud/inventory.hud.js";
 import { setExecutive } from "../hud/table.hud.js";
 import { dialog } from "../hud/dialog.hud.js";
 import { openPopup } from "../popup/dom.popup.jquery.js";
-import { initNextBtn } from "../hud/router.hud.js";
-import { lightWalkingPlayer } from "./finishRoundForPlayer.js";
+import { initNextBtn } from "./router.module.js";
+import { lightWalkingPlayer } from "../utils/finishRoundForPlayer.js";
 
 class DNEPlayer {
     constructor(id, avatar, description) { // дія чи результат?
@@ -225,7 +225,7 @@ const startMatch = () => {
     initNextBtn();
 }
 
-const initMatchMaking = () => {
+const initMatchMakingRouter = () => {
     const parent = document.querySelector("#matchmaking");
     const hostNode = document.querySelector(".js-squad-host");
     // const mateNodes = document.querySelectorAll(".js-squad-mate");
@@ -269,7 +269,7 @@ const initMatchMaking = () => {
             const options = {
                 roundLimit: 7,
                 maxTime: null,
-                startBankroll: 14000,
+                startBankroll: 16000,
                 startSouls: 3,
             }
             if (+roundLimitInput?.value >= 2) {
@@ -344,4 +344,4 @@ const initMatchMaking = () => {
     openMatchmakingBtn.addEventListener("click", openMatchmakingPage);
 }
 
-export { initMatchMaking, getMatchMakingOptionsMarkup, getEventParamsMarkup };
+export { initMatchMakingRouter, getMatchMakingOptionsMarkup, getEventParamsMarkup };

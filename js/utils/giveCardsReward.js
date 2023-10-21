@@ -3,7 +3,7 @@ import { win77 } from "../dne-cli.js";
 import { drawLootCards } from "../cards/dom.cards.js";
 import { initInventory } from "../hud/inventory.hud.js";
 import { rentCard } from "./rentCard.js";
-import { PAGE_NAMES } from "../hud/router.hud.js";
+import { PAGE_NAMES } from "../router/router.module.js";
 
 const drawCardsReward = () => {
     const parent = document.querySelector("body");

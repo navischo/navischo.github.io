@@ -6,6 +6,7 @@ import { DUNGE_NAMES } from "../inInteraction/interface.inInteraction.js";
 import { matchGenreBonus } from "../utils/matchGenreBonus.js";
 import { logIncome } from "../utils/logIncome.js";
 import { initLineup } from "../utils/initLineup.js";
+import { updTipRouter } from "../router/updTip.router.js";
 
 const SMITHS_TYPES = [
     {
@@ -515,6 +516,7 @@ const useSmithsCards = () => {
 
         if (socialPoints === 0) {
             clearInterval(interval);
+            win77.router.matchmaking ? updTipRouter("Finish round") : "";
         }
     };
     const secToNext = getRandomInt(7);

@@ -1,71 +1,15 @@
 import { swiper } from "../swiper/swiper.module.js";
 import { win77 } from "../dne-cli.js";
-import { CARD_TYPES } from "../cards/const.cards.js";
+import { PAGE_NAMES, PIPELINES } from "./const.router.js";
 
-import { hudMarkup } from "./dom.hud.js";
+import { hudMarkup } from "../hud/dom.hud.js";
 import { updHand } from "../cards/dom.cards.js";
-import { initScore, updScore } from "./score.hud.js";
+import { initScore, updScore } from "../hud/score.hud.js";
 import { initCatalog } from "../catalog/dom.catalog.js";
 import { openPopup } from "../popup/dom.popup.jquery.js";
 import { finishRoundForPlayer } from "../utils/finishRoundForPlayer.js";
 
-const PAGE_NAMES = {
-    enter: "enter",
-    cards: "cards",
-    npc: CARD_TYPES.npc,
-    class: CARD_TYPES.class,
-    loot: CARD_TYPES.loot,
-    sound: CARD_TYPES.sound,
-    play: "play",
-    hud: "hud",
-    event: "event",
-    admin: "admin",
-    board: "board",
-    map: "map",
-    setting: "setting",
-};
-
 const isItCardsPage = (name) => name === PAGE_NAMES.npc || name === PAGE_NAMES.class || name === PAGE_NAMES.loot;
-
-
-// const PIPELINES = {
-//     init: [PAGE_NAMES.enter, PAGE_NAMES.npc, PAGE_NAMES.class, PAGE_NAMES.loot, PAGE_NAMES.hud, PAGE_NAMES.event, PAGE_NAMES.board],
-//     easy: [PAGE_NAMES.play, PAGE_NAMES.event, PAGE_NAMES.admin, PAGE_NAMES.loot],
-//     bunny: [PAGE_NAMES.play, PAGE_NAMES.map, PAGE_NAMES.setting, PAGE_NAMES.event, PAGE_NAMES.admin, PAGE_NAMES.loot],
-// };
-
-const PIPELINES = Object.freeze({
-    init: [PAGE_NAMES.enter, PAGE_NAMES.npc, PAGE_NAMES.class, PAGE_NAMES.loot, PAGE_NAMES.hud, PAGE_NAMES.event, PAGE_NAMES.board],
-    easy: [{
-        stepId: "easy-prepare",
-        pageId: PAGE_NAMES.play,
-        line: "Prepare to play",
-        sec: 30,
-        disableNext: false
-    },
-    {
-        stepId: "easy-lineup",
-        pageId: PAGE_NAMES.play,
-        line: "Select lineup",
-        sec: 120,
-        disableNext: true
-    },
-    {
-        stepId: "easy-event",
-        pageId: PAGE_NAMES.event,
-        line: "Meet guests",
-        sec: 120,
-        disableNext: true
-    },
-    {
-        stepId: "easy-admin",
-        pageId: PAGE_NAMES.admin,
-        line: "Get ready for next round",
-        sec: 30,
-        disableNext: false
-    }],
-    bunny: [PAGE_NAMES.play, PAGE_NAMES.map, PAGE_NAMES.setting, PAGE_NAMES.event, PAGE_NAMES.admin, PAGE_NAMES.loot],
-});
 
 const body = document.querySelector("body");
 const title = document.querySelector(".head-title");
@@ -88,6 +32,7 @@ const initNav = () => {
 
 win77.router = {
     isLogin: true,
+    matchmaking: false,
     pipeline: PIPELINES.easy.map(el => el),
     currentPage: currentPage,
     nextPageIndex: 1,
@@ -146,7 +91,7 @@ const setTiming = (pipeObj) => {
     timingNode.innerHTML =
         `
             <div class="js-timing-sec timing__sec">${pipeObj.sec}</div>
-            <div class="timing__line">${pipeObj.line}</div>
+            <div class="js-timing-tip timing__line">${pipeObj.line}</div>
         `;
     const secondsDisplayNode = timingNode.querySelector(".js-timing-sec");
     let sec = pipeObj.sec;

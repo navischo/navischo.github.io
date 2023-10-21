@@ -1,6 +1,6 @@
 import { getRandomInt } from "../utils/getCardById.js";
 import { win77 } from "../dne-cli.js";
-import { PAGE_NAMES, isItCardsPage } from "../hud/router.hud.js";
+import { PAGE_NAMES, isItCardsPage } from "../router/router.module.js";
 
 const SCREEN_NAMES = [
     `screen-nohud--on-bike`,

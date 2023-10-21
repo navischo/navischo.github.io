@@ -851,7 +851,7 @@
 <script type="module" src="../../js/hud/balance.hud.js"></script>
 <script type="module" src="../../js/hud/score.hud.js"></script>
 <script type="module" src="../../js/hud/time.hud.js"></script>
-<script type="module" src="../../js/hud/router.hud.js"></script>
+<script type="module" src="../../js/router/router.module.js"></script>
 <script type="module" src="../../js/hud/dom.hud.js"></script>
 <script type="module" src="../../js/hud/inventory.hud.js"></script>
 <script type="module" src="../../js/hud/tab.hud.js"></script>
@@ -895,7 +895,7 @@
     import {initCollector} from "../../js/utils/initCollector.js";
     import {initSettingOptionsUpdate} from "../../js/utils/updSettingOptions.js";
     import {initGameBoy} from "../../js/utils/initGameBoy.js";
-    import {initMatchMaking} from "../../js/utils/initMatchMaking.js";
+    import {initMatchMakingRouter} from "../../js/router/initMatchMaking.router.js";
     import {initTinder, initLollyball} from "../../js/utils/initTinder.js";
     import {makeWallSprayable} from "../../js/utils/makeWallSprayable.js";
 
@@ -962,7 +962,7 @@
     initCollector();
     initSettingOptionsUpdate();
     initGameBoy();
-    initMatchMaking();
+    initMatchMakingRouter();
     // initTinder();
     initLollyball();
     makeWallSprayable();
