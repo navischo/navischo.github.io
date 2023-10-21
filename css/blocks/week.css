@@ -43,6 +43,11 @@
 
 .week {
     position: relative;
+    left: 70px;
+    top: -40px;
+    z-index: 2;
+    transform: scale(.73);
+    transform-origin: left top;
 
     font-family: "Press Start 2p", "JetBrains Mono", monospace;
 }
