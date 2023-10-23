@@ -42,13 +42,25 @@ const isItWin = () => {
     }
 }
 
+const updInvaderScore = (bonus = 0) => {
+    let invaderScoreNode = document.querySelector("#invader-score");
+    if (!invaderScoreNode) {
+        const playerScoreNode = document.querySelector("#player-score");
+        invaderScoreNode = document.createElement("span");
+        invaderScoreNode.id = "invader-score";
+        invaderScoreNode.classList.add("js-score-val");
+        playerScoreNode.after(invaderScoreNode);
+    }
+    invaderScoreNode.textContent = `/${bonus}`;
+}
+
 const updScore = (bonus = 0) => {
     const playerScoreNode = document.querySelector("#player-score");
     const versusScoreNode = document.querySelector("#versus-score");
 
     win77.game.player.score = win77.game.player.score + +bonus;
 
-    if (win77.lobby.size > 0) {
+    if (win77.lobby.size > 0 && !win77.game.invasion) {
         let initialScore = 0;
         const matesScore = Array.from(win77.lobby).reduce((accumulator, player) => accumulator + player.score, initialScore);
         win77.game.totalScore = win77.game.player.score + matesScore;
@@ -56,7 +68,16 @@ const updScore = (bonus = 0) => {
         win77.game.totalScore = win77.game.player.score;
     }
 
-    playerScoreNode.innerHTML = win77.game.totalScore;
+    if (win77.game.invasion) {
+        if (win77.game.player.id === win77.game.invasion.invader) {
+            updInvaderScore(win77.game.player.score);
+        } else {
+            playerScoreNode.innerHTML = win77.game.totalScore;
+        }
+    } else {
+        playerScoreNode.innerHTML = win77.game.totalScore;
+    }
+
     versusScoreNode.innerHTML = win77.game.versusScore;
 
     isItWin();

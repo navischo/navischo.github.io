@@ -220,7 +220,17 @@ const updHand = () => {
             // console.log(win77);
             // openWithTimer();
             getEnergyForExtraSound(); // experiment
-            moveCardById(id, win77.game.player.hand, win77.game.table);
+
+            if (win77.game.invasion) {
+                if (win77.game.player.id === win77.game.invasion.invader) {
+                    moveCardById(id, win77.game.player.hand, win77.game.invasion.table);
+                } else {
+                    moveCardById(id, win77.game.player.hand, win77.game.table);
+                }
+            } else {
+                moveCardById(id, win77.game.player.hand, win77.game.table);
+            }
+
             updTable();
 
             win77.pokeButton.dia.updScore(bonus);
@@ -251,7 +261,7 @@ const updHand = () => {
 
             if (win77.router.matchmaking && win77.router.currentPipe.conditionNext()) {
                 if (win77.game.alliance) {
-                    win77.switchPlayer(win77.game.alliance.creator);
+                    win77.switchPlayer(win77.game.alliance.host);
                 }
                 win77.router.enableNext();
                 dialog.init(dialog.DIALOG_ID.start);
@@ -267,9 +277,16 @@ win77.pokeButton.dia.goToPage("hud");
 
 
 const updTable = () => {
-    const node = document.querySelector("#table");
-    node.innerHTML = ``;
+    const parent = document.querySelector(".table");
+    const table = parent.querySelector("#table");
+    table.innerHTML = ``;
     drawLootCards(win77.game.table, "#table");
+
+    if (win77.game.invasion) {
+        const tableInvader = parent.querySelector("#table-invader");
+        tableInvader.innerHTML = ``;
+        drawLootCards(win77.game.invasion.table, "#table-invader");
+    }
 }
 updTable();
 

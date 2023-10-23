@@ -8,6 +8,8 @@ import { initScore, updScore } from "../hud/score.hud.js";
 import { initCatalog } from "../catalog/dom.catalog.js";
 import { openPopup } from "../popup/dom.popup.jquery.js";
 import { finishRoundForPlayer } from "../utils/finishRoundForPlayer.js";
+import { callInvader } from "./callFriend.js";
+import { addOptionalNextBtn } from "./addOptionalNextBtn.js";
 
 const isItCardsPage = (name) => name === PAGE_NAMES.npc || name === PAGE_NAMES.class || name === PAGE_NAMES.loot;
 
@@ -138,6 +140,13 @@ const initNextBtn = () => {
     win77.router.nextBtn.classList.add("--visible");
     win77.router.currentPage = "play";
     win77.router.currentPipe = win77.router.pipeline[0];
+    win77.router.pipeline[1].onInit = () => {
+        console.log("onInit is works", win77.router.pipeline[1]);
+        addOptionalNextBtn("invade", () => {
+            console.log("Someone want to invade your event");
+            callInvader();
+        });
+    }
 
     win77.router.changePage = (setTimingByCallback = null) => {
         if (win77.router.nextPageIndex === 0) {
@@ -156,6 +165,10 @@ const initNextBtn = () => {
             }
 
             win77.router.nextBtn.textContent = win77.router.pipeline[win77.router.nextPageIndex].pageId;
+
+            if (win77.router.currentPipe.onInit) {
+                win77.router.currentPipe.onInit();
+            }
 
             if (setTimingByCallback) {
                 setTimingByCallback(nextPipeObj);
@@ -176,31 +189,7 @@ const initNextBtn = () => {
 const hideArrows = () => body.classList.add("hide-arrows");
 const showArrows = () => body.classList.remove("hide-arrows");
 
-const startPipe = (id) => {
-    win77.router.pipeline = PIPELINES[id];
-    win77.router.nextPageIndex = 1;
-    addOptionalNextBtn(`loot`);
 
-    return win77.router;
-}
-
-win77.startPipe = startPipe;
-
-const addOptionalNextBtn = (pageToGo) => {
-    const parent = document.querySelector(".js-next-btns");
-    const btn = document.createElement("button");
-    btn.classList.add("js-optional-next");
-    btn.classList.add("cp-button");
-    btn.classList.add("next-btn");
-    btn.textContent = pageToGo;
-
-    btn.addEventListener("click", () => {
-        win77.pokeButton.dia.goToPage(pageToGo);
-        btn.remove();
-    });
-
-    parent.appendChild(btn);
-}
 
 // const portalParent = document.querySelector(".js-portals-parent");
 // const portalNodes = portalParent.querySelectorAll(".js-portal");

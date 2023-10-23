@@ -1,7 +1,8 @@
 import { initNokiaPopup } from "../hud/nokia.hud.js";
 import { closePopup, openPopup } from "../popup/dom.popup.jquery.js";
+import { addOptionalNextBtn } from "./addOptionalNextBtn.js";
 
-const getMenuItem = (name) => {
+const getFriendItem = (name) => {
     return {
                 href: "#",
                 text: name,
@@ -13,7 +14,7 @@ const getMenuItem = (name) => {
 
                     console.log(`Hotline to ${name}`);
                     win77.game.alliance = {
-                        creator: originalPlayerId,
+                        host: originalPlayerId,
                         savior: name
                     };
                     win77.switchPlayer(name);
@@ -29,7 +30,7 @@ const callFriend = () => {
     nokiaContainer.innerHTML = "";
     initNokiaPopup({
         title: "Pokewall",
-        items: Array.from(win77.lobby).map((player) => getMenuItem(player.id))
+        items: Array.from(win77.lobby).map((player) => getFriendItem(player.id))
     });
     closePopup();
     setTimeout(() => {
@@ -37,4 +38,57 @@ const callFriend = () => {
     }, 100);
 }
 
-export { callFriend };
+const react = () => {
+    if (win77.game.player.id === win77.game.invasion.invader) {
+        win77.switchPlayer(win77.game.invasion.host);
+    } else {
+        win77.switchPlayer(win77.game.invasion.invader);
+    }
+}
+
+const getInvaderItem = (name) => {
+    return {
+        href: "#",
+        text: name,
+        callback: (e) => {
+            e.preventDefault();
+            win77.game.invasion = {
+                host: win77.game.player.id,
+                invader: name,
+                table: new Set()
+            };
+
+            const parent = document.querySelector(".table");
+            const tableNode = document.createElement("div");
+            tableNode.id = "table-invader";
+            tableNode.classList.add("table__cards");
+            parent.appendChild(tableNode);
+
+            win77.switchPlayer(win77.game.invasion.invader);
+
+            const hostTable = parent.querySelector ("#table");
+            const invaderTable = parent.querySelector("#table-invader");
+
+            hostTable.dataset.owner = `${win77.game.invasion.host}`;
+            invaderTable.dataset.owner = `${win77.game.invasion.invader}`;
+
+            closePopup();
+            document.querySelector("#invade").remove();
+            addOptionalNextBtn("react", react);
+            console.log(`Invasion by ${win77.game.invasion.invader}`);
+        }
+    }
+}
+
+const callInvader = () => {
+    console.log("Lets try to draw a invader phone");
+    const nokiaContainer = document.querySelector("#nokia-popup");
+    nokiaContainer.innerHTML = "";
+    initNokiaPopup({
+        title: "Pokewall",
+        items: Array.from(win77.lobby).map((player) => getInvaderItem(player.id))
+    }, "--red");
+    openPopup("#nokia-popup");
+}
+
+export { callFriend, callInvader };

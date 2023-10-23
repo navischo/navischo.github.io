@@ -111,6 +111,10 @@ body .mfp-bg {
     background-size: cover;
 }
 
+#nokia-popup.--red .nokia-area {
+    background: #da0030;
+}
+
 .nokia-area .title {
     margin: 0;
     padding-left: 8px;

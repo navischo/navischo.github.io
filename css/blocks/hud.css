@@ -294,6 +294,10 @@ body.js-tab {
     transform: translateY(-100%);
 }
 
+#invader-score {
+    color: #da0030;
+}
+
 .score {
     position: fixed;
     top: 0;
@@ -361,6 +365,8 @@ body {
 }
 
 .table__cards {
+    position: relative;
+
     display: flex;
     max-width: 1520px;
     flex-wrap: wrap;
@@ -376,7 +382,7 @@ body {
 
     position: absolute;
     top: 25px;
-    left: 220px;
+    left: 20px;
 
     font-family: "Press Start 2p", sans-serif;
     font-size: 30px;

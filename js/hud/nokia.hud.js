@@ -5,8 +5,9 @@ const nokiaMenuMarkup = (title) => `
 </div>
 `;
 
-const initNokiaPopup = (menu) => {
+const initNokiaPopup = (menu, customClass = "") => {
     const parent = document.querySelector("#nokia-popup");
+    customClass ? parent.classList.add(customClass) : "";
     const newNode = document.createElement("div");
     newNode.classList.add("nokia__preview");
     newNode.innerHTML = nokiaMenuMarkup(menu.title);
