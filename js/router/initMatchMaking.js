@@ -11,6 +11,7 @@ import { dialog } from "../hud/dialog.hud.js";
 import { openPopup } from "../popup/dom.popup.jquery.js";
 import { initNextBtn } from "./router.module.js";
 import { lightWalkingPlayer } from "../utils/finishRoundForPlayer.js";
+import { switchPlayer } from "./switchPlayer.js";
 
 class DNEPlayer {
     constructor(id, avatar, description) { // дія чи результат?
@@ -21,6 +22,8 @@ class DNEPlayer {
 }
 
 const PLAYERS_AVATAR_PATH = `libs/players/`; // avatar-1.jpg
+
+win77.switchPlayer = switchPlayer;
 
 const initDNEPlayersSet = () => {
     const DNEPlayersSet = new Set();
@@ -92,34 +95,6 @@ const showPlayersList = () => {
     const parent = document.querySelector(".js-players-wrap");
     parent.classList.add("--visible");
 }
-
-const switchPlayer = (id) => {
-    const playerById = Array.from(win77.lobby).find((PlayerObj) => PlayerObj.id === id);
-    const prevPlayer = win77.game.player;
-
-    let isItHost;
-    if (win77.game.alliance) {
-        isItHost = win77.game.alliance.host === playerById.id;
-    } else if (win77.game.invasion) {
-        isItHost = win77.game.invasion.host === playerById.id;
-    }
-
-    win77.lobby.delete(playerById);
-    win77.lobby.add(prevPlayer);
-    win77.game.player = playerById;
-    win77.router.currentPlayer = win77.game.player.id;
-    console.log("win77.game.player", win77.game.player, win77.lobby, win77.router.currentPlayer);
-    updScore();
-    updBalanceNode();
-    initInventory();
-    if (win77.game.player.hand.size < 5 && !isItHost) {
-        win77.putCardAtPlayersHand(5 - win77.game.player.hand.size);
-    }
-    updHand();
-    setExecutive(win77.game.player.id);
-}
-
-win77.switchPlayer = switchPlayer;
 
 const getPlayerMarkup = () => `
     <header class="js-player-matchmaking squad__player">

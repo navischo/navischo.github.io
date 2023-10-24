@@ -1,6 +1,9 @@
 import { initNokiaPopup } from "../hud/nokia.hud.js";
 import { closePopup, openPopup } from "../popup/dom.popup.jquery.js";
 import { addOptionalNextBtn } from "./addOptionalNextBtn.js";
+import { moveCardById } from "../utils/getCardById.js";
+import { updTable } from "../cards/dom.cards.js";
+import { updScore } from "../hud/score.hud.js";
 
 const getFriendItem = (name) => {
     return {
@@ -42,8 +45,34 @@ const react = () => {
     if (win77.game.player.id === win77.game.invasion.invader) {
         win77.switchPlayer(win77.game.invasion.host);
     } else {
-        win77.switchPlayer(win77.game.invasion.invader);
+        win77.switchPlayer(win77.game.invasion.invader, false);
     }
+}
+
+const pass = () => {
+    if (win77.game.player.id === win77.game.invasion.invader) {
+        win77.switchPlayer(win77.game.invasion.host);
+        console.log("You repelled the invasion");
+    } else {
+        win77.switchPlayer(win77.game.invasion.invader, false);
+        const hostTable = document.querySelector ("#table");
+        hostTable.dataset.owner = `${win77.game.invasion.invader}`;
+        console.log("You invade the event");
+    }
+
+    document.querySelector("#invader-score").remove();
+    document.querySelector("#table-invader").remove();
+    document.querySelector("#react").remove();
+    document.querySelector("#pass").remove();
+    document.querySelector("#rts-btn").classList.remove("fw-d-none-i");
+
+    win77.game.invasion.table.forEach((card) => {
+        moveCardById(card.id, win77.game.invasion.table, win77.game.table);
+    });
+    win77.game.invasion = false;
+
+    updTable();
+    updScore();
 }
 
 const getInvaderItem = (name) => {
@@ -74,7 +103,9 @@ const getInvaderItem = (name) => {
 
             closePopup();
             document.querySelector("#invade").remove();
+            document.querySelector("#rts-btn").classList.add("fw-d-none-i");
             addOptionalNextBtn("react", react);
+            addOptionalNextBtn("pass", pass);
             console.log(`Invasion by ${win77.game.invasion.invader}`);
         }
     }

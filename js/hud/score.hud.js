@@ -1,6 +1,7 @@
 import { win77 } from "../dne-cli.js";
 import { getRandomInt } from "../utils/getCardById.js";
 import { openPopup } from "../popup/dom.popup.jquery.js";
+import { dialog } from "./dialog.hud.js";
 
 const initScore = () => {
     let crewPoints = 0;
@@ -27,6 +28,7 @@ const readyToStart = () => {
     if (!isBodyContainsClass) {
         body.classList.add(`${className}`);
         console.log(`Please, solve dialog in your HUD`);
+        dialog.init(dialog.DIALOG_ID.start);
         openPopup("#dialog-popup");
         document.querySelector("#rts-btn")
             .addEventListener("click", () => {
@@ -80,7 +82,9 @@ const updScore = (bonus = 0) => {
 
     versusScoreNode.innerHTML = win77.game.versusScore;
 
-    isItWin();
+    if (!win77.game.invasion) {
+        isItWin();
+    }
 }
 
 win77.pokeButton.dia.updScore = updScore;
