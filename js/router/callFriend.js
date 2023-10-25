@@ -65,6 +65,8 @@ const pass = () => {
     document.querySelector("#react").remove();
     document.querySelector("#pass").remove();
     document.querySelector("#rts-btn").classList.remove("fw-d-none-i");
+    document.querySelector("#one-more").classList.remove("fw-d-none-i");
+    document.querySelector(".js-phone").classList.remove("fw-d-none-i");
 
     win77.game.invasion.table.forEach((card) => {
         moveCardById(card.id, win77.game.invasion.table, win77.game.table);
@@ -73,6 +75,13 @@ const pass = () => {
 
     updTable();
     updScore();
+    const nokiaContainer = document.querySelector("#nokia-popup");
+    nokiaContainer.classList.remove("--red");
+    nokiaContainer.innerHTML = "";
+    initNokiaPopup({
+        title: "Pokewall",
+        items: Array.from(win77.lobby).map((player) => getFriendItem(player.id))
+    });
 }
 
 const getInvaderItem = (name) => {
@@ -104,8 +113,11 @@ const getInvaderItem = (name) => {
             closePopup();
             document.querySelector("#invade").remove();
             document.querySelector("#rts-btn").classList.add("fw-d-none-i");
+            document.querySelector("#one-more").classList.add("fw-d-none-i");
+            document.querySelector(".js-phone").classList.add("fw-d-none-i");
             addOptionalNextBtn("react", react);
             addOptionalNextBtn("pass", pass);
+            document.querySelector("#pass").classList.add("--red");
             console.log(`Invasion by ${win77.game.invasion.invader}`);
         }
     }

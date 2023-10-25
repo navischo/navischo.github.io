@@ -146,6 +146,7 @@ const initNextBtn = () => {
             console.log("Someone want to invade your event");
             callInvader();
         });
+        document.querySelector("#invade").classList.add("--red");
     }
 
     win77.router.changePage = (setTimingByCallback = null) => {

@@ -243,7 +243,7 @@ const updHand = () => {
                 win77.router.matchmaking ? win77.router.nextStep() : "";
             }
 
-            if (win77.game.totalScore <= win77.game.versusScore && win77.game.player.hand.size === 0) {
+            if (!win77.game.invasion && win77.game.totalScore <= win77.game.versusScore && win77.game.player.hand.size === 0) {
                 dialog.init(dialog.DIALOG_ID.oneMore, () => {
                     const answerBtns = document.querySelectorAll(".js-answer");
                     console.log(answerBtns);
