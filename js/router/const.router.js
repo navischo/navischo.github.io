@@ -33,7 +33,11 @@ const PIPELINES = Object.freeze({
         line: "Select lineup",
         sec: 120,
         disableNext: true,
-        conditionNext: () => win77.game.totalScore > win77.game.versusScore
+        conditionNext: () => {
+            const isItWinScore = win77.game.totalScore > win77.game.versusScore;
+            const isInvasion = win77.game.invasion;
+            return !isInvasion && isItWinScore;
+        }
     },
     {
         stepId: "easy-event",
