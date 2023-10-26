@@ -7,6 +7,7 @@ class DNECli {
     constructor() {
         this.inQuestTime = 0;
         this.mm = null;
+        this.budgetAccepted = false;
     }
 
     timer(h, m, s, maxSec, maxMin, maxHour) {

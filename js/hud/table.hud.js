@@ -1,4 +1,5 @@
 import { win77 } from "../dne-cli.js";
+import { moveCardById } from "../utils/getCardById.js";
 
 const initTable = () => {
     win77.setTable();
@@ -13,5 +14,14 @@ const setExecutive = (cardId) => {
     table.dataset.owner = cardId;
 }
 
-export { setExecutive };
+const clearTable = () => {
+    const parent = document.querySelector(".table");
+    const table = parent.querySelector("#table");
+    table.innerHTML = ``;
+    win77.game.table.forEach((card) => {
+        moveCardById(card.id, win77.game.table, win77.game.catalog.sound);
+    });
+}
+
+export { setExecutive, clearTable };
 

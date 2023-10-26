@@ -5,11 +5,14 @@ import { setupTheday } from "../theday/setup.theday.js";
 import { getMatchMakingOptionsMarkup, getEventParamsMarkup } from "../router/initMatchMaking.js";
 import { updBalanceNode } from "./balance.hud.js";
 import { callFriend } from "../router/callFriend.js";
+import { finishRoundForPlayer } from "../utils/finishRoundForPlayer.js";
+import { clearTable } from "./table.hud.js";
 
 const DIALOG_ID = {
     start: 0,
     oneMore: 1,
-    options: 2
+    options: 2,
+    callFriend: 3
 }
 
 const DIALOG_QUESTIONS = [
@@ -36,6 +39,12 @@ Ready to start event?
                         updBalanceNode();
                         document.querySelector("body").classList.remove("ready-to-start");
                         setupTheday(eventBudget);
+                        win77.budgetAccepted = true;
+                        const invadeBtn = document.querySelector("#invade");
+                        console.log("invadeBtn", invadeBtn);
+                        if (invadeBtn) {
+                            invadeBtn.remove();
+                        }
                         win77.router.matchmaking ? win77.router.nextStep() : "";
                     } else {
                         console.log("..but your bankroll is not enouch to start event");
@@ -55,8 +64,7 @@ Ready to start event?
         question: `<p>Seems you dont have enouch sound. Wanna give up or buy some more?</p>`,
         answersId: {
             giveUp: 0,
-            oneMore: 1,
-            callFriend: 2
+            oneMore: 1
         },
         answers: [
             {
@@ -75,13 +83,6 @@ Ready to start event?
                     updHand();
                     win77.updBalanceHUD();
                     closePopup();
-                }
-            },
-            {
-                text: "Call friend",
-                action: (e) => {
-                    console.log("Call friend");
-                    callFriend();
                 }
             }
         ]
@@ -110,6 +111,32 @@ Ready to start event?
                     console.log("Cancel");
                     closePopup();
                     // clean changes
+                }
+            }
+        ]
+    },
+    {
+        question: `<p>Seems you dont have enouch sound. Wanna give up or call a friend?</p>`,
+        answersId: {
+            giveUp: 0,
+            callFriend: 2
+        },
+        answers: [
+            {
+                text: "Give up",
+                action: (e) => {
+                    console.log("Give up");
+                    win77.game.player.score = 0;
+                    clearTable();
+                    closePopup();
+                    finishRoundForPlayer();
+                }
+            },
+            {
+                text: "Call friend",
+                action: (e) => {
+                    console.log("Call friend");
+                    callFriend();
                 }
             }
         ]

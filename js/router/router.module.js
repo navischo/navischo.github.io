@@ -41,6 +41,7 @@ win77.router = {
     nextPageIndex: 1,
     nav: initNav(),
     currentPlayer: win77.game.player.id,
+    currentPlayerInQueue: win77.game.player.id,
     playersQueue: [win77.game.player.id]
 };
 
@@ -100,7 +101,7 @@ const setTiming = (pipeObj) => {
     let sec = pipeObj.sec;
 
     win77.router.nextStep = () => {
-        console.log("currentPipe", win77.router.pipeline, win77.router.currentPage, win77.router.currentPipe);
+        win77.router.currentPipe.disableNext = !win77.router.currentPipe.conditionNext();
         if (!win77.router.currentPipe.disableNext) {
             clearInterval(win77.secInterval);
             clearTimingNodes();
@@ -136,6 +137,7 @@ const initNextBtn = () => {
     setTiming(win77.router.pipeline[0]);
 
     win77.router.matchmaking = true;
+    document.querySelector("#one-more").classList.add("fw-d-none-i");
     win77.router.nextBtn = document.querySelector("#next-btn");
     win77.router.nextBtn.classList.add("--visible");
     win77.router.currentPage = "play";

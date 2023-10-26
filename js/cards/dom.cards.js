@@ -215,6 +215,13 @@ const updHand = () => {
     cardsInYourHand.forEach(card => {
         const plusBtn = card.querySelector("button");
         plusBtn.addEventListener("click", (e) => {
+            if (win77.router.currentPipe.stepId === "easy-prepare") {
+                win77.router.matchmaking ? win77.router.nextStep() : "";
+            }
+            if (win77.router.currentPipe.stepId !== "easy-lineup") {
+                return;
+            }
+
             const id = card.id.substring(9);
             const bonus = +(card.querySelector(".card__bonus").textContent);
             // console.log(win77);
@@ -239,23 +246,14 @@ const updHand = () => {
 
             initOneMoreBtn();
 
-            if (win77.router.currentPipe.stepId === "easy-prepare") {
-                win77.router.matchmaking ? win77.router.nextStep() : "";
-            }
-
             if (!win77.game.invasion && win77.game.totalScore <= win77.game.versusScore && win77.game.player.hand.size === 0) {
-                dialog.init(dialog.DIALOG_ID.oneMore, () => {
-                    const answerBtns = document.querySelectorAll(".js-answer");
-                    console.log(answerBtns);
-                    if (win77.router.matchmaking) {
-                        answerBtns[0].style.display = "none";
-                        if (win77.game.alliance) {
-                            answerBtns[2].style.display = "none";
-                        }
-                    } else {
-                        answerBtns[2].style.display = "none";
+                if (win77.router.matchmaking) {
+                    if (!win77.game.alliance) {
+                    dialog.init(dialog.DIALOG_ID.callFriend);
                     }
-                });
+                } else {
+                    dialog.init(dialog.DIALOG_ID.oneMore);
+                }
                 openPopup("#dialog-popup");
             }
 

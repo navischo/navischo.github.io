@@ -18,7 +18,7 @@ const finishRoundForPlayer = () => {
     if (win77.router.matchmaking && win77.lobby.size > 0) {
         let nextPlayerIndex;
         win77.router.playersQueue.forEach((playerId, currentPlayerIndex) => {
-            if (playerId === win77.router.currentPlayer) {
+            if (playerId === win77.router.currentPlayerInQueue) {
                 if (currentPlayerIndex === win77.router.playersQueue.length - 1) {
                     nextPlayerIndex = 0;
                     win77.game.round = win77.game.round + 1;
@@ -28,7 +28,7 @@ const finishRoundForPlayer = () => {
             }
         });
         const nextPlayerId = win77.router.playersQueue[nextPlayerIndex];
-        win77.router.currentPlayer = nextPlayerId;
+        win77.router.currentPlayerInQueue = nextPlayerId;
         win77.switchPlayer(nextPlayerId);
 
         lightWalkingPlayer();

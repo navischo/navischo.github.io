@@ -76,6 +76,7 @@ const reloadTheday = () => {
     win77.game.event.result.impactBonus = 0;
     win77.game.event.settings.guests.manCount = 0;
     win77.game.event.settings.guests.womanCount = 0;
+    win77.budgetAccepted = false;
     win77.game.rareGuestsSet.forEach((guest) => {
         guest.isOnBoard = false;
     });

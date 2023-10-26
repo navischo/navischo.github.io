@@ -36,7 +36,7 @@ const PIPELINES = Object.freeze({
         conditionNext: () => {
             const isItWinScore = win77.game.totalScore > win77.game.versusScore;
             const isInvasion = win77.game.invasion;
-            return !isInvasion && isItWinScore;
+            return !isInvasion && isItWinScore && win77.budgetAccepted;
         }
     },
     {
