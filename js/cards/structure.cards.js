@@ -42,6 +42,8 @@ const initGame = () => {
         },
         calendar: initCalendar(),
         round: 0,
+        alliance: false,
+        invasion: false,
         final: false
     }
 

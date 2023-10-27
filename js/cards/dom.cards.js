@@ -249,12 +249,13 @@ const updHand = () => {
             if (!win77.game.invasion && win77.game.totalScore <= win77.game.versusScore && win77.game.player.hand.size === 0) {
                 if (win77.router.matchmaking) {
                     if (!win77.game.alliance) {
-                    dialog.init(dialog.DIALOG_ID.callFriend);
+                        dialog.init(dialog.DIALOG_ID.callFriend);
+                        openPopup("#dialog-popup");
                     }
                 } else {
                     dialog.init(dialog.DIALOG_ID.oneMore);
+                    openPopup("#dialog-popup");
                 }
-                openPopup("#dialog-popup");
             }
 
             if (win77.router.matchmaking && win77.router.currentPipe.conditionNext()) {
