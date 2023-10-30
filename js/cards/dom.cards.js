@@ -257,13 +257,17 @@ const updHand = () => {
                     openPopup("#dialog-popup");
                 }
             }
-
-            if (win77.router.matchmaking && win77.router.currentPipe.conditionNext()) {
-                if (win77.game.alliance) {
-                    win77.switchPlayer(win77.game.alliance.host);
+            if (win77.game.totalScore > win77.game.versusScore) {
+                if (win77.router.matchmaking) {
+                        if (win77.game.alliance) {
+                            win77.switchPlayer(win77.game.alliance.host);
+                        }
+                        if (!win77.game.invasion) {
+                            dialog.init(dialog.DIALOG_ID.start);
+                        }
+                } else {
+                    dialog.init(dialog.DIALOG_ID.start);
                 }
-                win77.router.enableNext();
-                dialog.init(dialog.DIALOG_ID.start);
             }
         });
     });
