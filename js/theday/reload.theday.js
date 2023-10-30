@@ -52,6 +52,7 @@ const reloadTheday = () => {
         win77.giveIncomeToPlayer(half);
         giveIncomeTo(win77.game.alliance.savior, half);
         win77.game.alliance = false;
+        document.querySelector(".js-phone").classList.remove("fw-d-none-i");
     } else {
         win77.giveIncomeToPlayer(win77.game.event.result.income);
     }

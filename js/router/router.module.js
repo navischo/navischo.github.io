@@ -8,7 +8,7 @@ import { initScore, updScore } from "../hud/score.hud.js";
 import { initCatalog } from "../catalog/dom.catalog.js";
 import { openPopup } from "../popup/dom.popup.jquery.js";
 import { finishRoundForPlayer } from "../utils/finishRoundForPlayer.js";
-import { callInvader } from "./callFriend.js";
+import { callInvader, updNokiaLobby } from "./callFriend.js";
 import { addOptionalNextBtn } from "./addOptionalNextBtn.js";
 
 const isItCardsPage = (name) => name === PAGE_NAMES.npc || name === PAGE_NAMES.class || name === PAGE_NAMES.loot;
@@ -135,6 +135,7 @@ win77.router.resetDisable = () => {
 
 const initNextBtn = () => {
     setTiming(win77.router.pipeline[0]);
+    updNokiaLobby();
 
     win77.router.matchmaking = true;
     document.querySelector("#one-more").classList.add("fw-d-none-i");

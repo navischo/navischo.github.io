@@ -143,7 +143,7 @@ Ready to start event?
         ]
     },
     {
-        question: `<p>${win77.game.player.id} ask you for help:<br/>Wanna add some of yours Sound to my lineup?<br/><br/>In return I'll give you 50% of event income.</p>`,
+        question: `<p><span id="alliance-host"></span> ask <span id="alliance-savior"></span> for help:<br/>Wanna add some of yours Sound to my lineup?<br/><br/>In return I'll give you 50% of event income.</p>`,
         answersId: {
             jumpIn: 0,
             decline: 1
@@ -153,9 +153,13 @@ Ready to start event?
                 text: "Jump In",
                 action: (e) => {
                     console.log("Jump In");
-                    win77.switchPlayer(win77.game.alliance.savior);
                     const tableNode = document.querySelector("#table");
+                    const phoneBtn = document.querySelector(".js-phone");
+
+                    win77.switchPlayer(win77.game.alliance.savior);
+
                     tableNode.dataset.owner = `${win77.game.alliance.host}+${win77.game.alliance.savior}`;
+                    phoneBtn.classList.add("fw-d-none-i");
                     closePopup();
                 }
             },

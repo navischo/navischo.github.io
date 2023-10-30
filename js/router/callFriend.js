@@ -1,3 +1,4 @@
+import { win77 } from "../dne-cli.js";
 import { initNokiaPopup } from "../hud/nokia.hud.js";
 import { closePopup, openPopup } from "../popup/dom.popup.jquery.js";
 import { addOptionalNextBtn } from "./addOptionalNextBtn.js";
@@ -12,9 +13,11 @@ const getFriendItem = (name) => {
                 text: name,
                 callback: (e) => {
                     e.preventDefault();
+                    if (win77.router.currentPipe.stepId !== "easy-prepare") {
+                        return;
+                    }
 
                     const originalPlayerId = win77.game.player.id;
-                    const tableNode = document.querySelector("#table");
 
                     console.log(`Hotline to ${name}`);
                     win77.game.alliance = {
@@ -27,20 +30,27 @@ const getFriendItem = (name) => {
                     closePopup();
                     setTimeout(() => {
                         dialog.init(dialog.DIALOG_ID.acceptAlliance);
+                        const popup = document.querySelector("#dialog-popup");
+                        popup.querySelector("#alliance-host").textContent = win77.game.alliance.host;
+                        popup.querySelector("#alliance-savior").textContent = win77.game.alliance.savior;
                         openPopup("#dialog-popup");
                     }, 100);
                 }
             }
 }
 
-const callFriend = () => {
-    console.log("Lets try to draw a friend phone");
+const updNokiaLobby = () => {
     const nokiaContainer = document.querySelector("#nokia-popup");
     nokiaContainer.innerHTML = "";
     initNokiaPopup({
         title: "Pokewall",
         items: Array.from(win77.lobby).map((player) => getFriendItem(player.id))
     });
+}
+
+const callFriend = () => {
+    console.log("Lets try to draw a friend phone");
+    updNokiaLobby();
     closePopup();
     setTimeout(() => {
         openPopup("#nokia-popup");
@@ -140,4 +150,4 @@ const callInvader = () => {
     openPopup("#nokia-popup");
 }
 
-export { callFriend, callInvader };
+export { callFriend, callInvader, updNokiaLobby };

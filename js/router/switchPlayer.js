@@ -4,6 +4,7 @@ import { updBalanceNode } from "../hud/balance.hud.js";
 import { initInventory } from "../hud/inventory.hud.js";
 import { updHand } from "../cards/dom.cards.js";
 import { setExecutive } from "../hud/table.hud.js";
+import { updNokiaLobby } from "./callFriend.js";
 
 const switchPlayer = (id, isUpdHand = true) => {
     const playerById = Array.from(win77.lobby).find((PlayerObj) => PlayerObj.id === id);
@@ -25,6 +26,9 @@ const switchPlayer = (id, isUpdHand = true) => {
     updScore();
     updBalanceNode();
     initInventory();
+    if (win77.router.matchmaking) {
+        updNokiaLobby();
+    }
     if (isUpdHand && win77.game.player.hand.size < 5 && !isItHost) {
         win77.putCardAtPlayersHand(5 - win77.game.player.hand.size);
     }
