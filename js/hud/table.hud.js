@@ -14,6 +14,23 @@ const setExecutive = (cardId) => {
     table.dataset.owner = cardId;
 }
 
+const updExecutive = () => {
+    const table = document.querySelector("#table");
+    const isInvasion = win77.game.invasion;
+    const isAlliance = win77.game.alliance;
+    if (!isInvasion && !isAlliance) {
+        table.dataset.owner = win77.game.player.id;
+    } else {
+        if (isAlliance) {
+            table.dataset.owner = `${win77.game.alliance.host}+${win77.game.alliance.savior}`;
+        }
+        if (isInvasion) {
+            const invaderTable = document.querySelector("#table-invader");
+            invaderTable.dataset.owner = `${win77.game.invasion.invader}`;
+        }
+    }
+}
+
 const clearTable = () => {
     const parent = document.querySelector(".table");
     const table = parent.querySelector("#table");
@@ -23,5 +40,5 @@ const clearTable = () => {
     });
 }
 
-export { setExecutive, clearTable };
+export { setExecutive, updExecutive, clearTable };
 

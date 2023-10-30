@@ -3,7 +3,7 @@ import { updScore } from "../hud/score.hud.js";
 import { updBalanceNode } from "../hud/balance.hud.js";
 import { initInventory } from "../hud/inventory.hud.js";
 import { updHand } from "../cards/dom.cards.js";
-import { setExecutive } from "../hud/table.hud.js";
+import { setExecutive, updExecutive } from "../hud/table.hud.js";
 import { updNokiaLobby } from "./callFriend.js";
 
 const switchPlayer = (id, isUpdHand = true) => {
@@ -33,9 +33,7 @@ const switchPlayer = (id, isUpdHand = true) => {
         win77.putCardAtPlayersHand(5 - win77.game.player.hand.size);
     }
     updHand();
-    if (!win77.game.invasion && !win77.game.alliance) {
-        setExecutive(win77.game.player.id);
-    }
+    updExecutive();
 }
 
 export { switchPlayer };
