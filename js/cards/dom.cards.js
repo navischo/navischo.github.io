@@ -218,7 +218,7 @@ const updHand = () => {
             if (win77.router.currentPipe.stepId === "easy-prepare") {
                 win77.router.matchmaking ? win77.router.nextStep() : "";
             }
-            if (win77.router.currentPipe.stepId !== "easy-lineup") {
+            if (win77.router.matchmaking && win77.router.currentPipe.stepId !== "easy-lineup") {
                 return;
             }
 

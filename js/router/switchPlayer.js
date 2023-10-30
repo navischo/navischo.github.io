@@ -8,6 +8,7 @@ import { setExecutive } from "../hud/table.hud.js";
 const switchPlayer = (id, isUpdHand = true) => {
     const playerById = Array.from(win77.lobby).find((PlayerObj) => PlayerObj.id === id);
     const prevPlayer = win77.game.player;
+    console.log("playerById", playerById, win77.game.player);
 
     let isItHost;
     if (win77.game.alliance) {
