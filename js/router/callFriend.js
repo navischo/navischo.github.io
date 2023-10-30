@@ -13,20 +13,16 @@ const getFriendItem = (name) => {
                 text: name,
                 callback: (e) => {
                     e.preventDefault();
-                    if (win77.router.currentPipe.stepId !== "easy-prepare") {
+                    if (win77.router.currentPipe.stepId !== "easy-lineup") {
                         return;
                     }
 
-                    const originalPlayerId = win77.game.player.id;
-
                     console.log(`Hotline to ${name}`);
                     win77.game.alliance = {
-                        host: originalPlayerId,
+                        host: win77.game.player.id,
                         savior: name
                     };
-                    // acceptAlliance
-                    // win77.switchPlayer(name);
-                    // tableNode.dataset.owner = `${originalPlayerId}+${name}`;
+
                     closePopup();
                     setTimeout(() => {
                         dialog.init(dialog.DIALOG_ID.acceptAlliance);
@@ -71,7 +67,7 @@ const pass = () => {
         console.log("You repelled the invasion");
     } else {
         win77.switchPlayer(win77.game.invasion.invader, false);
-        const hostTable = document.querySelector ("#table");
+        const hostTable = document.querySelector("#table");
         hostTable.dataset.owner = `${win77.game.invasion.invader}`;
         console.log("You invade the event");
     }

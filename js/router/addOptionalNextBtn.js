@@ -1,6 +1,14 @@
 import { win77 } from "../dne-cli.js";
 import { PIPELINES } from "./const.router.js";
 
+const swap = () => {
+    if (win77.game.player.id === win77.game.alliance.savior) {
+        win77.switchPlayer(win77.game.alliance.host);
+    } else {
+        win77.switchPlayer(win77.game.alliance.savior, false);
+    }
+}
+
 const startPipe = (id) => {
     win77.router.pipeline = PIPELINES[id];
     win77.router.nextPageIndex = 1;
@@ -32,4 +40,4 @@ const addOptionalNextBtn = (btnText, clickHandler) => {
     console.log("add new btn", parent, btn);
 }
 
-export { addOptionalNextBtn };
+export { addOptionalNextBtn, swap };

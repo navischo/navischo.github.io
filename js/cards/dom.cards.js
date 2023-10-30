@@ -259,7 +259,7 @@ const updHand = () => {
             }
             if (win77.game.totalScore > win77.game.versusScore) {
                 if (win77.router.matchmaking) {
-                        if (win77.game.alliance) {
+                        if (win77.game.alliance && win77.game.player.id !== win77.game.alliance.host) {
                             win77.switchPlayer(win77.game.alliance.host);
                         }
                         if (!win77.game.invasion) {

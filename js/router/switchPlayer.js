@@ -33,7 +33,7 @@ const switchPlayer = (id, isUpdHand = true) => {
         win77.putCardAtPlayersHand(5 - win77.game.player.hand.size);
     }
     updHand();
-    if (!win77.game.invasion) {
+    if (!win77.game.invasion && !win77.game.alliance) {
         setExecutive(win77.game.player.id);
     }
 }

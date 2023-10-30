@@ -7,6 +7,8 @@ import { updBalanceNode } from "./balance.hud.js";
 import { callFriend } from "../router/callFriend.js";
 import { finishRoundForPlayer } from "../utils/finishRoundForPlayer.js";
 import { clearTable } from "./table.hud.js";
+import { addOptionalNextBtn, swap } from "../router/addOptionalNextBtn.js";
+import { safeRemove } from "../utils/safeRemove.js";
 
 const DIALOG_ID = {
     start: 0,
@@ -41,11 +43,8 @@ Ready to start event?
                         document.querySelector("body").classList.remove("ready-to-start");
                         setupTheday(eventBudget);
                         win77.budgetAccepted = true;
-                        const invadeBtn = document.querySelector("#invade");
-                        console.log("invadeBtn", invadeBtn);
-                        if (invadeBtn) {
-                            invadeBtn.remove();
-                        }
+                        safeRemove("#invade");
+                        safeRemove("#switch");
                         win77.router.matchmaking ? win77.router.nextStep() : "";
                     } else {
                         console.log("..but your bankroll is not enouch to start event");
@@ -155,11 +154,13 @@ Ready to start event?
                     console.log("Jump In");
                     const tableNode = document.querySelector("#table");
                     const phoneBtn = document.querySelector(".js-phone");
-
-                    win77.switchPlayer(win77.game.alliance.savior);
-
                     tableNode.dataset.owner = `${win77.game.alliance.host}+${win77.game.alliance.savior}`;
                     phoneBtn.classList.add("fw-d-none-i");
+                    win77.switchPlayer(win77.game.alliance.savior);
+                    addOptionalNextBtn("switch", swap);
+                    if (win77.lobby.size === 1) {
+                        safeRemove("#invade");
+                    }
                     closePopup();
                 }
             },
