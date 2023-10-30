@@ -4,6 +4,7 @@ import { addOptionalNextBtn } from "./addOptionalNextBtn.js";
 import { moveCardById } from "../utils/getCardById.js";
 import { updTable } from "../cards/dom.cards.js";
 import { updScore } from "../hud/score.hud.js";
+import { dialog } from "../hud/dialog.hud.js";
 
 const getFriendItem = (name) => {
     return {
@@ -20,9 +21,14 @@ const getFriendItem = (name) => {
                         host: originalPlayerId,
                         savior: name
                     };
-                    win77.switchPlayer(name);
-                    tableNode.dataset.owner = `${originalPlayerId}+${name}`;
+                    // acceptAlliance
+                    // win77.switchPlayer(name);
+                    // tableNode.dataset.owner = `${originalPlayerId}+${name}`;
                     closePopup();
+                    setTimeout(() => {
+                        dialog.init(dialog.DIALOG_ID.acceptAlliance);
+                        openPopup("#dialog-popup");
+                    }, 100);
                 }
             }
 }

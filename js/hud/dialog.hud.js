@@ -12,7 +12,8 @@ const DIALOG_ID = {
     start: 0,
     oneMore: 1,
     options: 2,
-    callFriend: 3
+    callFriend: 3,
+    acceptAlliance: 4
 }
 
 const DIALOG_QUESTIONS = [
@@ -119,7 +120,7 @@ Ready to start event?
         question: `<p>Seems you dont have enouch sound. Wanna give up or call a friend?</p>`,
         answersId: {
             giveUp: 0,
-            callFriend: 2
+            callFriend: 1
         },
         answers: [
             {
@@ -137,6 +138,33 @@ Ready to start event?
                 action: (e) => {
                     console.log("Call friend");
                     callFriend();
+                }
+            }
+        ]
+    },
+    {
+        question: `<p>${win77.game.player.id} ask you for help:<br/>Wanna add some of yours Sound to my lineup?<br/><br/>In return I'll give you 50% of event income.</p>`,
+        answersId: {
+            jumpIn: 0,
+            decline: 1
+        },
+        answers: [
+            {
+                text: "Jump In",
+                action: (e) => {
+                    console.log("Jump In");
+                    win77.switchPlayer(win77.game.alliance.savior);
+                    const tableNode = document.querySelector("#table");
+                    tableNode.dataset.owner = `${win77.game.alliance.host}+${win77.game.alliance.savior}`;
+                    closePopup();
+                }
+            },
+            {
+                text: "Decline",
+                action: (e) => {
+                    console.log("Decline");
+                    win77.game.alliance = false;
+                    closePopup();
                 }
             }
         ]
