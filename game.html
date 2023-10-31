@@ -1007,6 +1007,7 @@
     import {makeWallSprayable} from "./js/utils/makeWallSprayable.js";
     import {initTerminal} from "./js/utils/initTerminal.js";
     import {enterCity} from "./js/utils/enterCity.js";
+    import { updNokiaLobby } from "./js/router/callFriend.js";
 
     initInventoryPopupJquery();
 
@@ -1024,6 +1025,7 @@
     const fon = document.querySelector(".js-phone");
     fon.addEventListener("click", () => {
         fon.classList.remove("--shake");
+        win77.router.matchmaking ? updNokiaLobby() : "";
     });
 
     initNokiaPopup(NOKIA_MENUS[0]);

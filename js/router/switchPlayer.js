@@ -6,17 +6,10 @@ import { updHand } from "../cards/dom.cards.js";
 import { setExecutive, updExecutive } from "../hud/table.hud.js";
 import { updNokiaLobby } from "./callFriend.js";
 
-const switchPlayer = (id, isUpdHand = true) => {
+const switchPlayer = (id) => {
     const playerById = Array.from(win77.lobby).find((PlayerObj) => PlayerObj.id === id);
     const prevPlayer = win77.game.player;
     console.log("playerById", playerById, win77.game.player);
-
-    let isItHost;
-    if (win77.game.alliance) {
-        isItHost = win77.game.alliance.host === playerById.id;
-    } else if (win77.game.invasion) {
-        isItHost = win77.game.invasion.host === playerById.id;
-    }
 
     win77.lobby.delete(playerById);
     win77.lobby.add(prevPlayer);
@@ -29,10 +22,6 @@ const switchPlayer = (id, isUpdHand = true) => {
     if (win77.router.matchmaking) {
         updNokiaLobby();
     }
-    // if (isUpdHand && win77.game.player.hand.size < 5 && !isItHost) {
-    //     win77.putCardAtPlayersHand(5 - win77.game.player.hand.size);
-    // }
-    // win77.fillPlayersHand();
     updHand();
     updExecutive();
 }

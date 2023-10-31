@@ -5,7 +5,7 @@ const swap = () => {
     if (win77.game.player.id === win77.game.alliance.savior) {
         win77.switchPlayer(win77.game.alliance.host);
     } else {
-        win77.switchPlayer(win77.game.alliance.savior, false);
+        win77.switchPlayer(win77.game.alliance.savior);
     }
 }
 

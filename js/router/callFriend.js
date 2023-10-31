@@ -57,7 +57,7 @@ const react = () => {
     if (win77.game.player.id === win77.game.invasion.invader) {
         win77.switchPlayer(win77.game.invasion.host);
     } else {
-        win77.switchPlayer(win77.game.invasion.invader, false);
+        win77.switchPlayer(win77.game.invasion.invader);
     }
 }
 
@@ -66,9 +66,10 @@ const pass = () => {
         win77.switchPlayer(win77.game.invasion.host);
         console.log("You repelled the invasion");
     } else {
-        win77.switchPlayer(win77.game.invasion.invader, false);
+        win77.switchPlayer(win77.game.invasion.invader);
         const hostTable = document.querySelector("#table");
         hostTable.dataset.owner = `${win77.game.invasion.invader}`;
+        win77.game.alliance = false;
         console.log("You invade the event");
     }
 
@@ -103,7 +104,7 @@ const getInvaderItem = (name) => {
         callback: (e) => {
             e.preventDefault();
             win77.game.invasion = {
-                host: win77.game.player.id,
+                host: win77.game.alliance ? win77.game.alliance.host : win77.game.player.id,
                 invader: name,
                 table: new Set()
             };
@@ -117,12 +118,6 @@ const getInvaderItem = (name) => {
             win77.switchPlayer(win77.game.invasion.invader);
             win77.fillPlayersHand();
             updHand();
-
-            const hostTable = parent.querySelector ("#table");
-            const invaderTable = parent.querySelector("#table-invader");
-
-            hostTable.dataset.owner = `${win77.game.invasion.host}`;
-            invaderTable.dataset.owner = `${win77.game.invasion.invader}`;
 
             closePopup();
             document.querySelector("#invade").remove();
@@ -138,12 +133,22 @@ const getInvaderItem = (name) => {
 }
 
 const callInvader = () => {
-    console.log("Lets try to draw a invader phone");
+    console.log("Invaders list in your phone");
     const nokiaContainer = document.querySelector("#nokia-popup");
+    const potentialInvaders = [];
+    Array.from(win77.lobby).forEach((player) => {
+        if (win77.game.alliance) {
+            if (win77.game.alliance.host !== player.id && win77.game.alliance.savior !== player.id) {
+                potentialInvaders.push(getInvaderItem(player.id));
+            }
+        } else {
+            potentialInvaders.push(getInvaderItem(player.id));
+        }
+    });
     nokiaContainer.innerHTML = "";
     initNokiaPopup({
         title: "Pokewall",
-        items: Array.from(win77.lobby).map((player) => getInvaderItem(player.id))
+        items: potentialInvaders
     }, "--red");
     openPopup("#nokia-popup");
 }
