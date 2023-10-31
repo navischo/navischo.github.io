@@ -22,13 +22,20 @@ const getFriendItem = (name) => {
                         host: win77.game.player.id,
                         savior: name
                     };
+                    
+                    const goalScore = win77.game.versusScore + 1;
+                    const saviorRequirement = goalScore - win77.findPlayerObj(win77.game.alliance.host).score;
+                    const allianceReward = Math.ceil(saviorRequirement * 100 / goalScore);
+                    win77.game.alliance.reward = allianceReward;
 
                     closePopup();
                     setTimeout(() => {
                         dialog.init(dialog.DIALOG_ID.acceptAlliance);
                         const popup = document.querySelector("#dialog-popup");
+
                         popup.querySelector("#alliance-host").textContent = win77.game.alliance.host;
                         popup.querySelector("#alliance-savior").textContent = win77.game.alliance.savior;
+                        popup.querySelector("#alliance-reward").textContent = `+${allianceReward}%`;
                         openPopup("#dialog-popup");
                     }, 100);
                 }

@@ -147,7 +147,7 @@ Ready to start event?
         ]
     },
     {
-        question: `<p><span id="alliance-host"></span> ask <span id="alliance-savior"></span> for help:<br/>Wanna add some of yours Sound to my lineup?<br/><br/>In return I'll give you 50% of event income.</p>`,
+        question: `<p><span id="alliance-host"></span> ask <span id="alliance-savior"></span> for help:<br/>Wanna add some of yours Sound to my lineup?<br/><br/>In return I'll give you <span id="alliance-reward"></span> of event income.</p>`,
         answersId: {
             jumpIn: 0,
             decline: 1
