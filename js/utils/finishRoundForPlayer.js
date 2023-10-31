@@ -1,4 +1,5 @@
 import { win77 } from "../dne-cli.js";
+import { updHand } from "../cards/dom.cards.js";
 
 const lightWalkingPlayer = () => {
     win77.mm.open();
@@ -29,8 +30,11 @@ const finishRoundForPlayer = () => {
         });
         const nextPlayerId = win77.router.playersQueue[nextPlayerIndex];
         win77.router.currentPlayerInQueue = nextPlayerId;
-        win77.switchPlayer(nextPlayerId);
-
+        if (win77.game.player.id !== nextPlayerId) {
+            win77.switchPlayer(nextPlayerId);
+        }
+        win77.fillPlayersHand();
+        updHand();
         lightWalkingPlayer();
 
         const roundLeftOutput = document.querySelector(".js-round-left");

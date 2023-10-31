@@ -3,7 +3,7 @@ import { initNokiaPopup } from "../hud/nokia.hud.js";
 import { closePopup, openPopup } from "../popup/dom.popup.jquery.js";
 import { addOptionalNextBtn } from "./addOptionalNextBtn.js";
 import { moveCardById } from "../utils/getCardById.js";
-import { updTable } from "../cards/dom.cards.js";
+import { updHand, updTable } from "../cards/dom.cards.js";
 import { updScore } from "../hud/score.hud.js";
 import { dialog } from "../hud/dialog.hud.js";
 
@@ -115,6 +115,8 @@ const getInvaderItem = (name) => {
             parent.appendChild(tableNode);
 
             win77.switchPlayer(win77.game.invasion.invader);
+            win77.fillPlayersHand();
+            updHand();
 
             const hostTable = parent.querySelector ("#table");
             const invaderTable = parent.querySelector("#table-invader");

@@ -29,9 +29,10 @@ const switchPlayer = (id, isUpdHand = true) => {
     if (win77.router.matchmaking) {
         updNokiaLobby();
     }
-    if (isUpdHand && win77.game.player.hand.size < 5 && !isItHost) {
-        win77.putCardAtPlayersHand(5 - win77.game.player.hand.size);
-    }
+    // if (isUpdHand && win77.game.player.hand.size < 5 && !isItHost) {
+    //     win77.putCardAtPlayersHand(5 - win77.game.player.hand.size);
+    // }
+    // win77.fillPlayersHand();
     updHand();
     updExecutive();
 }

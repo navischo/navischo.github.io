@@ -1,5 +1,4 @@
 import { getRandomInt, moveCardById } from "./utils/getCardById.js";
-import { finishRoundForPlayer } from "./utils/finishRoundForPlayer.js";
 import { getCardElement } from "./cards/template.cards.js";
 import { appendNewTop } from "./theday/endgame.theday.js";
 
@@ -106,6 +105,12 @@ class DNECli {
             const soundSet = this.game.catalog.sound;
             const randomId = Array.from(soundSet).map((soundCard) => soundCard.id)[getRandomInt(soundSet.size)];
             moveCardById(randomId, soundSet, this.game.player.hand);
+        }
+    }
+
+    fillPlayersHand() {
+        if (this.game.player.hand.size < 5) {
+            this.putCardAtPlayersHand(5 - this.game.player.hand.size);
         }
     }
 

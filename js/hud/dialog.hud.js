@@ -157,6 +157,8 @@ Ready to start event?
                     tableNode.dataset.owner = `${win77.game.alliance.host}+${win77.game.alliance.savior}`;
                     phoneBtn.classList.add("fw-d-none-i");
                     win77.switchPlayer(win77.game.alliance.savior);
+                    win77.fillPlayersHand();
+                    updHand();
                     addOptionalNextBtn("switch", swap);
                     if (win77.lobby.size === 1) {
                         safeRemove("#invade");
