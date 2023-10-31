@@ -44,29 +44,36 @@ const isItWin = () => {
     }
 }
 
+const updSaviorScore = (bonus = 0) => {
+    let saviorScoreNode = document.querySelector("#savior-score");
+    if (!saviorScoreNode) {
+        const playerScoreNode = document.querySelector("#player-score");
+        saviorScoreNode = document.createElement("span");
+        saviorScoreNode.id = "savior-score";
+        saviorScoreNode.classList.add("js-score-val");
+        playerScoreNode.after(saviorScoreNode);
+    }
+    saviorScoreNode.textContent = `+${bonus}`;
+}
+
 const updInvaderScore = (bonus = 0) => {
     let invaderScoreNode = document.querySelector("#invader-score");
     if (!invaderScoreNode) {
         const playerScoreNode = document.querySelector("#player-score");
+        const saviorScoreNode = document.querySelector("#savior-score");
         invaderScoreNode = document.createElement("span");
         invaderScoreNode.id = "invader-score";
         invaderScoreNode.classList.add("js-score-val");
-        playerScoreNode.after(invaderScoreNode);
+        saviorScoreNode ? saviorScoreNode.after(invaderScoreNode) : playerScoreNode.after(invaderScoreNode);
     }
     invaderScoreNode.textContent = `/${bonus}`;
 }
 
-const getPlayerScore = (id) => {
-    let playerScore;
-
-    if (id === win77.game.player.id) {
-        playerScore = win77.game.player.score;
-    } else {
-        const playerObj = Array.from(win77.lobby).find((player) => player.id === id);
-        playerScore = playerObj.score;
-    }
-
-    return playerScore;
+const transferScoreFromTo = (senderId, receiverId) => {
+    const senderObj = win77.findPlayerObj(senderId);
+    const receiverObj = win77.findPlayerObj(receiverId);
+    receiverObj.score = receiverObj.score + senderObj.score;
+    senderObj.score = 0;
 }
 
 const updScore = (bonus = 0) => {
@@ -77,21 +84,25 @@ const updScore = (bonus = 0) => {
 
     if (!win77.game.alliance && !win77.game.invasion) {
         win77.game.totalScore = win77.game.player.score;
+        playerScoreNode.innerHTML = win77.game.totalScore;
     } else {
         if (win77.game.alliance) {
-            win77.game.totalScore = getPlayerScore(win77.game.alliance.host) + getPlayerScore(win77.game.alliance.savior);
+            const hostScore = win77.findPlayerObj(win77.game.alliance.host).score;
+            const saviorScore = win77.findPlayerObj(win77.game.alliance.savior).score;
+            win77.game.totalScore = hostScore + saviorScore;
+            updSaviorScore(saviorScore);
+            playerScoreNode.innerHTML = hostScore;
         } else {
             win77.game.totalScore = win77.game.player.score;
+            playerScoreNode.innerHTML = win77.game.totalScore;
         }
 
         if (win77.game.invasion) {
-            if (win77.game.player.id === win77.game.invasion.invader) {
-                updInvaderScore(win77.game.player.score);
-            }
+            updInvaderScore(win77.findPlayerObj(win77.game.invasion.invader).score);
         }
     }
 
-    playerScoreNode.innerHTML = win77.game.totalScore;
+
     versusScoreNode.innerHTML = win77.game.versusScore;
 
     if (!win77.game.invasion) {
@@ -101,4 +112,4 @@ const updScore = (bonus = 0) => {
 
 win77.pokeButton.dia.updScore = updScore;
 
-export { initScore, updScore };
+export { initScore, updScore, transferScoreFromTo };

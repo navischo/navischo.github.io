@@ -59,6 +59,14 @@ class DNECli {
         this.game.event.settings = settingsObj;
     }
 
+    findPlayerObj(id) {
+        if (id === this.game.player.id) {
+            return this.game.player;
+        } else {
+            return Array.from(this.lobby).find((player) => player.id === id);
+        }
+    }
+
     giveIncomeToPlayer(income) {
         this.game.player.balance.bankroll = this.game.player.balance.bankroll + income;
     }

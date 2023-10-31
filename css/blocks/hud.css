@@ -298,6 +298,10 @@ body.js-tab {
     color: #da0030;
 }
 
+#savior-score {
+    color: #5ff3d0;
+}
+
 .score {
     position: fixed;
     top: 0;

@@ -4,7 +4,7 @@ import { closePopup, openPopup } from "../popup/dom.popup.jquery.js";
 import { addOptionalNextBtn } from "./addOptionalNextBtn.js";
 import { moveCardById } from "../utils/getCardById.js";
 import { updHand, updTable } from "../cards/dom.cards.js";
-import { updScore } from "../hud/score.hud.js";
+import { updScore, transferScoreFromTo } from "../hud/score.hud.js";
 import { dialog } from "../hud/dialog.hud.js";
 
 const getFriendItem = (name) => {
@@ -64,9 +64,11 @@ const react = () => {
 const pass = () => {
     if (win77.game.player.id === win77.game.invasion.invader) {
         win77.switchPlayer(win77.game.invasion.host);
+        transferScoreFromTo(win77.game.invasion.invader, win77.game.invasion.host);
         console.log("You repelled the invasion");
     } else {
         win77.switchPlayer(win77.game.invasion.invader);
+        transferScoreFromTo(win77.game.invasion.host, win77.game.invasion.invader);
         const hostTable = document.querySelector("#table");
         hostTable.dataset.owner = `${win77.game.invasion.invader}`;
         win77.game.alliance = false;
