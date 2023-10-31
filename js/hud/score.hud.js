@@ -56,30 +56,42 @@ const updInvaderScore = (bonus = 0) => {
     invaderScoreNode.textContent = `/${bonus}`;
 }
 
+const getPlayerScore = (id) => {
+    let playerScore;
+
+    if (id === win77.game.player.id) {
+        playerScore = win77.game.player.score;
+    } else {
+        const playerObj = Array.from(win77.lobby).find((player) => player.id === id);
+        playerScore = playerObj.score;
+    }
+
+    return playerScore;
+}
+
 const updScore = (bonus = 0) => {
     const playerScoreNode = document.querySelector("#player-score");
     const versusScoreNode = document.querySelector("#versus-score");
 
     win77.game.player.score = win77.game.player.score + +bonus;
 
-    if (win77.lobby.size > 0 && !win77.game.invasion) {
-        let initialScore = 0;
-        const matesScore = Array.from(win77.lobby).reduce((accumulator, player) => accumulator + player.score, initialScore);
-        win77.game.totalScore = win77.game.player.score + matesScore;
-    } else {
+    if (!win77.game.alliance && !win77.game.invasion) {
         win77.game.totalScore = win77.game.player.score;
-    }
-
-    if (win77.game.invasion) {
-        if (win77.game.player.id === win77.game.invasion.invader) {
-            updInvaderScore(win77.game.player.score);
-        } else {
-            playerScoreNode.innerHTML = win77.game.totalScore;
-        }
     } else {
-        playerScoreNode.innerHTML = win77.game.totalScore;
+        if (win77.game.alliance) {
+            win77.game.totalScore = getPlayerScore(win77.game.alliance.host) + getPlayerScore(win77.game.alliance.savior);
+        } else {
+            win77.game.totalScore = win77.game.player.score;
+        }
+
+        if (win77.game.invasion) {
+            if (win77.game.player.id === win77.game.invasion.invader) {
+                updInvaderScore(win77.game.player.score);
+            }
+        }
     }
 
+    playerScoreNode.innerHTML = win77.game.totalScore;
     versusScoreNode.innerHTML = win77.game.versusScore;
 
     if (!win77.game.invasion) {

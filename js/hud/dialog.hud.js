@@ -37,6 +37,11 @@ Ready to start event?
                     console.log("Lets Rave");
                     const budgetInput = document.querySelector("#event-budget");
                     const eventBudget = budgetInput.value !== "" && budgetInput.value > 0 ? budgetInput.value : 5000;
+                    if (win77.game.alliance) {
+                        if (win77.game.player.id !== win77.game.alliance.host) {
+                            win77.switchPlayer(win77.game.alliance.host);
+                        }
+                    }
                     if (win77.game.player.balance.bankroll >= eventBudget) {
                         win77.game.player.balance.bankroll = win77.game.player.balance.bankroll - eventBudget;
                         updBalanceNode();
