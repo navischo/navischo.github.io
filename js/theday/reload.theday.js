@@ -9,6 +9,7 @@ import { parseTopsString, topsString } from "./endgame.theday.js";
 import { isSetHasId } from "../utils/isSetHasId.js";
 import { matchGenreBonus } from "../utils/matchGenreBonus.js";
 import { giveIncomeTo } from "../utils/giveIncomeTo.js";
+import { updExecutive } from "../hud/table.hud.js";
 
 const reloadTheday = () => {
     console.log("win77.game.event.result", win77.game.event.result);
@@ -52,7 +53,9 @@ const reloadTheday = () => {
         win77.giveIncomeToPlayer(half);
         giveIncomeTo(win77.game.alliance.savior, half);
         win77.game.alliance = false;
+        document.querySelector("#savior-score").remove();
         document.querySelector(".js-phone").classList.remove("fw-d-none-i");
+        updExecutive();
     } else {
         win77.giveIncomeToPlayer(win77.game.event.result.income);
     }
