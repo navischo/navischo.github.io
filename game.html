@@ -1025,7 +1025,9 @@
     const fon = document.querySelector(".js-phone");
     fon.addEventListener("click", () => {
         fon.classList.remove("--shake");
-        win77.router.matchmaking ? updNokiaLobby() : "";
+        if (win77.router.matchmaking) {
+            updNokiaLobby();
+        }
     });
 
     initNokiaPopup(NOKIA_MENUS[0]);

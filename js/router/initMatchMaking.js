@@ -171,7 +171,7 @@ const getMatchMakingOptionsMarkup = () => `
     
     <fieldset class="field --dialog">
         <label class="glow text" for="start-souls">Starting souls</label>
-        <input id="start-souls" type="number" placeholder="3">
+        <input id="start-souls" type="number" placeholder="0">
     </fieldset>
 `;
 
@@ -253,7 +253,7 @@ const initMatchMaking = () => {
                 roundLimit: 7,
                 maxTime: null,
                 startBankroll: 16000,
-                startSouls: 3,
+                startSouls: 0,
             }
             if (+roundLimitInput?.value >= 2) {
                 options.roundLimit = +roundLimitInput.value;

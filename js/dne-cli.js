@@ -104,8 +104,22 @@ class DNECli {
         return this.game.player.balance.skillPoints;
     }
 
+    giveSkillPointsTo(id, count) {
+        const playerObj = this.findPlayerObj(id);
+        playerObj.balance.skillPoints = playerObj.balance.skillPoints + count;
+        return playerObj.balance.skillPoints;
+    }
+
     getSkillPointsFromPlayer(count) {
         this.game.player.balance.skillPoints = this.game.player.balance.skillPoints - count;
+        this.game.player.balance.skillPoints < 0 ? this.game.player.balance.skillPoints = 0 : "";
+    }
+
+    getSkillPointsFrom(id, count) {
+        const playerObj = this.findPlayerObj(id);
+        playerObj.balance.skillPoints = playerObj.balance.skillPoints - count;
+        playerObj.balance.skillPoints < 0 ? playerObj.balance.skillPoints = 0 : "";
+        return playerObj.balance.skillPoints;
     }
 
     putCardAtPlayersHand(count = 1) {

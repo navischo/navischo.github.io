@@ -22,7 +22,7 @@ const getFriendItem = (name) => {
                         host: win77.game.player.id,
                         savior: name
                     };
-                    
+
                     const goalScore = win77.game.versusScore + 1;
                     const saviorRequirement = goalScore - win77.findPlayerObj(win77.game.alliance.host).score;
                     const allianceReward = Math.ceil(saviorRequirement * 100 / goalScore);
@@ -44,11 +44,36 @@ const getFriendItem = (name) => {
 
 const updNokiaLobby = () => {
     const nokiaContainer = document.querySelector("#nokia-popup");
+    const potentialSaviors = [];
+    Array.from(win77.lobby).forEach((player) => {
+        if (win77.game.invasion) {
+            if (win77.game.invasion.host !== player.id && win77.game.invasion.invader !== player.id) {
+                potentialSaviors.push(getFriendItem(player.id));
+            }
+        } else {
+            potentialSaviors.push(getFriendItem(player.id));
+        }
+    });
     nokiaContainer.innerHTML = "";
     initNokiaPopup({
         title: "Pokewall",
-        items: Array.from(win77.lobby).map((player) => getFriendItem(player.id))
+        items: potentialSaviors
     });
+}
+
+const toggleNokiaBtn = () => {
+    const nokiaBtn = document.querySelector(".js-phone");
+    if (win77.game.alliance) {
+        nokiaBtn.classList.add("fw-d-none-i");
+    } else if (win77.game.invasion) {
+        if (win77.game.player.id === win77.game.invasion.invader) {
+            nokiaBtn.classList.add("fw-d-none-i");
+        } else if (win77.lobby.size > 1) {
+            nokiaBtn.classList.remove("fw-d-none-i");
+        }
+    } else {
+        nokiaBtn.classList.remove("fw-d-none-i");
+    }
 }
 
 const callFriend = () => {
@@ -63,8 +88,10 @@ const callFriend = () => {
 const react = () => {
     if (win77.game.player.id === win77.game.invasion.invader) {
         win77.switchPlayer(win77.game.invasion.host);
+        toggleNokiaBtn();
     } else {
         win77.switchPlayer(win77.game.invasion.invader);
+        toggleNokiaBtn();
     }
 }
 
@@ -72,13 +99,21 @@ const pass = () => {
     if (win77.game.player.id === win77.game.invasion.invader) {
         win77.switchPlayer(win77.game.invasion.host);
         transferScoreFromTo(win77.game.invasion.invader, win77.game.invasion.host);
+        toggleNokiaBtn();
         console.log("You repelled the invasion");
     } else {
         win77.switchPlayer(win77.game.invasion.invader);
         transferScoreFromTo(win77.game.invasion.host, win77.game.invasion.invader);
         const hostTable = document.querySelector("#table");
         hostTable.dataset.owner = `${win77.game.invasion.invader}`;
-        win77.game.alliance = false;
+        toggleNokiaBtn();
+        if (win77.game.alliance) {
+            win77.getSkillPointsFrom(win77.game.alliance.host, 1);
+            win77.getSkillPointsFrom(win77.game.alliance.savior, 1);
+            win77.game.alliance = false;
+        } else {
+            win77.getSkillPointsFrom(win77.game.invasion.host, 2);
+        }
         console.log("You invade the event");
     }
 
@@ -131,11 +166,12 @@ const getInvaderItem = (name) => {
             closePopup();
             document.querySelector("#invade").remove();
             document.querySelector("#rts-btn").classList.add("fw-d-none-i");
-            document.querySelector("#one-more").classList.add("fw-d-none-i");
-            document.querySelector(".js-phone").classList.add("fw-d-none-i");
+            toggleNokiaBtn();
             addOptionalNextBtn("react", react);
             addOptionalNextBtn("pass", pass);
+            document.querySelector("#react").classList.add("--red");
             document.querySelector("#pass").classList.add("--red");
+            document.querySelector("#nokia-popup").classList.remove("--red");
             console.log(`Invasion by ${win77.game.invasion.invader}`);
         }
     }
@@ -162,4 +198,4 @@ const callInvader = () => {
     openPopup("#nokia-popup");
 }
 
-export { callFriend, callInvader, updNokiaLobby };
+export { callFriend, callInvader, updNokiaLobby, toggleNokiaBtn };

@@ -51,16 +51,18 @@ const reloadTheday = () => {
     if (win77.game.alliance) {
         const saviorReward = Math.round(win77.game.event.result.income / 100 * win77.game.alliance.reward);
         win77.giveIncomeToPlayer(win77.game.event.result.income - saviorReward);
+        win77.giveSkillPointsToPlayer(1);
         giveIncomeTo(win77.game.alliance.savior, saviorReward);
+        win77.giveSkillPointsTo(win77.game.alliance.savior, 1);
         win77.game.alliance = false;
         document.querySelector("#savior-score").remove();
         document.querySelector(".js-phone").classList.remove("fw-d-none-i");
         updExecutive();
     } else {
         win77.giveIncomeToPlayer(win77.game.event.result.income);
+        win77.giveSkillPointsToPlayer(2);
     }
 
-    win77.giveSkillPointsToPlayer(1);
     win77.giveEnergyPointsToPlayer(1);
     console.log("!win77.game.final", win77.game.final, win77.game.player.balance.skillPoints, win77.game.player.balance.skillPoints === 4);
     if (win77.game.final === false) { // win77.game.player.balance.skillPoints % 10

@@ -4,7 +4,7 @@ import { closePopup } from "../popup/dom.popup.jquery.js";
 import { setupTheday } from "../theday/setup.theday.js";
 import { getMatchMakingOptionsMarkup, getEventParamsMarkup } from "../router/initMatchMaking.js";
 import { updBalanceNode } from "./balance.hud.js";
-import { callFriend } from "../router/callFriend.js";
+import { callFriend, toggleNokiaBtn } from "../router/callFriend.js";
 import { finishRoundForPlayer } from "../utils/finishRoundForPlayer.js";
 import { clearTable } from "./table.hud.js";
 import { addOptionalNextBtn, swap } from "../router/addOptionalNextBtn.js";
@@ -158,11 +158,10 @@ Ready to start event?
                 action: (e) => {
                     console.log("Jump In");
                     const tableNode = document.querySelector("#table");
-                    const phoneBtn = document.querySelector(".js-phone");
                     tableNode.dataset.owner = `${win77.game.alliance.host}+${win77.game.alliance.savior}`;
-                    phoneBtn.classList.add("fw-d-none-i");
                     win77.switchPlayer(win77.game.alliance.savior);
                     win77.fillPlayersHand();
+                    toggleNokiaBtn();
                     updHand();
                     addOptionalNextBtn("switch", swap);
                     if (win77.lobby.size === 1) {
