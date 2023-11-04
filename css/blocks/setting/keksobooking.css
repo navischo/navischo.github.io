@@ -334,7 +334,7 @@ fieldset {
 }
 
 #executive, #point {
-    text-transform: capitalize;
+    /*text-transform: capitalize;*/
 }
 
 .ad-form__element--wide {

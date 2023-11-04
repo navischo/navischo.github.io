@@ -10,6 +10,7 @@ import { openPopup } from "../popup/dom.popup.jquery.js";
 import { finishRoundForPlayer } from "../utils/finishRoundForPlayer.js";
 import { callInvader, updNokiaLobby } from "./callFriend.js";
 import { addOptionalNextBtn } from "./addOptionalNextBtn.js";
+import { goToCards } from "../utils/goToCards.js";
 
 const isItCardsPage = (name) => name === PAGE_NAMES.npc || name === PAGE_NAMES.class || name === PAGE_NAMES.loot;
 
@@ -143,6 +144,7 @@ const initNextBtn = () => {
     win77.router.nextBtn.classList.add("--visible");
     win77.router.currentPage = "play";
     win77.router.currentPipe = win77.router.pipeline[0];
+
     win77.router.pipeline[1].onInit = () => {
         console.log("onInit is works", win77.router.pipeline[1]);
         addOptionalNextBtn("invade", () => {
@@ -150,6 +152,10 @@ const initNextBtn = () => {
             callInvader();
         });
         document.querySelector("#invade").classList.add("--red");
+    }
+    win77.router.pipeline[0].onInit = () => {
+        const shopNextBtn = document.querySelector("#shop");
+        shopNextBtn ? shopNextBtn.remove() : "";
     }
 
     win77.router.changePage = (setTimingByCallback = null) => {

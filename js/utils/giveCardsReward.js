@@ -3,7 +3,9 @@ import { win77 } from "../dne-cli.js";
 import { drawLootCards } from "../cards/dom.cards.js";
 import { initInventory } from "../hud/inventory.hud.js";
 import { rentCard } from "./rentCard.js";
-import { PAGE_NAMES } from "../router/router.module.js";
+import { PAGE_NAMES } from "../router/const.router.js";
+import { addOptionalNextBtn } from "../router/addOptionalNextBtn.js";
+import { goToCards } from "./goToCards.js";
 
 const drawCardsReward = () => {
     const parent = document.querySelector("body");
@@ -50,6 +52,11 @@ const giveCardsReward = (count = 2) => {
                 initInventory();
                 win77.pokeButton.dia.goToPage(PAGE_NAMES.play);
                 win77.router.enableNext();
+                win77.router.matchmaking ? addOptionalNextBtn("shop", () => {
+                    console.log("You can buy additional items");
+                    goToCards();
+                    document.querySelector("#shop").remove();
+                }) : "";
             }, 500);
         });
     });

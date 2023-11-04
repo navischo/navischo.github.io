@@ -1,4 +1,4 @@
-import { initCatalog } from "../catalog/dom.catalog.js";
+import { goToCards } from "./goToCards.js";
 import { win77 } from "../dne-cli.js";
 // const NUMBERS = {
 //     IN_MENU: [],
@@ -8,6 +8,10 @@ import { win77 } from "../dne-cli.js";
 // }
 
 const KEYS = [
+    {
+        sign: `Escape`,
+        descr: `Main menu`
+    },
     {
         sign: `Shift`,
         descr: `Head menu`
@@ -25,6 +29,43 @@ const KEYS = [
         descr: `Cards catalog`
     }
 ];
+
+const KEYS_SIGNS = {
+    n: ["n", "N", "т", "Т"],
+    c: ["c", "C", "с", "С"],
+    h: ["h", "H", "р", "Р"],
+    shift: ["Shift"],
+    escape: ["Escape"]
+}
+
+const KEYS_CALLBACKS = {
+    n: () => {
+        document.querySelector("body").classList.toggle("hide-hud");
+    },
+    c: () => {
+        goToCards();
+    },
+    h: () => {
+        document.querySelector(".hud-bottom").classList.toggle("hud-bottom--open");
+    },
+    shift: () => {
+        const controls = document.querySelector(".js-catalog-controls")
+        controls.classList.toggle("catalog-controls--visible");
+    },
+    escape: () => {
+        document.querySelector(".game-menu").classList.toggle("--open");
+    }
+}
+
+const findSign = (signToFind) => {
+    let neededSign;
+    Object.keys(KEYS_SIGNS).forEach((sign) => {
+        if (KEYS_SIGNS[sign].find((signVariant) => signVariant === signToFind)) {
+            neededSign = sign;
+        }
+    });
+    return neededSign;
+}
 
 const keyItemMarkup = (sign, descr) =>
     `
@@ -61,23 +102,11 @@ const initKeyMap = () => {
 
 const initKeyboard = () => {
     document.addEventListener("keydown", (e) => {
-        // console.log(e.key, e);
-        if (e.key === "n" || e.key === "N") {
-            document.querySelector("body").classList.toggle("hide-hud");
-        } else if (e.key === "Shift") {
-            const controls = document.querySelector(".js-catalog-controls")
-            controls.classList.toggle("catalog-controls--visible");
-        } else if (e.key === "h" || e.key === "H") {
-            document.querySelector(".hud-bottom").classList.toggle("hud-bottom--open");
-        } else if (e.key === "Escape") {
-            document.querySelector(".game-menu").classList.toggle("--open");
-        } else if (e.key === "c" || e.key === "C") {
-            win77.swiper.slideTo(0, 0);
-            initCatalog();
-            const controls = document.querySelector(".js-catalog-controls")
-            controls.classList.add("catalog-controls--visible");
-            const cardsNavLink = document.querySelector(".js-cards-nav-link")
-            cardsNavLink.classList.add("--active");
+        const sign = findSign(e.key);
+        if (sign) {
+            KEYS_CALLBACKS[sign]();
+        } else {
+            console.log(`You press ${e.key}`);
         }
     });
 
