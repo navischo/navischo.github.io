@@ -82,26 +82,6 @@ const updScore = (bonus = 0) => {
 
     win77.game.player.score = win77.game.player.score + +bonus;
 
-    // if (!win77.game.alliance && !win77.game.invasion) {
-    //     win77.game.totalScore = win77.game.player.score;
-    //     playerScoreNode.innerHTML = win77.game.totalScore;
-    // } else {
-    //     if (win77.game.alliance) {
-    //         const hostScore = win77.findPlayerObj(win77.game.alliance.host).score;
-    //         const saviorScore = win77.findPlayerObj(win77.game.alliance.savior).score;
-    //         win77.game.totalScore = hostScore + saviorScore;
-    //         updSaviorScore(saviorScore);
-    //         playerScoreNode.innerHTML = hostScore;
-    //     } else {
-    //         win77.game.totalScore = win77.game.player.score;
-    //         playerScoreNode.innerHTML = win77.game.totalScore;
-    //     }
-    //
-    //     if (win77.game.invasion) {
-    //         updInvaderScore(win77.findPlayerObj(win77.game.invasion.invader).score);
-    //     }
-    // }
-
     if (!win77.game.alliance && !win77.game.invasion) {
         win77.game.totalScore = win77.game.player.score;
         playerScoreNode.innerHTML = win77.game.totalScore;

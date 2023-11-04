@@ -35,6 +35,7 @@ Ready to start event?
                 text: "Yep",
                 action: () => {
                     console.log("Lets Rave");
+                    win77.swiper.slideTo(2, 0);
                     const budgetInput = document.querySelector("#event-budget");
                     const eventBudget = budgetInput.value !== "" && budgetInput.value > 0 ? budgetInput.value : 5000;
                     if (win77.game.alliance) {
