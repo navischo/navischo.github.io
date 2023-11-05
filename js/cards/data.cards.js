@@ -708,6 +708,14 @@ const initDNELootArr = () => {
 
     LootArr.push(new DNELootCard("vinyl-i-am-chill-session", "1AM CHILL SESSION", I_AM_CHILL_SESSION_VINYL_LONGLINE, I_AM_CHILL_SESSION_VINYL_IMG, 4, 1600, "Платівка, 160m of Chill Ambient", I_AM_CHILL_SESSION_VINYL_SHORTLINE, "", true, true, "sound", "https://youtu.be/TlWYgGyNnJo"));
 
+    const DEATH_LESSONS_VINYL_IMG_ID = `1RP9uwmDb8PjE-ny4aFOLghFN3p4-5Q02`;
+    const DEATH_LESSONS_VINYL_IMG = `https://drive.google.com/uc?id=${DEATH_LESSONS_VINYL_IMG_ID}`;
+    LootArr.push(new DNELootCard("vinyl-death-lessons", "DEATH LESSONS", "Альбом дає можливість поставити музику просто зараз. Це може бути цей самий альбом, або будь-який інший. Спробуй заробити гроші, використавши його під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй альбоми в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", DEATH_LESSONS_VINYL_IMG, 4, 500, "Платівка, 13m of Experimental Acid Techno", STRINGS.VINYL_LONGLINE, "", true, true, "sound", "https://youtu.be/79VEr-S7PXw"));
+
+    const FLYING_AWAY_VINYL_IMG_ID = `1BZCDvlFi0lkQ1AJZmUI0PnafjicdjAPO`;
+    const FLYING_AWAY_VINYL_IMG = `https://drive.google.com/uc?id=${FLYING_AWAY_VINYL_IMG_ID}`;
+    LootArr.push(new DNELootCard("vinyl-flying-away", "FLYING AWAY", "Альбом дає можливість поставити музику просто зараз. Це може бути цей самий альбом, або будь-який інший. Спробуй заробити гроші, використавши його під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй альбоми в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", FLYING_AWAY_VINYL_IMG, 4, 1800, "Платівка, 46m of Experimental Psychodelic Electronic", STRINGS.VINYL_LONGLINE, "", true, true, "sound", "https://youtu.be/T_Ne2Zs5754"));
+
     // Flower Boy
     //
     //
@@ -793,13 +801,17 @@ const initDNELootArr = () => {
     const SCREENING_PLEXUS_ALBUM_IMG = `https://drive.google.com/uc?id=${SCREENING_PLEXUS_ALBUM_IMG_ID}`;
     LootArr.push(new DNELootCard("album-screening-plexus", "SCREENING PLEXUS", "Альбом дає можливість поставити музику просто зараз. Це може бути цей самий альбом, або будь-який інший. Спробуй заробити гроші, використавши його під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй альбоми в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", SCREENING_PLEXUS_ALBUM_IMG, 3, 1000, "Альбом, 42m of Retrowave Dark Syntpunk", STRINGS.ALBUM_LONGLINE, "", true, true, "sound", "https://youtu.be/-sFuEY-QMQA"));
 
-    const DEATH_LESSONS_VINYL_IMG_ID = `1RP9uwmDb8PjE-ny4aFOLghFN3p4-5Q02`;
-    const DEATH_LESSONS_VINYL_IMG = `https://drive.google.com/uc?id=${DEATH_LESSONS_VINYL_IMG_ID}`;
-    LootArr.push(new DNELootCard("vinyl-death-lessons", "DEATH LESSONS", "Альбом дає можливість поставити музику просто зараз. Це може бути цей самий альбом, або будь-який інший. Спробуй заробити гроші, використавши його під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй альбоми в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", DEATH_LESSONS_VINYL_IMG, 4, 500, "Платівка, 13m of Experimental Acid Techno", STRINGS.VINYL_LONGLINE, "", true, true, "sound", "https://youtu.be/79VEr-S7PXw"));
+    const ETERNAL_RETURN_ALBUM_IMG_ID = `1leD3SnBGyQKMAA0JoArxLAjRaW-8gkmq`;
+    const ETERNAL_RETURN_ALBUM_IMG = `https://drive.google.com/uc?id=${ETERNAL_RETURN_ALBUM_IMG_ID}`;
+    LootArr.push(new DNELootCard("album-eternal-return", "ETERNAL RETURN", "Альбом дає можливість поставити музику просто зараз. Це може бути цей самий альбом, або будь-який інший. Спробуй заробити гроші, використавши його під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй альбоми в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", ETERNAL_RETURN_ALBUM_IMG, 4, 300, "Альбом, 42m of Electro Synthpunk", STRINGS.ALBUM_LONGLINE, "", true, true, "sound", "https://youtu.be/1C3tLxvVC8g"));
 
-    const FLYING_AWAY_VINYL_IMG_ID = `1BZCDvlFi0lkQ1AJZmUI0PnafjicdjAPO`;
-    const FLYING_AWAY_VINYL_IMG = `https://drive.google.com/uc?id=${FLYING_AWAY_VINYL_IMG_ID}`;
-    LootArr.push(new DNELootCard("vinyl-flying-away", "FLYING AWAY", "Альбом дає можливість поставити музику просто зараз. Це може бути цей самий альбом, або будь-який інший. Спробуй заробити гроші, використавши його під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй альбоми в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", FLYING_AWAY_VINYL_IMG, 4, 1800, "Платівка, 46m of Experimental Psychodelic Electronic", STRINGS.VINYL_LONGLINE, "", true, true, "sound", "https://youtu.be/T_Ne2Zs5754"));
+    const BUNKER_ISLAND_ALBUM_IMG_ID = `1iKPKPVEwTWovs1q0Bc2JiY-AJVHF-vpb`;
+    const BUNKER_ISLAND_ALBUM_IMG = `https://drive.google.com/uc?id=${BUNKER_ISLAND_ALBUM_IMG_ID}`;
+    LootArr.push(new DNELootCard("album-bunker-island", "BUNKER ISLAND", "Альбом дає можливість поставити музику просто зараз. Це може бути цей самий альбом, або будь-який інший. Спробуй заробити гроші, використавши його під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй альбоми в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", BUNKER_ISLAND_ALBUM_IMG, 4, 300, "Альбом, 30m of Electro Dungeonwave Synthpunk", STRINGS.ALBUM_LONGLINE, "", true, true, "sound", "https://youtu.be/r7X6o9f2_Q0"));
+
+    const VARIOUS_II_ALBUM_IMG_ID = `19kfiinfD6DbwUUdB67_yt7Yhlm3okcEa`;
+    const VARIOUS_II_ALBUM_IMG = `https://drive.google.com/uc?id=${VARIOUS_II_ALBUM_IMG_ID}`;
+    LootArr.push(new DNELootCard("album-various-ii", "VARIOUS II", "Альбом дає можливість поставити музику просто зараз. Це може бути цей самий альбом, або будь-який інший. Спробуй заробити гроші, використавши його під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй альбоми в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", VARIOUS_II_ALBUM_IMG, 4, 500, "Альбом, 57m of Electro Coldwave Synthpunk", STRINGS.ALBUM_LONGLINE, "", true, true, "sound", "https://youtu.be/p5QcUK8nVBk"));
 
     // Демо Autonomous aka Slam
     LootArr.push(new DNELootCard("demo-tweeman", "TWEEMAN", "Демо дає можливість показати лейблам що ти хочеш записати. Можливо тобі навіть вдасться знайти простір з якісною аппаратурою, зробити якісний реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", "https://lh3.googleusercontent.com/IAON5k2AY0ZW5M--oM4njhEfQDFvLYJCFN9mRIzdpVZJHYlLCNVakDyu5bCnr9_lWAI=w2400", 3, 500, "Демо, 56m of Електро", STRINGS.DEMO_LONGLINE, "", true, true, "sound", "https://www.youtube.com/live/EMliZzkRHCg"));
