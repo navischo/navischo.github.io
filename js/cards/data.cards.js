@@ -743,6 +743,17 @@ const initDNELootArr = () => {
     const IN_UTERO_VINYL_IMG = `https://drive.google.com/uc?id=${IN_UTERO_VINYL_IMG_ID}`;
     LootArr.push(new DNELootCard("vinyl-in-utero", "In Utero", "Платівка дає можливість поставити музику просто зараз. Це може бути цей самий альбом, або будь-який інший. Спробуй заробити гроші, використавши її під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", IN_UTERO_VINYL_IMG, 6, 11111, "Платівка, 41m of Гранж", STRINGS.VINYL_LONGLINE, "", true, true, "sound", "https://youtu.be/Y-5bmRELuts"));
 
+    // I care be cause you do
+    //
+    //
+    const I_CARE_BECAUSE_YOU_DO_VINYL_LONGLINE = "";
+    const I_CARE_BECAUSE_YOU_DO_VINYL_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    const I_CARE_BECAUSE_YOU_DO_VINYL_IMG_ID = `1f84pXs05cbjiGwSGNJnYsQNrEVDAhlM-`;
+    const I_CARE_BECAUSE_YOU_DO_VINYL_IMG = `https://drive.google.com/uc?id=${I_CARE_BECAUSE_YOU_DO_VINYL_IMG_ID}`;
+
+    LootArr.push(new DNELootCard("vinyl-i-care-be-cause-you-do", "I care be cause you do", I_CARE_BECAUSE_YOU_DO_VINYL_LONGLINE, I_CARE_BECAUSE_YOU_DO_VINYL_IMG, 6, 1700, "Платівка, 63m of Ambient Electronic Acid Techno", I_CARE_BECAUSE_YOU_DO_VINYL_SHORTLINE, "", true, true, "sound", "https://youtu.be/NJesxnyCMbU"));
+
+
     // Flower Boy
     //
     //
@@ -753,7 +764,29 @@ const initDNELootArr = () => {
 
     LootArr.push(new DNELootCard("vinyl-cyberpunk-triple", "CYBERPUNK 2077 VINYL 3LP SET", CYBERPUNK_TRIPLE_VINYL_LONGLINE, CYBERPUNK_TRIPLE_VINYL_IMG, 7, 4200, "Платівка, 99m of Progressive Electronic Rock", CYBERPUNK_TRIPLE_VINYL_SHORTLINE, "", true, true, "sound"));
 
-    // Платівка Delicate Sound of Thunder
+    // Платівка Currents
+    //
+    //
+    const SLOW_RUSH_VINYL_LONGLINE = "";
+    const SLOW_RUSH_VINYL_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    const SLOW_RUSH_VINYL_IMG_ID = `1C6B2Q28YCUs6uJdlvZbCMDoOuSPQjxba`;
+    const SLOW_RUSH_VINYL_IMG = `https://drive.google.com/uc?id=${SLOW_RUSH_VINYL_IMG_ID}`;
+
+    LootArr.push(new DNELootCard("vinyl-slow-rush", "Slow Rush", SLOW_RUSH_VINYL_LONGLINE, SLOW_RUSH_VINYL_IMG, 7, 1900, "Платівка, 57m of Electronic Psychodelic Synth-Pop", SLOW_RUSH_VINYL_SHORTLINE, "", true, true, "sound", "https://youtube.com/playlist?list=PLr9Yx3twkzdK2GF5xVgpsM8PvREBdzf5c&si=m0vvZTihFrXxLkBt"));
+
+
+    // Платівка Currents
+    //
+    //
+    const CURRENTS_VINYL_LONGLINE = "";
+    const CURRENTS_VINYL_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    const CURRENTS_VINYL_IMG_ID = `1k6bdJva07FUJcbR44Pxer5jMIPkIRvtF`;
+    const CURRENTS_VINYL_IMG = `https://drive.google.com/uc?id=${CURRENTS_VINYL_IMG_ID}`;
+
+    LootArr.push(new DNELootCard("vinyl-currents", "Currents", CURRENTS_VINYL_LONGLINE, CURRENTS_VINYL_IMG, 8, 1800, "Платівка, 51m of Progressive Psychodelic Synth-Pop", CURRENTS_VINYL_SHORTLINE, "", true, true, "sound", "https://youtube.com/playlist?list=PL81_CtYCym28qkVe3nVMRG7hMR5_Ky3Hf&si=vupJtx4HKQ1lffT3"));
+
+
+    // Платівка AM
     const AM_VINYL_IMG_ID = `1qYSkZ1q2Qd50SdqOAW3KP9VFFWRfpa3d`;
     const AM_VINYL_IMG = `https://drive.google.com/uc?id=${AM_VINYL_IMG_ID}`;
     LootArr.push(new DNELootCard("vinyl-am", "AM", "Платівка дає можливість поставити музику просто зараз. Це може бути цей самий альбом, або будь-який інший. Спробуй заробити гроші, використавши її під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", AM_VINYL_IMG, 8, 1700, "Платівка, 41m of Indie Rock", STRINGS.VINYL_LONGLINE, "", true, true, "sound", "https://youtu.be/bpOSxM0rNPM"));
@@ -762,6 +795,17 @@ const initDNELootArr = () => {
     const DELICATE_SOUND_VINYL_IMG_ID = `1wLAnPq2f__iu7qBwERFjUjuqKBBR7j22`;
     const DELICATE_SOUND_VINYL_IMG = `https://drive.google.com/uc?id=${DELICATE_SOUND_VINYL_IMG_ID}`;
     LootArr.push(new DNELootCard("vinyl-delicate-sound-of-thunder", "Delicate Sound<br> of Thunder", "Платівка дає можливість поставити музику просто зараз. Це може бути цей самий альбом, або будь-який інший. Спробуй заробити гроші, використавши її під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", DELICATE_SOUND_VINYL_IMG, 9, "NYP", "Платівка, 104m of Progressive Psychodelic Rock", STRINGS.VINYL_LONGLINE, "", true, true, "sound"));
+
+    // Платівка Currents
+    //
+    //
+    const THE_VERY_BEST_OF_THE_DOORS_VINYL_LONGLINE = "";
+    const THE_VERY_BEST_OF_THE_DOORS_VINYL_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    const THE_VERY_BEST_OF_THE_DOORS_VINYL_IMG_ID = `1Tr5qgz1klVR1gEFUh51scPlpqmhv6jjn`;
+    const THE_VERY_BEST_OF_THE_DOORS_VINYL_IMG = `https://drive.google.com/uc?id=${THE_VERY_BEST_OF_THE_DOORS_VINYL_IMG_ID}`;
+
+    LootArr.push(new DNELootCard("vinyl-the-very-best-of-the-doors", "The very best of The Doors", THE_VERY_BEST_OF_THE_DOORS_VINYL_LONGLINE, THE_VERY_BEST_OF_THE_DOORS_VINYL_IMG, 9, 10000, "Платівка, 78m of Progressive Psychodelic Rock", THE_VERY_BEST_OF_THE_DOORS_VINYL_SHORTLINE, "", true, true, "sound", "https://youtu.be/UYcjlmeRNTo"));
+
 
     LootArr.push(new DNELootCard("album-aleph", "Aleph", "Платівка дає можливість поставити музику просто зараз. Це може бути цей самий альбом, або будь-який інший. Спробуй заробити гроші, використавши її під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", "https://lh6.googleusercontent.com/C8MFf0NXHJesCRn1SgP6Y6fg6AbOesG6rrKe1cCe3vQMuhp8KLMkmKZYvPeZfxoy-SU=w2400", 8, 7777, "Альбом, 54m of Progressive Electronic", STRINGS.VINYL_LONGLINE, "", true, true, "sound", "https://youtu.be/bpOSxM0rNPM?si=k_IfUEZRx3dVx1rO"));
 
@@ -821,6 +865,15 @@ const initDNELootArr = () => {
     const LATEX_AND_LEATHER_ALBUM_IMG = `https://drive.google.com/uc?id=${LATEX_AND_LEATHER_ALBUM_IMG_ID}`;
     LootArr.push(new DNELootCard("album-latex-and-leather", "LATEX & LEATHER", "Альбом дає можливість поставити музику просто зараз. Це може бути цей самий альбом, або будь-який інший. Спробуй заробити гроші, використавши його під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй альбоми в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", LATEX_AND_LEATHER_ALBUM_IMG, 5, 200, "Альбом, 13m of Industrial Coldwave Synthpunk", STRINGS.ALBUM_LONGLINE, "", true, true, "sound", "https://youtu.be/Ov91awg_Qx0"));
 
+    // Plastic Beach
+    //
+    //
+    const PHANTOM_LIBERTY_ALBUM_LONGLINE = "";
+    const PHANTOM_LIBERTY_ALBUM_SHORTLINE = `${STRINGS.ALBUM_LONGLINE_2}`;
+    const PHANTOM_LIBERTY_ALBUM_IMG_ID = `1c8NJyX34CRmxY8m6rtrXexueI_FS5EP0`;
+    const PHANTOM_LIBERTY_ALBUM_IMG = `https://drive.google.com/uc?id=${PHANTOM_LIBERTY_ALBUM_IMG_ID}`;
+
+    LootArr.push(new DNELootCard("album-phantom-liberty", "CYBERPUNK 2077: PHANTOM LIBERTY", PHANTOM_LIBERTY_ALBUM_LONGLINE, PHANTOM_LIBERTY_ALBUM_IMG, 4, 0, "Альбом, 54m Electronic Synthpunk Trip-Hop", PHANTOM_LIBERTY_ALBUM_SHORTLINE, "", true, true, "sound", "https://youtu.be/kHfhACP7ekY"));
 
     // Демо Autonomous aka Slam
     LootArr.push(new DNELootCard("demo-tweeman", "TWEEMAN", "Демо дає можливість показати лейблам що ти хочеш записати. Можливо тобі навіть вдасться знайти простір з якісною аппаратурою, зробити якісний реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", "https://lh3.googleusercontent.com/IAON5k2AY0ZW5M--oM4njhEfQDFvLYJCFN9mRIzdpVZJHYlLCNVakDyu5bCnr9_lWAI=w2400", 3, 500, "Демо, 56m of Електро", STRINGS.DEMO_LONGLINE, "", true, true, "sound", "https://www.youtube.com/live/EMliZzkRHCg"));
@@ -983,6 +1036,17 @@ const initDNELootArr = () => {
 
     LootArr.push(new DNELootCard("demo-ikra-says-yes", "Артем Ікра каже Так", DEMO_IKRA_SAYS_YES_LONGLINE, DEMO_IKRA_SAYS_YES_IMG, 2, "NYP", "Демо, 57m of Електро", DEMO_IKRA_SAYS_YES_SHORTLINE, "", true, true, "sound", "https://soundcloud.com/yesbelgrade/artem-ikra-says-yes"));
 
+    // Apex Twin Sleep
+    //
+    //
+    const DEMO_APEX_TWIN_SLEEP_LONGLINE = "";
+    const DEMO_APEX_TWIN_SLEEP_SHORTLINE = `${STRINGS.DEMO_LONGLINE}`;
+    const DEMO_APEX_TWIN_SLEEP_IMG_ID = `1dP3tk9yUqix5nsr2_C4qO3Pw5eogxwFl`;
+    const DEMO_APEX_TWIN_SLEEP_IMG = `https://drive.google.com/uc?id=${DEMO_APEX_TWIN_SLEEP_IMG_ID}`;
+
+    LootArr.push(new DNELootCard("demo-apex-twin-sleep", "Apex Twin Sleep", DEMO_APEX_TWIN_SLEEP_LONGLINE, DEMO_APEX_TWIN_SLEEP_IMG, 2, 0, "Демо, 101m of Electronic Ambient", DEMO_APEX_TWIN_SLEEP_SHORTLINE, "", true, true, "sound", "https://youtu.be/NUNrgiDfPq8"));
+
+
     // Артем Ікра каже Так
     //
     //
@@ -1040,6 +1104,17 @@ const initDNELootArr = () => {
     LootArr.push(new DNELootCard("demo-trappin-japan-15", "TRAPPIN IN JAPAN 15", "Демо дає можливість показати лейблам що ти хочеш записати. Можливо тобі пощастить знайти простір з якісною аппаратурою, зробити реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу. Бонус цього демо подвоюється, якщо його грати на окремій Rock сцені.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії.", "https://lh3.googleusercontent.com/dLtfBGYLL2FMmBNcGlRdPGX1D-KYo6UQ1rXdtGZiabL4syg7AzmonpwvxaS9TKY_E7k=w2400", 1, 0, "Демо, 56m of Phonk<br> Vapor Trap", STRINGS.DEMO_LONGLINE, "", true, true, "sound", "https://youtu.be/k-5YFwXyAjc"));
     LootArr.push(new DNELootCard("demo-trappin-japan-18", "TRAPPIN IN JAPAN 18", "Демо дає можливість показати лейблам що ти хочеш записати. Можливо тобі пощастить знайти простір з якісною аппаратурою, зробити реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу. Бонус цього демо подвоюється, якщо його грати на окремій Rock сцені.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії.", "https://lh3.googleusercontent.com/R8hhVznQZxCScNx3mClr50t-31uLZNNaVzHBSnwo8_Qg8T6sZmwjkXubNOfb1VMxOis=w2400", 1, 0, "Демо, 68m of Lo-Fi<br> Vapor Trap", STRINGS.DEMO_LONGLINE, "", true, true, "sound", "https://youtu.be/-mD_nqa2KJU"));
 
+    // Phonk Fridays 010
+    //
+    //
+    const TRAPPIN_IN_JAPAN_23_DEMO_LONGLINE = "";
+    const TRAPPIN_IN_JAPAN_23_DEMO_SHORTLINE = `${STRINGS.DEMO_LONGLINE}`;
+    const TRAPPIN_IN_JAPAN_23_DEMO_IMG_ID = `1cu7JQalnTiVFuiyfmmM13zQOzkUeXP2Z`;
+    const TRAPPIN_IN_JAPAN_23_DEMO_IMG = `https://drive.google.com/uc?id=${TRAPPIN_IN_JAPAN_23_DEMO_IMG_ID}`;
+
+    LootArr.push(new DNELootCard("demo-trappin-japan-23", "TRAPPIN IN JAPAN 23", TRAPPIN_IN_JAPAN_23_DEMO_LONGLINE, TRAPPIN_IN_JAPAN_23_DEMO_IMG, 3, 0, "Демо, 66m of  of Phonk Vapor Trap", TRAPPIN_IN_JAPAN_23_DEMO_SHORTLINE, "", true, true, "sound", "https://youtu.be/ZGjkh5VeIxs"));
+
+
     const CYBERDREAM_DEMO_IMG_ID = `1vwSVvNU0yzCmHsCrXKtnVzOlQ8mPiPl7`;
     const CYBERDREAM_DEMO_IMG = `https://drive.google.com/uc?id=${CYBERDREAM_DEMO_IMG_ID}`;
 
@@ -1066,6 +1141,17 @@ const initDNELootArr = () => {
     const DEMO_PATIENCE_IMG = `https://lh3.googleusercontent.com/bcu13OJqk1khEZOvbIrxWXsCzvm1XSCgXy1G2wQHtgjapTpC394qTNhZmp2DucuMPCM=w2400`;
 
     LootArr.push(new DNELootCard("demo-patience", "P A T I E N C E", DEMO_PATIENCE_LONGLINE, DEMO_PATIENCE_IMG, 2, 0, "Демо, 39m of Chillwave Synthwave Retrowave", DEMO_PATIENCE_SHORTLINE, "", true, true, "sound", "https://youtu.be/Vd-tURJ4ThM"));
+
+    // Royal noises from dead kingdoms
+    //
+    //
+    const ALBUM_ROYAL_NOISES_LONGLINE = "";
+    const ALBUM_ROYAL_NOISES_SHORTLINE = ``;
+    const ALBUM_ROYAL_NOISES_IMG_ID = `1W0oKo1GPgLlv7Gl1KMYCBw_qLvqksNv7`;
+    const ALBUM_ROYAL_NOISES_IMG = `https://drive.google.com/uc?id=${ALBUM_ROYAL_NOISES_IMG_ID}`;
+
+    LootArr.push(new DNELootCard("album-royal-noises-from-dead-kingdoms", "Royal noises from dead kingdoms", ALBUM_ROYAL_NOISES_LONGLINE, ALBUM_ROYAL_NOISES_IMG, 2, 200, "Демо, 30m of Electronic Lo-Fi", ALBUM_ROYAL_NOISES_SHORTLINE, "", true, true, "sound"));
+
 
     // CHILL DUDE HERE
     //
