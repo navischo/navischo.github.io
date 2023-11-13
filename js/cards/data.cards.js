@@ -817,7 +817,7 @@ const initDNELootArr = () => {
 
     LootArr.push(new DNELootCard("vinyl-cyberpunk-triple", "CYBERPUNK 2077 VINYL 3LP SET", CYBERPUNK_TRIPLE_VINYL_LONGLINE, CYBERPUNK_TRIPLE_VINYL_IMG, 7, 4200, "Платівка, 99m of Progressive Electronic Rock", CYBERPUNK_TRIPLE_VINYL_SHORTLINE, "", true, true, "sound"));
 
-    // Платівка Currents
+    // Платівка Slow Rush
     //
     //
     const SLOW_RUSH_VINYL_LONGLINE = "";
@@ -828,15 +828,15 @@ const initDNELootArr = () => {
     LootArr.push(new DNELootCard("vinyl-slow-rush", "Slow Rush", SLOW_RUSH_VINYL_LONGLINE, SLOW_RUSH_VINYL_IMG, 7, 1900, "Платівка, 57m of Electronic Psychodelic Synth-Pop", SLOW_RUSH_VINYL_SHORTLINE, "", true, true, "sound", "https://youtube.com/playlist?list=PLr9Yx3twkzdK2GF5xVgpsM8PvREBdzf5c&si=m0vvZTihFrXxLkBt"));
 
 
-    // Платівка Currents
+    // // Платівка Currents
+    // //
+    // //
+    // const CURRENTS_VINYL_LONGLINE = "";
+    // const CURRENTS_VINYL_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    // const CURRENTS_VINYL_IMG_ID = `1k6bdJva07FUJcbR44Pxer5jMIPkIRvtF`;
+    // const CURRENTS_VINYL_IMG = `https://drive.google.com/uc?id=${CURRENTS_VINYL_IMG_ID}`;
     //
-    //
-    const CURRENTS_VINYL_LONGLINE = "";
-    const CURRENTS_VINYL_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
-    const CURRENTS_VINYL_IMG_ID = `1k6bdJva07FUJcbR44Pxer5jMIPkIRvtF`;
-    const CURRENTS_VINYL_IMG = `https://drive.google.com/uc?id=${CURRENTS_VINYL_IMG_ID}`;
-
-    LootArr.push(new DNELootCard("vinyl-currents", "Currents", CURRENTS_VINYL_LONGLINE, CURRENTS_VINYL_IMG, 8, 1800, "Платівка, 51m of Progressive Psychodelic Synth-Pop", CURRENTS_VINYL_SHORTLINE, "", true, true, "sound", "https://youtube.com/playlist?list=PL81_CtYCym28qkVe3nVMRG7hMR5_Ky3Hf&si=vupJtx4HKQ1lffT3"));
+    // LootArr.push(new DNELootCard("vinyl-currents", "Currents", CURRENTS_VINYL_LONGLINE, CURRENTS_VINYL_IMG, 8, 1800, "Платівка, 51m of Progressive Psychodelic Synth-Pop", CURRENTS_VINYL_SHORTLINE, "", true, true, "sound", "https://youtube.com/playlist?list=PL81_CtYCym28qkVe3nVMRG7hMR5_Ky3Hf&si=vupJtx4HKQ1lffT3"));
 
 
     // Платівка AM
@@ -1637,7 +1637,7 @@ const initDNELootArr = () => {
     const YORKE_DEMO_IMG_ID = `1aolL5UYFf-XvE6Xb_Bjups5uT6XgR297`;
     const YORKE_DEMO_IMG = `https://drive.google.com/uc?id=${YORKE_DEMO_IMG_ID}`;
 
-    LootArr.push(new DNELootCard("demo-thom-yorke", "Thom Yorke", YORKE_DEMO_LONGLINE, YORKE_DEMO_IMG, 4, "4K", "Демо, 32m of Experimental Electro", YORKE_DEMO_SHORTLINE, "", true, false, "sound", "https://youtu.be/qt-ohn5C3kU"));
+    LootArr.push(new DNELootCard("demo-thom-yorke", "Thom Yorke", YORKE_DEMO_LONGLINE, YORKE_DEMO_IMG, 7, "10K", "Демо, 32m of Experimental Electro", YORKE_DEMO_SHORTLINE, "", true, false, "sound", "https://youtu.be/qt-ohn5C3kU"));
 
     // Le jardin de Lucy
     //
@@ -1647,7 +1647,7 @@ const initDNELootArr = () => {
     const LUCY_VINYL_IMG_ID = `1MwprtqrAk1iBApY-WLwdGRZGrmE0aejg`;
     const LUCY_VINYL_IMG = `https://drive.google.com/uc?id=${LUCY_VINYL_IMG_ID}`;
 
-    LootArr.push(new DNELootCard("vinyl-le-jardin-de-lucy", "Le jardin de Lucy", LUCY_VINYL_LONGLINE, LUCY_VINYL_IMG, 3, 1200, "Платівка, 57m of Electronic Reggae Dub", LUCY_VINYL_SHORTLINE, "", true, false, "sound", "https://youtu.be/Ljw5eJdO4kQ"));
+    LootArr.push(new DNELootCard("vinyl-le-jardin-de-lucy", "Le jardin de Lucy", LUCY_VINYL_LONGLINE, LUCY_VINYL_IMG, 5, 1200, "Платівка, 57m of Electronic Reggae Dub", LUCY_VINYL_SHORTLINE, "", true, false, "sound", "https://youtu.be/Ljw5eJdO4kQ"));
 
     // The Eternal Present
     //
@@ -1657,7 +1657,7 @@ const initDNELootArr = () => {
     const ETERNAL_PRESENT_VINYL_IMG_ID = `11s8Xvd_p8lYpfXBKg51uE1tZMN4QRnKn`;
     const ETERNAL_PRESENT_VINYL_IMG = `https://drive.google.com/uc?id=${ETERNAL_PRESENT_VINYL_IMG_ID}`;
 
-    LootArr.push(new DNELootCard("vinyl-eternal-present", "The Eternal Present", ETERNAL_PRESENT_VINYL_LONGLINE, ETERNAL_PRESENT_VINYL_IMG, 4, 1400, "Платівка, 39m of Electronic Industrial Cyber", ETERNAL_PRESENT_VINYL_SHORTLINE, "", true, false, "sound", "https://youtu.be/NWSM4y1PAyo"));
+    LootArr.push(new DNELootCard("vinyl-eternal-present", "The Eternal Present", ETERNAL_PRESENT_VINYL_LONGLINE, ETERNAL_PRESENT_VINYL_IMG, 5, 1400, "Платівка, 39m of Electronic Industrial Cyber", ETERNAL_PRESENT_VINYL_SHORTLINE, "", true, false, "sound", "https://youtu.be/NWSM4y1PAyo"));
 
     // Erased from history
     //
@@ -1667,17 +1667,28 @@ const initDNELootArr = () => {
     const ERASED_FROM_HISTORY_VINYL_IMG_ID = `1we-bhs3mUOb4nwvMhiuPodi44LDR-sIT`;
     const ERASED_FROM_HISTORY_VINYL_IMG = `https://drive.google.com/uc?id=${ERASED_FROM_HISTORY_VINYL_IMG_ID}`;
 
-    LootArr.push(new DNELootCard("vinyl-erased-from-history", "Erased from history", ERASED_FROM_HISTORY_VINYL_LONGLINE, ERASED_FROM_HISTORY_VINYL_IMG, 4, 1600, "Платівка, 25m of Electronic Breakbeat Ghost Vaporware", ERASED_FROM_HISTORY_VINYL_SHORTLINE, "", true, false, "sound", "https://youtu.be/wfz0mHr5YB0"));
+    LootArr.push(new DNELootCard("vinyl-erased-from-history", "Erased from history", ERASED_FROM_HISTORY_VINYL_LONGLINE, ERASED_FROM_HISTORY_VINYL_IMG, 5, 1600, "Платівка, 25m of Electronic Breakbeat Ghost Vaporware", ERASED_FROM_HISTORY_VINYL_SHORTLINE, "", true, false, "sound", "https://youtu.be/wfz0mHr5YB0"));
 
-    // VILL4IN TV Episode 001 + 002
+    // Платівка Currents
     //
     //
-    const VILL4IN_TV_DEMO_LONGLINE = "";
-    const VILL4IN_TV_DEMO_SHORTLINE = `${STRINGS.ALBUM_LONGLINE_2}`;
-    const VILL4IN_TV_DEMO_IMG_ID = `1IOWzUR6lRoI05EKH3KL3nNsRPA8K5s8a`;
-    const VILL4IN_TV_DEMO_IMG = `https://drive.google.com/uc?id=${VILL4IN_TV_DEMO_IMG_ID}`;
+    const CURRENTS_VINYL_LONGLINE = "";
+    const CURRENTS_VINYL_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    const CURRENTS_VINYL_IMG_ID = `1k6bdJva07FUJcbR44Pxer5jMIPkIRvtF`;
+    const CURRENTS_VINYL_IMG = `https://drive.google.com/uc?id=${CURRENTS_VINYL_IMG_ID}`;
 
-    LootArr.push(new DNELootCard("demo-vill4in-tv", "VILL4IN TV Episode 001 + 002", VILL4IN_TV_DEMO_LONGLINE, VILL4IN_TV_DEMO_IMG, 3, 0, "Платівка, 243m of Experimental Ambient Downtempo Vaporware", VILL4IN_TV_DEMO_SHORTLINE, "", true, false, "sound", "https://youtu.be/tRoW695S3vc"));
+    LootArr.push(new DNELootCard("vinyl-currents", "Currents", CURRENTS_VINYL_LONGLINE, CURRENTS_VINYL_IMG, 8, 1800, "Платівка, 51m of Progressive Psychodelic Synth-Pop", CURRENTS_VINYL_SHORTLINE, "", true, true, "sound", "https://youtube.com/playlist?list=PL81_CtYCym28qkVe3nVMRG7hMR5_Ky3Hf&si=vupJtx4HKQ1lffT3"));
+
+
+    // // VILL4IN TV Episode 001 + 002
+    // //
+    // //
+    // const VILL4IN_TV_DEMO_LONGLINE = "";
+    // const VILL4IN_TV_DEMO_SHORTLINE = `${STRINGS.ALBUM_LONGLINE_2}`;
+    // const VILL4IN_TV_DEMO_IMG_ID = `1IOWzUR6lRoI05EKH3KL3nNsRPA8K5s8a`;
+    // const VILL4IN_TV_DEMO_IMG = `https://drive.google.com/uc?id=${VILL4IN_TV_DEMO_IMG_ID}`;
+    //
+    // LootArr.push(new DNELootCard("demo-vill4in-tv", "VILL4IN TV Episode 001 + 002", VILL4IN_TV_DEMO_LONGLINE, VILL4IN_TV_DEMO_IMG, 3, 0, "Платівка, 243m of Experimental Ambient Downtempo Vaporware", VILL4IN_TV_DEMO_SHORTLINE, "", true, false, "sound", "https://youtu.be/tRoW695S3vc"));
 
 
 
