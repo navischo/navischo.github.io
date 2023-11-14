@@ -741,7 +741,8 @@ const initDNELootArr = () => {
     //
     const I_AM_CHILL_SESSION_VINYL_LONGLINE = "";
     const I_AM_CHILL_SESSION_VINYL_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
-    const I_AM_CHILL_SESSION_VINYL_IMG_ID = `1mZFZ2uCF3tsldpVGzt9ceu4NU3KICEk8`;
+    const I_AM_CHILL_SESSION_VINYL_IMG_ID = `1tzMaJsjehPBQbXjkSg8wNlPQ-lFlhqmJ`;
+    // const I_AM_CHILL_SESSION_VINYL_IMG_ID = `1mZFZ2uCF3tsldpVGzt9ceu4NU3KICEk8`;
     const I_AM_CHILL_SESSION_VINYL_IMG = `https://drive.google.com/uc?id=${I_AM_CHILL_SESSION_VINYL_IMG_ID}`;
 
     LootArr.push(new DNELootCard("vinyl-i-am-chill-session", "1AM CHILL SESSION", I_AM_CHILL_SESSION_VINYL_LONGLINE, I_AM_CHILL_SESSION_VINYL_IMG, 4, 1600, "Платівка, 160m of Chill Ambient", I_AM_CHILL_SESSION_VINYL_SHORTLINE, "", true, true, "sound", "https://youtu.be/TlWYgGyNnJo"));

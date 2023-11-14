@@ -777,6 +777,10 @@
     margin-bottom: -22px;
 }
 
+#dne-card-demo-mac-lofi .card__header-left {
+    max-width: 90%;
+}
+
 #dne-card-demo-mac-lofi .card__description {
     /*width: 95%;*/
     height: 160px;
@@ -1165,21 +1169,21 @@ img {
     transform: scale(.9);
 }
 
-#dne-card-vinyl-i-am-chill-session .card {
-    color: white;
-    background-color: #1f1f36;
-}
+/*#dne-card-vinyl-i-am-chill-session .card {*/
+    /*color: white;*/
+    /*background-color: #1f1f36;*/
+/*}*/
 
-#dne-card-vinyl-i-am-chill-session .card__header {
-    position: absolute;
-    top: 50px;
-    z-index: 2;
-}
+/*#dne-card-vinyl-i-am-chill-session .card__header {*/
+    /*position: absolute;*/
+    /*top: 50px;*/
+    /*z-index: 2;*/
+/*}*/
 
-#dne-card-vinyl-i-am-chill-session .card__description {
-    position: absolute;
-    bottom: 35px;
-}
+/*#dne-card-vinyl-i-am-chill-session .card__description {*/
+/*    position: absolute;*/
+/*    bottom: 35px;*/
+/*}*/
 
 #dne-card-iup .card__preview-img {
     transform: scale(.9);
