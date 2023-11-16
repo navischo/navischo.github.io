@@ -475,6 +475,7 @@ a {
     top: 0;
     left: 0;
     right: 0;
+    z-index: 3;
 
     display: flex;
     align-items: center;
@@ -484,6 +485,10 @@ a {
 
     background-color: var(--colors-bg--500);
     background-image: radial-gradient( ellipse at 33% 10%, #461616 0%, transparent 75% );
+}
+
+.app-header.--lollyball nav {
+    min-height: 23px;
 }
 
 .app-header::after {

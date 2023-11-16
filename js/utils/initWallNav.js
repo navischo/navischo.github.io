@@ -15,6 +15,10 @@ const WALLS = [
         link: "wall-812.html",
         title: "SCREENSHOTS COMPETITION"
     },
+    {
+        link: "wall-A17.html",
+        title: "?????7777???77??77???"
+    },
 ];
 
 const getNavElement = (wallsArr) => {

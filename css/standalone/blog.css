@@ -1976,7 +1976,7 @@ body, h1, h2, h3, h4, h5, h6, p {
 }
 
 .p-news .l-news__fx {
-    background-image: url(/build/images/fx-1920-be05251c.png);
+    /*background-image: url(/build/images/fx-1920-be05251c.png);*/
     background-position: 100% 0;
     background-repeat: no-repeat;
     background-size: cover;
@@ -2591,7 +2591,7 @@ html:lang(ar) .l-footer__cookie-declaration span:after, html:lang(ar) .l-footer_
 }
 
 .l-single-news__body-line:after {
-    background-image: url(/build/images/line-shape-97544664.svg);
+    /*background-image: url(/build/images/line-shape-97544664.svg);*/
     background-position: bottom;
     background-repeat: no-repeat;
     content: "";

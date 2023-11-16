@@ -33,7 +33,7 @@
 @import "blocks/hex-btn.css";
 @import "blocks/sky-nav.css";
 @import "blocks/chess.css";
-@import "blocks/wall.css";
+@import "standalone/wall.css";
 @import "blocks/hypno.css";
 @import "blocks/custom-scrollbar.css";
 @import "blocks/week.css";

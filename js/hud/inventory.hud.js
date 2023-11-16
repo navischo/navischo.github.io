@@ -45,7 +45,7 @@ const inventoryMarkup = `
 </div>
 
 `;
-document.querySelector(".swiper").insertAdjacentHTML("afterend", inventoryMarkup);
+document.querySelector(".swiper")?.insertAdjacentHTML("afterend", inventoryMarkup);
 
 
 const carInventoryMarkup = `

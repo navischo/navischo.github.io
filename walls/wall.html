@@ -21,7 +21,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
-    <link rel="manifest" href="img/favicon/manifest.json">
+<!--    <link rel="manifest" href="img/favicon/manifest.json">-->
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
@@ -42,7 +42,7 @@
     </svg>
     <span class="l-news__fx"></span>
     <article id="the-news" class="l-single-news" role="article" itemscope="" itemtype="http://schema.org/Article">
-        <div class="l-news__wrapper">
+        <div class="scroll-wall-wrap l-news__wrapper">
             <header class="l-single-news__header">
                 <div class="l-single-news__image-layer"></div>
                 <div class="l-single-news__image l-news__image-path">
@@ -67,18 +67,7 @@
                                 <time class="l-single-news__date" datetime="2022-09-07" pubdate=""
                                       itemprop="datePublished"></time>
                                 <div class="l-single-news__socials">
-                                    <a
-                                        href="https://www.facebook.com/sharer/sharer.php?u=https://www.cyberpunk.net/en/news/45469/watch-cyberpunk-edgerunners-with-us"
-                                        target="_blank"
-                                        class="l-single-news__social l-single-news__social--facebook"></a>
-                                    <a
-                                        href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.cyberpunk.net%2Fen%2Fnews%2F45469%2Fwatch-cyberpunk-edgerunners-with-us"
-                                        target="_blank"
-                                        class="l-single-news__social l-single-news__social--twitter"></a>
-                                    <a
-                                        href="https://reddit.com/submit?url=https://www.cyberpunk.net/en/news/45469/watch-cyberpunk-edgerunners-with-us"
-                                        target="_blank"
-                                        class="l-single-news__social l-single-news__social--discord"></a>
+
                                 </div>
                             </div>
                         </div>
@@ -122,13 +111,18 @@
                 </div>
             </main>
         </div>
+        <div class="js-wall wall scroll-wall"></div>
     </article>
     <div class="js-wall-nav l-news__latest-newses">
     </div>
+    <link rel="stylesheet" href="../css/standalone/wall.css">
     <script src="../js/utils/initWallNav.js" type="module"></script>
+    <script src="../js/utils/makeWallSprayable.js" type="module"></script>
     <script type="module">
         import { initWallNav } from "../js/utils/initWallNav.js";
+        import { makeWallSprayable } from "../js/utils/makeWallSprayable.js";
         initWallNav();
+        makeWallSprayable();
     </script>
 </div>
 </body>

@@ -40,9 +40,8 @@
             </clipPath>
         </defs>
     </svg>
-    <span class="l-news__fx"></span>
     <article id="the-news" class="l-single-news" role="article" itemscope="" itemtype="http://schema.org/Article">
-        <div class="l-news__wrapper">
+        <div class="scroll-wall-wrap l-news__wrapper">
             <header class="l-single-news__header">
                 <div class="l-single-news__image-layer"></div>
                 <div class="l-single-news__image l-news__image-path">
@@ -129,13 +128,18 @@
                 </div>
             </main>
         </div>
+        <div class="js-wall wall scroll-wall"></div>
     </article>
     <div class="js-wall-nav l-news__latest-newses">
     </div>
+    <link rel="stylesheet" href="../css/standalone/wall.css">
     <script src="../js/utils/initWallNav.js" type="module"></script>
+    <script src="../js/utils/makeWallSprayable.js" type="module"></script>
     <script type="module">
         import { initWallNav } from "../js/utils/initWallNav.js";
+        import { makeWallSprayable } from "../js/utils/makeWallSprayable.js";
         initWallNav();
+        makeWallSprayable();
     </script>
 </div>
 </body>

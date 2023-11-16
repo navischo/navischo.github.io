@@ -26,6 +26,16 @@
     transform: translateY(280%) translateZ(200px) scale(1.3);
 }
 
+.scroll-wall-wrap {
+    position: relative;
+    z-index: 2;
+}
+
+.scroll-wall {
+    z-index: 1;
+    background: none;
+}
+
 .spray {
     position: absolute;
 
