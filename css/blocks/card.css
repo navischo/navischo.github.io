@@ -10,6 +10,15 @@
     padding-top: 10px;
 }
 
+#cards-reward {
+    opacity: 0;
+    transition: .5s ease-in-out;
+}
+
+#cards-reward.--visible {
+    opacity: 1;
+}
+
 .card {
     position: relative;
     overflow: hidden;
@@ -65,7 +74,14 @@
 
     cursor: pointer;
 
-    animation: bounce-left 2.8s both infinite;
+    animation:
+            bounce-left 2.8s both infinite,
+            glowing-exit 2.8s ease-out infinite alternate;
+}
+
+.queue-wrap {
+    max-width: 38%;
+    overflow: hidden;
 }
 
 .card.--smith {
@@ -399,5 +415,57 @@
         transform: translateX(-48px);
         animation-timing-function: ease-in;
         opacity: 1;
+    }
+}
+
+@keyframes glowing-exit {
+    0% {
+        color: var(--color);
+        /*text-shadow: 0 0 1px var(--color);*/
+        opacity: 1;
+    }
+    13% {
+        color: black;
+        text-shadow: 0 8px 1px var(--color);
+        opacity: 0.9;
+    }
+    20% {
+        color: var(--color);
+        /*text-shadow: 0 0 1px var(--color);*/
+        opacity: 1;
+    }
+    27% {
+        color: black;
+        /*text-shadow: 0 8px 1px var(--color);*/
+        opacity: 0.9;
+    }
+    34% {
+        color: var(--color);
+        /*text-shadow: 0 5px 1px var(--color);*/
+        opacity: 1;
+    }
+    40% {
+        color: black;
+        /*text-shadow: 0 8px 1px var(--color);*/
+        opacity: 0.9;
+    }
+    48% {
+        color: var(--color);
+        /*text-shadow: 0 3px 1px var(--color);*/
+        opacity: 1;
+    }
+    55% {
+        color: black;
+        /*text-shadow: 0 9px 1px var(--color);*/
+        opacity: 0.9;
+    }
+    62% {
+        color: var(--color);
+        /*text-shadow: 0 5px 0 var(--color);*/
+        opacity: 1;
+    }
+    100% {
+        color: var(--color);
+        /*text-shadow: 0 8px 0 var(--color);*/
     }
 }

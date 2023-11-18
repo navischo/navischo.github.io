@@ -6,10 +6,15 @@
     left: 0;
     z-index: 40;
     background: rgba(0, 0, 0, .6);
+    opacity: 0;
 
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.cards-reward.--visible {
+    opacity: 1;
 }
 
 .cards-reward > * {
@@ -22,6 +27,14 @@
 
 .--slide-out-bottom {
     animation: slide-out-bottom 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+.--slide-out-top {
+    animation: slide-out-top 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+.--slit-in-vertical {
+    animation: slit-in-vertical 0.45s ease-out both;
 }
 
 @keyframes flip-vertical-left {
@@ -43,3 +56,28 @@
         opacity: 0;
     }
 }
+
+@keyframes slide-out-top {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-1000px);
+        opacity: 0;
+    }
+}
+@keyframes slit-in-vertical {
+    0% {
+        transform: translateZ(-800px) rotateY(90deg);
+        opacity: 0;
+    }
+    54% {
+        transform: translateZ(-160px) rotateY(87deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateZ(0) rotateY(0);
+    }
+}
+

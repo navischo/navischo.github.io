@@ -1,4 +1,4 @@
-import { goToCards } from "./goToCards.js";
+import { goToCards, goToPlay } from "./goToCards.js";
 import { win77 } from "../dne-cli.js";
 // const NUMBERS = {
 //     IN_MENU: [],
@@ -27,12 +27,17 @@ const KEYS = [
     {
         sign: `C`,
         descr: `Cards catalog`
+    },
+    {
+        sign: `P`,
+        descr: `Play screen`
     }
 ];
 
 const KEYS_SIGNS = {
     n: ["n", "N", "т", "Т"],
     c: ["c", "C", "с", "С"],
+    p: ["p", "P", "з", "З"],
     h: ["h", "H", "р", "Р"],
     shift: ["Shift"],
     escape: ["Escape"]
@@ -44,6 +49,9 @@ const KEYS_CALLBACKS = {
     },
     c: () => {
         goToCards();
+    },
+    p: () => {
+        goToPlay();
     },
     h: () => {
         document.querySelector(".hud-bottom").classList.toggle("hud-bottom--open");

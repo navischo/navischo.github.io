@@ -179,7 +179,9 @@
     position: absolute;
     top: 50%;
     right: 20px;
-    transform: translateY(-50%);
+    /*transform: translateY(-50%);*/
+    transform: translateY(-44%) translateX(-50px) rotate(2deg) skewY(8deg);
+
 }
 
 .js-rick-portal img {
