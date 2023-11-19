@@ -58,4 +58,9 @@ const PIPELINES = Object.freeze({
     bunny: [PAGE_NAMES.play, PAGE_NAMES.map, PAGE_NAMES.setting, PAGE_NAMES.event, PAGE_NAMES.admin, PAGE_NAMES.loot],
 });
 
-export { PAGE_NAMES, PIPELINES };
+const PLATFORMS = {
+    screen: "screen",
+    tabletop: "tabletop"
+};
+
+export { PAGE_NAMES, PIPELINES, PLATFORMS };

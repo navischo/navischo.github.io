@@ -12,6 +12,7 @@ import { openPopup } from "../popup/dom.popup.jquery.js";
 import { initNextBtn } from "./router.module.js";
 import { lightWalkingPlayer } from "../utils/finishRoundForPlayer.js";
 import { switchPlayer } from "./switchPlayer.js";
+import { PLATFORMS } from "./const.router.js";
 
 class DNEPlayer {
     constructor(id, avatar, description) { // дія чи результат?
@@ -141,6 +142,14 @@ const updPlayer = (id) => {
 
 const getMatchMakingOptionsMarkup = () => `
     <fieldset class="field --dialog">
+        <label class="glow text" for="platform">Platform</label>
+        <select id="platform">
+            <option value="${PLATFORMS.screen}" selected>Single screen</option>
+            <option value="${PLATFORMS.tabletop}">Single screen + Tabletop</option>
+        </select>
+    </fieldset>
+    
+    <fieldset class="field --dialog">
         <label class="glow text" for="win-condition">Win conditions</label>
         <select id="win-condition">
             <option value="highest-bankroll" selected>Highest bankroll</option>
@@ -245,15 +254,21 @@ const initMatchMaking = () => {
         };
 
         const setOptions = () => {
+            const platformSelect = document.querySelector("#platform");
             const roundLimitInput = document.querySelector("#round-limit");
             const maxTimeInput = document.querySelector("#max-time-per-round");
             const startBankrollInput = document.querySelector("#start-bankroll");
             const startSoulsInput = document.querySelector("#start-souls");
             const options = {
+                platform: PLATFORMS.screen,
                 roundLimit: 7,
                 maxTime: null,
                 startBankroll: 16000,
                 startSouls: 0,
+            }
+            console.log("platformSelect", platformSelect.value);
+            if (platformSelect.value !== PLATFORMS.screen) {
+                options.platform = platformSelect.value;
             }
             if (+roundLimitInput?.value >= 2) {
                 options.roundLimit = +roundLimitInput.value;
