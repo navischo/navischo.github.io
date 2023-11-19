@@ -13,6 +13,7 @@ import { initNextBtn } from "./router.module.js";
 import { lightWalkingPlayer } from "../utils/finishRoundForPlayer.js";
 import { switchPlayer } from "./switchPlayer.js";
 import { PLATFORMS } from "./const.router.js";
+import { initBonusInput } from "./initBonusInput.js";
 
 class DNEPlayer {
     constructor(id, avatar, description) { // дія чи результат?
@@ -282,6 +283,15 @@ const initMatchMaking = () => {
             if (+startSoulsInput?.value >= 0 && startSoulsInput?.value !== "") {
                 options.startSouls = +startSoulsInput.value;
             }
+
+
+            if (options.platform === PLATFORMS.tabletop) {
+                initBonusInput();
+                if (options.maxTime === null) {
+                    options.maxTime = 45;
+                }
+            }
+
             win77.game.options = options;
             win77.game.player.balance.bankroll = win77.game.options.startBankroll;
             win77.game.player.balance.skillPoints = win77.game.options.startSouls;

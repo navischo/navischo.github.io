@@ -195,6 +195,7 @@
 /*    opacity: 1;*/
 /*}*/
 
+.card-btn,
 .card__controls > button {
     font-size: 20px;
     padding: 0 10px;
@@ -214,6 +215,7 @@
     transition: .1s ease-in;
 }
 
+.card-btn::before,
 .card__controls > button::before {
     background-color: black;
     bottom: 10px;
@@ -229,15 +231,18 @@
     transition: .1s ease-in;
 }
 
+.card-btn:hover,
 .card__controls > button:hover {
     background-color: rgba(80, 233, 239, 0.7)!important;
     border-color: var(--colors-secondary--500);
 }
 
+.card-btn:hover::before,
 .card__controls > button:hover::before {
     background-color: var(--colors-secondary--500);
 }
 
+.card-btn:active,
 .card__controls > button:active {
     transform: translateY(1px);
 }

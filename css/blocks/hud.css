@@ -269,6 +269,22 @@ body.js-tab {
     /*overflow: hidden;*/
 }
 
+#bonus-counter {
+    position: fixed;
+    left: 50%;
+    bottom: 0;
+    z-index: 12;
+    transform: translateX(-50%);
+}
+
+#bonus-counter input {
+    width: 80px;
+    padding: 8px 14px;
+
+    font-size: 2em;
+    font-family: 'Press Start 2P', sans-serif;
+}
+
 .hand {
     position: fixed;
     bottom: -460px;

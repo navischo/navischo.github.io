@@ -19,6 +19,7 @@ import { sendInvite } from "../utils/sendInvite.js";
 import { makeWallSprayable } from "../utils/makeWallSprayable.js";
 import { getEnergyForExtraSound } from "../utils/getEnergyForExtraSound.js";
 import { rentCard } from "../utils/rentCard.js";
+import { PLATFORMS } from "../router/const.router.js";
 
 
 const initHandlers = (cardData, controls) => {
@@ -205,9 +206,12 @@ const drawLootCards = (cardData, parentSelector = "#dne-page") => {
     Array.from(cardData).forEach(drawIt);
 }
 
+
+
 const updHand = () => {
     const hand = document.querySelector("#bottom-hand");
     hand.innerHTML = ``;
+
     drawLootCards(win77.game.player.hand, "#bottom-hand");
 
     const cardsInYourHand = hand.querySelectorAll("div[id*='dne-card']");

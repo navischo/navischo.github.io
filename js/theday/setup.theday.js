@@ -3,6 +3,7 @@ import { closePopup } from "../popup/dom.popup.jquery.js";
 import { switchTime } from "../hud/time.hud.js";
 import { settings } from "./const.theday.js";
 import { drawTheday, initTheday } from "./init.theday.js";
+import { PLATFORMS } from "../router/const.router.js";
 
 
 const setupTheday = (budget = 5000) => {
@@ -22,6 +23,10 @@ const setupTheday = (budget = 5000) => {
 
     if (win77.game.options?.maxTime < lineupLength) {
         lineupLength = win77.game.options?.maxTime;
+    }
+
+    if (win77.game.options?.platform === PLATFORMS.tabletop) {
+        lineupLength = win77.game.options.maxTime;
     }
 
     win77.setLineup(lineupLength, lineup);
