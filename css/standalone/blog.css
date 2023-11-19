@@ -3287,12 +3287,13 @@ img[data-crystal-link] {
 }
 
 .l-news__latest-newses {
+    position: relative;
+
     background-color: #fcee0a;
     display: flex;
     flex-flow: row wrap;
-    margin: 42px 0 52px;
-    padding: 12px 24px 0;
-    position: relative;
+    margin-top: 100vh;
+    padding: 54px 24px 0;
     z-index: 2
 }
 
@@ -3303,29 +3304,42 @@ img[data-crystal-link] {
     }
 }
 
-.l-news__latest-newses .l-news__edge-top:before {
+
+.l-news__latest-newses::before {
+    content: "";
+
+    background: url("../../img/bg-razor-bottom-black.svg") no-repeat top;
+    background-repeat: repeat-x;
+    height: 39px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: -1px;
+}
+
+.l-news__latest-newses .l-news__edge-top::before {
     background-color: #fcee0a
 }
 
-.l-news__latest-newses .l-news__edge-top:after {
+.l-news__latest-newses .l-news__edge-top::after {
     border-left-color: #fcee0a
 }
 
-.l-news__latest-newses .l-news__edge-bottom:before {
+.l-news__latest-newses .l-news__edge-bottom::before {
     border-top-color: #fcee0a
 }
 
-.l-news__latest-newses .l-news__edge-bottom:after {
+.l-news__latest-newses .l-news__edge-bottom::after {
     background-color: #fcee0a
 }
 
 .l-news__latest-newses ul {
     display: flex;
     flex: 1 0 100%;
-    flex-flow: row wrap;
+    flex-flow: row;
     list-style: none;
     margin: 0;
-    max-width: calc(66.66667% - 10px);
+    /*max-width: calc(66.66667% - 10px);*/
     padding: 0;
     width: 100%
 }
@@ -3346,10 +3360,10 @@ img[data-crystal-link] {
 }
 
 .l-news__latest-newses ul li {
-    flex: 1 0 100%;
+    /*flex: 1 0 100%;*/
     margin-bottom: 20px;
-    max-width: calc(50% - 16px);
-    width: 100%
+    /*max-width: calc(50% - 16px);*/
+    /*width: 100%*/
 }
 
 @media screen and (max-width: 767px) {
@@ -3359,8 +3373,8 @@ img[data-crystal-link] {
     }
 }
 
-.l-news__latest-newses ul li:nth-child(odd) {
-    margin-right: 32px
+.l-news__latest-newses ul li {
+    margin-right: 84px
 }
 
 .l-news__latest-newses .c-news__content h2 {
@@ -3406,6 +3420,6 @@ img[data-crystal-link] {
 }
 
 .l-news__latest-newses {
-    max-width: 928px;
-    margin: 0 auto;
+    /*max-width: 928px;*/
+    /*margin: 0 auto;*/
 }

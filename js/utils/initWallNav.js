@@ -17,7 +17,7 @@ const WALLS = [
     },
     {
         link: "wall-A17.html",
-        title: "?????7777???77??77???"
+        title: "?????7777???77??7???"
     },
 ];
 
@@ -34,7 +34,7 @@ const getNavElement = (wallsArr) => {
                         <span class="l-news__separator"></span>
                     </div>
                 </a>`;
-        list.appendChild(listItem);
+        list.prepend(listItem);
     });
     return list;
 }
