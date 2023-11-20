@@ -86,6 +86,17 @@ const initHandlers = (cardData, controls) => {
                 dialog.init(dialog.DIALOG_ID.start);
             }
         }
+
+        if (isSetHasId(win77.game.table, cardData.id) && win77.selectCardToSave) {
+            console.log("You are choose card to save");
+            moveCardById(cardData.id, win77.game.table, win77.game.player.sound);
+            Array.from(win77.game.table).forEach((cardOnTable) => {
+                moveCardById(cardOnTable.id, win77.game.table, win77.game.catalog.sound);
+            });
+            initInventory();
+            document.querySelector("#table").innerHTML = "";
+            win77.selectCardToSave = false;
+        }
     };
 
     const buyButtonHandler = () => {

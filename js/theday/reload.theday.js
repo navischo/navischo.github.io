@@ -10,6 +10,7 @@ import { isSetHasId } from "../utils/isSetHasId.js";
 import { matchGenreBonus } from "../utils/matchGenreBonus.js";
 import { giveIncomeTo } from "../utils/giveIncomeTo.js";
 import { updExecutive } from "../hud/table.hud.js";
+import { selectCardToSave } from "../utils/selectCardToSave.js";
 
 const reloadTheday = () => {
     console.log("win77.game.event.result", win77.game.event.result);
@@ -89,10 +90,11 @@ const reloadTheday = () => {
     });
 
 
-    console.log("Cards from table", win77.game.table);
-    win77.game.table.forEach((card) => {
-        moveCardById(card.id, win77.game.table, win77.game.player.sound);
-    });
+    win77.selectCardToSave = true;
+    // selectCardToSave();
+    // win77.game.table.forEach((card) => {
+        // moveCardById(card.id, win77.game.table, win77.game.player.sound);
+    // });
 
     win77.updBalanceHUD();
 

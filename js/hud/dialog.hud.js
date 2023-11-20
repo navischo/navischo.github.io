@@ -104,8 +104,6 @@ Ready to start event?
                 text: "Start",
                 action: (e) => {
                     console.log("Start");
-                    // todo применить настройки матча
-                    win77.mm.setOptions();
                     win77.mm.start();
                     closePopup();
                     // save new options

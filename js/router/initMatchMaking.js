@@ -218,11 +218,12 @@ const startMatch = () => {
     matchmakingWindow.classList.remove("--visible");
     matchmakingWindow.classList.add("--running");
 
+    // todo применить настройки матча
+    win77.mm.setOptions();
     toggleSearch();
     // setTiming(win77.router.pipeline[0]);
     initNextBtn();
     win77.lobby.forEach((player) => {
-        console.log("Hello!");
         win77.giveCardsTo(player.id, 5);
     });
 }
@@ -278,24 +279,27 @@ const initMatchMaking = () => {
                 startSouls: 0,
                 cardsAfterTurn: 2
             }
-            console.log("platformSelect", platformSelect.value);
-            if (platformSelect.value !== PLATFORMS.screen) {
-                options.platform = platformSelect.value;
-            }
-            if (+roundLimitInput?.value >= 2) {
-                options.roundLimit = +roundLimitInput.value;
-            }
-            if (+maxTimeInput?.value > 5) {
-                options.maxTime = +maxTimeInput.value;
-            }
-            if (+startBankrollInput?.value > 1000) {
-                options.startBankroll = +startBankrollInput.value;
-            }
-            if (+startSoulsInput?.value >= 0 && startSoulsInput?.value !== "") {
-                options.startSouls = +startSoulsInput.value;
-            }
-            if (2 <= +cardsAfterTurnInput?.value <= 5) {
-                options.cardsAfterTurn = +cardsAfterTurnInput.value;
+
+            if (platformSelect && roundLimitInput && maxTimeInput && startBankrollInput && startSoulsInput && cardsAfterTurnInput) {
+                console.log("platformSelect", platformSelect.value);
+                if (platformSelect.value !== PLATFORMS.screen) {
+                    options.platform = platformSelect.value;
+                }
+                if (+roundLimitInput?.value >= 2) {
+                    options.roundLimit = +roundLimitInput.value;
+                }
+                if (+maxTimeInput?.value > 5) {
+                    options.maxTime = +maxTimeInput.value;
+                }
+                if (+startBankrollInput?.value > 1000) {
+                    options.startBankroll = +startBankrollInput.value;
+                }
+                if (+startSoulsInput?.value >= 0 && startSoulsInput?.value !== "") {
+                    options.startSouls = +startSoulsInput.value;
+                }
+                if (2 <= +cardsAfterTurnInput?.value <= 5) {
+                    options.cardsAfterTurn = +cardsAfterTurnInput.value;
+                }
             }
 
 

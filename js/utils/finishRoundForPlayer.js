@@ -1,5 +1,6 @@
 import { win77 } from "../dne-cli.js";
 import { updHand } from "../cards/dom.cards.js";
+import { selectRandomCardToSave } from "./selectCardToSave.js";
 
 const lightWalkingPlayer = () => {
     win77.mm.open();
@@ -16,6 +17,7 @@ const lightWalkingPlayer = () => {
 }
 
 const finishRoundForPlayer = () => {
+    selectRandomCardToSave();
     if (win77.router.matchmaking && win77.lobby.size > 0) {
         let nextPlayerIndex;
         win77.router.playersQueue.forEach((playerId, currentPlayerIndex) => {
