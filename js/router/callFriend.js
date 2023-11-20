@@ -160,7 +160,7 @@ const getInvaderItem = (name) => {
             parent.appendChild(tableNode);
 
             win77.switchPlayer(win77.game.invasion.invader);
-            win77.fillPlayersHand();
+            // win77.fillPlayersHand(); // no new cards for invader
             updHand();
 
             closePopup();

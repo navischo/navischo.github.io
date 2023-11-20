@@ -161,7 +161,7 @@ Ready to start event?
                     const tableNode = document.querySelector("#table");
                     tableNode.dataset.owner = `${win77.game.alliance.host}+${win77.game.alliance.savior}`;
                     win77.switchPlayer(win77.game.alliance.savior);
-                    win77.fillPlayersHand();
+                    // win77.fillPlayersHand(); // no new cards for support
                     toggleNokiaBtn();
                     updHand();
                     addOptionalNextBtn("switch", swap);

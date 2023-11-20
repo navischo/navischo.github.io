@@ -33,7 +33,7 @@ const finishRoundForPlayer = () => {
         if (win77.game.player.id !== nextPlayerId) {
             win77.switchPlayer(nextPlayerId);
         }
-        win77.fillPlayersHand();
+        // win77.fillPlayersHand();
         updHand();
         lightWalkingPlayer();
 

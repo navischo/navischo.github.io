@@ -183,6 +183,11 @@ const getMatchMakingOptionsMarkup = () => `
         <label class="glow text" for="start-souls">Starting souls</label>
         <input id="start-souls" type="number" placeholder="0">
     </fieldset>
+    
+    <fieldset class="field --dialog">
+        <label class="glow text" for="cards-after-turn">Give cards after turn</label>
+        <input id="cards-after-turn" type="number" placeholder="2" min="0" max="5">
+    </fieldset>
 `;
 
 const getEventParamsMarkup = () => `
@@ -216,6 +221,10 @@ const startMatch = () => {
     toggleSearch();
     // setTiming(win77.router.pipeline[0]);
     initNextBtn();
+    win77.lobby.forEach((player) => {
+        console.log("Hello!");
+        win77.giveCardsTo(player.id, 5);
+    });
 }
 
 const initMatchMaking = () => {
@@ -260,12 +269,14 @@ const initMatchMaking = () => {
             const maxTimeInput = document.querySelector("#max-time-per-round");
             const startBankrollInput = document.querySelector("#start-bankroll");
             const startSoulsInput = document.querySelector("#start-souls");
+            const cardsAfterTurnInput = document.querySelector("#cards-after-turn");
             const options = {
                 platform: PLATFORMS.screen,
                 roundLimit: 7,
                 maxTime: null,
                 startBankroll: 16000,
                 startSouls: 0,
+                cardsAfterTurn: 2
             }
             console.log("platformSelect", platformSelect.value);
             if (platformSelect.value !== PLATFORMS.screen) {
@@ -282,6 +293,9 @@ const initMatchMaking = () => {
             }
             if (+startSoulsInput?.value >= 0 && startSoulsInput?.value !== "") {
                 options.startSouls = +startSoulsInput.value;
+            }
+            if (2 <= +cardsAfterTurnInput?.value <= 5) {
+                options.cardsAfterTurn = +cardsAfterTurnInput.value;
             }
 
 

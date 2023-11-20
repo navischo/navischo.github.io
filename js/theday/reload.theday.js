@@ -75,6 +75,7 @@ const reloadTheday = () => {
     initScore();
     updScore();
     // win77.pokeButton.dia.clearSmithsSet();
+    win77.game.event.lineupLength = 0;
     win77.game.event.settings.guests.set.clear();
     win77.game.event.result.income = 0;
     win77.game.event.result.cashOnEnter = 0;
@@ -97,7 +98,8 @@ const reloadTheday = () => {
 
     initInventory();
     updTable();
-    win77.putCardAtPlayersHand(5 - win77.game.player.hand.size);
+    // win77.putCardAtPlayersHand(5 - win77.game.player.hand.size);
+    win77.giveCardsTo(win77.game.player.id, win77.game.options.cardsAfterTurn); // only 2-5 cards after turn
     updHand();
 
     win77.finishDay(win77.game.event.result.income);

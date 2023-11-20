@@ -130,6 +130,20 @@ class DNECli {
         }
     }
 
+    giveCardsTo(id, count) {
+        const playerObj = this.findPlayerObj(id);
+        for (let i = 0; i < count; i++) {
+            if (playerObj.hand.size < 5) {
+                const soundSet = this.game.catalog.sound;
+                const randomId = Array.from(soundSet).map((soundCard) => soundCard.id)[getRandomInt(soundSet.size)];
+                moveCardById(randomId, soundSet, playerObj.hand);
+            } else {
+                return;
+            }
+        }
+        console.log("giveCardsTo", id, count, playerObj.hand);
+    }
+
     fillPlayersHand() {
         if (this.game.player.hand.size < 5) {
             this.putCardAtPlayersHand(5 - this.game.player.hand.size);
