@@ -12,14 +12,17 @@
 }
 
 .dialog-vertical.--styled {
+    padding: 10px;
+    padding-bottom: 0;
+    padding-top: 40px;
+    border-bottom: 0;
+    border: 2px solid var(--colors-tertiary--500);
+
     background-color: var(--colors-bg--500);
     background-image: radial-gradient( ellipse at 33% 10%, #461616 0%, transparent 75% );
     background-repeat: no-repeat;
     color: var(--colors-on_bg--500);
-    padding: 10px;
-    border: 2px solid var(--colors-tertiary--500);
-    padding-bottom: 0;
-    border-bottom: 0;
+
     transition: .2s ease-in-out;
     visibility: visible;
 }
@@ -32,4 +35,28 @@
 .dialog-vertical .dialog-vertical__feed {
     width: 400px;
     height: 1200px!important;
+}
+
+.dialog-vertical__header {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+
+    display: flex;
+    justify-content: flex-end;
+    height: 24px;
+
+    background: var(--colors-tertiary--500);
+}
+
+.dialog-vertical__close {
+    margin: 2px;
+    /*box-shadow: 0.5px 0.5px 0 0.5px black, inset 1px 1px white, inset -1px -1px #85898d;*/
+}
+
+.dialog-vertical__close svg {
+    position: relative;
+    top: -7px;
+    left: -4px;
 }

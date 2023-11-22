@@ -32,6 +32,7 @@ import "./utils/matchGenreBonus.js";
 import "./utils/initHotline.js";
 import "./utils/initGameBoy.js";
 import "./utils/initTinder.js";
+import "./utils/initBtnZeroInbox.js";
 import "./hud/chat.hud.js";
 import "./structure/core.structure.js";
 import "./structure/admin/profile.page.js";
@@ -53,6 +54,7 @@ import {initMatchMaking} from "./router/initMatchMaking.js";
 import {initRoller} from "./utils/initTinder.js";
 import {makeWallSprayable} from "./utils/makeWallSprayable.js";
 import {initTerminal} from "./utils/initTerminal.js";
+import {initBtnZeroInbox} from "./utils/initBtnZeroInbox.js";
 import {enterCity} from "./utils/enterCity.js";
 import { updNokiaLobby } from "./router/callFriend.js";
 
@@ -136,6 +138,7 @@ const initApp = () => {
     initGameBoy();
     initMatchMaking();
     initRoller();
+    initBtnZeroInbox();
     makeWallSprayable();
     initTerminal();
     enterCity();

@@ -22,18 +22,16 @@ const initHotline = (number) => {
 
     hotline.displayNewMessages(dialogObj);
 
-    const dialogVerticalNode = document.querySelector(".dialog-vertical");
-    let displayMessageNodeArr = document.querySelectorAll(".message");
-    displayMessageNodeArr.forEach((messageNode) => {
-        messageNode.addEventListener("click", () => {
-            messageNode.remove();
-            displayMessageNodeArr = document.querySelectorAll(".message");
-            if (displayMessageNodeArr.length === 0) {
-                dialogVerticalNode.classList.add("--zero-inbox");
-            }
-        });
-    });
-
+    // let displayMessageNodeArr = document.querySelectorAll(".message");
+    // displayMessageNodeArr.forEach((messageNode) => {
+        // messageNode.addEventListener("click", () => {
+        //     // messageNode.remove();
+        //     displayMessageNodeArr = document.querySelectorAll(".message");
+        //     if (displayMessageNodeArr.length === 0) {
+        //         dialogVerticalNode.classList.add("--zero-inbox");
+        //     }
+        // });
+    // });
     return hotline;
 }
 
