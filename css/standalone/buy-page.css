@@ -84,11 +84,25 @@
 }
 
 .buy__title {
+    padding: 1.2em .2em .8em;
     margin-bottom: 0;
 
-    font-size: 7em;
+    font-size: 3em;
     letter-spacing: -10px;
     text-align: center;
+}
+
+@media (min-width: 768px) {
+    .buy__title {
+        font-size: 7em;
+        padding: 1.5em 1em 1.2em;
+    }
+}
+
+@media (min-width: 1024px) {
+    .buy__title {
+        padding: 0;
+    }
 }
 
 .buy__subtitle {
@@ -110,12 +124,16 @@
     list-style: none;
 
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .buy__bundle + .buy__bundle {
-    margin-left: 20px;
+    margin-top: 40px;
 }
 
 .buy__bundle {
@@ -125,8 +143,27 @@
     /*background: white;*/
 
     max-width: 400px;
+    margin-top: 40px;
 
     font-family: "Press Start 2p", "JetBrains Mono", sans-serif;
+}
+
+
+@media (min-width: 768px) {
+    .buy__bundle + .buy__bundle {
+        margin-top: 80px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .buy__bundle-list {
+        flex-direction: row;
+    }
+
+    .buy__bundle + .buy__bundle {
+        margin-top: 0;
+        margin-left: 20px;
+    }
 }
 
 .buy__bundle-price {
@@ -141,8 +178,46 @@
     text-shadow: 6px 5px 0 yellow;
 }
 
+.buy__bundle:last-child {
+    margin-top: 100px;
+}
+
 .buy__bundle-price.--regular {
-    right: -45px;
+    right: -5px;
+    top: -80px;
+}
+
+.img-autumn-sale {
+    display: none;
+}
+
+@media (min-width: 1024px) {
+    .buy__bundle:last-child {
+        margin-top: 80px;
+    }
+
+    .buy__bundle-price.--regular {
+        right: -45px;
+    }
+
+    .img-autumn-sale {
+        display: block;
+    }
+}
+
+@media (min-width: 1280px) {
+    .buy__bundle:first-child {
+        margin-top: 0;
+    }
+
+    .buy__bundle-price.--regular {
+        right: -105px;
+        top: -25px;
+    }
+
+    .buy__bundle:last-child {
+        margin-top: 0;
+    }
 }
 
 .buy__bundle-textfield {
@@ -162,7 +237,8 @@
 }
 
 .buy__bundle-preview {
-    width: 400px;
+    max-width: 400px;
+    width: 100%;
 }
 
 .buy__bundle-title {
@@ -494,6 +570,6 @@
 
 .buy-content {
     height: 100vh;
-    padding-top: 100px;
+    /*padding-top: 100px;*/
     background: black;
 }

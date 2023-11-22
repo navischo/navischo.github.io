@@ -1669,6 +1669,10 @@ body #CybotCookiebotDialogBodyLevelButtonLevelOptinAllowallSelectionWrapper {
     position: relative
 }
 
+.l-news__header-title:hover a {
+
+}
+
 @media screen and (max-width: 600px) {
     .l-news__header-title {
         margin: 0 auto;
@@ -1691,7 +1695,7 @@ body #CybotCookiebotDialogBodyLevelButtonLevelOptinAllowallSelectionWrapper {
 
 .l-news__header-title:before {
     border-right: 80px solid #202020;
-    border-top: 80px solid #000;
+    border-top: 80px solid transparent;
     content: "";
     display: flex;
     height: 100%
