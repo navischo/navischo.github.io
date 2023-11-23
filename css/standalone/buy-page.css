@@ -106,10 +106,18 @@
 }
 
 .buy__subtitle {
+    padding-left: 15px;
+    padding-right: 15px;
     margin-bottom: 3em;
 
     text-align: center;
     line-height: 30px;
+}
+
+@media (min-width: 768px) {
+    .buy__subtitle {
+        padding: 0;
+    }
 }
 
 .buy__type-btns {
