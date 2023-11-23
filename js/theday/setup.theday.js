@@ -21,7 +21,7 @@ const setupTheday = (budget = 5000) => {
         lineup.push({line: cardTitleArr[i], time: time});
     });
 
-    if (win77.game.options.maxTime) {
+    if (win77.game.options?.maxTime) {
         lineupLength = win77.game.options.maxTime < lineupLength ? win77.game.options.maxTime : lineupLength;
     }
 
