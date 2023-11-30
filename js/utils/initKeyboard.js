@@ -31,6 +31,10 @@ const KEYS = [
     {
         sign: `P`,
         descr: `Play screen`
+    },
+    {
+        sign: `F12`,
+        descr: `Console`
     }
 ];
 
