@@ -18,20 +18,20 @@ const KEYS = [
         descr: `Head menu`
     },
     {
-        sign: `N`,
-        descr: `Hide HUD`
-    },
-    {
-        sign: `H`,
-        descr: `Cutscenes menu`
+        sign: `P`,
+        descr: `Play screen`
     },
     {
         sign: `C`,
         descr: `Cards catalog`
     },
     {
-        sign: `P`,
-        descr: `Play screen`
+        sign: `H`,
+        descr: `Cutscenes menu`
+    },
+    {
+        sign: `N`,
+        descr: `Hide HUD`
     },
     {
         sign: `F12`,
