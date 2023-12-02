@@ -33,6 +33,15 @@
     color: var(--colors-on_bg--500);
 }
 
+.card-catalog-wrap .card {
+    transition: .2s ease-in-out;
+}
+
+.card-catalog-wrap .card:hover {
+    transform: scale(1.1);
+    z-index: 2;
+}
+
 .js-cards-catalog {
     position: relative;
 
