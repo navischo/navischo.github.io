@@ -119,7 +119,8 @@ const SCREEN_NAMES = [
     `screen-nohud--v-plus-judy`,
     `screen-nohud--the-end`,
     `screen-nohud--patronus`,
-    `screen-nohud--rebeca-pvp`
+    `screen-nohud--rebeca-pvp`,
+    `screen-nohud--angle`
 ];
 
 const initScreen = (all = false, select = false) => {

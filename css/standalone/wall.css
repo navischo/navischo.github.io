@@ -58,8 +58,8 @@
 }
 
 .spray.--1 {
-    width: 391px;
-    height: 327px;
+    width: 300px;
+    height: 141px;
     background-image: url("../../img/sprays/spray-1.png");
 }
 
@@ -91,6 +91,61 @@
     width: 240px;
     height: 115px;
     background-image: url("../../img/sprays/spray-6.png");
+}
+
+.spray.--7 {
+    width: 670px;
+    height: 300px;
+    background-image: url("../../img/sprays/spray-7.png");
+}
+
+.spray.--8 {
+    width: 800px;
+    height: 351px;
+    background-image: url("../../img/sprays/spray-8.png");
+}
+
+.spray.--9 {
+    width: 420px;
+    height: 615px;
+    background-image: url("../../img/sprays/spray-9.png");
+}
+
+
+.spray.--10 {
+    width: 240px;
+    height: 222px;
+    background-image: url("../../img/sprays/spray-10.png");
+}
+
+.spray.--11 {
+    width: 880px;
+    height: 295px;
+    background-image: url("../../img/sprays/spray-11.png");
+}
+
+.spray.--12 {
+    width: 500px;
+    height: 627px;
+    background-image: url("../../img/sprays/spray-12.png");
+}
+
+.spray.--13 {
+    width: 400px;
+    height: 380px;
+    background-image: url("../../img/sprays/spray-13.png");
+}
+
+.spray.--14 {
+    width: 200px;
+    height: 128px;
+    background-image: url("../../img/sprays/spray-14.png");
+}
+
+.spray.--14 {
+    width: 810px;
+    height: 420px;
+    background-image: url("../../img/sprays/spray-15.png");
 }
 
 .spray.--drying {

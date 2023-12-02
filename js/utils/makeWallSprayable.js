@@ -20,7 +20,7 @@ const sprayWall = (event) => {
         // console.log("distanceFromTop", distanceFromTop);
         const newSpray = document.createElement("div");
         newSpray.classList.add("spray");
-        newSpray.classList.add(`--${getRandomInt(7)}`);
+        newSpray.classList.add(`--${getRandomInt(16)}`);
         newSpray.style.left = `${event.clientX}px`;
         newSpray.style.top = `${event.clientY - distanceFromTop}px`;
 
