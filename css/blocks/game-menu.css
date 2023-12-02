@@ -34,6 +34,8 @@
     width: 100%;
     height: 100%;
     padding-top: 350px;
+    padding-left: 30px;
+    padding-right: 30px;
     margin-left: 12vw;
 
     align-items: baseline;
@@ -47,7 +49,9 @@
     text-shadow: var(--ui-glow-text);
     text-transform: uppercase;
 
+    background: linear-gradient(90deg, #630e09 3%, #310503 30%, transparent);
 
+    transform: skewY(-1.8deg) scale(1.02);
 }
 
 .game-menu__list::before {
@@ -76,27 +80,103 @@
 
     display: block;
     width: 100%;
-    padding: 10px 45px;
+    padding: 10px 15px;
 
     letter-spacing: 0.035em;
-    font-family: "JetBrains Mono", monospace;
+    /*font-family: "JetBrains Mono", monospace;*/
+    font-family: var(--fonts-primary);
     text-shadow: var(--ui-glow-text--dimmed);
     text-transform: uppercase;
     font-size: x-large;
     font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .2s ease-in-out;
+    border: 2px solid transparent;
+    background-color: transparent;
+    border-radius: 2px;
+    clip-path: var(--ui-notch-path);
+    transform: translateY(0);
 }
 
+.game-menu__list-item + .game-menu__list-item {
+    margin-top: 2px;
+}
+
+.game-menu__list-item::before {
+    background-color: transparent;
+    bottom: 10px;
+    content: "";
+    display: block;
+    height: 3px;
+    position: absolute;
+    right: 2px;
+    top: auto;
+    transform: rotate(315deg) translateY(10px);
+    width: var(--ui-notch-hypotenuse);
+    z-index: 31;
+
+    transition: .2s ease-in-out;
+}
+
+.game-menu__list-item:hover,
+.js-open-sublist-mod.--visible,
+.js-open-sublist-community.--visible {
+    color: yellow;
+    background-color: rgba(0, 0, 0, .7);
+    border-color: yellow;
+}
+
+.game-menu__list-item:hover::before,
+.js-open-sublist-mod.--visible::before,
+.js-open-sublist-community.--visible::before {
+    background-color: yellow;
+}
+
+.js-item-sublist-mod,
+.js-item-sublist-community {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    transform: translateX(-300px);
+    font-size: 0;
+
+    transition: .2s ease-in-out;
+}
+
+.js-item-sublist-mod.--visible,
+.js-item-sublist-community.--visible {
+    visibility: visible;
+    opacity: 1;
+    position: static;
+    font-size: x-large;
+    transform: translateX(0);
+}
 
 .game-menu__version {
     position: absolute;
-    bottom: 10px;
+    bottom: 100px;
     right: 10px;
 
-    font-size: 9px;
+    font-size: 12px;
     color: rgb(232, 97, 90);
     font-family: "JetBrains Mono", monospace;
     text-shadow: var(--ui-glow-text);
     text-transform: uppercase;
+}
+
+.game-menu__version::before {
+    content: "";
+
+    position: absolute;
+    top: -10px;
+    /*left: 0;*/
+    right: 0;
+
+    display: block;
+    width: 395px;
+    border-bottom: 1px solid rgba(232, 97, 90, .6);
 }
 
 .game-menu .cybr-title {

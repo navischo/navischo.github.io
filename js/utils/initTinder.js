@@ -261,6 +261,7 @@ const initRoller = () => {
     }
 
     initHandlers();
+    // todo open roller
     const openRollerBtn = document.querySelector(".js-open-lollyball");
     openRollerBtn.addEventListener("click", () => {
         openRollerPage();

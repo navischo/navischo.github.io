@@ -1,4 +1,5 @@
 import { goToCards, goToPlay } from "./goToCards.js";
+import { closeGameMenu } from "../hud/btn.hud.js";
 import { win77 } from "../dne-cli.js";
 // const NUMBERS = {
 //     IN_MENU: [],
@@ -65,7 +66,11 @@ const KEYS_CALLBACKS = {
         controls.classList.toggle("catalog-controls--visible");
     },
     escape: () => {
-        document.querySelector(".game-menu").classList.toggle("--open");
+        const gameMenu = document.querySelector(".game-menu");
+        gameMenu.classList.toggle("--open");
+        if (!gameMenu.classList.contains("--open"))  {
+            closeGameMenu();
+        }
     }
 }
 
