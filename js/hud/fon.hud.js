@@ -1,4 +1,4 @@
-import {win77} from "../dne-cli.js";
+import { win77 } from "../dne-cli.js";
 import { chooseOption } from "./chat.hud.js";
 import { initHotline } from "../utils/initHotline.js";
 import { createDialogDataObj, initDialogCli } from "./dialogCli.hud.js";
@@ -15,6 +15,7 @@ const NOKIA_MENUS = [
                     e.preventDefault();
                     win77.lastHotline = initHotline(0);
                     console.log(`Hotline to navischo`);
+                    win77.getAchievement("connecting");
                 }
             }, {
                 href: "#",

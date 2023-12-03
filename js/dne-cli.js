@@ -1,6 +1,7 @@
 import { getRandomInt, moveCardById } from "./utils/getCardById.js";
 import { getCardElement } from "./cards/template.cards.js";
 import { appendNewTop } from "./theday/endgame.theday.js";
+import { getAchievement } from "./utils/initAchievements.js"
 
 class DNECli {
     constructor() {
@@ -181,6 +182,14 @@ class DNECli {
         const bar = document.createElement("div");
         bar.classList.add("squad-unit__bars-item");
         parent?.appendChild(bar);
+    }
+
+    getAchievement(id) {
+        getAchievement(id);
+    }
+
+    clearAchievements() {
+        localStorage.removeItem("achievements");
     }
 }
 
