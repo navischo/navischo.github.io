@@ -234,6 +234,7 @@ const startMatch = () => {
     win77.lobby.forEach((player) => {
         win77.giveCardsTo(player.id, 5);
     });
+    initInventory();
 }
 
 const initMatchMaking = () => {

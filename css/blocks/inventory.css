@@ -93,6 +93,11 @@
     padding-left: 40px;
 }
 
+#matchmaking-list .inventory-item {
+    display: block;
+    padding-left: 40px;
+}
+
 .project-detail {
     display: block;
 }

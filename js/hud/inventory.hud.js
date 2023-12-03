@@ -22,6 +22,11 @@ const inventoryMarkup = `
     &nbsp;&nbsp;<br>}</span>
 </div>
 <div class="player-obj inventory">
+<span class="js-matchmaking-wrap fw-d-none">
+    mm:&nbsp;{
+    <span id="matchmaking-list" class="inventory-items"></span>
+    }<br><br>
+    </span>
     <span class="js-player-wrap">
     player:<br>&nbsp;&nbsp;{<span class="js-class-wrap fw-d-none"><br>
     &nbsp;&nbsp;<span data-advice-id="class">class:</span><br>&nbsp;&nbsp;{&nbsp;
@@ -91,6 +96,19 @@ const appendCardToInventory = (cardData, cardType = CARD_TYPES.loot) => {
     return newListItem;
 }
 
+const appendPlayerToInventory = (playerId) => {
+    const matchmakingList = document.querySelector("#matchmaking-list");
+    const newListItem = document.createElement("a");
+    newListItem.classList.add("inventory-item");
+    newListItem.textContent = playerId;
+
+    newListItem.addEventListener("click", (e) => {
+        win77.switchPlayer(playerId);
+    });
+
+    matchmakingList.appendChild(newListItem);
+}
+
 const inventory = {
     append: appendCardToInventory,
     clear: () => {
@@ -99,6 +117,7 @@ const inventory = {
         cardNodesByType.npc.innerHTML = ``;
         cardNodesByType.sound.innerHTML = ``;
         cardNodesByType.dia.innerHTML = ``;
+        document.querySelector("#matchmaking-list").innerHTML = ``;
     }
 }
 
@@ -143,6 +162,18 @@ const initInventory = () => {
     player.cars.forEach((carCard) => {
         initCarInventory(carCard);
     });
+
+    const matchmakingWrap = document.querySelector(".js-matchmaking-wrap");
+    if (win77.router?.matchmaking) {
+        win77.router.playersQueue.forEach((playerId) => {
+            // const playerObj = win77.findPlayerObj(playerId);
+            // appendPlayerToInventory(playerObj.avatar[0], CARD_TYPES.avatar);
+            appendPlayerToInventory(playerId);
+        });
+        matchmakingWrap.classList.remove("fw-d-none");
+    } else {
+        matchmakingWrap.classList.add("fw-d-none");
+    }
 
     const playerWrap = document.querySelector(".js-player-wrap");
     if (!(win77.game.player.class.size > 0) && !(win77.game.player.npc.size > 0) && !(win77.game.player.dia.size > 0)) {
