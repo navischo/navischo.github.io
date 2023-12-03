@@ -24,10 +24,13 @@ const getAchievement = (id) => {
                 const achievementPopup = document.querySelector("#achievement-popup");
                 const achievementPopupImg = achievementPopup.querySelector(".js-achievement-img");
                 const achievementPopupText = achievementPopup.querySelector(".js-achievement-title");
+                const sound = new Audio("../../mp3/achievement.mp3");
 
                 achievementPopupText.textContent = achievementData.title;
                 achievementPopupImg.src = `../../img/achievements/${achievementData.id}.png`;
                 achievementPopup.classList.remove("--hidden");
+
+                sound.play();
 
                 const firstTimeout = setTimeout(() => {
                     achievementPopup.classList.add("--hidden");
