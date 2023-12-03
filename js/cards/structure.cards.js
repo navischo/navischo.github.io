@@ -93,7 +93,7 @@ const initGame = () => {
     game.catalog.loot.forEach(parseCost);
     game.catalog.sound.forEach(parseCost);
 
-    getCardById("i-case", game.catalog.loot).containerIn = new ContainerIn("case", "21х30х10");
+    // getCardById("i-case", game.catalog.loot).containerIn = new ContainerIn("case", "21х30х10");
     // game.catalog.loot.forEach(parseContainers);
 
     return game;
