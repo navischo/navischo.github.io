@@ -46,6 +46,7 @@ const NOKIA_MENUS = [
                                             chooseOption(OPTION_LINES[2], "--blue");
                                         }
                                     ]));
+                                win77.getAchievement("connecting");
                             },
                             () => {
                                 chooseOption(OPTION_LINES[1], "--blue");
