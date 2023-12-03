@@ -50,6 +50,7 @@ const initGame = () => {
     win77.locationsSet = new Set();
 
     DNECards.forEach((card) => {
+        card.isHide = false;
         switch (card.type) {
             case CARD_TYPES.npc:
                 game.catalog.npc.add(card);

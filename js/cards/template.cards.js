@@ -4,7 +4,7 @@ const getCardElement = (cardData) => {
     newCard.id = `dne-card-${cardData.id}`;
 
     newCard.innerHTML = `
-<article class="card"><!--${cardData.isHide ? "--hide": ""}-->
+<article class="card ${cardData.isHide ? "--hide": ""}"><!--${cardData.isHide ? "--hide": ""}-->
     <div class="js-card-controls card__controls">
         <button>+</button>
     </div>

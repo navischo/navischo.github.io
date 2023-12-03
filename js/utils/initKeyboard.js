@@ -18,11 +18,11 @@ const KEYS = [
         descr: `Head menu`
     },
     {
-        sign: `P`,
+        sign: `R`,
         descr: `Play screen`
     },
     {
-        sign: `C`,
+        sign: `B`,
         descr: `Cards catalog`
     },
     {
@@ -41,8 +41,8 @@ const KEYS = [
 
 const KEYS_SIGNS = {
     n: ["n", "N", "т", "Т"],
-    c: ["c", "C", "с", "С"],
-    p: ["p", "P", "з", "З"],
+    c: ["b", "B", "и", "И"],
+    p: ["r", "R", "к", "К"],
     h: ["h", "H", "р", "Р"],
     shift: ["Shift"],
     escape: ["Escape"]

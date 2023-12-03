@@ -188,6 +188,14 @@ const addCardControls = (newCard, cardData) => {
 }
 
 const drawCard = (cardContainer, getElementCallback, cardData) => {
+    // console.log("cardData", cardData);
+    //
+    // if (cardData.type === CARD_TYPES.sound) {
+    //     console.log("cardData", cardData, cardData.isHide, !cardData.costObj.sellAvailable);
+    //     if (win77.router.matchmaking === true && !cardData.costObj.sellAvailable) {
+    //         cardData.isHide = true;
+    //     }
+    // }
     const newCard = getElementCallback(cardData);
 
     addCardControls(newCard, cardData);
