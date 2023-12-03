@@ -32,7 +32,7 @@ const getSquadUnitElement = () => {
     const element = document.createElement("section");
     element.classList.add("squad-unit");
     element.innerHTML = `
-    <b class="squad-unit__lvl"><span>${win77.game.player.lvl}</span></b>
+    <b class="squad-unit__lvl ${win77.game.player.lvl > 9 ? "--double" : ""}"><span>${win77.game.player.lvl}</span></b>
     <div class="squad-unit__stats">
         <div class="js-player-social-points squad-unit__bars">
             ${getSocialPointsMarkup()}
@@ -52,13 +52,9 @@ const thedayMarkup = `
 </code>
 <code id="ascii-title" class="theday__dunge-title"></code>
 <div id="main-scene">
+    <div id="avatar"></div>
     <div class="swiper executive">
         <div id="executive" class="swiper-wrapper"></div>
-    </div>
-    <div class="setup">
-        <div class="setup__left"></div>
-        <div id="setup" class="setup__controller"></div>
-        <div class="setup__right"></div>
     </div>
 </div>
 <!--executive-->

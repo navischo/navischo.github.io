@@ -139,7 +139,7 @@
     opacity: 0;
 
     position: fixed;
-    right: calc(50% + 600px);
+    right: calc(50% + 100px);
     top: calc(50% - 230px);
 
     display: flex;

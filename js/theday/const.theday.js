@@ -475,18 +475,17 @@ const getScene = () => {
     const setup = {
         parent: sceneElement.querySelector(".setup")
     };
-    setup.controllerSelector = "#setup";
     setup.lineupSelector = "#lineup";
-    setup.left = setup.parent.querySelector(".setup__left");
-    setup.right = setup.parent.querySelector(".setup__right");
     const executiveSelector = "#executive";
+    const avatarSelector = "#avatar";
 
     return {
         setup,
+        avatarSelector: avatarSelector,
         executiveSelector: executiveSelector,
         data: {
-            executive: win77.game.player.npc,
-            controller: win77.game.player.loot,
+            avatar: win77.game.player.avatar,
+            executive: win77.game.player.loot,
             lineup: win77.game.table
         }
     }
@@ -495,9 +494,10 @@ const getScene = () => {
 const useSmithsCards = () => {
     const scene = getScene();
     // console.log(`${win77.game.player.id} getSceneData()`, scene);
+    drawLootCards(scene.data.avatar, scene.avatarSelector);
     drawLootCards(scene.data.executive, scene.executiveSelector);
-    const teamCards = document.querySelectorAll(`${scene.executiveSelector} .card`);
-    teamCards.forEach((teamCard) => {
+    const executiveCards = document.querySelectorAll(`${scene.executiveSelector} .card`);
+    executiveCards.forEach((teamCard) => {
         // console.log(`teamCard`, teamCard, teamCard.parentNode);
         teamCard.parentNode.classList.add("swiper-slide");
     });
@@ -505,7 +505,6 @@ const useSmithsCards = () => {
         effect: "cards",
         grabCursor: true,
     });
-    drawLootCards(scene.data.controller, scene.setup.controllerSelector);
     drawLootCards(scene.data.lineup, scene.setup.lineupSelector);
     initLineup();
     document.querySelector(`${scene.setup.lineupSelector}`).classList.add("--play");

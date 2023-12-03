@@ -4,6 +4,17 @@
     height: 500px;
 }
 
+.swiper.executive {
+    transform: translate(-385px, 20px) scale(.5);
+    transform-origin: bottom left;
+    transition: .3s ease;
+    z-index: 4;
+}
+
+.swiper.executive:hover {
+    transform: translate(-385px, 20px) scale(1);
+}
+
 .swiper {
     box-sizing: border-box;
     width: 100vw;
