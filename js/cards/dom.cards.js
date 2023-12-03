@@ -76,6 +76,9 @@ const initHandlers = (cardData, controls) => {
         }
 
         if (isSetHasId(win77.game.player.sound, cardData.id) && body.dataset.hash === "play") {
+            if (win77.router.currentPipe.stepId === "easy-prepare") {
+                win77.router.matchmaking ? win77.router.nextStep() : "";
+            }
             const id = cardData.id;
             const bonus = cardData.bonus;
             getEnergyForExtraSound(); // experiment

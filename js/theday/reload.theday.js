@@ -104,6 +104,8 @@ const reloadTheday = () => {
     win77.giveCardsTo(win77.game.player.id, win77.game.options.cardsAfterTurn); // only 2-5 cards after turn
     updHand();
 
+    document.querySelector(".js-toggle-catalog-controls").classList.remove("fw-d-none-i");
+
     win77.finishDay(win77.game.event.result.income);
     win77.setCurrentDay();
     win77.resetSetting();

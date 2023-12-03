@@ -8,6 +8,7 @@ import { PLATFORMS } from "../router/const.router.js";
 
 const setupTheday = (budget = 5000) => {
     let lineupLength = 0;
+    const headerMenuBtn = document.querySelector(".js-toggle-catalog-controls");
     const cardTitleArr = document.querySelectorAll("#table .card__title");
     const limitsStrings = document.querySelectorAll("#table .card__limits");
     const lineup = [];
@@ -50,6 +51,7 @@ const setupTheday = (budget = 5000) => {
         win77.game.event.settings.setting = win77.setting;
         console.log(win77.game.event.settings);
     }
+    headerMenuBtn.classList.add("fw-d-none-i");
 
     console.log(`Starting event..`, win77.game.event);
     drawTheday();

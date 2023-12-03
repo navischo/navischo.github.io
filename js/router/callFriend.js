@@ -121,6 +121,7 @@ const pass = () => {
     document.querySelector("#table-invader").remove();
     document.querySelector("#react").remove();
     document.querySelector("#pass").remove();
+    document.querySelector("#next-btn").classList.remove("--disabled");
     document.querySelector("#rts-btn").classList.remove("fw-d-none-i");
     document.querySelector("#one-more").classList.remove("fw-d-none-i");
     document.querySelector(".js-phone").classList.remove("fw-d-none-i");
@@ -155,6 +156,7 @@ const getInvaderItem = (name) => {
 
             const parent = document.querySelector(".table");
             const tableNode = document.createElement("div");
+            const nextBtn = document.querySelector("#next-btn");
             tableNode.id = "table-invader";
             tableNode.classList.add("table__cards");
             parent.appendChild(tableNode);
@@ -167,6 +169,7 @@ const getInvaderItem = (name) => {
             document.querySelector("#invade").remove();
             document.querySelector("#rts-btn").classList.add("fw-d-none-i");
             toggleNokiaBtn();
+            nextBtn.classList.add("--disabled");
             addOptionalNextBtn("react", react);
             addOptionalNextBtn("pass", pass);
             document.querySelector("#react").classList.add("--red");

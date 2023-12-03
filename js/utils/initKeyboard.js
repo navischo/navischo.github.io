@@ -59,17 +59,23 @@ const KEYS_CALLBACKS = {
         goToPlay();
     },
     h: () => {
-        document.querySelector(".hud-bottom").classList.toggle("hud-bottom--open");
+        if (!win77.game.event.lineupLength) {
+            document.querySelector(".hud-bottom").classList.toggle("hud-bottom--open");
+        }
     },
     shift: () => {
-        const controls = document.querySelector(".js-catalog-controls")
-        controls.classList.toggle("catalog-controls--visible");
+        if (!win77.game.event.lineupLength) {
+            const controls = document.querySelector(".js-catalog-controls")
+            controls.classList.toggle("catalog-controls--visible");
+        }
     },
     escape: () => {
-        const gameMenu = document.querySelector(".game-menu");
-        gameMenu.classList.toggle("--open");
-        if (!gameMenu.classList.contains("--open"))  {
-            closeGameMenu();
+        if (!win77.game.event.lineupLength) {
+            const gameMenu = document.querySelector(".game-menu");
+            gameMenu.classList.toggle("--open");
+            if (!gameMenu.classList.contains("--open")) {
+                closeGameMenu();
+            }
         }
     }
 }

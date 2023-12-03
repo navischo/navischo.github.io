@@ -2089,6 +2089,16 @@ select {
     transition: transform 0.05s ease, opacity 0.15s ease;
     opacity: 1;
 }
+.cp-button.--disabled {
+    border-left: 2px solid gray;
+}
+.cp-button.--disabled:hover {
+    animation: none;
+    background: gray;
+    transform: none;
+    transition: transform 0.05s ease, opacity 0.15s ease;
+    opacity: 1;
+}
 
 @keyframes glowing {
     0% {
