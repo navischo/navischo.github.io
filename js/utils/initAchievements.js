@@ -23,15 +23,23 @@ const getAchievement = (id) => {
                 console.log("localStorage", localStorage, localStorage.getItem("achievements"));
                 const achievementPopup = document.querySelector("#achievement-popup");
                 const achievementPopupImg = achievementPopup.querySelector(".js-achievement-img");
-                const achievementPopupText = achievementPopup.querySelector(".js-achievement-text");
+                const achievementPopupText = achievementPopup.querySelector(".js-achievement-title");
 
                 achievementPopupText.textContent = achievementData.title;
                 achievementPopupImg.src = `../../img/achievements/${achievementData.id}.png`;
                 achievementPopup.classList.remove("--hidden");
 
-                setTimeout(() => {
+                const firstTimeout = setTimeout(() => {
                     achievementPopup.classList.add("--hidden");
                 }, 4000);
+                achievementPopup.addEventListener("mouseover", () => {
+                    clearTimeout(firstTimeout);
+                });
+                achievementPopup.addEventListener("mouseleave", () => {
+                    setTimeout(() => {
+                        achievementPopup.classList.add("--hidden");
+                    }, 1000);
+                });
             }
         }
     } else {
