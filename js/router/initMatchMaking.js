@@ -12,7 +12,7 @@ import { openPopup } from "../popup/dom.popup.jquery.js";
 import { initNextBtn } from "./router.module.js";
 import { lightWalkingPlayer } from "../utils/finishRoundForPlayer.js";
 import { switchPlayer } from "./switchPlayer.js";
-import { PLATFORMS } from "./const.router.js";
+import { PLATFORMS, DEFAULT_OPTIONS } from "./const.router.js";
 import { initBonusInput } from "./initBonusInput.js";
 
 class DNEPlayer {
@@ -279,15 +279,7 @@ const initMatchMaking = () => {
             const startBankrollInput = document.querySelector("#start-bankroll");
             const startSoulsInput = document.querySelector("#start-souls");
             const cardsAfterTurnInput = document.querySelector("#cards-after-turn");
-            const options = {
-                platform: PLATFORMS.screen,
-                roundLimit: 7,
-                maxTime: null,
-                startBankroll: 16000,
-                startSouls: 0,
-                cardsAfterTurn: 2
-            }
-
+            const options = DEFAULT_OPTIONS;
             if (platformSelect && roundLimitInput && maxTimeInput && startBankrollInput && startSoulsInput && cardsAfterTurnInput) {
                 console.log("platformSelect", platformSelect.value);
                 if (platformSelect.value !== PLATFORMS.screen) {

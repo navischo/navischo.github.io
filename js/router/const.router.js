@@ -63,4 +63,13 @@ const PLATFORMS = {
     tabletop: "tabletop"
 };
 
-export { PAGE_NAMES, PIPELINES, PLATFORMS };
+const DEFAULT_OPTIONS = {
+    platform: PLATFORMS.screen,
+    roundLimit: 7,
+    maxTime: null,
+    startBankroll: 16000,
+    startSouls: 0,
+    cardsAfterTurn: 2
+}
+
+export { PAGE_NAMES, PIPELINES, PLATFORMS, DEFAULT_OPTIONS };

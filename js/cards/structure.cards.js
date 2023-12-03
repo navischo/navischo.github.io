@@ -1,5 +1,6 @@
 import { CARD_TYPES } from "./const.cards.js";
 import { DNECards, DNESecretCards } from "./data.cards.js";
+import { DEFAULT_OPTIONS } from "../router/const.router.js";
 import { win77 } from "../dne-cli.js";
 import { getCardById } from "../utils/getCardById.js";
 import { initInventory } from "../hud/inventory.hud.js";
@@ -18,6 +19,7 @@ import { uploadCustomCards } from "../utils/uploadCustomCards.js";
 //=> 1.1. Запуск игры
 const initGame = () => {
     const game = {
+        options: DEFAULT_OPTIONS,
         catalog: {
             [CARD_TYPES.avatar]: new Set(),
             [CARD_TYPES.npc]: new Set(),
