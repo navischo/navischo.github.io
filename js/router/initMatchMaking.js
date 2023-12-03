@@ -114,10 +114,14 @@ const updPlayer = (id) => {
     const playerCardNode = parent.querySelector(".js-player-card");
 
     if (win77.game.player.id === id) {
-        const playerClass = Array.from(win77.game.player.class)[0];
-        console.log("win77.game.player", playerClass, win77.game.player);
         playerCardNode.innerHTML = ``;
-        drawCard(playerCardNode, getCardElement, playerClass);
+        const playerAvatar = Array.from(win77.game.player.avatar)[0];
+        playerAvatar ? drawCard(playerCardNode, getCardElement, playerAvatar) : "";
+
+        // const playerClass = Array.from(win77.game.player.class)[0];
+        // console.log("win77.game.player", playerClass, win77.game.player);
+        // playerCardNode.innerHTML = ``;
+        // drawCard(playerCardNode, getCardElement, playerClass);
 
         const playerLvl = win77.game.player.lvl;
         if (playerLvl > 9) {
@@ -127,10 +131,14 @@ const updPlayer = (id) => {
         playerNameNode.textContent = win77.game.player.id;
     } else {
         // win77.lobby
-        const mateClass = Array.from(win77.game.catalog.class)[getRandomInt(win77.game.catalog.class.size)];
-        console.log("win77.game.player", mateClass, win77.lobby);
         playerCardNode.innerHTML = ``;
-        drawCard(playerCardNode, getCardElement, mateClass);
+        const mateAvatar = Array.from(win77.game.catalog.avatar)[getRandomInt(win77.game.catalog.avatar.size)];
+        drawCard(playerCardNode, getCardElement, mateAvatar);
+
+        // const mateClass = Array.from(win77.game.catalog.class)[getRandomInt(win77.game.catalog.class.size)];
+        // console.log("win77.game.player", mateClass, win77.lobby);
+        // playerCardNode.innerHTML = ``;
+        // drawCard(playerCardNode, getCardElement, mateClass);
 
         const playerLvl = 0;
         if (playerLvl > 9) {

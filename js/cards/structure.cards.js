@@ -145,6 +145,7 @@ const initPlayer = (id = null) => {
             skillPoints: 0
         },
         hand: new Set(),
+        avatar: new Set(),
         npc: new Set(),
         class: new Set(),
         dia: new Set(),

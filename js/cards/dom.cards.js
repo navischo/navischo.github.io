@@ -57,6 +57,10 @@ const initHandlers = (cardData, controls) => {
             }
         }
 
+        // if (isItCatalogPage && isSetHasId(win77.game.catalog.avatar, cardData.id)) {
+            // win77.game.player.avatar =
+        // }
+
         if (isSetHasId(win77.game.player.dia, cardData.id)) {
             // win77.getEnergyPointsFromPlayer(1);
             win77.giveEnergyPointsToPlayer(cardData.bonus);

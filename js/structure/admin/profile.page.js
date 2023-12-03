@@ -4,7 +4,7 @@ import { win77 } from "../../dne-cli.js";
 
 const drawClass = () => {
     const classInput = document.querySelector(".js-profile-class");
-    classInput.value = Array.from(win77.game.player.class)[0].id.replace(`class-`, ``);
+    classInput.value = Array.from(win77.game.player.class)[0]?.id.replace(`class-`, ``);
     classInput.setAttribute("readonly", true);
 }
 
