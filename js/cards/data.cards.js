@@ -139,6 +139,51 @@ const initDNELootArr = () => {
     const iBunnySound = new DNELootCard("i-bunny-sound", "Преміум звук", "Професійний сет домашнього звукового обладнання преміального классу потужністю в 500вт, в який входить: два монітор, мікшер, дим машина та дротова система що живиться від розетки 220V. З якісним контроллером та Діджеєм може підтримувати в тонусі невелике приміщення людей до 30 осіб. Чудово підходить для середніх частот в невеличкому просторі затишних приміщеннь.", "https://lh6.googleusercontent.com/8fTLZWHk-ttKuc5cug7UfnzEfUj19MQJHHns_s1hV-Hkvl96PtkFydoA_bq7bNpVU3M=w2400", 5, "80K/1200", "Велика", "Звук дає можливість ділитися своєю музикою з натовпом. Чим гучніше, тим більше людей зачепить.", "", true, true, "loot");
     iBunnySound.collection = "soundSystem";
     LootArr.push(iBunnySound);
+
+    // Аватар
+    //
+    //
+    const AVATARS_IMG = [
+        {
+            id: "ttter",
+            img: `1qbAUvoaeM9h5RSevlXBIukqjIXeuaisX`
+        },
+        {
+            id: "support",
+            img: `1oGR5pBAN1MAzTqjJPmjJEn71grIeH4ml`
+        },
+        {
+            id: "writer",
+            img: `1ck2tmnoBqNo3oxRCo7GbESc9F1df9r9I`
+        },
+        {
+            id: "netrunner",
+            img: `1ZLp6spRdHVPDXf3BdMc2F60mtWIZn5rY`
+        },
+        {
+            id: "dj",
+            img: `1MUH8aWJtvLnkK09q5ZFPQVlImzW1HS24`
+        },
+        {
+            id: "dragonborn",
+            img: `16-Pudgm3T9YBQ5lxDANy3laIb-67lZVa`
+        },
+        {
+            id: "olivye",
+            img: `1j8UhFJu4jVExfpLUZt3YFE99OjIVvyVD`
+        }
+    ];
+    const initAvatar = (avatarObj) => {
+        const AVATAR_LONGLINE = "";
+        const AVATAR_SHORTLINE = ``;
+        const AVATAR_IMG_ID = `${avatarObj.img}`;
+        const AVATAR_IMG = `https://drive.google.com/uc?id=${AVATAR_IMG_ID}`;
+
+        LootArr.push(new DNELootCard(`avatar-${avatarObj.id}`, "", AVATAR_LONGLINE, AVATAR_IMG, 0, 0, "", AVATAR_SHORTLINE, "", true, true, "avatar"));
+    }
+    AVATARS_IMG.forEach((avatarObj) => initAvatar(avatarObj));
+
+
     // LootArr.push(new DNELootCard("i-from-paris-wl", "Ваза кокаїну", "Так, це зовсім незаконно. Цю картку можна просто скинути.<br><br> А можна і залишити)", "https://lh4.googleusercontent.com/3EXp5XTiFmNzh17E373Q5eRFptHUJYDzeGaIRMhG07HXXJynWKqbrqZgVzSVKdyqhco=w2400", "13", "800K", "Шериф цим зацікавиться"));
     // LootArr.push(new DNELootCard("i-from-kherson-wl", "Центнер бошок", "Боже правий", "https://lh6.googleusercontent.com/p-HwPSacUlld8yDTA-4yajUhEsUznscnT7M5xfsA1e7K1JpEMGs9vrHr0eT1SpiBqDk=w2400", "25", "5КK", "Шериф цим серйозно зацікавиться"));
     // LootArr.push(new DNELootCard("i-censored-mod", "На любое дерьмо", "Дає можливість отримати легендарні карти неймовірної сили та цінності. Їх використання може призвести до будь-яких наслідків, давай собі в цьому розуміння, якщо наважишся це робити.", "https://lh6.googleusercontent.com/p-HwPSacUlld8yDTA-4yajUhEsUznscnT7M5xfsA1e7K1JpEMGs9vrHr0eT1SpiBqDk=w2400", 0, 0, "Мод"));

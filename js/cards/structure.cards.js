@@ -19,6 +19,7 @@ import { uploadCustomCards } from "../utils/uploadCustomCards.js";
 const initGame = () => {
     const game = {
         catalog: {
+            [CARD_TYPES.avatar]: new Set(),
             [CARD_TYPES.npc]: new Set(),
             [CARD_TYPES.class]: new Set(),
             [CARD_TYPES.loot]: new Set(),
@@ -52,6 +53,10 @@ const initGame = () => {
     DNECards.forEach((card) => {
         card.isHide = false;
         switch (card.type) {
+            case CARD_TYPES.avatar:
+                game.catalog.avatar.add(card);
+                break;
+
             case CARD_TYPES.npc:
                 game.catalog.npc.add(card);
                 break;

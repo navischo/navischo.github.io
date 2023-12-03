@@ -1,4 +1,39 @@
 /* START CUSTOM DNE-CARDS STYLES */
+#dne-card-avatar-ttter .card__preview {
+    transform: scale(1.6) translate(0, 40px);
+}
+
+#dne-card-avatar-support .card__preview {
+    transform: scale(1.5) translate(14px, 35px);
+}
+
+#dne-card-avatar-writer .card__preview {
+    transform: scale(1.3) translate(6px, 58px);
+}
+
+#dne-card-avatar-netrunner .card__preview {
+    transform: scale(1.59) translate(0, 38px);
+}
+
+#dne-card-avatar-dj .card__preview {
+    transform: scale(1.36) translate(-6px, 25px);
+}
+
+#dne-card-avatar-dragonborn .card__preview {
+    transform: scale(1.6) translate(20px, 45px);
+}
+
+#dne-card-avatar-olivye .card__preview {
+    transform: scale(1.1) translate(4px, 0);
+    position: absolute;
+    bottom: 0;
+}
+
+#dne-card-avatar-writer .card__id,
+#dne-card-avatar-dragonborn .card__id,
+#dne-card-avatar-olivye .card__id
+{opacity: 0}
+
 #dne-card-elias-jensen .card__preview {
     max-height: 265px;
 }

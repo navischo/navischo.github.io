@@ -7,6 +7,7 @@ const COMMANDS = {
 };
 
 const CARD_TYPES = {
+    avatar: "avatar",
     npc: "npc",
     class: "class",
     loot: "loot",
