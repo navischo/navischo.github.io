@@ -14,7 +14,7 @@ const markup = `
 `;
 
 const showEnergy = () => {
-    if (win77.game.player.lvl >= 3) {
+    if (win77.game.player.lvl >= 3 && win77.game.player.dia.size > 0) {
         body.querySelector(".js-energy-balance").classList.remove("fw-d-none");
     }
 }
