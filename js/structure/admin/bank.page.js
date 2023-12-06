@@ -68,6 +68,13 @@ const saveBankroll = () => {
         updBankBalanceNode();
         console.log("You successfully save 1BTC from your bankroll", localStorage.getItem(`${win77.game.player.id}-btc`), win77.game.player.balance.bankroll);
     } else {
+        const bankrollNode = document.querySelector(".js-bankroll-balance");
+        if (bankrollNode) {
+            bankrollNode.classList.add("shake-vertical");
+            setTimeout(() => {
+                bankrollNode.classList.remove("shake-vertical");
+            }, 3000);
+        }
         console.log("You need at least 1111111 to save 1BTC from your bankroll", localStorage.getItem(`${win77.game.player.id}-btc`), win77.game.player.balance.bankroll);
     }
 };

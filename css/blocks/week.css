@@ -56,12 +56,13 @@
     position: relative;
     z-index: 1;
 
-    font-size: 362px;
     margin: 0;
     margin-top: 120px;
+    margin-bottom: 200px;
 
+    font-size: 172px;
     line-height: 1.1;
-    text-align: center;
+    text-align: right;
     text-transform: uppercase;
     text-shadow: var(--ui-glow-text--dimmed);
 

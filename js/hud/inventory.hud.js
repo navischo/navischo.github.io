@@ -84,6 +84,7 @@ const cardNodesByType = {
 const appendCardToInventory = (cardData, cardType = CARD_TYPES.loot) => {
     const newListItem = document.createElement("a");
     newListItem.classList.add("inventory-item");
+    newListItem.classList.add("js-inventory-popup");
     newListItem.textContent = cardData.name;
     newListItem.href = `#card-popup`;
 
@@ -100,6 +101,16 @@ const appendPlayerToInventory = (playerId) => {
     const matchmakingList = document.querySelector("#matchmaking-list");
     const newListItem = document.createElement("a");
     newListItem.classList.add("inventory-item");
+    newListItem.classList.add("js-player-state");
+    win77.game.player.id === playerId ? newListItem.classList.add("--current") : "";
+    // if (win77.game.alliance) {
+    //     win77.game.alliance.savior.id === playerId ? newListItem.classList.add("--alliance") : "";
+    //     console.log("savior", win77.game.alliance.savior.id, playerId, newListItem);
+    // }
+    // if (win77.game.invasion) {
+    //     win77.game.invasion.invader.id === playerId ? newListItem.classList.add("--invader") : "";
+    //     console.log("invader", win77.game.invasion.invader.id, playerId, newListItem);
+    // }
     newListItem.textContent = playerId;
 
     newListItem.addEventListener("click", (e) => {
@@ -165,7 +176,7 @@ const initInventory = () => {
 
     const matchmakingWrap = document.querySelector(".js-matchmaking-wrap");
     if (win77.router?.matchmaking) {
-        win77.router.playersQueue.forEach((playerId) => {
+        win77.router.playersQueue.forEach((playerId,) => {
             // const playerObj = win77.findPlayerObj(playerId);
             // appendPlayerToInventory(playerObj.avatar[0], CARD_TYPES.avatar);
             appendPlayerToInventory(playerId);

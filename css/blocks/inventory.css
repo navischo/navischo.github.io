@@ -77,6 +77,8 @@
     right: auto;
     left: 0;
 
+    min-height: 156px;
+
     text-align: left;
 }
 
@@ -114,9 +116,52 @@
     text-decoration: none;
 }
 
-.inventory-item.--shake {
+.inventory-item.--alliance {
+    background-color: var(--color);
+    color: white;
+    cursor: pointer;
+    text-shadow: none;
+    box-shadow: inset 0 -2px 0 0 var(--color);
+}
+
+.inventory-item.--invader {
+    background-color: #da0030;
+    color: white;
+    cursor: pointer;
+    text-shadow: none;
+    box-shadow: inset 0 -2px 0 0 #da0030;
+}
+
+.inventory-item.--current {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    text-shadow: none;
+}
+
+.--shake {
     animation: shake .7s ease-in-out infinite;
     animation-delay: 1s;
+}
+@keyframes shake {
+    0% {
+        transform: translate(0, 0) rotate(0);
+    }
+    20% {
+        transform: translate(-10px, 0) rotate(-20deg);
+    }
+    30% {
+        transform: translate(10px, 0) rotate(20deg);
+    }
+    50% {
+        transform: translate(-10px, 0) rotate(-10deg);
+    }
+    60% {
+        transform: translate(10px, 0) rotate(10deg);
+    }
+    100% {
+        transform: translate(0, 0) rotate(0);
+    }
 }
 
 @keyframes shake {

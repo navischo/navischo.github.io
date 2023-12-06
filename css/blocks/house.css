@@ -1,6 +1,11 @@
 .house {
     position: relative;
     height: 100vh;
+
+    /*transform: scale(2.5) translate(-411px, 10px);*/
+    /*transition: 2s ease-in-out;*/
+    /*transform: scale(2.5) translate(571px, 10px);*/
+    /*transform: scale(2.5) translate(341px, -49px);*/
 }
 
 .house__name {

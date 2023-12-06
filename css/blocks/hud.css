@@ -506,14 +506,18 @@ body {
 .units-bankroll,
 .units-energy {
     position: relative;
+    display: inline-block;
     padding-left: 24px;
 }
 
 .units-bankroll {
+    position: relative;
+    display: inline-block;
     padding-left: 40px;
 }
 
 .units-energy {
+    display: inline-block;
     padding-left: 17px;
 }
 
@@ -837,3 +841,54 @@ button.next-btn.--visible {
     }
 }
 
+.units-bankroll.--shake {
+    position: relative;
+    animation: shake .7s ease-in-out infinite;
+    animation-delay: 1s;
+}
+@keyframes shake {
+    0% {
+        transform: translate(0, 0) rotate(0);
+    }
+    20% {
+        transform: translate(-10px, 0) rotate(-20deg);
+    }
+    30% {
+        transform: translate(10px, 0) rotate(20deg);
+    }
+    50% {
+        transform: translate(-10px, 0) rotate(-10deg);
+    }
+    60% {
+        transform: translate(10px, 0) rotate(10deg);
+    }
+    100% {
+        transform: translate(0, 0) rotate(0);
+    }
+}
+.units-bankroll.shake-vertical {
+    animation: shake-vertical 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+}
+@keyframes shake-vertical {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    10%,
+    30%,
+    50%,
+    70% {
+        transform: translateY(-8px);
+    }
+    20%,
+    40%,
+    60% {
+        transform: translateY(8px);
+    }
+    80% {
+        transform: translateY(6.4px);
+    }
+    90% {
+        transform: translateY(-6.4px);
+    }
+}

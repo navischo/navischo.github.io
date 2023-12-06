@@ -6,6 +6,24 @@ import { moveCardById } from "../utils/getCardById.js";
 import { updHand, updTable } from "../cards/dom.cards.js";
 import { updScore, transferScoreFromTo } from "../hud/score.hud.js";
 import { dialog } from "../hud/dialog.hud.js";
+// import { showRoles } from "../hud/inventory.hud.js";
+
+
+const showRoles = () => {
+    const playerNodes = document.querySelectorAll(".js-player-state");
+    playerNodes.forEach((playerNode) => {
+        const playerId = playerNode.textContent;
+        if (win77.game.alliance) {
+            win77.game.alliance.savior.id === playerId ? playerNode.classList.add("--alliance") : "";
+            console.log("savior", win77.game.alliance.savior.id, playerId, playerNode);
+        }
+        if (win77.game.invasion) {
+            win77.game.invasion.invader.id === playerId ? playerNode.classList.add("--invader") : "";
+            console.log("invader", win77.game.invasion.invader.id, playerId, playerNode);
+        }
+    });
+}
+
 
 const getFriendItem = (name) => {
     return {
@@ -164,7 +182,8 @@ const getInvaderItem = (name) => {
             win77.switchPlayer(win77.game.invasion.invader);
             // win77.fillPlayersHand(); // no new cards for invader
             updHand();
-
+            console.log("win77.game.invasion", win77.game.invasion.invader);
+            showRoles();
             closePopup();
             document.querySelector("#invade").remove();
             document.querySelector("#rts-btn").classList.add("fw-d-none-i");
