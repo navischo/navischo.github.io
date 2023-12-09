@@ -199,6 +199,10 @@
     display: none;
 }
 
+.img-autumn-sale.--winter {
+    filter: hue-rotate(180deg);
+}
+
 @media (min-width: 1024px) {
     .buy__bundle:last-child {
         margin-top: 80px;
