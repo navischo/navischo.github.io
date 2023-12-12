@@ -22,30 +22,6 @@
     width: 100%;
 }
 
-.menu-button {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    z-index: 4;
-
-    display: flex;
-    align-items: flex-end;
-    width: 80px;
-    height: 80px;
-    padding: 5px;
-    padding-bottom: 0;
-
-    cursor: pointer;
-
-    -webkit-transition: 0.3s;
-    transition: 0.3s;
-
-    background-color: cyan;
-
-    /*margin: 14px;
-          border-radius: 5px;*/
-}
-
 .buy-body {
     color: white;
     background: black;
@@ -580,6 +556,30 @@
     transform-origin: top right;
 }
 
+.menu-button {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 4;
+
+    display: flex;
+    align-items: flex-end;
+    width: 55px;
+    height: 55px;
+    padding: 5px;
+    padding-bottom: 0;
+
+    cursor: pointer;
+
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+
+    background-color: cyan;
+
+    /*margin: 14px;
+          border-radius: 5px;*/
+}
+
 .confirm-wrap .rts-btn {
     font-size: 52px;
 }
@@ -602,6 +602,11 @@
     .cart {
         position: fixed;
         transform: none;
+    }
+
+    .menu-button {
+        width: 80px;
+        height: 80px;
     }
 
     .order {
