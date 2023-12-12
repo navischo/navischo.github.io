@@ -34,6 +34,7 @@
     <link rel="stylesheet" href="css/standalone/buy-page.css">
     <link rel="stylesheet" href="css/standalone/sale.css">
     <link rel="stylesheet" href="css/standalone/dodge.css">
+    <link rel="stylesheet" href="css/standalone/stone.css">
 
 </head>
 <body class="buy-body">
@@ -216,6 +217,105 @@
 <div class="js-dodge dodge --bottom-right">
     <p class="dodge__message"><a target="_blank">Like to swipe?</a></p>
     <img class="dodge__img" src="img/dodge.png" alt="Dodge want you to swipe!" width="383" height="468">
+</div>
+<div class="stone fw-d-none-i">
+    <div class="stone-header">
+        <div class="stone-header__logo">
+            <img class="stone-header__logo-img">
+        </div>
+    </div>
+    <section class="stone-game container">
+        <nav class="stone-breadcrumbs">
+            <a class="stone-breadcrumbs__link">Усі ігри</a>
+            <a class="stone-breadcrumbs__link">Карткові</a>
+            <a class="stone-breadcrumbs__link">Кооператив</a>
+        </nav>
+        <h1 class="stone-game__name">DNE</h1>
+        <div class="stone-game__main">
+            <div class="stone-game__preview">
+                <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="img/screenshots/event.png" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/screenshots/lineup.png" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/screenshots/login.png" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/screenshots/menu.png" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/screenshots/result.png" />
+                        </div>
+                    </div>
+                    <!--                <div class="swiper-button-next"></div>-->
+                    <!--                <div class="swiper-button-prev"></div>-->
+                    <!--                <div class="swiper-scrollbar"></div>-->
+                </div>
+                <div thumbsSlider="" class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="img/screenshots/event.png" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/screenshots/lineup.png" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/screenshots/login.png" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/screenshots/menu.png" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/screenshots/result.png" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="stone-game__overview">
+                <div class="stone-game__overview-img-wrap">
+                    <img class="stone-game__overview-img">
+                </div>
+                <div class="stone-game__overview-content">
+                    <div class="stone-game__overview-descr">
+                        Не існує - це унікальна кооперативна колекційна карткова гра. Ти маєш можливість знайти найрідкісніший звук та зібрати в лайнап, яким пишатимешся, зустрічаючи безліч гостей. Під час матчів на 2-3 гравці, де для перемоги тобі знадобиться здобути найбільший інкам, по черзі влаштовуючи Рейв зі своїми друзями. Завершити гру можна упродовж декількох раундів, загальною тривалістю до 30 хвилин. Поринь в електронну подорож, з близькою людиною, яка не існує.
+                    </div>
+                    <div class="stone-game__overview-tr">
+                        <div class="stone-game__overview-tl --uppercase">Дата виходу:</div>
+                        <div class="stone-game__overview-td">12.12.2212</div>
+                    </div>
+                    <div class="stone-game__overview-tr">
+                        <div class="stone-game__overview-tl --uppercase">Розробник:</div>
+                        <div class="stone-game__overview-td"><a href="https://www.t.me/beast_hotline" target="_blank">Навіщо</a></div>
+                    </div>
+                    <div class="stone-game__overview-tr stone-game__overview-tr-tags">
+                        <div class="stone-game__overview-tl">Популярні користувацькі позначки для цього продукту:</div>
+                        <div class="stone-game__overview-td">
+                            <span>Дочасний доступ</span>
+                            <span>Карткові ігри</span>
+                            <span>Рейв</span>
+                            <span>Інді</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="stone-game__play">
+            <h3 class="stone-game__play-title">
+                Грати в
+                <b class="stone-game__play-title-name">DNE</b>
+            </h3>
+            <p class="stone-game__play-descr">ПРОПОЗИЦІЯ ТИЖНЯ!</p>
+            <div class="stone-game__play-controls">
+                <span class="stone-game__play-label">Вільний доступ</span>
+                <button class="stone-game__play-btn">Грати</button>
+            </div>
+        </div>
+    </section>
+    <!--    <img src="img/layout-game-page.png" alt="" width="1348" height="3494">-->
 </div>
 
 
@@ -416,6 +516,96 @@
     });
 
 </script>
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        loop: true,
+        spaceBetween: 10,
+        slidesPerView: 4,
+        freeMode: true,
+        watchSlidesProgress: true,
+    });
+    var swiper2 = new Swiper(".mySwiper2", {
+        loop: true,
+        spaceBetween: 10,
+        // navigation: {
+        //     nextEl: ".swiper-button-next",
+        //     prevEl: ".swiper-button-prev",
+        // },
+        thumbs: {
+            swiper: swiper,
+        },
+        // scrollbar: {
+        //     el: ".swiper-scrollbar",
+        //     hide: true,
+        // }
+    });
+</script>
+<style>
+    .stone .swiper {
+        width: 100%;
+        height: 100%;
+    }
 
+    .stone .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .stone .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .stone .swiper {
+        width: 100%;
+        height: 300px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .stone .swiper-slide {
+        background-size: cover;
+        background-position: center;
+    }
+
+    .stone .mySwiper2 {
+        height: 80%;
+        width: 100%;
+    }
+
+    .stone .mySwiper2 .swiper-button-next,
+    .stone .mySwiper2 .swiper-button-prev {
+        top: 89% !important;
+    }
+
+    .stone .mySwiper {
+        height: 20%;
+        box-sizing: border-box;
+        padding: 10px 0;
+    }
+
+    .stone .mySwiper .swiper-slide {
+        width: 25%;
+        height: 100%;
+        opacity: 0.4;
+    }
+
+    .stone .mySwiper .swiper-slide-thumb-active {
+        opacity: 1;
+    }
+
+    .stone .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+</style>
 </body>
 </html>

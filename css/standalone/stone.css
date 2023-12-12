@@ -1,0 +1,196 @@
+.stone-breadcrumbs {
+    display: block;
+    margin-bottom: 12px;
+
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12px;
+    line-height: 14px;
+    /*color: #7A7777FF;*/
+    opacity: .7;
+}
+
+.stone-breadcrumbs__link + .stone-breadcrumbs__link::before {
+    content: " > ";
+}
+
+.stone {
+    /*t*/
+    /*padding-top: 436px;*/
+    max-width: 1348px;
+    width: 100%;
+    min-height: 1494px;
+    /*t*/
+
+    position: relative;
+
+    padding-top: 80px;
+
+    background: linear-gradient(to right, #005473, #008c5b);
+}
+
+.stone::after {
+    content: "";
+
+    position: absolute;
+    top: 1200px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    max-width: 1348px;
+    width: 100%;
+    min-height: 3494px;
+
+    background-image: url("../../img/layout-game-page.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    /*transform: scale(1.0) translate(-90px, -436px);*/
+    transform-origin: center;
+}
+
+.stone-game__name {
+    display: block;
+    margin-bottom: 40px;
+
+    font-size: 3rem;
+}
+
+.stone-game__main {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.stone-game__preview {
+    /*max-width: 640px;*/
+    max-width: 640px;
+    height: 460px;
+    padding: 5px;
+
+    background: #0b1016;
+}
+
+.stone-game__overview {
+    padding: 20px;
+    margin-left: 30px;
+    /*border-radius: 3px;*/
+
+    background: #0b1016;
+}
+.stone-game__overview-img-wrap {}
+.stone-game__overview-img {}
+.stone-game__overview-content {}
+.stone-game__overview-descr {
+    display: block;
+    margin-bottom: 30px;
+
+    color: white;
+
+    font-family: "JetBrains Mono", monospace;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.stone-game__overview-tr {
+    display: flex;
+    margin-bottom: 12px;
+
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+.stone-game__overview-tl {
+    margin-right: 8px;
+    color: #7A7777FF;
+}
+
+.stone-game__overview-tl.--uppercase {
+    text-transform: uppercase;
+}
+
+.stone-game__overview-tr-tags {
+    flex-direction: column;
+}
+
+.stone-game__overview-tr-tags .stone-game__overview-tl {
+    margin-bottom: 12px;
+}
+
+.stone-game__overview-td {
+    color: #00e48c;
+}
+
+.stone-game__overview-td span {
+    /*margin: 1px;*/
+
+    color: white;
+    /*box-shadow: 0 0 0 5px #00e48c;*/
+    border: 5px solid #00e48c;
+    background: #00e48c;
+}
+
+.stone-game__play {
+    position: relative;
+
+    max-width: 640px;
+    padding: 20px 30px 40px;
+
+    background: #0b1016;
+}
+
+.stone-game__play-title {
+    display: block;
+    margin-bottom: 4px;
+
+    font-family: "JetBrains Mono", monospace;
+    font-size: 30px;
+    line-height: 34px;
+}
+
+.stone-game__play-title-name {
+    position: relative;
+    bottom: -5px;
+
+    font-family: "Press Start 2p", "JetBrains Mono", monospace;
+}
+
+.stone-game__play-descr {
+    display: block;
+
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+.stone-game__play-controls {
+    position: absolute;
+    bottom: -15px;
+    right: 15px;
+
+    display: flex;
+
+    font-family: "JetBrains Mono", monospace;
+
+    background: black;
+}
+
+.stone-game__play-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 14px;
+    color: white;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+.stone-game__play-btn {
+    padding: 12px 24px;
+    border: none;
+    color: white;
+    font-size: 22px;
+    line-height: 22px;
+    font-weight: 700;
+    text-shadow: 1px 0px 2px black;
+    background: linear-gradient(to right, #00ffff, #00da91);
+}
