@@ -48,8 +48,31 @@
     background: linear-gradient(to left, #1b2838, #06625d);
 }
 
+/*t*/
+.stone::before {
+    /*content: "";*/
+
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    z-index: 5;
+
+    /*max-width: 1348px;*/
+    max-width: 100%;
+    width: calc(100% - 40px);
+    /*min-height: 3494px;*/
+
+    /*background-image: url("../../img/bg-merezja.png");*/
+    background-size: contain;
+    background-repeat: no-repeat;
+    /*transform: scale(1.0) translate(-90px, -436px);*/
+    transform-origin: center;
+}
+
 .stone::after {
-    content: "";
+    /*content: "";*/
 
     position: absolute;
     top: 1500px;
@@ -61,7 +84,7 @@
     width: 100%;
     min-height: 3494px;
 
-    background-image: url("../../img/layout-game-page.png");
+    /*background-image: url("../../img/layout-game-page.png");*/
     background-size: contain;
     background-repeat: no-repeat;
     /*transform: scale(1.0) translate(-90px, -436px);*/

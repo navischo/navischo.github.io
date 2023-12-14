@@ -215,7 +215,7 @@
     </div>
 </div>
 <div class="js-dodge dodge --bottom-right">
-    <p class="dodge__message"><a target="_blank">Like to swipe?</a></p>
+    <p class="dodge__message"><a target="_blank">One more time?</a></p>
     <img class="dodge__img" src="img/dodge.png" alt="Dodge want you to swipe!" width="383" height="468">
 </div>
 <div class="stone">
@@ -284,7 +284,7 @@
                     <p class="stone-game__play-descr">ПРОПОЗИЦІЯ ТИЖНЯ!</p>
                     <div class="stone-game__play-controls">
                         <span class="stone-game__play-label">Вільний доступ</span>
-                        <button class="stone-game__play-btn">Грати</button>
+                        <a class="stone-game__play-btn" href="https://navischo.github.io/" target="_blank">Грати</a>
                     </div>
                 </div>
             </div>
@@ -393,7 +393,7 @@
                     </div>
                 </div>
                 <div class="stone-game__aside-block">
-                    <button class="stone-btn">Поділитися</button>
+                    <button class="js-copy-href stone-btn">Поділитися</button>
                 </div>
             </div>
         </div>
@@ -598,6 +598,24 @@
         });
     });
 
+</script>
+<script>
+    const shareBtn = document.querySelector(".js-copy-href");
+    shareBtn.addEventListener("click", e => {
+        const inp = document.createElement("input")
+        inp.value = window.location.href;
+        document.body.appendChild(inp);
+        inp.select();
+
+        if (document.execCommand("copy")) {
+            shareBtn.textContent = "Скопійовано";
+            setTimeout(() => {
+                shareBtn.textContent = "Поділитися";
+            }, 5000);
+        }
+
+        document.body.removeChild(inp);
+    })
 </script>
 <script>
     var swiper = new Swiper(".mySwiper", {
