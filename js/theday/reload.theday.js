@@ -109,6 +109,7 @@ const reloadTheday = () => {
     win77.finishDay(win77.game.event.result.income);
     win77.setCurrentDay();
     win77.resetSetting();
+    win77.getAchievement("fortune");
 }
 
 win77.reloadTheday = reloadTheday;

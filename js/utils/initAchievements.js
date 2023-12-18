@@ -3,6 +3,11 @@ const ACHIEVEMENTS = [
         id: "connecting",
         title: "Connecting People",
         text: "Ти знайшов правила у телефоні!"
+    },
+    {
+        id: "fortune",
+        title: "Wheel of Fortune",
+        text: "Ти влаштував свій перший Рейв!"
     }
 ];
 
@@ -20,13 +25,16 @@ const getAchievement = (id) => {
             if (!doneAchievementsArr.find(item => item === achievementData.id)) {
                 doneAchievementsArr.push(achievementData.id);
                 localStorage.setItem("achievements", doneAchievementsArr.join(","));
+                console.log("achievementData", achievementData);
                 console.log("localStorage", localStorage, localStorage.getItem("achievements"));
                 const achievementPopup = document.querySelector("#achievement-popup");
                 const achievementPopupImg = achievementPopup.querySelector(".js-achievement-img");
-                const achievementPopupText = achievementPopup.querySelector(".js-achievement-title");
+                const achievementPopupTitle = achievementPopup.querySelector(".js-achievement-title");
+                const achievementPopupText = achievementPopup.querySelector(".js-achievement-text");
                 const sound = new Audio("../../mp3/achievement.mp3");
 
-                achievementPopupText.textContent = achievementData.title;
+                achievementPopupTitle.textContent = achievementData.title;
+                achievementPopupText.textContent = achievementData.text;
                 achievementPopupImg.src = `../../img/achievements/${achievementData.id}.png`;
                 achievementPopup.classList.remove("--hidden");
 
