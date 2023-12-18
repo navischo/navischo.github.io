@@ -376,8 +376,33 @@
 }
 
 .stone-game__early-faq {
+    position: relative;
+    max-height: 200px;
     padding: 8px;
+    padding-bottom: 20px;
     background-color: rgba( 0, 0, 0, 0.5 );
+    overflow: hidden;
+}
+
+.stone-game__early-faq.--open {
+    max-height: none;
+}
+
+.stone-game__early-faq-more-btn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+
+    padding: 0;
+    border: none;
+
+    font-family: "JetBrains Mono", monospace;
+    color: #66c0f4;
+    font-size: 16px;
+    line-height: 20px;
+
+    background: none;
+    cursor: pointer;
 }
 
 .stone-game__early-faq-label {
