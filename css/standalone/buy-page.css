@@ -220,6 +220,10 @@
     letter-spacing: -.8px;
 }
 
+.buy__bundle-textfield ul {
+    margin-bottom: 20px;
+}
+
 .buy__bundle-textfield > *:last-child {
     margin-bottom: 0;
 }
