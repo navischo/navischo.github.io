@@ -435,3 +435,7 @@
     color: #8f98a0;
     line-height: 21px;
 }
+
+.early-faq__answer a {
+    text-decoration: underline;
+}
