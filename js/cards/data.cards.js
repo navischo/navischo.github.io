@@ -731,6 +731,8 @@ const initDNELootArr = () => {
 
     LootArr.push(new DNELootCard("make-after-transfer", "Афтер трансфер", "Розвезе всіх гостей по домівках після закінчення вечірки. Повір, вони будуть тобі за це вдячні.", "https://lh6.googleusercontent.com/kb4mpV8o6NAM_5ydJRplk8wgXmPpx8Bdt2NPzxfDFYVRRVEjafmgFvWBVdkC3zAXL8g=w2400", 3, 2500, "Дія", "Розвезе всіх гостей по домівках після закінчення вечірки. Повір, вони будуть тобі за це вдячні.", "", true, true, "dia"));
 
+    LootArr.push(new DNELootCard("make-its-apex-twin", "Ви не розумієте, це Apex Twin", "+3 до крутості твого лайнапу, однарозовий бонус. Використай цю картку під час викладання будь-якого лайнапу, щоб підняти його рівень і одразу скинь її.", "https://lh6.googleusercontent.com/kb4mpV8o6NAM_5ydJRplk8wgXmPpx8Bdt2NPzxfDFYVRRVEjafmgFvWBVdkC3zAXL8g=w2400", 3, 2500, "Дія", "+3 до крутості твого лайнапу, однарозовий бонус", "", true, true, "dia"));
+
     // Підтримати Найомничків
     //
     //
