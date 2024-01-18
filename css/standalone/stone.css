@@ -238,6 +238,7 @@
     line-height: 14px;
 }
 
+.stone-target,
 .stone-game__play-btn {
     padding: 12px 24px;
     border: none;
@@ -438,4 +439,149 @@
 
 .early-faq__answer a {
     text-decoration: underline;
+}
+
+.stone-footer {
+    position: relative;
+
+    display: block;
+    width: 100%;
+    min-height: 100vh;
+    margin-top: 80px;
+}
+
+.stone-footer::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    display: block;
+    width: 100%;
+    height: 100vh;
+
+    background-image: url("../../img/bg-footer.png");
+    background-size: contain;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+.stone-footer__content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    min-height: 20vh;
+
+    /*background: yellow;*/
+}
+
+.stone-footer__panel {
+    width: 100%;
+    padding: 1px 10px;
+
+    color: rgba(255, 255, 255, .8);
+    /*color: rgba(255, 255, 255, .8);*/
+
+    /*background-color: #0b1016;*/
+    /*background-image: linear-gradient(to left, #1b2838, #06625d);*/
+    /*backdrop-filter: blur(50px) opacity(.5);*/
+}
+
+.stone-footer__hero {
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 15px;
+    padding-bottom: 30px;
+}
+
+.stone-footer__target {
+    padding: 12px 46px;
+    margin-right: 30px;
+    font-family: "JetBrains Mono", monospace;
+    /*color: white;*/
+    /*background: #00e48c;*/
+    cursor: pointer;
+}
+
+.stone-footer__target::before {
+    content: "";
+
+    position: relative;
+    bottom: -2px;
+
+    display: inline-block;
+    width: 19px;
+    height: 19px;
+    margin-right: 4px;
+
+    background: url("../../img/icon-play.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: .8;
+}
+
+.stone-stats {
+    display: flex;
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+}
+
+.stone-stats__item + .stone-stats__item {
+    margin-left: 25px;
+}
+
+.stone-stats__item {
+
+}
+
+.stone-stats__label {
+    display: block;
+    margin-bottom: 5px;
+
+    font-family: "JetBrains Mono", monospace;
+    font-size: 19px;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.stone-stats__value {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px;
+    color: rgba(255, 255, 255, .6);
+}
+
+.stone-footer__menu {
+    display: flex;
+    padding: 6px 8px;
+    margin-bottom: 10px;
+
+    background-image: linear-gradient(to right, rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.5) 100%);
+}
+
+.stone-footer__menu-item + .stone-footer__menu-item {
+    margin-left: 30px;
+}
+
+.stone-footer__menu-item {
+    padding: 2px 6px;
+    color: inherit;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12px;
+    transition: .15s ease;
+}
+
+.stone-footer__menu-item:hover,
+.stone-footer__menu-item:active,
+.stone-footer__menu-item:visited {
+    color: white;
+    background: rgba(255, 255, 255, .2);
 }
