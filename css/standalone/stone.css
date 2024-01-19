@@ -42,7 +42,7 @@
 
     position: relative;
 
-    padding-top: 80px;
+    /*padding-top: 80px;*/
 
     /*background: linear-gradient(to right, #005473, #008c5b);*/
     background: linear-gradient(to left, #1b2838, #06625d);
@@ -89,6 +89,26 @@
     background-repeat: no-repeat;
     /*transform: scale(1.0) translate(-90px, -436px);*/
     transform-origin: center;
+}
+
+.stone-header {
+    padding: 7px 9px;
+    margin-bottom: 70px;
+    background: linear-gradient(to right, rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.5) 100%);
+}
+
+.stone-header__logo {
+    display: flex;
+    align-items: center;
+    font-size: 8px;
+}
+
+.stone-header__logo-img {
+    position: relative;
+    top: -2px;
+    width: 14px;
+    margin-right: 6px;
+    height: auto;
 }
 
 .stone-game__name {
@@ -447,11 +467,18 @@
     display: block;
     width: 100%;
     min-height: 100vh;
+    padding-bottom: 20vh;
     margin-top: 80px;
 }
 
+.stone-footer__banner {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
 .stone-footer::before {
-    content: "";
+    /*content: "";*/
 
     position: absolute;
     top: 0;
