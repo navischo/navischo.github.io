@@ -72,6 +72,9 @@
                     <div class="l-news__header-wrapper">
                         <span class="l-news__header-mobile-decorations"></span>
                         <div class="l-news__header-title">
+                            <span class="l-news__header-title-right"></span><a class="js-scroll-to-stone" target="_blank"><p><img src="img/logo-stone--yellow.png" width="235" height="300" class="l-news__header-title--stone"></p></a>
+                        </div>
+                        <div class="l-news__header-title">
                             <span class="l-news__header-title-right"></span><a href="walls/wall-A17.html" target="_blank"><p>WALL</p></a>
                         </div>
                         <div class="l-news__header-title">
@@ -221,11 +224,11 @@
     <p class="dodge__message"><a target="_blank">One more time?</a></p>
     <img class="dodge__img" src="img/dodge.png" alt="Dodge want you to swipe!" width="383" height="468">
 </div>
-<div class="stone">
+<div id="stone" class="stone">
     <div class="stone-header">
 <!--        <div class="stone-container">-->
         <div class="stone-header__logo">
-            <img src="img/logo-stone.webp" width="235" height="300" class="stone-header__logo-img">Stone
+            <img src="img/logo-stone--white.webp" width="235" height="300" class="stone-header__logo-img">Stone
 <!--        </div>-->
         </div>
     </div>
@@ -476,7 +479,7 @@
                         </ul>
                     </div>
                     <div class="stone-footer__menu">
-                        <a class="stone-footer__menu-item">Сторінка в крамниці</a>
+                        <a class="js-to-top stone-footer__menu-item">Сторінка в крамниці</a>
                         <a href="walls/wall-A17.html" target="_blank" class="stone-footer__menu-item">Центр спільноти</a>
                         <a href="https://discord.gg/QN57zCd6" target="_blank" class="stone-footer__menu-item">Обговорення</a>
                         <a class="stone-footer__menu-item">Посібники</a>
@@ -735,6 +738,27 @@
         //     el: ".swiper-scrollbar",
         //     hide: true,
         // }
+    });
+</script>
+<script>
+    const stoneBlock = document.querySelector("#stone");
+    const stoneLink = document.querySelector(".js-scroll-to-stone");
+    const topLink = document.querySelector(".js-to-top");
+    stoneLink.addEventListener("click", () => {
+        console.log("stoneBlock.clientTop", stoneBlock.offsetTop);
+        window.scrollTo({
+            top: stoneBlock.offsetTop,
+            left: 0,
+            behavior: "smooth",
+        });
+    });
+    topLink.addEventListener("click", () => {
+        console.log("topLink.clientTop", topLink.offsetTop);
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: "smooth",
+        });
     });
 </script>
 <style>
