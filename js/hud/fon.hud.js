@@ -19,14 +19,14 @@ const NOKIA_MENUS = [
                 }
             }, {
                 href: "#",
-                text: "Fight Club",
+                text: "FC",
                 callback: (e) => {
                     e.preventDefault();
                     win77.lastHotline = initHotline(1);
                     const OPTION_LINES = ["Поклич Навіщо", "Бачив у вас хлопця з тату черепа на всю голову. Як його імя?"];
                     initDialogCli(createDialogDataObj(
                         OPTION_LINES,
-                        "Fight Club",
+                        "FC",
                         [
                             () => {
                                 win77.lastHotline = initHotline(0);
@@ -57,14 +57,14 @@ const NOKIA_MENUS = [
             },
             {
                 href: "#",
-                text: "Rick C-137",
+                text: "Rick",
                 callback: (e) => {
                     e.preventDefault();
                     win77.lastHotline = initHotline(2);
                     const OPTION_LINES = ["Давай, коли хочеш зустрітись?"];
                     initDialogCli(createDialogDataObj(
                         OPTION_LINES,
-                        "Rick C-137",
+                        "Rick",
                         [
                             () => {
                                 chooseOption(OPTION_LINES[0], "--blue");
