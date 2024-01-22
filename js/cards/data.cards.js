@@ -176,8 +176,8 @@ const initDNELootArr = () => {
     const initAvatar = (avatarObj) => {
         const AVATAR_LONGLINE = "";
         const AVATAR_SHORTLINE = ``;
-        const AVATAR_IMG_ID = `${avatarObj.img}`;
-        const AVATAR_IMG = `https://drive.google.com/uc?id=${AVATAR_IMG_ID}`;
+        const AVATAR_IMG_ID = `${avatarObj.id}`;
+        const AVATAR_IMG = `img/avatars/${AVATAR_IMG_ID}.jpg`;
 
         LootArr.push(new DNELootCard(`avatar-${avatarObj.id}`, "", AVATAR_LONGLINE, AVATAR_IMG, 0, 0, "", AVATAR_SHORTLINE, "", true, true, "avatar"));
     }
