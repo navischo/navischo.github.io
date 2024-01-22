@@ -924,273 +924,202 @@ const initDNELootArr = () => {
     //
     const PHANTOM_LIBERTY_ALBUM_LONGLINE = "";
     const PHANTOM_LIBERTY_ALBUM_SHORTLINE = `${STRINGS.ALBUM_LONGLINE_2}`;
-    const PHANTOM_LIBERTY_ALBUM_IMG_ID = `1c8NJyX34CRmxY8m6rtrXexueI_FS5EP0`;
-    const PHANTOM_LIBERTY_ALBUM_IMG = `https://drive.google.com/uc?id=${PHANTOM_LIBERTY_ALBUM_IMG_ID}`;
-
-    LootArr.push(new DNELootCard("album-phantom-liberty", "CYBERPUNK 2077: PHANTOM LIBERTY", PHANTOM_LIBERTY_ALBUM_LONGLINE, PHANTOM_LIBERTY_ALBUM_IMG, 4, 0, "Альбом, 54m Electronic Synthpunk Trip-Hop", PHANTOM_LIBERTY_ALBUM_SHORTLINE, "", true, true, "sound", "https://youtu.be/kHfhACP7ekY"));
+    LootArr.push(new DNELootCard("album-phantom-liberty", "CYBERPUNK 2077: PHANTOM LIBERTY", PHANTOM_LIBERTY_ALBUM_LONGLINE, "img/sound/album-phantom-liberty.png", 4, 0, "Альбом, 54m Electronic Synthpunk Trip-Hop", PHANTOM_LIBERTY_ALBUM_SHORTLINE, "", true, true, "sound", "https://youtu.be/kHfhACP7ekY"));
 
     // VESSEL
     //
     //
     const VESSEL_ALBUM_LONGLINE = "";
     const VESSEL_ALBUM_SHORTLINE = `${STRINGS.ALBUM_LONGLINE}`;
-    const VESSEL_ALBUM_IMG_ID = `1nvBWcTFxBurZesjhZUSxOPvzQN_bHKt9`;
-    const VESSEL_ALBUM_IMG = `https://drive.google.com/uc?id=${VESSEL_ALBUM_IMG_ID}`;
-
-    LootArr.push(new DNELootCard("album-vessel", "VESSEL", VESSEL_ALBUM_LONGLINE, VESSEL_ALBUM_IMG, 4, 400, "Альбом, 31m Electronic Ambient IDM", VESSEL_ALBUM_SHORTLINE, "", true, true, "sound", "https://youtube.com/playlist?list=OLAK5uy_nfqbc26YAtKKa4IpRLrWcTyhcaS6ws6_Q&si=q5mMofmeYJGrYOrf"));
+    LootArr.push(new DNELootCard("album-vessel", "VESSEL", VESSEL_ALBUM_LONGLINE, "img/sound/album-vessel.jpg", 4, 400, "Альбом, 31m Electronic Ambient IDM", VESSEL_ALBUM_SHORTLINE, "", true, true, "sound", "https://youtube.com/playlist?list=OLAK5uy_nfqbc26YAtKKa4IpRLrWcTyhcaS6ws6_Q&si=q5mMofmeYJGrYOrf"));
 
     // POSSESSION
     //
     //
     const POSSESSION_DEMO_LONGLINE = "";
     const POSSESSION_DEMO_SHORTLINE = `${STRINGS.DEMO_LONGLINE}`;
-    const POSSESSION_DEMO_IMG_ID = `1XZsw5zZvvgKv3Dbie-fbnwbdQ5lO9-te`;
-    const POSSESSION_DEMO_IMG = `https://drive.google.com/uc?id=${POSSESSION_DEMO_IMG_ID}`;
-
-    LootArr.push(new DNELootCard("demo-possession", "POSSESSION", POSSESSION_DEMO_LONGLINE, POSSESSION_DEMO_IMG, 4, 800, "Демо, 61m Hardcore Techno Gabber", POSSESSION_DEMO_SHORTLINE, "", true, true, "sound", "https://www.youtube.com/live/pZhUS_q4jkc"));
+    LootArr.push(new DNELootCard("demo-possession", "POSSESSION", POSSESSION_DEMO_LONGLINE, "img/sound/demo-posession.jpg", 4, 800, "Демо, 61m Hardcore Techno Gabber", POSSESSION_DEMO_SHORTLINE, "", true, true, "sound", "https://www.youtube.com/live/pZhUS_q4jkc"));
 
     // MISSION_LONDON
     //
     //
     const MISSION_LONDON_DEMO_LONGLINE = "";
     const MISSION_LONDON_DEMO_SHORTLINE = `${STRINGS.DEMO_LONGLINE}`;
-    const MISSION_LONDON_DEMO_IMG_ID = `1SdpIwmPXKuip-aylc06hNCJBX4swxcGb`;
-    const MISSION_LONDON_DEMO_IMG = `https://drive.google.com/uc?id=${MISSION_LONDON_DEMO_IMG_ID}`;
-
-    LootArr.push(new DNELootCard("demo-mission-london", "MISSION LONDON", MISSION_LONDON_DEMO_LONGLINE, MISSION_LONDON_DEMO_IMG, 4, 500, "Демо, 57m Dark Electro", MISSION_LONDON_DEMO_SHORTLINE, "", true, true, "sound", "https://www.youtube.com/live/dvIIszC5DuY"));
+    LootArr.push(new DNELootCard("demo-mission-london", "MISSION LONDON", MISSION_LONDON_DEMO_LONGLINE, "img/sound/demo-mission-london.jpg", 4, 500, "Демо, 57m Dark Electro", MISSION_LONDON_DEMO_SHORTLINE, "", true, true, "sound", "https://www.youtube.com/live/dvIIszC5DuY"));
 
     // Демо Autonomous aka Slam
-    LootArr.push(new DNELootCard("demo-tweeman", "TWEEMAN", "Демо дає можливість показати лейблам що ти хочеш записати. Можливо тобі навіть вдасться знайти простір з якісною аппаратурою, зробити якісний реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", "https://lh3.googleusercontent.com/IAON5k2AY0ZW5M--oM4njhEfQDFvLYJCFN9mRIzdpVZJHYlLCNVakDyu5bCnr9_lWAI=w2400", 3, 500, "Демо, 56m of Electro", STRINGS.DEMO_LONGLINE, "", true, true, "sound", "https://www.youtube.com/live/EMliZzkRHCg"));
-    LootArr.push(new DNELootCard("demo-autonomous-aka-slam", "Autonomous aka Slam", "Демо дає можливість показати лейблам що ти хочеш записати. Можливо тобі навіть вдасться знайти простір з якісною аппаратурою, зробити якісний реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", "https://lh5.googleusercontent.com/2vnBrdPitfEB2W0Ygvco65SUPsQgeX6k_EKmvXsAG1AIVMMDrK27f4cHGdZGIAVc26U=w2400", 5, "2K", "Демо, 56m of Electro", STRINGS.DEMO_LONGLINE, "", true, true, "sound", "https://www.youtube.com/live/grVIOY9Mv88"));
+    LootArr.push(new DNELootCard("demo-tweeman", "TWEEMAN", "Демо дає можливість показати лейблам що ти хочеш записати. Можливо тобі навіть вдасться знайти простір з якісною аппаратурою, зробити якісний реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", "img/sound/demo-tweeman.jpg", 3, 500, "Демо, 56m of Electro", STRINGS.DEMO_LONGLINE, "", true, true, "sound", "https://www.youtube.com/live/EMliZzkRHCg"));
+    LootArr.push(new DNELootCard("demo-autonomous-aka-slam", "Autonomous aka Slam", "Демо дає можливість показати лейблам що ти хочеш записати. Можливо тобі навіть вдасться знайти простір з якісною аппаратурою, зробити якісний реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", "img/sound/demo-autonomus.jpg", 5, "2K", "Демо, 56m of Electro", STRINGS.DEMO_LONGLINE, "", true, true, "sound", "https://www.youtube.com/live/grVIOY9Mv88"));
     // Демо Jing
-    LootArr.push(new DNELootCard("demo-jing", "Jing", "Демо дає можливість показати лейблам що ти хочеш записати. Лейб HOR має високу репутацію, його демо значно збільшує шанси знайти простір з якісною аппаратурою, зробити якісний реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", "https://lh5.googleusercontent.com/dnU_1kJofGM8L6FcyZFY9FIV7X0XMmt6NZjqHRI5eDv4Tybe2MNQSydfpaLst9BGqLE=w2400", 2, 500, "Демо, 54m of Electro", STRINGS.DEMO_LONGLINE_SHORT, "", true, true, "sound", "https://www.youtube.com/live/z0iYJX-zTeg"));
+    LootArr.push(new DNELootCard("demo-jing", "Jing", "Демо дає можливість показати лейблам що ти хочеш записати. Лейб HOR має високу репутацію, його демо значно збільшує шанси знайти простір з якісною аппаратурою, зробити якісний реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", "img/sound/demo-jing.jpg", 2, 500, "Демо, 54m of Electro", STRINGS.DEMO_LONGLINE_SHORT, "", true, true, "sound", "https://www.youtube.com/live/z0iYJX-zTeg"));
     // Демо Courtesy
-    LootArr.push(new DNELootCard("demo-courtesy", "Courtesy", "Демо дає можливість показати лейблам що ти хочеш записати. Лейб HOR має високу репутацію, його демо значно збільшує шанси знайти простір з якісною аппаратурою, зробити якісний реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", "https://lh3.googleusercontent.com/y4b77JEBzft41_41hPiZq8c6OCAVHL5LTgR9KTRpvgbEAoXOwnMxmlCFiOnb77xP79g=w2400", 2, 500, "Демо, 60m of Electro", STRINGS.DEMO_LONGLINE_SHORT, "", true, true, "sound", "https://www.youtube.com/live/yEgV-alFoIU"));
+    LootArr.push(new DNELootCard("demo-courtesy", "Courtesy", "Демо дає можливість показати лейблам що ти хочеш записати. Лейб HOR має високу репутацію, його демо значно збільшує шанси знайти простір з якісною аппаратурою, зробити якісний реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", "img/sound/demo-сourtesy.jpg", 2, 500, "Демо, 60m of Electro", STRINGS.DEMO_LONGLINE_SHORT, "", true, true, "sound", "https://www.youtube.com/live/yEgV-alFoIU"));
     // Демо Jelz
-    LootArr.push(new DNELootCard("demo-jelz", "Jelz", "Демо дає можливість показати лейблам що ти хочеш записати. Лейб HOR має високу репутацію, його демо значно збільшує шанси знайти простір з якісною аппаратурою, зробити якісний реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", "https://lh4.googleusercontent.com/SOPjuttKgwgX32fw4edtKqsp2m_bLG2udIOAjbDpIx4KMmYqdvrKvhqcdZ1tOj1ZM-w=w2400", 2, 500, "Демо, 55m of Electro", STRINGS.DEMO_LONGLINE_SHORT, "", true, true, "sound", "https://youtu.be/bmkUxv_oK68"));
+    LootArr.push(new DNELootCard("demo-jelz", "Jelz", "Демо дає можливість показати лейблам що ти хочеш записати. Лейб HOR має високу репутацію, його демо значно збільшує шанси знайти простір з якісною аппаратурою, зробити якісний реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", "img/sound/demo-jelz.jpg", 2, 500, "Демо, 55m of Electro", STRINGS.DEMO_LONGLINE_SHORT, "", true, true, "sound", "https://youtu.be/bmkUxv_oK68"));
     // Демо Lolsnake
-    LootArr.push(new DNELootCard("demo-lolsnake", "Lolsnake", "Демо дає можливість показати лейблам що ти хочеш записати. Лейб HOR має високу репутацію, його демо значно збільшує шанси знайти простір з якісною аппаратурою, зробити якісний реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", "https://lh3.googleusercontent.com/WZCoPBbHswgpsjBut2HcOcG4Vh0PExeuzccaB1Y5bjwMEqNUVz2ekEprLCQ4tbpXLro=w2400", 2, 500, "Демо, 55m of Electro", STRINGS.DEMO_LONGLINE_SHORT, "", true, true, "sound", "https://www.youtube.com/live/qv9uFfDZ3kM"));
+    LootArr.push(new DNELootCard("demo-lolsnake", "Lolsnake", "Демо дає можливість показати лейблам що ти хочеш записати. Лейб HOR має високу репутацію, його демо значно збільшує шанси знайти простір з якісною аппаратурою, зробити якісний реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", "img/sound/demo-lolsnake.jpg", 2, 500, "Демо, 55m of Electro", STRINGS.DEMO_LONGLINE_SHORT, "", true, true, "sound", "https://www.youtube.com/live/qv9uFfDZ3kM"));
     // Демо Marum B2B High Future
-    LootArr.push(new DNELootCard("demo-marum-future", "Marum B2B High Future", "Демо дає можливість показати лейблам що ти хочеш записати. Можливо тобі навіть вдасться знайти простір з якісною аппаратурою, зробити якісний реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", "https://lh5.googleusercontent.com/Cliugw88-JyXPoBiDMB4MPEr-7DaoXJcSyMGh8gaJwxJ1PGefd5x9NrrXVERtueXvjQ=w2400", 4, "1K", "Демо, 122m of Electro", STRINGS.DEMO_LONGLINE_SHORT, "", true, true, "sound", "https://www.youtube.com/live/LCIEDrKtsS8"));
+    LootArr.push(new DNELootCard("demo-marum-future", "Marum B2B High Future", "Демо дає можливість показати лейблам що ти хочеш записати. Можливо тобі навіть вдасться знайти простір з якісною аппаратурою, зробити якісний реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", "img/sound/demo-marum-future.jpg", 4, "1K", "Демо, 122m of Electro", STRINGS.DEMO_LONGLINE_SHORT, "", true, true, "sound", "https://www.youtube.com/live/LCIEDrKtsS8"));
     // Демо Paris Smith
-    LootArr.push(new DNELootCard("demo-smith", "Paris Smith", "Демо дає можливість показати лейблам що ти хочеш записати. Лейб HOR має високу репутацію, його демо значно збільшує шанси знайти простір з якісною аппаратурою, зробити якісний реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", "https://lh3.googleusercontent.com/ujfWek1eUoapCHAgwX0B84jl78OuvjbEHwPvtkNNbCdKWEIshqHsdwrnWdqLinBMLIU=w2400", 2, 500, "Демо, 54m of Electro", STRINGS.DEMO_LONGLINE_SHORT_2, "", true, true, "sound", "https://www.youtube.com/live/oMIDuNHIxhY"));
+    LootArr.push(new DNELootCard("demo-smith", "Paris Smith", "Демо дає можливість показати лейблам що ти хочеш записати. Лейб HOR має високу репутацію, його демо значно збільшує шанси знайти простір з якісною аппаратурою, зробити якісний реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", "img/sound/demo-paris-smith.jpg", 2, 500, "Демо, 54m of Electro", STRINGS.DEMO_LONGLINE_SHORT_2, "", true, true, "sound", "https://www.youtube.com/live/oMIDuNHIxhY"));
 
     // Fracture
     //
     //
     const FRACTURE_DEMO_LONGLINE = "";
     const FRACTURE_DEMO_SHORTLINE = `${STRINGS.DEMO_LONGLINE}`;
-    const FRACTURE_DEMO_IMG_ID = `1A9Jrpxg8D5sJw40lgxvPaHKq8q6x0TFw`;
-    const FRACTURE_DEMO_IMG = `https://drive.google.com/uc?id=${FRACTURE_DEMO_IMG_ID}`;
-
-    LootArr.push(new DNELootCard("demo-fracture", "Fracture", FRACTURE_DEMO_LONGLINE, FRACTURE_DEMO_IMG, 5, "4K", "Демо, 55m of Electro", FRACTURE_DEMO_SHORTLINE, "", true, true, "sound", "https://www.youtube.com/live/ah6g-aoXcY8"));
+    LootArr.push(new DNELootCard("demo-fracture", "Fracture", FRACTURE_DEMO_LONGLINE, "img/sound/demo-fracture.jpg", 5, "4K", "Демо, 55m of Electro", FRACTURE_DEMO_SHORTLINE, "", true, true, "sound", "https://www.youtube.com/live/ah6g-aoXcY8"));
 
     // Nite Fleit
     //
     //
     const NITE_FLEIT_DEMO_LONGLINE = "";
     const NITE_FLEIT_DEMO_SHORTLINE = `${STRINGS.DEMO_LONGLINE}`;
-    const NITE_FLEIT_DEMO_IMG_ID = `1WqyqS1RPqjHheQccGZ8vuR6_z89HfaDa`;
-    const NITE_FLEIT_DEMO_IMG = `https://drive.google.com/uc?id=${NITE_FLEIT_DEMO_IMG_ID}`;
-
-    LootArr.push(new DNELootCard("demo-nite-fleit", "Nite Fleit", NITE_FLEIT_DEMO_LONGLINE, NITE_FLEIT_DEMO_IMG, 2, 500, "Демо, 54m of Electro", NITE_FLEIT_DEMO_SHORTLINE, "", true, true, "sound", "https://www.youtube.com/live/_KlvpRSSU8A"));
+    LootArr.push(new DNELootCard("demo-nite-fleit", "Nite Fleit", NITE_FLEIT_DEMO_LONGLINE, "img/sound/demo-nite-fleit.jpg", 2, 500, "Демо, 54m of Electro", NITE_FLEIT_DEMO_SHORTLINE, "", true, true, "sound", "https://www.youtube.com/live/_KlvpRSSU8A"));
 
     // Operation Madness
     //
     //
     const MADNESS_DEMO_LONGLINE = "";
     const MADNESS_DEMO_SHORTLINE = `${STRINGS.DEMO_LONGLINE}`;
-    const MADNESS_DEMO_IMG_ID = `1g__G2RZpDSGnPPV-3Q5IDcFbngB9cTgr`;
-    const MADNESS_DEMO_IMG = `https://drive.google.com/uc?id=${MADNESS_DEMO_IMG_ID}`;
-
-    LootArr.push(new DNELootCard("demo-madness", "Operation Madness", MADNESS_DEMO_LONGLINE, MADNESS_DEMO_IMG, 2, 500, "Демо, 55m of Electro", MADNESS_DEMO_SHORTLINE, "", true, true, "sound", "https://www.youtube.com/live/GuQ60ZlYDlo"));
+    LootArr.push(new DNELootCard("demo-madness", "Operation Madness", MADNESS_DEMO_LONGLINE, "img/sound/demo-madness.jpg", 2, 500, "Демо, 55m of Electro", MADNESS_DEMO_SHORTLINE, "", true, true, "sound", "https://www.youtube.com/live/GuQ60ZlYDlo"));
 
     // Sim0ne
     //
     //
     const SIMONA_DEMO_LONGLINE = "";
     const SIMONA_DEMO_SHORTLINE = `${STRINGS.DEMO_LONGLINE}`;
-    const SIMONA_DEMO_IMG_ID = `1i_XzHA78FqWh0lEGchGYyngxJE_tvWJ0`;
-    const SIMONA_DEMO_IMG = `https://drive.google.com/uc?id=${SIMONA_DEMO_IMG_ID}`;
-
-    LootArr.push(new DNELootCard("demo-sim0ne", "Sim0ne", SIMONA_DEMO_LONGLINE, SIMONA_DEMO_IMG, 3, "1K", "Демо, 54m of Electro", SIMONA_DEMO_SHORTLINE, "", true, true, "sound", "https://www.youtube.com/live/JQhB2GdEDRE"));
+    LootArr.push(new DNELootCard("demo-sim0ne", "Sim0ne", SIMONA_DEMO_LONGLINE, "img/sound/demo-sim0ne.jpg", 3, "1K", "Демо, 54m of Electro", SIMONA_DEMO_SHORTLINE, "", true, true, "sound", "https://www.youtube.com/live/JQhB2GdEDRE"));
 
     // Oneman
     //
     //
     const ONEMAN_DEMO_LONGLINE = "";
     const ONEMAN_DEMO_SHORTLINE = `${STRINGS.DEMO_LONGLINE}`;
-    const ONEMAN_DEMO_IMG_ID = `1KRRpkeM82gFld3FPTOk0TfTI4joZgOG1`;
-    const ONEMAN_DEMO_IMG = `https://drive.google.com/uc?id=${ONEMAN_DEMO_IMG_ID}`;
-
-    LootArr.push(new DNELootCard("demo-oneman", "Oneman", ONEMAN_DEMO_LONGLINE, ONEMAN_DEMO_IMG, 3, "1K", "Демо, 56m of Electro", ONEMAN_DEMO_SHORTLINE, "", true, true, "sound", "https://www.youtube.com/live/4uQWqqTsJ2U"));
+    LootArr.push(new DNELootCard("demo-oneman", "Oneman", ONEMAN_DEMO_LONGLINE, "img/sound/demo-oneman.jpg", 3, "1K", "Демо, 56m of Electro", ONEMAN_DEMO_SHORTLINE, "", true, true, "sound", "https://www.youtube.com/live/4uQWqqTsJ2U"));
 
     // DJ Perception
     //
     //
     const DJ_PERCEPTION_DEMO_LONGLINE = "";
     const DJ_PERCEPTION_DEMO_SHORTLINE = `${STRINGS.DEMO_LONGLINE}`;
-    const DJ_PERCEPTION_DEMO_IMG_ID = `1Axtle-9Z6QBxA6KbUpLmKZp9JlmQkAsd`;
-    const DJ_PERCEPTION_DEMO_IMG = `https://drive.google.com/uc?id=${DJ_PERCEPTION_DEMO_IMG_ID}`;
-
-    LootArr.push(new DNELootCard("demo-dj-perception", "DJ Perception", DJ_PERCEPTION_DEMO_LONGLINE, DJ_PERCEPTION_DEMO_IMG, 3, "1K", "Демо, 56m of Electro", DJ_PERCEPTION_DEMO_SHORTLINE, "", true, true, "sound", "https://www.youtube.com/live/8HoAazS_12Y"));
+    LootArr.push(new DNELootCard("demo-dj-perception", "DJ Perception", DJ_PERCEPTION_DEMO_LONGLINE, "img/sound/demo-dj-perception.jpg", 3, "1K", "Демо, 56m of Electro", DJ_PERCEPTION_DEMO_SHORTLINE, "", true, true, "sound", "https://www.youtube.com/live/8HoAazS_12Y"));
 
     // Jordss
     //
     //
     const LORDSS_DEMO_LONGLINE = "";
     const LORDSS_DEMO_SHORTLINE = `${STRINGS.DEMO_LONGLINE}`;
-    const LORDSS_DEMO_IMG_ID = `1u7NTPZf6QoFFF-zAkulLmN82OvTYvcGo`;
-    const LORDSS_DEMO_IMG = `https://drive.google.com/uc?id=${LORDSS_DEMO_IMG_ID}`;
-
-    LootArr.push(new DNELootCard("demo-jordss", "Jordss", LORDSS_DEMO_LONGLINE, LORDSS_DEMO_IMG, 3, "1K", "Демо, 54m of Electro", LORDSS_DEMO_SHORTLINE, "", true, true, "sound", "https://www.youtube.com/live/peHfDBoEpAA"));
+    LootArr.push(new DNELootCard("demo-jordss", "Jordss", LORDSS_DEMO_LONGLINE, "img/sound/demo-jordss.jpg", 3, "1K", "Демо, 54m of Electro", LORDSS_DEMO_SHORTLINE, "", true, true, "sound", "https://www.youtube.com/live/peHfDBoEpAA"));
 
     // Neffa T & Flowdan
     //
     //
     const NEFFA_T_DEMO_LONGLINE = "";
     const NEFFA_T_DEMO_SHORTLINE = `${STRINGS.DEMO_LONGLINE}`;
-    const NEFFA_T_DEMO_IMG_ID = `1pRUh6PagZ_VYsU2X5R2LeDW8lQI8MmGd`;
-    const NEFFA_T_DEMO_IMG = `https://drive.google.com/uc?id=${NEFFA_T_DEMO_IMG_ID}`;
-
-    LootArr.push(new DNELootCard("demo-neffa-t", "Neffa T & Flowdan", NEFFA_T_DEMO_LONGLINE, NEFFA_T_DEMO_IMG, 3, "1K", "Демо, 55m of Electro", NEFFA_T_DEMO_SHORTLINE, "", true, true, "sound", "https://www.youtube.com/live/_Cg0FM42lKo"));
+    LootArr.push(new DNELootCard("demo-neffa-t", "Neffa T & Flowdan", NEFFA_T_DEMO_LONGLINE, "img/sound/demo-neffa-t.jpg", 3, "1K", "Демо, 55m of Electro", NEFFA_T_DEMO_SHORTLINE, "", true, true, "sound", "https://www.youtube.com/live/_Cg0FM42lKo"));
 
     // Nastya Muravyova
     // /
     //
     const MURAVYOVA_DEMO_LONGLINE = "";
     const MURAVYOVA_DEMO_SHORTLINE = `${STRINGS.DEMO_LONGLINE}`;
-    const MURAVYOVA_DEMO_IMG_ID = `1JhB6cT3DFC5Z9x_ukDdArZS15TNxRui_`;
-    const MURAVYOVA_DEMO_IMG = `https://drive.google.com/uc?id=${MURAVYOVA_DEMO_IMG_ID}`;
-
-    LootArr.push(new DNELootCard("demo-muravyova", "Nastya Muravyova", MURAVYOVA_DEMO_LONGLINE, MURAVYOVA_DEMO_IMG, 4, "5K", "Демо, 54m of Electro", MURAVYOVA_DEMO_SHORTLINE, "", true, true, "sound", "https://www.youtube.com/live/WEBfIRFuTUw"));
+    LootArr.push(new DNELootCard("demo-muravyova", "Nastya Muravyova", MURAVYOVA_DEMO_LONGLINE, "img/sound/demo-muravyova.jpg", 4, "5K", "Демо, 54m of Electro", MURAVYOVA_DEMO_SHORTLINE, "", true, true, "sound", "https://www.youtube.com/live/WEBfIRFuTUw"));
 
     // Wallflower
     //
     //
     const WALLFLOWER_DEMO_LONGLINE = "";
     const WALLFLOWER_DEMO_SHORTLINE = `${STRINGS.DEMO_LONGLINE}`;
-    const WALLFLOWER_DEMO_IMG_ID = `1gaDgx6O1Q0NtEYXDA44nU0ZNHNqVpf00`;
-    const WALLFLOWER_DEMO_IMG = `https://drive.google.com/uc?id=${WALLFLOWER_DEMO_IMG_ID}`;
-
-    LootArr.push(new DNELootCard("demo-wallflower", "Wallflower", WALLFLOWER_DEMO_LONGLINE, WALLFLOWER_DEMO_IMG, 4, "5K", "Демо, 55m of Electro", WALLFLOWER_DEMO_SHORTLINE, "", true, true, "sound", "https://www.youtube.com/live/GwCw9WShNYM"));
+    LootArr.push(new DNELootCard("demo-wallflower", "Wallflower", WALLFLOWER_DEMO_LONGLINE, "img/sound/demo-wallflower.jpg", 4, "5K", "Демо, 55m of Electro", WALLFLOWER_DEMO_SHORTLINE, "", true, true, "sound", "https://www.youtube.com/live/GwCw9WShNYM"));
 
     // Sol Ortega
     //
     //
     const SOL_ORTEGA_DEMO_LONGLINE = "";
     const SOL_ORTEGA_DEMO_SHORTLINE = `${STRINGS.DEMO_LONGLINE}`;
-    const SOL_ORTEGA_DEMO_IMG_ID = `1_lBS5BECqdiEoPadA9JlpeUwIlr_Cn16`;
-    const SOL_ORTEGA_DEMO_IMG = `https://drive.google.com/uc?id=${SOL_ORTEGA_DEMO_IMG_ID}`;
-
-    LootArr.push(new DNELootCard("demo-sol-ortega", "Sol Ortega", SOL_ORTEGA_DEMO_LONGLINE, SOL_ORTEGA_DEMO_IMG, 4, "5K", "Демо, 55m of Electro", SOL_ORTEGA_DEMO_SHORTLINE, "", true, true, "sound", "https://www.youtube.com/live/8VDVV8peqT8"));
+    LootArr.push(new DNELootCard("demo-sol-ortega", "Sol Ortega", SOL_ORTEGA_DEMO_LONGLINE, "img/sound/demo-sol-ortega.jpg", 4, "5K", "Демо, 55m of Electro", SOL_ORTEGA_DEMO_SHORTLINE, "", true, true, "sound", "https://www.youtube.com/live/8VDVV8peqT8"));
 
     // Hex Electronix
     //
     //
     const HEX_DEMO_LONGLINE = "";
     const HEX_DEMO_SHORTLINE = `${STRINGS.DEMO_LONGLINE}`;
-    const HEX_DEMO_IMG_ID = `1l3vS3k3hdmkOdc1jlXG3JhZBeKMJYMXL`;
-    const HEX_DEMO_IMG = `https://drive.google.com/uc?id=${HEX_DEMO_IMG_ID}`;
-
-    LootArr.push(new DNELootCard("demo-hex-electronix", "Hex Electronix", HEX_DEMO_LONGLINE, HEX_DEMO_IMG, 4, "4K", "Демо, 53m of Electro", HEX_DEMO_SHORTLINE, "", true, true, "sound", "https://www.youtube.com/live/cwPLgNQz5jE?si=OvuW8Zn0KD4kIPyq"));
+    LootArr.push(new DNELootCard("demo-hex-electronic", "Hex Electronix", HEX_DEMO_LONGLINE, "img/sound/demo-hex-electronic.jpg", 4, "4K", "Демо, 53m of Electro", HEX_DEMO_SHORTLINE, "", true, true, "sound", "https://www.youtube.com/live/cwPLgNQz5jE?si=OvuW8Zn0KD4kIPyq"));
 
     // Thom Yorke
     //
     //
     const YORKE_DEMO_LONGLINE = "";
     const YORKE_DEMO_SHORTLINE = `${STRINGS.DEMO_LONGLINE}`;
-    const YORKE_DEMO_IMG_ID = `1aolL5UYFf-XvE6Xb_Bjups5uT6XgR297`;
-    const YORKE_DEMO_IMG = `https://drive.google.com/uc?id=${YORKE_DEMO_IMG_ID}`;
+    LootArr.push(new DNELootCard("demo-thom-yorke", "Thom Yorke", YORKE_DEMO_LONGLINE, "img/sound/demo-thom-yorke.jpg", 7, "10K", "Демо, 32m of Experimental Electro", YORKE_DEMO_SHORTLINE, "", true, true, "sound", "https://youtu.be/qt-ohn5C3kU"));
 
-    LootArr.push(new DNELootCard("demo-thom-yorke", "Thom Yorke", YORKE_DEMO_LONGLINE, YORKE_DEMO_IMG, 7, "10K", "Демо, 32m of Experimental Electro", YORKE_DEMO_SHORTLINE, "", true, true, "sound", "https://youtu.be/qt-ohn5C3kU"));
-
-    LootArr.push(new DNELootCard("demo-deep-lofi-house", "DEEP LOFI HOUSE MIX", "Демо дає можливість показати лейблам що ти хочеш записати. Лейб HOR має високу репутацію, його демо значно збільшує шанси знайти простір з якісною аппаратурою, зробити якісний реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", "https://lh6.googleusercontent.com/zS10ZYBzZeDDdkakdAlyyddKA8ReOm8k7aWpxpGmQPmDi3WzPt_UZtEnPqBvjCkSbw8=w2400", 1, 0, "Демо, 67m of Deep Lo-Fi House", STRINGS.DEMO_LONGLINE_SHORT_2, "", true, true, "sound", "https://youtu.be/yL06_XP4o-s"));
-    LootArr.push(new DNELootCard("demo-tony-approved", "TONY SAYS FCKUIN' APPROVED", "Демо дає можливість показати лейблам що ти хочеш записати. Лейб HOR має високу репутацію, його демо значно збільшує шанси знайти простір з якісною аппаратурою, зробити якісний реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", "https://lh3.googleusercontent.com/j77ixolnmMZ8P1Tlc4rWE6bSDqKHhs8N1mOrk6ZhY4gcE3-9383hsnIDfOm3dLfp5TY=w2400", 1, 0, "Демо, 59m of Lo-Fi House", STRINGS.DEMO_LONGLINE_SHORT_2, "", true, true, "sound", "https://youtu.be/9qFWNOgq2Fg"));
+    LootArr.push(new DNELootCard("demo-deep-lofi-house", "DEEP LOFI HOUSE MIX", "Демо дає можливість показати лейблам що ти хочеш записати. Лейб HOR має високу репутацію, його демо значно збільшує шанси знайти простір з якісною аппаратурою, зробити якісний реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", "img/sound/demo-deep-lofi-house.jpg", 1, 0, "Демо, 67m of Deep Lo-Fi House", STRINGS.DEMO_LONGLINE_SHORT_2, "", true, true, "sound", "https://youtu.be/yL06_XP4o-s"));
+    LootArr.push(new DNELootCard("demo-tony-approved", "TONY SAYS FCKUIN' APPROVED", "Демо дає можливість показати лейблам що ти хочеш записати. Лейб HOR має високу репутацію, його демо значно збільшує шанси знайти простір з якісною аппаратурою, зробити якісний реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", "img/sound/demo-tony-approved.jpg", 1, 0, "Демо, 59m of Lo-Fi House", STRINGS.DEMO_LONGLINE_SHORT_2, "", true, true, "sound", "https://youtu.be/9qFWNOgq2Fg"));
 
     // Bless
     //
     //
     const BLESS_LONGLINE = "";
     const BLESS_SHORTLINE = `${STRINGS.ALBUM_LONGLINE}`;
-    const BLESS_IMG_ID = `17ySMJ9XBO2oAYE6TdKy0YNmxyEIM-60M`;
-    const BLESS_IMG = `https://drive.google.com/uc?id=${BLESS_IMG_ID}`;
+    LootArr.push(new DNELootCard("album-bless-vol-1", "Bless vol.1", BLESS_LONGLINE, "img/sound/album-bless-vol-1.jpg", 3, 0, "Альбом, 199m of Lo-Fi Hip-Hop Jazz", BLESS_SHORTLINE, "", true, true, "sound", "https://youtu.be/WWZAwSWSLPo"));
 
-    LootArr.push(new DNELootCard("album-bless-vol-1", "Bless vol.1", BLESS_LONGLINE, BLESS_IMG, 3, 0, "Альбом, 199m of Lo-Fi Hip-Hop Jazz", BLESS_SHORTLINE, "", true, true, "sound", "https://youtu.be/WWZAwSWSLPo"));
-
-    LootArr.push(new DNELootCard("demo-before-sunrise", "Before Sunrise", "Демо дає можливість показати лейблам що ти хочеш записати. Можливо тобі пощастить знайти простір з якісною аппаратурою, зробити реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", "https://lh3.googleusercontent.com/kKnxkDw2YetuwFER1oXirDF3nXcyWI65_TwrFa3JlFSCoF2rhv4MRDVWfpQsZIr9O9Y=w2400", 1, 0, "Демо, 65m of Deep House", STRINGS.DEMO_LONGLINE_SHORT_2, "", true, true, "sound", "https://youtu.be/Glg4SiSX_xk"));
-    LootArr.push(new DNELootCard("demo-sub-zero", "Sub Zero", "Демо дає можливість показати лейблам що ти хочеш записати. Можливо тобі пощастить знайти простір з якісною аппаратурою, зробити реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", "https://lh5.googleusercontent.com/Z_4RM0MnEAAoy5LStyg6qJ3ghcVaGteTda7dlLWb61i9ZwGqhpfBqUNifGcLBjCOqG8=w2400", 1, 0, "Демо, 12m of Hardcore Techno Gabber", STRINGS.DEMO_LONGLINE_SHORT_2, "", true, true, "sound", "https://soundcloud.com/zzza4em/sets/mp3-7"));
+    LootArr.push(new DNELootCard("album-before-sunrise", "Before Sunrise", "Демо дає можливість показати лейблам що ти хочеш записати. Можливо тобі пощастить знайти простір з якісною аппаратурою, зробити реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", "img/sound/album-before-sunrise.png", 1, 0, "Демо, 65m of Deep House", STRINGS.DEMO_LONGLINE_SHORT_2, "", true, true, "sound", "https://youtu.be/Glg4SiSX_xk"));
+    LootArr.push(new DNELootCard("demo-sub-zero", "Sub Zero", "Демо дає можливість показати лейблам що ти хочеш записати. Можливо тобі пощастить знайти простір з якісною аппаратурою, зробити реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", "img/sound/demo-sub-zero.jpg", 1, 0, "Демо, 12m of Hardcore Techno Gabber", STRINGS.DEMO_LONGLINE_SHORT_2, "", true, true, "sound", "https://soundcloud.com/zzza4em/sets/mp3-7"));
 
     // Артем Ікра каже Так
     //
     //
     const DEMO_IKRA_SAYS_YES_LONGLINE = "";
     const DEMO_IKRA_SAYS_YES_SHORTLINE = `${STRINGS.DEMO_LONGLINE}`;
-    const DEMO_IKRA_SAYS_YES_IMG = `https://lh6.googleusercontent.com/jdHH6etnr0P9mZ9yWcJPTSEWRZzG86vkqY1Z7SwjsGYSchuIVPA21i8vtKJr7XZh49Q=w2400`;
-
-    LootArr.push(new DNELootCard("demo-ikra-says-yes", "Артем Ікра каже Так", DEMO_IKRA_SAYS_YES_LONGLINE, DEMO_IKRA_SAYS_YES_IMG, 2, "NYP", "Демо, 57m of Electro", DEMO_IKRA_SAYS_YES_SHORTLINE, "", true, true, "sound", "https://soundcloud.com/yesbelgrade/artem-ikra-says-yes"));
+    LootArr.push(new DNELootCard("demo-ikra-says-yes", "Артем Ікра каже Так", DEMO_IKRA_SAYS_YES_LONGLINE, "img/sound/demo-ikra-says-yes.jpg", 2, "NYP", "Демо, 57m of Electro", DEMO_IKRA_SAYS_YES_SHORTLINE, "", true, true, "sound", "https://soundcloud.com/yesbelgrade/artem-ikra-says-yes"));
 
     // Apex Twin Sleep
     //
     //
     const DEMO_APEX_TWIN_SLEEP_LONGLINE = "";
     const DEMO_APEX_TWIN_SLEEP_SHORTLINE = `${STRINGS.DEMO_LONGLINE}`;
-    const DEMO_APEX_TWIN_SLEEP_IMG_ID = `1dP3tk9yUqix5nsr2_C4qO3Pw5eogxwFl`;
-    const DEMO_APEX_TWIN_SLEEP_IMG = `https://drive.google.com/uc?id=${DEMO_APEX_TWIN_SLEEP_IMG_ID}`;
-
-    LootArr.push(new DNELootCard("demo-apex-twin-sleep", "Apex Twin Sleep", DEMO_APEX_TWIN_SLEEP_LONGLINE, DEMO_APEX_TWIN_SLEEP_IMG, 2, 0, "Демо, 101m of Electronic Ambient", DEMO_APEX_TWIN_SLEEP_SHORTLINE, "", true, true, "sound", "https://youtu.be/NUNrgiDfPq8"));
+    LootArr.push(new DNELootCard("demo-apex-twin-sleep", "Apex Twin Sleep", DEMO_APEX_TWIN_SLEEP_LONGLINE, "img/sound/demo-sleep-mix.jpg", 2, 0, "Демо, 101m of Electronic Ambient", DEMO_APEX_TWIN_SLEEP_SHORTLINE, "", true, true, "sound", "https://youtu.be/NUNrgiDfPq8"));
 
 
-    // Артем Ікра каже Так
+    // PHONK CLOUD
     //
     //
     const DEMO_PHONK_CLOUD_LONGLINE = "";
     const DEMO_PHONK_CLOUD_SHORTLINE = `${STRINGS.DEMO_LONGLINE}`;
-    const DEMO_PHONK_CLOUD_IMG_ID = `1B37KkLOfMuupjVEjkswSKNI4cDoBzTkk`;
-    const DEMO_PHONK_CLOUD_IMG = `https://drive.google.com/uc?id=${DEMO_PHONK_CLOUD_IMG_ID}`;
-
-    LootArr.push(new DNELootCard("demo-phonk-cloud", "PHONK CLOUD", DEMO_PHONK_CLOUD_LONGLINE, DEMO_PHONK_CLOUD_IMG, 2, "NYP", "Демо, 10m of Cloud Phonk", DEMO_PHONK_CLOUD_SHORTLINE, "", true, true, "sound", "https://youtu.be/a1m1-4JVyAM"));
+    LootArr.push(new DNELootCard("demo-phonk-cloud", "PHONK CLOUD", DEMO_PHONK_CLOUD_LONGLINE, "img/sound/demo-phonk-cloud.jpg", 2, "NYP", "Демо, 10m of Cloud Phonk", DEMO_PHONK_CLOUD_SHORTLINE, "", true, true, "sound", "https://youtu.be/a1m1-4JVyAM"));
 
 
-    LootArr.push(new DNELootCard("demo-phonk-fridays-004", "PHONK FRIDAY 004", "Демо дає можливість показати лейблам що ти хочеш записати. Можливо тобі пощастить знайти простір з якісною аппаратурою, зробити реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", "https://lh6.googleusercontent.com/HJJfm6UflRH1Ni8xdUN0gqQj64-u7zHb_EkxbfIcPmM5-fITgv26JAxCRbEyBIvKYrE=w2400", 1, 0, "Демо, 104m of Cloud Phonk Trap", STRINGS.DEMO_LONGLINE_SHORT_2, "", true, true, "sound", "https://www.youtube.com/live/oHthm7EwGoU"));
-    LootArr.push(new DNELootCard("demo-phonk-fridays-005", "PHONK FRIDAY 005", "Демо дає можливість показати лейблам що ти хочеш записати. Можливо тобі пощастить знайти простір з якісною аппаратурою, зробити реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", "https://lh3.googleusercontent.com/3AkmwPXRJNR2QT6tUsAjora1RjsOX6ZcIIclJBNdsZJJuxxj3ly-hcQ5tFRRKRyszwE=w2400", 1, 0, "Демо, 103m of Abstract Phonk Trap", STRINGS.DEMO_LONGLINE_SHORT_2, "", true, true, "sound", "https://www.youtube.com/live/_Cd1O44Vft0"));
-    LootArr.push(new DNELootCard("demo-phonk-fridays-007", "PHONK FRIDAY 007", "Демо дає можливість показати лейблам що ти хочеш записати. Можливо тобі пощастить знайти простір з якісною аппаратурою, зробити реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", "https://lh3.googleusercontent.com/sp2zgiifWGm-MEh6_gEmBkeDDv1FG78eGaGGxt5INCQWUXKQWS_SXAR-yJ0iGsUWhyk=w2400", 1, 0, "Демо, 118m of Abstract Phonk Trap", STRINGS.DEMO_LONGLINE_SHORT_2, "", true, true, "sound", "https://www.youtube.com/live/x7L4lyhfDyM"));
-    LootArr.push(new DNELootCard("demo-phonk-fridays-008", "PHONK FRIDAY 008", "Демо дає можливість показати лейблам що ти хочеш записати. Можливо тобі пощастить знайти простір з якісною аппаратурою, зробити реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", "https://lh5.googleusercontent.com/csTzzLvd16H9ObuyzI-GMbYohdFyOYCgL5GkRwrx84XKOsCuwqwHf-wC3LPYS_olhKI=w2400", 1, 0, "Демо, 116m of Abstract Phonk Trap", STRINGS.DEMO_LONGLINE_SHORT_2, "", true, true, "sound", "https://youtu.be/h36L3a1p5Sc"));
-    LootArr.push(new DNELootCard("demo-phonk-fridays-009", "PHONK FRIDAY 009", "Демо дає можливість показати лейблам що ти хочеш записати. Можливо тобі пощастить знайти простір з якісною аппаратурою, зробити реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", "https://lh6.googleusercontent.com/e2LACEK48rqCbVwFxfKqulPCICUxhFNY_MfqPx-RLgBYDATA364mw4j-xm6mN9ky2fg=w2400", 3, 0, "Демо, 113m of Meta Phonk Trap", STRINGS.DEMO_LONGLINE_SHORT_2, "", true, true, "sound", "https://www.youtube.com/live/oqsU1f3s_QU"));
+    LootArr.push(new DNELootCard("demo-phonk-fridays-004", "PHONK FRIDAY 004", "Демо дає можливість показати лейблам що ти хочеш записати. Можливо тобі пощастить знайти простір з якісною аппаратурою, зробити реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", "img/sound/demo-phonk-friday-004.png", 1, 0, "Демо, 104m of Cloud Phonk Trap", STRINGS.DEMO_LONGLINE_SHORT_2, "", true, true, "sound", "https://www.youtube.com/live/oHthm7EwGoU"));
+    LootArr.push(new DNELootCard("demo-phonk-fridays-005", "PHONK FRIDAY 005", "Демо дає можливість показати лейблам що ти хочеш записати. Можливо тобі пощастить знайти простір з якісною аппаратурою, зробити реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", "img/sound/demo-phonk-friday-005.png", 1, 0, "Демо, 103m of Abstract Phonk Trap", STRINGS.DEMO_LONGLINE_SHORT_2, "", true, true, "sound", "https://www.youtube.com/live/_Cd1O44Vft0"));
+    LootArr.push(new DNELootCard("demo-phonk-fridays-007", "PHONK FRIDAY 007", "Демо дає можливість показати лейблам що ти хочеш записати. Можливо тобі пощастить знайти простір з якісною аппаратурою, зробити реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", "img/sound/demo-phonk-friday-007.png", 1, 0, "Демо, 118m of Abstract Phonk Trap", STRINGS.DEMO_LONGLINE_SHORT_2, "", true, true, "sound", "https://www.youtube.com/live/x7L4lyhfDyM"));
+    LootArr.push(new DNELootCard("demo-phonk-fridays-008", "PHONK FRIDAY 008", "Демо дає можливість показати лейблам що ти хочеш записати. Можливо тобі пощастить знайти простір з якісною аппаратурою, зробити реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", "img/sound/demo-phonk-friday-008.jpg", 1, 0, "Демо, 116m of Abstract Phonk Trap", STRINGS.DEMO_LONGLINE_SHORT_2, "", true, true, "sound", "https://youtu.be/h36L3a1p5Sc"));
+    LootArr.push(new DNELootCard("demo-phonk-fridays-009", "PHONK FRIDAY 009", "Демо дає можливість показати лейблам що ти хочеш записати. Можливо тобі пощастить знайти простір з якісною аппаратурою, зробити реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", "img/sound/demo-phonk-friday-009.jpg", 3, 0, "Демо, 113m of Meta Phonk Trap", STRINGS.DEMO_LONGLINE_SHORT_2, "", true, true, "sound", "https://www.youtube.com/live/oqsU1f3s_QU"));
 
     // Phonk Fridays 010
     //
     //
     const PHONK_FRIDAYS_10_DEMO_LONGLINE = "";
     const PHONK_FRIDAYS_10_DEMO_SHORTLINE = `${STRINGS.DEMO_LONGLINE}`;
-    const PHONK_FRIDAYS_10_DEMO_IMG_ID = `1jQfsUHvlTHax0n8Bi3qs2Mh44bG3Z0uB`;
-    const PHONK_FRIDAYS_10_DEMO_IMG = `https://drive.google.com/uc?id=${PHONK_FRIDAYS_10_DEMO_IMG_ID}`;
-
-    LootArr.push(new DNELootCard("demo-phonk-fridays-010", "PHONK FRIDAY 010", PHONK_FRIDAYS_10_DEMO_LONGLINE, PHONK_FRIDAYS_10_DEMO_IMG, 1, 0, "Демо, 23m of  of Phonk Trap", PHONK_FRIDAYS_10_DEMO_SHORTLINE, "", true, true, "sound", "https://youtu.be/4ezZb_ftCrQ"));
+    LootArr.push(new DNELootCard("demo-phonk-fridays-010", "PHONK FRIDAY 010", PHONK_FRIDAYS_10_DEMO_LONGLINE, "img/sound/demo-phonk-friday-010.jpg", 1, 0, "Демо, 23m of  of Phonk Trap", PHONK_FRIDAYS_10_DEMO_SHORTLINE, "", true, true, "sound", "https://youtu.be/4ezZb_ftCrQ"));
 
     // Phonk Fridays 010
     //
     //
     const HIGH_ALONE_DEMO_LONGLINE = "";
     const HIGH_ALONE_DEMO_SHORTLINE = `${STRINGS.DEMO_LONGLINE}`;
-    const HIGH_ALONE_DEMO_IMG_ID = `1RtjUJpVo4KL26W7Or9Yx9FifD1dJ6b4X`;
-    const HIGH_ALONE_DEMO_IMG = `https://drive.google.com/uc?id=${HIGH_ALONE_DEMO_IMG_ID}`;
-
-    LootArr.push(new DNELootCard("demo-high-alone", "HIGH ALONE", HIGH_ALONE_DEMO_LONGLINE, HIGH_ALONE_DEMO_IMG, 2, 0, "Демо, 31m of  of Dark Phonk Trap", HIGH_ALONE_DEMO_SHORTLINE, "", true, true, "sound", "https://youtu.be/VSYceN99B44"));
+    LootArr.push(new DNELootCard("demo-high-alone", "HIGH ALONE", HIGH_ALONE_DEMO_LONGLINE, "img/sound/demo-high-alone.jpg", 2, 0, "Демо, 31m of  of Dark Phonk Trap", HIGH_ALONE_DEMO_SHORTLINE, "", true, true, "sound", "https://youtu.be/VSYceN99B44"));
 
 
-    LootArr.push(new DNELootCard("demo-dark-trap-777", "DARK TRAP.MP4: chapter 777", "Демо дає можливість показати лейблам що ти хочеш записати. Можливо тобі пощастить знайти простір з якісною аппаратурою, зробити реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", "https://lh4.googleusercontent.com/qmFc7i2PSqCqjCIED70uRF_VmrIce-CcjcFB30MWX5pGk9mqW4Gk3PZvG16erTbEnSQ=w2400", 1, 0, "Демо, 43m of Dark Trap", STRINGS.DEMO_LONGLINE_SHORT_2, "", true, true, "sound", "https://youtu.be/fqQ33fAGWfE"));
-    LootArr.push(new DNELootCard("demo-dark-trap-4", "DARK TRAP.MP4: chapter 4", "Демо дає можливість показати лейблам що ти хочеш записати. Можливо тобі пощастить знайти простір з якісною аппаратурою, зробити реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", "https://lh5.googleusercontent.com/VEUpXmwQGG__0UeqGcwM_oQjd2tUXeJFBCznYB39MANkhwB5H0-GkErhSub_O3i1rD8=w2400", 1, 0, "Демо, 35m of Dark Trap", STRINGS.DEMO_LONGLINE_SHORT_2, "", true, true, "sound", "https://youtu.be/OWcDNVDsIJw"));
+    LootArr.push(new DNELootCard("demo-dark-trap-777", "DARK TRAP.MP4: chapter 777", "Демо дає можливість показати лейблам що ти хочеш записати. Можливо тобі пощастить знайти простір з якісною аппаратурою, зробити реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", "img/sound/demo-dark-trap-777.jpg", 1, 0, "Демо, 43m of Dark Trap", STRINGS.DEMO_LONGLINE_SHORT_2, "", true, true, "sound", "https://youtu.be/fqQ33fAGWfE"));
+    LootArr.push(new DNELootCard("demo-dark-trap-4", "DARK TRAP.MP4: chapter 4", "Демо дає можливість показати лейблам що ти хочеш записати. Можливо тобі пощастить знайти простір з якісною аппаратурою, зробити реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", "img/sound/demo-dark-trap-4.png", 1, 0, "Демо, 35m of Dark Trap", STRINGS.DEMO_LONGLINE_SHORT_2, "", true, true, "sound", "https://youtu.be/OWcDNVDsIJw"));
 
     // World of horror
     //
     //
     const WORLD_OF_HORROR_DEMO_LONGLINE = "";
     const WORLD_OF_HORROR_DEMO_SHORTLINE = `${STRINGS.DEMO_LONGLINE}`;
-    const WORLD_OF_HORROR_DEMO_IMG_ID = `1xkcSoZA6t-ZbKCuzc9vi4SWg-qg6XeYn`;
-    const WORLD_OF_HORROR_DEMO_IMG = `https://drive.google.com/uc?id=${WORLD_OF_HORROR_DEMO_IMG_ID}`;
-
-    LootArr.push(new DNELootCard("demo-world-of-horror", "World of horror", WORLD_OF_HORROR_DEMO_LONGLINE, WORLD_OF_HORROR_DEMO_IMG, 2, 0, "Демо, 87m of Dark Lo-Fi", WORLD_OF_HORROR_DEMO_SHORTLINE, "", true, true, "sound", "https://youtu.be/3eTj9l8uCW4"));
+    LootArr.push(new DNELootCard("demo-world-of-horror", "World of horror", WORLD_OF_HORROR_DEMO_LONGLINE, "img/sound/demo-world-of-horror.jpg", 2, 0, "Демо, 87m of Dark Lo-Fi", WORLD_OF_HORROR_DEMO_SHORTLINE, "", true, true, "sound", "https://youtu.be/3eTj9l8uCW4"));
 
 
 
@@ -1199,23 +1128,17 @@ const initDNELootArr = () => {
     //
     const FIGHT_CLUB_DEMO_LONGLINE = "";
     const FIGHT_CLUB_DEMO_SHORTLINE = `${STRINGS.DEMO_LONGLINE}`;
-    const FIGHT_CLUB_DEMO_IMG_ID = `16aurwje2LlkdOJ9wAEKV0DEaqCb2lw8l`;
-    const FIGHT_CLUB_DEMO_IMG = `https://drive.google.com/uc?id=${FIGHT_CLUB_DEMO_IMG_ID}`;
-
-    LootArr.push(new DNELootCard("demo-fight-club", "FIGHT CLUB", FIGHT_CLUB_DEMO_LONGLINE, FIGHT_CLUB_DEMO_IMG, 3, 0, "Демо, 60m of Dark Electronic", FIGHT_CLUB_DEMO_SHORTLINE, "", true, true, "sound", "https://youtu.be/4nRm9Khlz6o"));
+    LootArr.push(new DNELootCard("demo-fight-club", "FIGHT CLUB", FIGHT_CLUB_DEMO_LONGLINE, "img/sound/demo-fight-club.jpg", 3, 0, "Демо, 60m of Dark Electronic", FIGHT_CLUB_DEMO_SHORTLINE, "", true, true, "sound", "https://youtu.be/4nRm9Khlz6o"));
 
 
-    LootArr.push(new DNELootCard("demo-micks-tape", "The Mick's Tape", "Демо дає можливість показати лейблам що ти хочеш записати. Можливо тобі пощастить знайти простір з якісною аппаратурою, зробити реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу. Бонус цього демо подвоюється, якщо його грати на окремій Rock сцені.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії.", "https://lh3.googleusercontent.com/GTqOwUdDzk7TZP5nxVFsqoFmwH_NbpP-hPYRvAaJqEBfq_BUTDhk_LJ79jQ0R2ORoZA=w2400", 2, 0, "Демо, 54m of Dark Synth Rock", STRINGS.DEMO_LONGLINE, "", true, true, "sound", "https://youtu.be/QH0MkaXpwDQ"));
+    LootArr.push(new DNELootCard("demo-micks-tape", "The Mick's Tape", "Демо дає можливість показати лейблам що ти хочеш записати. Можливо тобі пощастить знайти простір з якісною аппаратурою, зробити реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу. Бонус цього демо подвоюється, якщо його грати на окремій Rock сцені.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії.", "img/sound/demo-micks-tape.jpg", 2, 0, "Демо, 54m of Dark Synth Rock", STRINGS.DEMO_LONGLINE, "", true, true, "sound", "https://youtu.be/QH0MkaXpwDQ"));
 
     // Journey into abstract
     //
     //
     const JOURNEY_INTO_ABSTRACT_DEMO_LONGLINE = "";
     const JOURNEY_INTO_ABSTRACT_DEMO_SHORTLINE = ``;
-    const JOURNEY_INTO_ABSTRACT_DEMO_IMG_ID = `1PXGKpjTVI4VH8-db5LDC3y2tEPvjiq6G`;
-    const JOURNEY_INTO_ABSTRACT_DEMO_IMG = `https://drive.google.com/uc?id=${JOURNEY_INTO_ABSTRACT_DEMO_IMG_ID}`;
-
-    LootArr.push(new DNELootCard("demo-journey-into-abstract", "A Journey Into Abstract Hip-Hop", JOURNEY_INTO_ABSTRACT_DEMO_LONGLINE, JOURNEY_INTO_ABSTRACT_DEMO_IMG, 3, "NYP", "Альбом, 70m of Abstract Hip-Hop", JOURNEY_INTO_ABSTRACT_DEMO_SHORTLINE, "", true, true, "sound", "https://youtu.be/3q8nGnls1Ow"));
+    LootArr.push(new DNELootCard("demo-journey-into-abstract", "A Journey Into Abstract Hip-Hop", JOURNEY_INTO_ABSTRACT_DEMO_LONGLINE, "img/sound/album-journey-into-abstract.png", 3, "NYP", "Альбом, 70m of Abstract Hip-Hop", JOURNEY_INTO_ABSTRACT_DEMO_SHORTLINE, "", true, true, "sound", "https://youtu.be/3q8nGnls1Ow"));
 
     LootArr.push(new DNELootCard("demo-in-your-head", "ITS ALL IN YOUR HEAD", "Демо дає можливість показати лейблам що ти хочеш записати. Можливо тобі пощастить знайти простір з якісною аппаратурою, зробити реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії.", "https://lh6.googleusercontent.com/HJN6_sWjfFOE5DjBxDZJfYGMFyFDJBiuT5N2WXZ7Z7hwhc89laKTrNgsc5fuaSz_FbI=w2400", 1, 0, "Демо, 40m of Vaporwave Barberbeat"));
 
@@ -1224,46 +1147,34 @@ const initDNELootArr = () => {
     //
     const DEEP_INTO_YOUR_EYES_DEMO_LONGLINE = "";
     const DEEP_INTO_YOUR_EYES_DEMO_SHORTLINE = `${STRINGS.DEMO_LONGLINE}`;
-    const DEEP_INTO_YOUR_EYES_DEMO_IMG_ID = `11X3kpazkngu_wPZ3QDybIVh6GnpmGKFT`;
-    const DEEP_INTO_YOUR_EYES_DEMO_IMG = `https://drive.google.com/uc?id=${DEEP_INTO_YOUR_EYES_DEMO_IMG_ID}`;
+    LootArr.push(new DNELootCard("demo-deep-into-your-eyes", "Deep into your eyes", DEEP_INTO_YOUR_EYES_DEMO_LONGLINE, "img/sound/demo-deep-into-your-eyes.jpg", 3, 0, "Альбом, 147m of Psybient Psychill Trip", DEEP_INTO_YOUR_EYES_DEMO_SHORTLINE, "", true, true, "sound", "https://youtu.be/csOMNHiV7Yo"));
 
-    LootArr.push(new DNELootCard("demo-deep-into-your-eyes", "Deep into your eyes", DEEP_INTO_YOUR_EYES_DEMO_LONGLINE, DEEP_INTO_YOUR_EYES_DEMO_IMG, 3, 0, "Альбом, 147m of Psybient Psychill Trip", DEEP_INTO_YOUR_EYES_DEMO_SHORTLINE, "", true, true, "sound", "https://youtu.be/csOMNHiV7Yo"));
-
-    LootArr.push(new DNELootCard("demo-chill-out", "CHILL OUT DOPE", "Демо дає можливість показати лейблам що ти хочеш записати. Можливо тобі пощастить знайти простір з якісною аппаратурою, зробити реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу. Бонус цього демо подвоюється, якщо його грати на окремій Ambient сцені.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії.", "https://lh6.googleusercontent.com/xZrSeC4nKTJfqaqOD2dJuGkd0GkhAdLUYUlYbYRRFOZbaXLwU08jYSRq1oPq6xm2_j8=w2400", 3, 0, "Демо, 150m of Deep Stoned Ambient Chillwave", STRINGS.DEMO_LONGLINE, "", true, true, "sound", "https://youtu.be/kGG6atEiWA4"));
-    LootArr.push(new DNELootCard("demo-mac-lofi", "If Mac Miller made a <br>Lo-Fi radio", "Демо дає можливість показати лейблам що ти хочеш записати. Можливо тобі пощастить знайти простір з якісною аппаратурою, зробити реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу. Бонус цього демо подвоюється, якщо його грати на окремій Rock сцені.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії.", "https://lh6.googleusercontent.com/__TE5qiVZ8radplr9C-_nNYXPxYLNgh0s7zZiY3Cb2LdI2cBdy5o0zp_geoHeMHLIo4=w2400", 2, 0, "Демо, 45m of Lo-Fi Hip-Hop", STRINGS.DEMO_LONGLINE, "", true, true, "sound", "https://youtu.be/1Z9BD5B0EJo"));
-    LootArr.push(new DNELootCard("demo-420mix", "420MIX💨", "Демо дає можливість показати лейблам що ти хочеш записати. Можливо тобі пощастить знайти простір з якісною аппаратурою, зробити реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу. Бонус цього демо подвоюється, якщо його грати на окремій Rock сцені.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії.", "https://lh3.googleusercontent.com/DltYV5OGu4XExGUf1xrquZh4Kyukc7urY0ON2gft_m1QxFPgZWAWkSVn07P54gEq-Hk=w2400", 2, 0, "Демо, 27m of Lo-Fi Trippy Hip-Hop", STRINGS.DEMO_LONGLINE, "", true, true, "sound", "https://youtu.be/n0kyzGMe-mM"));
-    LootArr.push(new DNELootCard("demo-best-weed-songs", "BEST W SONGS", "Демо дає можливість показати лейблам що ти хочеш записати. Можливо тобі пощастить знайти простір з якісною аппаратурою, зробити реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу. Бонус цього демо подвоюється, якщо його грати на окремій Rock сцені.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії.", "https://lh4.googleusercontent.com/RdTE8C75wDup2GNbRdPS0MYH9hMzzEZ8pK6adWOOsxsmSJP-cJOqPtYqNxURuDEWDL0=w2400", 2, 0, "Демо, 56m of Classic 90s Stoner Hip-Hop", STRINGS.DEMO_LONGLINE, "", true, true, "sound", "https://youtu.be/S6iHskdjGb8"));
-    LootArr.push(new DNELootCard("album-iron-horse", "Iron Horse", "Альбом дає можливість поставити музику просто зараз. Це може бути цей самий альбом, або будь-який інший. Спробуй заробити гроші, використавши його під час вечірки, запису трансляції, сету або мікстейпу. Бонус цього демо подвоюється, якщо його грати на окремій Rock сцені.<br> Комбінуй альбоми в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", "https://lh4.googleusercontent.com/aQFjkqVVes7TM3o5-ar3XiL-bR-bXy7ap8IGqzG1XSTJAGo_WOoZ1u-OIJx7LDFUg4Y=w2400", 1, 0, "Альбом, 44m of Psychodelic Rock", STRINGS.ALBUM_LONGLINE, "", true, true, "sound", "https://youtu.be/-gXrS6eKfjk"));
-    LootArr.push(new DNELootCard("demo-driftin-4", "D R I F T I N 4", "Демо дає можливість показати лейблам що ти хочеш записати. Можливо тобі пощастить знайти простір з якісною аппаратурою, зробити реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу. Бонус цього демо подвоюється, якщо його грати на окремій Rock сцені.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії.", "https://lh3.googleusercontent.com/MQ6U8FWLiJNjYhhJI2xJdOukxaapEH5P9DGD3tJKz9MAdNovEKjCobIdZK1-m-si8Ig=w2400", 1, 0, "Демо, 52m of Phonk Trap", STRINGS.DEMO_LONGLINE, "", true, true, "sound", "https://youtu.be/tmqiH813lns"));
-    LootArr.push(new DNELootCard("demo-phonk-sesh-4", "P H O N K <br>S E S H 4", "Демо дає можливість показати лейблам що ти хочеш записати. Можливо тобі пощастить знайти простір з якісною аппаратурою, зробити реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу. Бонус цього демо подвоюється, якщо його грати на окремій Rock сцені.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії.", "https://lh4.googleusercontent.com/654SFzeubpegErNPhQDo5wdrUdd4EaggVTxLdCTI2g24W8MjOGNGY3D5nsDCmOr0K40=w2400", 1, 0, "Демо, 85m of Phonk Trap", STRINGS.DEMO_LONGLINE, "", true, true, "sound", "https://youtu.be/f292QkgJMYc"));
-    LootArr.push(new DNELootCard("demo-enter-void", "ENTER THE VOID 2", "Демо дає можливість показати лейблам що ти хочеш записати. Можливо тобі пощастить знайти простір з якісною аппаратурою, зробити реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу. Бонус цього демо подвоюється, якщо його грати на окремій Rock сцені.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії.", "https://lh3.googleusercontent.com/SWCAFtVMEBd7flzl7L1olK6xDf_N5kHOs8kUHDiqB0_BVZDj9wDM13JdnekFX4AB9Xk=w2400", 1, 0, "Демо, 18m of Experimental Ambient", STRINGS.DEMO_LONGLINE, "", true, true, "sound", "https://youtu.be/aeIZnAaHL88"));
+    LootArr.push(new DNELootCard("demo-chill-out", "CHILL OUT DOPE", "Демо дає можливість показати лейблам що ти хочеш записати. Можливо тобі пощастить знайти простір з якісною аппаратурою, зробити реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу. Бонус цього демо подвоюється, якщо його грати на окремій Ambient сцені.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії.", "img/sound/demo-chillout-dope.jpg", 3, 0, "Демо, 150m of Deep Stoned Ambient Chillwave", STRINGS.DEMO_LONGLINE, "", true, true, "sound", "https://youtu.be/kGG6atEiWA4"));
+    LootArr.push(new DNELootCard("demo-mac-lofi", "If Mac Miller made a <br>Lo-Fi radio", "Демо дає можливість показати лейблам що ти хочеш записати. Можливо тобі пощастить знайти простір з якісною аппаратурою, зробити реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу. Бонус цього демо подвоюється, якщо його грати на окремій Rock сцені.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії.", "img/sound/demo-mac-lofi.jpg", 2, 0, "Демо, 45m of Lo-Fi Hip-Hop", STRINGS.DEMO_LONGLINE, "", true, true, "sound", "https://youtu.be/1Z9BD5B0EJo"));
+    LootArr.push(new DNELootCard("demo-420mix", "420MIX💨", "Демо дає можливість показати лейблам що ти хочеш записати. Можливо тобі пощастить знайти простір з якісною аппаратурою, зробити реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу. Бонус цього демо подвоюється, якщо його грати на окремій Rock сцені.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії.", "img/sound/demo-420-mix.jpg", 2, 0, "Демо, 27m of Lo-Fi Trippy Hip-Hop", STRINGS.DEMO_LONGLINE, "", true, true, "sound", "https://youtu.be/n0kyzGMe-mM"));
+    LootArr.push(new DNELootCard("demo-best-weed-songs", "BEST W SONGS", "Демо дає можливість показати лейблам що ти хочеш записати. Можливо тобі пощастить знайти простір з якісною аппаратурою, зробити реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу. Бонус цього демо подвоюється, якщо його грати на окремій Rock сцені.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії.", "img/sound/demo-best-weed-songs.jpg", 2, 0, "Демо, 56m of Classic 90s Stoner Hip-Hop", STRINGS.DEMO_LONGLINE, "", true, true, "sound", "https://youtu.be/S6iHskdjGb8"));
+    LootArr.push(new DNELootCard("album-iron-horse", "Iron Horse", "Альбом дає можливість поставити музику просто зараз. Це може бути цей самий альбом, або будь-який інший. Спробуй заробити гроші, використавши його під час вечірки, запису трансляції, сету або мікстейпу. Бонус цього демо подвоюється, якщо його грати на окремій Rock сцені.<br> Комбінуй альбоми в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", "img/sound/album-iron-horse.jpg", 1, 0, "Альбом, 44m of Psychodelic Rock", STRINGS.ALBUM_LONGLINE, "", true, true, "sound", "https://youtu.be/-gXrS6eKfjk"));
+    LootArr.push(new DNELootCard("demo-driftin-4", "D R I F T I N 4", "Демо дає можливість показати лейблам що ти хочеш записати. Можливо тобі пощастить знайти простір з якісною аппаратурою, зробити реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу. Бонус цього демо подвоюється, якщо його грати на окремій Rock сцені.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії.", "img/sound/demo-driftin-4.jpg", 1, 0, "Демо, 52m of Phonk Trap", STRINGS.DEMO_LONGLINE, "", true, true, "sound", "https://youtu.be/tmqiH813lns"));
+    LootArr.push(new DNELootCard("demo-phonk-sesh-4", "P H O N K <br>S E S H 4", "Демо дає можливість показати лейблам що ти хочеш записати. Можливо тобі пощастить знайти простір з якісною аппаратурою, зробити реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу. Бонус цього демо подвоюється, якщо його грати на окремій Rock сцені.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії.", "img/sound/demo-phonk-sesh.jpg", 1, 0, "Демо, 85m of Phonk Trap", STRINGS.DEMO_LONGLINE, "", true, true, "sound", "https://youtu.be/f292QkgJMYc"));
+    LootArr.push(new DNELootCard("demo-enter-void", "ENTER THE VOID 2", "Демо дає можливість показати лейблам що ти хочеш записати. Можливо тобі пощастить знайти простір з якісною аппаратурою, зробити реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу. Бонус цього демо подвоюється, якщо його грати на окремій Rock сцені.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії.", "img/sound/demo-enter-void-2.jpg", 1, 0, "Демо, 18m of Experimental Ambient", STRINGS.DEMO_LONGLINE, "", true, true, "sound", "https://youtu.be/aeIZnAaHL88"));
 
     // Phonk Fridays 010
     //
     //
     const CYBER_PHONK_DEMO_LONGLINE = "";
     const CYBER_PHONK_DEMO_SHORTLINE = `${STRINGS.DEMO_LONGLINE}`;
-    const CYBER_PHONK_DEMO_IMG_ID = `1YB2SvhUkEr2l4QBxztc8zNbCSZxN9NFc`;
-    const CYBER_PHONK_DEMO_IMG = `https://drive.google.com/uc?id=${CYBER_PHONK_DEMO_IMG_ID}`;
+    LootArr.push(new DNELootCard("demo-cyber-phonk", "Cyberphonk", CYBER_PHONK_DEMO_LONGLINE, "img/sound/demo-cyber-phonk.jpg", 3, 0, "Демо, 28m of  of Phonk Trap Electronic", CYBER_PHONK_DEMO_SHORTLINE, "", true, true, "sound", "https://youtu.be/OhvmwTpiRIw"));
 
-    LootArr.push(new DNELootCard("demo-cyber-phonk", "Cyberphonk", CYBER_PHONK_DEMO_LONGLINE, CYBER_PHONK_DEMO_IMG, 3, 0, "Демо, 28m of  of Phonk Trap Electronic", CYBER_PHONK_DEMO_SHORTLINE, "", true, true, "sound", "https://youtu.be/OhvmwTpiRIw"));
-
-    const TRAPPIN_JAPAN_DEMO_IMG_ID = `1jICz5dgKLfs4Y-sATRuifkxgQtmfnhLX`;
-    const TRAPPIN_JAPAN_DEMO_IMG = `https://drive.google.com/uc?id=${TRAPPIN_JAPAN_DEMO_IMG_ID}`;
-
-    LootArr.push(new DNELootCard("demo-trappin-japan", "TRAPPIN IN JAPAN", "Демо дає можливість показати лейблам що ти хочеш записати. Можливо тобі пощастить знайти простір з якісною аппаратурою, зробити реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу. Бонус цього демо подвоюється, якщо його грати на окремій Rock сцені.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії.", `${TRAPPIN_JAPAN_DEMO_IMG}`, 1, 0, "Демо, 56m of Phonk<br> Vapor Trap", STRINGS.DEMO_LONGLINE, "", true, true, "sound", "https://youtu.be/T6w7MABthn4"));
-    LootArr.push(new DNELootCard("demo-trappin-japan-15", "TRAPPIN IN JAPAN 15", "Демо дає можливість показати лейблам що ти хочеш записати. Можливо тобі пощастить знайти простір з якісною аппаратурою, зробити реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу. Бонус цього демо подвоюється, якщо його грати на окремій Rock сцені.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії.", "https://lh3.googleusercontent.com/dLtfBGYLL2FMmBNcGlRdPGX1D-KYo6UQ1rXdtGZiabL4syg7AzmonpwvxaS9TKY_E7k=w2400", 1, 0, "Демо, 56m of Phonk<br> Vapor Trap", STRINGS.DEMO_LONGLINE, "", true, true, "sound", "https://youtu.be/k-5YFwXyAjc"));
-    LootArr.push(new DNELootCard("demo-trappin-japan-18", "TRAPPIN IN JAPAN 18", "Демо дає можливість показати лейблам що ти хочеш записати. Можливо тобі пощастить знайти простір з якісною аппаратурою, зробити реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу. Бонус цього демо подвоюється, якщо його грати на окремій Rock сцені.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії.", "https://lh3.googleusercontent.com/R8hhVznQZxCScNx3mClr50t-31uLZNNaVzHBSnwo8_Qg8T6sZmwjkXubNOfb1VMxOis=w2400", 1, 0, "Демо, 68m of Lo-Fi<br> Vapor Trap", STRINGS.DEMO_LONGLINE, "", true, true, "sound", "https://youtu.be/-mD_nqa2KJU"));
+    LootArr.push(new DNELootCard("demo-trappin-japan", "TRAPPIN IN JAPAN", "Демо дає можливість показати лейблам що ти хочеш записати. Можливо тобі пощастить знайти простір з якісною аппаратурою, зробити реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу. Бонус цього демо подвоюється, якщо його грати на окремій Rock сцені.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії.", `img/sound/demo-trappin-in-japan.jpg`, 1, 0, "Демо, 56m of Phonk<br> Vapor Trap", STRINGS.DEMO_LONGLINE, "", true, true, "sound", "https://youtu.be/T6w7MABthn4"));
+    LootArr.push(new DNELootCard("demo-trappin-japan-15", "TRAPPIN IN JAPAN 15", "Демо дає можливість показати лейблам що ти хочеш записати. Можливо тобі пощастить знайти простір з якісною аппаратурою, зробити реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу. Бонус цього демо подвоюється, якщо його грати на окремій Rock сцені.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії.", "img/sound/demo-trappin-in-japan-15.jpg", 1, 0, "Демо, 56m of Phonk<br> Vapor Trap", STRINGS.DEMO_LONGLINE, "", true, true, "sound", "https://youtu.be/k-5YFwXyAjc"));
+    LootArr.push(new DNELootCard("demo-trappin-japan-18", "TRAPPIN IN JAPAN 18", "Демо дає можливість показати лейблам що ти хочеш записати. Можливо тобі пощастить знайти простір з якісною аппаратурою, зробити реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу. Бонус цього демо подвоюється, якщо його грати на окремій Rock сцені.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії.", "img/sound/demo-trappin-in-japan-18.jpg", 1, 0, "Демо, 68m of Lo-Fi<br> Vapor Trap", STRINGS.DEMO_LONGLINE, "", true, true, "sound", "https://youtu.be/-mD_nqa2KJU"));
 
     // TRAPPIN IN JAPAN 2099
     //
     //
     const TRAPPIN_IN_JAPAN_2099_DEMO_LONGLINE = "";
     const TRAPPIN_IN_JAPAN_2099_DEMO_SHORTLINE = `${STRINGS.DEMO_LONGLINE}`;
-    const TRAPPIN_IN_JAPAN_2099_DEMO_IMG_ID = `1QO_n0BkDYl81Izws_tqzGxUbnKsKpCe-`;
-    const TRAPPIN_IN_JAPAN_2099_DEMO_IMG = `https://drive.google.com/uc?id=${TRAPPIN_IN_JAPAN_2099_DEMO_IMG_ID}`;
-
-    LootArr.push(new DNELootCard("demo-trappin-japan-2099", "TRAPPIN IN JAPAN 2099", TRAPPIN_IN_JAPAN_2099_DEMO_LONGLINE, TRAPPIN_IN_JAPAN_2099_DEMO_IMG, 3, 0, "Демо, 66m of  of Phonk Trap", TRAPPIN_IN_JAPAN_2099_DEMO_SHORTLINE, "", true, true, "sound", "https://youtu.be/ewpL0YWBy_o"));
+    LootArr.push(new DNELootCard("demo-trappin-japan-2099", "TRAPPIN IN JAPAN 2099", TRAPPIN_IN_JAPAN_2099_DEMO_LONGLINE, "img/sound/demo-trappin-japan-2099.jpg", 3, 0, "Демо, 66m of  of Phonk Trap", TRAPPIN_IN_JAPAN_2099_DEMO_SHORTLINE, "", true, true, "sound", "https://youtu.be/ewpL0YWBy_o"));
 
 
     // TRAPPIN IN JAPAN 23
@@ -1271,26 +1182,17 @@ const initDNELootArr = () => {
     //
     const TRAPPIN_IN_JAPAN_23_DEMO_LONGLINE = "";
     const TRAPPIN_IN_JAPAN_23_DEMO_SHORTLINE = `${STRINGS.DEMO_LONGLINE}`;
-    const TRAPPIN_IN_JAPAN_23_DEMO_IMG_ID = `1cu7JQalnTiVFuiyfmmM13zQOzkUeXP2Z`;
-    const TRAPPIN_IN_JAPAN_23_DEMO_IMG = `https://drive.google.com/uc?id=${TRAPPIN_IN_JAPAN_23_DEMO_IMG_ID}`;
-
-    LootArr.push(new DNELootCard("demo-trappin-japan-23", "TRAPPIN IN JAPAN 23", TRAPPIN_IN_JAPAN_23_DEMO_LONGLINE, TRAPPIN_IN_JAPAN_23_DEMO_IMG, 3, 0, "Демо, 66m of  of Phonk Vapor Trap", TRAPPIN_IN_JAPAN_23_DEMO_SHORTLINE, "", true, true, "sound", "https://youtu.be/ZGjkh5VeIxs"));
+    LootArr.push(new DNELootCard("demo-trappin-japan-23", "TRAPPIN IN JAPAN 23", TRAPPIN_IN_JAPAN_23_DEMO_LONGLINE, "img/sound/demo-trappin-in-japan-23.jpg", 3, 0, "Демо, 66m of  of Phonk Vapor Trap", TRAPPIN_IN_JAPAN_23_DEMO_SHORTLINE, "", true, true, "sound", "https://youtu.be/ZGjkh5VeIxs"));
 
     // Phonk Fridays 010
     //
     //
     const TRAPPIN_IN_JAPAN_24_DISK_1_DEMO_LONGLINE = "";
     const TRAPPIN_IN_JAPAN_24_DISK_1_DEMO_SHORTLINE = `${STRINGS.DEMO_LONGLINE}`;
-    const TRAPPIN_IN_JAPAN_24_DISK_1_DEMO_IMG_ID = `1khOQdh8Wd2FfHJlRQrgnNDPawHGelQcv`;
-    const TRAPPIN_IN_JAPAN_24_DISK_1_DEMO_IMG = `https://drive.google.com/uc?id=${TRAPPIN_IN_JAPAN_24_DISK_1_DEMO_IMG_ID}`;
-
-    LootArr.push(new DNELootCard("demo-trappin-japan-24-disk-1", "TRAPPIN IN JAPAN 24 DISK 1", TRAPPIN_IN_JAPAN_24_DISK_1_DEMO_LONGLINE, TRAPPIN_IN_JAPAN_24_DISK_1_DEMO_IMG, 3, 0, "Демо, 45m of  of Phonk Vapor Trap", TRAPPIN_IN_JAPAN_24_DISK_1_DEMO_SHORTLINE, "", true, true, "sound", "https://youtu.be/cFH7-lE83io"));
+    LootArr.push(new DNELootCard("demo-trappin-japan-24-disk-1", "TRAPPIN IN JAPAN 24 DISK 1", TRAPPIN_IN_JAPAN_24_DISK_1_DEMO_LONGLINE, "img/sound/demo-trappin-japan-24-disk-1.jpg", 3, 0, "Демо, 45m of  of Phonk Vapor Trap", TRAPPIN_IN_JAPAN_24_DISK_1_DEMO_SHORTLINE, "", true, true, "sound", "https://youtu.be/cFH7-lE83io"));
 
 
-    const CYBERDREAM_DEMO_IMG_ID = `1vwSVvNU0yzCmHsCrXKtnVzOlQ8mPiPl7`;
-    const CYBERDREAM_DEMO_IMG = `https://drive.google.com/uc?id=${CYBERDREAM_DEMO_IMG_ID}`;
-
-    LootArr.push(new DNELootCard("demo-cyberdream", "CYBER DREAM", "Демо дає можливість показати лейблам що ти хочеш записати. Можливо тобі пощастить знайти простір з якісною аппаратурою, зробити реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу. Бонус цього демо подвоюється, якщо його грати на окремій Rock сцені.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії.", `${CYBERDREAM_DEMO_IMG}`, 2, 0, "Демо, 120m of Vapor Chillwave Synthwave", STRINGS.DEMO_LONGLINE, "", true, true, "sound", "https://youtu.be/yhCuCqJbOVE"));
+    LootArr.push(new DNELootCard("demo-cyberdream", "CYBER DREAM", "Демо дає можливість показати лейблам що ти хочеш записати. Можливо тобі пощастить знайти простір з якісною аппаратурою, зробити реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу. Бонус цього демо подвоюється, якщо його грати на окремій Rock сцені.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії.", `img/sound/demo-cyberdream.jpg`, 2, 0, "Демо, 120m of Vapor Chillwave Synthwave", STRINGS.DEMO_LONGLINE, "", true, true, "sound", "https://youtu.be/yhCuCqJbOVE"));
 
 
     // AMBIENT TECHNO MIX 003
@@ -1298,10 +1200,7 @@ const initDNELootArr = () => {
     //
     const AMBIENT_TECHNO_003_LONGLINE = "";
     const AMBIENT_TECHNO_003_SHORTLINE = `${STRINGS.DEMO_LONGLINE}`;
-    const AMBIENT_TECHNO_003_IMG_ID = `1OJDmbnrguvckqkYUZWlqufpGhqG9_omO`;
-    const AMBIENT_TECHNO_003_IMG = `https://drive.google.com/uc?id=${AMBIENT_TECHNO_003_IMG_ID}`;
-
-    LootArr.push(new DNELootCard("demo-ambient-techno-003", "AMBIENT TECHNO MIX 003", AMBIENT_TECHNO_003_LONGLINE, AMBIENT_TECHNO_003_IMG, 2, 0, "Демо, 96m of Ambient Techno", AMBIENT_TECHNO_003_SHORTLINE, "", true, true, "sound", "https://youtu.be/_TlmWBlYC8Q"));
+    LootArr.push(new DNELootCard("demo-ambient-techno-003", "AMBIENT TECHNO MIX 003", AMBIENT_TECHNO_003_LONGLINE, "img/sound/demo-ambient-techno-003.jpg", 2, 0, "Демо, 96m of Ambient Techno", AMBIENT_TECHNO_003_SHORTLINE, "", true, true, "sound", "https://youtu.be/_TlmWBlYC8Q"));
 
     // LootArr.push(new DNELootCard("demo-patience", "P A T I E N C E", "Демо дає можливість показати лейблам що ти хочеш записати. Можливо тобі пощастить знайти простір з якісною аппаратурою, зробити реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу. Бонус цього демо подвоюється, якщо його грати на окремій Rock сцені.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії.", "https://lh3.googleusercontent.com/R8hhVznQZxCScNx3mClr50t-31uLZNNaVzHBSnwo8_Qg8T6sZmwjkXubNOfb1VMxOis=w2400", 1, 0, "Демо, 68m of Lo-Fi<br> Vapor Trap", STRINGS.DEMO_LONGLINE, "", true, true, "sound"));
 
@@ -1310,19 +1209,14 @@ const initDNELootArr = () => {
     //
     const DEMO_PATIENCE_LONGLINE = "";
     const DEMO_PATIENCE_SHORTLINE = `${STRINGS.DEMO_LONGLINE}`;
-    const DEMO_PATIENCE_IMG = `https://lh3.googleusercontent.com/bcu13OJqk1khEZOvbIrxWXsCzvm1XSCgXy1G2wQHtgjapTpC394qTNhZmp2DucuMPCM=w2400`;
-
-    LootArr.push(new DNELootCard("demo-patience", "P A T I E N C E", DEMO_PATIENCE_LONGLINE, DEMO_PATIENCE_IMG, 2, 0, "Демо, 39m of Chillwave Synthwave Retrowave", DEMO_PATIENCE_SHORTLINE, "", true, true, "sound", "https://youtu.be/Vd-tURJ4ThM"));
+    LootArr.push(new DNELootCard("demo-patience", "P A T I E N C E", DEMO_PATIENCE_LONGLINE, "img/sound/demo-patience.jpg", 2, 0, "Демо, 39m of Chillwave Synthwave Retrowave", DEMO_PATIENCE_SHORTLINE, "", true, true, "sound", "https://youtu.be/Vd-tURJ4ThM"));
 
     // Royal noises from dead kingdoms
     //
     //
     const DEMO_CALM_DOWN_LONGLINE = "";
     const DEMO_CALM_DOWN_SHORTLINE = `${STRINGS.DEMO_LONGLINE}`;
-    const DEMO_CALM_DOWN_IMG_ID = `1JXhE690RzyUPRwI--jSlgpav7i9-U7ki`;
-    const DEMO_CALM_DOWN_IMG = `https://drive.google.com/uc?id=${DEMO_CALM_DOWN_IMG_ID}`;
-
-    LootArr.push(new DNELootCard("demo-calm-down", "Calm Down", DEMO_CALM_DOWN_LONGLINE, DEMO_CALM_DOWN_IMG, 1, 0, "Демо, 16m of Experimental Ambient", DEMO_CALM_DOWN_SHORTLINE, "", true, true, "sound", "https://youtu.be/6EnT0zeVJkw"));
+    LootArr.push(new DNELootCard("demo-calm-down", "Calm Down", DEMO_CALM_DOWN_LONGLINE, "img/sound/demo-calm-down.jpg", 1, 0, "Демо, 16m of Experimental Ambient", DEMO_CALM_DOWN_SHORTLINE, "", true, true, "sound", "https://youtu.be/6EnT0zeVJkw"));
 
 
     // Royal noises from dead kingdoms
@@ -1330,10 +1224,7 @@ const initDNELootArr = () => {
     //
     const ALBUM_ROYAL_NOISES_LONGLINE = "";
     const ALBUM_ROYAL_NOISES_SHORTLINE = ``;
-    const ALBUM_ROYAL_NOISES_IMG_ID = `1W0oKo1GPgLlv7Gl1KMYCBw_qLvqksNv7`;
-    const ALBUM_ROYAL_NOISES_IMG = `https://drive.google.com/uc?id=${ALBUM_ROYAL_NOISES_IMG_ID}`;
-
-    LootArr.push(new DNELootCard("album-royal-noises-from-dead-kingdoms", "Royal noises from dead kingdoms", ALBUM_ROYAL_NOISES_LONGLINE, ALBUM_ROYAL_NOISES_IMG, 2, 200, "Демо, 30m of Electronic Lo-Fi", ALBUM_ROYAL_NOISES_SHORTLINE, "", true, true, "sound"));
+    LootArr.push(new DNELootCard("album-royal-noises-from-dead-kingdoms", "Royal noises from dead kingdoms", ALBUM_ROYAL_NOISES_LONGLINE, "img/sound/album-royal-noises-from-dead-kingdoms.jpg", 2, 200, "Демо, 30m of Electronic Lo-Fi", ALBUM_ROYAL_NOISES_SHORTLINE, "", true, true, "sound"));
 
 
     // CHILL DUDE HERE
@@ -1341,20 +1232,14 @@ const initDNELootArr = () => {
     //
     const CHILL_DUDE_HERE_DEMO_LONGLINE = "";
     const CHILL_DUDE_HERE_DEMO_SHORTLINE = `${STRINGS.DEMO_LONGLINE}`;
-    const CHILL_DUDE_HERE_DEMO_IMG_ID = `1e983AlaSqeXDObvtCjPXw7yqFkqObTvb`;
-    const CHILL_DUDE_HERE_DEMO_IMG = `https://drive.google.com/uc?id=${CHILL_DUDE_HERE_DEMO_IMG_ID}`;
-
-    LootArr.push(new DNELootCard("demo-chill-dude-here", "CHILL DUDE HERE", CHILL_DUDE_HERE_DEMO_LONGLINE, CHILL_DUDE_HERE_DEMO_IMG, 2, 0, "Демо, 242m of Ambient Chillwave", CHILL_DUDE_HERE_DEMO_SHORTLINE, "", true, true, "sound"));
+    LootArr.push(new DNELootCard("demo-chill-dude-here", "CHILL DUDE HERE", CHILL_DUDE_HERE_DEMO_LONGLINE, "img/sound/demo-chill-dude-here.jpg", 2, 0, "Демо, 242m of Ambient Chillwave", CHILL_DUDE_HERE_DEMO_SHORTLINE, "", true, true, "sound"));
 
     // Bardcore for Dungeons & Dragons Chaos
     //
     //
     const BARDCORE_FOR_DND_DEMO_LONGLINE = "";
     const BARDCORE_FOR_DND_DEMO_SHORTLINE = `${STRINGS.DEMO_LONGLINE_SHORT}`;
-    const BARDCORE_FOR_DND_DEMO_IMG_ID = `172geHf2iriwbIWK1NBF3zwdQf-wJTBAh`;
-    const BARDCORE_FOR_DND_DEMO_IMG = `https://drive.google.com/uc?id=${BARDCORE_FOR_DND_DEMO_IMG_ID}`;
-
-    LootArr.push(new DNELootCard("demo-bardcore-for-dnd", "Bardcore for Dungeons & Dragons Chaos", BARDCORE_FOR_DND_DEMO_LONGLINE, BARDCORE_FOR_DND_DEMO_IMG, 2, 0, "Демо, 79m of Bardcore", BARDCORE_FOR_DND_DEMO_SHORTLINE, "", true, true, "sound", "https://youtu.be/dd-qazuihVk"));
+    LootArr.push(new DNELootCard("demo-bardcore-for-dnd", "Bardcore for Dungeons & Dragons Chaos", BARDCORE_FOR_DND_DEMO_LONGLINE, "img/sound/demo-bardcore-for-dungeons.jpg", 2, 0, "Демо, 79m of Bardcore", BARDCORE_FOR_DND_DEMO_SHORTLINE, "", true, true, "sound", "https://youtu.be/dd-qazuihVk"));
 
 
     // Eighties Music... but it has been turned medieval!
@@ -1362,30 +1247,21 @@ const initDNELootArr = () => {
     //
     const BARDCORE_80_DEMO_LONGLINE = "";
     const BARDCORE_80_DEMO_SHORTLINE = `${STRINGS.DEMO_LONGLINE_SHORT}`;
-    const BARDCORE_80_DEMO_IMG_ID = `1jqi5ZEiuMJLJtWltsixQYzjwvHpSpJEc`;
-    const BARDCORE_80_DEMO_IMG = `https://drive.google.com/uc?id=${BARDCORE_80_DEMO_IMG_ID}`;
-
-    LootArr.push(new DNELootCard("demo-medieval-80", "Eighties Music... but it has been turned medieval!", BARDCORE_80_DEMO_LONGLINE, BARDCORE_80_DEMO_IMG, 2, 0, "Демо, 92m of Bardcore Ambient", BARDCORE_80_DEMO_SHORTLINE, "", true, true, "sound", "https://youtu.be/d47Wr2Gcpko"));
+    LootArr.push(new DNELootCard("demo-medieval-80", "Eighties Music... but it has been turned medieval!", BARDCORE_80_DEMO_LONGLINE, "img/sound/demo-medieval-80.jpg", 2, 0, "Демо, 92m of Bardcore Ambient", BARDCORE_80_DEMO_SHORTLINE, "", true, true, "sound", "https://youtu.be/d47Wr2Gcpko"));
 
     // Dr. Dre Beats but they're MEDIEVAL
     //
     //
     const MEDIAEVAL_DRE_DEMO_LONGLINE = "";
     const MEDIAEVAL_DRE_DEMO_SHORTLINE = `${STRINGS.DEMO_LONGLINE}`;
-    const MEDIAEVAL_DRE_DEMO_IMG_ID = `1iZkCjwKMZb87yi23bT-vL3ew9m9-1Dk_`;
-    const MEDIAEVAL_DRE_DEMO_IMG = `https://drive.google.com/uc?id=${MEDIAEVAL_DRE_DEMO_IMG_ID}`;
-
-    LootArr.push(new DNELootCard("demo-medieval-dre", "Dr. Dre Beats but they're MEDIEVAL", MEDIAEVAL_DRE_DEMO_LONGLINE, MEDIAEVAL_DRE_DEMO_IMG, 2, 0, "Демо, 58m of Bardcore Hip-Hop", MEDIAEVAL_DRE_DEMO_SHORTLINE, "", true, true, "sound", "https://youtu.be/R1rVTOHWhYc"));
+    LootArr.push(new DNELootCard("demo-medieval-dre", "Dr. Dre Beats but they're MEDIEVAL", MEDIAEVAL_DRE_DEMO_LONGLINE, "img/sound/demo-medieval-dr-dre.jpg", 2, 0, "Демо, 58m of Bardcore Hip-Hop", MEDIAEVAL_DRE_DEMO_SHORTLINE, "", true, true, "sound", "https://youtu.be/R1rVTOHWhYc"));
 
     // Anathema
     //
     //
     const ANATHEMA_ALBUM_LONGLINE = "";
     const ANATHEMA_ALBUM_SHORTLINE = `${STRINGS.ALBUM_LONGLINE}`;
-    const ANATHEMA_ALBUM_IMG_ID = `1BTK9D2GoYB5Vg4Acp0jAzV4S6piv-0nC`;
-    const ANATHEMA_ALBUM_IMG = `https://drive.google.com/uc?id=${ANATHEMA_ALBUM_IMG_ID}`;
-
-    LootArr.push(new DNELootCard("album-anathema", "Anathema", ANATHEMA_ALBUM_LONGLINE, ANATHEMA_ALBUM_IMG, 2, 0, "Альбом, 47m of Vaporwave Downtempo Trip-Hop", ANATHEMA_ALBUM_SHORTLINE, "", true, true, "sound", "https://youtu.be/DjU2P02YZpE"));
+    LootArr.push(new DNELootCard("album-anathema", "Anathema", ANATHEMA_ALBUM_LONGLINE, "img/sound/album-anathema.jpg", 2, 0, "Альбом, 47m of Vaporwave Downtempo Trip-Hop", ANATHEMA_ALBUM_SHORTLINE, "", true, true, "sound", "https://youtu.be/DjU2P02YZpE"));
 
     // Anathema
     //
@@ -1395,17 +1271,14 @@ const initDNELootArr = () => {
     const ETERNITY_OF_PAIN_ALBUM_IMG_ID = `110vh8sqktvTn1EewRfoS1q6wOUULY5Ok`;
     const ETERNITY_OF_PAIN_ALBUM_IMG = `https://drive.google.com/uc?id=${ETERNITY_OF_PAIN_ALBUM_IMG_ID}`;
 
-    LootArr.push(new DNELootCard("album-eternity-of-pain", "Eternity of pain", ETERNITY_OF_PAIN_ALBUM_LONGLINE, ETERNITY_OF_PAIN_ALBUM_IMG, 2, 0, "Альбом, 56m of Experimental Industrial Vaporvawe", ETERNITY_OF_PAIN_ALBUM_SHORTLINE, "", true, true, "sound", "https://youtu.be/m1dPbco7dok"));
+    LootArr.push(new DNELootCard("album-eternity-of-pain", "Eternity of pain", ETERNITY_OF_PAIN_ALBUM_LONGLINE, "img/sound/album-eternity-of-pain.jpg", 2, 0, "Альбом, 56m of Experimental Industrial Vaporvawe", ETERNITY_OF_PAIN_ALBUM_SHORTLINE, "", true, true, "sound", "https://youtu.be/m1dPbco7dok"));
 
     // Lost soul
     //
     //
     const LOST_SOUL_ALBUM_LONGLINE = "";
     const LOST_SOUL_ALBUM_SHORTLINE = `${STRINGS.ALBUM_LONGLINE}`;
-    const LOST_SOUL_ALBUM_IMG_ID = `1Xn5Un_iekULg1ELV8BUBClLJRoamtbSj`;
-    const LOST_SOUL_ALBUM_IMG = `https://drive.google.com/uc?id=${LOST_SOUL_ALBUM_IMG_ID}`;
-
-    LootArr.push(new DNELootCard("album-lost-soul", "Lost soul", LOST_SOUL_ALBUM_LONGLINE, LOST_SOUL_ALBUM_IMG, 2, 0, "Альбом, 46m of Vaporvawe Abstract Hip-Hop", LOST_SOUL_ALBUM_SHORTLINE, "", true, true, "sound", "https://youtu.be/mNH_h0KxBJ4"));
+    LootArr.push(new DNELootCard("album-lost-soul", "Lost soul", LOST_SOUL_ALBUM_LONGLINE, "img/sound/album-lost-soul.jpg", 2, 0, "Альбом, 46m of Vaporvawe Abstract Hip-Hop", LOST_SOUL_ALBUM_SHORTLINE, "", true, true, "sound", "https://youtu.be/mNH_h0KxBJ4"));
 
 
     // HARDWAVE PHONK MIX
@@ -1413,91 +1286,56 @@ const initDNELootArr = () => {
     //
     const HARDWAVE_DEMO_LONGLINE = "";
     const HARDWAVE_DEMO_SHORTLINE = `${STRINGS.DEMO_LONGLINE}`;
-    const HARDWAVE_DEMO_IMG_ID = `12xpLKOEc3Zj2XNh0DmlPZGIENrA8K2xL`;
-    const HARDWAVE_DEMO_IMG = `https://drive.google.com/uc?id=${HARDWAVE_DEMO_IMG_ID}`;
-
-    LootArr.push(new DNELootCard("demo-hardwave", "HARDWAVE PHONK MIX", HARDWAVE_DEMO_LONGLINE, HARDWAVE_DEMO_IMG, 1, 0, "Демо, 76m of Hardwave Phonk", HARDWAVE_DEMO_SHORTLINE, "", true, true, "sound", "https://youtu.be/9GDnI1tCoZM"));
+    LootArr.push(new DNELootCard("demo-hardwave", "HARDWAVE PHONK MIX", HARDWAVE_DEMO_LONGLINE, "img/sound/demo-hardwave.jpg", 1, 0, "Демо, 76m of Hardwave Phonk", HARDWAVE_DEMO_SHORTLINE, "", true, true, "sound", "https://youtu.be/9GDnI1tCoZM"));
 
     // Sing Me a Lullaby, My Sweet Temptation
     //
     //
     const SWEET_TEMPTATION_ALBUM_LONGLINE = "";
     const SWEET_TEMPTATION_ALBUM_SHORTLINE = `${STRINGS.ALBUM_LONGLINE}`;
-    const SWEET_TEMPTATION_ALBUM_IMG_ID = `1oDnU-joLQnXZ_IXwEjQfSSAfy9xBOHOo`;
-    const SWEET_TEMPTATION_ALBUM_IMG = `https://drive.google.com/uc?id=${SWEET_TEMPTATION_ALBUM_IMG_ID}`;
-
-    LootArr.push(new DNELootCard("album-sweet-temptation", "Sing Me a Lullaby, My Sweet Temptation", SWEET_TEMPTATION_ALBUM_LONGLINE, SWEET_TEMPTATION_ALBUM_IMG, 3, 500, "Альбом, 36m of Hardwave Hip-Hop", SWEET_TEMPTATION_ALBUM_SHORTLINE, "", true, true, "sound", "https://youtu.be/vkzJT3Y5n1Y"));
+    LootArr.push(new DNELootCard("album-sweet-temptation", "Sing Me a Lullaby, My Sweet Temptation", SWEET_TEMPTATION_ALBUM_LONGLINE, "img/sound/album-sweet-temptation.jpg", 3, 500, "Альбом, 36m of Hardwave Hip-Hop", SWEET_TEMPTATION_ALBUM_SHORTLINE, "", true, true, "sound", "https://youtu.be/vkzJT3Y5n1Y"));
 
     //
     //
     //
     const ALBUM_I_MO_LONGER_FEAR_LONGLINE = "";
     const ALBUM_I_MO_LONGER_FEAR_SHORTLINE = `${STRINGS.ALBUM_LONGLINE}`;
-    const ALBUM_I_MO_LONGER_FEAR_IMG_ID = `1tq4UM6q8HnMC2GgHShZSQ0-WHjFhEKAP`;
-    const ALBUM_I_MO_LONGER_FEAR_IMG = `https://drive.google.com/uc?id=${ALBUM_I_MO_LONGER_FEAR_IMG_ID}`;
-
-    LootArr.push(new DNELootCard("album-i-no-longer-fear", "I NO LONGER FEAR THE RAZOR GUARDING MY HEEL I,II,III,IV", ALBUM_I_MO_LONGER_FEAR_LONGLINE, ALBUM_I_MO_LONGER_FEAR_IMG, 2, 0, "Альбом, 30m of Cloud Trap Hip-Hop", ALBUM_I_MO_LONGER_FEAR_SHORTLINE, "", true, true, "sound", "https://youtu.be/n-E1gnMvzng"));
+    LootArr.push(new DNELootCard("album-i-no-longer-fear", "I NO LONGER FEAR THE RAZOR GUARDING MY HEEL I,II,III,IV", ALBUM_I_MO_LONGER_FEAR_LONGLINE, "img/sound/album-no-longer-feer-the-razor.jpg", 2, 0, "Альбом, 30m of Cloud Trap Hip-Hop", ALBUM_I_MO_LONGER_FEAR_SHORTLINE, "", true, true, "sound", "https://youtu.be/n-E1gnMvzng"));
 
     // HOTLINE MIAMI EPIC MIX
     //
     //
     const EPIC_HOTLINE_DEMO_LONGLINE = "";
     const EPIC_HOTLINE_DEMO_SHORTLINE = `${STRINGS.DEMO_LONGLINE}`;
-    const EPIC_HOTLINE_DEMO_IMG_ID = `1bbxxOMmU-Gfc8RxlDIINf6K4T41ZQ9rT`;
-    const EPIC_HOTLINE_DEMO_IMG = `https://drive.google.com/uc?id=${EPIC_HOTLINE_DEMO_IMG_ID}`;
-
-    LootArr.push(new DNELootCard("demo-epic-hotline", "HOTLINE MIAMI<br> EPIC MIX", EPIC_HOTLINE_DEMO_LONGLINE, EPIC_HOTLINE_DEMO_IMG, 1, 0, "Демо, 87m of Synth Retrowave", EPIC_HOTLINE_DEMO_SHORTLINE, "", true, true, "sound", "https://youtu.be/bnAYRFcYIao"));
+    LootArr.push(new DNELootCard("demo-epic-hotline", "HOTLINE MIAMI<br> EPIC MIX", EPIC_HOTLINE_DEMO_LONGLINE, "img/sound/demo-epic-hotline.jpg", 1, 0, "Демо, 87m of Synth Retrowave", EPIC_HOTLINE_DEMO_SHORTLINE, "", true, true, "sound", "https://youtu.be/bnAYRFcYIao"));
 
     // HOTLINE MIAMI CHILL MIX
     //
     //
     const CHILL_HOTLINE_DEMO_LONGLINE = "";
     const CHILL_HOTLINE_DEMO_SHORTLINE = `${STRINGS.DEMO_LONGLINE}`;
-    const CHILL_HOTLINE_DEMO_IMG_ID = `1e7NHh9oQ1hM-dYEq-2IUmMBAofeATTax`;
-    const CHILL_HOTLINE_DEMO_IMG = `https://drive.google.com/uc?id=${CHILL_HOTLINE_DEMO_IMG_ID}`;
-
-    LootArr.push(new DNELootCard("demo-chill-hotline", "HOTLINE MIAMI CHILL MIX", CHILL_HOTLINE_DEMO_LONGLINE, CHILL_HOTLINE_DEMO_IMG, 1, 0, "Демо, 99m of Chill Retrowave", CHILL_HOTLINE_DEMO_SHORTLINE, "", true, true, "sound", "https://youtu.be/Dgy2ssdhYCg"));
+    LootArr.push(new DNELootCard("demo-chill-hotline", "HOTLINE MIAMI CHILL MIX", CHILL_HOTLINE_DEMO_LONGLINE, "img/sound/demo-chill-hotline.jpg", 1, 0, "Демо, 99m of Chill Retrowave", CHILL_HOTLINE_DEMO_SHORTLINE, "", true, true, "sound", "https://youtu.be/Dgy2ssdhYCg"));
 
     // DANGEROUS DAYS
     //
     //
     const DANGEROUS_DAYS_ALBUM_LONGLINE = "";
     const DANGEROUS_DAYS_ALBUM_SHORTLINE = `${STRINGS.ALBUM_LONGLINE}`;
-    const DANGEROUS_DAYS_ALBUM_IMG_ID = `1guZ8eFtexrCgGvYSmxcdezNaoHX6Lp5G`;
-    const DANGEROUS_DAYS_ALBUM_IMG = `https://drive.google.com/uc?id=${DANGEROUS_DAYS_ALBUM_IMG_ID}`;
-
-    LootArr.push(new DNELootCard("album-dangerous-days", "DANGEROUS DAYS", DANGEROUS_DAYS_ALBUM_LONGLINE, DANGEROUS_DAYS_ALBUM_IMG, 2, "1.2K", "Демо, 69m of Coldwave Synth Retrowave", DANGEROUS_DAYS_ALBUM_SHORTLINE, "", true, true, "sound", "https://youtu.be/1Vsf3zYppP4"));
-
-    // ANGELWAVE
-    //
-    //
-    const ANGELWAVE_ALBUM_LONGLINE = "";
-    const ANGELWAVE_ALBUM_SHORTLINE = `${STRINGS.ALBUM_LONGLINE}`;
-    const ANGELWAVE_ALBUM_IMG_ID = `1nrjlM84k1793Itl_lHi91RyMyaSmaHm5`;
-    const ANGELWAVE_ALBUM_IMG = `https://drive.google.com/uc?id=${ANGELWAVE_ALBUM_IMG_ID}`;
-
-    LootArr.push(new DNELootCard("album-angelwave", "ANGELWAVE", ANGELWAVE_ALBUM_LONGLINE, ANGELWAVE_ALBUM_IMG, 3, "NYP", "Альбом, 30m of Progressive Vapor Cloud", ANGELWAVE_ALBUM_SHORTLINE, "", true, true, "sound"));
-
+    LootArr.push(new DNELootCard("album-dangerous-days", "DANGEROUS DAYS", DANGEROUS_DAYS_ALBUM_LONGLINE, "img/sound/album-dangerous-days.jpg", 2, "1.2K", "Демо, 69m of Coldwave Synth Retrowave", DANGEROUS_DAYS_ALBUM_SHORTLINE, "", true, true, "sound", "https://youtu.be/1Vsf3zYppP4"));
 
     // ENIGMA
     //
     //
     const ENIGMA_ALBUM_LONGLINE = "";
     const ENIGMA_ALBUM_SHORTLINE = `${STRINGS.ALBUM_LONGLINE_2}`;
-    const ENIGMA_ALBUM_IMG_ID = `1f5VbsCJEIh6Du7qdEIXK18GEOBpyDuYm`;
-    const ENIGMA_ALBUM_IMG = `https://drive.google.com/uc?id=${ENIGMA_ALBUM_IMG_ID}`;
-
-    LootArr.push(new DNELootCard("album-enigma", "ENIGMA", ENIGMA_ALBUM_LONGLINE, ENIGMA_ALBUM_IMG, 9, "NYP", "Альбом, 352m of New-Age Downtempo Experimental Ambient Chillout", ENIGMA_ALBUM_SHORTLINE, "", true, true, "sound", "https://youtu.be/7Qv6CsSEaPE"));
+    LootArr.push(new DNELootCard("album-enigma", "ENIGMA", ENIGMA_ALBUM_LONGLINE, "img/sound/album-enigma.jpg", 9, "NYP", "Альбом, 352m of New-Age Downtempo Experimental Ambient Chillout", ENIGMA_ALBUM_SHORTLINE, "", true, true, "sound", "https://youtu.be/7Qv6CsSEaPE"));
 
     // How to see through walls
     //
     //
     const HOW_TO_SEE_THROUGH_WALLS_ALBUM_LONGLINE = "";
     const HOW_TO_SEE_THROUGH_WALLS_ALBUM_SHORTLINE = ``;
-    const HOW_TO_SEE_THROUGH_WALLS_ALBUM_IMG_ID = `1QsltsKrrS8aH3wZ4nWLlPt0xRAikS1qY`;
-    const HOW_TO_SEE_THROUGH_WALLS_ALBUM_IMG = `https://drive.google.com/uc?id=${HOW_TO_SEE_THROUGH_WALLS_ALBUM_IMG_ID}`;
-
-    LootArr.push(new DNELootCard("album-how-to-see-through-walls", "How to see through walls", HOW_TO_SEE_THROUGH_WALLS_ALBUM_LONGLINE, HOW_TO_SEE_THROUGH_WALLS_ALBUM_IMG, 3, 0, "Альбом, 37m of Electronic Vapor Ambient", HOW_TO_SEE_THROUGH_WALLS_ALBUM_SHORTLINE, "", true, true, "sound", "https://youtu.be/eyFfubvho4M"));
+    LootArr.push(new DNELootCard("album-how-to-see-through-walls", "How to see through walls", HOW_TO_SEE_THROUGH_WALLS_ALBUM_LONGLINE, "img/sound/album-how-to-see-through-walls.png", 3, 0, "Альбом, 37m of Electronic Vapor Ambient", HOW_TO_SEE_THROUGH_WALLS_ALBUM_SHORTLINE, "", true, true, "sound", "https://youtu.be/eyFfubvho4M"));
 
 
     // Zeldawave
@@ -1505,30 +1343,21 @@ const initDNELootArr = () => {
     //
     const ZELDAWAVE_DEMO_LONGLINE = "";
     const ZELDAWAVE_DEMO_SHORTLINE = `${STRINGS.DEMO_LONGLINE}`;
-    const ZELDAWAVE_DEMO_IMG_ID = `1oK_9CJdh5lNu_p3FYGExmDrxuttOZngU`;
-    const ZELDAWAVE_DEMO_IMG = `https://drive.google.com/uc?id=${ZELDAWAVE_DEMO_IMG_ID}`;
-
-    LootArr.push(new DNELootCard("demo-zeldawave", "Zeldawave", ZELDAWAVE_DEMO_LONGLINE, ZELDAWAVE_DEMO_IMG, 1, 0, "Демо, 20m of Vapor Ambient", ZELDAWAVE_DEMO_SHORTLINE, "", true, true, "sound", "https://youtu.be/bHUvykXL8Og"));
+    LootArr.push(new DNELootCard("demo-zeldawave", "Zeldawave", ZELDAWAVE_DEMO_LONGLINE, "img/sound/demo-zeldawave.jpg", 1, 0, "Демо, 20m of Vapor Ambient", ZELDAWAVE_DEMO_SHORTLINE, "", true, true, "sound", "https://youtu.be/bHUvykXL8Og"));
 
     // Zeldawave 2
     //
     //
     const ZELDAWAVE_2_DEMO_LONGLINE = "";
     const ZELDAWAVE_2_DEMO_SHORTLINE = `${STRINGS.DEMO_LONGLINE}`;
-    const ZELDAWAVE_2_DEMO_IMG_ID = `1yHu5WTJTqwPBr7jTjJDS1rXrnFej7eXA`;
-    const ZELDAWAVE_2_DEMO_IMG = `https://drive.google.com/uc?id=${ZELDAWAVE_2_DEMO_IMG_ID}`;
-
-    LootArr.push(new DNELootCard("demo-zeldawave-2", "Zeldawave II", ZELDAWAVE_2_DEMO_LONGLINE, ZELDAWAVE_2_DEMO_IMG, 2, 0, "Демо, 28m of Vapor Ambient", ZELDAWAVE_2_DEMO_SHORTLINE, "", true, true, "sound", "https://youtu.be/kQXsiJ1lLss"));
+    LootArr.push(new DNELootCard("demo-zeldawave-2", "Zeldawave II", ZELDAWAVE_2_DEMO_LONGLINE, "img/sound/demo-zeldawave-2.jpg", 2, 0, "Демо, 28m of Vapor Ambient", ZELDAWAVE_2_DEMO_SHORTLINE, "", true, true, "sound", "https://youtu.be/kQXsiJ1lLss"));
 
     // Dub Wars
     //
     //
     const DUB_WARS_DEMO_LONGLINE = "";
     const DUB_WARS_DEMO_SHORTLINE = `${STRINGS.DEMO_LONGLINE}`;
-    const DUB_WARS_DEMO_IMG_ID = `19QaHbVDWha8GeMJuh0zah2MhVybNvXHh`;
-    const DUB_WARS_DEMO_IMG = `https://drive.google.com/uc?id=${DUB_WARS_DEMO_IMG_ID}`;
-
-    LootArr.push(new DNELootCard("demo-dub-wars", "Dub Wars: A New Dope", DUB_WARS_DEMO_LONGLINE, DUB_WARS_DEMO_IMG, 3, 0, "Демо, 60m of Abstract Psy Dub", DUB_WARS_DEMO_SHORTLINE, "", true, true, "sound", "https://youtu.be/rMqxBWj6Qj8"));
+    LootArr.push(new DNELootCard("demo-dub-wars", "Dub Wars: A New Dope", DUB_WARS_DEMO_LONGLINE, "img/sound/demo-dub-wars.jpg", 3, 0, "Демо, 60m of Abstract Psy Dub", DUB_WARS_DEMO_SHORTLINE, "", true, true, "sound", "https://youtu.be/rMqxBWj6Qj8"));
 
     // Best of Tour De Manège
     //
@@ -1538,107 +1367,77 @@ const initDNELootArr = () => {
     const TOUR_DE_MANEGE_DEMO_IMG_ID = `103_a2PITPU0q7LVL7GRbgrt69Z7KshV3`;
     const TOUR_DE_MANEGE_DEMO_IMG = `https://drive.google.com/uc?id=${TOUR_DE_MANEGE_DEMO_IMG_ID}`;
 
-    LootArr.push(new DNELootCard("demo-tour-de-manege", "Best of Tour De Manège", TOUR_DE_MANEGE_DEMO_LONGLINE, TOUR_DE_MANEGE_DEMO_IMG, 2, 0, "Демо, 91m of Trippy Abstract Hip-Hop", TOUR_DE_MANEGE_DEMO_SHORTLINE, "", true, true, "sound", "https://youtu.be/EB6-PQ1hAVc"));
+    LootArr.push(new DNELootCard("demo-tour-de-manege", "Best of Tour De Manège", TOUR_DE_MANEGE_DEMO_LONGLINE, "img/sound/demo-tour-de-manege.jpg", 2, 0, "Демо, 91m of Trippy Abstract Hip-Hop", TOUR_DE_MANEGE_DEMO_SHORTLINE, "", true, true, "sound", "https://youtu.be/EB6-PQ1hAVc"));
 
     // Gesserit Sister
     //
     //
     const GESSERIT_SISTER_DEMO_LONGLINE = "";
     const GESSERIT_SISTER_DEMO_SHORTLINE = `${STRINGS.DEMO_LONGLINE}`;
-    const GESSERIT_SISTER_DEMO_IMG_ID = `1YLgWZPie0fkDQ56QpKKIxTsHHt_nTIhp`;
-    const GESSERIT_SISTER_DEMO_IMG = `https://drive.google.com/uc?id=${GESSERIT_SISTER_DEMO_IMG_ID}`;
-
-    LootArr.push(new DNELootCard("demo-gesserit-sister", "A Bene Gesserit Sister", GESSERIT_SISTER_DEMO_LONGLINE, GESSERIT_SISTER_DEMO_IMG, 1, 0, "Демо, 29m of Dark Ambient", GESSERIT_SISTER_DEMO_SHORTLINE, "", true, true, "sound", "https://youtu.be/EB6-PQ1hAVc"));
+    LootArr.push(new DNELootCard("demo-gesserit-sister", "A Bene Gesserit Sister", GESSERIT_SISTER_DEMO_LONGLINE, "img/sound/demo-gesserite-sister.jpg", 1, 0, "Демо, 29m of Dark Ambient", GESSERIT_SISTER_DEMO_SHORTLINE, "", true, true, "sound", "https://youtu.be/EB6-PQ1hAVc"));
 
     // Gorilaz
     //
     //
     const GORILLAZ_X_HOUSE_DEMO_LONGLINE = "";
     const GORILLAZ_X_HOUSE_DEMO_SHORTLINE = `${STRINGS.DEMO_LONGLINE_SHORT}`;
-    const GORILLAZ_X_HOUSE_DEMO_IMG_ID = `16iDFhUcwmUj-175sQTCg2cXg2j26iLqX`;
-    const GORILLAZ_X_HOUSE_DEMO_IMG = `https://drive.google.com/uc?id=${GORILLAZ_X_HOUSE_DEMO_IMG_ID}`;
-
-    LootArr.push(new DNELootCard("demo-gorillaz-x-house", "Gorillaz X House Mix", GORILLAZ_X_HOUSE_DEMO_LONGLINE, GORILLAZ_X_HOUSE_DEMO_IMG, 1, 0, "Демо, 38m of Abstract Hip-Hop House", GORILLAZ_X_HOUSE_DEMO_SHORTLINE, "", true, true, "sound", "https://youtu.be/k8WpsRa3iB0"));
+    LootArr.push(new DNELootCard("demo-gorillaz-x-house", "Gorillaz X House Mix", GORILLAZ_X_HOUSE_DEMO_LONGLINE, "img/sound/demo-gorillaz-x-house.jpg", 1, 0, "Демо, 38m of Abstract Hip-Hop House", GORILLAZ_X_HOUSE_DEMO_SHORTLINE, "", true, true, "sound", "https://youtu.be/k8WpsRa3iB0"));
 
     // Take a little trip with me
     //
     //
     const TAKE_A_LITTLE_DEMO_LONGLINE = "";
     const TAKE_A_LITTLE_DEMO_SHORTLINE = `${STRINGS.DEMO_LONGLINE_SHORT_2}`;
-    const TAKE_A_LITTLE_DEMO_IMG_ID = `1eAtSAJVwCWLOaJ9FLdIsH3x-PLt3fv3T`;
-    const TAKE_A_LITTLE_DEMO_IMG = `https://drive.google.com/uc?id=${TAKE_A_LITTLE_DEMO_IMG_ID}`;
-
-    LootArr.push(new DNELootCard("demo-take-a-little-trip-with-me", "Take a little trip with me", TAKE_A_LITTLE_DEMO_LONGLINE, TAKE_A_LITTLE_DEMO_IMG, 2, 0, "Демо, 128m of Ambient Psychodelic Trip", TAKE_A_LITTLE_DEMO_SHORTLINE, "", true, true, "sound", "https://youtu.be/keP2jfl4kT4"));
+    LootArr.push(new DNELootCard("demo-take-a-little-trip-with-me", "Take a little trip with me", TAKE_A_LITTLE_DEMO_LONGLINE, "img/sound/demo-take-a-little-trip-with-me.jpg", 2, 0, "Демо, 128m of Ambient Psychodelic Trip", TAKE_A_LITTLE_DEMO_SHORTLINE, "", true, true, "sound", "https://youtu.be/keP2jfl4kT4"));
 
     // Psycho Tropical Berlin
     //
     //
     const PSYCHO_TROPICAL_BERLIN_ALBUM_LONGLINE = "";
     const PSYCHO_TROPICAL_BERLIN_ALBUM_SHORTLINE = `${STRINGS.DEMO_LONGLINE}`;
-    const PSYCHO_TROPICAL_BERLIN_ALBUM_IMG_ID = `1zvzJvVFYEMnlpzC_pX69KWQjzAx3Dvra`;
-    const PSYCHO_TROPICAL_BERLIN_ALBUM_IMG = `https://drive.google.com/uc?id=${PSYCHO_TROPICAL_BERLIN_ALBUM_IMG_ID}`;
-
-    LootArr.push(new DNELootCard("album-psycho-tropical-berlin", "Psycho Tropical Berlin", PSYCHO_TROPICAL_BERLIN_ALBUM_LONGLINE, PSYCHO_TROPICAL_BERLIN_ALBUM_IMG, 3, 0, "Альбом, 65m of Psy Electronic", PSYCHO_TROPICAL_BERLIN_ALBUM_SHORTLINE, "", true, true, "sound", "https://youtu.be/fNQ_3TCnAyw"));
+    LootArr.push(new DNELootCard("album-psycho-tropical-berlin", "Psycho Tropical Berlin", PSYCHO_TROPICAL_BERLIN_ALBUM_LONGLINE, "img/sound/album-psycho-tropical-berlin.png", 3, 0, "Альбом, 65m of Psy Electronic", PSYCHO_TROPICAL_BERLIN_ALBUM_SHORTLINE, "", true, true, "sound", "https://youtu.be/fNQ_3TCnAyw"));
 
     // Nice Guys Love You - Vol. 4
     //
     //
     const NICE_GUYS_LOVE_YOU_4_DEMO_LONGLINE = "";
     const NICE_GUYS_LOVE_YOU_4_DEMO_SHORTLINE = `${STRINGS.DEMO_LONGLINE}`;
-    const NICE_GUYS_LOVE_YOU_4_DEMO_IMG_ID = `1bhbmKR4eMjz1x5cs8PKw4TSCswQ8bTnt`;
-    const NICE_GUYS_LOVE_YOU_4_DEMO_IMG = `https://drive.google.com/uc?id=${NICE_GUYS_LOVE_YOU_4_DEMO_IMG_ID}`;
-
-    LootArr.push(new DNELootCard("demo-nice-guys-love-you-4", "Nice Guys Love You Vol. 4", NICE_GUYS_LOVE_YOU_4_DEMO_LONGLINE, NICE_GUYS_LOVE_YOU_4_DEMO_IMG, 2, 0, "Демо, 99m of Indie Lo-Fi", NICE_GUYS_LOVE_YOU_4_DEMO_SHORTLINE, "", true, true, "sound", "https://youtu.be/ZD37ZPMTjPw"));
+    LootArr.push(new DNELootCard("demo-nice-guys-love-you-4", "Nice Guys Love You Vol. 4", NICE_GUYS_LOVE_YOU_4_DEMO_LONGLINE, "img/sound/demo-nice-guys-loves-you-4.jpg", 2, 0, "Демо, 99m of Indie Lo-Fi", NICE_GUYS_LOVE_YOU_4_DEMO_SHORTLINE, "", true, true, "sound", "https://youtu.be/ZD37ZPMTjPw"));
 
     // Hyrule Lofi
     //
     //
     const LOFI_TIME_DEMO_LONGLINE = "";
     const LOFI_TIME_DEMO_SHORTLINE = `${STRINGS.DEMO_LONGLINE}`;
-    const LOFI_TIME_DEMO_IMG_ID = `19yhuD_3s6xOxclhG6hqJvyKmhe42Cw_8`;
-    const LOFI_TIME_DEMO_IMG = `https://drive.google.com/uc?id=${LOFI_TIME_DEMO_IMG_ID}`;
-
-    LootArr.push(new DNELootCard("demo-ambient-time", `Ambient Time`, LOFI_TIME_DEMO_LONGLINE, LOFI_TIME_DEMO_IMG, 1, 0, "Демо, 38m of Ambient Lo-Fi", LOFI_TIME_DEMO_SHORTLINE, "", true, true, "sound", "https://youtu.be/kKLzVv4hb8w"));
+    LootArr.push(new DNELootCard("demo-ambient-time", `Ambient Time`, LOFI_TIME_DEMO_LONGLINE, "img/sound/demo-ambient-time.jpg", 1, 0, "Демо, 38m of Ambient Lo-Fi", LOFI_TIME_DEMO_SHORTLINE, "", true, true, "sound", "https://youtu.be/kKLzVv4hb8w"));
 
     // Hyrule Lofi
     //
     //
     const HYRULE_LOFI_DEMO_LONGLINE = "";
     const HYRULE_LOFI_DEMO_SHORTLINE = `${STRINGS.DEMO_LONGLINE}`;
-    const HYRULE_LOFI_DEMO_IMG_ID = `1tg9rVUhWlOMeC5R8yd25SiYq233Mpy_3`;
-    const HYRULE_LOFI_DEMO_IMG = `https://drive.google.com/uc?id=${HYRULE_LOFI_DEMO_IMG_ID}`;
-
-    LootArr.push(new DNELootCard("demo-hyrule-lofi", `Hyrule<br> Lo-Fi`, HYRULE_LOFI_DEMO_LONGLINE, HYRULE_LOFI_DEMO_IMG, 1, 0, "Демо, 34m of Lo-Fi", HYRULE_LOFI_DEMO_SHORTLINE, "", true, true, "sound", "https://youtu.be/NXqr-zpDnMc"));
+    LootArr.push(new DNELootCard("demo-hyrule-lofi", `Hyrule<br> Lo-Fi`, HYRULE_LOFI_DEMO_LONGLINE, "img/sound/demo-hyrule-lofi.jpg", 1, 0, "Демо, 34m of Lo-Fi", HYRULE_LOFI_DEMO_SHORTLINE, "", true, true, "sound", "https://youtu.be/NXqr-zpDnMc"));
 
     // Level Select
     //
     //
     const LEVEL_SELECT_DEMO_LONGLINE = "";
     const LEVEL_SELECT_DEMO_SHORTLINE = `${STRINGS.DEMO_LONGLINE}`;
-    const LEVEL_SELECT_DEMO_IMG_ID = `1f4UA4u3Ebn5AFoVLvWBGz8qV1UgKKIfL`;
-    const LEVEL_SELECT_DEMO_IMG = `https://drive.google.com/uc?id=${LEVEL_SELECT_DEMO_IMG_ID}`;
-
-    LootArr.push(new DNELootCard("demo-level-select", `Level Select`, LEVEL_SELECT_DEMO_LONGLINE, LEVEL_SELECT_DEMO_IMG, 3, 0, "Демо, 57m of Dub Jungle", LEVEL_SELECT_DEMO_SHORTLINE, "", true, true, "sound", "https://youtu.be/Oa4MT9LPcaU"));
+    LootArr.push(new DNELootCard("demo-level-select", `Level Select`, LEVEL_SELECT_DEMO_LONGLINE, "img/sound/demo-level-select.jpg", 3, 0, "Демо, 57m of Dub Jungle", LEVEL_SELECT_DEMO_SHORTLINE, "", true, true, "sound", "https://youtu.be/Oa4MT9LPcaU"));
 
     // Slowed Mr. Robot vol.6-7
     //
     //
     const SLOWED_ROBOT_DEMO_LONGLINE = "";
     const SLOWED_ROBOT_DEMO_SHORTLINE = `${STRINGS.DEMO_LONGLINE}`;
-    const SLOWED_ROBOT_DEMO_IMG_ID = `1Zh0a-EZKSApRlCddW397kLEex0fQWVUP`;
-    const SLOWED_ROBOT_DEMO_IMG = `https://drive.google.com/uc?id=${SLOWED_ROBOT_DEMO_IMG_ID}`;
-
-    LootArr.push(new DNELootCard("demo-mr-robot-6-7", `Mr. Robot vol.6&7`, SLOWED_ROBOT_DEMO_LONGLINE, SLOWED_ROBOT_DEMO_IMG, 1, 0, "Демо, 55m of Ambient Downtempo", SLOWED_ROBOT_DEMO_SHORTLINE, "", true, true, "sound", "https://youtu.be/OytfbywcMNs"));
+    LootArr.push(new DNELootCard("demo-slowed-robot", `SLOWED ROBOT`, SLOWED_ROBOT_DEMO_LONGLINE, "img/sound/demo-slowed-robot.jpg", 1, 0, "Демо, 55m of Ambient Downtempo", SLOWED_ROBOT_DEMO_SHORTLINE, "", true, true, "sound", "https://youtu.be/OytfbywcMNs"));
 
     // Level Select
     //
     //
     const EXODUS_DEMO_LONGLINE = "";
     const EXODUS_DEMO_SHORTLINE = `${STRINGS.DEMO_LONGLINE}`;
-    const EXODUS_DEMO_IMG_ID = `1gzZoNLbGksrrg1Z9TrA_4VG_wsUdi5Wx`;
-    const EXODUS_DEMO_IMG = `https://drive.google.com/uc?id=${EXODUS_DEMO_IMG_ID}`;
-
-    LootArr.push(new DNELootCard("demo-exodus", `EXODUS`, EXODUS_DEMO_LONGLINE, EXODUS_DEMO_IMG, 3, 0, "Демо, 135m of Synthwave Retrowave Chillwave", EXODUS_DEMO_SHORTLINE, "", true, true, "sound", "https://youtu.be/cCTaiJZAZak"));
+    LootArr.push(new DNELootCard("demo-exodus", `EXODUS`, EXODUS_DEMO_LONGLINE, "img/sound/demo-exodus.jpg", 3, 0, "Демо, 135m of Synthwave Retrowave Chillwave", EXODUS_DEMO_SHORTLINE, "", true, true, "sound", "https://youtu.be/cCTaiJZAZak"));
 
     // // VILL4IN TV Episode 001 + 002
     // //
