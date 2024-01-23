@@ -57,8 +57,11 @@ import {initTerminal} from "./utils/initTerminal.js";
 import {initBtnZeroInbox} from "./utils/initBtnZeroInbox.js";
 import {enterCity} from "./utils/enterCity.js";
 import { updNokiaLobby } from "./router/callFriend.js";
+import { saveVisit, displayLastVisit } from "./utils/saveVisit.js";
 
 const initApp = () => {
+    saveVisit();
+    displayLastVisit();
     initInventoryPopupJquery();
 
     $('.js-open-card-builder').magnificPopup({

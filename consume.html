@@ -474,11 +474,11 @@
                             </li>
                             <li class="stone-stats__item">
                                 <h3 class="stone-stats__label">Востаннє зіграно</h3>
-                                <p class="stone-stats__value">Сьогодні</p>
+                                <p class="js-last-visit stone-stats__value">Ніколи</p>
                             </li>
                             <li class="stone-stats__item">
                                 <h3 class="stone-stats__label">Час гри</h3>
-                                <p class="stone-stats__value">420,1 год.</p>
+                                <p class="js-play-time stone-stats__value">420,1 год.</p>
                             </li>
                             <li class="stone-stats__item">
                                 <h3 class="stone-stats__label">Досягнення</h3>
@@ -748,10 +748,16 @@
         // }
     });
 </script>
-<script>
+<script type="module">
+    import { displayLastVisit, displayPlayTime } from "./js/utils/saveVisit.js";
+
     const stoneBlock = document.querySelector("#stone");
     const stoneLink = document.querySelector(".js-scroll-to-stone");
     const topLink = document.querySelector(".js-to-top");
+
+    const lastVisitNode = document.querySelector(".js-last-visit");
+    const playTimeNode = document.querySelector(".js-play-time");
+
     stoneLink.addEventListener("click", () => {
         console.log("stoneBlock.clientTop", stoneBlock.offsetTop);
         window.scrollTo({
@@ -768,6 +774,9 @@
             behavior: "smooth",
         });
     });
+
+    lastVisitNode.textContent = displayLastVisit();
+    playTimeNode.textContent = displayPlayTime();
 </script>
 <style>
     .stone .swiper {

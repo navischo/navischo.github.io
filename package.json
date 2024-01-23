@@ -9,7 +9,8 @@
   "license": "MIT",
   "scripts": {
     "start": "browser-sync start --server --no-ui --files \"js/**/*.js\"",
-    "lint": "eslint js/"
+    "lint": "eslint js/",
+    "dne": "browser-sync start --server --no-ui --files \"js/**/*.js\""
   },
   "engines": {
     "node": "16.x",
