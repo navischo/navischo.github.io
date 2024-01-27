@@ -58,7 +58,7 @@
 }
 
 .card.--exit-label::before {
-    content: "EXIT=>";
+    content: "GO=>";
 
     position: absolute;
     top: -66px;

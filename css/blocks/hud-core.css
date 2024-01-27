@@ -83,14 +83,14 @@ a {
     position: relative;
 
     /*width: 420px;*/
-    /*width: 600px;*/
-    width: 94%;
+    width: 600px;
+    /*width: 94%;*/
     border: 10px solid black;
     margin: 0 auto;
 }
 
 .avatar.--custom {
-    width: 465px;
+    width: 425px;
 }
 
 .avatar.--custom .clipPath {
