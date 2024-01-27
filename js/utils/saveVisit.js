@@ -26,7 +26,7 @@ const finishVisit = () => {
 const parsePlayTime = (timeOfPlay) => {
     const sec = timeOfPlay / 1000;
     const min = sec / 60;
-    const hor = min / 60;
+    const hor = (min / 60).toFixed(1);
     // console.log("s m h", sec.toFixed(1), min.toFixed(1), hor.toFixed(1));
     return { sec, min, hor };
 }
