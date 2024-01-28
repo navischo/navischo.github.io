@@ -61,11 +61,11 @@
     content: "GO=>";
 
     position: absolute;
-    top: -66px;
+    top: -86px;
     left: 20px;
 
     font-family: "Press Start 2p", "JetBrains Mono", monospace;
-    font-size: 42px;
+    font-size: 66px;
     font-weight: 700;
     text-shadow:
     2px 3px 0 black,
