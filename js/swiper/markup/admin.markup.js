@@ -10,16 +10,6 @@ const adminMarkup = `
         ${adminWeekMarkup}
     </div>
     <div class="swiper-slide">
-        <div class="root-admin" class="build"><!-- style='background: url("img/bg-profile.png")!important;'-->
-            ${adminProfileMarkup}
-        </div>
-    </div>
-    <div class="swiper-slide">
-        <div id="root-direct" class="root-admin" class="build"><!-- style='background: url("img/bg-profile.png")!important;'-->
-            ${adminDirectMarkup}
-        </div>
-    </div>
-    <div class="swiper-slide">
         ${adminBankMarkup}
     </div>
     <div class="swiper-slide">

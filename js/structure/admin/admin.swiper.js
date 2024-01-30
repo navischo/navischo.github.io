@@ -24,11 +24,11 @@ const initAdminSwiper = () => {
 
         win77.adminSwiper.on('slideChange', function (e) {
             console.log(e, e.activeIndex, e.activeIndex === 3);
-            if (e.activeIndex === 2) {
-                const dialogParent = document.querySelector("#admin-dialog");
-                console.log("initDialog(DIALOGS[0])", dialogParent);
-                // initDialog(DIALOGS[0], dialogParent);
-            }
+            // if (e.activeIndex === 2) {
+            //     const dialogParent = document.querySelector("#admin-dialog");
+            //     console.log("initDialog(DIALOGS[0])", dialogParent);
+            //     // initDialog(DIALOGS[0], dialogParent);
+            // }
 
             if (e.activeIndex === 4) {
                 HousePage.init();
@@ -37,10 +37,10 @@ const initAdminSwiper = () => {
         });
 
         SchedulePage.init();
-        DirectPage.init();
+        // DirectPage.init();
         BankPage.init();
         HousePage.init();
-        ProfilePage.init();
+        // ProfilePage.init();
     }
     return new SwiperCell(init);
 }

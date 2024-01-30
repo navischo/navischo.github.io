@@ -2,7 +2,7 @@ const adminBankMarkup = `
     <div class="bank">
         <div class="bank__hypers">
             <h3 class="bank__hypers-title">HYPERS500</h3>
-            <div class="js-hypers bank__hypers-list">
+            <div class="js-hypers custom-scrollbar --y bank__hypers-list">
 
             </div>
         </div>

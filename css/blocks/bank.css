@@ -31,7 +31,7 @@
     top: 100px;
     z-index: 3;
 
-    width: 620px;
+    width: 540px;
 }
 
 .bank__balance {
@@ -45,13 +45,13 @@
     margin-top: 0;
     margin-bottom: 40px;
     font-family: "Press Start 2p", "JetBrains Mono", monospace;
-    font-size: 70px;
+    font-size: 60px;
     text-shadow: 4px 3px 3px black;
 }
 
 .bank__hypers-list {
-
-
+    overflow-y: scroll;
+    max-height: 72.5vh;
 }
 
 .bank__hypers-item {
@@ -60,7 +60,7 @@
     margin-bottom: 8px;
 
     font-family: "Press Start 2p", "JetBrains Mono", monospace;
-    font-size: 36px;
+    font-size: 26px;
     text-shadow: 4px 3px 3px black;
 }
 
