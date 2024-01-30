@@ -137,8 +137,8 @@
 }
 
 .sun {
-    height: 350px;
-    width: 350px;
+    height: 450px;
+    width: 450px;
     border-radius: 100%;
     background: linear-gradient(180deg, #e89b33, #ff5a00);
     background-size: 400% 400%;
@@ -165,7 +165,7 @@
     height: 96px;
     width: 39vw;
     position: absolute;
-    top: 325px;
+    top: 36vh;
     right: 0;
     animation: scroll-across-right 4s infinite linear;
     z-index: -1;
@@ -176,14 +176,14 @@
     height: 96px;
     width: 39vw;
     position: absolute;
-    top: 325px;
+    top: 36vh;
     left: 0;
     animation: scroll-across-left 4s infinite linear;
     z-index: -1;
 }
 
 .trees-bg {
-    height: 380px;
+    height: 420px;
     width: 120vw;
     position: absolute;
     top: 103px;

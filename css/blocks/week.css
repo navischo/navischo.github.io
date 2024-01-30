@@ -43,11 +43,15 @@
 
 .week {
     position: relative;
-    left: 70px;
-    top: -40px;
+    /*left: 70px;*/
+    /*top: -40px;*/
     z-index: 2;
-    transform: scale(.73);
-    transform-origin: left top;
+    /*transform: scale(.73);*/
+    /*transform-origin: left top;*/
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 
     font-family: "Press Start 2p", "JetBrains Mono", monospace;
 }
@@ -56,13 +60,16 @@
     position: relative;
     z-index: 1;
 
+    padding-top: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
     margin: 0;
-    margin-top: 120px;
-    margin-bottom: 200px;
+    /*margin-top: 120px;*/
+    /*margin-bottom: 200px;*/
 
-    font-size: 172px;
+    font-size: 144px;
     line-height: 1.1;
-    text-align: right;
+    text-align: center;
     text-transform: uppercase;
     text-shadow: var(--ui-glow-text--dimmed);
 
@@ -78,11 +85,14 @@
     position: relative;
 
     display: flex;
-    flex-direction: column;
-    max-width: 2210px;
+    /*flex-direction: column;*/
     width: 100%;
-    height: 675px;
+    /*height: 675px;*/
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 10px;
     margin: 0 auto;
+    margin-top: auto;
 }
 
 .week__main .swiper.--week {
@@ -97,7 +107,7 @@
 
     display: flex;
     width: 100%;
-    max-width: 55%;
+    max-width: 69%;
     padding: 5px;
     border-radius: 3px;
 
@@ -112,9 +122,10 @@
 
     color: white;
     font-family: "JetBrains Mono", sans-serif;
-    font-size: 34px;
+    font-size: 24px;
     font-weight: 500;
     text-align: center;
+    white-space: nowrap;
 
     background: transparent;
     cursor: pointer;
@@ -128,21 +139,25 @@
 }
 
 .week__event {
-    position: absolute;
-    bottom: 0;
-    right: 0;
+    position: relative;
+    /*bottom: 0;*/
+    /*right: 0;*/
     z-index: 1;
 
     display: block;
     width: 470px;
-    height: 470px;
+    height: 370px;
     border: 3px dashed white;
+    margin-left: 20px;
+    margin-top: 40px;
 }
 
 .week__car-preview {
     position: absolute;
-    right: 120px;
-    top: 230px;
+    right: 0;
+    top: 150px;
     z-index: 1;
-    transform: scale(1.2);
+    /*transform: scale(1.2);*/
+
+    max-width: 810px;
 }

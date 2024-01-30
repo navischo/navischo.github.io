@@ -61,14 +61,14 @@
 /*}*/
 
 .swiper.--week {
-    width: 72vw;
-    height: 530px;
+    width: 66vw;
+    height: 410px;
     padding-top: 65px;
     margin: 0;
 }
 
 .swiper.--week .swiper-slide {
-
+    height: 345px;
 }
 
 .append-buttons {

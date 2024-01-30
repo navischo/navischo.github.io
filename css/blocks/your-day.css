@@ -9,7 +9,7 @@
     display: flex;
     align-items: center;
     width: 100%;
-    height: 125px;
+    height: 100px;
     padding-left: 90px;
     margin-bottom: 5px;
 
@@ -26,8 +26,8 @@
     top: 20px;
 
     display: block;
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
 
     background: url("../../img/icon-sun.png");
     background-size: cover;
@@ -99,7 +99,7 @@
 
 .your-day__label {
     padding-top: 100px; /*t*/
-    padding-bottom: 200px; /*t*/
+    padding-bottom: 100px; /*t*/
     padding-left: 15px;
 
     font-family: "Press Start 2p", "JetBrains Mono", monospace;
