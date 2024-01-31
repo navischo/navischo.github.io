@@ -13,7 +13,7 @@
 
     /*color: var(--colors-on_bg--500);*/
     color: white;
-    cursor: pointer;
+    cursor: default;
 
     transition: 1.2s ease-in-out;
 

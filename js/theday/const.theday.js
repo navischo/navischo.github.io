@@ -316,7 +316,7 @@ const drawSmitsCard = (dataObj) => {
     </div>
 </header>
 <div class="card__preview">
-    <img class="card__preview-img" src="img/${rareGuest ? rareGuest.img : dataObj.name}.png" alt="" style="">
+    <img class="card__preview-img" src="img/guests/${rareGuest ? rareGuest.img : dataObj.name}.png" alt="" style="">
 </div>
 <div class="js-card-controls card__controls">
     <button>+</button>
