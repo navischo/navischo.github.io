@@ -25,4 +25,4 @@ To start a single player game, enter any login you like and the password "contin
 
 ### Making atmosphere
 
-DDJ400+SPS5&5 on a good large table will be perfect for 3 Players
+DDJ400+SPS585 on a good large table will be perfect for 3 Players
