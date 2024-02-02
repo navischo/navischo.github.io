@@ -1,5 +1,6 @@
 import { goToCards, goToPlay } from "./goToCards.js";
 import { closeGameMenu } from "../hud/btn.hud.js";
+import { openTalk } from "../utils/initTalk.js";
 import { win77 } from "../dne-cli.js";
 // const NUMBERS = {
 //     IN_MENU: [],
@@ -44,6 +45,7 @@ const KEYS_SIGNS = {
     c: ["b", "B", "и", "И"],
     p: ["r", "R", "к", "К"],
     h: ["h", "H", "р", "Р"],
+    t: ["t", "T", "е", "Е"],
     shift: ["Shift"],
     escape: ["Escape"]
 }
@@ -62,6 +64,9 @@ const KEYS_CALLBACKS = {
         if (!win77.game.event.lineupLength) {
             document.querySelector(".hud-bottom").classList.toggle("hud-bottom--open");
         }
+    },
+    t: () => {
+        openTalk();
     },
     shift: () => {
         if (!win77.game.event.lineupLength) {

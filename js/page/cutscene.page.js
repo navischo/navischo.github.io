@@ -12,7 +12,8 @@ const CUTSCENE_IDS = {
     arasaka: `arasaka`,
     nightplay: `nightplay`,
     smok: `smok`,
-    cs: `cs`
+    cs: `cs`,
+    freedom: `freedom`
 };
 
 const CUTSCENE_FILES = {
@@ -25,7 +26,8 @@ const CUTSCENE_FILES = {
     arasaka: `mp4-cutscene-arasaka.mp4`,
     nightplay: `mp4-room-night-play.mp4`,
     smok: `mp4-room-smok.mp4`,
-    cs: `mp4-bg-cyber-strike.mp4`
+    cs: `mp4-bg-cyber-strike.mp4`,
+    freedom: `mp4-cutscene-freedom.mp4`
 };
 
 const getCutsceneMarkup = (videoName) =>

@@ -58,6 +58,7 @@
 @import "blocks/player-for-mm.css";
 @import "blocks/cards-reward.css";
 @import "blocks/achievement.css";
+@import "blocks/talk.css";
 
 /*CUSTOMIZATION*/
 @import "./i-customization.css";
