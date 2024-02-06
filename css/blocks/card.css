@@ -217,17 +217,20 @@
 
 .card-btn::before,
 .card__controls > button::before {
-    background-color: black;
-    bottom: 10px;
     content: "";
-    display: block;
-    height: 3px;
+
     position: absolute;
     right: 2px;
     top: auto;
-    transform: rotate(315deg) translateY(10px);
-    width: var(--ui-notch-hypotenuse);
+    bottom: 10px;
     z-index: 31;
+
+    display: block;
+    height: 3px;
+    width: var(--ui-notch-hypotenuse);
+
+    transform: rotate(315deg) translateY(10px);
+    background-color: black;
     transition: .1s ease-in;
 }
 
