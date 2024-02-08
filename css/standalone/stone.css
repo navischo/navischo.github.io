@@ -281,6 +281,14 @@
     margin-right: 20px;
 }
 
+.stone-game__post .stone-game__play {
+    margin-bottom: 30px;
+}
+
+.stone-game__download {
+    background: linear-gradient(to right, #00c3b4, #1672ab);
+}
+
 .stone-game__aside {
     width: 100%;
 }
