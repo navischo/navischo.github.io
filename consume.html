@@ -323,7 +323,7 @@
                     </div>
                     <div class="stone-game__overview-tr">
                         <div class="stone-game__overview-tl --uppercase">Дата виходу:</div>
-                        <div class="stone-game__overview-td">12.12.2212</div>
+                        <div class="stone-game__overview-td">12.12.2222</div>
                     </div>
                     <div class="stone-game__overview-tr">
                         <div class="stone-game__overview-tl --uppercase">Розробник:</div>
@@ -410,6 +410,23 @@
                         </div>
                     </div>
                 </div>
+                <div class="stone-game__play stone-game__release">
+                    <p class="stone-game__play-descr">Повна версія гри в активній розробці</p>
+                    <h3 class="stone-game__play-title">
+                        Запланована дата виходу:<br>
+                        <b class="stone-game__play-title-name">12.12</b>
+                    </h3>
+                    <p class="stone-game__play-descr">До виходу гри лишилось: <span id="releaseDate">300 днів</span></p>
+                    <footer class="stone-game__play-footer">
+                        <p class="stone-game__play-descr">
+                            Зацікавлені?<br>
+                            Додайте до списку бажань та дізнайтеся, коли гра вийде.
+                        </p>
+                        <div class="stone-game__play-controls">
+                            <button class="js-add-to-wishlist stone-game__play-btn">Додати до бажань</button>
+                        </div>
+                    </footer>
+                </div>
                 <div class="stone-game__about">
                     <h2 class="stone-game__about-title">Про цю гру</h2>
                     <div class="stone-game__about-textfield">
@@ -421,11 +438,45 @@
                             -додавати у гру власні зображення для карт, фону рівня, графіті та буквально замінювати у грі все що представлене зображенням<br>
                             -безпосередньо редагувати код гри у JS, додаючи власні ігрові режими, рівні та механіки
                         </p>
-<!--                        <p>Гайд як саме робити будь-що з цього можна знайти сторінці гайдів гри та обговорити в Діскорді спільноти</p>-->
+                        <p>Гайд як саме робити будь-що з цього можна знайти сторінці гайдів гри та обговорити в Діскорді спільноти</p>
+                    </div>
+                </div>
+                <div class="stone-game__about --system-require">
+                    <div class="stone-game__about-textfield">
+                        <h3>Мінімальні системні вимоги:</h3>
+                        <ul>
+                            <li>
+                                <b>ОС:</b> Windows 10+ / iOS 10.10+ / Ubuntu 16.04+
+                            </li>
+                            <li>
+                                <b>Процесор:</b> 2.0 Ghz 64-bit Intel-compatible
+                            </li>
+                            <li>
+                                <b>Оперативна пам’ять:</b> 2 GB ОП
+                            </li>
+                            <li>
+                                <b>Відеокарта:</b> OpenGL 3.0
+                            </li>
+                            <li>
+                                <b>DirectX:</b> версії 11
+                            </li>
+                            <li>
+                                <b>Місце на диску:</b> 180 MB доступного місця
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
             <div class="stone-game__aside">
+                <div class="stone-game__aside-block">
+                    <h3 class="stone-game__aside-title">Чи підходить вам ця гра?</h3>
+                    <div class="stone-game__aside-text --l">
+                        Ця гра не схожа на жодну з тих, які зустрічались тобі раніше. Тому ти можеш пройти простий тест та дізнатися, чи може вона тебе зацікавити
+                    </div>
+                    <footer class="stone-game__aside-action">
+                        <a class="stone-btn --secondary" target="_blank">Детальніше</a>
+                    </footer>
+                </div>
                 <div class="stone-game__aside-block">
                     <div class="stone-game__aside-row">
                         <div class="icon">
@@ -457,6 +508,37 @@
                         </div>
                         Справжні колекційні картки
                     </div>
+                </div>
+                <div class="stone-game__aside-block">
+                    <div class="stone-game__aside-text">
+                        Мови:
+                    </div>
+                    <table class="stone-game__aside-langs">
+                        <tr>
+                            <td></td>
+                            <td>Текст</td>
+                            <td>Звук</td>
+                            <td>Субт.</td>
+                        </tr>
+                        <tr>
+                            <td>українська</td>
+                            <td>✔</td>
+                            <td></td>
+                            <td>✔</td>
+                        </tr>
+                        <tr>
+                            <td>англійська</td>
+                            <td>✔</td>
+                            <td></td>
+                            <td>✔</td>
+                        </tr>
+                        <tr>
+                            <td>російська</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>
                 </div>
                 <div class="stone-game__aside-block">
                     <div class="stone-game__aside-text">
@@ -741,6 +823,29 @@
     earlyFaqBtn.addEventListener("click", () => {
         earlyFaq.classList.toggle("--open");
     });
+
+
+    function timer() {
+        var nowDate = new Date();
+        var achiveDate = new Date(2024,11,12,0,0,0); //Задаем дату, к которой будет осуществляться обратный отсчет
+        var result = (achiveDate - nowDate)+1000;
+        if (result < 0) {
+            var elmnt = document.getElementById('releaseDate');
+            elmnt.innerHTML = ' - : - - : - - : - - ';
+            return undefined;
+        }
+        var seconds = Math.floor((result/1000)%60);
+        var minutes = Math.floor((result/1000/60)%60);
+        var hours = Math.floor((result/1000/60/60)%24);
+        var days = Math.floor(result/1000/60/60/24);
+        if (seconds < 10) seconds = '0' + seconds;
+        if (minutes < 10) minutes = '0' + minutes;
+        if (hours < 10) hours = '0' + hours;
+        var elmnt = document.getElementById('releaseDate');
+        elmnt.innerHTML = days > 1 ? `${days} днів` : `${days} днів ${hours} год.`;
+        setTimeout(timer, 1000);
+    }
+    window.addEventListener("DOMContentLoaded", timer);
 </script>
 <script>
     var swiper = new Swiper(".mySwiper", {

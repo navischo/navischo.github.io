@@ -18,6 +18,18 @@
     background: linear-gradient( -60deg, #417a9b 5%,#67c1f5 95%);
 }
 
+.stone-btn.--secondary {
+    display: inline-block;
+    padding: 0 15px;
+
+    font-family: "JetBrains Mono", monospace;
+    font-size: 16px;
+    color: #62b7d6!important;
+
+    cursor: pointer;
+    background: linear-gradient(to right, #233d4e, #243f54);
+}
+
 .stone-breadcrumbs {
     display: block;
     margin-bottom: 12px;
@@ -267,7 +279,22 @@
     line-height: 22px;
     font-weight: 700;
     text-shadow: 1px 0px 2px black;
+    cursor: pointer;
     background: linear-gradient(to right, #00ffff, #00da91);
+}
+
+.stone-game__release {
+    padding-bottom: 0;
+    border: 1px solid #4e81ae;
+
+    background: linear-gradient(to right, #29475f, #56a2cd);
+}
+.stone-game__release .stone-game__play-footer {
+    padding: 20px 30px 40px;
+    margin-left: -30px;
+    margin-right: -30px;
+    margin-top: 20px;
+    background: linear-gradient(to right, #0f1f28, #223d50);
 }
 
 .stone-game__content {
@@ -327,13 +354,81 @@
     background-color: rgba( 0, 0, 0, 0.5 );
 }
 
+.stone-game__aside-title {
+    padding: 10px 18px;
+    margin-left: -16px;
+    margin-right: -16px;
+    margin-top: -16px;
+    margin-bottom: 16px;
+
+    font-family: "JetBrains Mono", monospace;
+    color: #fff;
+    font-size: 16px;
+
+    background-color: rgba(0,0,0, .2);
+}
+
 .stone-game__aside-text {
     font-family: "JetBrains Mono", monospace;
     font-size: 12px;
     color: #8f98a0;
 }
 
-.stone-game__about {
+.stone-game__aside-text.--l {
+    color: #acb2b8;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.stone-game__aside-langs {
+    width: 100%;
+    font-size: 12px;
+    font-family: "JetBrains Mono", monospace;
+    color: #8f98a0;
+    border-collapse: collapse;
+}
+
+.stone-game__aside-langs tr {
+    border-bottom: 1px solid #8f98a0;
+}
+
+.stone-game__aside-langs tr:first-child td {
+    color: #8f98a0;
+}
+
+.stone-game__aside-langs td {
+    text-align: center;
+    color: #67c1f5;
+    padding: 3px 0px 3px 0px;
+}
+
+.stone-game__aside-langs td:first-child {
+    text-align: left;
+    color: #8f98a0;
+    width: 35%;
+}
+
+.stone-game__aside-action {
+    padding: 16px 0 6px;
+}
+
+.stone-game__about.--system-require {
+    margin-top: 60px;
+}
+
+.stone-game__about.--system-require .stone-game__about-textfield {
+    font-size: 12px;
+
+}
+
+.stone-game__about.--system-require ul {
+    padding: 16px;
+    list-style: none;
+    background-color: rgba( 0, 0, 0, 0.5 );
+}
+
+.stone-game__about.--system-require b {
+    color: #61686D;
 }
 
 .stone-game__about-title {
