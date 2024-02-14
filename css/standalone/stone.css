@@ -408,6 +408,10 @@
     width: 35%;
 }
 
+.stone-game__aside-langs tr:last-child td:last-child {
+    color: #8f98a0;
+}
+
 .stone-game__aside-action {
     padding: 16px 0 6px;
 }
