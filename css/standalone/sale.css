@@ -1,44 +1,53 @@
 .sale {
+    display: none;
     width: 100%;
 }
 
 .sale__banner {
     position: relative;
 
-    max-width: 1200px;
+    /*max-width: 1200px;*/
     margin: 0 auto;
+    min-height: 340px;
 }
 
-.sale__banner::after {
-    content: "";
-
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 2;
-
-    height: 420px;
-
-    background: linear-gradient(to top, black 0%, transparent 100%);
+.sale__banner-img {
+    display: none;
 }
+
+/*.sale__banner::after {*/
+/*    content: "";*/
+
+/*    position: absolute;*/
+/*    left: 0;*/
+/*    right: 0;*/
+/*    bottom: 0;*/
+/*    z-index: 2;*/
+
+/*    height: 420px;*/
+
+/*    background: linear-gradient(to top, black 0%, transparent 100%);*/
+/*}*/
 
 .sale__banner-screen {
     position: absolute;
-    top: 318px;
-    left: 94px;
+    top: 288px;
+    left: 70px;
     right: 80px;
 
     display: block;
-    height: 215px;
-    padding-top: 50px;
+    max-width: 420px;
+    width: 100%;
+    height: 115px;
+    padding-top: 35px;
     padding-left: 10px;
     padding-right: 10px;
+    margin: 0 auto;
 
     text-align: center;
 
     border-radius: 5px;
-    background: #2c5691;
+    background: #ed43a3;
     /*border: 3px solid black;*/
 
     animation: noise 8s steps(10) infinite;
@@ -64,7 +73,7 @@
     margin-bottom: 10px;
 
     font-family: "Press Start 2p", "JetBrains Mono", monospace;
-    font-size: 60px;
+    font-size: 22px;
     text-transform: uppercase;
 
     animation: glitch 5s step-end infinite reverse;
@@ -75,9 +84,9 @@
     margin: 0;
 
     font-family: "JetBrains Mono", monospace;
-    font-size: 40px;
+    font-size: 16px;
     text-transform: uppercase;
-    letter-spacing: -4px;
+    /*letter-spacing: -4px;*/
 }
 
 .sale__banner-screen::before {
@@ -137,5 +146,20 @@
 
     90% {
         background-position: -10% 10%;
+    }
+}
+
+
+@media (min-width: 1360px) {
+    .sale {
+        display: block;
+    }
+
+    .sale__banner {
+        min-height: auto;
+    }
+
+    .sale__banner-img {
+        display: block;
     }
 }

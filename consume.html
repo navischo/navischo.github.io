@@ -28,6 +28,7 @@
     <!-- END FAVICON -->
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="libs/magnific-popup/magnific-popup.css">
 
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/standalone/blog.css">
@@ -87,16 +88,17 @@
                         </div>
                     </div>
                 </header>
-                <img class="img-autumn-sale" src="img/buy/winter_sale.gif" alt="">
-<!--            <header class="sale">-->
-<!--                <div class="sale__banner">-->
-<!--                    <img class="sale__banner-img" src="img/buy/autumn_sale.gif" alt="">-->
-<!--                    <div class="sale__banner-screen">-->
-<!--                        <h2 class="sale__banner-title">Літній розпродаж</h2>-->
-<!--                        <p class="sale__banner-date">З 1 до 11 серпня, 20:00 за Києвом</p>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </header>-->
+            <header class="sale" style="display: none">
+                <div class="sale__banner">
+                    <img class="sale__banner-img" src="img/buy/winter_sale.gif" alt="">
+                    <div class="sale__banner-screen">
+                        <h2 class="sale__banner-title">Зимовий розпродаж</h2>
+                        <p class="sale__banner-date">З 22 до 29 лютого, 20:00 за Києвом</p>
+                    </div>
+                </div>
+            </header>
+
+
             <div class="buy">
                 <h1 class="cybr-title buy__title">Does Not Exist</h1>
                 <p class="buy__subtitle">Competitive Board-n-Web Game...<br> about creating Rave of your Dream</p>
@@ -108,7 +110,7 @@
                     <li class="buy__bundle">
                         <h3 class="buy__bundle-title">Bunny</h3>
                         <b id="price-bunny" class="buy__bundle-price">7€</b>
-                        <img class="buy__bundle-preview" src="img/buy/bunny.png" alt="">
+                        <img class="buy__bundle-preview" src="img/buy/shop-preview-bunny.png" alt="">
                         <div class="buy__bundle-textfield">
                             <ul>
                                 <li>9 карток Звуку</li>
@@ -127,7 +129,7 @@
                     <li class="buy__bundle">
                         <h3 class="buy__bundle-title">Basic</h3>
                         <b id="price-basic" class="buy__bundle-price">17€</b>
-                        <img class="buy__bundle-preview" src="img/buy/basic.png" alt="">
+                        <img class="buy__bundle-preview" src="img/buy/shop-preview-basic.png" alt="">
                         <div class="buy__bundle-textfield">
                             <ul>
                                 <li>27 карток Звуку</li>
@@ -146,7 +148,8 @@
                     <li class="buy__bundle">
                         <h3 class="buy__bundle-title">Regular</h3>
                         <b id="price-regular" class="buy__bundle-price --regular">117€</b>
-                        <img class="buy__bundle-preview" src="img/buy/regular.png" alt="">
+<!--                        <img class="buy__bundle-preview" src="img/buy/regular.png" alt="">-->
+                        <div class="buy__bundle-preview buy__bundle-mystery"> ?</div>
                         <div class="buy__bundle-textfield">
                             <ul>
                                 <li>Повна колекція зі 189 карток Звуку</li>
@@ -245,27 +248,41 @@
                     <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <img src="img/screenshots/event.png" />
+                                <a class="jq-open-popup" href="img/screenshots/event.png">
+                                    <img src="img/screenshots/event.png" />
+                                </a>
                             </div>
                             <div class="swiper-slide">
-                                <img src="img/screenshots/lineup.png" />
+                                <a class="jq-open-popup" href="img/screenshots/lineup.png">
+                                    <img src="img/screenshots/lineup.png" />
+                                </a>
                             </div>
                             <div class="swiper-slide">
-                                <img src="img/screenshots/login.png" />
+                                <a class="jq-open-popup" href="img/screenshots/login.png">
+                                    <img src="img/screenshots/login.png" />
+                                </a>
                             </div>
                             <div class="swiper-slide">
-                                <img src="img/screenshots/menu.png" />
+                                <a class="jq-open-popup" href="img/screenshots/menu.png">
+                                    <img src="img/screenshots/menu.png" />
+                                </a>
                             </div>
                             <div class="swiper-slide">
-                                <img src="img/screenshots/result.png" />
+                                <a class="jq-open-popup" href="img/screenshots/result.png">
+                                    <img src="img/screenshots/result.png" />
+                                </a>
                             </div>
 
                             <div class="swiper-slide">
-                                <img src="img/screenshots/screenshot-wall.png" />
+                                <a class="jq-open-popup" href="img/screenshots/screenshot-wall.png">
+                                    <img src="img/screenshots/screenshot-wall.png" />
+                                </a>
                             </div>
 
                             <div class="swiper-slide">
-                                <img src="img/screenshots/screenshot-fon.png" />
+                                <a class="jq-open-popup" href="img/screenshots/screenshot-fon.png">
+                                    <img src="img/screenshots/screenshot-fon.png" />
+                                </a>
                             </div>
                         </div>
                         <!--                <div class="swiper-button-next"></div>-->
@@ -600,10 +617,14 @@
     </footer>
     <!--    <img src="img/layout-game-page.png" alt="" width="1348" height="3494">-->
 </div>
-
+<div id="my-popup" class="mfp-hide white-popup">
+    Inline popup
+</div>
 <!--<img src="img/bg-footer.png" alt="" width="1920" height="1080">-->
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script src="libs/magnific-popup/jquery.magnific-popup.js"></script>
 <script>
     const dodgeNode = document.querySelector(".js-dodge");
     setInterval(() => {
@@ -848,28 +869,34 @@
     window.addEventListener("DOMContentLoaded", timer);
 </script>
 <script>
-    var swiper = new Swiper(".mySwiper", {
-        loop: true,
-        spaceBetween: 10,
-        slidesPerView: 4,
-        freeMode: true,
-        watchSlidesProgress: true,
-    });
-    var swiper2 = new Swiper(".mySwiper2", {
-        loop: true,
-        spaceBetween: 10,
-        // navigation: {
-        //     nextEl: ".swiper-button-next",
-        //     prevEl: ".swiper-button-prev",
-        // },
-        thumbs: {
-            swiper: swiper,
-        },
-        // scrollbar: {
-        //     el: ".swiper-scrollbar",
-        //     hide: true,
-        // }
-    });
+    window.addEventListener("DOMContentLoaded", () => {
+        const swiper = new Swiper(".mySwiper", {
+            // loop: true,
+            spaceBetween: 10,
+            slidesPerView: 4,
+            freeMode: true,
+            watchSlidesProgress: true,
+        });
+        const swiper2 = new Swiper(".mySwiper2", {
+            // loop: true,
+            spaceBetween: 10,
+            autoplay: {
+                delay: 15000,
+            },
+            // navigation: {
+            //     nextEl: ".swiper-button-next",
+            //     prevEl: ".swiper-button-prev",
+            // },
+            thumbs: {
+                swiper: swiper,
+            },
+            // scrollbar: {
+            //     el: ".swiper-scrollbar",
+            //     hide: true,
+            // }
+        });
+    })
+
 </script>
 <script type="module">
     import { displayLastVisit, displayPlayTime } from "./js/utils/saveVisit.js";
@@ -900,6 +927,38 @@
 
     lastVisitNode.textContent = displayLastVisit();
     playTimeNode.textContent = displayPlayTime();
+</script>
+<script>
+    $('.jq-open-popup').magnificPopup({type:'image'});
+    // $('.jq-open-popup').magnificPopup({
+    //     items: [
+    //         {
+    //             src: 'img/screenshots/event.png'
+    //         },
+    //         {
+    //             src: 'img/screenshots/lineup.png'
+    //         },
+    //         {
+    //             src: 'img/screenshots/login.png'
+    //         },
+    //         {
+    //             src: 'img/screenshots/menu.png'
+    //         },
+    //         {
+    //             src: 'img/screenshots/result.png'
+    //         },
+    //         {
+    //             src: 'img/screenshots/screenshots-fon.png'
+    //         },
+    //         {
+    //             src: 'img/screenshots/screenshots-wall.png'
+    //         }
+    //     ],
+    //     gallery: {
+    //         enabled: true
+    //     },
+    //     type: 'image' // this is a default type
+    // });
 </script>
 <style>
     .stone .swiper {
@@ -967,6 +1026,24 @@
         height: 100%;
         object-fit: cover;
     }
+</style>
+<style>
+    .white-popup {
+        position: relative;
+        background: #FFF;
+        padding: 40px;
+        width: auto;
+        max-width: 200px;
+        margin: 20px auto;
+        text-align: center;
+    }
+    .mfp-container {
+        padding-left: 20px!important;
+        padding-right: 20px!important;
+    }
+    /*.mfp-zoom-out-cur {*/
+    /*    overflow: hidden;*/
+    /*}*/
 </style>
 </body>
 </html>
