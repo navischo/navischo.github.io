@@ -42,7 +42,6 @@ const initDNEPlayersSet = () => {
 }
 
 win77.players = initDNEPlayersSet();
-win77.lobby = new Set();
 
 const invitePlayer = (id) => {
     const playerById = Array.from(win77.players).find((DNEPlayer) => DNEPlayer.id === id);

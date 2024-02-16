@@ -114,7 +114,16 @@ const appendPlayerToInventory = (playerId) => {
     newListItem.textContent = playerId;
 
     newListItem.addEventListener("click", (e) => {
-        win77.switchPlayer(playerId);
+        if (playerId === win77.router.currentPlayerInQueue) {
+            win77.switchPlayer(playerId);
+        } else if (win77.game.alliance || win77.game.invasion) {
+            if (playerId === win77.game.alliance.savior) {
+                win77.switchPlayer(playerId);
+            }
+            if (playerId === win77.game.invasion.invader) {
+                win77.switchPlayer(playerId);
+            }
+        }
     });
 
     matchmakingList.appendChild(newListItem);

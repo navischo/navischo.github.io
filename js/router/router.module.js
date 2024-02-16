@@ -146,12 +146,14 @@ const initNextBtn = () => {
     win77.router.currentPipe = win77.router.pipeline[0];
 
     win77.router.pipeline[1].onInit = () => {
-        console.log("onInit is works", win77.router.pipeline[1]);
-        addOptionalNextBtn("invade", () => {
-            console.log("Someone want to invade your event");
-            callInvader();
-        });
-        document.querySelector("#invade").classList.add("--red");
+        console.log("onInit is works", win77.router.pipeline[1], win77.game.lobby);
+        if (win77.lobby.size > 0) {
+            addOptionalNextBtn("invade", () => {
+                console.log("Someone want to invade your event");
+                callInvader();
+            });
+            document.querySelector("#invade").classList.add("--red");
+        }
     }
     win77.router.pipeline[0].onInit = () => {
         const shopNextBtn = document.querySelector("#shop");

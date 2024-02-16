@@ -11,6 +11,10 @@ const switchPlayer = (id) => {
     const prevPlayer = win77.game.player;
     console.log("playerById", playerById, win77.game.player);
 
+    if (id === prevPlayer.id) {
+        return;
+    }
+
     win77.lobby.delete(playerById);
     win77.lobby.add(prevPlayer);
     win77.game.player = playerById;

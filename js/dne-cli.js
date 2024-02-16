@@ -8,6 +8,7 @@ class DNECli {
         this.inQuestTime = 0;
         this.mm = null;
         this.budgetAccepted = false;
+        this.lobby = new Set();
     }
 
     timer(h, m, s, maxSec, maxMin, maxHour) {
