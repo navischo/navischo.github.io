@@ -3447,3 +3447,13 @@ img[data-crystal-link] {
     /*max-width: 928px;*/
     /*margin: 0 auto;*/
 }
+
+.l-news__header-title.--stone {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .l-news__header-title.--stone {
+        display: flex;
+    }
+}
