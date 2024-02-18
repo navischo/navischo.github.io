@@ -4,7 +4,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: 100;
+    z-index: 1203;
 
     display: none;
     width: 100vw;
@@ -13,6 +13,11 @@
     /*background: url("../../img/layout-dialog.jpg");*/
     background-size: contain;
     background-position: center;
+}
+
+.talk.--simple .talk__upper-space,
+.talk.--simple .talk__right {
+    display: none;
 }
 
 .talk.--open {
@@ -79,7 +84,7 @@
 
 .talk__right {
     position: absolute;
-    right: -100px;
+    right: -130px;
     z-index: 2;
 
     height: 100vh;
@@ -122,4 +127,19 @@
     right: 7px;
     color: white;
     font-family: "JetBrains Mono", monospace;
+}
+
+.black-screen {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 30;
+
+    display: block;
+    width: 100vw;
+    height: 100vh;
+
+    background: black;
 }

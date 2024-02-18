@@ -4,7 +4,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: 1202;
+    z-index: 1204;
 
     visibility: hidden;
     opacity: 0;
@@ -15,6 +15,10 @@
 .game-menu.--open {
     visibility: visible;
     opacity: 1;
+}
+
+.game-menu.--death {
+    z-index: 1202;
 }
 
 .game-menu__key-tips,

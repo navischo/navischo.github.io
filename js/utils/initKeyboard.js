@@ -1,6 +1,6 @@
 import { goToCards, goToPlay } from "./goToCards.js";
 import { closeGameMenu } from "../hud/btn.hud.js";
-import { openTalk } from "../utils/initTalk.js";
+import { openTalk, leaveTalk } from "./initTalk.js";
 import { win77 } from "../dne-cli.js";
 // const NUMBERS = {
 //     IN_MENU: [],
@@ -46,6 +46,7 @@ const KEYS_SIGNS = {
     p: ["r", "R", "к", "К"],
     h: ["h", "H", "р", "Р"],
     t: ["t", "T", "е", "Е"],
+    l: ["l", "L", "д", "Д"],
     shift: ["Shift"],
     escape: ["Escape"]
 }
@@ -66,7 +67,10 @@ const KEYS_CALLBACKS = {
         }
     },
     t: () => {
-        openTalk();
+        openTalk("Hello, World!");
+    },
+    l: () => {
+        leaveTalk();
     },
     shift: () => {
         if (!win77.game.event.lineupLength) {

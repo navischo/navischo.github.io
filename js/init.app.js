@@ -58,6 +58,7 @@ import {initBtnZeroInbox} from "./utils/initBtnZeroInbox.js";
 import {enterCity} from "./utils/enterCity.js";
 import { updNokiaLobby } from "./router/callFriend.js";
 import { saveVisit, displayLastVisit } from "./utils/saveVisit.js";
+import { startSequence } from "./utils/initTalk.js"
 
 const initApp = () => {
     saveVisit();
@@ -145,6 +146,7 @@ const initApp = () => {
     makeWallSprayable();
     initTerminal();
     enterCity();
+    startSequence("intro");
 }
 
 export { initApp };
