@@ -886,7 +886,6 @@
 
 .stone-game__play,
 .stone-game__preview,
-.stone-game__overview,
 .stone-game__post,
 .stone-game__aside {
     margin-left: auto;
@@ -896,9 +895,12 @@
 @media (min-width: 940px) {
     .stone-game__play,
     .stone-game__preview,
-    .stone-game__overview,
     .stone-game__aside {
         margin-left: 0;
+        margin-right: 0;
+    }
+
+    .stone-game__overview {
         margin-right: 0;
     }
 
