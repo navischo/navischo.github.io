@@ -30,6 +30,93 @@
 
 }
 
+.node {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.node__disclaimer {
+    margin-bottom: 1em;
+
+    font-size: 1em;
+    font-weight: 400;
+    font-family: "JetBrains Mono", monospace;
+    color: white;
+}
+
+.node__title {
+    font-size: 1.5em;
+    font-weight: 700;
+    font-family: "JetBrains Mono", monospace;
+    margin-bottom: 10px;
+}
+
+.node__container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.node__controls {
+    display: flex;
+    flex-direction: column;
+}
+
+.node__controls .node__controls-item {
+    display: flex;
+    width: auto;
+    height: auto;
+    flex-direction: column;
+    font-size: 2.4em;
+    transform: scale(1);
+    transition: .1s ease;
+}
+
+.node__controls .node__controls-item:hover {
+    transform: scale(1.1) rotateZ(var(--skew));
+}
+
+.node__controls-item b {
+    font-size: 16px;
+}
+
+.node__link {
+    font-size: 12px;
+    font-family: "JetBrains Mono", monospace;
+}
+
+.node__link:hover,
+.node__link:focus,
+.node__link:active {
+    color: #00c3b4;
+}
+
+@media (min-width: 768px) {
+    .node {
+        padding-top: 40px;
+    }
+
+    .node__controls {
+        flex-direction: row;
+        justify-content: center;
+        max-width: 768px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .node__controls-item + .node__controls-item {
+        margin-top: 0;
+        margin-left: 20px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .node {
+        padding-top: 80px;
+        padding-bottom: 140px;
+    }
+}
+
 .story {
     padding-top: 80px;
     text-align: center;
@@ -71,7 +158,7 @@
 @media (min-width: 768px) {
     .buy__title {
         font-size: 7em;
-        padding: 1.5em 1em 1.2em;
+        padding: .5em 1em .2em;
     }
 }
 
@@ -156,7 +243,7 @@
     right: -10px;
 
     font-family: "Press Start 2p", "JetBrains Mono", sans-serif;
-    font-size: 5em;
+    font-size: 3.6em;
     color: cyan;
 
     text-shadow: 6px 5px 0 yellow;
