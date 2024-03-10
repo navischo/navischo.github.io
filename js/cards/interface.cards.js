@@ -49,7 +49,7 @@ class DNEMonsterCard {
         this.img = img;
         this.description = description;
         this.souls = souls;
-        this.treasures = souls;
+        this.treasures = treasures;
         this.fail = fail;
     }
 
