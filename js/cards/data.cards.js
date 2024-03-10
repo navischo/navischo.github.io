@@ -1737,25 +1737,62 @@ const initMonsterArr = () => {
 
     // MonstersArr.push(new DNEMonsterCard("monster", "Монстр", 1, "Монстр почувається нормально. Так він каже. Насправді монстр зробив одне невдале татуювання. Все б нічого, скажеш ти, у кого вони всі вдалі? - І будеш правий. Ось тільки є один нюанс, це здоровенний блекворк на обличчі. Тепер ця чунга чанга збирається в останню путь завтра ввечері. Зроби щось, якщо тобі не начхати"))
 
-        // +5 проти ельфів
-    MonstersArr.push(new DNEMonsterCard("monster-leperchaun", "Лепрікон", 4, "img/monsters/monster-leperchaun.png", "", 1, 2, "Забирає в тебе дві картки з руки. Одну обирає лівий сусід, іншу - правий. Скинь їх."));
+    MonstersArr.push(new DNEMonsterCard("cat-girl", "Кицьо-дівчина", 9, "img/monsters/monster-cat-girl.png", "", 1, 3, "Кинь d6 та скинь стільки карт, скільки випаде"));
+
+    // +5 проти ельфів
+    MonstersArr.push(new DNEMonsterCard("leperchaun", "Лепрікон", 4, "img/monsters/monster-leperchaun.png", "", 1, 2, "Забирає в тебе дві картки з руки. Одну обирає лівий сусід, іншу - правий. Скинь їх."));
 
     // -2, -5
-    MonstersArr.push(new DNEMonsterCard("monster-undead-clowns", "Клоундеди", 16, "img/monsters/monster-undead-clowns.png", "", 2, 4, "Скинь одну карту з інвентарю. Якщо в інвентарі немає карток, скинь всю руку."));
+    MonstersArr.push(new DNEMonsterCard("undead-clowns", "Клоундеди", 16, "img/monsters/monster-undead-clowns.png", "", 2, 4, "Скинь одну карту з інвентарю. Якщо в інвентарі немає карток, скинь всю руку."));
 
     // no fight with...
-    MonstersArr.push(new DNEMonsterCard("monster-lawyers", "Адвокат", 6, "img/monsters/monster-lawyers.png", "", 1, 2, "Кожен суперник, починаючи з лівого, тягне по карті з твоєї руки. Скинь карти що залишаться."))
+    MonstersArr.push(new DNEMonsterCard("lawyers", "Адвокат", 6, "img/monsters/monster-lawyers.png", "", 1, 2, "Кожен суперник, починаючи з лівого, тягне по карті з твоєї руки. Скинь карти що залишаться."))
 
     // +3
-    MonstersArr.push(new DNEMonsterCard("monster-telemarketer", "Телефонний спамер", 3, "img/monsters/monster-telemarketer.png", "", 1, 1, "Втрать одну душу"));
+    MonstersArr.push(new DNEMonsterCard("telemarketer", "Телефонний спамер", 3, "img/monsters/monster-telemarketer.png", "", 1, 1, "Втрать одну душу"));
 
-    MonstersArr.push(new DNEMonsterCard("monster-ghost-in-the-shell", "Привид у панцері", 5, "img/monsters/monster-ghost-in-the-shell.png", "", 1, 2, "Скинь одну карту з руки"));
+    MonstersArr.push(new DNEMonsterCard("ghost-in-the-shell", "Привид у панцері", 5, "img/monsters/monster-ghost-in-the-shell.png", "", 1, 2, "Скинь одну карту з руки"));
 
-    MonstersArr.push(new DNEMonsterCard("monster-the-hand-of-fate", "Рука долі", 18, "img/monsters/monster-the-hand-of-fate.png", "", 2, 4, "Забирає одного твого Найомничка, скинь його. Якщо немає Найомничка, втрать дві душі."));
-    MonstersArr.push(new DNEMonsterCard("monster-minor-god", "Дрібний бог", 1, "img/monsters/monster-minor-god.png", "", 1, 1, "Покажи всім гравцям картки зі своєї руки. Гравець з найнижчим рівнем може обрати собі одну(спір вирішить кидок d6)."));
-    MonstersArr.push(new DNEMonsterCard("monster-oxymoron", "Абихто", 15, "img/monsters/monster-oxymoron.png", "", 2, 4, "Втрать одну душу та дві карти з руки на твій вибір"));
-    MonstersArr.push(new DNEMonsterCard("monster-mud-wrestler", "Багноборка", 3, "img/monsters/monster-mud-wrestler.png", "", 1, 1, "Скинь карту з руки"));
-    MonstersArr.push(new DNEMonsterCard("monster-harpies", "Гарпістки", 4, "img/monsters/monster-harpies.png", "", 1, 2, "Втрать дві душі"));
+    MonstersArr.push(new DNEMonsterCard("the-hand-of-fate", "Рука долі", 18, "img/monsters/monster-the-hand-of-fate.png", "", 2, 4, "Забирає одного твого Найомничка, скинь його. Якщо немає Найомничка, втрать дві душі."));
+    MonstersArr.push(new DNEMonsterCard("minor-god", "Дрібний бог", 1, "img/monsters/monster-minor-god.png", "", 1, 1, "Покажи всім гравцям картки зі своєї руки. Гравець з найнижчим рівнем може обрати собі одну(спір вирішить кидок d6)."));
+    MonstersArr.push(new DNEMonsterCard("oxymoron", "Абихто", 15, "img/monsters/monster-oxymoron.png", "", 2, 4, "Втрать одну душу та дві карти з руки на твій вибір"));
+    MonstersArr.push(new DNEMonsterCard("mud-wrestler", "Багноборка", 3, "img/monsters/monster-mud-wrestler.png", "", 1, 1, "Скинь карту з руки"));
+    MonstersArr.push(new DNEMonsterCard("harpies", "Гарпістки", 4, "img/monsters/monster-harpies.png", "", 1, 2, "Втрать дві душі"));
+    MonstersArr.push(new DNEMonsterCard("blobgoblin", "Жлобгоблін", 1, "img/monsters/monster-blobgoblin.png", "", 1, 1, "Твої сусіди ліворуч та праворуч тягнуть в тебе з руки наосліп по одній карті та залишають собі"));
+    MonstersArr.push(new DNEMonsterCard("the-three-munchketeers", "Три манчкітери", 13, "img/monsters/monster-the-three-munchketeers.png", "", 1, 3, "Скинь три карти з руки, загальним бонусом не менше 9(якщо в тебе є стіки)"));
+    MonstersArr.push(new DNEMonsterCard("chocolate-bunny", "Шоколадний кролик", 4, "img/monsters/monster-chocolate-bunny.png", "", 1, 2, "До свого наступного ходу ти нікому не можеш допомагати"));
+    MonstersArr.push(new DNEMonsterCard("lord-tennis-anyone", "Лорд Втенісон", 12, "img/monsters/monster-lord-tennis-anyone.png", "", 1, 3, "Втрать одну душу"));
+    MonstersArr.push(new DNEMonsterCard("obsture-angel", "Тупий янгол", 14, "img/monsters/monster-obsture-angel.png", "", 1, 4, "Тебе обнулено"));
+    MonstersArr.push(new DNEMonsterCard("salamander", "Саламандра", 4, "img/monsters/monster-salamander.png", "", 1, 2, "Втрать одну душу"));
+    MonstersArr.push(new DNEMonsterCard("frog-prince", "Царевич-жаба", 6, "img/monsters/monster-frog-prince.png", "", 1, 2, "Скинь карту з руки"));
+    MonstersArr.push(new DNEMonsterCard("cyclops", "Циклоп", 19, "img/monsters/monster-cyclops.png", "", 2, 5, "Тебе обнулено"));
+    MonstersArr.push(new DNEMonsterCard("wight-brothers", "Бліді брати", 16, "img/monsters/monster-wight-brothers.png", "", 2, 4, "Втрать усі душі"));
+    MonstersArr.push(new DNEMonsterCard("ghoulfiends", "Мадемонуазелі", 8, "img/monsters/monster-ghoulfiends.png", "", 1, 2, "Втрать стільки душ, щоб залилось як у гравця з найменьшою кількістю душ у грі"));
+    MonstersArr.push(new DNEMonsterCard("mr-bones", "Містер Бонес", 2, "img/monsters/monster-mr-bones.png", "", 1, 1, "Втрать дві душі"));
+    MonstersArr.push(new DNEMonsterCard("druid", "Друїд", 14, "img/monsters/monster-druid.png", "", 1, 4, "Скинь карту, що дає тобі особливу здібність, на твій вибір"));
+    MonstersArr.push(new DNEMonsterCard("smog", "Смог", 20, "img/monsters/monster-smog.png", "", 2, 5, "Тебе обнулено"));
+    MonstersArr.push(new DNEMonsterCard("right-angel", "Прямий янгол", 9, "img/monsters/monster-right-angel.png", "", 1, 3, "Скинь карту, що дає тобі особливу здібність, на твій вибір. Якщо такої карти в тебе нема, візьми одну карту на руку"));
+    MonstersArr.push(new DNEMonsterCard("a-cute-angel", "Косий янгол", 4, "img/monsters/monster-a-cute-angel.png", "", 1, 2, "Втрать одну душу"));
+    MonstersArr.push(new DNEMonsterCard("pit-bull", "Пітбуль", 2, "img/monsters/monster-pit-bull.png", "", 1, 1, "Втрать дві душі"));
+    MonstersArr.push(new DNEMonsterCard("midgard-serpent", "Мідгардський змій", 19, "img/monsters/monster-midgard-serpent.png", "", 2, 5, "Скинь всі карти з руки та інвентарю"));
+    MonstersArr.push(new DNEMonsterCard("pinball-lizard", "Пінбольний ящер", 2, "img/monsters/monster-pinball-lizard.png", "", 1, 1, "Втрать одну душу або карту з найбільшим бонусом, що ти маєш, - на твій вибір."));
+    MonstersArr.push(new DNEMonsterCard("net-troll", "Інтернет троль", 10, "img/monsters/monster-net-troll.png", "", 1, 3, "Дозволь гравцям з найбільшою кількістю душ взяти в тебе по карті на їх вибір"));
+    MonstersArr.push(new DNEMonsterCard("pukachu", "Ригачу", 6, "img/monsters/monster-pukachu.png", "", 1, 2, "Скинь всю руку"));
+    MonstersArr.push(new DNEMonsterCard("snerks", "Шмурфи", 12, "img/monsters/monster-snerks.png", "", 1, 3, "Скинь дві карти"));
+    MonstersArr.push(new DNEMonsterCard("bullrog", "Бульрог", 18, "img/monsters/monster-bullrog.png", "", 2, 5, "Тебе обнулено"));
+    MonstersArr.push(new DNEMonsterCard("elmer", "Елмер", 18, "img/monsters/monster-elmer.png", "", 2, 4, "Тебе обнулено"));
+    MonstersArr.push(new DNEMonsterCard("under-the-bed", "Монстр з під ліжка", 2, "img/monsters/monster-under-the-bed.png", "", 1, 1, "Скинь одну карту з руки"));
+    MonstersArr.push(new DNEMonsterCard("meanderthal", "Поневірянець", 10, "img/monsters/monster-meanderthal.png", "", 1, 3, "Скинь карту з бонусом не менше 4-ох, якщо такої нема, втрать душу"));
+    MonstersArr.push(new DNEMonsterCard("floating-nose", "Блукаючий ніс", 10, "img/monsters/monster-floating-nose.png", "", 1, 3, "Втрать три душі"));
+    MonstersArr.push(new DNEMonsterCard("the-brothers-grimm", "Брати Грімм", 2, "img/monsters/monster-the-brothers-grimm.png", "", 1, 1, "Втрать одну душу"));
+    MonstersArr.push(new DNEMonsterCard("roc-star", "Вьюрок-звезда", 4, "img/monsters/monster-roc-star.png", "", 1, 2, "Скинь увесь звук з бонусом 4 або менше"));
+    MonstersArr.push(new DNEMonsterCard("centaurpede", "Сороконячка", 2, "img/monsters/monster-centaurpede.png", "", 1, 1, "Скинь одну карту з руки"));
+    MonstersArr.push(new DNEMonsterCard("unspeakably-awful-indescribable-horror", "Невимовно жахливий незбагненний жах", 14, "img/monsters/monster-unspeakably-awful-indescribable-horror.png", "", 1, 4, "Тебе обнулено"));
+    MonstersArr.push(new DNEMonsterCard("stoned-golem", "Обдолбаний голем", 14, "img/monsters/monster-stoned-golem.png", "", 1, 4, "Тебе обнулено"));
+    MonstersArr.push(new DNEMonsterCard("the-wraith-of-khan", "Привид Хана", 10, "img/monsters/monster-the-wraith-of-khan.png", "", 1, 3, "Віддай по одній карті усім, крім гравців з найбільшим та найменшим рівнем"));
+    MonstersArr.push(new DNEMonsterCard("tongue-demon", "Язичницький демон", 12, "img/monsters/monster-tongue-demon.png", "", 1, 3, "Втрать дві душі. За бажанням кинь d6, випаде 6 - нічого не втрачаєш, інше - втрачай три душі"));
+    MonstersArr.push(new DNEMonsterCard("lounge-lizards", "Тусящери", 12, "img/monsters/monster-lounge-lizards.png", "", 1, 3, "Скинь дві карти з найбільшим бонусом, серед тих що ти маєш"));
+    MonstersArr.push(new DNEMonsterCard("gms-ex-girlfriend", "Колишня подруга майстра", 4, "img/monsters/monster-gms-ex-girlfriend.png", "", 1, 2, "Жінка втрачає одну душу. Чоловік скидує карти з руки, сумарний бонус яких має бути не менше 5-ти"));
 
     return MonstersArr;
 }
