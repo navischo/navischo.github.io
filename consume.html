@@ -775,7 +775,7 @@
         newElement.classList.add(`--${name}`);
         newElement.innerHTML = `
                 <b class="cart-item__name">${name}</b>
-                <b class="cart-item__price">${price}€</b>`;
+                <b class="cart-item__price">${price}₴</b>`;
         parent.appendChild(newElement);
     }
 
@@ -877,7 +877,7 @@
         totalTag.textContent = total;
         solvedTag.textContent = solved;
         percentageTag.textContent = ruleOfThree(total, solved) + "%";
-        totalPrice.textContent = `${totalPrice}€`;
+        totalPrice.textContent = `${totalPrice}₴`;
     }
 
     initPackBuyer();
@@ -891,7 +891,7 @@
     const priceNodeArr = [bunnyPriceNode, basicPriceNode, regularPriceNode];
     const digitalPriceArr = [0, 0, 0];
     const physicalPriceArr = [7, 17, 117];
-    const CURRENCY = "€";
+    const CURRENCY = "₴";
 
     buyDigitalBtn.addEventListener("click", () => {
         digitalPriceArr.forEach((price, i) => {

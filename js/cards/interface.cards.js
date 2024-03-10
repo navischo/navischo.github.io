@@ -42,11 +42,15 @@ class DNEDoorCard extends DNECard {
 }
 
 class DNEMonsterCard {
-    constructor(id, name, level, description) {
+    constructor(id, name, level, img, description, souls, treasures, fail) {
         this.id = id;
         this.name = name;
         this.level = level;
+        this.img = img;
         this.description = description;
+        this.souls = souls;
+        this.treasures = souls;
+        this.fail = fail;
     }
 
     getQuest() {
