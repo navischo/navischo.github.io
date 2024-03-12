@@ -346,7 +346,7 @@ const initDNELootArr = () => {
     LootArr.push(new DNELootCard("class-olivye", "Олів'є", "Раз на хід можеш скинути одну карту щоб взяти дві нові.<br>Можеш тримати в руці 6 карток.", "img/avatars/olivye.jpg", 0, 0, "Клас", "", "", true, true, "class", false));
     LootArr.push(new DNELootCard("class-alien", "Прибулець", "Ти отримуєш на одну душу більше за допомогу.<br><br>У тебе +1 на змивку.", "img/avatars/alien.jpg", 0, 0, "Клас", "", "", true, true, "class", false));
     LootArr.push(new DNELootCard("class-dragonborn", "Драконо<br>народжений", "Під час вторгнення картки чий бонус менший або дорівнює трьом подвоюють свій бонус.<br>У тебе +1 на змивку якщо ти зібрав лайнап вище 10-го рівня або +2 - якщо вище 15-го.", "img/avatars/dragonborn.jpg", 0, 0, "Клас", "", "", true, true, "class", false));
-    LootArr.push(new DNELootCard("class-netrunner", "Нетранер", "Скинь всю руку(>=3 карт), ти не втратиш душі в цьому раунді. Отримай карти Звуку, які одержав би за перемогу.<br>Скинь до трьох карт після кидка змивки; кожна дасть +1 на змивку", "img/avatars/netrunner.jpg", 0, 0, "Клас", "", "", true, true, "class", false));
+    LootArr.push(new DNELootCard("class-netrunner", "Нетранер", "Скинь всю руку(>=3 карт), ти не втратиш душі в цьому раунді. Отримай карти Звуку, які одержав би за перемогу.<br>Скинь до трьох карт після кидка змивки; кожна дасть +1 на змивку", "img/avatars/netrunner.png", 0, 0, "Клас", "", "", true, true, "class", false));
 
     // Міхалич
     //

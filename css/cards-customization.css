@@ -35,7 +35,7 @@
 {opacity: 0}
 
 #dne-card-class-engramma .card {
-    background-color: #e76321;
+    /*background-color: #e76321;*/
 }
 
 #dne-card-class-engramma .card__preview {
@@ -82,7 +82,7 @@
 }
 
 #dne-card-class-netrunner .card {
-    background-color: #3aafff;
+    /*background-color: #3aafff;*/
 }
 
 #dne-card-class-netrunner .card__preview {
