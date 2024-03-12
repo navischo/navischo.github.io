@@ -1747,7 +1747,7 @@ const initMonsterArr = () => {
 
     // MonstersArr.push(new DNEMonsterCard("monster", "Монстр", 1, "Монстр почувається нормально. Так він каже. Насправді монстр зробив одне невдале татуювання. Все б нічого, скажеш ти, у кого вони всі вдалі? - І будеш правий. Ось тільки є один нюанс, це здоровенний блекворк на обличчі. Тепер ця чунга чанга збирається в останню путь завтра ввечері. Зроби щось, якщо тобі не начхати"))
 
-    MonstersArr.push(new DNEMonsterCard("cat-girl", "Кицьо-дівчина", 9, "img/monsters/monster-cat-girl.png", "", 1, 3, "Кинь d6 та скинь стільки карт, скільки випаде"));
+    MonstersArr.push(new DNEMonsterCard("cat-girl", "Кицьо-дівчина", 9, "img/monsters/monster-cat-girl.png", "Смертоносна врода.<br>+5 для Найомничків", 1, 3, "Обшкрябана шкіра та алергія! Кинь d6 та скинь стільки карт, скільки випаде"));
 
     // +5 проти ельфів
     MonstersArr.push(new DNEMonsterCard("leperchaun", "Лепрікон", 4, "img/monsters/monster-leperchaun.png", "", 1, 2, "Забирає в тебе дві картки з руки. Одну обирає лівий сусід, іншу - правий. Скинь їх."));
@@ -1759,15 +1759,15 @@ const initMonsterArr = () => {
     MonstersArr.push(new DNEMonsterCard("lawyers", "Адвокат", 6, "img/monsters/monster-lawyers.png", "", 1, 2, "Кожен суперник, починаючи з лівого, тягне по карті з твоєї руки. Скинь карти що залишаться."))
 
     // +3
-    MonstersArr.push(new DNEMonsterCard("telemarketer", "Телефонний спамер", 3, "img/monsters/monster-telemarketer.png", "", 1, 1, "Втрать одну душу"));
+    MonstersArr.push(new DNEMonsterCard("telemarketer", "Телефонний спамер", 3, "img/monsters/monster-telemarketer.png", "Та виженіть його нарешті хто-небудь!<br>+3 для DJ-їв, бідні на собі вуха рвуть", 1, 1, "Його балачки відволікають тебе так часто, що ти не витримуєш і втрачаєш одну душу"));
 
-    MonstersArr.push(new DNEMonsterCard("ghost-in-the-shell", "Привид у панцері", 5, "img/monsters/monster-ghost-in-the-shell.png", "", 1, 2, "Скинь одну карту з руки"));
+    MonstersArr.push(new DNEMonsterCard("ghost-in-the-shell", "Привид у панцері", 5, "img/monsters/monster-ghost-in-the-shell.png", "+2 для Нетраннерів та Енграм", 1, 2, "Від переляку впускаєш карти. Скинь одну карту з руки"));
 
     MonstersArr.push(new DNEMonsterCard("the-hand-of-fate", "Рука долі", 18, "img/monsters/monster-the-hand-of-fate.png", "", 2, 4, "Забирає одного твого Найомничка, скинь його. Якщо немає Найомничка, втрать дві душі."));
     MonstersArr.push(new DNEMonsterCard("minor-god", "Дрібний бог", 1, "img/monsters/monster-minor-god.png", "", 1, 1, "Покажи всім гравцям картки зі своєї руки. Гравець з найнижчим рівнем може обрати собі одну(спір вирішить кидок d6)."));
-    MonstersArr.push(new DNEMonsterCard("oxymoron", "Абихто", 15, "img/monsters/monster-oxymoron.png", "", 2, 4, "Втрать одну душу та дві карти з руки на твій вибір"));
+    MonstersArr.push(new DNEMonsterCard("oxymoron", "Абихто", 15, "img/monsters/monster-oxymoron.png", "Гальмо у всіх відношеннях...<br>В тебе +1 на змивку.", 2, 4, "Втрать одну душу та дві карти з руки на твій вибір"));
     MonstersArr.push(new DNEMonsterCard("mud-wrestler", "Багноборка", 3, "img/monsters/monster-mud-wrestler.png", "", 1, 1, "Скинь карту з руки"));
-    MonstersArr.push(new DNEMonsterCard("harpies", "Гарпістки", 4, "img/monsters/monster-harpies.png", "", 1, 2, "Втрать дві душі"));
+    MonstersArr.push(new DNEMonsterCard("harpies", "Гарпістки", 4, "img/monsters/monster-harpies.png", "Не піддаються зламу.<br>+5 для Нетраннерів", 1, 2, "Погано виконують жахливу музику. Втрать дві душі"));
     MonstersArr.push(new DNEMonsterCard("blobgoblin", "Жлобгоблін", 1, "img/monsters/monster-blobgoblin.png", "", 1, 1, "Твої сусіди ліворуч та праворуч тягнуть в тебе з руки наосліп по одній карті та залишають собі"));
     MonstersArr.push(new DNEMonsterCard("the-three-munchketeers", "Три манчкітери", 13, "img/monsters/monster-the-three-munchketeers.png", "", 1, 3, "Скинь три карти з руки, загальним бонусом не менше 9(якщо в тебе є стіки)"));
     MonstersArr.push(new DNEMonsterCard("chocolate-bunny", "Шоколадний кролик", 4, "img/monsters/monster-chocolate-bunny.png", "", 1, 2, "До свого наступного ходу ти нікому не можеш допомагати"));
