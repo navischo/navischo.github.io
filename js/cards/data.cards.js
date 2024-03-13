@@ -1746,23 +1746,12 @@ const initMonsterArr = () => {
     const MonstersArr = [];
 
     // MonstersArr.push(new DNEMonsterCard("monster", "Монстр", 1, "Монстр почувається нормально. Так він каже. Насправді монстр зробив одне невдале татуювання. Все б нічого, скажеш ти, у кого вони всі вдалі? - І будеш правий. Ось тільки є один нюанс, це здоровенний блекворк на обличчі. Тепер ця чунга чанга збирається в останню путь завтра ввечері. Зроби щось, якщо тобі не начхати"))
-
     MonstersArr.push(new DNEMonsterCard("cat-girl", "Кицьо-дівчина", 9, "img/monsters/monster-cat-girl.png", "Смертоносна врода.<br>+5 для Найомничків", 1, 3, "Обшкрябана шкіра та алергія! Кинь d6 та скинь стільки карт, скільки випаде"));
-
-    // +5 проти ельфів
     MonstersArr.push(new DNEMonsterCard("leperchaun", "Лепрікон", 4, "img/monsters/monster-leperchaun.png", "Його фізіологія незбагненна!<br>+5 для Прибульців", 1, 2, "Забирає в тебе дві картки з руки. Одну обирає лівий сусід, іншу - правий. Скинь їх."));
-
-    // -2, -5
     MonstersArr.push(new DNEMonsterCard("undead-clowns", "Клоундеди", 16, "img/monsters/monster-undead-clowns.png", "-2 для Нетраннерів та DJ-їв", 2, 4, "Скинь одну карту з інвентарю. Якщо в інвентарі немає карток, тебе обнулено."));
-
-    // no fight with...
     MonstersArr.push(new DNEMonsterCard("lawyers", "Адвокат", 6, "img/monsters/monster-lawyers.png", "", 1, 2, "Кожен суперник, починаючи з лівого, тягне по карті з твоєї руки. Скинь карти що залишаться."))
-
-    // +3
     MonstersArr.push(new DNEMonsterCard("telemarketer", "Телефонний скамер", 3, "img/monsters/monster-telemarketer.png", "Та виженіть його нарешті хто-небудь!<br>+3 для DJ-їв, бідні на собі вуха рвуть", 1, 1, "Його балачки відволікають тебе так часто, що ти не витримуєш і втрачаєш одну душу"));
-
     MonstersArr.push(new DNEMonsterCard("ghost-in-the-shell", "Привид у панцері", 5, "img/monsters/monster-ghost-in-the-shell.png", "+2 для Нетраннерів та Енграм", 1, 2, "Від переляку впускаєш карти. Скинь одну карту з руки"));
-
     MonstersArr.push(new DNEMonsterCard("the-hand-of-fate", "Рука долі", 18, "img/monsters/monster-the-hand-of-fate.png", "Якщо досягнеш успіху з Рукою долі, вона стане твоїм Найомничком та не покине тебе навідь якщо обнулишся", 2, 4, "Забирає одного твого Найомничка, скинь його. Якщо немає Найомничка, втрать дві душі."));
     MonstersArr.push(new DNEMonsterCard("minor-god", "Дрібний бог", 1, "img/monsters/monster-minor-god.png", "Татуєр, найслабша карта в твоєму лайнапі подвоює свій бонус", 1, 1, "Покажи всім гравцям картки зі своєї руки. Гравець з найнижчим рівнем може обрати собі одну(спір вирішуйте кидком d6)."));
     MonstersArr.push(new DNEMonsterCard("oxymoron", "Абихто", 15, "img/monsters/monster-oxymoron.png", "Гальмо у всіх відношеннях...<br>В тебе +1 на змивку.", 2, 4, "Втрать одну душу та дві карти з руки на твій вибір"));
