@@ -120,6 +120,49 @@
     max-width: 150px;
 }
 
+#dne-card-right-angel .card__preview-img {
+    padding-left: 0!important;
+}
+
+#dne-card-pukachu .card__preview-img,
+#dne-card-a-cute-angel .card__preview-img,
+#dne-card-midgard-serpent .card__preview-img {
+    padding-right: 0!important;
+}
+
+#dne-card-floating-nose .card__preview-img {
+    max-width: 240px;
+    margin: 0 auto;
+}
+
+#dne-card-unspeakably-awful-indescribable-horror .card__preview-img {
+    max-width: 260px;
+}
+
+#dne-card-tongue-demon .card__preview-img {
+    max-width: 210px;
+    margin: 0 auto;
+}
+
+#dne-card-stoned-golem .card__header + .card__description::after {
+    content: "Виключення: Олів'є. Доведеться досягти успіху, щоб не стати обідом";
+    position: absolute;
+    max-width: 92px;
+    right: 8px;
+    text-align: right;
+    top: 110px;
+}
+
+#dne-card-gms-ex-girlfriend .card__preview-img {
+    max-width: 260px;
+    margin: 0 auto;
+}
+
+#dne-card-the-wraith-of-khan .card__preview-img {
+    max-width: 240px;
+    margin: 0 auto;
+}
+
 #dne-card-elias-jensen .card__preview {
     max-height: 265px;
 }
