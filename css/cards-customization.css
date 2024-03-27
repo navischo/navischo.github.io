@@ -542,13 +542,19 @@
     top: 70px;
 }
 
+#dne-card-chaos-green .card__header-left {
+    white-space: nowrap;
+}
+
 #dne-card-chaos-green .card__preview {
-    margin-top: 100px;
+    /*margin-top: 100px;*/
 }
 
 #dne-card-chaos-green .card__description {
     position: absolute;
-    top: 70px;
+    bottom: 50px;
+    text-align: center;
+    width: 280px;
 }
 
 #dne-card-shadow .card__description {

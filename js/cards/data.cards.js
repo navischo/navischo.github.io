@@ -69,36 +69,40 @@ const initDNELootArr = () => {
     // LootArr.push(new DNELootCard("i-squizer", "Сквізер", "Дає можливість залишити послання невеличкого розміру", "https://lh5.googleusercontent.com/XaXThgj9KO7oFMa_JAFJx9PcMSj3o_FkpCIdeAZyynPGY3E8vhOiOc_C7q951ePTHs0=w2400", 1, 200, "Бонус для Райтера"));
     // LootArr.push(new DNELootCard("i-shwabra", "Швабра", "Дає можливість залишити послання великого розміру", "https://lh3.googleusercontent.com/lQP_8BMVMOuETxH4z16PjtG7P7O3xhGfVAM4MqkKLzfP8bIWdiQwmy9c5vZddHzEw7c=w2400", 2, 400, "Бонус для Райтера"));
 
-    const FOOD_LONGLINE = (paste) => `Можливість насолодитися ${paste} в компанії друзів просто зараз. Ефект подвоюється якщо разом з нею використати Спалах`;
-    // Банан
-    //
-    //
-    const BANAN_LONGLINE = FOOD_LONGLINE("солодким Бананом");
-    const BANAN_SHORTLINE = `Satisfaction`;
-    const iBanan = new DNELootCard("i-banan", "Банан", BANAN_LONGLINE, `../img/loot/banan.jpg`, 1, 50, "", BANAN_SHORTLINE, "", true, true, "loot");
-    iBanan.collection = "food";
-    LootArr.push(iBanan);
+    const initFoodCards = () => {
+        const FOOD_LONGLINE = (paste) => `Можливість насолодитися ${paste} в компанії друзів просто зараз. Ефект подвоюється якщо разом з нею використати Спалах`;
+        // Банан
+        //
+        //
+        const BANAN_LONGLINE = FOOD_LONGLINE("солодким Бананом");
+        const BANAN_SHORTLINE = `Satisfaction`;
+        const iBanan = new DNELootCard("i-banan", "Банан", BANAN_LONGLINE, `../img/loot/banan.jpg`, 1, 50, "", BANAN_SHORTLINE, "", true, true, "loot");
+        iBanan.collection = "food";
+        LootArr.push(iBanan);
 
-    // Сінабон
-    //
-    //
-    const SINABON_LONGLINE = FOOD_LONGLINE("смачнющим Сінабоном");
-    const SINABON_SHORTLINE = `Eat me`;
-    const iSinabon = new DNELootCard("i-sinabon", "Сінабон", SINABON_LONGLINE, `../img/loot/sinabon.jpg`, 1, 100, "", SINABON_SHORTLINE, "", true, true, "loot")
-    iSinabon.collection = "food";
-    LootArr.push(iSinabon);
+        // Сінабон
+        //
+        //
+        const SINABON_LONGLINE = FOOD_LONGLINE("смачнющим Сінабоном");
+        const SINABON_SHORTLINE = `Eat me`;
+        const iSinabon = new DNELootCard("i-sinabon", "Сінабон", SINABON_LONGLINE, `../img/loot/sinabon.jpg`, 1, 100, "", SINABON_SHORTLINE, "", true, true, "loot")
+        iSinabon.collection = "food";
+        LootArr.push(iSinabon);
 
-    const iHappy = new DNELootCard("i-happy", "Хеппі-Міл", FOOD_LONGLINE("смачнющим Хеппі-Міл"), `../img/loot/happy.png`, 1, 180, "", "Знаю, ти мене хочеш", "", true, true, "loot");
-    iHappy.collection = "food";
-    LootArr.push(iHappy);
+        const iHappy = new DNELootCard("i-happy", "Хеппі-Міл", FOOD_LONGLINE("смачнющим Хеппі-Міл"), `../img/loot/happy.png`, 1, 180, "", "Знаю, ти мене хочеш", "", true, true, "loot");
+        iHappy.collection = "food";
+        LootArr.push(iHappy);
 
-    const iMacMenu = new DNELootCard("i-macmenu", "Мак-Меню", FOOD_LONGLINE("смачнющим Мак-Меню"), `../img/loot/bigmac.jpg`, 1, 240, "", "О так, візьми мене", "", true, true, "loot");
-    iMacMenu.collection = "food";
-    LootArr.push(iMacMenu);
+        const iMacMenu = new DNELootCard("i-macmenu", "Мак-Меню", FOOD_LONGLINE("смачнющим Мак-Меню"), `../img/loot/bigmac.jpg`, 1, 240, "", "О так, візьми мене", "", true, true, "loot");
+        iMacMenu.collection = "food";
+        LootArr.push(iMacMenu);
 
-    const iPizza = new DNELootCard("i-pizza", "Піца", FOOD_LONGLINE("смачнющою Тоні Пепероні з Домінос"), `../img/loot/pizza.jpg`, 2, 420, "", "Смачнюща Тоні Пепероні вже стукає в твої двері. Не змушуй її чекати", "", true, true, "loot");
-    iPizza.collection = "food";
-    LootArr.push(iPizza);
+        const iPizza = new DNELootCard("i-pizza", "Піца", FOOD_LONGLINE("смачнющою Тоні Пепероні з Домінос"), `../img/loot/pizza.jpg`, 2, 420, "", "Смачнюща Тоні Пепероні вже стукає в твої двері. Не змушуй її чекати", "", true, true, "loot");
+        iPizza.collection = "food";
+        LootArr.push(iPizza);
+    }
+
+    // initFoodCards();
 
     const iRegularSound = new DNELootCard("i-regular-sound", "Потужний звук", "Професійний сет звукового обладнання потужністю в 600вт, в який входить: монітор, мікшер Yamaha, два безпровідні мікро, дим машина, штатив та дротова система що живиться від розетки 220V. З якісним контроллером та Діджеєм може розкачати натовп до 50 людей, чудово підходить для невеликих приміщень.", `../img/loot/regular-sound.jpg`, 6, "40K/1800", "Велика", "Звук дає можливість ділитися своєю музикою з натовпом. Чим гучніше, тим більше людей зачепить.", "", true, true, "loot");
     iRegularSound.collection = "soundSystem";
@@ -136,28 +140,33 @@ const initDNELootArr = () => {
     iBunnySound.collection = "soundSystem";
     LootArr.push(iBunnySound);
 
-    // Басік
-    const basicCar = new DNELootCard("car-basic", "Басік", "Басік дозволяє перевозити великі речі з точки А в точку B. Головне щоб в тебе було водійське посвідчення, або друг що його має.", `../img/loot/basic.jpg`, 2, "90K/500", "Авто", "Басік дозволяє перевозити великі речі з точки А в точку B. Головне щоб в тебе було водійське посвідчення, або друг що його має.", "", true, true, "loot");
-    basicCar.collection = "car";
-    LootArr.push(basicCar);
-    // Таємничий фургон
-    const mysteryTrack = new DNELootCard("car-mystery-track", "Таємничий фургон", "Дозволяє перевозити великі речі з точки А в точку B. Продавець сказав, що має якусь особливість, та не сказав яку.", `../img/loot/mystery-track.png`, 2, "110K/700", "Авто", "Дозволяє перевозити великі речі з точки А в точку B. Продавець сказав, що має якусь особливість, та не сказав яку.", "", true, true, "loot");
-    mysteryTrack.collection = "car";
-    LootArr.push(mysteryTrack);
+    const initCarCards = () => {
 
-    const myAvi = new DNELootCard("car-mini-avi", "Міні-аві", "Дозволяє перевозити великі речі з точки А в точку B. Літає так швидко, що не наздогнати.", `../img/loot/mini-avi.png`, 3, "220K/1700", "Авто", "Дозволяє перевозити великі речі з точки А в точку B. Літає так швидко, що не наздогнати.", "", true, true, "loot");
-    myAvi.collection = "car";
-    LootArr.push(myAvi);
+        // Басік
+        const basicCar = new DNELootCard("car-basic", "Басік", "Басік дозволяє перевозити великі речі з точки А в точку B. Головне щоб в тебе було водійське посвідчення, або друг що його має.", `../img/loot/basic.jpg`, 2, "90K/500", "Авто", "Басік дозволяє перевозити великі речі з точки А в точку B. Головне щоб в тебе було водійське посвідчення, або друг що його має.", "", true, true, "loot");
+        basicCar.collection = "car";
+        LootArr.push(basicCar);
+        // Таємничий фургон
+        const mysteryTrack = new DNELootCard("car-mystery-track", "Таємничий фургон", "Дозволяє перевозити великі речі з точки А в точку B. Продавець сказав, що має якусь особливість, та не сказав яку.", `../img/loot/mystery-track.png`, 2, "110K/700", "Авто", "Дозволяє перевозити великі речі з точки А в точку B. Продавець сказав, що має якусь особливість, та не сказав яку.", "", true, true, "loot");
+        mysteryTrack.collection = "car";
+        LootArr.push(mysteryTrack);
 
-    const cosmobus = new DNELootCard("car-cosmobus", "Космос-бас", "Дозволяє перевозити великі речі та безліч Найомничків з точки А в точку B. Літає так швидко, що не наздогнати.", `../img/loot/cosmobus.jpg`, 3, "240K/1400", "Авто", "Дозволяє перевозити великі речі та безліч Найомничків з точки А в точку B. Літає так швидко, що не наздогнати.", "", true, true, "loot");
-    cosmobus.collection = "car";
-    LootArr.push(cosmobus);
+        const myAvi = new DNELootCard("car-mini-avi", "Міні-аві", "Дозволяє перевозити великі речі з точки А в точку B. Літає так швидко, що не наздогнати.", `../img/loot/mini-avi.png`, 3, "220K/1700", "Авто", "Дозволяє перевозити великі речі з точки А в точку B. Літає так швидко, що не наздогнати.", "", true, true, "loot");
+        myAvi.collection = "car";
+        LootArr.push(myAvi);
 
-    const CAR_FERRARI_SHORTLINE = "Найшвидший транспорт на земній поверхні. Підходить для замовлень де швидкість на першому місці.";
-    const CAR_FERRARI_LONGLINE = "Дозволяє перевозити великі речі та одного Найомничка з точки А в точку B.<br><br> Пристебни ремінь, крихітко.";
-    const ferrari = new DNELootCard("car-ferrari", "Ферарі", CAR_FERRARI_LONGLINE, `../img/loot/ferrari.jpg`, 4, "370K/5K", "Авто", CAR_FERRARI_SHORTLINE, "", true, true, "loot");
-    ferrari.collection = "car";
-    LootArr.push(ferrari);
+        const cosmobus = new DNELootCard("car-cosmobus", "Космос-бас", "Дозволяє перевозити великі речі та безліч Найомничків з точки А в точку B. Літає так швидко, що не наздогнати.", `../img/loot/cosmobus.jpg`, 3, "240K/1400", "Авто", "Дозволяє перевозити великі речі та безліч Найомничків з точки А в точку B. Літає так швидко, що не наздогнати.", "", true, true, "loot");
+        cosmobus.collection = "car";
+        LootArr.push(cosmobus);
+
+        const CAR_FERRARI_SHORTLINE = "Найшвидший транспорт на земній поверхні. Підходить для замовлень де швидкість на першому місці.";
+        const CAR_FERRARI_LONGLINE = "Дозволяє перевозити великі речі та одного Найомничка з точки А в точку B.<br><br> Пристебни ремінь, крихітко.";
+        const ferrari = new DNELootCard("car-ferrari", "Ферарі", CAR_FERRARI_LONGLINE, `../img/loot/ferrari.jpg`, 4, "370K/5K", "Авто", CAR_FERRARI_SHORTLINE, "", true, true, "loot");
+        ferrari.collection = "car";
+        LootArr.push(ferrari);
+    }
+
+    // initCarCards();
 
     // Аватар
     //
@@ -557,12 +566,12 @@ const initDNELootArr = () => {
     LootArr.push(new DNELootCard("twins", "Близнята", TWINS_LONGLINE, "https://lh6.googleusercontent.com/_X5UuUmOsyvCwAK1wa7nsYwh7MQzvX-N0eauLx9xBo_fZt9rmliWAh1ytWR-mqpNSIk=w2400", 2, 0, "2 Найомничка", TWINS_SHORTLINE, "", true, true, "npc"));
 
 
-    const CHAOS_GREEN_LONGLINE = "Подвоює бонус усієї команди до виправданих очікувань аудиторії від івенту. Якщо його використовує Тінь, бонус потроється.";
-    LootArr.push(new DNELootCard("chaos-green", "Смарагд Хаосу", CHAOS_GREEN_LONGLINE, `../img/loot/chaos-green.png`, 7, "222K/7K", "", CHAOS_GREEN_LONGLINE, "", true, true, "loot"));
+    const CHAOS_GREEN_LONGLINE = "Подвоює інкам від івенту.";
+    LootArr.push(new DNELootCard("chaos-green", "Смарагд Хаосу", CHAOS_GREEN_LONGLINE, `../img/loot/chaos-green.png`, 0, "222K", "", CHAOS_GREEN_LONGLINE, "", true, true, "loot"));
     LootArr.push(new DNELootCard("lady-falko", "Леді Фалько", "Таємнича княжа особа веде свій бізнес чисто та обачно. Латекс та шкіра - для неї головна пристрасть, а про її івенти складають легенди.", "https://lh6.googleusercontent.com/YlzcEVCM2vJECjlLpkSl2kZqlj5T6rCIUQBVQSB2hXzHi6sOsZLIILTVRWm5HM4l9IE=w2400", 1, 0, "Найомничок", "Таємнича княжа особа веде свій бізнес чисто та обачно. Латекс та шкіра - її пристрасть, про її івенти складають легенди.", "", true, true, "npc"));
     LootArr.push(new DNELootCard("iron-alchemic", "Сталевий Алхімік", "Всім іноді потрібна перерва. Рок музика дала можливість Эдварду Элрику зробити її для себе. Кажуть він чудово проявляє себе в організації івентів з рок-музикою. Чутово мати такого хлопця в команді, якщо збираєшся влаштувати івент в цьому жанрі.", "https://lh6.googleusercontent.com/h2uF5Q439t611fW6MQEOEFbADuixR5J35oRrZQJmlWR05oEi8viPeyzk5vRPppS1-ms=w2400", 1, 0, "Найомничок-Рокраннер", "Всім іноді потрібна перерва. Рок музика дала можливість Эдварду зробити її для себе.", "", true, true, "npc"));
-    LootArr.push(new DNELootCard("philosopher-stone", "Філососький камінь", "Дозволяє три рази за гру перетворити одну карту айтему на будь-яку іншу картку айтему. Навіть якщо ця картка одна в грі і вже комусь належить. Айтем, на який було використано камінь набуває усіх властивостей нового айтему, а попередні - втрачає. Від тепер це дві ідеальні копії.", `../img/loot/philosopher-stone.jpg`, 8, "333K", "Тільки для Сталевого Алхіміка", "Дозволяє три рази за гру перетворити одну карту айтему на будь-яку іншу картку айтему. <br><br>Айтем, на який було використано камінь набуває усіх властивостей нового айтему, а попередні - втрачає.<br>Від тепер це дві ідеальні копії.", "", true, true, "loot"));
-    LootArr.push(new DNELootCard("xenium", "Зеній", "Дає можливість перегорнути гру. Тепер для перемоги необхідно досягти протилежного результату відповідно попередньої мети.", "img/loot/xenium.webp", 9, "444K", "", "Дає можливість перегорнути гру.", "", true, true, "loot"));
+    // LootArr.push(new DNELootCard("philosopher-stone", "Філососький камінь", "Дозволяє три рази за гру перетворити одну карту айтему на будь-яку іншу картку айтему. Навіть якщо ця картка одна в грі і вже комусь належить. Айтем, на який було використано камінь набуває усіх властивостей нового айтему, а попередні - втрачає. Від тепер це дві ідеальні копії.", `../img/loot/philosopher-stone.jpg`, 8, "333K", "Тільки для Сталевого Алхіміка", "Дозволяє три рази за гру перетворити одну карту айтему на будь-яку іншу картку айтему. <br><br>Айтем, на який було використано камінь набуває усіх властивостей нового айтему, а попередні - втрачає.<br>Від тепер це дві ідеальні копії.", "", true, true, "loot"));
+    // LootArr.push(new DNELootCard("xenium", "Зеній", "Дає можливість перегорнути гру. Тепер для перемоги необхідно досягти протилежного результату відповідно попередньої мети.", "img/loot/xenium.webp", 9, "444K", "", "Дає можливість перегорнути гру.", "", true, true, "loot"));
     // LootArr.push(new DNELootCard("elias-jensen", "Alias Jensen", "", "https://drive.google.com/file/d/1AaIOpGM8FoHQ-LNlqXVIUDvyru5Wl2hC/view?usp=share_link", 1, 0, "Найомничок-MC", "Амбітний новачок нізвідки шукає роботу. Має талант до продажу, пристрасть до Хіп-Хопу та обмаль часу.", "", true, true, "npc"));
 
     // Elias Jensen
