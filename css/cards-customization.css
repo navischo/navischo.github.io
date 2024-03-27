@@ -130,17 +130,37 @@
     padding-right: 0!important;
 }
 
+#dne-card-cat-girl .card__preview-img {
+    max-width: 240px;
+    margin: 0 auto;
+}
+
+#dne-card-telemarketer .card__preview-img {
+    max-width: 240px;
+    margin: 0 auto;
+}
+
+#dne-card-chocolate-bunny .card__preview-img {
+    max-width: 175px;
+    margin: 0 auto;
+}
+
 #dne-card-floating-nose .card__preview-img {
     max-width: 240px;
     margin: 0 auto;
 }
 
 #dne-card-unspeakably-awful-indescribable-horror .card__preview-img {
-    max-width: 260px;
+    max-width: 230px;
 }
 
 #dne-card-tongue-demon .card__preview-img {
-    max-width: 210px;
+    max-width: 190px;
+    margin: 0 auto;
+}
+
+#dne-card-stoned-golem .card__preview-img {
+    max-width: 240px;
     margin: 0 auto;
 }
 
