@@ -17,7 +17,7 @@ const WALLS = [
     },
     {
         link: "wall-A17.html",
-        title: "?????7777???77??7???"
+        title: "What's new in DNE 0.7?"
     },
 ];
 
