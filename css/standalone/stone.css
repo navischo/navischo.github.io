@@ -56,7 +56,7 @@
 
 .stone {
     /*t*/
-    /*padding-top: 436px;*/
+    padding-top: 120px;
     width: 100%;
     min-height: 1494px;
     /*t*/
@@ -113,15 +113,36 @@
 }
 
 .stone-header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+
     padding: 7px 9px;
     margin-bottom: 70px;
     background: linear-gradient(to right, rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.5) 100%);
+    transition: .2s ease-in-out;
+}
+
+.stone-header.--hidden {
+    transform: translateY(-100%);
+}
+
+.stone-header.--visible-i {
+    transform: translateY(0)!important;
+}
+
+.stone-header__container {
+    display: flex;
+    align-items: center;
 }
 
 .stone-header__logo {
     display: flex;
     align-items: center;
     font-size: 8px;
+    cursor: pointer;
 }
 
 .stone-header__logo-img {
@@ -130,6 +151,35 @@
     width: 14px;
     margin-right: 6px;
     height: auto;
+}
+
+.stone-header__link {
+    margin-left: 21px;
+
+    font-size: 8px;
+    cursor: pointer;
+}
+
+a.stone-header__link,
+a.stone-header__link:hover,
+a.stone-header__link:active,
+a.stone-header__link:visited {
+    color: inherit;
+}
+
+.stone-header__cart {
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(1) translateX(100%);
+    transition: .2s ease-in-out;
+
+    margin-left: auto;
+}
+
+.stone-header__cart.--visible {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1) translateX(0%);
 }
 
 .stone-game__name {

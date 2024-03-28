@@ -28,6 +28,7 @@
 
     font-family: "Press Start 2p", "JetBrains Mono", sans-serif;
 
+    overflow-x: hidden;
 }
 
 .node {
@@ -458,6 +459,19 @@
     transform: scale(1) translateX(0%);
 }
 
+.cart-popup.white-popup {
+    max-width: 380px;
+    padding: 20px;
+    height: auto;
+    background-color: cyan;
+}
+
+.cart-popup.white-popup .mfp-close {
+    bottom: auto;
+    top: 20px;
+    right: -40px;
+}
+
 .cart__header {
     display: flex;
     justify-content: space-between;
@@ -490,6 +504,7 @@
     margin: 10px;
     line-height: 1.4;
     color: yellow;
+    text-align: left;
 }
 
 .cart__advice:last-child {
@@ -501,7 +516,7 @@
 
 .cart__controls {
     padding: 10px;
-    padding-left: 20px;
+    padding-left: 10px;
 }
 
 .cart__controls-item {
@@ -511,7 +526,7 @@
     align-items: center;
     width: 100%;
     padding: 10px;
-    padding-left: 20px;
+    padding-left: 0;
     border: none;
 
     background: transparent;
@@ -542,18 +557,18 @@
     background-size: contain;
 }
 
-.cart__copy::after {
-    content: "1";
+/*.cart__copy::after {*/
+/*    content: "1";*/
 
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translate(-72%, -30%);
+/*    position: absolute;*/
+/*    left: 0;*/
+/*    top: 50%;*/
+/*    transform: translate(-72%, -30%);*/
 
-    font-family: "Press Start 2p", "JetBrains Mono", sans-serif;
-    font-size: 40px;
-    color: yellow;
-}
+/*    font-family: "Press Start 2p", "JetBrains Mono", sans-serif;*/
+/*    font-size: 40px;*/
+/*    color: yellow;*/
+/*}*/
 
 .cart__direct::before {
     content: "";
@@ -569,18 +584,18 @@
     background-size: contain;
 }
 
-.cart__direct::after {
-    content: "2";
+/*.cart__direct::after {*/
+/*    content: "2";*/
 
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translate(-72%, -30%);
+/*    position: absolute;*/
+/*    left: 0;*/
+/*    top: 50%;*/
+/*    transform: translate(-72%, -30%);*/
 
-    font-family: "Press Start 2p", "JetBrains Mono", sans-serif;
-    font-size: 40px;
-    color: yellow;
-}
+/*    font-family: "Press Start 2p", "JetBrains Mono", sans-serif;*/
+/*    font-size: 40px;*/
+/*    color: yellow;*/
+/*}*/
 
 .confirm-wrap {
     display: flex;
@@ -596,7 +611,7 @@
 }
 
 .buy-content {
-    height: 100vh;
+    /*height: 100vh;*/
     padding-top: 100px;
     background: black;
 }
@@ -641,24 +656,16 @@
 }
 
 .cart {
-    top: 0;
-    right: 20px;
+    position: relative;
 
     display: flex;
     flex-direction: column;
-    width: 420px;
+    width: 340px;
     min-height: 620px;
-    max-height: 100vh;
-    padding: 20px;
+    padding-bottom: 40px;
 
     text-shadow: -1px 3px black;
-    /*background-color: black;*/
-    /*border: 3px solid white;*/
     transition: .2s ease-in-out;
-
-    position: relative;
-    transform: scale(0.68) translate(-165px, 0);
-    transform-origin: top right;
 }
 
 .menu-button {
@@ -695,7 +702,7 @@
 
 @media (min-width: 580px) {
     .cart {
-        transform: translate(20px, 0);
+        /*transform: translate(20px, 0);*/
     }
 }
 
@@ -705,8 +712,8 @@
     }
 
     .cart {
-        position: fixed;
-        transform: none;
+        /*position: fixed;*/
+        /*transform: none;*/
     }
 
     .menu-button {
