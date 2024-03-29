@@ -44,7 +44,7 @@
 
 .rules h2 {
     font-weight: 700;
-    margin: 58px 0 16px;
+    margin: 88px 0 16px;
     font-size: 3rem;
     line-height: 3.8rem;
 }
@@ -58,6 +58,10 @@
 
 .rules b {
     font-weight: 700;
+}
+
+.rules a {
+    text-decoration: underline;
 }
 
 .info {
