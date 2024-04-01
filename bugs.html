@@ -1028,6 +1028,7 @@
         <div class="card__header-left">
             <small class="js card__id">#${cardData.id}</small>
             <h2 class="card__title">${cardData.name}</h2>
+            ${cardData.limits && `<small class="card__limits">${cardData.limits}</small>`}
         </div>
         <div class="card__header-right">
             ${cardData.bonus !== 0 ? `<b class="card__bonus">+${cardData.bonus}</b>` : ``}

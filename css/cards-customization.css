@@ -199,6 +199,27 @@
     word-spacing: -12px;
 }
 
+[id*='dne-card-bug-'] .card__header {
+    position: relative;
+}
+
+[id*='dne-card-bug-'] .card__header-left {
+    max-width: 100%;
+}
+
+[id*='dne-card-bug-'] .card__limits {
+    position: absolute;
+    bottom: -18px;
+}
+
+#dne-card-bug-kneepads-of-allure .card__header-left {
+    max-width: 100%;
+}
+
+#dne-card-bug-kneepads-of-allure .card__preview-img {
+    padding-right: 0!important;
+}
+
 #dne-card-elias-jensen .card__preview {
     max-height: 265px;
 }

@@ -1801,9 +1801,15 @@ const DNEMonsterArr = initMonsterArr();
 const initBUGArr = () => {
     const BUGArr = [];
     const DIVINE_LONGLINE = `Ти повинен зіграти цю карту, як тільки її отримав. Всі DJ-ї одразу отримують рівень! Цей рівень може бути переможним. Якщо ти переміг у грі за рахунок цієї карти, маєш право насміхатись безжально.`;
-    BUGArr.push(new DNEBUGCard("bug-divine-interdiction", "Боже втручання", "/img/bug/bug-divine-interdiction.png", DIVINE_LONGLINE, "BUG", 0, 0, true)); // bose, gameChanger
+    BUGArr.push(new DNEBUGCard("bug-divine-interdiction", "Боже втручання", "/img/bug/bug-divine-interdiction.png", DIVINE_LONGLINE, "", 0, 0, true)); // bose, gameChanger
     const MINE_TO_11_LONGLINE = `Будь-коли виклади цю карту посеред столу. Гра триває<br> до 11-ї душі. 10-ту та 11-ту душі можна отримати лише з Монстром на Рейві.`;
-    BUGArr.push(new DNEBUGCard("bug-mine-goes-to-11", "Підіймаю до 11", "/img/bug/bug-mine-goes-to-11.png", MINE_TO_11_LONGLINE, "BUG", 0, 0, true)); // gut, gameChanger
+    BUGArr.push(new DNEBUGCard("bug-mine-goes-to-11", "Підіймаю до 11", "/img/bug/bug-mine-goes-to-11.png", MINE_TO_11_LONGLINE, "", 0, 0, true)); // gut, gameChanger
+    const KNEEPADS_OF_ALLURE_LONGLINE = `Жоден гравець, в якого більше душ ніж в тебе, не може відмовити прийти тобі на поміч і не вимагає за це нагороди. Ти не можеш здобути переможний рівень за бій, у якому твій Спаситель розведений наколінниками.`;
+    BUGArr.push(new DNEBUGCard("bug-kneepads-of-allure", "Наколінники розводу", "/img/bug/bug-kneepads-of-allure.png", KNEEPADS_OF_ALLURE_LONGLINE, "Не для Татуєрів", 0, 0, false)); // gut, gameChanger, 600
+    const WAND_OF_DOWSING_LONGLINE = `Прочухай скид, щоб знайти будь-яку потрібну карту. Забери її та скинь цю. Разова карта.`;
+    BUGArr.push(new DNEBUGCard("bug-wand-of-dowsing", "Штир лозоходця", "/img/bug/bug-wand-of-dowsing.png", WAND_OF_DOWSING_LONGLINE, "", 0, 0, true)); // gut, gameChanger, 1100
+    const TRANSFERRAL_POTION_LONGLINE = `Грай у будь-який Рейв. Тепер ним займається будь-який обраний тобою гравець. Він може просити допомоги, а при перемозі отримує душі та звук. Після хід повертається до попереднього гравця, щоб взяти звук з лайнапу та закінчити хід. Разова карта.`;
+    BUGArr.push(new DNEBUGCard("bug-transferral-potion", "Зілля стрілочника", "/img/bug/bug-transferral-potion.png", TRANSFERRAL_POTION_LONGLINE, "", 0, 0, true)); // gut, escaper, 300
     return BUGArr;
 }
 
