@@ -183,6 +183,22 @@
     margin: 0 auto;
 }
 
+#dne-card-bug-divine-interdiction .card__preview {
+    position: absolute;
+    right: -80px;
+    top: 7px;
+}
+
+#dne-card-bug-divine-interdiction .card__description {
+    position: absolute;
+    bottom: 10px;
+}
+
+#dne-card-bug-mine-goes-to-11 .card__title {
+    white-space: nowrap;
+    word-spacing: -12px;
+}
+
 #dne-card-elias-jensen .card__preview {
     max-height: 265px;
 }

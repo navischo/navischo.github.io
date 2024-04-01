@@ -62,4 +62,21 @@ class DNEMonsterCard {
     }
 }
 
-export { DNELootCard, DNEDoorCard, DNEMonsterCard };
+class DNEBUGCard {
+    constructor(id, name, img, description, limits, bonus, cost, oneOff) {
+        this.id = id;
+        this.name = name;
+        this.img = img;
+        this.description = description;
+        this.limits = limits;
+        this.bonus = bonus;
+        this.cost = cost;
+        this.oneOff = oneOff;
+    }
+
+    callback() {
+        console.log(`You use ${this.name}`);
+    }
+}
+
+export { DNELootCard, DNEDoorCard, DNEMonsterCard, DNEBUGCard };

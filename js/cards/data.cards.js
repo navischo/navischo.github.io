@@ -1,4 +1,4 @@
-import { DNELootCard, DNEDoorCard, DNEMonsterCard } from "./interface.cards.js";
+import { DNELootCard, DNEDoorCard, DNEMonsterCard, DNEBUGCard } from "./interface.cards.js";
 import { setSoundStat } from "../utils/setSoundStat.js";
 import { STRINGS } from "./const.cards.js";
 
@@ -1631,15 +1631,6 @@ const initDNELootArr = () => {
     // LootArr.push(new DNELootCard("gameboy", "GAMEBOY", "Дозволяє зберегти свій прогрес на GAMEBOY. Перезаписуй збереження скільки завгодно разів, та в тебе тільки один слот. Використовуй в будь який момент свого ходу щоб зберегтись або завантажитись. У випадку смерті ти просто завантажуєшся з останнього збереження. Цей предмет не можна обміняти або купити, лише подарувати, отримавши цю картку від Майстра на початку гри", "https://lh4.googleusercontent.com/sN9l6r5xenQZTyUKE5O138NHImoBEvUqKk5LT3A5T8VRifLeSY9WcaPSsCgm_bAobrQ=w2400", 0, "0", ""));
     // LootArr.push(new DNELootCard("e", "∄", "Nicht heute", "https://lh3.googleusercontent.com/0lBFAvAVJ4mxoyJ8WNXz8EE_cesilaNQXOMOcHrD1vRr1CG0JVyF9l8oOI4fZo4ivyo=w2400", 0, "0", ""));
 
-    // 1up
-//
-//
-
-    // todo єкран профайл которьій будет дублировать информацию из всех достуньіх источников
-    // today 17/36
-
-
-    // console.log(LootArr);
     return LootArr;
 }
 
@@ -1806,8 +1797,21 @@ const initMonsterArr = () => {
 }
 
 const DNEMonsterArr = initMonsterArr();
+
+const initBUGArr = () => {
+    const BUGArr = [];
+    const DIVINE_LONGLINE = `Ти повинен зіграти цю карту, як тільки її отримав. Всі DJ-ї одразу отримують рівень! Цей рівень може бути переможним. Якщо ти переміг у грі за рахунок цієї карти, маєш право насміхатись безжально.`;
+    BUGArr.push(new DNEBUGCard("bug-divine-interdiction", "Боже втручання", "/img/bug/bug-divine-interdiction.png", DIVINE_LONGLINE, "BUG", 0, 0, true)); // bose, gameChanger
+    const MINE_TO_11_LONGLINE = `Будь-коли виклади цю карту посеред столу. Гра триває<br> до 11-ї душі. 10-ту та 11-ту душі можна отримати лише з Монстром на Рейві.`;
+    BUGArr.push(new DNEBUGCard("bug-mine-goes-to-11", "Підіймаю до 11", "/img/bug/bug-mine-goes-to-11.png", MINE_TO_11_LONGLINE, "BUG", 0, 0, true)); // gut, gameChanger
+    return BUGArr;
+}
+
+const DNEBUGArr = initBUGArr();
+
 const DNESecretCards = {
     monsters: DNEMonsterArr,
+    bug: DNEBUGArr,
     smiths: [],
     mafia: []
 }
