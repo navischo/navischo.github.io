@@ -1810,6 +1810,32 @@ const initBUGArr = () => {
     BUGArr.push(new DNEBUGCard("bug-wand-of-dowsing", "Штир лозоходця", "/img/bug/bug-wand-of-dowsing.png", WAND_OF_DOWSING_LONGLINE, "", 0, 0, true)); // gut, gameChanger, 1100
     const TRANSFERRAL_POTION_LONGLINE = `Грай у будь-який Рейв. Тепер ним займається будь-який обраний тобою гравець. Він може просити допомоги, а при перемозі отримує душі та звук. Після хід повертається до попереднього гравця, щоб взяти звук з лайнапу та закінчити хід. Разова карта.`;
     BUGArr.push(new DNEBUGCard("bug-transferral-potion", "Зілля стрілочника", "/img/bug/bug-transferral-potion.png", TRANSFERRAL_POTION_LONGLINE, "", 0, 0, true)); // gut, escaper, 300
+    const BABY_OIL_LONGLINE = `Вислизни з Рейву! Це зілля дозволяє одному або двом гравцям автоматично змитись навіть від таких монстрів, від яких зазвичай змитись не можна. Разова карта.`;
+    BUGArr.push(new DNEBUGCard("bug-baby-oil", "Дитяче масло", "/img/bug/bug-baby-oil.png", BABY_OIL_LONGLINE, "", 0, 0, true)); // gut, escaper, 300
+    const INVISIBILITY_POTION_LONGLINE = `Грай, коли провалив змивку, щоб автоматично змитись від монстрів. Разова карта.`;
+    BUGArr.push(new DNEBUGCard("bug-invisibility-potion", "Зілля невидимості", "/img/bug/bug-invisibility-potion.png", INVISIBILITY_POTION_LONGLINE, "", 0, 0, true)); // gut, escaper, 300
+    const POLLYMORPH_POTION_LONGLINE = `Грай у будь-який Рейв. Один монстр перетворюється на папугу і відлітає, залишаючи свій звук. Разова шмотка.`;
+    BUGArr.push(new DNEBUGCard("bug-pollymorph-potion", "Зілля напівморфа", "/img/bug/bug-pollymorph-potion.png", POLLYMORPH_POTION_LONGLINE, "", 0, 0, true)); // gut, escaper, 1300
+    const DISBELIEF_POTION_LONGLINE = `Грай у будь-який Рейв. Скинь одного монстра: ніхто не отримує від нього душ, а його звук можна буде взяти лише досягнувши успіху на цьому Рейві. Разова карта.`;
+    BUGArr.push(new DNEBUGCard("bug-potion-of-disbelief", "Зілля невіри", "/img/bug/bug-potion-of-disbelief.png", DISBELIEF_POTION_LONGLINE, "", 0, 0, true)); // gut, escaper, 1000
+    const DEUS_EX_MACHINEGUN_LONGLINE = `Грай у будь-який Рейв, щоб у нього втрутилися розправедники, посланці богів. Вони з особливою жорстокістю обнуляють всіх монстрів і забирають весь звук та рівні. Ти не можеш забрати карту з лайнапу після цього. Разова карта.`;
+    BUGArr.push(new DNEBUGCard("bug-deus-ex-machinegun", "Розправедники", "/img/bug/bug-deus-ex-machinegun.png", DEUS_EX_MACHINEGUN_LONGLINE, "", 0, 0, true)); // gut, escaper
+    const IN_LOVE_LONGLINE = `Грай у будь-який Рейв, у якому бере участь лише один монстр. Рейв відразу завершується, карт більше грати не можна. Зіграні підсилювачі витрачені, інші разові карти повертаються власникам. Закоханий монстр роздає звук. За годинниковою стрілкою починаючи з гравця, що організував Рейв, здавайте по карті звуку із запасів монстра.`;
+    BUGArr.push(new DNEBUGCard("bug-of-love", "Закоханий", "/img/bug/bug-of-love.png", IN_LOVE_LONGLINE, "", 0, 0, true)); // bose, escaper
+    const ILLUSION_LONGLINE = `Грай у будь-який Рейв, скинь одного монстра разом зі всіма накладеними на нього посилювачами. Заміни його монстром на твій вибір.`;
+    BUGArr.push(new DNEBUGCard("bug-illusion", "Ілюзія", "/img/bug/bug-illusion.png", ILLUSION_LONGLINE, "", 0, 0, true)); // bose, escaper
+    const OUT_TO_LUNCH_LONGLINE = `Грай у будь-який Рейв, щоб відправити монстрів на обід. Гравець, який запрошував їх, скидає їхні карти і відразу тягне дві випадкові карти звуку.`;
+    BUGArr.push(new DNEBUGCard("bug-out-to-lunch", "Обідня перерва", "/img/bug/bug-out-to-lunch.png", OUT_TO_LUNCH_LONGLINE, "", 0, 0, true)); // bose, escaper
+    const MOMMY_LONGLINE = `Можна зіграти на монстра 5-го рівня чи нижче. З ним на Рейв приходить такий самий монстр, але на 10 рівнів більше. Мамця - окремий монстр, на якого діють усі підсилювачі дитини. Невдача така сама. За успіх з Мамцею отримай на 1 душу і 1 звук більше, ніж за її дитинча.`;
+    BUGArr.push(new DNEBUGCard("bug-mommy", "Мамця", "/img/bug/bug-mommy.png", MOMMY_LONGLINE, "", 0, 0, true)); // bose, escaper
+    const FRIENDLY_LONGLINE = `Грай у будь-який Рейв. Той, хто запрошував монстрів, може їх скинути забравши звук. Але якщо він хоче їх залишити, після рішення про це він повинен кинути d6 двічі і додати до рівня монстрів суму значень, що випали.`;
+    BUGArr.push(new DNEBUGCard("bug-friendly", "Френдлі", "/img/bug/bug-friendly.png", FRIENDLY_LONGLINE, "", 0, 0, true)); // bose, escaper
+    const TWO_HEADER_LONGLINE = `Грай у будь-який Рейв на будь-якого монстра. Його рівень подвоїться, як і всі бонуси від зіграних карток. Але це, як і раніше, один монстр. Якщо ти таки переможеш, бери вдвічі більше звуку, ніж отримав би від одноголової версії.`;
+    BUGArr.push(new DNEBUGCard("bug-two-headed", "Двоголовий", "/img/bug/bug-two-headed.png", TWO_HEADER_LONGLINE, "", 0, 0, true)); // bose, powerUpper
+    const TYPOGRAPHICAL_ERROR_LONGLINE = `Грай у будь-який Рейв. В опис монстра вкралася друкарська помилка! Його рівень падає<br> до 1-го, а характеристики та нагороди залишаються ті самі.`;
+    BUGArr.push(new DNEBUGCard("bug-typographical-error", "Типуграфічна помилка", "/img/bug/bug-typographical-error.png", TYPOGRAPHICAL_ERROR_LONGLINE, "", 0, 0, true)); // bose, disabler
+    const DEAD_LONGLINE = `Все, Петрухо, цей готовий. Грай на одного монстра щоб зробити його вбитим. Гравець, що запрошував його забирає звук. Душі ніхто не отримує.`;
+    BUGArr.push(new DNEBUGCard("bug-dead", "Вбитий", "/img/bug/bug-dead.png", DEAD_LONGLINE, "", 0, 0, true)); // bose, escaper
     return BUGArr;
 }
 
