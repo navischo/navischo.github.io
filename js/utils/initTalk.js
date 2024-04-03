@@ -2,7 +2,6 @@ import { getRandomInt } from "./getCardById.js";
 import { win77 } from "../dne-cli.js";
 import { drawCard } from "../cards/dom.cards.js";
 import { getCardElement } from "../cards/template.cards.js";
-import {callbacks} from "browser-sync/dist/logger";
 
 class Scene {
     constructor(lines, callbacks) {
@@ -49,7 +48,7 @@ const SEQUENCES = [{
             },
             onDestroy: () => {
                 console.log("Show death screen")
-                showDeathScreen();
+                // showDeathScreen();
             }
         }),
         // callback: показать экран смерти
