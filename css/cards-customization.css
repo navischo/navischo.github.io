@@ -266,6 +266,113 @@
     margin: 0 auto;
 }
 
+#dne-card-bug-arbitrary-game-balance .card__preview {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+#dne-card-bug-drag-on-and-on-and-on .card__preview-img {
+    max-width: 200px;
+    margin-left: auto;
+}
+
+#dne-card-bug-sound-tax .card__preview-img {
+    max-width: 220px;
+    margin: 0 auto;
+}
+
+#dne-card-bug-everything-is-relative .card__header {
+    z-index: 2;
+}
+
+#dne-card-bug-everything-is-relative .card__preview {
+    position: absolute;
+    top: 0;
+}
+
+#dne-card-bug-everything-is-relative .card__description {
+    position: absolute;
+    bottom: 50px;
+}
+
+#dne-card-bug-lyrical-error .card__preview {
+    position: absolute;
+    top: 0;
+}
+
+#dne-card-bug-lyrical-error .card__description {
+    position: absolute;
+    bottom: 50px;
+}
+
+#dne-card-bug-i-got-a-rock .card__preview {
+    margin-top: 20px;
+}
+
+#dne-card-bug-impending-doom .card__preview {
+    position: absolute;
+    top: 30px;
+}
+
+#dne-card-bug-impending-doom .card__preview-img {
+    max-width: 190px;
+    margin: 0 auto;
+}
+
+#dne-card-bug-impending-doom .card__description {
+    position: absolute;
+    bottom: 10px;
+}
+
+#dne-card-bug-shot-in-the-knee .card__preview-img {
+    max-height: 280px!important;
+}
+
+#dne-card-bug-loaded-die .card__preview-img {
+    max-width: 240px;
+    margin: 20px auto;
+}
+
+#dne-card-bug-reloaded-die .card__preview-img {
+    max-width: 170px;
+    margin: 20px auto;
+}
+
+#dne-card-bug-lucky-talisman .card__preview-img {
+    padding-right: 0!important;
+}
+
+#dne-card-bug-dungeon-casino .card__preview-img {
+    padding-right: 0!important;
+    max-width: 230px;
+    margin-left: auto;
+}
+
+#dne-card-bug-potion-of-apathy .card__preview-img {
+    max-width: 220px;
+    margin: 0 auto;
+}
+
+#dne-card-bug-tinfoil-hat .card__preview-img {
+    position: absolute;
+    right: -10px;
+    bottom: 0;
+}
+
+#dne-card-bug-occasionally-reliable-amulet .card__header {
+    z-index: 2;
+}
+
+#dne-card-bug-occasionally-reliable-amulet .card__preview {
+    position: absolute;
+    top: -10px;
+}
+
+#dne-card-bug-occasionally-reliable-amulet .card__description {
+    position: absolute;
+    bottom: 20px;
+}
+
 #dne-card-elias-jensen .card__preview {
     max-height: 265px;
 }
