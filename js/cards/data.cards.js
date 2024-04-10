@@ -1874,9 +1874,9 @@ const initBUGArr = () => {
     BUGArr.push(new DNEBUGCard("bug-wishing-ring", "Бажальне кільце", "/img/bug/bug-wishing-ring.png", WISHING_RING_LONGLINE, "", 0, 0, true));
     const HYPNOTIZE_THE_MERCENARY_LONGLINE = `Грай тільки в тому випадку, якщо хтось має Найомничка. Він стає твоїм. Отримай душу.`;
     BUGArr.push(new DNEBUGCard("bug-hypnotize-the-support", "Загіпнотизуй Найомничка", "/img/bug/bug-hypnotize-the-support.png", HYPNOTIZE_THE_MERCENARY_LONGLINE, "1UP", 0, 0, true));
-    const PAY_FOR_PIZZA_LONGLINE = `Отримай душу`;
+    const PAY_FOR_PIZZA_LONGLINE = ``;
     BUGArr.push(new DNEBUGCard("bug-pay-for-pizza", "Заплати за піцу", "/img/bug/bug-pay-for-pizza.png", PAY_FOR_PIZZA_LONGLINE, "1UP", 0, 0, true));
-    const WASH_CAR_LONGLINE = `Отримай душу`;
+    const WASH_CAR_LONGLINE = ``;
     BUGArr.push(new DNEBUGCard("bug-wash-gms-car", "Помий машину майстра", "/img/bug/bug-wash-gms-car.png", WASH_CAR_LONGLINE, "1UP", 0, 0, true));
     const REINCARNATE_LONGLINE = `Замість того щоб отримати душу можеш скинути цю карту будь-якої миті, крім Рейву. Прочеши колоду Класів, обери одну карту і застосуй її.`;
     BUGArr.push(new DNEBUGCard("bug-reincarnate-without-dying-first", "Реінкарнуй на випередження", "/img/bug/bug-reincarnate-without-dying-first.png", REINCARNATE_LONGLINE, "1UP", 0, 0, true));

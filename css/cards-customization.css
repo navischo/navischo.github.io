@@ -445,6 +445,32 @@
     margin: 0 auto;
 }
 
+.card__description.--1UP::after {
+    content: "отримай душу";
+    font-family: 'Press Start 2P', sans-serif;
+    text-align: center;
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+    right: 10px;
+    font-size: 1.3em;
+    text-transform: lowercase;
+}
+
+#dne-card-bug-reincarnate-without-dying-first .card__preview-img {
+    max-width: 240px;
+    margin: 0 auto;
+}
+
+#dne-card-bug-make-gm-snort-soda-out-his-nose .card__preview-img {
+    position: absolute;
+    top: 55px;
+}
+
+#dne-card-bug-make-gm-snort-soda-out-his-nose .card__description {
+    margin-top: 200px;
+}
+
 #dne-card-elias-jensen .card__preview {
     max-height: 265px;
 }

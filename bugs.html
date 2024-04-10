@@ -1037,7 +1037,7 @@
     <a class="card__preview">
         <img class="card__preview-img" src="${cardData.img}" alt="" style="max-height: 300px; padding: 0 5px">
     </a>
-    <p class="card__description">${cardData.description}</p>
+    <p class="card__description ${cardData.limits === '1UP' && '--1UP'}">${cardData.description}</p>
 </article>
 `;
 
