@@ -120,6 +120,8 @@
                 setInterval(() => {
                     if (countdown === 0) {
                         location.href = "game.html";
+                        const playersString = `${Array.from(win77.router.playersQueue).join(":")}`;
+                        localStorage.setItem("pq", playersString);
                     } else {
                         console.log(`The Game will begin in ${countdown}`);
                         submitBtn.textContent = `[${countdown}]`;

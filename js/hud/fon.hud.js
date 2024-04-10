@@ -72,6 +72,22 @@ const NOKIA_MENUS = [
                         ]));
                     console.log(`Hotline to Rick C-137`);
                 }
+            },
+            {
+                href: "#",
+                text: "hesoyam",
+                callback: (e) => {
+                    e.preventDefault();
+                    initDialogCli(createDialogDataObj(
+                        OPTION_LINES,
+                        "hesoyam",
+                        [
+                            () => {
+                                console.log("hesoyam");
+                            }
+                        ]));
+                    console.log(`Hotline to Rick C-137`);
+                }
             }
             // {
             //     href: "#",
