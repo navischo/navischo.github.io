@@ -1872,7 +1872,42 @@ const initBUGArr = () => {
     BUGArr.push(new DNEBUGCard("bug-feline-intervention", "Кицьо-втручання", "/img/bug/bug-feline-intervention.png", FELINE_INTERVENTION_LONGLINE, "", 0, 0, true));
     const WISHING_RING_LONGLINE = `Скасовує будь-яку проблему. Грай будь-якої миті. Разова карта.`;
     BUGArr.push(new DNEBUGCard("bug-wishing-ring", "Бажальне кільце", "/img/bug/bug-wishing-ring.png", WISHING_RING_LONGLINE, "", 0, 0, true));
-
+    const HYPNOTIZE_THE_MERCENARY_LONGLINE = `Грай тільки в тому випадку, якщо хтось має Найомничка. Він стає твоїм. Отримай душу.`;
+    BUGArr.push(new DNEBUGCard("bug-hypnotize-the-support", "Загіпнотизуй Найомничка", "/img/bug/bug-hypnotize-the-support.png", HYPNOTIZE_THE_MERCENARY_LONGLINE, "1UP", 0, 0, true));
+    const PAY_FOR_PIZZA_LONGLINE = `Отримай душу`;
+    BUGArr.push(new DNEBUGCard("bug-pay-for-pizza", "Заплати за піцу", "/img/bug/bug-pay-for-pizza.png", PAY_FOR_PIZZA_LONGLINE, "1UP", 0, 0, true));
+    const WASH_CAR_LONGLINE = `Отримай душу`;
+    BUGArr.push(new DNEBUGCard("bug-wash-gms-car", "Помий машину майстра", "/img/bug/bug-wash-gms-car.png", WASH_CAR_LONGLINE, "1UP", 0, 0, true));
+    const REINCARNATE_LONGLINE = `Замість того щоб отримати душу можеш скинути цю карту будь-якої миті, крім Рейву. Прочеши колоду Класів, обери одну карту і застосуй її.`;
+    BUGArr.push(new DNEBUGCard("bug-reincarnate-without-dying-first", "Реінкарнуй на випередження", "/img/bug/bug-reincarnate-without-dying-first.png", REINCARNATE_LONGLINE, "1UP", 0, 0, true));
+    const SENSELESS_KINDNESS_LONGLINE = `Замість того, щоб отримувати душу, можеш зіграти цю карту на суперника. Він повинен віддати тобі карту Звуку з найбільшим бонусом і отримує душу.`;
+    BUGArr.push(new DNEBUGCard("bug-senseless-act-of-kindness", "Безглузді жести доброї волі", "/img/bug/bug-senseless-act-of-kindness.png", SENSELESS_KINDNESS_LONGLINE, "1UP", 0, 0, true));
+    const SODA_PUNCH_LONGLINE = `Також можеш зіграти цю карту будь-якої миті на будь-якого гравця, щоб він втратив душу. Навіть якщо він вже вирішив, ніби переміг.`;
+    BUGArr.push(new DNEBUGCard("bug-make-gm-snort-soda-out-his-nose", "Змусь майстра поперхнутись колою", "/img/bug/bug-make-gm-snort-soda-out-his-nose.png", SODA_PUNCH_LONGLINE, "1UP", 0, 0, true));
+    const STEAL_THE_CREDIT_LONGLINE = `Грай, коли інший гравець успішно провів Рейв і отримує душі, аби примазатись до його слави.`;
+    BUGArr.push(new DNEBUGCard("bug-steal-credit", "Вкради почесті", "/img/bug/bug-steal-credit.png", STEAL_THE_CREDIT_LONGLINE, "1UP", 0, 0, true));
+    const TAKE_GOOD_WITH_BAD_LONGLINE = `Грай одразу після того, як будь-який гравець втрачає Найомничка.`;
+    BUGArr.push(new DNEBUGCard("bug-take-good-with-bad", "Немає лиха без добра", "/img/bug/bug-take-good-with-bad.png", TAKE_GOOD_WITH_BAD_LONGLINE, "1UP", 0, 0, true));
+    const CONTEMPLATE_YOUR_NAVEL_LONGLINE = `Якщо скинеш всю руку (не менше трьох карт), отримай дві душі замість однієї!`;
+    BUGArr.push(new DNEBUGCard("bug-contemplate-your-navel", "Споглядай пупок", "/img/bug/bug-contemplate-your-navel.png", CONTEMPLATE_YOUR_NAVEL_LONGLINE, "1UP", 0, 0, true));
+    const WANDERING_MONSTER_LONGLINE = `Грай у будь-який Рейв(можна й у свій). Вибери будь-якого монстра рівнем не більше за очікування і закинь його в цей Рейв. Якщо монстрів прийшло декілька, при невдачі гравець робить окремі кидки змивки в будь-якому порядку.`;
+    BUGArr.push(new DNEBUGCard("bug-wandering-monster", "Бродяча тварюка", "/img/bug/bug-wandering-monster.png", WANDERING_MONSTER_LONGLINE, "", 0, 0, true));
+    const DOGPILE_LONGLINE = `Грай у будь-який Рейв(можна у свій). Потім решта гравців може скинути по одній карті Звука, щоб запросити<br>на Рейв<br>по монстру<br>за кожну.<br>Склади їх рівні<br>з очікуваннями.<br>При невдачі<br>гравець<br>робить<br>окремі<br>кидки<br>змивки<br>для кожного.`;
+    BUGArr.push(new DNEBUGCard("bug-dogpile", "Купа мала", "/img/bug/bug-dogpile.png", DOGPILE_LONGLINE, "", 0, 0, true));
+    const MONSTER_MASH_LONGLINE = `Грай у будь-який Рейв разом з будь-якою кількістю карт з руки. Запроси на Рейв по монстру за кожну. Склади їх рівні з очікуваннями. При невдачі гравець робить окремі кидки змивки для кожного.`;
+    BUGArr.push(new DNEBUGCard("bug-monster-mash", "Тому що ми банда!", "/img/bug/bug-monster-mash.png", MONSTER_MASH_LONGLINE, "", 0, 0, true));
+    const LOSE_TOUR_LUCKY_DIE_LONGLINE = `Втрать душу! Якщо в тебе по життю є щасливий кубик, прибери його з очей геть і не торкайся до нього, не застосовуй його жодним іншим способом, навіть не дивися на нього до кінця партії!`;
+    BUGArr.push(new DNEBUGCard("bug-lose-your-lucky-die", "Загубив щасливий кубик", "/img/bug/bug-lose-your-lucky-die.png", LOSE_TOUR_LUCKY_DIE_LONGLINE, "Проблема!", 0, 0, true));
+    const TEMPORARY_AMNESIA_LONGLINE = `Удар по голові змусив тебе забути свій клас. Переверни свою карту Класу сорочкою вгору. Ти згадаєш це, тільки коли організуєш чи допоможеш організувати Рейв з монстром. До того часу ти будеш у всіх відносинах звичайною людиною без класу.`;
+    BUGArr.push(new DNEBUGCard("bug-temporary-amnesia", "Тимчасова амнезія", "/img/bug/bug-temporary-amnesia.png", TEMPORARY_AMNESIA_LONGLINE, "Проблема!", 0, 0, true));
+    const NEW_EDITION_RULES_LONGLINE = `Діє на всіх гравців! Кожен гравець втрачає душу. Якщо у когось є бажальне кільце, він може його використати, щоб скасувати цю проблему для всіх або деяких гравців(як він забажає).`;
+    BUGArr.push(new DNEBUGCard("bug-new-edition-rules", "Нова редакція правил", "/img/bug/bug-new-edition-rules.png", NEW_EDITION_RULES_LONGLINE, "Проблема!", 0, 0, true));
+    const BO_LONGLINE = `На твоєму наступному Рейві тобі ніхто не допоможе. Якщо ця проблема спіткала тебе під час Рейву, твій Рятівник залишає тебе(без штрафів) і ти маєш вивозити самотужки. Зате Блукаючий ніс біжить від тебе, залишаючи в твоїх пахучих руках весь свій звук.`;
+    BUGArr.push(new DNEBUGCard("bug-bo", "Сморід", "/img/bug/bug-bo.png", BO_LONGLINE, "Проблема!", 0, 0, true));
+    const CURSED_THINGY_LONGLINE = `Одна твоя карта Звуку з найбільшим бонусом стає багнутою. Вона втрачає свій бонус і ти не можеш позбутися її, поки проблема не знята. Інша проблема може зняти баг(наприклад, "Втрать дві карти"). Бажальне кільце знімає баг з карти, повертаючи її бонус. Крім того, цей баг зникає, якщо ти обнулишся. Вчасно, правда?`;
+    BUGArr.push(new DNEBUGCard("bug-cursed-thingy", "Багнута карта", "/img/bug/bug-cursed-thingy.png", CURSED_THINGY_LONGLINE, "Проблема!", 0, 0, true));
+    const GENEROSITY_LONGLINE = `Ти маєш дати кожному супернику по одній карті Звуку зі свого інвентарю. Ті, кому не вистачить, тягнуть наосліп дві карти в тебе з руки. Ти сам вирішуєш, в якому порядку виявлятимеш щедрість.`;
+    BUGArr.push(new DNEBUGCard("bug-generosity", "Щедрість", "/img/bug/bug-generosity.png", GENEROSITY_LONGLINE, "Проблема!", 0, 0, true));
     return BUGArr;
 }
 

@@ -3451,6 +3451,7 @@ img[data-crystal-link] {
 
 .l-news__latest-newses .c-news__content h2 span {
     background: none;
+    white-space: nowrap;
 }
 
 .l-news__latest-newses {
