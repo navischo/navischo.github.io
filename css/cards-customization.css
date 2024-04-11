@@ -471,6 +471,54 @@
     margin-top: 200px;
 }
 
+#dne-card-bug-dna-potion .card__preview-img {
+    max-height: 210px!important;
+}
+
+#dne-card-bug-hoard .card__preview-img {
+    padding: 0!important;
+}
+
+#dne-card-bug-garage-sale .card__preview-img {
+    position: absolute;
+    right: -5px;
+    top: 5px;
+    padding-right: 0!important;
+}
+
+#dne-card-bug-garage-sale .card__description {
+    position: absolute;
+    bottom: 20px;
+}
+
+#dne-card-bug-trojan-horse .card__preview-img {
+    max-height: 110px!important;
+}
+
+#dne-card-bug-restraining-order .card__preview-img {
+    max-height: 240px!important;
+}
+
+#dne-card-bug-avatar .card__preview-img {
+    max-height: 180px!important;
+}
+
+#dne-card-bug-take-me .card__preview-img {
+    max-height: 210px!important;
+}
+
+#dne-card-bug-monsters-are-busy .card__preview-img {
+    max-height: 190px!important;
+}
+
+#dne-card-bug-find-a-map .card__preview-img {
+    padding-right: 0!important;
+}
+
+#dne-card-bug-deck-of-too-many-things .card__preview-img {
+    max-height: 220px!important;
+}
+
 #dne-card-elias-jensen .card__preview {
     max-height: 265px;
 }
