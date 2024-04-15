@@ -519,6 +519,26 @@
     max-height: 220px!important;
 }
 
+#dne-card-bug-royal-oil .card__preview-img {
+    padding-right: 0!important;
+}
+
+#dne-card-bug-druid-fluid .card__preview-img {
+    max-width: 268px;
+    margin-left: auto;
+    padding-right: 0!important;
+}
+
+#dne-card-bug-lemming-juice .card__preview-img {
+    max-width: 267px;
+    margin-left: auto;
+    padding-right: 0!important;
+}
+
+#dne-card-bug-monster-chow .card__preview-img {
+    padding-right: 0!important;
+}
+
 #dne-card-elias-jensen .card__preview {
     max-height: 265px;
 }

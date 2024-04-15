@@ -1944,6 +1944,25 @@ const initBUGArr = () => {
     BUGArr.push(new DNEBUGCard("bug-deck-of-too-many-things", "Колода занадто багатьох речей", "/img/bug/bug-deck-of-too-many-things.png", DECK_OF_TOO_MANY_LONGLINE, "", 0, 0, true));
     const HELP_ME_OUT_THERE_LONGLINE = `Грай у будь-який момент Рейва, щоб наосліп взяти дві карти Звука у будь-якого суперника. Якщо зараз вони можуть змінити результат Рейва на твою користь, використай їх.`;
     BUGArr.push(new DNEBUGCard("bug-help-me-out-there", "Допоможи, чим можеш!", "/img/bug/bug-help-me-out-there.png", HELP_ME_OUT_THERE_LONGLINE, "", 0, 0, true));
+    const SHOES_UNTIED_LONGLINE = `Найбільш бородатий трюк із підручника. Але досі працює – тому й у підручнику. Грай у будь-який Рейв. +3 будь-якому лайнапу. Разовий прикол.`;
+    BUGArr.push(new DNEBUGCard("bug-your-shoes-untied", "В тебе шнурок розв'язався", "/img/bug/bug-your-shoes-untied.png", SHOES_UNTIED_LONGLINE, "", 3, 0, true));
+    const ROYAL_OIL_LONGLINE = `Грай у будь-який Рейв. +3 будь-якому лайнапу. Разовий прикол.`;
+    BUGArr.push(new DNEBUGCard("bug-royal-oil", "Царське масло", "/img/bug/bug-royal-oil.png", ROYAL_OIL_LONGLINE, "", 3, 0, true)); // 100
+    const OIL_OF_BOILING_LONGLINE = `Грай у будь-який Рейв. +3 будь-якому лайнапу. +5 якщо ти Дракононароджений. Разовий прикол.`;
+    BUGArr.push(new DNEBUGCard("bug-oil-of-boiling", "Коктейль Молотова", "/img/bug/bug-oil-of-boiling.png", OIL_OF_BOILING_LONGLINE, "", 3, 0, true)); // 200
+    const DRUID_FLUID_LONGLINE = `Грай у будь-який Рейв. +3 будь-якому лайнапу. Разовий прикол.`;
+    BUGArr.push(new DNEBUGCard("bug-druid-fluid", "Друїдський фреш", "/img/bug/bug-druid-fluid.png", DRUID_FLUID_LONGLINE, "", 3, 0, true)); // 100
+    const YUPPIE_WATER_LONGLINE = `Грай у будь-який Рейв. +2 будь-якому Лайнапу. Та +4 для кожного Прибульця на Рейві. Разовий прикол.`;
+    BUGArr.push(new DNEBUGCard("bug-yuppie-water", "Япічка", "/img/bug/bug-yuppie-water.png", YUPPIE_WATER_LONGLINE, "", 2, 0, true)); // 100
+    const LIQUID_WENCH_LONGLINE = `Грай у будь-який Рейв для привернення уваги. +3 будь-якому лайнапу. За бажанням запроси Монстра 3-го рівня або менше, не скидуючи карти Звуку. Разовий прикол.`;
+    BUGArr.push(new DNEBUGCard("bug-liquid-wench", "Мокра мавка", "/img/bug/bug-liquid-wench.png", LIQUID_WENCH_LONGLINE, "", 3, 0, true)); // 400
+    const LEMMING_JUICE_LONGLINE = `Подавай охолодженим для вгамування спраги. +3 будь-якому лайнапу. Разовий прикол.`;
+    BUGArr.push(new DNEBUGCard("bug-lemming-juice", "Леммінгнад", "/img/bug/bug-lemming-juice.png", LEMMING_JUICE_LONGLINE, "", 3, 0, true)); // 100
+    const MONSTER_CHOW_LONGLINE = `А ось смакотки кому?! Корм приваблює Монстрів... +5 будь-якому лайнапу. Разовий прикол.`;
+    BUGArr.push(new DNEBUGCard("bug-monster-chow", "Монстрокорм", "/img/bug/bug-monster-chow.png", MONSTER_CHOW_LONGLINE, "", 5, 0,  true)); // 300
+    const POISONBERRY_SYRUP_LONGLINE = `Грай у будь-який Рейв. +5 будь-якому лайнапу. Разовий прикол.`;
+    BUGArr.push(new DNEBUGCard("bug-poisonberry-syrup", "Ядожиновий сироп", "/img/bug/bug-poisonberry-syrup.png", POISONBERRY_SYRUP_LONGLINE, "", 5, 0, true)); // 400
+
     return BUGArr;
 }
 
