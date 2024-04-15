@@ -539,6 +539,88 @@
     padding-right: 0!important;
 }
 
+#dne-card-bug-magnificent-hat .card__preview {
+    position: absolute;
+    bottom: 0;
+}
+
+#dne-card-bug-magnificent-hat .card__preview-img {
+    max-width: 250px!important;
+    margin: 0 auto;
+}
+
+#dne-card-bug-revealing-costume .card__preview-img {
+    max-width: 220px!important;
+}
+
+#dne-card-bug-halo .card__preview-img {
+    max-width: 200px!important;
+}
+
+#dne-card-bug-other-ring .card__preview-img {
+    padding: 43px 5px!important;
+}
+
+#dne-card-bug-really-impressive-title .card__preview {
+    position: absolute;
+    bottom: 20px;
+}
+
+#dne-card-bug-horsewhip .card__preview {
+    position: absolute;
+    bottom: 30px;
+}
+
+#dne-card-bug-raincoat .card__preview-img {
+    padding-right: 0!important;
+}
+
+#dne-card-bug-itching-powder .card__preview-img {
+    max-width: 260px!important;
+}
+
+#dne-card-bug-trip-over-your-own-chest .card__preview {
+    padding-top: 20px;
+}
+
+#dne-card-bug-agoraphobia .card__preview-img {
+    max-height: 160px!important;
+}
+
+#dne-card-bug-gender-blender .card__preview {
+    padding-top: 20px;
+}
+
+#dne-card-bug-dont-call-me-shirley .card__preview {
+    padding-top: 10px;
+}
+
+#dne-card-bug-fools-gold .card__preview {
+    padding-top: 20px;
+}
+
+#dne-card-bug-tourist-trap .card__preview {
+    padding-top: 20px;
+}
+
+#dne-card-bug-lose-two-cards .card__description {
+    padding-top: 15px;
+}
+
+#dne-card-bug-lose-two-cards .card__preview-img {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    max-height: none!important;
+    max-width: 210px;
+    padding: 0!important;
+}
+
+#dne-card-bug-hungry-backpack .card__preview-img {
+    max-height: 190px!important;
+}
+
 #dne-card-elias-jensen .card__preview {
     max-height: 265px;
 }
