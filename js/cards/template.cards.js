@@ -19,7 +19,7 @@ const getCardElement = (cardData) => {
         </div>
     </header>
     <a class="card__preview" ${cardData.credits ? `href="${cardData.credits}" target="_blank"` :  ``}>
-        <img class="card__preview-img" src="" alt="">
+        <img class="card__preview-img" src="${cardData.img}" alt="">
     </a>
     <p class="card__description">${cardData.longline ? cardData.longline : cardData.description.slice(0, 50)}</p>
     <footer class="card__footer">
