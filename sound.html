@@ -1029,18 +1029,19 @@
         const maxSize = 4;
         let curSize = 0;
         let maxBonus = 10;
-        let curBonus = 2;
+        let curBonus = 9;
         Array.from(win77.game.catalog.sound).filter((soundCard, index) => {
             if (soundCard.bonus === curBonus) {
-                if (curSize < maxSize) {
-                    console.log(`try ${index} pass ${curSize} of ${maxSize}`, curSize < maxSize, soundCard, shufledSound);
-                    curSize += 1;
-                    shufledSound.push(soundCard);
-                } else {
-                    console.log(`try ${index} complete ${curBonus}`, curSize, curBonus, shufledSound);
-                    curSize = 0;
-                    curBonus = curBonus + 1;
-                }
+                shufledSound.push(soundCard);
+                // if (curSize < maxSize) {
+                //     console.log(`try ${index} pass ${curSize} of ${maxSize}`, curSize < maxSize, soundCard, shufledSound);
+                //     curSize += 1;
+                //     shufledSound.push(soundCard);
+                // } else {
+                //     console.log(`try ${index} complete ${curBonus}`, curSize, curBonus, shufledSound);
+                //     curSize = 0;
+                //     curBonus = curBonus + 1;
+                // }
             }
         });
         console.log(shufledSound, win77.game.catalog.sound);
