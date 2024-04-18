@@ -45,6 +45,7 @@ const SEQUENCES = [{
             onInit: () => {
                 console.log("Show black screen")
                 showBlackScreen();
+                drawRandomAvatar(1);
             },
             onDestroy: () => {
                 console.log("Show death screen")
@@ -81,7 +82,8 @@ const SEQUENCES = [{
             // callback: прислать сообщение в нокиа
         ], {
             onInit: () => {
-                console.log("Callback works")
+                console.log("Callback works");
+                drawRandomAvatar(2);
             },
             onDestroy: () => {
                 console.log("Talk is over")
@@ -117,10 +119,10 @@ win77.talks = {
     lineIndex: 0
 }
 
-const drawRandomAvatar = () => {
+const drawRandomAvatar = (num) => {
     const authorContainer = document.querySelector(".js-author");
     authorContainer.innerHTML = "";
-    const authorAvatar = Array.from(win77.game.catalog.avatar)[getRandomInt(win77.game.catalog.avatar.size)];
+    const authorAvatar = Array.from(win77.game.catalog.avatar)[num];
     authorAvatar ? drawCard(authorContainer, getCardElement, authorAvatar) : "";
 }
 
