@@ -1891,7 +1891,7 @@ const initBUGArr = () => {
     const CONTEMPLATE_YOUR_NAVEL_LONGLINE = `Якщо скинеш всю руку (не менше трьох карт), отримай дві душі замість однієї!`;
     BUGArr.push(new DNEBUGCard("bug-contemplate-your-navel", "Споглядай пупок", "/img/bug/bug-contemplate-your-navel.png", CONTEMPLATE_YOUR_NAVEL_LONGLINE, "1UP", 0, 0, true));
     const WANDERING_MONSTER_LONGLINE = `Грай у будь-який Рейв(можна й у свій). Вибери будь-якого монстра рівнем не більше за очікування і закинь його в цей Рейв. Якщо монстрів прийшло декілька, при невдачі гравець робить окремі кидки змивки в будь-якому порядку.`;
-    BUGArr.push(new DNEBUGCard("bug-wandering-monster", "Бродяча тварюка", "/img/bug/bug-wandering-monster.png", WANDERING_MONSTER_LONGLINE, "", 0, 0, true));
+    BUGArr.push(new DNEBUGCard("bug-wandering-monster", "Бродяча тварина", "/img/bug/bug-wandering-monster.png", WANDERING_MONSTER_LONGLINE, "", 0, 0, true));
     const DOGPILE_LONGLINE = `Грай у будь-який Рейв(можна у свій). Потім решта гравців може скинути по одній карті Звука, щоб запросити<br>на Рейв<br>по монстру<br>за кожну.<br>Склади їх рівні<br>з очікуваннями.<br>При невдачі<br>гравець<br>робить<br>окремі<br>кидки<br>змивки<br>для кожного.`;
     BUGArr.push(new DNEBUGCard("bug-dogpile", "Купа мала", "/img/bug/bug-dogpile.png", DOGPILE_LONGLINE, "", 0, 0, true));
     const MONSTER_MASH_LONGLINE = `Грай у будь-який Рейв разом з будь-якою кількістю карт з руки. Запроси на Рейв по монстру за кожну. Склади їх рівні з очікуваннями. При невдачі гравець робить окремі кидки змивки для кожного.`;
@@ -1938,7 +1938,7 @@ const initBUGArr = () => {
     BUGArr.push(new DNEBUGCard("bug-filthy-rich", "Безсовісно багатий", "/img/bug/bug-filthy-rich.png", FILTHY_RICH_LONGLINE, "", 0, 0, true));
     const BUSY_MONSTERS_LONGLINE = `Грай цю карту в будь-який Рейв із монстрами. В них гра, рейвити їм ніколи, а полізеш нахабно - зачинять двері. Тим часом, монстр, що програє, згоден обміняти карти звуку на душі. Скинь скільки завгодно душ, щоб отримати три карти звуку за кожну.`;
     BUGArr.push(new DNEBUGCard("bug-monsters-are-busy", "Зайняті монстри", "/img/bug/bug-monsters-are-busy.png", BUSY_MONSTERS_LONGLINE, "", 0, 0, true));
-    const FIND_MAP_LONGLINE = `Грай цю карту в будь-який момент свого ходу, щоб переглянути п'ять верхніх карт у колоді Звуку і покласти їх назад у будь-якому порядку. Не показуй ці карти іншим гравцям.`;
+    const FIND_MAP_LONGLINE = `Грай цю карту в будь-який момент свого ходу, щоб переглянути п'ять верхніх карт у колоді Звуку(або три у будь-якій іншій) і покласти їх назад у будь-якому порядку. Не показуй ці карти іншим гравцям.`;
     BUGArr.push(new DNEBUGCard("bug-find-a-map", "Знайди мапу", "/img/bug/bug-find-a-map.png", FIND_MAP_LONGLINE, "", 0, 0, true));
     const DECK_OF_TOO_MANY_LONGLINE = `Грай цю карту будь-якої миті свого ходу. Потім скинь з руки скільки завгодно тобі карток Звука(хоч всі) і в закриту візьми стільки ж нових карт.`;
     BUGArr.push(new DNEBUGCard("bug-deck-of-too-many-things", "Колода занадто багатьох речей", "/img/bug/bug-deck-of-too-many-things.png", DECK_OF_TOO_MANY_LONGLINE, "", 0, 0, true));
