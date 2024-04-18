@@ -621,6 +621,37 @@
     max-height: 190px!important;
 }
 
+#dne-card-bug-rewrite-character-sheet .card__preview-img {
+    padding-left: 0!important;
+}
+
+#dne-card-bug-promise-gm-stop-talking .card__preview-img {
+    position: absolute;
+    bottom: 60px;
+}
+
+#dne-card-bug-betray-the-party .card__preview-img {
+    padding: 0!important;
+    position: absolute;
+    bottom: 60px;
+}
+
+#dne-card-bug-unnecessary-roughness .card__preview {
+    padding-top: 60px;
+}
+
+#dne-card-bug-hurt-gms-brain .card__preview-img {
+    max-height: 230px!important;
+}
+
+#dne-card-bug-whine-at-gm .card__preview-img {
+    max-height: 270px!important;
+}
+
+#dne-card-bug-illustrate-your-character .card__preview {
+    padding-top: 20px;
+}
+
 #dne-card-elias-jensen .card__preview {
     max-height: 265px;
 }

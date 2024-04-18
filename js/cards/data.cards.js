@@ -2012,6 +2012,25 @@ const initBUGArr = () => {
     BUGArr.push(new DNEBUGCard("bug-typecast", "Заручник типажу!", "/img/bug/bug-typecast.png", TYPECAST_LONGLINE, "Проблема!", 0, 0, true));
     const BUTTERFINGERS_LONGLINE = `Втрать карту, що дає тобі постійний бонус! Якщо такої немає, скинь три карти з руки, які сусід праворуч обере наосліп.`;
     BUGArr.push(new DNEBUGCard("bug-butterfingers", "Жирні руки", "/img/bug/bug-butterfingers.png", BUTTERFINGERS_LONGLINE, "Проблема!", 0, 0, true));
+    const REWRITE_CHARACTER_LONGLINE = ``;
+    BUGArr.push(new DNEBUGCard("bug-rewrite-character-sheet", "Перепиши старий брудний аркуш персонажа", "/img/bug/bug-rewrite-character-sheet.png", REWRITE_CHARACTER_LONGLINE, "1UP", 0, 0, true));
+    BUGArr.push(new DNEBUGCard("bug-invoke-obscure-rules", "Застосуй незрозумілі правила", "/img/bug/bug-invoke-obscure-rules.png", "", "1UP", 0, 0, true));
+    BUGArr.push(new DNEBUGCard("bug-promise-gm-stop-talking", "Обіцяй майстру, що припиниш балачки про свого персонажа", "/img/bug/bug-promise-gm-stop-talking.png", "", "1UP", 0, 0, true));
+    BUGArr.push(new DNEBUGCard("bug-half-horse-will-traver", "Маю копита, вирушаю в мандрівку", "/img/bug/bug-half-horse-will-traver.png", "", "1UP", 0, 0, true));
+    BUGArr.push(new DNEBUGCard("bug-watch-japanese-monster-movies", "Заціни японське кіно про монстрів", "/img/bug/bug-watch-japanese-monster-movies.png", "", "1UP", 0, 0, true));
+    BUGArr.push(new DNEBUGCard("bug-betray-the-party", "Зрадь друзів", "/img/bug/bug-betray-the-party.png", "", "1UP", 0, 0, true));
+    BUGArr.push(new DNEBUGCard("bug-potion-of-general-studliness", "Зілля загальної крутизни", "/img/bug/bug-potion-of-general-studliness.png", "", "1UP", 0, 0, true));
+    BUGArr.push(new DNEBUGCard("bug-unnecessary-roughness", "Необґрунтована грубість", "/img/bug/bug-unnecessary-roughness.png", "", "1UP", 0, 0, true));
+    BUGArr.push(new DNEBUGCard("bug-threaten-switch-systems", "Погрожуй змінити ігрову систему", "/img/bug/bug-threaten-switch-systems.png", "", "1UP", 0, 0, true));
+    BUGArr.push(new DNEBUGCard("bug-show-up-early", "Прийди на гру раніше", "/img/bug/bug-show-up-early.png", "", "1UP", 0, 0, true));
+    BUGArr.push(new DNEBUGCard("bug-peek-scenario", "Запали сценарій", "/img/bug/bug-peek-scenario.png", REINCARNATE_LONGLINE, "1UP", 0, 0, true));
+    BUGArr.push(new DNEBUGCard("bug-hurt-gms-brain", "Винеси мізки майстру", "/img/bug/bug-hurt-gms-brain.png", REINCARNATE_LONGLINE, "1UP", 0, 0, true));
+    BUGArr.push(new DNEBUGCard("bug-remember-gms-birthday", "Згадай про днюху майстра", "/img/bug/bug-remember-gms-birthday.png", "", "1UP", 0, 0, true));
+    const SWITCH_CHARACTER_LONGLINE = "Не можеш грати цю карту, якщо ти гравець з найбільшою кількістю душ, або один з них.";
+    BUGArr.push(new DNEBUGCard("bug-switch-character-sheet", "Махнись аркушами персонажа", "/img/bug/bug-switch-character-sheet.png", SWITCH_CHARACTER_LONGLINE, "1UP", 0, 0, true));
+    BUGArr.push(new DNEBUGCard("bug-whine-at-gm", "Поплачся майстру", "/img/bug/bug-whine-at-gm.png", SWITCH_CHARACTER_LONGLINE, "1UP", 0, 0, true));
+    BUGArr.push(new DNEBUGCard("bug-buy-gm-new-miniatures", "Придбай майстру нові міньки", "/img/bug/bug-buy-gm-new-miniatures.png", "", "1UP", 0, 0, true));
+    BUGArr.push(new DNEBUGCard("bug-illustrate-your-character", "Намалюй свого персонажа", "/img/bug/bug-illustrate-your-character.png", "", "1UP", 0, 0, true));
     return BUGArr;
 }
 
