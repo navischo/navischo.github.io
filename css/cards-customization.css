@@ -652,6 +652,52 @@
     padding-top: 20px;
 }
 
+#dne-card-bug-change-everything .card__preview-img {
+    max-height: 180px!important;
+}
+
+#dne-card-bug-loose-everything .card__preview-img {
+    max-height: 270px!important;
+}
+
+#dne-card-bug-rain-of-weasels .card__preview-img {
+    max-height: 210px!important;
+}
+
+#dne-card-bug-chicken-on-your-head .card__preview-img {
+    max-height: 220px!important;
+}
+
+#dne-card-bug-lose-big-item .card__preview-img {
+    position: absolute;
+    top: -1px;
+}
+
+#dne-card-bug-lose-big-item .card__description {
+    position: absolute;
+    bottom: 20px;
+}
+
+#dne-card-bug-snail-mail .card__preview-img {
+    max-height: 190px!important;
+}
+
+#dne-card-bug-truly-obnoxious-curse .card__preview-img {
+    padding: 20px 5px!important;
+}
+
+#dne-card-bug-misplace-your-crew .card__preview-img {
+    max-height: 210px!important;
+}
+
+#dne-card-bug-change-crew .card__preview-img {
+    max-height: 180px!important;
+}
+
+#dne-card-bug-lose-your-crew .card__preview-img {
+    padding: 20px 5px!important;
+}
+
 #dne-card-elias-jensen .card__preview {
     max-height: 265px;
 }

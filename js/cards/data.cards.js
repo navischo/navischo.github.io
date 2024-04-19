@@ -2031,6 +2031,34 @@ const initBUGArr = () => {
     BUGArr.push(new DNEBUGCard("bug-whine-at-gm", "Поплачся майстру", "/img/bug/bug-whine-at-gm.png", SWITCH_CHARACTER_LONGLINE, "1UP", 0, 0, true));
     BUGArr.push(new DNEBUGCard("bug-buy-gm-new-miniatures", "Придбай майстру нові міньки", "/img/bug/bug-buy-gm-new-miniatures.png", "", "1UP", 0, 0, true));
     BUGArr.push(new DNEBUGCard("bug-illustrate-your-character", "Намалюй свого персонажа", "/img/bug/bug-illustrate-your-character.png", "", "1UP", 0, 0, true));
+    const INEPT_LONGLINE = `До кінця свого наступного ходу ти не можеш використовувати переваги своїх Найомничків, навіть якщо зміниш їх. Тримай цю карту перед собою доки не перестане діяти.`;
+    BUGArr.push(new DNEBUGCard("bug-inept", "Дилетант", "/img/bug/bug-inept.png", INEPT_LONGLINE, "Проблема!", 0, 0, true));
+    const LOSE_YOUR_CREW_LONGLINE = `Скинь усіх своїх Найомничків. Втрать душу.`;
+    BUGArr.push(new DNEBUGCard("bug-lose-your-crew", "Втрать крюху!", "/img/bug/bug-lose-your-crew.png", LOSE_YOUR_CREW_LONGLINE, "Проблема!", 0, 0, true));
+    const CHANGE_CREW_LONGLINE = `Якщо в тебе немає Найомничків, ця проблема не діє. Якщо є, віддай їх гравцю з найменшою кількістю Найомничків(спір вирішуйте кидком d6). Натомість отримай від нього всіх його Найомничків, крім одного, на його вибір. Якщо в нього Найомничків не було, візьми випадкового з колоди.`;
+    BUGArr.push(new DNEBUGCard("bug-change-crew", "Махнись крюхами", "/img/bug/bug-change-crew.png", CHANGE_CREW_LONGLINE, "Проблема!", 0, 0, true));
+    const RATION_SPOILED_LONGLINE = `Діє на всіх гравців! Кожний, в кого є Найомнички, кидає d6. Той хто викинув менше інших, відправляє свого Найомничка за хавчиком. До кінця партії він не повернеться, скинь його.`;
+    BUGArr.push(new DNEBUGCard("bug-ration-spoiled", "Їжа зіпсована!", "/img/bug/bug-ration-spoiled.png", RATION_SPOILED_LONGLINE, "Проблема!", 0, 0, true));
+    const MISPLACE_YOUR_CREW_LONGLINE = `На початку кожного свого ходу ти кидаєш d6 і скидуєш стільки Найомничків, скільки випало. Повторюй до тих пір доки не втратиш їх усіх, або не викинеш 6, після цього проблема зникне. Тримай цю карту перед собою, доки не перестане діяти.`;
+    BUGArr.push(new DNEBUGCard("bug-misplace-your-crew", "Виродження крюхи", "/img/bug/bug-misplace-your-crew.png", MISPLACE_YOUR_CREW_LONGLINE, "Проблема!", 0, 0, true));
+    const YOU_ARE_NOT_SPECIAL_LONGLINE = `Скинь з гри одного Найомничка на вибір сусіда праворуч. Втрать душу.`;
+    BUGArr.push(new DNEBUGCard("bug-you-are-not-so-special", "Не такий вже ти і особливий", "/img/bug/bug-you-are-not-so-special.png", YOU_ARE_NOT_SPECIAL_LONGLINE, "Проблема!", 0, 0, true));
+    const TRULY_OBNOXIOUS_CURSE_LONGLINE = `Діє на всіх гравців! Скинь карту Звуку з найбільшим бонусом та карту, що дає тобі постійний бонус чи має особливу властивість, якщо в тебе така є. Так, це жорстко. Бажальне кільце тобі в поміч.`;
+    BUGArr.push(new DNEBUGCard("bug-truly-obnoxious-curse", "Нестерпно жахлива проблема!", "/img/bug/bug-truly-obnoxious-curse.png", TRULY_OBNOXIOUS_CURSE_LONGLINE, "Проблема!", 0, 0, true));
+    const SNAIL_MAIL_LONGLINE = `Якщо маєш карту, що дає тобі постійний бонус чи має особливі властивість, скинь її. Якщо нічого такого немає, твій одяг зникає, від сором'язливості ти автоматично провалюєш свій наступний кидок на змивку. Залиш цю карту перед собою, щоб не забути.`;
+    BUGArr.push(new DNEBUGCard("bug-snail-mail", "Одяг равлобився", "/img/bug/bug-snail-mail.png", SNAIL_MAIL_LONGLINE, "", 0, 0, true));
+    const BAG_OF_HOLDING_LONGLINE = `Скинь карту Звуку з бонусом 5 або більше. Якщо такої нема, до кінця гри тримай в руці на одну карту меньше. Бажальне кільце тобі в поміч...`;
+    BUGArr.push(new DNEBUGCard("bug-of-holding", "Баг утримання", "/img/bug/bug-of-holding.png", BAG_OF_HOLDING_LONGLINE, "Проблема!", 0, 0, true));
+    const LOSE_BIG_ITEM_LONGLINE = `Якщо маєш карту, що дає тобі постійний бонус чи має особливі властивість, скинь її. Якщо нічого такого нема, покажи всю руку та скинь карту з найбільшим бонусом.`;
+    BUGArr.push(new DNEBUGCard("bug-lose-big-item", "Втрать сильний айтем", "/img/bug/bug-lose-big-item.png", LOSE_BIG_ITEM_LONGLINE, "Проблема!", 0, 0, true));
+    const CHICKEN_ON_YOUR_HEAD_LONGLINE = `-1 до всіх твоїх кидків кубика. Будь-яка карта, що примушує тебе скинути карту з постійними бонусом чи особливою властивістю, забирає і курку. Якщо раптом твого Найомничка відправляють за хавчиком, скинь курку замість нього)))`;
+    BUGArr.push(new DNEBUGCard("bug-chicken-on-your-head", "Курка на башті", "/img/bug/bug-chicken-on-your-head.png", CHICKEN_ON_YOUR_HEAD_LONGLINE, "Проблема!", 0, 0, true));
+    const RAIN_OF_WEASELS_LONGLINE = `Діє на всіх гравців! Скиньте усіх своїх Найомничків у центр столу сорочкою догори. Кожен, починаючи з гравця, на якого була використана проблема, кидає d6 та забирає стільки Найомничків скільки випало, доки вони не закінчаться.`;
+    BUGArr.push(new DNEBUGCard("bug-rain-of-weasels", "Буде ласковий дощ", "/img/bug/bug-rain-of-weasels.png", RAIN_OF_WEASELS_LONGLINE, "Проблема!", 0, 0, true));
+    const CHANGE_EVERYTHING_LONGLINE = `Якщо в тебе є Клас, скинь його. Після чого візьми верхню карту з колоди Класів і застосуй її. Якщо в тебе є Найомнички, віддай їх гравцю з найменшою кількістю Найомничків(спір вирішуйте кидком d6). Натомість отримай від нього всіх його Найомничків, крім одного, на його вибір. Якщо в нього Найомничків не було, візьми випадкового з колоди.`;
+    BUGArr.push(new DNEBUGCard("bug-change-everything", "Зміни все", "/img/bug/bug-change-everything.png", CHANGE_EVERYTHING_LONGLINE, "Проблема!", 0, 0, true));
+    const LOSE_EVERYTHING_LONGLINE = `Скинь свій Клас. Якщо в тебе є Найомнички, роздай їх по одному кожному гравцю проти годинникової стрілки, починаючи з сусіда праворуч, а зайвих просто скинь.`;
+    BUGArr.push(new DNEBUGCard("bug-loose-everything", "Втрать все", "/img/bug/bug-loose-everything.png", LOSE_EVERYTHING_LONGLINE, "Проблема!", 0, 0, true));
     return BUGArr;
 }
 
