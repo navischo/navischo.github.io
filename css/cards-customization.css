@@ -698,6 +698,61 @@
     padding: 20px 5px!important;
 }
 
+#dne-card-bug-sandals-of-protection .card__preview-img {
+    position: absolute;
+    top: 60px;
+}
+
+#dne-card-bug-sandals-of-protection .card__description {
+    position: absolute;
+    bottom: 10px;
+}
+
+#dne-card-bug-of-caltrops .card__preview-img {
+    max-height: 220px!important;
+}
+
+#dne-card-bug-sell-your-mother .card__preview-img {
+    padding-right: 0!important;
+}
+
+#dne-card-bug-malign-mirror .card__preview-img {
+    max-height: 190px!important;
+}
+
+#dne-card-bug-lose-soul .card__preview-img {
+    padding-right: 0!important;
+}
+
+#dne-card-bug-lose-two-souls .card__preview-img {
+    padding-left: 0!important;
+    position: relative;
+    left: -12px;
+}
+
+#dne-card-bug-flypaper-floors .card__preview-img {
+    position: absolute;
+    bottom: 0;
+
+    padding: 0!important;
+}
+
+#dne-card-bug-flypaper-floors .card__description {
+    padding-top: 20px;
+}
+
+#dne-card-bug-cursed-item .card__preview-img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    max-height: 160px!important;
+    max-width: 160px;
+}
+
+#dne-card-bug-cursed-item .card__description {
+    padding-top: 10px;
+}
+
 #dne-card-elias-jensen .card__preview {
     max-height: 265px;
 }
