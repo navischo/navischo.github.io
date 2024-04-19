@@ -753,6 +753,49 @@
     padding-top: 10px;
 }
 
+#dne-card-bug-wandering-monster-2 .card__preview-img {
+    max-height: 210px!important;
+}
+
+#dne-card-bug-wandering-monster-3 .card__preview-img {
+    max-height: 210px!important;
+}
+
+#dne-card-bug-wandering-monster-5 .card__preview-img {
+    position: absolute;
+    bottom: 0;
+
+    padding: 0!important;
+}
+
+#dne-card-bug-wandering-monster-6 .card__preview-img {
+    max-height: 210px!important;
+}
+
+#dne-card-bug-wandering-monster-8 .card__preview-img {
+    max-height: 210px!important;
+}
+
+#dne-card-bug-monster-mash-2 .card__preview-img {
+    padding-right: 0!important;
+}
+
+#dne-card-bug-lucky-talisman-2 .card__preview-img {
+    padding-right: 0!important;
+}
+
+#dne-card-bug-lucky-talisman-3 .card__preview-img {
+    padding-right: 0!important;
+}
+
+#dne-card-bug-annihilation .card__preview-img {
+    position: relative;
+    right: -10px;
+
+    max-height: 190px!important;
+    padding: 10px 5px!important;
+}
+
 #dne-card-elias-jensen .card__preview {
     max-height: 265px;
 }
