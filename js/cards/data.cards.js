@@ -2057,8 +2057,10 @@ const initBUGArr = () => {
     BUGArr.push(new DNEBUGCard("bug-rain-of-weasels", "Буде ласковий дощ", "/img/bug/bug-rain-of-weasels.png", RAIN_OF_WEASELS_LONGLINE, "Проблема!", 0, 0, true));
     const CHANGE_EVERYTHING_LONGLINE = `Якщо в тебе є Клас, скинь його. Після чого візьми верхню карту з колоди Класів і застосуй її. Якщо в тебе є Найомнички, віддай їх гравцю з найменшою кількістю Найомничків(спір вирішуйте кидком d6). Натомість отримай від нього всіх його Найомничків, крім одного, на його вибір. Якщо в нього Найомничків не було, візьми випадкового з колоди.`;
     BUGArr.push(new DNEBUGCard("bug-change-everything", "Зміни все", "/img/bug/bug-change-everything.png", CHANGE_EVERYTHING_LONGLINE, "Проблема!", 0, 0, true));
-    const LOSE_EVERYTHING_LONGLINE = `Скинь свій Клас. Якщо в тебе є Найомнички, роздай їх по одному кожному гравцю проти годинникової стрілки, починаючи з сусіда праворуч, а зайвих просто скинь.`;
+    const LOSE_EVERYTHING_LONGLINE = `Скинь свій Клас. Якщо в тебе є Найомнички, роздай їх по одному кожному гравцю проти годинникової стрілки, починаючи з сусіда праворуч, а зайвих просто скинь. Втрать душу.`;
     BUGArr.push(new DNEBUGCard("bug-loose-everything", "Втрать все", "/img/bug/bug-loose-everything.png", LOSE_EVERYTHING_LONGLINE, "Проблема!", 0, 0, true));
+
+
     return BUGArr;
 }
 
