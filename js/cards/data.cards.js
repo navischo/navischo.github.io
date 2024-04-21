@@ -2103,6 +2103,9 @@ const initBUGArr = () => {
     BUGArr.push(new DNEBUGCard("bug-loaded-die-3", "Читерський кубик", "/img/bug/bug-loaded-die-3.png", LOADED_DIE_LONGLINE, "", 0, 0, true)); // 500
     const ANNIHILATION_LONGLINE = `Грай цю карту будь-якої миті, щоб перманентно прибрати будь-яку карту з гри. Вона не йде у скид.. сховай її назад у коробку та забудь про неї.<br>Ціль має бути зіграна, коли ти використовуєш Анігіляцію на неї. Як тільки суперник зіграв її, вона була анігільована та не мала жодного ефекту.`;
     BUGArr.push(new DNEBUGCard("bug-annihilation", "Анігіляція", "/img/bug/bug-annihilation.png", ANNIHILATION_LONGLINE, "", 0, 0, true));
+    BUGArr.push(new DNEBUGCard("bug-reloaded-die-2", "Перечитерський кубик", "/img/bug/bug-reloaded-die-2.png", RELOADED_DIE_LONGLINE, "", 0, 0, true)); // 300
+    const GREEN_CHAOS_LONGLINE = `Використай в будь-який Рейв. Отримай вдвічі більше карт Звуку за успіх.`;
+    BUGArr.push(new DNEBUGCard("bug-green-chaos", "Смарагд хаосу", "/img/bug/bug-green-chaos.png", GREEN_CHAOS_LONGLINE, "", 0, 0, true));
 
     return BUGArr;
 }

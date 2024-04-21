@@ -333,7 +333,8 @@
     margin: 20px auto;
 }
 
-#dne-card-bug-reloaded-die .card__preview-img {
+#dne-card-bug-reloaded-die .card__preview-img,
+#dne-card-bug-reloaded-die-2 .card__preview-img {
     max-width: 170px;
     margin: 20px auto;
 }
@@ -1155,20 +1156,27 @@
     top: 70px;
 }
 
+#dne-card-bug-green-chaos .card__header-left,
 #dne-card-chaos-green .card__header-left {
     white-space: nowrap;
 }
 
+#dne-card-bug-green-chaos .card__preview,
 #dne-card-chaos-green .card__preview {
     /*margin-top: 100px;*/
 }
 
+#dne-card-bug-green-chaos .card__description,
 #dne-card-chaos-green .card__description {
     position: absolute;
     bottom: 50px;
-    text-align: center;
     width: 280px;
 }
+
+#dne-card-chaos-green .card__description {
+    text-align: center;
+}
+
 
 #dne-card-shadow .card__description {
     position: absolute;
