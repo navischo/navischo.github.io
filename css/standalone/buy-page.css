@@ -747,3 +747,95 @@
         top: 0;
     }
 }
+
+.buy-cards-counter {
+    width: 100%;
+    padding: 120px 0 80px;
+    margin-left: calc(50vw - 50%);
+    margin-right: calc(50vw - 50%);
+    margin-top: 120px;
+    background: white;
+}
+
+.buy-cards-counter__number {
+    margin-bottom: 30px;
+
+    font-family: "Press Start 2p", "JetBrains Mono", monospace;
+    font-size: 240px;
+    line-height: 240px;
+    color: black;
+    text-align: center;
+}
+
+.buy-cards-counter__descr {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 27px;
+    line-height: 34px;
+    color: black;
+    text-align: center;
+}
+
+.buy-where {
+    width: 100%;
+    padding-top: 120px;
+    margin-left: calc(50vw - 50%);
+    margin-right: calc(50vw - 50%);
+    margin-bottom: 100px;
+    background: white;
+}
+
+.buy-where__container {
+    display: flex;
+}
+
+.buy-where__map {
+    width: 40%;
+    margin-right: 4%;
+}
+
+.buy-where__map-iframe {
+    width: 100%;
+}
+
+.buy-where__map-iframe iframe {
+    width: 100%;
+    min-height: 650px;
+    height: auto;
+}
+
+.buy-where__title {
+    color: black;
+    text-align: center;
+}
+
+.buy-where__content {
+    padding-top: 120px;
+    padding-bottom: 40px;
+    background: black;
+}
+
+.buy-where__right {
+    width: 56%;
+    padding: 50px;
+
+    margin-left: auto;
+
+    font-family: "JetBrains Mono", monospace;
+    font-size: 17px;
+    line-height: 24px;
+    color: black;
+
+    background: white;
+}
+
+.buy-where__list {
+    margin-bottom: 30px;
+}
+
+.buy-where__textfield p + p {
+    margin-top: 15px;
+}
+
+.buy-where__right a {
+    text-decoration: underline;
+}
