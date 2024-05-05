@@ -297,8 +297,8 @@
 }
 
 .buy__bundle-textfield {
-    color: black;
-    background: white;
+    color: white;
+    background: black;
 
     min-height: 150px;
     padding: 10px;
@@ -306,6 +306,8 @@
 
     font-family: "JetBrains Mono", monospace;
     letter-spacing: -.8px;
+
+    box-shadow: inset 0 0 0 2px white;
 }
 
 .buy__bundle-textfield ul {
@@ -317,9 +319,36 @@
 }
 
 .buy__bundle-preview {
+    position: relative;
+    display: block;
+    padding: 0;
+    border: none;
+    background: transparent;
+}
+
+.buy__bundle-preview-img {
     max-width: 400px;
     width: 100%;
     background: white;
+}
+
+.buy__bundle-preview-img--hover {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+
+    display: block;
+
+    opacity: 0;
+
+    transition: .1s ease;
+}
+
+.buy__bundle-preview-img--hover-1:hover {
+    opacity: 1;
 }
 
 .buy__bundle-mystery {

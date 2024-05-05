@@ -120,7 +120,13 @@ const SCREEN_NAMES = [
     `screen-nohud--the-end`,
     `screen-nohud--patronus`,
     `screen-nohud--rebeca-pvp`,
-    `screen-nohud--angle`
+    `screen-nohud--angle`,
+    // `screen-nohud--need-for-speed-1`,
+    `screen-nohud--need-for-speed-2`,
+    // `screen-nohud--need-for-speed-3`,
+    // `screen-nohud--need-for-speed-4`,
+    // `screen-nohud--need-for-speed-5`,
+    // `screen-nohud--need-for-speed-6`
 ];
 
 const initScreen = (all = false, select = false) => {
