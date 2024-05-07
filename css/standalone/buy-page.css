@@ -791,10 +791,24 @@
     margin-bottom: 30px;
 
     font-family: "Press Start 2p", "JetBrains Mono", monospace;
-    font-size: 240px;
-    line-height: 260px;
+    font-size: 70px;
+    line-height: 90px;
     color: black;
     text-align: center;
+}
+
+@media (min-width: 768px) {
+    .buy-cards-counter__number {
+        font-size: 140px;
+        line-height: 160px;
+    }
+}
+
+@media (min-width: 992px) {
+    .buy-cards-counter__number {
+        font-size: 240px;
+        line-height: 260px;
+    }
 }
 
 .buy-cards-counter__descr {
@@ -816,11 +830,27 @@
 
 .buy-where__container {
     display: flex;
+    flex-direction: column;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+@media (min-width: 992px) {
+    .buy-where__container {
+        flex-direction: row;
+    }
 }
 
 .buy-where__map {
-    width: 40%;
-    margin-right: 4%;
+    /*width: 40%;*/
+    /*margin-right: 4%;*/
+}
+
+@media (min-width: 992px) {
+    .buy-where__map {
+        width: 40%;
+        margin-right: 4%;
+    }
 }
 
 .buy-where__map-iframe {
@@ -857,15 +887,26 @@
 
 .buy-where__tabs {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+    padding: 15px;
     margin-bottom: 40px;
 }
 
-.buy-where__right {
-    width: 56%;
-    padding: 50px;
+@media (min-width: 768px) {
+    .buy-where__tabs {
+        flex-wrap: nowrap;
+        padding: 0;
+    }
+}
 
-    margin-left: auto;
+.buy-where__tabs-item {
+    margin: 10px;
+}
+
+.buy-where__right {
+    padding: 20px;
+    margin-top: 40px;
 
     font-family: "JetBrains Mono", monospace;
     font-size: 17px;
@@ -873,6 +914,15 @@
     color: black;
 
     background: white;
+}
+
+@media (min-width: 992px) {
+    .buy-where__right {
+        width: 56%;
+        padding: 50px;
+        margin-left: auto;
+        margin-top: 0;
+    }
 }
 
 .buy-where__list {
