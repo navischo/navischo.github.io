@@ -300,7 +300,7 @@
     color: white;
     background: black;
 
-    min-height: 150px;
+    min-height: 135px;
     padding: 10px;
     margin-bottom: 10px;
 
@@ -643,6 +643,7 @@
     /*height: 100vh;*/
     padding-top: 100px;
     background: black;
+    overflow: hidden;
 }
 
 /*ADAPTIVE*/
@@ -791,7 +792,7 @@
 
     font-family: "Press Start 2p", "JetBrains Mono", monospace;
     font-size: 240px;
-    line-height: 240px;
+    line-height: 260px;
     color: black;
     text-align: center;
 }
@@ -837,10 +838,27 @@
     text-align: center;
 }
 
+/*.buy-where__title::after {*/
+/*    content: attr(data-alternative);*/
+
+/*    padding: 12px;*/
+/*    margin-left: 10px;*/
+
+/*    color: white;*/
+
+/*    background: black;*/
+/*}*/
+
 .buy-where__content {
     padding-top: 120px;
     padding-bottom: 40px;
     background: black;
+}
+
+.buy-where__tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
 }
 
 .buy-where__right {

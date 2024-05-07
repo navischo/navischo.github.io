@@ -34,21 +34,28 @@
 #dne-card-avatar-olivye .card__id
 {opacity: 0}
 
+#dne-card-class-proxy .card,
 #dne-card-class-engramma .card {
     /*background-color: #e76321;*/
 }
 
+#dne-card-class-proxy .card__preview,
 #dne-card-class-engramma .card__preview {
     position: absolute;
-    right: -50px;
+    right: -131px;
     bottom: 0;
 }
 
+#dne-card-class-proxy .card__preview-img,
+#dne-card-class-engramma .card__preview-img {
+    max-width: 190px;
+}
+
+#dne-card-class-proxy .card__description,
 #dne-card-class-engramma .card__description {
     position: absolute;
     left: 0;
     top: 60px;
-    max-width: 120px;
 }
 
 #dne-card-class-olivye .card__preview {

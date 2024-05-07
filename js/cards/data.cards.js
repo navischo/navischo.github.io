@@ -347,7 +347,8 @@ const initDNELootArr = () => {
 
     // LootArr.push(new DNELootCard("gm", "Гейм-майстер", GM_LONGLINE, GM_IMG, 0, 0, "А", GM_SHORTLINE, "", true, true, "class"));
 
-    LootArr.push(new DNELootCard("class-engramma", "Енграма", "Якщо тобі ніхто не допомагає можеш зіграти одну карту з руки як копію найсильнішої карти у твоєму лайнапі, тепер їх бонус стає рівним, але додатково не множиться за рахунок жанрів.", "img/avatars/engramma.png", 0, 0, "Клас", "", "", true, true, "class", false));
+    // LootArr.push(new DNELootCard("class-engramma", "Енграма", "Якщо тобі ніхто не допомагає можеш зіграти одну карту з руки як копію найсильнішої карти у твоєму лайнапі, тепер їх бонус стає рівним, але додатково не множиться за рахунок жанрів.", "img/avatars/engramma.png", 0, 0, "Клас", "", "", true, true, "class", false));
+    LootArr.push(new DNELootCard("class-proxy", "Проксі", "Якщо тобі ніхто не допомагає можеш зіграти одну карту з руки як копію найсильнішої карти у твоєму лайнапі, тепер їх бонус стає рівним, але додатково не множиться за рахунок жанрів.<br><br>Скинь душу на початку свого ходу і кинь d20, випало <br>&gt;15 - виконай його<br>замість іншого<br>гравця на твій вибір,<br>випало інше<br>- хід доведеться<br>пропустити,<br>якщо це 1<br>- втрать душу.", "img/avatars/engramma.png", 0, 0, "Клас", "", "", true, true, "class", false));
     LootArr.push(new DNELootCard("class-dj", "DJ", "У свій хід можеш скинути карту та обрати суперника, обидва киньте d6, якщо в тебе випало число більше, він зобов'язаний тобі допомогти, не вимагаючи нагороди. В іншому випадку можеш скинути карту і спробувати іншого суперника. Не можна перемогти у грі за допомогою цієї здібності.<br><br>Драфти на одну карту більше, подивися отримані карти та одразу скинь одну з них на свій вибір.", "img/avatars/dj.jpg", 0, 0, "Клас", "", "", true, true, "class", false));
     LootArr.push(new DNELootCard("class-writer", "Райтер", "Скинь до трьох карток, кожна дасть тобі бонус +2. Ти перемагаєш за рівності сил.", "img/avatars/writer.jpg", 0, 0, "Клас", "", "", true, true, "class", false));
     LootArr.push(new DNELootCard("class-ttter", "Татуер", "Коли належить драфтити карти, можеш замість усіх або деяких взяти верхню карту зі скиду.<br>Потім за кожну \"повернуту\" карту скинь одну картку з руки.<br><br>Можеш скинути до трьох карток якщо в твій хід відбулося вторгнення. Отримай бонус +3 за кожну скинуту картку.", "img/avatars/ttter.jpg", 0, 0, "Клас", "", "", true, true, "class", false));
@@ -883,7 +884,14 @@ const initDNELootArr = () => {
     const I_CARE_BECAUSE_YOU_DO_VINYL_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
     LootArr.push(new DNELootCard("vinyl-i-care-be-cause-you-do", "I care be cause you do", I_CARE_BECAUSE_YOU_DO_VINYL_LONGLINE, "img/sound/vinyl-i-care-becouse-u-do.png", 6, 1700, "Платівка, 63m of Ambient Electronic Acid Techno IDM", I_CARE_BECAUSE_YOU_DO_VINYL_SHORTLINE, "", true, true, "sound", "https://youtu.be/NJesxnyCMbU"));
 
-    // Flower Boy
+    // Платівка MYSTERE
+    //
+    //
+    const MYSTERE_VINYL_LONGLINE = "";
+    const MYSTERE_VINYL_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("vinyl-mystere", "MYSTERE", MYSTERE_VINYL_LONGLINE, "img/sound/vinyl-mystere.png", 7, 900, "Платівка, 68m of Psychodelic Alternative Indie", MYSTERE_VINYL_SHORTLINE, "", true, true, "sound", "https://youtu.be/jTMSguDFlMI?si=HfSmT95DMNDRqe_u"));
+
+    // CYBERPUNK 2077 VINYL 3LP SET
     //
     //
     const CYBERPUNK_TRIPLE_VINYL_LONGLINE = "";
@@ -904,6 +912,7 @@ const initDNELootArr = () => {
     const CURRENTS_VINYL_LONGLINE = "";
     const CURRENTS_VINYL_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
     LootArr.push(new DNELootCard("vinyl-currents", "Currents", CURRENTS_VINYL_LONGLINE, "img/sound/vinyl-currents.png", 8, 1800, "Платівка, 51m of Progressive Psychodelic Synth-Pop", CURRENTS_VINYL_SHORTLINE, "", true, true, "sound", "https://youtube.com/playlist?list=PL81_CtYCym28qkVe3nVMRG7hMR5_Ky3Hf&si=vupJtx4HKQ1lffT3"));
+
 
 
     // Платівка AM
@@ -1091,6 +1100,14 @@ const initDNELootArr = () => {
     const YORKE_DEMO_LONGLINE = "";
     const YORKE_DEMO_SHORTLINE = `${STRINGS.DEMO_LONGLINE}`;
     LootArr.push(new DNELootCard("demo-thom-yorke", "Thom Yorke", YORKE_DEMO_LONGLINE, "img/sound/demo-thom-yorke.jpg", 7, "10K", "Демо, 32m of Experimental Electro", YORKE_DEMO_SHORTLINE, "", true, true, "sound", "https://youtu.be/qt-ohn5C3kU"));
+
+    // Thom Yorke
+    //
+    //
+    const BEAUCAMP_DEMO_LONGLINE = "";
+    const BEAUCAMP_DEMO_SHORTLINE = `${STRINGS.DEMO_LONGLINE}`;
+    LootArr.push(new DNELootCard("demo-isabelle-beaucamp", "Isabelle Beaucamp", BEAUCAMP_DEMO_LONGLINE, "img/sound/demo-isabelle-beaucamp.jpg", 4, "4K", "Демо, 55m of Electro", BEAUCAMP_DEMO_SHORTLINE, "", true, true, "sound", "https://www.youtube.com/live/wLwooCfQlko?si=0g_F1V5Be2MY50to"));
+
 
     LootArr.push(new DNELootCard("demo-deep-lofi-house", "DEEP LOFI HOUSE MIX", "Демо дає можливість показати лейблам що ти хочеш записати. Лейб HOR має високу репутацію, його демо значно збільшує шанси знайти простір з якісною аппаратурою, зробити якісний реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", "img/sound/demo-deep-lofi-house.jpg", 1, 0, "Демо, 67m of Deep Lo-Fi House", STRINGS.DEMO_LONGLINE_SHORT_2, "", true, true, "sound", "https://youtu.be/yL06_XP4o-s"));
     LootArr.push(new DNELootCard("demo-tony-approved", "TONY SAYS FCKUIN' APPROVED", "Демо дає можливість показати лейблам що ти хочеш записати. Лейб HOR має високу репутацію, його демо значно збільшує шанси знайти простір з якісною аппаратурою, зробити якісний реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", "img/sound/demo-tony-approved.jpg", 1, 0, "Демо, 59m of Lo-Fi House", STRINGS.DEMO_LONGLINE_SHORT_2, "", true, true, "sound", "https://youtu.be/9qFWNOgq2Fg"));
@@ -1427,6 +1444,13 @@ const initDNELootArr = () => {
     const TAKE_A_LITTLE_DEMO_LONGLINE = "";
     const TAKE_A_LITTLE_DEMO_SHORTLINE = `${STRINGS.DEMO_LONGLINE_SHORT_2}`;
     LootArr.push(new DNELootCard("demo-take-a-little-trip-with-me", "Take a little trip with me", TAKE_A_LITTLE_DEMO_LONGLINE, "img/sound/demo-take-a-little-trip-with-me.jpg", 2, 0, "Демо, 128m of Ambient Psychodelic Trip", TAKE_A_LITTLE_DEMO_SHORTLINE, "", true, true, "sound", "https://youtu.be/keP2jfl4kT4"));
+
+    // Take a little trip with me
+    //
+    //
+    const WELCOME_2018_DEMO_LONGLINE = "";
+    const WELCOME_2018_DEMO_SHORTLINE = `${STRINGS.DEMO_LONGLINE_SHORT_2}`;
+    LootArr.push(new DNELootCard("demo-welcome-2018", "Welcome 2018", WELCOME_2018_DEMO_LONGLINE, "img/sound/demo-welcome-2018.jpg", 3, 0, "Демо, 65m of EDM Techno", WELCOME_2018_DEMO_SHORTLINE, "", true, true, "sound", "https://youtu.be/2itbDihjy7Y"));
 
     // Psycho Tropical Berlin
     //

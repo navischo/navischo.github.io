@@ -121,7 +121,7 @@
                     <b id="price-bunny" class="buy__bundle-price">250₴</b>
                     <button class="buy__bundle-preview">
                         <img class="buy__bundle-preview-img" src="img/buy/shop-preview-bunny.png" alt="">
-                        <img class="buy__bundle-preview-img buy__bundle-preview-img--hover buy__bundle-preview-img--hover-1" src="img/buy/done/shop-preview-bunny.png" alt="">
+                        <img class="buy__bundle-preview-img buy__bundle-preview-img--hover buy__bundle-preview-img--hover-1" src="img/buy/shop-preview-bunny-2.jpg" alt="">
                     </button>
                     <div class="buy__bundle-textfield">
                         <ul>
@@ -147,7 +147,8 @@
                     <b id="price-basic" class="buy__bundle-price">777₴</b>
                     <button class="buy__bundle-preview">
                         <img class="buy__bundle-preview-img" src="img/buy/shop-preview-basic.png" alt="">
-                        <img class="buy__bundle-preview-img buy__bundle-preview-img--hover buy__bundle-preview-img--hover-1" src="img/buy/done/shop-preview-basic.png" alt="">
+<!--                        <img class="buy__bundle-preview-img buy__bundle-preview-img&#45;&#45;hover buy__bundle-preview-img&#45;&#45;hover-1" src="img/buy/done/shop-preview-basic.png" alt="">-->
+                        <img class="buy__bundle-preview-img buy__bundle-preview-img--hover buy__bundle-preview-img--hover-1" src="img/buy/shop-preview-basic-2.jpg" alt="">
                     </button>
                     <div class="buy__bundle-textfield">
                         <ul>
@@ -171,7 +172,10 @@
                 <li class="buy__bundle">
                     <h3 class="buy__bundle-title">Regular</h3>
                     <b id="price-regular" class="buy__bundle-price --regular">4.2K₴</b>
-                    <img class="buy__bundle-preview-img" src="img/buy/shop-preview-regular.png" alt="">
+                    <button class="buy__bundle-preview">
+                        <img class="buy__bundle-preview-img" src="img/buy/shop-preview-regular.png" alt="">
+                        <img class="buy__bundle-preview-img buy__bundle-preview-img--hover buy__bundle-preview-img--hover-1" src="img/buy/shop-preview-regular-2.jpg" alt="">
+                    </button>
                     <div class="buy__bundle-textfield">
                         <ul>
                             <li>Повна колекція зі 189 карток Звуку</li>
@@ -214,11 +218,11 @@
             </div>
         </div>
 
-        <!--
-        <div class="buy-cards-counter">
+
+        <div id="real-cards" class="buy-cards-counter">
             <div class="container">
                 <div class="buy-cards-counter__number">
-                    <span>1290</span>+
+                    <span class="matrix-flip">1290</span>+
                 </div>
                 <p class="buy-cards-counter__descr">
                     does not exist collectible cards printed
@@ -227,22 +231,34 @@
         </div>
 
         <div class="buy-where">
-            <h2 class="buy-where__title">Знайти поряд</h2>
+            <h2 class="buy-where__title" data-alternative="Замовити доставку">Знайти поряд</h2>
             <div class="buy-where__content">
+                <header class="buy-where__tabs">
+                    <button class="js-switch-map cybr-btn buy-where__tabs-item" style="margin-right: 10px">
+                        SPAWN
+                    </button>
+                    <button class="js-switch-map cybr-btn buy-where__tabs-item" style="margin-right: 10px">
+                        На бірці
+                    </button>
+                    <button class="js-switch-map cybr-btn buy-where__tabs-item" style="margin-right: 10px">
+                        19.91
+                    </button>
+                    <button class="js-switch-map cybr-btn buy-where__tabs-item">CBG</button>
+                </header>
                 <div class="container buy-where__container">
                     <div class="buy-where__map">
-                        <div class="buy-where__map-iframe">
-
-                        </div>
-                        <div class="buy-where__map-iframe">
-
-                        </div>
-                        <div class="buy-where__map-iframe">
-
-                        </div>
+<!--                        <div class="buy-where__map-iframe">-->
+<!--                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2539.4388484161013!2d30.503060899999998!3d50.47017340000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cfd5569d517d%3A0xb8163512a1f7f8f6!2sSPAWN!5e0!3m2!1sru!2sua!4v1715097084106!5m2!1sru!2sua" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>-->
+<!--                        </div>-->
                         <div class="buy-where__map-iframe">
                             <iframe id="map-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d720.4427541259616!2d30.512691740336834!3d50.44959360325053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4c5570f362d87%3A0x655c34cd74960cbd!2z0J3QkCDQkdCG0KDQptCG!5e0!3m2!1sru!2sua!4v1714596021407!5m2!1sru!2sua" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
+<!--                        <div class="buy-where__map-iframe">-->
+<!---->
+<!--                        </div>-->
+<!--                        <div class="buy-where__map-iframe">-->
+<!---->
+<!--                        </div>-->
                     </div>
                     <div class="buy-where__right">
                         <div class="buy-where__textfield">
@@ -250,7 +266,8 @@
                                 Гарні новини! Я надрукував більше тисячі нових карток та роздав їх своїм друзям, в яких ти тепер можеш придбати бустери офлайн на Золотих Воротах та Подолі!
                             </p>
                             <p>
-                                В кожний Basic бустер я поклав буклет з правилами та три картки-шпаргалки, в які зручно підглядати під час ходу.
+                                В кожний Basic бустер я поклав <a href="/libs/DNE_RULES_0.7.pdf" target="_blank">буклет з правилами</a> та три
+                                <a href="/libs/DNE_ULTRASHORT_RULES_0.7.pdf" target="_blank">картки-шпаргалки</a>, в які зручно підглядати під час ходу.
                             </p>
                             <p>
                                 Також в кожному магазині я залишив один<br>"золотий" бустер Bunny, в який поклав 9 найрідкісніших карток у грі. Він нічим не відрізняється від інших, крута ідея правда?)
@@ -274,7 +291,6 @@
                 </div>
             </div>
         </div>
-        -->
 
         <div class="story">
             <h2 class="story__title">Introduction</h2>
@@ -704,13 +720,13 @@
                         </div>
                         Таблиця лідерів HYPERS500
                     </div>
-                    <div class="stone-game__aside-row">
+                    <a class="stone-game__aside-row" href="#real-cards">
                         <div class="icon">
                             <img class="category_icon"
                                  src="https://store.cloudflare.steamstatic.com/public/images/v6/ico/ico_cards.png">
                         </div>
                         Справжні колекційні картки
-                    </div>
+                    </a>
                 </div>
                 <div class="stone-game__aside-block">
                     <div class="stone-game__aside-text">
@@ -1132,35 +1148,171 @@
 </script>
 <script>
     $('.jq-open-popup').magnificPopup({type: 'image'});
-    // $('.jq-open-popup').magnificPopup({
-    //     items: [
-    //         {
-    //             src: 'img/screenshots/event.png'
-    //         },
-    //         {
-    //             src: 'img/screenshots/lineup.png'
-    //         },
-    //         {
-    //             src: 'img/screenshots/login.png'
-    //         },
-    //         {
-    //             src: 'img/screenshots/menu.png'
-    //         },
-    //         {
-    //             src: 'img/screenshots/result.png'
-    //         },
-    //         {
-    //             src: 'img/screenshots/screenshots-fon.png'
-    //         },
-    //         {
-    //             src: 'img/screenshots/screenshots-wall.png'
-    //         }
-    //     ],
-    //     gallery: {
-    //         enabled: true
-    //     },
-    //     type: 'image' // this is a default type
-    // });
+</script>
+<script>
+    const mapIframe = document.querySelector("#map-iframe");
+    const switchBtns = document.querySelectorAll(".js-switch-map");
+    const pinsData = [
+        {
+            src: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2539.4388484161013!2d30.503060899999998!3d50.47017340000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cfd5569d517d%3A0xb8163512a1f7f8f6!2sSPAWN!5e0!3m2!1sru!2sua!4v1715097084106!5m2!1sru!2sua"
+        },
+        {
+            src: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d720.4427541259616!2d30.512691740336834!3d50.44959360325053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4c5570f362d87%3A0x655c34cd74960cbd!2z0J3QkCDQkdCG0KDQptCG!5e0!3m2!1sru!2sua!4v1714596021407!5m2!1sru!2sua"
+        },
+        {
+            src: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.531486018504!2d30.513222799999998!3d50.4498269!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cfb29d7095b3%3A0x60147b564e9e987f!2s19.91!5e0!3m2!1sru!2sua!4v1715097391392!5m2!1sru!2sua"
+        },
+        {
+            src: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2539.3295267573267!2d30.504685499999994!3d50.4722088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce921a9d609b%3A0x94b48fbc248e2f3e!2z0JrQu9GD0LEgQ0JHYW1lcw!5e0!3m2!1sru!2sua!4v1715097482232!5m2!1sru!2sua"
+        }
+    ];
+
+    switchBtns.forEach((switchBtn, index) => {
+        switchBtn.addEventListener("click", () => {
+            switchBtns.forEach((switchBtn) => switchBtn.classList.remove("--reverse"));
+            switchBtn.classList.add("--reverse");
+            mapIframe.src = pinsData[index].src;
+        });
+    });
+</script>
+<script>
+    var stringRandom = (function() {
+
+        var data = {
+            isScrolling : false,
+            repeat : 0,
+            target : [],
+            letters : '*+-/@_$[%£!XO1&>',
+            originalStrings : '',
+            singleLetters : []
+        }
+
+        Array.prototype.shuffle = function() {
+            var input = this;
+
+            for (var i = input.length-1; i >=0; i--) {
+
+                var randomIndex = Math.floor(Math.random()*(i+1));
+                var itemAtIndex = input[randomIndex];
+
+                input[randomIndex] = input[i];
+                input[i] = itemAtIndex;
+            }
+            return input;
+        }
+
+        function checkLength(x) {
+            return Array.from(document.querySelectorAll(x)).length > 0;
+        }
+
+        function addListener(evt, fx) {
+            window.addEventListener(evt, fx);
+        }
+
+        function changeLetter(letter) {
+            if(letter.textContent != ' ') {
+                letter.classList.add('is-changing');
+                letter.style.animationDuration = Math.random().toFixed(2) + 's';
+
+                var newChar = data.letters.substr( Math.random() * data.letters.length, 1);
+
+                letter.textContent = newChar;
+                letter.setAttribute('data-txt', newChar);
+            }
+        }
+
+        function resetLetter(letter, value) {
+            letter.classList.remove('is-changing');
+            letter.textContent = value;
+            letter.setAttribute('data-txt', value);
+        }
+
+
+        // divide le singole lettere delle stringhe e le wrappa in span
+        function divideLetters() {
+
+            data.target.forEach( (element, index) => {
+
+                var text = element.textContent;
+                var textDivided = '';
+
+                data.originalStrings = text;
+
+                for(var i = 0; i < text.length; i++) {
+                    textDivided += `<span class="el-sp el-st-${index}-span-${i}" data-txt="${text.substr(i, 1)}">${text.substr(i, 1)}</span>`;
+                }
+
+                element.innerHTML = textDivided;
+            });
+            data.singleLetters = document.querySelectorAll('.el-sp');
+        }
+
+        // changes letters
+        function changeLetters() {
+            if(data.isScrolling) {
+                data.singleLetters.forEach(function(el, index){
+                    changeLetter(el);
+                });
+            }
+
+            setTimeout(changeLetters, 10);
+        }
+
+        // reset to initial letters
+        function resetLetters() {
+
+            var randomArray = [];
+            for(var i = 0; i < data.singleLetters.length;i++) {
+                randomArray.push(i);
+            }
+
+            randomArray.shuffle();
+
+            randomArray.forEach(function(el, index){
+
+                setTimeout(function(){
+                    resetLetter(data.singleLetters[el], data.originalStrings.substring(el, el + 1));
+                }, (index * 20 * (Math.random() * 5))).toFixed(2);
+
+            });
+        }
+
+        // event listener sullo scroll
+        function updateScrollState() {
+            clearTimeout(delay);
+            data.isScrolling = true;
+
+            var delay = setTimeout(function() {
+                data.isScrolling = false;
+                resetLetters();
+            }, 300);
+        };
+
+        return {
+            init: function(selector){
+
+                // controllo che ci siano stringhe su cui agire
+                if(checkLength(selector)) {
+
+                    // salvo le stringhe
+                    data.target = Array.from(document.querySelectorAll(selector));
+
+                    // divido le singole stringhe in lettere
+                    divideLetters();
+
+                    // lancio la funzione che si ripete
+                    changeLetters();
+
+                    // aggiungo il listener allo scroll
+                    addListener('scroll', updateScrollState);
+
+                }
+            }
+        }
+
+    })();
+
+    stringRandom.init('.matrix-flip');
 </script>
 <style>
     .stone .swiper {
