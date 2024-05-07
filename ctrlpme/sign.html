@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="ua">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title class="head-title">SIGNME</title>
+
+    <link rel="stylesheet" href="../css/blocks/setting/normalize.css">
+
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body class="build background-single" data-hash="play" data-lvl="0">
+
+<button class="cp-button f-btn js-toggle-sign-form catalog-controls__show-btn" type="button">S</button>
+
+<div class="card-catalog-wrap swiper-page custom-scrollbar --y">
+    <form class="js-sign-form cp-body sign-form custom-scrollbar --y">
+        <fieldset class="field">
+            <label class="glow text label" for="sign-file">1.Завантаж свій знак</label>
+            <input class="glow text" type="file" name="sign-file" id="sign-file" accept="image/png">
+            <small>*Чорний знак на прозорому тлі в PNG</small>
+        </fieldset>
+        <fieldset class="js-step-2 field --hidden">
+            <b class="glow text label">2.Скорегуй розмір</b>
+            <div class="sign-width-n-height">
+                <label class="glow text" for="sign-width">w:</label>
+                <input class="glow text" type="number" value="24" min="20" max="36" name="sign-width" id="sign-width">
+                <label class="glow text" for="sign-height">h:</label>
+                <input class="glow text" type="number" value="24" min="20" max="36" name="sign-height" id="sign-height">
+            </div>
+        </fieldset>
+        <fieldset class="js-step-3 field --hidden">
+            <b class="glow text label">3.Скорегуй позицію</b>
+            <div class="sign-width-n-height">
+                <label class="glow text" for="sign-x">x:</label>
+                <input class="glow text" type="number" name="sign-x" id="sign-x">
+                <label class="glow text" for="sign-y">y:</label>
+                <input class="glow text" type="number" name="sign-y" id="sign-y">
+            </div>
+            <div id="dne-card-album-phantom-liberty" class="js-card-example card-example" style="display: block;">
+                <article class="card "><!---->
+                    <div class="js-card-controls card__controls">
+                        <button>+</button>
+                        <button class="buy">buy</button></div>
+                    <header class="card__header">
+                        <div class="card__header-left">
+                            <small class="js card__id">#album-phantom-liberty</small>
+                            <h2 class="card__title">CYBERPUNK 2077: PHANTOM LIBERTY</h2><!-- data-advice-id="sound" -->
+                            <small class="card__limits">Альбом, 54m Electronic Synthpunk Trip-Hop</small>
+                        </div>
+                        <div class="card__header-right">
+                            <b class="card__bonus">+4</b>
+                        </div>
+                    </header>
+                    <a class="card__preview" href="https://youtu.be/kHfhACP7ekY" target="_blank">
+                        <img class="card__preview-img" src="/img/sound/album-phantom-liberty.png" alt="">
+                    </a>
+                    <p class="card__description">Міксуй альбоми на вечірках, один жанр - сильніший ефект.<br><br>Комбінуй звук в одному жанрі щоб посилити враження</p>
+                    <footer class="card__footer">
+
+                    </footer>
+                </article>
+            </div>
+        </fieldset>
+        <button class="js-draw-sign sign-form-submit cp-button" type="button">Згенерувати</button>
+        <h3>Що далі?</h3>
+        <p>1. Натисни кнопку "S" зверху праворуч, щоб сховати форму</p>
+        <p style="display:block;">2. Щоб надрукувати сторінку зі своїм символом, натисни Ctrl+P, обери масштаб 70 та збережи в PDF</p>
+        <p style="display:block;">3. Замов друк А4 на прозорій самоклейці в зручній тобі поліграфії</p>
+        <p>PROFIT!<br>Можеш вирізати свій символ і наклеїти на улюблені картки, щоб завжди відрізняти їх серед інших</p>
+    </form>
+    <div class="sign-container">
+        <img id="master-sign" class="sign" src="/libs/sign.png">
+    </div>
+    <div class="js-sign sign-container">
+    </div>
+</div>
+<style>
+    .sign-form {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+
+        min-width: auto;
+        max-width: 460px;
+        padding: 20px;
+
+        overflow-y: scroll;
+        overflow-x: auto;
+
+        transition: .2s ease-in-out;
+    }
+
+    .hide-hud .sign-form {
+        transform: translateX(-100%);
+    }
+
+    .sign-width-n-height {
+        display: flex;
+        align-items: center;
+    }
+
+    .sign-width-n-height input {
+        width: 80px;
+    }
+
+    .sign-width-n-height input + label {
+        margin-left: 10px;
+    }
+
+    .card-example {
+        display: block;
+        line-height: normal;
+        text-shadow: none;
+        letter-spacing: normal;
+        margin-top: 10px;
+    }
+
+    .sign-form-submit {
+        transform-origin: left bottom;
+        padding: 30px;
+        margin-top: 10px;
+        font-size: 1.7em;
+        color: white;
+        font-family: "Press Start 2p", "JetBrains Mono", monospace;
+    }
+
+    .sign-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 990px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .sign {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        margin: 10px;
+        object-fit: contain;
+    }
+
+    .sign-form .field.--hidden {
+        display: none;
+    }
+
+    .sign-form .field + .field {
+        margin-top: 20px;
+    }
+
+    .sign-form .field label,
+    .sign-form .field .label {
+        opacity: 1;
+        font-family: "Press Start 2p", "JetBrains Mono", monospace;
+    }
+</style>
+<script>
+    const step2 = document.querySelector(".js-step-2");
+    const step3 = document.querySelector(".js-step-3");
+    let signStepCount = 1;
+    const signParent = document.querySelector(".js-sign");
+
+    const upStep = (num) => {
+        signStepCount = num;
+        if (signStepCount === 2) {
+            step2.classList.remove("--hidden");
+        } else if (signStepCount === 3) {
+            step3.classList.remove("--hidden");
+        }
+    }
+
+
+    const fileInput = document.querySelector("#sign-file");
+    const preview = document.querySelector("#master-sign");
+    const reader = new FileReader();
+    let signSrc;
+    const getSign = () => `<img class="sign" src="${signSrc}" style="width: ${signWidth}px; height: ${signHeight}px;">`;
+
+    const drawBtn = document.querySelector(".js-draw-sign");
+    const drawSigns = () => {
+        let newSigns = "";
+        signParent.innerHTML = "";
+        for (let i = 0; i < 300; i++) {
+            newSigns = newSigns + getSign();
+        }
+        signParent.innerHTML = newSigns;
+    }
+
+
+    let signWidth = 24;
+    let signHeight = 24;
+    const signWidthInput = document.querySelector("#sign-width");
+    const signHeightInput = document.querySelector("#sign-height");
+    const updSignSize = () => {
+        signWidth = signWidthInput.value;
+        signHeight = signHeightInput.value;
+        preview.style.width = `${signWidth}px`;
+        preview.style.height = `${signHeight}px`;
+        upStep(3);
+    }
+
+    let signX = 24;
+    let signY = 24;
+    const signXInput = document.querySelector("#sign-x");
+    const signYInput = document.querySelector("#sign-y");
+    const cardExample = document.querySelector(".js-card-example");
+    const updSignPosition = () => {
+        signX = signXInput.value;
+        signY = signYInput.value;
+        const signExample = preview.cloneNode(true);
+        signExample.style.position = `absolute`;
+        signExample.style.left = `${signX}px`;
+        signExample.style.top = `${signY}px`;
+
+        cardExample.querySelectorAll(".sign").forEach((sign) => sign.remove());
+        cardExample.appendChild(signExample);
+    }
+
+    const toggleFormBtn = document.querySelector(".js-toggle-sign-form");
+
+    function handleEvent(event) {
+
+        if (event.type === "load") {
+            preview.src = reader.result;
+            signSrc = reader.result;
+            upStep(2);
+        }
+    }
+
+    function addListeners(reader) {
+        reader.addEventListener("loadstart", handleEvent);
+        reader.addEventListener("load", handleEvent);
+        reader.addEventListener("loadend", handleEvent);
+        reader.addEventListener("progress", handleEvent);
+        reader.addEventListener("error", handleEvent);
+        reader.addEventListener("abort", handleEvent);
+    }
+
+    function handleSelected(e) {
+        const selectedFile = fileInput.files[0];
+        if (selectedFile) {
+            addListeners(reader);
+            reader.readAsDataURL(selectedFile);
+        }
+    }
+
+    fileInput.addEventListener("change", handleSelected);
+    drawBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        drawSigns();
+    });
+    signWidthInput.addEventListener("change", updSignSize);
+    signHeightInput.addEventListener("change", updSignSize);
+    signXInput.addEventListener("change", updSignPosition);
+    signYInput.addEventListener("change", updSignPosition);
+    toggleFormBtn.addEventListener("click", () => {
+        document.querySelector("body").classList.toggle("hide-hud");
+    });
+
+</script>
+<script type="module">
+    import {initKeyboard} from "../js/utils/initKeyboard.js";
+
+    initKeyboard();
+</script>
+</body>
+</html>
