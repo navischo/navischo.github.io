@@ -321,6 +321,7 @@
 .buy__bundle-preview {
     position: relative;
     display: block;
+    min-height: 400px;
     padding: 0;
     border: none;
     background: transparent;

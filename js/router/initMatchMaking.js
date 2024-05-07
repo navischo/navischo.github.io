@@ -87,7 +87,7 @@ const initPlayersList = () => {
             const isPlayerInLobby = Array.from(win77.lobby).find((playerObj) => playerObj.id === newPlayerId);
             if (!isPlayerInLobby && newPlayerId !== win77.game.player.id) {
                 win77.invite(newPlayerId);
-                window.open("https:/dne.com.ua/index.html", '_blank');
+                window.open("https:/dne.com.ua/play.html", '_blank');
             }
         }
     });
