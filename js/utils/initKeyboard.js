@@ -1,6 +1,6 @@
 import { goToCards, goToPlay } from "./goToCards.js";
 import { closeGameMenu } from "../hud/btn.hud.js";
-import { openTalk } from "./initTalk";
+import { openTalk } from "./initTalk.js";
 import { win77 } from "../dne-cli.js";
 // const NUMBERS = {
 //     IN_MENU: [],

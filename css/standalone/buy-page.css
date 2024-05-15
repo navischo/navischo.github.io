@@ -343,7 +343,7 @@
 
     display: block;
 
-    opacity: 0;
+    opacity: 1;
 
     transition: .1s ease;
 }
