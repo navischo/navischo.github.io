@@ -1101,12 +1101,40 @@ const initDNELootArr = () => {
     const YORKE_DEMO_SHORTLINE = `${STRINGS.DEMO_LONGLINE}`;
     LootArr.push(new DNELootCard("demo-thom-yorke", "Thom Yorke", YORKE_DEMO_LONGLINE, "img/sound/demo-thom-yorke.jpg", 7, "10K", "Демо, 32m of Experimental Electro", YORKE_DEMO_SHORTLINE, "", true, true, "sound", "https://youtu.be/qt-ohn5C3kU"));
 
-    // Thom Yorke
+    // Isabelle Beaucamp
     //
     //
     const BEAUCAMP_DEMO_LONGLINE = "";
     const BEAUCAMP_DEMO_SHORTLINE = `${STRINGS.DEMO_LONGLINE}`;
     LootArr.push(new DNELootCard("demo-isabelle-beaucamp", "Isabelle Beaucamp", BEAUCAMP_DEMO_LONGLINE, "img/sound/demo-isabelle-beaucamp.jpg", 4, "4K", "Демо, 55m of Electro", BEAUCAMP_DEMO_SHORTLINE, "", true, true, "sound", "https://www.youtube.com/live/wLwooCfQlko?si=0g_F1V5Be2MY50to"));
+
+    // Isabelle Beaucamp
+    //
+    //
+    const ROUGE_DEMO_LONGLINE = "";
+    const ROUGE_DEMO_SHORTLINE = `${STRINGS.DEMO_LONGLINE}`;
+    LootArr.push(new DNELootCard("demo-rouge", "ROÜGE", ROUGE_DEMO_LONGLINE, "img/sound/demo-rouge.jpg", 5, "6K", "Демо, 55m of Electro", ROUGE_DEMO_SHORTLINE, "", true, true, "sound", "https://www.youtube.com/live/t_8-teUU_yg?si=VALyip9-X83Nc97N"));
+
+    // Deep Syth Journey
+    //
+    //
+    const DEEP_SYTH_DEMO_LONGLINE = "";
+    const DEEP_SYTH_DEMO_SHORTLINE = `${STRINGS.DEMO_LONGLINE}`;
+    LootArr.push(new DNELootCard("demo-deep-syth-journey", "Deep Syth Journey", DEEP_SYTH_DEMO_LONGLINE, "img/sound/demo-deep-syth-journey.jpg", 2, 0, "Демо, 240m of Dark Ambient", DEEP_SYTH_DEMO_SHORTLINE, "", true, true, "sound", "https://youtu.be/UJ4e4XVQQcY?si=9QvLymjT5XELMtEi"));
+
+    // VOYAGER
+    //
+    //
+    const VOYAGER_DEMO_LONGLINE = "";
+    const VOYAGER_DEMO_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("vinyl-voyager", "VOYAGER", VOYAGER_DEMO_LONGLINE, "img/sound/vinyl-voyager.png", 6, 0, "Вініл, 42m of Electro House Techno", VOYAGER_DEMO_SHORTLINE, "", true, true, "sound", "https://youtu.be/5ZbMh24vmpU?si=H2TAHg-h0YzbPVKj"));
+
+    // VOYAGER
+    //
+    //
+    const HOW_TO_DISAPPEAR_DEMO_LONGLINE = "";
+    const HOW_TO_DISAPPEAR_DEMO_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("demo-how-to-disappear", "How to disappear", HOW_TO_DISAPPEAR_DEMO_LONGLINE, "img/sound/demo-how-to-disappear.jpg", 3, 0, "Вініл, 11m of Ambient Drone", HOW_TO_DISAPPEAR_DEMO_SHORTLINE, "", true, true, "sound", "https://youtu.be/rLlFWl4HTww?si=wuzZpAAUzGfIbsfG"));
 
 
     LootArr.push(new DNELootCard("demo-deep-lofi-house", "DEEP LOFI HOUSE MIX", "Демо дає можливість показати лейблам що ти хочеш записати. Лейб HOR має високу репутацію, його демо значно збільшує шанси знайти простір з якісною аппаратурою, зробити якісний реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", "img/sound/demo-deep-lofi-house.jpg", 1, 0, "Демо, 67m of Deep Lo-Fi House", STRINGS.DEMO_LONGLINE_SHORT_2, "", true, true, "sound", "https://youtu.be/yL06_XP4o-s"));
@@ -1444,13 +1472,6 @@ const initDNELootArr = () => {
     const TAKE_A_LITTLE_DEMO_LONGLINE = "";
     const TAKE_A_LITTLE_DEMO_SHORTLINE = `${STRINGS.DEMO_LONGLINE_SHORT_2}`;
     LootArr.push(new DNELootCard("demo-take-a-little-trip-with-me", "Take a little trip with me", TAKE_A_LITTLE_DEMO_LONGLINE, "img/sound/demo-take-a-little-trip-with-me.jpg", 2, 0, "Демо, 128m of Ambient Psychodelic Trip", TAKE_A_LITTLE_DEMO_SHORTLINE, "", true, true, "sound", "https://youtu.be/keP2jfl4kT4"));
-
-    // Take a little trip with me
-    //
-    //
-    const WELCOME_2018_DEMO_LONGLINE = "";
-    const WELCOME_2018_DEMO_SHORTLINE = `${STRINGS.DEMO_LONGLINE_SHORT_2}`;
-    LootArr.push(new DNELootCard("demo-welcome-2018", "Welcome 2018", WELCOME_2018_DEMO_LONGLINE, "img/sound/demo-welcome-2018.jpg", 3, 0, "Демо, 65m of EDM Techno", WELCOME_2018_DEMO_SHORTLINE, "", true, true, "sound", "https://youtu.be/2itbDihjy7Y"));
 
     // Psycho Tropical Berlin
     //
