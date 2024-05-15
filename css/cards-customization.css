@@ -58,6 +58,16 @@
     top: 60px;
 }
 
+#dne-card-class-writer .card__preview {
+    position: absolute;
+    top: 45px;
+}
+
+#dne-card-class-writer .card__description {
+    position: absolute;
+    bottom: 10px;
+}
+
 #dne-card-class-olivye .card__preview {
     transform: scale(1.1) translate(4px, 0);
     position: absolute;
@@ -82,7 +92,7 @@
 
 #dne-card-class-dj .card__description {
     position: absolute;
-    top: 60px;
+    top: 5px;
     right: 0;
     max-width: 170px;
     font-size: 12px;
@@ -94,11 +104,26 @@
 
 #dne-card-class-netrunner .card__preview {
     position: absolute;
-    bottom: -15px;
+    bottom: -30px;
 }
 
 #dne-card-class-netrunner .card__description {
     position: relative;
+}
+
+#dne-card-class-alien .card__preview {
+    position: absolute;
+    top: 30px;
+}
+
+#dne-card-class-alien .card__description {
+    position: absolute;
+    bottom: 10px;
+}
+
+#dne-card-class-alien .card__header {
+    position: relative;
+    z-index: 2;
 }
 
 #dne-card-class-support .card__preview {
