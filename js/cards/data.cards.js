@@ -784,6 +784,132 @@ const initDNELootArr = () => {
 
     // LootArr.push(new DNELootCard("make-french-exit", "Піти по-французьки", "Гравець що використав цю карту, дістає вогнепальну зброю и робить постріл у голову гравця, в адресу якого була використана карта.<br><br> Все, цей гравець мертвий, куля в голову як не як.<br><br> А ти що думав з тобою тут хтось сюсюкатись буде?", "https://lh3.googleusercontent.com/VVGoBbf0sATIkcowuVZuAuJrkjF0C6ZKr2bY43f_f4U4B9Hk9au3Q90d9mGiIZDhKso=w2400", 0, 0, "Дія"));
 
+    // SPAWN
+    //
+    //
+    const SPAWN_DEMO_LONGLINE = "";
+    const SPAWN_DEMO_SHORTLINE = `${STRINGS.DEMO_LONGLINE_SHORT_3}`;
+    LootArr.push(new DNELootCard("demo-spawn", `SPAWN`, SPAWN_DEMO_LONGLINE, "img/sound/demo-spawn.jpg", "d6", 0, "Демо, 98m of Psychodelic Electro Ambient", SPAWN_DEMO_SHORTLINE, "", true, true, "sound", ""));
+
+    // Cinco Cielos
+    //
+    //
+    const CINCO_CIELOS_DEMO_LONGLINE = "";
+    const CINCO_CIELOS_DEMO_SHORTLINE = `${STRINGS.DEMO_LONGLINE_SHORT_3}`;
+    LootArr.push(new DNELootCard("demo-cinco-cielos", `Cinco Cielos`, CINCO_CIELOS_DEMO_LONGLINE, "img/sound/demo-cinco-cielos.jpg", 3, 0, "Демо, 100m of Downtempo Chillout", CINCO_CIELOS_DEMO_SHORTLINE, "", true, true, "sound", "https://youtu.be/rKSOlxDvQOU"));
+
+    // Perfect Blue
+    //
+    //
+    const PERFECT_BLUE_VINYL_LONGLINE = "";
+    const PERFECT_BLUE_VINYL_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("vinyl-perfect-blue", `Perfect Blue`, PERFECT_BLUE_VINYL_LONGLINE, "img/sound/vinyl-perfect-blue.png", 5, 4000, "Платівка, 31m of Electronic", PERFECT_BLUE_VINYL_SHORTLINE, "", true, true, "sound", "https://www.youtube.com/watch?v=p7Q0SzRQTBc&list=PLG4ENma2RvT4_nBU6aTFqW_iLYfOe2ges&index=1&ab_channel=MIMA%27SROOM"));
+
+    // REJOICE IN THE PAIN
+    //
+    //
+    const REJOICE_PAIN_ALBUM_LONGLINE = "";
+    const REJOICE_PAIN_ALBUM_SHORTLINE = `${STRINGS.ALBUM_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-rejoice-in-the-pain", `REJOICE IN THE PAIN`, REJOICE_PAIN_ALBUM_LONGLINE, "img/sound/album-rejoice-in-the-pain.jpg", 7, 400, "Альбом, 19m of Electro Industrial Techno", REJOICE_PAIN_ALBUM_SHORTLINE, "", true, true, "sound", "https://youtu.be/vXuHC0m6OxA"));
+
+    // Under Acid Hoof
+    //
+    //
+    const ACID_HOOF_ALBUM_LONGLINE = "";
+    const ACID_HOOF_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("vinyl-under-acid-hoof", `Under Acid Hoof`, ACID_HOOF_ALBUM_LONGLINE, "img/sound/vinyl-under-acid-hoof.jpg", 6, 2000, "Платівка, 36m of Doom Metal Rock", ACID_HOOF_ALBUM_SHORTLINE, "", true, true, "sound", "https://youtu.be/4GwYrQeQpJk"));
+
+    // Sleep Party People
+    //
+    //
+    const SLEEP_PARTY_VINYL_LONGLINE = "";
+    const SLEEP_PARTY_VINYL_SHORTLINE = `${STRINGS.VINYL_LONGLINE_2}`;
+    LootArr.push(new DNELootCard("vinyl-sleep-party-people", `Sleep Party People`, SLEEP_PARTY_VINYL_LONGLINE, "img/sound/vinyl-sleep-party-people.png", 7, 800, "Платівка, 43m of Dream-pop Electronic", SLEEP_PARTY_VINYL_SHORTLINE, "", true, true, "sound", "https://youtu.be/8lZIbCaVpW8"));
+
+    // The Dawn
+    //
+    //
+    const DAWN_ALBUM_LONGLINE = "";
+    const DAWN_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("vinyl-the-dawn", `The Dawn`, DAWN_ALBUM_LONGLINE, "img/sound/vinyl-the-dawn.png", 8, 1400, "Платівка, 40m of Psychodelic Indie Rock", DAWN_ALBUM_SHORTLINE, "", true, true, "sound", "https://youtu.be/G3kL-QO1ZDA"));
+
+    // Tranquillitas
+    //
+    //
+    const TRANQUILLITAS_ALBUM_LONGLINE = "";
+    const TRANQUILLITAS_ALBUM_SHORTLINE = `${STRINGS.ALBUM_LONGLINE_2}`;
+    LootArr.push(new DNELootCard("album-tranquillitas", `Tranquillitas`, TRANQUILLITAS_ALBUM_LONGLINE, "img/sound/album-tranquillitas.jpg", 5, 600, "Платівка, 80m of Ambient Downtempo", TRANQUILLITAS_ALBUM_SHORTLINE, "", true, true, "sound", "https://youtu.be/apXkd39xDVI"));
+
+    // NO ENDORPHINS
+    //
+    //
+    const NO_ENDORPHINS_VINYL_LONGLINE = "";
+    const NO_ENDORPHINS_VINYL_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("vinyl-no-endorphins", `NO ENDORPHINS`, NO_ENDORPHINS_VINYL_LONGLINE, "img/sound/vinyl-no-endorphins.jpg", 6, 800, "Платівка, 16m of Electro Industrial Techno", NO_ENDORPHINS_VINYL_SHORTLINE, "", true, true, "sound", "https://youtu.be/4CLblRKVwow"));
+
+    // THE INCURSION
+    //
+    //
+    const INCURSION_ALBUM_LONGLINE = "";
+    const INCURSION_ALBUM_SHORTLINE = `${STRINGS.ALBUM_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-incursion", `THE INCURSION`, INCURSION_ALBUM_LONGLINE, "img/sound/album-incursion.jpg", 6, 300, "Альбом, 34m of Electro Industrial Techno", INCURSION_ALBUM_SHORTLINE, "", true, true, "sound", "https://youtu.be/lyd23cDcqT0"));
+
+    // Come Over
+    //
+    //
+    const COME_OVER_VINYL_LONGLINE = "";
+    const COME_OVER_VINYL_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("vinyl-come-over", `Come Over`, COME_OVER_VINYL_LONGLINE, "img/sound/vinyl-come-over.jpg", 5, 1000, "Платівка, 35m of Psychodelic Lo-Fi Indie Rock", COME_OVER_VINYL_SHORTLINE, "", true, true, "sound", "https://www.youtube.com/watch?v=tVgpoLZOBkY&list=PLfJndz0utgOPLfP5L2k1MYak2xF_LGD1e&index=1&ab_channel=Kowloon-Topic"));
+
+    // ANATOMY VOL.3
+    //
+    //
+    const ANATOMY_VOL3_ALBUM_LONGLINE = "";
+    const ANATOMY_VOL3_ALBUM_SHORTLINE = `${STRINGS.ALBUM_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-anatomy-vol-3", `ANATOMY VOL.3`, ANATOMY_VOL3_ALBUM_LONGLINE, "img/sound/album-anatomy-vol-3.jpg", 5, 1000, "Альбом, 107m of Electro Industrial Techno", ANATOMY_VOL3_ALBUM_SHORTLINE, "", true, true, "sound", "https://youtu.be/LuUV1IsQJq4"));
+
+    // FOR FUCK SAYK
+    //
+    //
+    const FORFUCKSAYK_MIX_LONGLINE = "";
+    const FORFUCKSAYK_MIX_SHORTLINE = `${STRINGS.DEMO_LONGLINE_SHORT_3}`;
+    LootArr.push(new DNELootCard("demo-forfucksayk", `FORFUCKSAYK`, FORFUCKSAYK_MIX_LONGLINE, "img/sound/demo-forfucksayk.jpg", 3, 0, "Демо, 30m of Dark Lo-Fi", FORFUCKSAYK_MIX_SHORTLINE, "", true, true, "sound", "https://soundcloud.com/viberoom_io/listen-to-lofi-hip-hop-mix-by-sayk"));
+
+    // sophisticated sekia sessions
+    //
+    //
+    const SEKIA_SESSIONS_LONGLINE = "";
+    const SEKIA_SESSIONS_SHORTLINE = `${STRINGS.DEMO_LONGLINE_SHORT_3}`;
+    LootArr.push(new DNELootCard("demo-sekia-sessions", `sophisticated sekia sessions`, SEKIA_SESSIONS_LONGLINE, "img/sound/demo-sekia-sessions.jpg", 4, 0, "Демо, 45m of Electronic Trip-Hop", SEKIA_SESSIONS_SHORTLINE, "", true, true, "sound", "https://youtu.be/MtZz9pxe-wM"));
+
+    // Passover
+    //
+    //
+    const PASSOVER_VINYL_LONGLINE = "";
+    const PASSOVER_VINYL_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("vinyl-passover", `Passover`, PASSOVER_VINYL_LONGLINE, "img/sound/vinyl-passover.jpg", 7, 1400, "Платівка, 59m of Psychodelic Alternative Indie Rock", PASSOVER_VINYL_SHORTLINE, "", true, true, "sound", "https://youtu.be/iz1nq1hmVCE"));
+
+    // INNER FLAME
+    //
+    //
+    const INNER_FIRE_ALBUM_LONGLINE = "";
+    const INNER_FIRE_ALBUM_SHORTLINE = `${STRINGS.ALBUM_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-inner-flame", `INNER FLAME`, INNER_FIRE_ALBUM_LONGLINE, "img/sound/album-inner-flame.jpg", 5, "NYP", "Альбом, 37m of Experimental Chillwave Vaporwave", INNER_FIRE_ALBUM_SHORTLINE, "", true, true, "sound", "https://youtu.be/OPBpJyZLqVM"));
+
+    // PYROMANIACS
+    //
+    //
+    const PYROMANIACS_ALBUM_LONGLINE = "";
+    const PYROMANIACS_ALBUM_SHORTLINE = `${STRINGS.ALBUM_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-pyromaniacs", `PYROMANIACS`, PYROMANIACS_ALBUM_LONGLINE, "img/sound/album-pyromaniacs.jpg", 4, "NYP", "Альбом, 56m of Electronic Synthwave Vaporwave", PYROMANIACS_ALBUM_SHORTLINE, "", true, true, "sound", "https://youtu.be/S9NbJFmvVIs"));
+
+    // The Rabbit That Hunts Tigers
+    //
+    //
+    const RABBIT_VINYL_LONGLINE = "";
+    const RABBIT_VINYL_SHORTLINE = `${STRINGS.ALBUM_LONGLINE}`;
+    LootArr.push(new DNELootCard("vinyl-rabbit-that-hunts-tigers", `The Rabbit That Hunts Tigers`, RABBIT_VINYL_LONGLINE, "img/sound/vinyl-the-rabbit-that-hunts-tigers.jpg", 5, 700, "Платівка, 44m of Alternative Rock Funk", RABBIT_VINYL_SHORTLINE, "", true, true, "sound", "https://youtu.be/oQq3Jwz0bDQ"));
+
     // Flower Boy
     //
     //
@@ -1832,7 +1958,7 @@ const initMonsterArr = () => {
     MonstersArr.push(new DNEMonsterCard("roc-star", "Вьюрок-звезда", 4, "img/monsters/monster-roc-star.png", "-2 для DJ-їв, +3 для Прибульців", 1, 2, "Ти неуважно читав його райдер! Скинь увесь звук з бонусом 4 або менше"));
     MonstersArr.push(new DNEMonsterCard("centaurpede", "Сороконячка", 2, "img/monsters/monster-centaurpede.png", "Завжди з собою купа підков - більшої вдачі годі шукати! +3 для Дракононароджених, +2 для DJ-їв", 1, 1, "Скинь одну карту з руки"));
     MonstersArr.push(new DNEMonsterCard("unspeakably-awful-indescribable-horror", "Невимовно жахливий незбагненний жах", 14, "img/monsters/monster-unspeakably-awful-indescribable-horror.png", "+4 для Нетраннерів", 1, 4, "Невимовно жахливим чином обнуляє всіх крім Нетраннерів. Нетраннер втрачає сили - скинь карту Нетраннера"));
-    MonstersArr.push(new DNEMonsterCard("stoned-golem", "Обдолбаний голем", 14, "img/monsters/monster-stoned-golem.png", "Завжди можеш просто піти і забити на його звук", 1, 4, "Його пробило на хавку, тебе обнулено"));
+    MonstersArr.push(new DNEMonsterCard("stoned-golem", "Обдовбаний голем", 14, "img/monsters/monster-stoned-golem.png", "Завжди можеш просто піти і забити на його звук", 1, 4, "Його пробило на хавку, тебе обнулено"));
     MonstersArr.push(new DNEMonsterCard("the-wraith-of-khan", "Привид Хана", 10, "img/monsters/monster-the-wraith-of-khan.png", "+3 для Райтерів.<br>+2 для Найомничків", 1, 3, "Віддай по одній карті усім, крім гравців з найбільшим та найменшим рівнем"));
     MonstersArr.push(new DNEMonsterCard("tongue-demon", "Язичницький демон", 12, "img/monsters/monster-tongue-demon.png", "Пекельне створіння. -4 для Татуєрів. Маєш скинути додаткову карту з руки для запрошення", 1, 3, "Втрать дві душі. За бажанням кинь d6, випаде 6 - нічого не втрачаєш, інше - втрачай три душі"));
     MonstersArr.push(new DNEMonsterCard("lounge-lizards", "Тусящери", 12, "img/monsters/monster-lounge-lizards.png", "-2 для Дракононароджених,<br>+4 для DJ-їв та Татуєрів", 1, 3, "Їм завжди треба більше. Скинь дві карти з найбільшим бонусом, серед тих що ти маєш"));

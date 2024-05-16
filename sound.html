@@ -1031,7 +1031,7 @@
         let maxBonus = 10;
         let curBonus = 6;
         Array.from(win77.game.catalog.sound).filter((soundCard, index) => {
-            if (soundCard.bonus === curBonus) {
+            // if (soundCard.bonus === curBonus) {
                 shufledSound.push(soundCard);
                 // if (curSize < maxSize) {
                 //     console.log(`try ${index} pass ${curSize} of ${maxSize}`, curSize < maxSize, soundCard, shufledSound);
@@ -1042,7 +1042,7 @@
                 //     curSize = 0;
                 //     curBonus = curBonus + 1;
                 // }
-            }
+            // }
         });
         console.log(shufledSound, win77.game.catalog.sound);
         drawSoundCards(shufledSound);
