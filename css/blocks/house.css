@@ -18,3 +18,25 @@
     font-size: 3em;
     line-height: 0;
 }
+
+.house__list {
+    position: absolute;
+    bottom: 50px;
+    right: 80px;
+
+    padding: 40px;
+    margin: 0;
+
+    list-style: none;
+    transform: skewY(-1.8deg) scale(1.02);
+}
+
+.house__item {
+    padding: 20px;
+    margin: 2px;
+
+    font-family: "Press Start 2p", "JetBrains Mono", monospace;
+    font-size: 1.6em;
+    text-transform: lowercase;
+    line-height: .7;
+}

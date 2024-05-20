@@ -1800,7 +1800,7 @@ const initDNELootArr = () => {
     // LootArr.push(new DNELootCard("breakdown", "Панічний ступор", "Накрути іншого гравця разом зі своїми Найомничками, щоб впевнити його що він не встигає. На наступному своєму івенті він має виправдати очікування аудиторії тільки за рахунок лайн-апу. Щоб використати цю карту, треба мати що найменше 2х найомничків. -1 бонус за кожного наступного наймничка, якщо їх більше.", "https://lh6.googleusercontent.com/xffJ6AXD2wxPi3wFRNgga9iUOmIWXQV7QY8QdidqiCytZF57nNHI_zRAAbtqZSXpb0o=w2400", 2, 0, "Проблема!"));
     // LootArr.push(new DNELootCard("seppuku", "Сеппуку", "Ти мертвий.", "https://lh5.googleusercontent.com/zyr6pz4k23-dqGhGpyEe-hJMIxOCR2vjBPYtiBhetHY_TJ9dfJtTEbZ-yipb-TqYYYM=w2400", 0, 0, ""));
     // LootArr.push(new DNELootCard("gameboy", "GAMEBOY", "Дозволяє зберегти свій прогрес на GAMEBOY. Перезаписуй збереження скільки завгодно разів, та в тебе тільки один слот. Використовуй в будь який момент свого ходу щоб зберегтись або завантажитись. У випадку смерті ти просто завантажуєшся з останнього збереження. Цей предмет не можна обміняти або купити, лише подарувати, отримавши цю картку від Майстра на початку гри", "https://lh4.googleusercontent.com/sN9l6r5xenQZTyUKE5O138NHImoBEvUqKk5LT3A5T8VRifLeSY9WcaPSsCgm_bAobrQ=w2400", 0, "0", ""));
-    // LootArr.push(new DNELootCard("e", "∄", "Nicht heute", "https://lh3.googleusercontent.com/0lBFAvAVJ4mxoyJ8WNXz8EE_cesilaNQXOMOcHrD1vRr1CG0JVyF9l8oOI4fZo4ivyo=w2400", 0, "0", ""));
+    // LootArr.push(new DNELootCard("e", "∄", "Nicht heute", "https://lh3.googleusercontent.com/0lBFAvAVJ4mxoyJ8WNXz8EE_cesilaNQXOMOcHrD1vRr1CG0JVyF9l8oOI4fZo4ivyo=w2400", 0, "0", "", "", "", true, true, "anti", ""));
 
     return LootArr;
 }

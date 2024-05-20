@@ -88,7 +88,7 @@
                 <h1 class="node__disclaimer">DNE is an open-source, cross-platform JavaScript game</h1>
                 <b class="node__title">Play DNE</b>
                 <div class="node__controls">
-                    <a href="./" class="cp-button btn-buy node__controls-item" target="_blank">
+                    <a href="./play.html" class="cp-button btn-buy node__controls-item" target="_blank">
                         <h3>PLAY 0.7</h3>
                         <b>Recommended For Most Users</b>
                     </a>
@@ -110,10 +110,10 @@
             <h1 class="cybr-title buy__title">Does Not Exist</h1>
             <p class="buy__subtitle">Competitive Board-n-Web Game...<br> about creating Rave of your Dream</p>
             <div class="buy__type-btns">
-                <button id="buy-digital" class="cybr-btn --reverse buy__digital" style="margin-right: 10px">
+                <button id="buy-digital" class="cybr-btn buy__digital" style="margin-right: 10px">
                     Digital
                 </button>
-                <button id="buy-physical" class="cybr-btn buy__physical">Physical</button>
+                <button id="buy-physical" class="cybr-btn --reverse buy__physical">Physical</button>
             </div>
             <ul class="buy__bundle-list">
                 <li class="buy__bundle">
@@ -251,7 +251,7 @@
 <!--                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2539.4388484161013!2d30.503060899999998!3d50.47017340000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cfd5569d517d%3A0xb8163512a1f7f8f6!2sSPAWN!5e0!3m2!1sru!2sua!4v1715097084106!5m2!1sru!2sua" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>-->
 <!--                        </div>-->
                         <div class="buy-where__map-iframe">
-                            <iframe id="map-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d720.4427541259616!2d30.512691740336834!3d50.44959360325053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4c5570f362d87%3A0x655c34cd74960cbd!2z0J3QkCDQkdCG0KDQptCG!5e0!3m2!1sru!2sua!4v1714596021407!5m2!1sru!2sua" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <iframe id="map-iframe" src="" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
 <!--                        <div class="buy-where__map-iframe">-->
 <!---->
@@ -324,7 +324,7 @@
             </div>
         </div>
         <div class="story-demo">
-            <a href="./" id="rts-btn" class="rts-btn" target="_blank">PLAY DEMO</a>
+            <a href="./play.html" id="rts-btn" class="rts-btn" target="_blank">PLAY DEMO</a>
         </div>
         <footer>
             <p style="padding: 10px; text-align: center">(c)2024, all rules are fucked. Continue is an Art</p>
@@ -603,7 +603,7 @@
                         <ul>
                             <li>освоїти Клас, скинувши душу</li>
                             <li>запросити на Рейв Монстра, скинувши карту Звуку</li>
-                            <li>Познайомитися з Найомничком, скинувши карту Звука і викинувши 5-6 на d6</li>
+                            <li>Познайомитися з Найомничком, скинувши карту Звуку і викинувши 5-6 на d6</li>
                             <li>взяти до руки Баг, скинувши дві карти Звуку</li>
                         </ul>
                         <p>Все це дасть тобі простір для маневру, коли інші гравці рішуче за тебе візьмуться або коли тобі доведеться працювати з високими очікуваннями</p>
@@ -630,7 +630,7 @@
                         </ol>
 
                         <h4>Збери власну колоду</h4>
-                        <p>У креативному режимі ми беремо звук із загальної колоди та всі знаходяться в рівних умовах, в одному човні, так би мовити. У режимі змагання ти можеш заздалегідь підібрати колоду Звука з таким номіналом і кількістю карт в ній, щоб вона максимально відповідала твоєму стилю гри.</p>
+                        <p>У креативному режимі ми беремо звук із загальної колоди та всі знаходяться в рівних умовах, в одному човні, так би мовити. У режимі змагання ти можеш заздалегідь підібрати колоду Звуку з таким номіналом і кількістю карт в ній, щоб вона максимально відповідала твоєму стилю гри.</p>
                         <p>
                             Головне правило формування колоди для всіх одне:<br>
                             Сума бонусів усіх карток у ній повинна бути рівна 176*
@@ -785,7 +785,7 @@
             <div class="stone-footer__panel">
                 <div class="container stone-footer__panel-container">
                     <div class="stone-footer__hero">
-                        <a class="stone-target stone-footer__target" href="./" target="_blank">Грати</a>
+                        <a class="stone-target stone-footer__target" href="./play.html" target="_blank">Грати</a>
                         <ul class="stone-stats">
                             <li class="stone-stats__item --saves">
                                 <h3 class="stone-stats__label">Стан збережень у хмарі</h3>
@@ -1022,16 +1022,20 @@
     const regularPriceNode = document.querySelector("#price-regular");
     const priceNodeArr = [bunnyPriceNode, basicPriceNode, regularPriceNode];
     const digitalPriceArr = [0, 0, 0];
-    const physicalPriceArr = [255, 777, '4.2K'];
+    const physicalPriceArr = [250, 777, '4.2K'];
     const CURRENCY = "₴";
 
     buyDigitalBtn.addEventListener("click", () => {
+        buyDigitalBtn.classList.toggle("--reverse");
+        buyPhysicalBtn.classList.toggle("--reverse");
         digitalPriceArr.forEach((price, i) => {
             priceNodeArr[i].textContent = `${price}${CURRENCY}`;
         });
     });
 
     buyPhysicalBtn.addEventListener("click", () => {
+        buyDigitalBtn.classList.toggle("--reverse");
+        buyPhysicalBtn.classList.toggle("--reverse");
         physicalPriceArr.forEach((price, i) => {
             priceNodeArr[i].textContent = `${price}${CURRENCY}`;
         });
@@ -1166,14 +1170,17 @@
             src: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2539.3295267573267!2d30.504685499999994!3d50.4722088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce921a9d609b%3A0x94b48fbc248e2f3e!2z0JrQu9GD0LEgQ0JHYW1lcw!5e0!3m2!1sru!2sua!4v1715097482232!5m2!1sru!2sua"
         }
     ];
-
-    switchBtns.forEach((switchBtn, index) => {
-        switchBtn.addEventListener("click", () => {
+    const getSwitchMapHandler = (switchBtn, index) => {
+        return () => {
             switchBtns.forEach((switchBtn) => switchBtn.classList.remove("--reverse"));
             switchBtn.classList.add("--reverse");
             mapIframe.src = pinsData[index].src;
-        });
+        }
+    };
+    switchBtns.forEach((switchBtn, index) => {
+        switchBtn.addEventListener("click", getSwitchMapHandler(switchBtn, index));
     });
+    getSwitchMapHandler(switchBtns[0], 0)();
 </script>
 <script>
     var stringRandom = (function() {

@@ -2,6 +2,7 @@ import { win77 } from "../dne-cli.js";
 import { chooseOption } from "./chat.hud.js";
 import { initHotline } from "../utils/initHotline.js";
 import { createDialogDataObj, initDialogCli } from "./dialogCli.hud.js";
+import {updBalanceNode} from "./balance.hud.js";
 
 
 const NOKIA_MENUS = [
@@ -77,16 +78,9 @@ const NOKIA_MENUS = [
                 href: "#",
                 text: "hesoyam",
                 callback: (e) => {
-                    e.preventDefault();
-                    initDialogCli(createDialogDataObj(
-                        OPTION_LINES,
-                        "hesoyam",
-                        [
-                            () => {
-                                console.log("hesoyam");
-                            }
-                        ]));
-                    console.log(`Hotline to Rick C-137`);
+                    win77.game.player.balance.bankroll = win77.game.player.balance.bankroll + 250000;
+                    updBalanceNode();
+                    console.log("hesoyam", win77.game.player.balance.bankroll);
                 }
             }
             // {
