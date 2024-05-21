@@ -85,6 +85,54 @@
     /*overflow: hidden;*/
 }
 
+.talk__answer {
+    position: absolute;
+    top: -120px;
+    left: 160px;
+    opacity: 0;
+    visibility: hidden;
+
+    display: flex;
+    transform: skewY(-1.8deg) scale(1.02);
+}
+
+.talk__answer.--visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.talk__answer-input {
+    min-height: 50px;
+    padding: 12px 20px;
+
+    color: white;
+    font-family: "Press Start 2P", "JetBrains Mono", sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 38px;
+
+    background: black;
+}
+
+.talk__answer-submit {
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 82px;
+    padding: 7px;
+    /* border-right: 2px solid var(--light-color); */
+
+    overflow: hidden;
+    cursor: pointer;
+
+    color: white;
+    font-family: "Press Start 2P", "JetBrains Mono", sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+
+    border-radius: 0;
+}
+
 /*.--typing-animation {*/
 /*    animation: typing 8s steps(60, end);*/
 /*}*/

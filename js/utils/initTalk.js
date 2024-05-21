@@ -41,6 +41,23 @@ const showDeathScreen = () => {
     element.classList.add("--open");
 }
 
+const showAnswerInput = () => {
+    const element = document.querySelector(".js-answer-wrap");
+    const answerInput = document.querySelector(".js-answer-input");
+    const answerBtn = document.querySelector(".js-answer-submit");
+    element.classList.add("--visible");
+
+    answerBtn.addEventListener("click", () => {
+        hideAnswerInput();
+        drawLine(answerInput.value);
+    });
+}
+
+const hideAnswerInput = () => {
+    const element = document.querySelector(".js-answer-wrap");
+    element.classList.remove("--visible");
+}
+
 const SEQUENCES = [{
     id: "intro",
     scenes: [
@@ -139,6 +156,12 @@ const SEQUENCES = [{
         // ЦЕЛЬ: НАПИСАТЬ РУКАМИ КАК ТЕБЯ ЗОВУТ
         // ЦЕЛЬ: ВЫБРАТЬ КЛАС
         new Scene([
+            {
+                string: "Как тебя зовут?",
+                callback: () => {
+                    showAnswerInput();
+                }
+            },
             "Что?",
             "Ты это сделал.",
             "Я снова вижу.. И чувствую! Можешь объяснить что происходит?",
