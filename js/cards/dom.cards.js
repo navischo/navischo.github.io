@@ -208,7 +208,7 @@ const drawCard = (cardContainer, getElementCallback, cardData) => {
     addCardControls(newCard, cardData);
 
     // if (win77.router.currentPage === PAGE_NAMES.hud) {
-    newCard.querySelector(".card__preview-img").src = cardData.img;
+    // newCard.querySelector(".card__preview-img").src = cardData.img;
     // } else {
     //     drawImgLazy(newCard.querySelector(".card__preview-img"), cardData.img);
     // }

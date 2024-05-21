@@ -1,4 +1,4 @@
-import { DNELootCard, DNEDoorCard, DNEMonsterCard } from "./interface.cards.js";
+import { DNELootCard, DNEDoorCard, DNEMonsterCard, DNEBUGCard } from "./interface.cards.js";
 import { setSoundStat } from "../utils/setSoundStat.js";
 import { STRINGS } from "./const.cards.js";
 
@@ -69,36 +69,40 @@ const initDNELootArr = () => {
     // LootArr.push(new DNELootCard("i-squizer", "Сквізер", "Дає можливість залишити послання невеличкого розміру", "https://lh5.googleusercontent.com/XaXThgj9KO7oFMa_JAFJx9PcMSj3o_FkpCIdeAZyynPGY3E8vhOiOc_C7q951ePTHs0=w2400", 1, 200, "Бонус для Райтера"));
     // LootArr.push(new DNELootCard("i-shwabra", "Швабра", "Дає можливість залишити послання великого розміру", "https://lh3.googleusercontent.com/lQP_8BMVMOuETxH4z16PjtG7P7O3xhGfVAM4MqkKLzfP8bIWdiQwmy9c5vZddHzEw7c=w2400", 2, 400, "Бонус для Райтера"));
 
-    const FOOD_LONGLINE = (paste) => `Можливість насолодитися ${paste} в компанії друзів просто зараз. Ефект подвоюється якщо разом з нею використати Спалах`;
-    // Банан
-    //
-    //
-    const BANAN_LONGLINE = FOOD_LONGLINE("солодким Бананом");
-    const BANAN_SHORTLINE = `Satisfaction`;
-    const iBanan = new DNELootCard("i-banan", "Банан", BANAN_LONGLINE, `../img/loot/banan.jpg`, 1, 50, "", BANAN_SHORTLINE, "", true, true, "loot");
-    iBanan.collection = "food";
-    LootArr.push(iBanan);
+    const initFoodCards = () => {
+        const FOOD_LONGLINE = (paste) => `Можливість насолодитися ${paste} в компанії друзів просто зараз. Ефект подвоюється якщо разом з нею використати Спалах`;
+        // Банан
+        //
+        //
+        const BANAN_LONGLINE = FOOD_LONGLINE("солодким Бананом");
+        const BANAN_SHORTLINE = `Satisfaction`;
+        const iBanan = new DNELootCard("i-banan", "Банан", BANAN_LONGLINE, `../img/loot/banan.jpg`, 1, 50, "", BANAN_SHORTLINE, "", true, true, "loot");
+        iBanan.collection = "food";
+        LootArr.push(iBanan);
 
-    // Сінабон
-    //
-    //
-    const SINABON_LONGLINE = FOOD_LONGLINE("смачнющим Сінабоном");
-    const SINABON_SHORTLINE = `Eat me`;
-    const iSinabon = new DNELootCard("i-sinabon", "Сінабон", SINABON_LONGLINE, `../img/loot/sinabon.jpg`, 1, 100, "", SINABON_SHORTLINE, "", true, true, "loot")
-    iSinabon.collection = "food";
-    LootArr.push(iSinabon);
+        // Сінабон
+        //
+        //
+        const SINABON_LONGLINE = FOOD_LONGLINE("смачнющим Сінабоном");
+        const SINABON_SHORTLINE = `Eat me`;
+        const iSinabon = new DNELootCard("i-sinabon", "Сінабон", SINABON_LONGLINE, `../img/loot/sinabon.jpg`, 1, 100, "", SINABON_SHORTLINE, "", true, true, "loot")
+        iSinabon.collection = "food";
+        LootArr.push(iSinabon);
 
-    const iHappy = new DNELootCard("i-happy", "Хеппі-Міл", FOOD_LONGLINE("смачнющим Хеппі-Міл"), `../img/loot/happy.png`, 1, 180, "", "Знаю, ти мене хочеш", "", true, true, "loot");
-    iHappy.collection = "food";
-    LootArr.push(iHappy);
+        const iHappy = new DNELootCard("i-happy", "Хеппі-Міл", FOOD_LONGLINE("смачнющим Хеппі-Міл"), `../img/loot/happy.png`, 1, 180, "", "Знаю, ти мене хочеш", "", true, true, "loot");
+        iHappy.collection = "food";
+        LootArr.push(iHappy);
 
-    const iMacMenu = new DNELootCard("i-macmenu", "Мак-Меню", FOOD_LONGLINE("смачнющим Мак-Меню"), `../img/loot/bigmac.jpg`, 1, 240, "", "О так, візьми мене", "", true, true, "loot");
-    iMacMenu.collection = "food";
-    LootArr.push(iMacMenu);
+        const iMacMenu = new DNELootCard("i-macmenu", "Мак-Меню", FOOD_LONGLINE("смачнющим Мак-Меню"), `../img/loot/bigmac.jpg`, 1, 240, "", "О так, візьми мене", "", true, true, "loot");
+        iMacMenu.collection = "food";
+        LootArr.push(iMacMenu);
 
-    const iPizza = new DNELootCard("i-pizza", "Піца", FOOD_LONGLINE("смачнющою Тоні Пепероні з Домінос"), `../img/loot/pizza.jpg`, 2, 420, "", "Смачнюща Тоні Пепероні вже стукає в твої двері. Не змушуй її чекати", "", true, true, "loot");
-    iPizza.collection = "food";
-    LootArr.push(iPizza);
+        const iPizza = new DNELootCard("i-pizza", "Піца", FOOD_LONGLINE("смачнющою Тоні Пепероні з Домінос"), `../img/loot/pizza.jpg`, 2, 420, "", "Смачнюща Тоні Пепероні вже стукає в твої двері. Не змушуй її чекати", "", true, true, "loot");
+        iPizza.collection = "food";
+        LootArr.push(iPizza);
+    }
+
+    // initFoodCards();
 
     const iRegularSound = new DNELootCard("i-regular-sound", "Потужний звук", "Професійний сет звукового обладнання потужністю в 600вт, в який входить: монітор, мікшер Yamaha, два безпровідні мікро, дим машина, штатив та дротова система що живиться від розетки 220V. З якісним контроллером та Діджеєм може розкачати натовп до 50 людей, чудово підходить для невеликих приміщень.", `../img/loot/regular-sound.jpg`, 6, "40K/1800", "Велика", "Звук дає можливість ділитися своєю музикою з натовпом. Чим гучніше, тим більше людей зачепить.", "", true, true, "loot");
     iRegularSound.collection = "soundSystem";
@@ -136,28 +140,33 @@ const initDNELootArr = () => {
     iBunnySound.collection = "soundSystem";
     LootArr.push(iBunnySound);
 
-    // Басік
-    const basicCar = new DNELootCard("car-basic", "Басік", "Басік дозволяє перевозити великі речі з точки А в точку B. Головне щоб в тебе було водійське посвідчення, або друг що його має.", `../img/loot/basic.jpg`, 2, "90K/500", "Авто", "Басік дозволяє перевозити великі речі з точки А в точку B. Головне щоб в тебе було водійське посвідчення, або друг що його має.", "", true, true, "loot");
-    basicCar.collection = "car";
-    LootArr.push(basicCar);
-    // Таємничий фургон
-    const mysteryTrack = new DNELootCard("car-mystery-track", "Таємничий фургон", "Дозволяє перевозити великі речі з точки А в точку B. Продавець сказав, що має якусь особливість, та не сказав яку.", `../img/loot/mystery-track.png`, 2, "110K/700", "Авто", "Дозволяє перевозити великі речі з точки А в точку B. Продавець сказав, що має якусь особливість, та не сказав яку.", "", true, true, "loot");
-    mysteryTrack.collection = "car";
-    LootArr.push(mysteryTrack);
+    const initCarCards = () => {
 
-    const myAvi = new DNELootCard("car-mini-avi", "Міні-аві", "Дозволяє перевозити великі речі з точки А в точку B. Літає так швидко, що не наздогнати.", `../img/loot/mini-avi.png`, 3, "220K/1700", "Авто", "Дозволяє перевозити великі речі з точки А в точку B. Літає так швидко, що не наздогнати.", "", true, true, "loot");
-    myAvi.collection = "car";
-    LootArr.push(myAvi);
+        // Басік
+        const basicCar = new DNELootCard("car-basic", "Басік", "Басік дозволяє перевозити великі речі з точки А в точку B. Головне щоб в тебе було водійське посвідчення, або друг що його має.", `../img/loot/basic.jpg`, 2, "90K/500", "Авто", "Басік дозволяє перевозити великі речі з точки А в точку B. Головне щоб в тебе було водійське посвідчення, або друг що його має.", "", true, true, "loot");
+        basicCar.collection = "car";
+        LootArr.push(basicCar);
+        // Таємничий фургон
+        const mysteryTrack = new DNELootCard("car-mystery-track", "Таємничий фургон", "Дозволяє перевозити великі речі з точки А в точку B. Продавець сказав, що має якусь особливість, та не сказав яку.", `../img/loot/mystery-track.png`, 2, "110K/700", "Авто", "Дозволяє перевозити великі речі з точки А в точку B. Продавець сказав, що має якусь особливість, та не сказав яку.", "", true, true, "loot");
+        mysteryTrack.collection = "car";
+        LootArr.push(mysteryTrack);
 
-    const cosmobus = new DNELootCard("car-cosmobus", "Космос-бас", "Дозволяє перевозити великі речі та безліч Найомничків з точки А в точку B. Літає так швидко, що не наздогнати.", `../img/loot/cosmobus.jpg`, 3, "240K/1400", "Авто", "Дозволяє перевозити великі речі та безліч Найомничків з точки А в точку B. Літає так швидко, що не наздогнати.", "", true, true, "loot");
-    cosmobus.collection = "car";
-    LootArr.push(cosmobus);
+        const myAvi = new DNELootCard("car-mini-avi", "Міні-аві", "Дозволяє перевозити великі речі з точки А в точку B. Літає так швидко, що не наздогнати.", `../img/loot/mini-avi.png`, 3, "220K/1700", "Авто", "Дозволяє перевозити великі речі з точки А в точку B. Літає так швидко, що не наздогнати.", "", true, true, "loot");
+        myAvi.collection = "car";
+        LootArr.push(myAvi);
 
-    const CAR_FERRARI_SHORTLINE = "Найшвидший транспорт на земній поверхні. Підходить для замовлень де швидкість на першому місці.";
-    const CAR_FERRARI_LONGLINE = "Дозволяє перевозити великі речі та одного Найомничка з точки А в точку B.<br><br> Пристебни ремінь, крихітко.";
-    const ferrari = new DNELootCard("car-ferrari", "Ферарі", CAR_FERRARI_LONGLINE, `../img/loot/ferrari.jpg`, 4, "370K/5K", "Авто", CAR_FERRARI_SHORTLINE, "", true, true, "loot");
-    ferrari.collection = "car";
-    LootArr.push(ferrari);
+        const cosmobus = new DNELootCard("car-cosmobus", "Космос-бас", "Дозволяє перевозити великі речі та безліч Найомничків з точки А в точку B. Літає так швидко, що не наздогнати.", `../img/loot/cosmobus.jpg`, 3, "240K/1400", "Авто", "Дозволяє перевозити великі речі та безліч Найомничків з точки А в точку B. Літає так швидко, що не наздогнати.", "", true, true, "loot");
+        cosmobus.collection = "car";
+        LootArr.push(cosmobus);
+
+        const CAR_FERRARI_SHORTLINE = "Найшвидший транспорт на земній поверхні. Підходить для замовлень де швидкість на першому місці.";
+        const CAR_FERRARI_LONGLINE = "Дозволяє перевозити великі речі та одного Найомничка з точки А в точку B.<br><br> Пристебни ремінь, крихітко.";
+        const ferrari = new DNELootCard("car-ferrari", "Ферарі", CAR_FERRARI_LONGLINE, `../img/loot/ferrari.jpg`, 4, "370K/5K", "Авто", CAR_FERRARI_SHORTLINE, "", true, true, "loot");
+        ferrari.collection = "car";
+        LootArr.push(ferrari);
+    }
+
+    // initCarCards();
 
     // Аватар
     //
@@ -235,93 +244,93 @@ const initDNELootArr = () => {
     // Депутат
     // LootArr.push(new DNELootCard("contract-congressman", "Депутат", "Професия депутата дает ряд особьіх возможностей, доступ к закрьітьім источникам и практически неограниченньій бюджет до тех пор пока его действия поддерживаются большинством. Раз в год депутат может бьіть переизбран в случае если за єто проголосует большинство игроков. В таком случае он потеряет все привелегии депутата, даже если оставит у себя физическую копию картьі.", "", 0, 0, "")); // Двери
     // Райтер
-    LootArr.push(new DNELootCard("class-writer", "Райтер", "Здатен бомбити великі шматки, кожен з яких даватиме автору постійний бонус доки його не бафнуть. Чудовий спосіб привернути увагу до події. Бомбити графіті - найдешевший та найшвидший спосіб гучно заявити про своє існування в будь-якому районі Найт-Сіті. За допомогою канцелярського знаряддя здатен швидко популярізвути прості ідеї що можна висловити декількома словами або навіть буквами. Чим лаконічніша ідея, тим легше її тиражувати, тим швидше вона здатна розповсюджуватись. Шериф не залишить це без уваги але і просто так звинуватити не зможе. Пильнуй щоб він був найдалі коли працюєш.", "https://lh5.googleusercontent.com/gmwxg96EzHNXoKY8O0xj1P3IeYP7oMwn4z7SvAg6EAIejeNEbRX-H39VLhET1LmBfxc=w2400", 1, 0, "Клас", "Здатен бомбити великі шматки, кожен з яких даватиме автору постійний бонус доки його не бафнуть.", "", true, true, "class")); // Двери
+    // LootArr.push(new DNELootCard("class-writer", "Райтер", "Здатен бомбити великі шматки, кожен з яких даватиме автору постійний бонус доки його не бафнуть. Чудовий спосіб привернути увагу до події. Бомбити графіті - найдешевший та найшвидший спосіб гучно заявити про своє існування в будь-якому районі Найт-Сіті. За допомогою канцелярського знаряддя здатен швидко популярізвути прості ідеї що можна висловити декількома словами або навіть буквами. Чим лаконічніша ідея, тим легше її тиражувати, тим швидше вона здатна розповсюджуватись. Шериф не залишить це без уваги але і просто так звинуватити не зможе. Пильнуй щоб він був найдалі коли працюєш.", "https://lh5.googleusercontent.com/gmwxg96EzHNXoKY8O0xj1P3IeYP7oMwn4z7SvAg6EAIejeNEbRX-H39VLhET1LmBfxc=w2400", 1, 0, "Клас", "Здатен бомбити великі шматки, кожен з яких даватиме автору постійний бонус доки його не бафнуть.", "", true, true, "class")); // Двери
     // Шериф, Татуєр, DJ
     // LootArr.push(new DNELootCard("class-sherif", "Шериф", "Шериф мирний персонаж що представляє закон в Найт-Сіті. Шериф здатен дізнаватись хто є Мафією та ніхто не здатен напевно знати хто є Шерифом. Має доступ до бази інформації Поліції міста, персонального дрона та патрульної машини спортивного класу.", "https://lh6.googleusercontent.com/F6CSfk4KSbt2b1oN7y0MVoIhdZWtWDeOh6XNsUfTbNRvyfr-1VBQeEqPwx4H5R-Jiuw=w2400", 1, 0, "Клас"));
     // Татуєр
-    LootArr.push(new DNELootCard("class-ttter", "Татуєр", "Наб'є тобі татуху. Регулярно робить це на різноманітних вечірках на які тільки зможе прийти. Завжди радий бачити у власній студії щоб вколоти свіжу масть. Мусить мати чисте місце для роботи, необхідну аппаратуру та матеріали. Кожне його татуювання має особливу властивість. Наб'є тобі татуху. Кожне тату дає власнику особливу властивість до кінця гри, яку саме - обирає татуєр та гейм-майстер. Власник може попросити татуєра дати татуюванню якусь певну властивість, та чи зробить він це знатиме лише гейм-майстер.", "https://lh5.googleusercontent.com/WUvRRRJpFIACJw50hOycHsKNnwSB3SdJSs-_5JQk11pKHMoDstW_n9nzWwb28y_wTUU=w2400", 1, 0, "Клас", "Наб'є тобі татуху. Кожне тату дає власнику особливу властивість до кінця гри, яку саме дізнаєшся лише згодом.", "", true, true, "class"));
+    // LootArr.push(new DNELootCard("class-ttter", "Татуєр", "Наб'є тобі татуху. Регулярно робить це на різноманітних вечірках на які тільки зможе прийти. Завжди радий бачити у власній студії щоб вколоти свіжу масть. Мусить мати чисте місце для роботи, необхідну аппаратуру та матеріали. Кожне його татуювання має особливу властивість. Наб'є тобі татуху. Кожне тату дає власнику особливу властивість до кінця гри, яку саме - обирає татуєр та гейм-майстер. Власник може попросити татуєра дати татуюванню якусь певну властивість, та чи зробить він це знатиме лише гейм-майстер.", "https://lh5.googleusercontent.com/WUvRRRJpFIACJw50hOycHsKNnwSB3SdJSs-_5JQk11pKHMoDstW_n9nzWwb28y_wTUU=w2400", 1, 0, "Клас", "Наб'є тобі татуху. Кожне тату дає власнику особливу властивість до кінця гри, яку саме дізнаєшся лише згодом.", "", true, true, "class"));
     // DJ
-    LootArr.push(new DNELootCard("class-dj", "DJ", "Поставить музику. На протязі гри може ставити музику. Якщо кожен гравець її похвалить, спробує записати Демо, щоб потім ставити його на вечірках, продавати як Альбом в інтернеті і можливо колись навіть записати його на вінілі.<br> Якщо кожен гравець визнає що музика не та, той хто її ставив втрачає цей клас.", "https://lh5.googleusercontent.com/i6Sfz0bcn1Q6HQsSqQhV1QMtCq7pyETASnCXsyswzh7NAZ2iOVdAyQoncZ8mE23BBW8=w2400", 1, 0, "Клас", "Ставить музику. Ти відповідальний за звук, enjoy!", "", true, true, "class"));
+    // LootArr.push(new DNELootCard("class-dj", "DJ", "Поставить музику. На протязі гри може ставити музику. Якщо кожен гравець її похвалить, спробує записати Демо, щоб потім ставити його на вечірках, продавати як Альбом в інтернеті і можливо колись навіть записати його на вінілі.<br> Якщо кожен гравець визнає що музика не та, той хто її ставив втрачає цей клас.", "https://lh5.googleusercontent.com/i6Sfz0bcn1Q6HQsSqQhV1QMtCq7pyETASnCXsyswzh7NAZ2iOVdAyQoncZ8mE23BBW8=w2400", 1, 0, "Клас", "Ставить музику. Ти відповідальний за звук, enjoy!", "", true, true, "class"));
 
 
-    const NETRUNNER_LONGLINE = "Нетраннер здатен робити неймовірні речі з компьютером. Чим потужніше його обладнання, тим потужніші його можливості. Спектр його дій захоплює все, починаючи з монтажу відео та обробки графіки, закінчуючи розробкою веб-сайтів та 3Д-моделювання.";
-    const NETRUNNER_SHORTLINE = "Нетраннер здатен робити неймовірні речі з компьютером. Чим потужніше його обладнання, тим потужніші його можливості. Спектр його дій захоплює все.";
-    LootArr.push(new DNELootCard("class-netrunner", "Техношаман", NETRUNNER_LONGLINE, "https://lh4.googleusercontent.com/_NvNB3zKOJkiy19PTgbJkCqovWYT1AFdaOLZ5CI9AhTIxAqZR1skE4lxIlniWoWkpUk=w2400", 1, 0, "Клас", NETRUNNER_SHORTLINE, "", true, true, "class"));
+    // const NETRUNNER_LONGLINE = "Нетраннер здатен робити неймовірні речі з компьютером. Чим потужніше його обладнання, тим потужніші його можливості. Спектр його дій захоплює все, починаючи з монтажу відео та обробки графіки, закінчуючи розробкою веб-сайтів та 3Д-моделювання.";
+    // const NETRUNNER_SHORTLINE = "Нетраннер здатен робити неймовірні речі з компьютером. Чим потужніше його обладнання, тим потужніші його можливості. Спектр його дій захоплює все.";
+    // LootArr.push(new DNELootCard("class-netrunner", "Техношаман", NETRUNNER_LONGLINE, "https://lh4.googleusercontent.com/_NvNB3zKOJkiy19PTgbJkCqovWYT1AFdaOLZ5CI9AhTIxAqZR1skE4lxIlniWoWkpUk=w2400", 1, 0, "Клас", NETRUNNER_SHORTLINE, "", true, true, "class"));
     // LootArr.push(new DNELootCard("botnet", "Ботнет", "Мережа фейкових користувачів Instagram що виглядають як звичайні люди, коментують один одного, репостять та надсилають повідомлення з рандомізованим контентом. Можуть миттєво популярізувати будь яку ідею на всю свою аудиторію. Розробити такий не складко, потрібно трохи технічних навичок та багато креативності. Мережевий Дозор зацікавиться їх власником.", "https://lh4.googleusercontent.com/esZ8EbhZ6W4wudZe-Kjm442KRBg_1P3-lePD8HJddEOErmflqrhrVjl3vFHzFhDywFA=w2400", 6, "3К", "Тільки для Компьютермена"));
     // LootArr.push(new DNELootCard("law-belford", "Закон Белфорда", "Математичний закон, що дозволяє перевіряти масиви данних будь-якого об'єму на фальсифікацію.", "", 0, 0, "Тільки для Компьютермена"));
     // LootArr.push(new DNELootCard("class-riper-doc", "Ріпер-док", "Рипер вьтащит из тебя пулю, дочистит деку от демонов, установит кибер-имплант. Требует чистого рабочего места и неоходимую аппаратуру для каждой задачи.", "https://lh4.googleusercontent.com/dCcYzvFtdty2YemyWeXVuSufgM-cBjEQitKSc0hNJd0LbAxk3U6mYsvy-P-z72aFuF4=w2400", 1, 0, "Клас"));
     // LootArr.push(new DNELootCard("i-cyberdeck", "Кібер-дека", "Нетраннерська модифікація мозку, дозволяє завантажувати в мережу та віддалено керувати программами, які відправляються ланцюгами з одного або більше скриптів. Чим якісніша дека, тим більше скриптів в один пайп здатен вмістити її користувач. Об'єм пам'яті: 2 слоти", "https://lh3.googleusercontent.com/d1L38A_1BkvWOxovw9VXYP7N43Nf3lzr0694rItzFJkcdzp1V-28OQaE7um0LPMFGQc=w2400", 1, "10К", "Кібер-імплант"));
     // LootArr.push(new DNELootCard("i-stack", "Карбоновий стек", "Дозволяє зберегти єнграмму особистості щоб завантажити в інше тіло. Процес не є приємним, відновлення може займати від декількох годин, до декількох днів. Таким чином незворотно вбити власника стеку можна лише фізично знищивши стек з енергетичної зброї.", "https://lh6.googleusercontent.com/tnZoBgsKRJl80CrR9alTbiItgE6plsJRSGd83Hts9vEmC3cvGc0WV9MrvEKg22GyO3Q=w2400", 1, "400К", "Кібер-імплант"));
-    LootArr.push(new DNELootCard("class-collector", "Коллекціонер", "Зробить відео-контент з будь-якого творчого задуму. Спробуй використати отримані матеріали щоб розповісти у відео-форматі про свою справу. Хтось може звернути на це увагу та запропонувати тобі роботу.", "https://lh6.googleusercontent.com/c1TwnNfpDleCf4bJp00yiswT7zTrzzfhSjwTWXdBLALXUHYy9dEmYMCEKpHdbWuKfE4=w2400", 1, 0, "Клас", "Здатен бачити спражню цінність предметів, виділяти серед них драгоцінні.<br><br> Надає цю інформацію за розумний відсоток або соковитий аванс", "", true, true, "class"));
-    const BARBER_LONGLINE = "Підстреже тебе швидко та якісно. Гарна новина: Ти маєш постійну роботу в мережі барберів та стабільний заробіток відносно рангу. Погана новина: Ти жінка.<br> Щасти<br><br> Міні-гра:<br>Не дивись їй під спідницю.";
-    LootArr.push(new DNELootCard("class-barber", "Барбер", BARBER_LONGLINE, "https://lh5.googleusercontent.com/swk49Cl7o0LdJzLglojbUTrMZVPS1j2fkGa7-rMJcpuDCwv5HBkunz_vIjrwQa45UFA=w2400", 1, 0, "Клас", BARBER_LONGLINE, "", true, true, "class"));
+    // LootArr.push(new DNELootCard("class-collector", "Коллекціонер", "Зробить відео-контент з будь-якого творчого задуму. Спробуй використати отримані матеріали щоб розповісти у відео-форматі про свою справу. Хтось може звернути на це увагу та запропонувати тобі роботу.", "https://lh6.googleusercontent.com/c1TwnNfpDleCf4bJp00yiswT7zTrzzfhSjwTWXdBLALXUHYy9dEmYMCEKpHdbWuKfE4=w2400", 1, 0, "Клас", "Здатен бачити спражню цінність предметів, виділяти серед них драгоцінні.<br><br> Надає цю інформацію за розумний відсоток або соковитий аванс", "", true, true, "class"));
+    // const BARBER_LONGLINE = "Підстреже тебе швидко та якісно. Гарна новина: Ти маєш постійну роботу в мережі барберів та стабільний заробіток відносно рангу. Погана новина: Ти жінка.<br> Щасти<br><br> Міні-гра:<br>Не дивись їй під спідницю.";
+    // LootArr.push(new DNELootCard("class-barber", "Барбер", BARBER_LONGLINE, "https://lh5.googleusercontent.com/swk49Cl7o0LdJzLglojbUTrMZVPS1j2fkGa7-rMJcpuDCwv5HBkunz_vIjrwQa45UFA=w2400", 1, 0, "Клас", BARBER_LONGLINE, "", true, true, "class"));
     // LootArr.push(new DNELootCard("class-videomaker", "Відео-<br>мейкер", "Зробить відео-контент з будь-якого творчого задуму. Спробуй використати отримані матеріали щоб розповісти у відео-форматі про свою справу. Хтось може звернути на це увагу та запропонувати тобі роботу.", "https://lh4.googleusercontent.com/FZFTYr__oUeAQtVUxdlG0AT7A2BMWGKmCL9KECct9KeZK6iacLswIjCpc2aEWfqjk64=w2400", 1, 0, "Клас", "Створює відео-контент з івентів, на які приходить.", "", true));
-    LootArr.push(new DNELootCard("class-shoplifter", "Шопліфтер", "Може дістати для тебе будь-який айтем з магазину вдвічі дешевше, не питай як. Може скинути будь-яку картку з руки щоб з верогідністю 30% вкрасти будь-яку річ іншого гравця, що знаходиться з ним в одному приміщенні та не захищена ключем. Крадіжка важливих предметів, наприклад звуку під час вечірки може призвести до найкатастрофічніших наслідків. В разі невдалої крадіжки тобі доведеться заплатити її власнику компенсацію до 50% від вартості айтему. Охороничок допоможе залишати Шопліфтера за дверима.", "https://lh3.googleusercontent.com/6Wd_TULgCtwHpTisY2Nivlpvcwy8xRw9I6jgMeWF0NMnSZwHA86gcw5RD0fq6-GPFmE=w2400", 1, 0, "Клас", "Може дістати для тебе будь-який айтем з магазину вдвічі дешевше, не питай як.<br><br> Підріж айтем іншого гравця з верогідністю 33% скинувши картку з руки.", "", true, true, "class"));
-    LootArr.push(new DNELootCard("class-seller", "Селлер", "Може продавати айтеми дорожче їх собівартості, та обов'язково попросить відсоток, чим кращий продавець, тим більший. Має можливість працювати на івентах із мерчем та магазинах, щоб отримати додатковий дохід.", "https://lh3.googleusercontent.com/fWeM_q6WoqvpbeZHsyZGK3T1c7l4-xddZJJnNPF0rpEqDyIGzKWynUshmb27N7F_MOs=w2400", 1, 0, "Клас", "Може продати айтеми дорожче собівартості, та обов'язкого візьме відсоток.", "", true, true, "class"));
-    LootArr.push(new DNELootCard("class-streamer", "Стрімер", "Може отримувати донати під час трансляцій. Чим більшу аудиторію має стрімер, тим більше верогідність розмір та кількість донатів. Має можливість працювати на івентах із мерчем, щоб отримати додатковий дохід.", "https://lh4.googleusercontent.com/uWaxdPO9xe4sZXU4UZGrMBx5hQ0GVXnV4Vk-WaqWbokv14PdbenppCzovLvbc4Rw5WM=w2400", 1, 0, "Клас", "Може отримувати донати під час трансляцій. Чим більшу аудиторію має стрімер, тим більше верогідність розмір та кількість донатів.<br> Має можливість працювати на івентах із мерчем, щоб отримати додатковий дохід.", "", true, true, "class"));
-    LootArr.push(new DNELootCard("class-jeweller", "Ювелір", "Вітання, тепер ти маєш здатність створювати дорогоцінні речі з металу та каменю.<br><br> Та май на увазі, постійне використання здібностей такого роду призводить певні метаморфози.", "https://lh6.googleusercontent.com/vZeo459Kvfml9PNnrpt6aB175VWeNr8EEmVo60Ukk64PF7NxGr1rNjJlXAXY8kxC9ZU=w2400", 1, 0, "Клас", "Вітання, тепер ти маєш здатність створювати дорогоцінні речі з металу та каменю.<br><br> Та май на увазі, постійне використання здібностей такого роду призводить певні метаморфози.", "", true, true, "class"));
+    // LootArr.push(new DNELootCard("class-shoplifter", "Шопліфтер", "Може дістати для тебе будь-який айтем з магазину вдвічі дешевше, не питай як. Може скинути будь-яку картку з руки щоб з верогідністю 30% вкрасти будь-яку річ іншого гравця, що знаходиться з ним в одному приміщенні та не захищена ключем. Крадіжка важливих предметів, наприклад звуку під час вечірки може призвести до найкатастрофічніших наслідків. В разі невдалої крадіжки тобі доведеться заплатити її власнику компенсацію до 50% від вартості айтему. Охороничок допоможе залишати Шопліфтера за дверима.", "https://lh3.googleusercontent.com/6Wd_TULgCtwHpTisY2Nivlpvcwy8xRw9I6jgMeWF0NMnSZwHA86gcw5RD0fq6-GPFmE=w2400", 1, 0, "Клас", "Може дістати для тебе будь-який айтем з магазину вдвічі дешевше, не питай як.<br><br> Підріж айтем іншого гравця з верогідністю 33% скинувши картку з руки.", "", true, true, "class"));
+    // LootArr.push(new DNELootCard("class-seller", "Селлер", "Може продавати айтеми дорожче їх собівартості, та обов'язково попросить відсоток, чим кращий продавець, тим більший. Має можливість працювати на івентах із мерчем та магазинах, щоб отримати додатковий дохід.", "https://lh3.googleusercontent.com/fWeM_q6WoqvpbeZHsyZGK3T1c7l4-xddZJJnNPF0rpEqDyIGzKWynUshmb27N7F_MOs=w2400", 1, 0, "Клас", "Може продати айтеми дорожче собівартості, та обов'язкого візьме відсоток.", "", true, true, "class"));
+    // LootArr.push(new DNELootCard("class-streamer", "Стрімер", "Може отримувати донати під час трансляцій. Чим більшу аудиторію має стрімер, тим більше верогідність розмір та кількість донатів. Має можливість працювати на івентах із мерчем, щоб отримати додатковий дохід.", "https://lh4.googleusercontent.com/uWaxdPO9xe4sZXU4UZGrMBx5hQ0GVXnV4Vk-WaqWbokv14PdbenppCzovLvbc4Rw5WM=w2400", 1, 0, "Клас", "Може отримувати донати під час трансляцій. Чим більшу аудиторію має стрімер, тим більше верогідність розмір та кількість донатів.<br> Має можливість працювати на івентах із мерчем, щоб отримати додатковий дохід.", "", true, true, "class"));
+    // LootArr.push(new DNELootCard("class-jeweller", "Ювелір", "Вітання, тепер ти маєш здатність створювати дорогоцінні речі з металу та каменю.<br><br> Та май на увазі, постійне використання здібностей такого роду призводить певні метаморфози.", "https://lh6.googleusercontent.com/vZeo459Kvfml9PNnrpt6aB175VWeNr8EEmVo60Ukk64PF7NxGr1rNjJlXAXY8kxC9ZU=w2400", 1, 0, "Клас", "Вітання, тепер ти маєш здатність створювати дорогоцінні речі з металу та каменю.<br><br> Та май на увазі, постійне використання здібностей такого роду призводить певні метаморфози.", "", true, true, "class"));
     // LootArr.push(new DNELootCard("class-photographer", "Фотограф", "Зробить тобі якісні знімки. В істаграмі вартість будь чого росте в рази, коли має якісні знімки, будь це івент, простір або татуювання. Зробивши фото гравця ти маєш шанс згенерувати персонажа на основі його образу. Має можливість працювати на івентах, щоб принести йому більше популярності, шанс нових замовлень та отримати за це додатковий дохід.", "https://lh3.googleusercontent.com/V43LauxtU-trhnzgphBra9iro6BlfDJ3mYQfCSP6jdCkXQY2FTZsBndJvT8Cc6UM-dk=w2400", 1, 0, "Клас"));
 
     // Шинобі
     //
     //
-    const SHINOBI_CLASS_LONGLINE = "Мистецтво Шинобі - іллюзія. Здатен вивчати бойові мистецтва, дзютсу та використовувати їх у бою";
-    const SHINOBI_CLASS_SHORTLINE = `Здатен вивчати мистецтва ведення бою, Дзютсу та використовувати їх на свою користь.`;
-    const SHINOBI_CLASS_IMG_ID = ``;
-    const SHINOBI_CLASS_IMG = `https://lh3.googleusercontent.com/J9zfpfgBU-x_Ix5SfbLtxnJe7717J__pqa5zGGQ8l_CYeDSOB-xXvDOXcC2jv7aLePI=w2400`;
+    // const SHINOBI_CLASS_LONGLINE = "Мистецтво Шинобі - іллюзія. Здатен вивчати бойові мистецтва, дзютсу та використовувати їх у бою";
+    // const SHINOBI_CLASS_SHORTLINE = `Здатен вивчати мистецтва ведення бою, Дзютсу та використовувати їх на свою користь.`;
+    // const SHINOBI_CLASS_IMG_ID = ``;
+    // const SHINOBI_CLASS_IMG = `https://lh3.googleusercontent.com/J9zfpfgBU-x_Ix5SfbLtxnJe7717J__pqa5zGGQ8l_CYeDSOB-xXvDOXcC2jv7aLePI=w2400`;
 
-    LootArr.push(new DNELootCard("class-shinobi", "Шинобі", SHINOBI_CLASS_LONGLINE, SHINOBI_CLASS_IMG, 1, 0, "Клас", SHINOBI_CLASS_SHORTLINE, "", true, true, "class"));
+    // LootArr.push(new DNELootCard("class-shinobi", "Шинобі", SHINOBI_CLASS_LONGLINE, SHINOBI_CLASS_IMG, 1, 0, "Клас", SHINOBI_CLASS_SHORTLINE, "", true, true, "class"));
 
     // Майстер Бою
     //
     //
-    const COMBAT_MASTER_LONGLINE = "";
-    const COMBAT_MASTER_SHORTLINE = `Пройди курс бойової підготовки, щоб відкривати в собі навички ведення бою.<br><br> Досвідчені фахівці отримують високооплачувану роботу на проєктній основі.<br><br> Чим складніше завдання,<br> тим вище ставки.`;
-    const COMBAT_MASTER_IMG_ID = `1nWqUkT3EPwJ-nw2nwhgWTEsp7Wec4R7I`;
-    const COMBAT_MASTER_IMG = `https://drive.google.com/uc?id=${COMBAT_MASTER_IMG_ID}`;
+    // const COMBAT_MASTER_LONGLINE = "";
+    // const COMBAT_MASTER_SHORTLINE = `Пройди курс бойової підготовки, щоб відкривати в собі навички ведення бою.<br><br> Досвідчені фахівці отримують високооплачувану роботу на проєктній основі.<br><br> Чим складніше завдання,<br> тим вище ставки.`;
+    // const COMBAT_MASTER_IMG_ID = `1nWqUkT3EPwJ-nw2nwhgWTEsp7Wec4R7I`;
+    // const COMBAT_MASTER_IMG = `https://drive.google.com/uc?id=${COMBAT_MASTER_IMG_ID}`;
 
-    LootArr.push(new DNELootCard("combat-master", "Майстер Бою", COMBAT_MASTER_LONGLINE, COMBAT_MASTER_IMG, 1, 0, "Клас", COMBAT_MASTER_SHORTLINE, "", true, true, "class"));
+    // LootArr.push(new DNELootCard("combat-master", "Майстер Бою", COMBAT_MASTER_LONGLINE, COMBAT_MASTER_IMG, 1, 0, "Клас", COMBAT_MASTER_SHORTLINE, "", true, true, "class"));
 
     // Драйвер
     //
     //
-    const DRIVER_CLASS_LONGLINE = `
-    Щоб освоїти цей клас та отримати доступ до можливостей Драйвера, ти маєш використовувати Душу, кожного разу отримуючи нові здібності натомість. 
-    Виконай квест "Перша доставка". 
-    Ти музикант, приїхав у нове місто та влаштувався в анонімну службу доставки Клаудпанк. 
-    Ти завантажуєш свого вихованця як кастомну особу борт-помічника. 
-    Тобі потрібні гроші, щоб знайти нове синтетичне тіло собаки для нього. 
-    Доставляючи посилки під всевидячим оком крила корпорацій та пильним наглядом блок постів міста у тебе виникають сумніви у легальному статусі свого роботодавця.`;
-    const DRIVER_CLASS_SHORTLINE = `Драйвер здатен<br> водити Авто як завгодно,<br> та далеко не хто завгодно<br> здатен водити Авто<br><br> як Драйвер.`;
-    const DRIVER_CLASS_IMG_ID = `11vbz4Dx3UfPLTR2GdbhFFDpkGq4LXwWc`;
-    const DRIVER_CLASS_IMG = `https://drive.google.com/uc?id=${DRIVER_CLASS_IMG_ID}`;
+    // const DRIVER_CLASS_LONGLINE = `
+    // Щоб освоїти цей клас та отримати доступ до можливостей Драйвера, ти маєш використовувати Душу, кожного разу отримуючи нові здібності натомість.
+    // Виконай квест "Перша доставка".
+    // Ти музикант, приїхав у нове місто та влаштувався в анонімну службу доставки Клаудпанк.
+    // Ти завантажуєш свого вихованця як кастомну особу борт-помічника.
+    // Тобі потрібні гроші, щоб знайти нове синтетичне тіло собаки для нього.
+    // Доставляючи посилки під всевидячим оком крила корпорацій та пильним наглядом блок постів міста у тебе виникають сумніви у легальному статусі свого роботодавця.`;
+    // const DRIVER_CLASS_SHORTLINE = `Драйвер здатен<br> водити Авто як завгодно,<br> та далеко не хто завгодно<br> здатен водити Авто<br><br> як Драйвер.`;
+    // const DRIVER_CLASS_IMG_ID = `11vbz4Dx3UfPLTR2GdbhFFDpkGq4LXwWc`;
+    // const DRIVER_CLASS_IMG = `https://drive.google.com/uc?id=${DRIVER_CLASS_IMG_ID}`;
 
-    LootArr.push(new DNELootCard("class-driver", "Драйвер", DRIVER_CLASS_LONGLINE, DRIVER_CLASS_IMG, 1, 0, "Клас", DRIVER_CLASS_SHORTLINE, "", true, true, "class"));
+    // LootArr.push(new DNELootCard("class-driver", "Драйвер", DRIVER_CLASS_LONGLINE, DRIVER_CLASS_IMG, 1, 0, "Клас", DRIVER_CLASS_SHORTLINE, "", true, true, "class"));
 
     // Манчкін
     //
     //
-    const MUNCHKIN_LONGLINE = "Грає карти Манчкіну коли йому заманеться, згідно правил, які сам вигадує.<br><br>Можеш не розповідати йому, що це інша гра, він все одно не повірить.";
-    const MUNCHKIN_SHORTLINE = `Грає карти Манчкіну коли йому заманеться, згідно правил, які сам вигадує.`;
-    const MUNCHKIN_IMG_ID = `1MHnPkUgirqzQFRtRoWTMsjdo9zSHTA_X`;
-    const MUNCHKIN_IMG = `https://drive.google.com/uc?id=${MUNCHKIN_IMG_ID}`;
+    // const MUNCHKIN_LONGLINE = "Грає карти Манчкіну коли йому заманеться, згідно правил, які сам вигадує.<br><br>Можеш не розповідати йому, що це інша гра, він все одно не повірить.";
+    // const MUNCHKIN_SHORTLINE = `Грає карти Манчкіну коли йому заманеться, згідно правил, які сам вигадує.`;
+    // const MUNCHKIN_IMG_ID = `1MHnPkUgirqzQFRtRoWTMsjdo9zSHTA_X`;
+    // const MUNCHKIN_IMG = `https://drive.google.com/uc?id=${MUNCHKIN_IMG_ID}`;
 
-    LootArr.push(new DNELootCard("class-munchkin", "Манчкін", MUNCHKIN_LONGLINE, MUNCHKIN_IMG, 1, 0, "Клас", MUNCHKIN_SHORTLINE, "", true, true, "class"));
+    // LootArr.push(new DNELootCard("class-munchkin", "Манчкін", MUNCHKIN_LONGLINE, MUNCHKIN_IMG, 1, 0, "Клас", MUNCHKIN_SHORTLINE, "", true, true, "class"));
 
 
     // Драгрейсер
     // LootArr.push(new DNELootCard("class-drugracer", "Драгрейсер", "", "", 1, 0, "Клас"));
-    LootArr.push(new DNELootCard("class-typograf", "Типограф", "Типограф надрукує тобі будь-яку картку та віддасть за розумний відсоток від її вартості.", "https://lh6.googleusercontent.com/o75I3KWBcZNK5MEn9EYCKrvJK7SYlc65cGLIlDnpf7O5OZsSNQIRtQ7rzY8TXEr-1a8=w2400", 1, 0, "Клас", "Типограф надрукує тобі будь-яку картку та віддасть за розумний відсоток від її вартості.", "", true, true, "class"));
+    // LootArr.push(new DNELootCard("class-typograf", "Типограф", "Типограф надрукує тобі будь-яку картку та віддасть за розумний відсоток від її вартості.", "https://lh6.googleusercontent.com/o75I3KWBcZNK5MEn9EYCKrvJK7SYlc65cGLIlDnpf7O5OZsSNQIRtQ7rzY8TXEr-1a8=w2400", 1, 0, "Клас", "Типограф надрукує тобі будь-яку картку та віддасть за розумний відсоток від її вартості.", "", true, true, "class"));
 
     // Рокраннер
     //
     //
-    const ROCKRUNNER_CLASS_LONGLINE = "Рок-музиканти, співаки, заколотники XXI століття, які перетворили свою музику на зброю і направили її проти корпорацій та урядів, на боротьбу з системою, використовують своє мистецтво для вираження своїх поглядів на політичну чи соціальну ситуацію, відрізняються непохитністю, радикальними висловлюваннями та виступами, що запам'ятовуються.";
-    const ROCKRUNNER_CLASS_SHORTLINE = `Розірве натовп своїм соло, збере гурт та організує виступ<br> за вихідні.<br><br> Щоб на наступні<br> зробити це знову.`;
-    const ROCKRUNNER_CLASS_IMG_ID = `1aOmIiNYZ1cvlIgKUmF3TmWNMdAddpgAg`;
-    const ROCKRUNNER_CLASS_IMG = `https://drive.google.com/uc?id=${ROCKRUNNER_CLASS_IMG_ID}`;
+    // const ROCKRUNNER_CLASS_LONGLINE = "Рок-музиканти, співаки, заколотники XXI століття, які перетворили свою музику на зброю і направили її проти корпорацій та урядів, на боротьбу з системою, використовують своє мистецтво для вираження своїх поглядів на політичну чи соціальну ситуацію, відрізняються непохитністю, радикальними висловлюваннями та виступами, що запам'ятовуються.";
+    // const ROCKRUNNER_CLASS_SHORTLINE = `Розірве натовп своїм соло, збере гурт та організує виступ<br> за вихідні.<br><br> Щоб на наступні<br> зробити це знову.`;
+    // const ROCKRUNNER_CLASS_IMG_ID = `1aOmIiNYZ1cvlIgKUmF3TmWNMdAddpgAg`;
+    // const ROCKRUNNER_CLASS_IMG = `https://drive.google.com/uc?id=${ROCKRUNNER_CLASS_IMG_ID}`;
 
-    LootArr.push(new DNELootCard("class-rockrunner", "Рокраннер", ROCKRUNNER_CLASS_LONGLINE, ROCKRUNNER_CLASS_IMG, 1, 0, "Клас", ROCKRUNNER_CLASS_SHORTLINE, "", true, true, "class"));
+    // LootArr.push(new DNELootCard("class-rockrunner", "Рокраннер", ROCKRUNNER_CLASS_LONGLINE, ROCKRUNNER_CLASS_IMG, 1, 0, "Клас", ROCKRUNNER_CLASS_SHORTLINE, "", true, true, "class"));
 
 
 
@@ -331,12 +340,23 @@ const initDNELootArr = () => {
     // Гейм-майстер
     //
     //
-    const GM_LONGLINE = "Ти - гейм-майстер, розум всесвіту в який отримують запрошення Гравці. Історія їх рішень веде свою розповідь твоїм мовчанням та закінчується твоїм словом.";
-    const GM_SHORTLINE = `Ти - гейм-майстер, розум всесвіту в який отримують запрошення Гравці.<br><br> Історія їх рішень веде свою розповідь твоїм мовчанням та закінчується твоїм словом.`;
-    const GM_IMG_ID = ``;
-    const GM_IMG = `https://lh3.googleusercontent.com/ZTuvzKcI1DXRXzBe7dMlO1oS1TH9KWmfNayttkFz6fw6wEnptPQozduYQHDtjSZOE4M=w2400`;
+    // const GM_LONGLINE = "Ти - гейм-майстер, розум всесвіту в який отримують запрошення Гравці. Історія їх рішень веде свою розповідь твоїм мовчанням та закінчується твоїм словом.";
+    // const GM_SHORTLINE = `Ти - гейм-майстер, розум всесвіту в який отримують запрошення Гравці.<br><br> Історія їх рішень веде свою розповідь твоїм мовчанням та закінчується твоїм словом.`;
+    // const GM_IMG_ID = ``;
+    // const GM_IMG = `https://lh3.googleusercontent.com/ZTuvzKcI1DXRXzBe7dMlO1oS1TH9KWmfNayttkFz6fw6wEnptPQozduYQHDtjSZOE4M=w2400`;
 
-    LootArr.push(new DNELootCard("gm", "Гейм-майстер", GM_LONGLINE, GM_IMG, 0, 0, "А", GM_SHORTLINE, "", true, true, "class"));
+    // LootArr.push(new DNELootCard("gm", "Гейм-майстер", GM_LONGLINE, GM_IMG, 0, 0, "А", GM_SHORTLINE, "", true, true, "class"));
+
+    // LootArr.push(new DNELootCard("class-engramma", "Енграма", "Якщо тобі ніхто не допомагає можеш зіграти одну карту з руки як копію найсильнішої карти у твоєму лайнапі, тепер їх бонус стає рівним, але додатково не множиться за рахунок жанрів.", "img/avatars/engramma.png", 0, 0, "Клас", "", "", true, true, "class", false));
+    LootArr.push(new DNELootCard("class-proxy", "Проксі", "Якщо тобі ніхто не допомагає можеш зіграти одну карту з руки як копію найсильнішої карти у твоєму лайнапі, тепер їх бонус стає рівним, але додатково не множиться за рахунок жанрів.<br><br>Скинь душу на початку свого ходу і кинь d20, випало <br>&gt;15 - виконай його<br>замість іншого<br>гравця на твій вибір,<br>випало інше<br>- хід доведеться<br>пропустити,<br>якщо це 1<br>- втрать душу.", "img/avatars/engramma.png", 0, 0, "Клас", "", "", true, true, "class", false));
+    LootArr.push(new DNELootCard("class-dj", "DJ", "У свій хід можеш скинути карту та обрати суперника, обидва киньте d6, якщо в тебе випало число більше, він зобов'язаний тобі допомогти, не вимагаючи нагороди. В іншому випадку можеш скинути карту і спробувати іншого суперника. Не можна перемогти у грі за допомогою цієї здібності. Сума бонусу карт, викладених тобою не може бути менше за суму бонусу карт підкинутих Рятівником.<br><br>Драфти на одну карту більше, подивися отримані карти та одразу скинь одну з них на свій вибір.", "img/avatars/dj.jpg", 0, 0, "Клас", "", "", true, true, "class", false));
+    LootArr.push(new DNELootCard("class-writer", "Райтер", "Кинь d6 і зіграй карту Звуку наче її бонус дорівнює числу що випало. Повторюй доки не закінчаться карти в руці. Ти перемагаєш за рівності сил.", "img/avatars/writer.jpg", 0, 0, "Клас", "", "", true, true, "class", false));
+    LootArr.push(new DNELootCard("class-ttter", "Татуер", "Коли належить драфтити карти, можеш замість усіх або деяких взяти верхню карту зі скиду.<br>Потім за кожну \"повернуту\" карту скинь одну картку з руки.<br><br>Якщо у твій хід відбулося вторгнення, можеш зіграти до трьох карток, кинувши d6.<br>Їх бонус дорівнюватиме числу що випало.", "img/avatars/ttter.jpg", 0, 0, "Клас", "", "", true, true, "class", false));
+    LootArr.push(new DNELootCard("class-support", "Найомничок", "Зіткнувшись із вторгненням у свій хід можеш скинути одну<br>душу, щоб миттєво<br>змусити<br>загарбника<br>забрати свої<br>карти на руку<br>і вийти з<br>раунду.<br><br>Якщо рівень<br>твого лайнапу<br>перевищує рівень очікувань більше,<br>ніж на 9, отримай додаткову душу за перемогу в раунді.", "img/avatars/support.jpg", 0, 0, "Клас", "", "", true, true, "class", false));
+    LootArr.push(new DNELootCard("class-olivye", "Олів'є", "Раз на хід можеш скинути одну карту, щоб взяти дві нові.<br>Можеш тримати в руці 6 карток.", "img/avatars/olivye.jpg", 0, 0, "Клас", "", "", true, true, "class", false));
+    LootArr.push(new DNELootCard("class-alien", "Прибулець", "Раз на хід скинь будь-яку карту, щоб додати випадкову карту звуку в будь-який лайнап.<br><br>Ти отримуєш на одну душу більше за допомогу. У тебе +1 на змивку.", "img/avatars/alien.jpg", 0, 0, "Клас", "", "", true, true, "class", false));
+    LootArr.push(new DNELootCard("class-dragonborn", "Драконо<br>народжений", "Під час вторгнення картки чий бонус менший або дорівнює трьом подвоюють свій бонус.<br>У тебе +1 на змивку якщо ти зібрав лайнап вище 10-го рівня або +2 - якщо вище 15-го.", "img/avatars/dragonborn.jpg", 0, 0, "Клас", "", "", true, true, "class", false));
+    LootArr.push(new DNELootCard("class-netrunner", "Нетранер", "Скинь всю руку(не менше 3 карт), ти не втратиш душі в цьому раунді. Отримай карти Звуку, які одержав би за перемогу.<br>Скинь до трьох карт після кидка змивки; кожна дасть +1 на змивку<br>Або одну перед Рейвом, щоб взяти випадкову карту Багу на руку", "img/avatars/netrunner.png", 0, 0, "Клас", "", "", true, true, "class", false));
 
     // Міхалич
     //
@@ -352,7 +372,7 @@ const initDNELootArr = () => {
 
     LootArr.push(new DNELootCard("michalych", "Міхалич", MICKHALYCH_LONGLINE, MICKHALYCH_IMG, 1, 0, "Найомничок", MICKHALYCH_SHORTLINE, "", true, true, "npc"));
 
-    LootArr.push(new DNELootCard("support", "Найомничок", "Можеш застосувати на нього ще один клас та дати йому одну шмотку. Якщо втрачаєш Найомничка, клас до тебе повертається, та шмотку втрачаєш із ним. Можеш підставити Найомничка щоб піти від відповідальності за провальний івент. Тримай Найомничка перед собой поряд с іншими айтемами.", "https://lh4.googleusercontent.com/SMs5epImEfomWNvE5FJFJgtvVK3inDgX5oGiaQmwvORuLEMhIkBFn6qaUgMDN216x8U=w2400", 1, 0, "", STRINGS.COMPANION_SHORTLINE, "", true, true, "npc"));
+    // LootArr.push(new DNELootCard("support", "Найомничок", "Можеш застосувати на нього ще один клас та дати йому одну шмотку. Якщо втрачаєш Найомничка, клас до тебе повертається, та шмотку втрачаєш із ним. Можеш підставити Найомничка щоб піти від відповідальності за провальний івент. Тримай Найомничка перед собой поряд с іншими айтемами.", "https://lh4.googleusercontent.com/SMs5epImEfomWNvE5FJFJgtvVK3inDgX5oGiaQmwvORuLEMhIkBFn6qaUgMDN216x8U=w2400", 1, 0, "", STRINGS.COMPANION_SHORTLINE, "", true, true, "npc"));
 
     const SONYA_LONGLINE = `Бот-найомничок в уборі андроіда, може допомогати, виконуючи прості команди. При активації система дозволяє завантажити будь-яку особистість, що була попередньо записана на носій пам'яті. Відрізняється від інших Найомничків тим що у якості головного модулю встановлена акустична система XB77 із штучним інтелектом Hypnosoft. З встановленою Кібердекою має здатність завантажуваи саунд з будь-яких ресурсів, розпізнавати його та створювати інтерактивні плей-листи. Тож фактично має здатність виконувати роль DJ. Можеш застосувати на нього ще один клас та дати йому одну шмотку. Якщо втрачаєш Найомничка, клас до тебе повертається, та шмотку втрачаєш із ним. Можеш підставити Найомничка щоб піти від відповідальності за провальний івент. Тримай Найомничка перед собой поряд с іншими айтемами.`;
     const SONYA_SHORTLINE = `Бот-найомничок в уборі андроіда, може допомогати, виконуючи прості команди.<br><br> Завантажувати будь-яку особистість та саунд з будь-яких ресурсів і розпізнавати їх, фактично виконуючи роль DJ або звичайного Найомничка. <br><br>Дай йому клас та шмотку за бажанням.`;
@@ -547,12 +567,12 @@ const initDNELootArr = () => {
     LootArr.push(new DNELootCard("twins", "Близнята", TWINS_LONGLINE, "https://lh6.googleusercontent.com/_X5UuUmOsyvCwAK1wa7nsYwh7MQzvX-N0eauLx9xBo_fZt9rmliWAh1ytWR-mqpNSIk=w2400", 2, 0, "2 Найомничка", TWINS_SHORTLINE, "", true, true, "npc"));
 
 
-    const CHAOS_GREEN_LONGLINE = "Подвоює бонус усієї команди до виправданих очікувань аудиторії від івенту. Якщо його використовує Тінь, бонус потроється.";
-    LootArr.push(new DNELootCard("chaos-green", "Смарагд Хаосу", CHAOS_GREEN_LONGLINE, `../img/loot/chaos-green.png`, 7, "222K/7K", "", CHAOS_GREEN_LONGLINE, "", true, true, "loot"));
+    const CHAOS_GREEN_LONGLINE = "Подвоює інкам від івенту.";
+    LootArr.push(new DNELootCard("chaos-green", "Смарагд Хаосу", CHAOS_GREEN_LONGLINE, `../img/loot/chaos-green.png`, 0, "222K", "", CHAOS_GREEN_LONGLINE, "", true, true, "loot"));
     LootArr.push(new DNELootCard("lady-falko", "Леді Фалько", "Таємнича княжа особа веде свій бізнес чисто та обачно. Латекс та шкіра - для неї головна пристрасть, а про її івенти складають легенди.", "https://lh6.googleusercontent.com/YlzcEVCM2vJECjlLpkSl2kZqlj5T6rCIUQBVQSB2hXzHi6sOsZLIILTVRWm5HM4l9IE=w2400", 1, 0, "Найомничок", "Таємнича княжа особа веде свій бізнес чисто та обачно. Латекс та шкіра - її пристрасть, про її івенти складають легенди.", "", true, true, "npc"));
     LootArr.push(new DNELootCard("iron-alchemic", "Сталевий Алхімік", "Всім іноді потрібна перерва. Рок музика дала можливість Эдварду Элрику зробити її для себе. Кажуть він чудово проявляє себе в організації івентів з рок-музикою. Чутово мати такого хлопця в команді, якщо збираєшся влаштувати івент в цьому жанрі.", "https://lh6.googleusercontent.com/h2uF5Q439t611fW6MQEOEFbADuixR5J35oRrZQJmlWR05oEi8viPeyzk5vRPppS1-ms=w2400", 1, 0, "Найомничок-Рокраннер", "Всім іноді потрібна перерва. Рок музика дала можливість Эдварду зробити її для себе.", "", true, true, "npc"));
-    LootArr.push(new DNELootCard("philosopher-stone", "Філососький камінь", "Дозволяє три рази за гру перетворити одну карту айтему на будь-яку іншу картку айтему. Навіть якщо ця картка одна в грі і вже комусь належить. Айтем, на який було використано камінь набуває усіх властивостей нового айтему, а попередні - втрачає. Від тепер це дві ідеальні копії.", `../img/loot/philosopher-stone.jpg`, 8, "333K", "Тільки для Сталевого Алхіміка", "Дозволяє три рази за гру перетворити одну карту айтему на будь-яку іншу картку айтему. <br><br>Айтем, на який було використано камінь набуває усіх властивостей нового айтему, а попередні - втрачає.<br>Від тепер це дві ідеальні копії.", "", true, true, "loot"));
-    LootArr.push(new DNELootCard("xenium", "Зеній", "Дає можливість перегорнути гру. Тепер для перемоги необхідно досягти протилежного результату відповідно попередньої мети.", "img/loot/xenium.webp", 9, "444K", "", "Дає можливість перегорнути гру.", "", true, true, "loot"));
+    // LootArr.push(new DNELootCard("philosopher-stone", "Філососький камінь", "Дозволяє три рази за гру перетворити одну карту айтему на будь-яку іншу картку айтему. Навіть якщо ця картка одна в грі і вже комусь належить. Айтем, на який було використано камінь набуває усіх властивостей нового айтему, а попередні - втрачає. Від тепер це дві ідеальні копії.", `../img/loot/philosopher-stone.jpg`, 8, "333K", "Тільки для Сталевого Алхіміка", "Дозволяє три рази за гру перетворити одну карту айтему на будь-яку іншу картку айтему. <br><br>Айтем, на який було використано камінь набуває усіх властивостей нового айтему, а попередні - втрачає.<br>Від тепер це дві ідеальні копії.", "", true, true, "loot"));
+    // LootArr.push(new DNELootCard("xenium", "Зеній", "Дає можливість перегорнути гру. Тепер для перемоги необхідно досягти протилежного результату відповідно попередньої мети.", "img/loot/xenium.webp", 9, "444K", "", "Дає можливість перегорнути гру.", "", true, true, "loot"));
     // LootArr.push(new DNELootCard("elias-jensen", "Alias Jensen", "", "https://drive.google.com/file/d/1AaIOpGM8FoHQ-LNlqXVIUDvyru5Wl2hC/view?usp=share_link", 1, 0, "Найомничок-MC", "Амбітний новачок нізвідки шукає роботу. Має талант до продажу, пристрасть до Хіп-Хопу та обмаль часу.", "", true, true, "npc"));
 
     // Elias Jensen
@@ -764,6 +784,132 @@ const initDNELootArr = () => {
 
     // LootArr.push(new DNELootCard("make-french-exit", "Піти по-французьки", "Гравець що використав цю карту, дістає вогнепальну зброю и робить постріл у голову гравця, в адресу якого була використана карта.<br><br> Все, цей гравець мертвий, куля в голову як не як.<br><br> А ти що думав з тобою тут хтось сюсюкатись буде?", "https://lh3.googleusercontent.com/VVGoBbf0sATIkcowuVZuAuJrkjF0C6ZKr2bY43f_f4U4B9Hk9au3Q90d9mGiIZDhKso=w2400", 0, 0, "Дія"));
 
+    // SPAWN
+    //
+    //
+    const SPAWN_DEMO_LONGLINE = "";
+    const SPAWN_DEMO_SHORTLINE = `${STRINGS.DEMO_LONGLINE_SHORT_3}`;
+    LootArr.push(new DNELootCard("demo-spawn", `SPAWN`, SPAWN_DEMO_LONGLINE, "img/sound/demo-spawn.jpg", "d6", 0, "Демо, 98m of Psychodelic Electro Ambient", SPAWN_DEMO_SHORTLINE, "", true, true, "sound", ""));
+
+    // Cinco Cielos
+    //
+    //
+    const CINCO_CIELOS_DEMO_LONGLINE = "";
+    const CINCO_CIELOS_DEMO_SHORTLINE = `${STRINGS.DEMO_LONGLINE_SHORT_3}`;
+    LootArr.push(new DNELootCard("demo-cinco-cielos", `Cinco Cielos`, CINCO_CIELOS_DEMO_LONGLINE, "img/sound/demo-cinco-cielos.jpg", 3, 0, "Демо, 100m of Downtempo Chillout", CINCO_CIELOS_DEMO_SHORTLINE, "", true, true, "sound", "https://youtu.be/rKSOlxDvQOU"));
+
+    // Perfect Blue
+    //
+    //
+    const PERFECT_BLUE_VINYL_LONGLINE = "";
+    const PERFECT_BLUE_VINYL_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("vinyl-perfect-blue", `Perfect Blue`, PERFECT_BLUE_VINYL_LONGLINE, "img/sound/vinyl-perfect-blue.png", 5, 4000, "Платівка, 31m of Electronic", PERFECT_BLUE_VINYL_SHORTLINE, "", true, true, "sound", "https://www.youtube.com/watch?v=p7Q0SzRQTBc&list=PLG4ENma2RvT4_nBU6aTFqW_iLYfOe2ges&index=1&ab_channel=MIMA%27SROOM"));
+
+    // REJOICE IN THE PAIN
+    //
+    //
+    const REJOICE_PAIN_ALBUM_LONGLINE = "";
+    const REJOICE_PAIN_ALBUM_SHORTLINE = `${STRINGS.ALBUM_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-rejoice-in-the-pain", `REJOICE IN THE PAIN`, REJOICE_PAIN_ALBUM_LONGLINE, "img/sound/album-rejoice-in-the-pain.jpg", 7, 400, "Альбом, 19m of Electro Industrial Techno", REJOICE_PAIN_ALBUM_SHORTLINE, "", true, true, "sound", "https://youtu.be/vXuHC0m6OxA"));
+
+    // Under Acid Hoof
+    //
+    //
+    const ACID_HOOF_ALBUM_LONGLINE = "";
+    const ACID_HOOF_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("vinyl-under-acid-hoof", `Under Acid Hoof`, ACID_HOOF_ALBUM_LONGLINE, "img/sound/vinyl-under-acid-hoof.jpg", 6, 2000, "Платівка, 36m of Doom Metal Rock", ACID_HOOF_ALBUM_SHORTLINE, "", true, true, "sound", "https://youtu.be/4GwYrQeQpJk"));
+
+    // Sleep Party People
+    //
+    //
+    const SLEEP_PARTY_VINYL_LONGLINE = "";
+    const SLEEP_PARTY_VINYL_SHORTLINE = `${STRINGS.VINYL_LONGLINE_2}`;
+    LootArr.push(new DNELootCard("vinyl-sleep-party-people", `Sleep Party People`, SLEEP_PARTY_VINYL_LONGLINE, "img/sound/vinyl-sleep-party-people.png", 7, 800, "Платівка, 43m of Dream-pop Electronic", SLEEP_PARTY_VINYL_SHORTLINE, "", true, true, "sound", "https://youtu.be/8lZIbCaVpW8"));
+
+    // The Dawn
+    //
+    //
+    const DAWN_ALBUM_LONGLINE = "";
+    const DAWN_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("vinyl-the-dawn", `The Dawn`, DAWN_ALBUM_LONGLINE, "img/sound/vinyl-the-dawn.png", 8, 1400, "Платівка, 40m of Psychodelic Indie Rock", DAWN_ALBUM_SHORTLINE, "", true, true, "sound", "https://youtu.be/G3kL-QO1ZDA"));
+
+    // Tranquillitas
+    //
+    //
+    const TRANQUILLITAS_ALBUM_LONGLINE = "";
+    const TRANQUILLITAS_ALBUM_SHORTLINE = `${STRINGS.ALBUM_LONGLINE_2}`;
+    LootArr.push(new DNELootCard("album-tranquillitas", `Tranquillitas`, TRANQUILLITAS_ALBUM_LONGLINE, "img/sound/album-tranquillitas.jpg", 5, 600, "Платівка, 80m of Ambient Downtempo", TRANQUILLITAS_ALBUM_SHORTLINE, "", true, true, "sound", "https://youtu.be/apXkd39xDVI"));
+
+    // NO ENDORPHINS
+    //
+    //
+    const NO_ENDORPHINS_VINYL_LONGLINE = "";
+    const NO_ENDORPHINS_VINYL_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("vinyl-no-endorphins", `NO ENDORPHINS`, NO_ENDORPHINS_VINYL_LONGLINE, "img/sound/vinyl-no-endorphins.jpg", 6, 800, "Платівка, 16m of Electro Industrial Techno", NO_ENDORPHINS_VINYL_SHORTLINE, "", true, true, "sound", "https://youtu.be/4CLblRKVwow"));
+
+    // THE INCURSION
+    //
+    //
+    const INCURSION_ALBUM_LONGLINE = "";
+    const INCURSION_ALBUM_SHORTLINE = `${STRINGS.ALBUM_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-incursion", `THE INCURSION`, INCURSION_ALBUM_LONGLINE, "img/sound/album-incursion.jpg", 6, 300, "Альбом, 34m of Electro Industrial Techno", INCURSION_ALBUM_SHORTLINE, "", true, true, "sound", "https://youtu.be/lyd23cDcqT0"));
+
+    // Come Over
+    //
+    //
+    const COME_OVER_VINYL_LONGLINE = "";
+    const COME_OVER_VINYL_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("vinyl-come-over", `Come Over`, COME_OVER_VINYL_LONGLINE, "img/sound/vinyl-come-over.jpg", 5, 1000, "Платівка, 35m of Psychodelic Lo-Fi Indie Rock", COME_OVER_VINYL_SHORTLINE, "", true, true, "sound", "https://www.youtube.com/watch?v=tVgpoLZOBkY&list=PLfJndz0utgOPLfP5L2k1MYak2xF_LGD1e&index=1&ab_channel=Kowloon-Topic"));
+
+    // ANATOMY VOL.3
+    //
+    //
+    const ANATOMY_VOL3_ALBUM_LONGLINE = "";
+    const ANATOMY_VOL3_ALBUM_SHORTLINE = `${STRINGS.ALBUM_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-anatomy-vol-3", `ANATOMY VOL.3`, ANATOMY_VOL3_ALBUM_LONGLINE, "img/sound/album-anatomy-vol-3.jpg", 5, 1000, "Альбом, 107m of Electro Industrial Techno", ANATOMY_VOL3_ALBUM_SHORTLINE, "", true, true, "sound", "https://youtu.be/LuUV1IsQJq4"));
+
+    // FOR FUCK SAYK
+    //
+    //
+    const FORFUCKSAYK_MIX_LONGLINE = "";
+    const FORFUCKSAYK_MIX_SHORTLINE = `${STRINGS.DEMO_LONGLINE_SHORT_3}`;
+    LootArr.push(new DNELootCard("demo-forfucksayk", `FORFUCKSAYK`, FORFUCKSAYK_MIX_LONGLINE, "img/sound/demo-forfucksayk.jpg", 3, 0, "Демо, 30m of Dark Lo-Fi", FORFUCKSAYK_MIX_SHORTLINE, "", true, true, "sound", "https://soundcloud.com/viberoom_io/listen-to-lofi-hip-hop-mix-by-sayk"));
+
+    // sophisticated sekia sessions
+    //
+    //
+    const SEKIA_SESSIONS_LONGLINE = "";
+    const SEKIA_SESSIONS_SHORTLINE = `${STRINGS.DEMO_LONGLINE_SHORT_3}`;
+    LootArr.push(new DNELootCard("demo-sekia-sessions", `sophisticated sekia sessions`, SEKIA_SESSIONS_LONGLINE, "img/sound/demo-sekia-sessions.jpg", 4, 0, "Демо, 45m of Electronic Trip-Hop", SEKIA_SESSIONS_SHORTLINE, "", true, true, "sound", "https://youtu.be/MtZz9pxe-wM"));
+
+    // Passover
+    //
+    //
+    const PASSOVER_VINYL_LONGLINE = "";
+    const PASSOVER_VINYL_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("vinyl-passover", `Passover`, PASSOVER_VINYL_LONGLINE, "img/sound/vinyl-passover.jpg", 7, 1400, "Платівка, 59m of Psychodelic Alternative Indie Rock", PASSOVER_VINYL_SHORTLINE, "", true, true, "sound", "https://youtu.be/iz1nq1hmVCE"));
+
+    // INNER FLAME
+    //
+    //
+    const INNER_FIRE_ALBUM_LONGLINE = "";
+    const INNER_FIRE_ALBUM_SHORTLINE = `${STRINGS.ALBUM_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-inner-flame", `INNER FLAME`, INNER_FIRE_ALBUM_LONGLINE, "img/sound/album-inner-flame.jpg", 5, "NYP", "Альбом, 37m of Experimental Chillwave Vaporwave", INNER_FIRE_ALBUM_SHORTLINE, "", true, true, "sound", "https://youtu.be/OPBpJyZLqVM"));
+
+    // PYROMANIACS
+    //
+    //
+    const PYROMANIACS_ALBUM_LONGLINE = "";
+    const PYROMANIACS_ALBUM_SHORTLINE = `${STRINGS.ALBUM_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-pyromaniacs", `PYROMANIACS`, PYROMANIACS_ALBUM_LONGLINE, "img/sound/album-pyromaniacs.jpg", 4, "NYP", "Альбом, 56m of Electronic Synthwave Vaporwave", PYROMANIACS_ALBUM_SHORTLINE, "", true, true, "sound", "https://youtu.be/S9NbJFmvVIs"));
+
+    // The Rabbit That Hunts Tigers
+    //
+    //
+    const RABBIT_VINYL_LONGLINE = "";
+    const RABBIT_VINYL_SHORTLINE = `${STRINGS.ALBUM_LONGLINE}`;
+    LootArr.push(new DNELootCard("vinyl-rabbit-that-hunts-tigers", `The Rabbit That Hunts Tigers`, RABBIT_VINYL_LONGLINE, "img/sound/vinyl-the-rabbit-that-hunts-tigers.jpg", 5, 700, "Платівка, 44m of Alternative Rock Funk", RABBIT_VINYL_SHORTLINE, "", true, true, "sound", "https://youtu.be/oQq3Jwz0bDQ"));
+
     // Flower Boy
     //
     //
@@ -864,7 +1010,14 @@ const initDNELootArr = () => {
     const I_CARE_BECAUSE_YOU_DO_VINYL_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
     LootArr.push(new DNELootCard("vinyl-i-care-be-cause-you-do", "I care be cause you do", I_CARE_BECAUSE_YOU_DO_VINYL_LONGLINE, "img/sound/vinyl-i-care-becouse-u-do.png", 6, 1700, "Платівка, 63m of Ambient Electronic Acid Techno IDM", I_CARE_BECAUSE_YOU_DO_VINYL_SHORTLINE, "", true, true, "sound", "https://youtu.be/NJesxnyCMbU"));
 
-    // Flower Boy
+    // Платівка MYSTERE
+    //
+    //
+    const MYSTERE_VINYL_LONGLINE = "";
+    const MYSTERE_VINYL_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("vinyl-mystere", "MYSTERE", MYSTERE_VINYL_LONGLINE, "img/sound/vinyl-mystere.png", 7, 900, "Платівка, 68m of Psychodelic Alternative Indie", MYSTERE_VINYL_SHORTLINE, "", true, true, "sound", "https://youtu.be/jTMSguDFlMI?si=HfSmT95DMNDRqe_u"));
+
+    // CYBERPUNK 2077 VINYL 3LP SET
     //
     //
     const CYBERPUNK_TRIPLE_VINYL_LONGLINE = "";
@@ -885,6 +1038,7 @@ const initDNELootArr = () => {
     const CURRENTS_VINYL_LONGLINE = "";
     const CURRENTS_VINYL_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
     LootArr.push(new DNELootCard("vinyl-currents", "Currents", CURRENTS_VINYL_LONGLINE, "img/sound/vinyl-currents.png", 8, 1800, "Платівка, 51m of Progressive Psychodelic Synth-Pop", CURRENTS_VINYL_SHORTLINE, "", true, true, "sound", "https://youtube.com/playlist?list=PL81_CtYCym28qkVe3nVMRG7hMR5_Ky3Hf&si=vupJtx4HKQ1lffT3"));
+
 
 
     // Платівка AM
@@ -1072,6 +1226,42 @@ const initDNELootArr = () => {
     const YORKE_DEMO_LONGLINE = "";
     const YORKE_DEMO_SHORTLINE = `${STRINGS.DEMO_LONGLINE}`;
     LootArr.push(new DNELootCard("demo-thom-yorke", "Thom Yorke", YORKE_DEMO_LONGLINE, "img/sound/demo-thom-yorke.jpg", 7, "10K", "Демо, 32m of Experimental Electro", YORKE_DEMO_SHORTLINE, "", true, true, "sound", "https://youtu.be/qt-ohn5C3kU"));
+
+    // Isabelle Beaucamp
+    //
+    //
+    const BEAUCAMP_DEMO_LONGLINE = "";
+    const BEAUCAMP_DEMO_SHORTLINE = `${STRINGS.DEMO_LONGLINE}`;
+    LootArr.push(new DNELootCard("demo-isabelle-beaucamp", "Isabelle Beaucamp", BEAUCAMP_DEMO_LONGLINE, "img/sound/demo-isabelle-beaucamp.jpg", 4, "4K", "Демо, 55m of Electro", BEAUCAMP_DEMO_SHORTLINE, "", true, true, "sound", "https://www.youtube.com/live/wLwooCfQlko?si=0g_F1V5Be2MY50to"));
+
+    // Isabelle Beaucamp
+    //
+    //
+    const ROUGE_DEMO_LONGLINE = "";
+    const ROUGE_DEMO_SHORTLINE = `${STRINGS.DEMO_LONGLINE}`;
+    LootArr.push(new DNELootCard("demo-rouge", "ROÜGE", ROUGE_DEMO_LONGLINE, "img/sound/demo-rouge.jpg", 5, "6K", "Демо, 55m of Electro", ROUGE_DEMO_SHORTLINE, "", true, true, "sound", "https://www.youtube.com/live/t_8-teUU_yg?si=VALyip9-X83Nc97N"));
+
+    // Deep Syth Journey
+    //
+    //
+    const DEEP_SYTH_DEMO_LONGLINE = "";
+    const DEEP_SYTH_DEMO_SHORTLINE = `${STRINGS.DEMO_LONGLINE}`;
+    LootArr.push(new DNELootCard("demo-deep-syth-journey", "Deep Syth Journey", DEEP_SYTH_DEMO_LONGLINE, "img/sound/demo-deep-syth-journey.jpg", 2, 0, "Демо, 240m of Dark Ambient", DEEP_SYTH_DEMO_SHORTLINE, "", true, true, "sound", "https://youtu.be/UJ4e4XVQQcY?si=9QvLymjT5XELMtEi"));
+
+    // VOYAGER
+    //
+    //
+    const VOYAGER_DEMO_LONGLINE = "";
+    const VOYAGER_DEMO_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("vinyl-voyager", "VOYAGER", VOYAGER_DEMO_LONGLINE, "img/sound/vinyl-voyager.png", 6, 0, "Вініл, 42m of Electro House Techno", VOYAGER_DEMO_SHORTLINE, "", true, true, "sound", "https://youtu.be/5ZbMh24vmpU?si=H2TAHg-h0YzbPVKj"));
+
+    // VOYAGER
+    //
+    //
+    const HOW_TO_DISAPPEAR_DEMO_LONGLINE = "";
+    const HOW_TO_DISAPPEAR_DEMO_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("demo-how-to-disappear", "How to disappear", HOW_TO_DISAPPEAR_DEMO_LONGLINE, "img/sound/demo-how-to-disappear.jpg", 3, 0, "Вініл, 11m of Ambient Drone", HOW_TO_DISAPPEAR_DEMO_SHORTLINE, "", true, true, "sound", "https://youtu.be/rLlFWl4HTww?si=wuzZpAAUzGfIbsfG"));
+
 
     LootArr.push(new DNELootCard("demo-deep-lofi-house", "DEEP LOFI HOUSE MIX", "Демо дає можливість показати лейблам що ти хочеш записати. Лейб HOR має високу репутацію, його демо значно збільшує шанси знайти простір з якісною аппаратурою, зробити якісний реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", "img/sound/demo-deep-lofi-house.jpg", 1, 0, "Демо, 67m of Deep Lo-Fi House", STRINGS.DEMO_LONGLINE_SHORT_2, "", true, true, "sound", "https://youtu.be/yL06_XP4o-s"));
     LootArr.push(new DNELootCard("demo-tony-approved", "TONY SAYS FCKUIN' APPROVED", "Демо дає можливість показати лейблам що ти хочеш записати. Лейб HOR має високу репутацію, його демо значно збільшує шанси знайти простір з якісною аппаратурою, зробити якісний реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", "img/sound/demo-tony-approved.jpg", 1, 0, "Демо, 59m of Lo-Fi House", STRINGS.DEMO_LONGLINE_SHORT_2, "", true, true, "sound", "https://youtu.be/9qFWNOgq2Fg"));
@@ -1393,7 +1583,7 @@ const initDNELootArr = () => {
     //
     const GESSERIT_SISTER_DEMO_LONGLINE = "";
     const GESSERIT_SISTER_DEMO_SHORTLINE = `${STRINGS.DEMO_LONGLINE}`;
-    LootArr.push(new DNELootCard("demo-gesserit-sister", "A Bene Gesserit Sister", GESSERIT_SISTER_DEMO_LONGLINE, "img/sound/demo-gesserite-sister.jpg", 1, 0, "Демо, 29m of Dark Ambient", GESSERIT_SISTER_DEMO_SHORTLINE, "", true, true, "sound", "https://youtu.be/EB6-PQ1hAVc"));
+    LootArr.push(new DNELootCard("demo-gesserit-sister", "A Bene Gesserit Sister", GESSERIT_SISTER_DEMO_LONGLINE, "img/sound/demo-gesserite-sister.jpg", 1, 0, "Демо, 29m of Dark Ambient", GESSERIT_SISTER_DEMO_SHORTLINE, "", true, true, "sound", "https://youtu.be/ok0K3_0QwSQ"));
 
     // Gorilaz
     //
@@ -1610,17 +1800,8 @@ const initDNELootArr = () => {
     // LootArr.push(new DNELootCard("breakdown", "Панічний ступор", "Накрути іншого гравця разом зі своїми Найомничками, щоб впевнити його що він не встигає. На наступному своєму івенті він має виправдати очікування аудиторії тільки за рахунок лайн-апу. Щоб використати цю карту, треба мати що найменше 2х найомничків. -1 бонус за кожного наступного наймничка, якщо їх більше.", "https://lh6.googleusercontent.com/xffJ6AXD2wxPi3wFRNgga9iUOmIWXQV7QY8QdidqiCytZF57nNHI_zRAAbtqZSXpb0o=w2400", 2, 0, "Проблема!"));
     // LootArr.push(new DNELootCard("seppuku", "Сеппуку", "Ти мертвий.", "https://lh5.googleusercontent.com/zyr6pz4k23-dqGhGpyEe-hJMIxOCR2vjBPYtiBhetHY_TJ9dfJtTEbZ-yipb-TqYYYM=w2400", 0, 0, ""));
     // LootArr.push(new DNELootCard("gameboy", "GAMEBOY", "Дозволяє зберегти свій прогрес на GAMEBOY. Перезаписуй збереження скільки завгодно разів, та в тебе тільки один слот. Використовуй в будь який момент свого ходу щоб зберегтись або завантажитись. У випадку смерті ти просто завантажуєшся з останнього збереження. Цей предмет не можна обміняти або купити, лише подарувати, отримавши цю картку від Майстра на початку гри", "https://lh4.googleusercontent.com/sN9l6r5xenQZTyUKE5O138NHImoBEvUqKk5LT3A5T8VRifLeSY9WcaPSsCgm_bAobrQ=w2400", 0, "0", ""));
-    // LootArr.push(new DNELootCard("e", "∄", "Nicht heute", "https://lh3.googleusercontent.com/0lBFAvAVJ4mxoyJ8WNXz8EE_cesilaNQXOMOcHrD1vRr1CG0JVyF9l8oOI4fZo4ivyo=w2400", 0, "0", ""));
+    // LootArr.push(new DNELootCard("e", "∄", "Nicht heute", "https://lh3.googleusercontent.com/0lBFAvAVJ4mxoyJ8WNXz8EE_cesilaNQXOMOcHrD1vRr1CG0JVyF9l8oOI4fZo4ivyo=w2400", 0, "0", "", "", "", true, true, "anti", ""));
 
-    // 1up
-//
-//
-
-    // todo єкран профайл которьій будет дублировать информацию из всех достуньіх источников
-    // today 17/36
-
-
-    // console.log(LootArr);
     return LootArr;
 }
 
@@ -1735,14 +1916,376 @@ const DNECards = new Set(DNELootArr.concat(DNEDoorArr));
 const initMonsterArr = () => {
     const MonstersArr = [];
 
-    MonstersArr.push(new DNEMonsterCard("monster", "Монстр", "1", "Монстр почувається нормально. Так він каже. Насправді монстр зробив одне невдале татуювання. Все б нічого, скажеш ти, у кого вони всі вдалі? - І будеш правий. Ось тільки є один нюанс, це здоровенний блекворк на обличчі. Тепер ця чунга чанга збирається в останню путь завтра ввечері. Зроби щось, якщо тобі не начхати"))
+    // MonstersArr.push(new DNEMonsterCard("monster", "Монстр", 1, "Монстр почувається нормально. Так він каже. Насправді монстр зробив одне невдале татуювання. Все б нічого, скажеш ти, у кого вони всі вдалі? - І будеш правий. Ось тільки є один нюанс, це здоровенний блекворк на обличчі. Тепер ця чунга чанга збирається в останню путь завтра ввечері. Зроби щось, якщо тобі не начхати"))
+    MonstersArr.push(new DNEMonsterCard("cat-girl", "Кицьо-дівчина", 9, "img/monsters/monster-cat-girl.png", "Смертоносна врода.<br>+5 для Найомничків", 1, 3, "Обшкрябана шкіра та алергія! Кинь d6 та скинь стільки карт, скільки випаде"));
+    MonstersArr.push(new DNEMonsterCard("leperchaun", "Лепрікон", 4, "img/monsters/monster-leperchaun.png", "Його фізіологія незбагненна!<br>+5 для Прибульців", 1, 2, "Забирає в тебе дві картки з руки. Одну обирає лівий сусід, іншу - правий. Скинь їх."));
+    MonstersArr.push(new DNEMonsterCard("undead-clowns", "Клоундеди", 16, "img/monsters/monster-undead-clowns.png", "-2 для Нетраннерів та DJ-їв", 2, 4, "Скинь одну карту з інвентарю. Якщо в інвентарі немає карток, тебе обнулено."));
+    MonstersArr.push(new DNEMonsterCard("lawyers", "Адвокат", 6, "img/monsters/monster-lawyers.png", "", 1, 2, "Кожен суперник, починаючи з лівого, тягне по карті з твоєї руки. Скинь карти що залишаться."))
+    MonstersArr.push(new DNEMonsterCard("telemarketer", "Телефонний скамер", 3, "img/monsters/monster-telemarketer.png", "Та виженіть його нарешті хто-небудь!<br>+3 для DJ-їв, бідні на собі вуха рвуть", 1, 1, "Його балачки відволікають тебе так часто, що ти не витримуєш і втрачаєш одну душу"));
+    MonstersArr.push(new DNEMonsterCard("ghost-in-the-shell", "Привид у панцері", 5, "img/monsters/monster-ghost-in-the-shell.png", "+2 для Нетраннерів та Енграм", 1, 2, "Від переляку впускаєш карти. Скинь одну карту з руки"));
+    MonstersArr.push(new DNEMonsterCard("the-hand-of-fate", "Рука долі", 18, "img/monsters/monster-the-hand-of-fate.png", "Якщо досягнеш успіху з Рукою долі, вона стане твоїм Найомничком та не покине тебе навідь якщо обнулишся", 2, 4, "Забирає одного твого Найомничка, скинь його. Якщо немає Найомничка, втрать дві душі."));
+    MonstersArr.push(new DNEMonsterCard("minor-god", "Дрібний бог", 1, "img/monsters/monster-minor-god.png", "Татуєр, найслабша карта в твоєму лайнапі подвоює свій бонус", 1, 1, "Покажи всім гравцям карти зі своєї руки. Гравець з найменьшою кількістю душ може обрати собі одну(спір вирішуйте кидком d6)."));
+    MonstersArr.push(new DNEMonsterCard("oxymoron", "Абихто", 15, "img/monsters/monster-oxymoron.png", "Гальмо у всіх відношеннях...<br>В тебе +1 на змивку.", 2, 4, "Втрать одну душу та дві карти з руки на твій вибір"));
+    MonstersArr.push(new DNEMonsterCard("mud-wrestler", "Багноборка", 3, "img/monsters/monster-mud-wrestler.png", "+2 для жінок. +4 для Татуєрів(вона ж уся в багні!)", 1, 1, "Яка чудова багнюка! Зовсім не відстає. Скинь карту з руки"));
+    MonstersArr.push(new DNEMonsterCard("harpies", "Гарпістки", 4, "img/monsters/monster-harpies.png", "Не піддаються зламу.<br>+5 для Нетраннерів", 1, 2, "Погано виконують жахливу музику. Втрать дві душі"));
+    MonstersArr.push(new DNEMonsterCard("blobgoblin", "Жлобгоблін", 1, "img/monsters/monster-blobgoblin.png", "Боїться відходити від свого логова... +2 на змивку", 1, 1, "Присідає на тебе перевести дух. Тим часом твої сусіди ліворуч та праворуч тягнуть в тебе з руки наосліп по одній карті та залишають собі"));
+    MonstersArr.push(new DNEMonsterCard("the-three-munchketeers", "Три манчкітери", 13, "img/monsters/monster-the-three-munchketeers.png", "Всі за одного та один за всіх!<br>+2 для Нетраннерів та DJ-їв.<br>-2 для Найомничків", 1, 3, "Скинь три карти з руки, загальним бонусом не менше 9(якщо в тебе є стільки)"));
+    MonstersArr.push(new DNEMonsterCard("chocolate-bunny", "Шоколадний кролик", 4, "img/monsters/monster-chocolate-bunny.png", "-2 для Олів'є, +3 для DJ-їв.", 1, 2, "Цукрова кома. До свого наступного ходу ти нікому не можеш допомагати"));
+    MonstersArr.push(new DNEMonsterCard("lord-tennis-anyone", "Лорд Втенісон", 12, "img/monsters/monster-lord-tennis-anyone.png", "-2 для Райтерів, +4 для Найомничків", 1, 3, "Втрать одну душу"));
+    MonstersArr.push(new DNEMonsterCard("obsture-angel", "Тупий янгол", 14, "img/monsters/monster-obsture-angel.png", "-2 для Татуєрів, -3 для Олів'є", 1, 4, "Не такий вже він і тупий. Тебе обнулено"));
+    MonstersArr.push(new DNEMonsterCard("salamander", "Саламандра", 4, "img/monsters/monster-salamander.png", "+4 для Дракононароджених - навіть їх вона насторожує", 1, 2, "Вона палає! Втрать одну душу"));
+    MonstersArr.push(new DNEMonsterCard("frog-prince", "Принц Пепе", 6, "img/monsters/monster-frog-prince.png", "Манери в нього так собі,<br> але яка ж все таки економія на мухоловках!<br>Зустрівши Язичницького демона обидва зникають, залишивши тобі свої карти звуку.", 1, 2, "Скинь карту з руки"));
+    MonstersArr.push(new DNEMonsterCard("cyclops", "Циклоп", 19, "img/monsters/monster-cyclops.png", "Відпускає гравців з 5-ма душами чи менше. -2 для Енграм", 2, 5, "Тебе обнулено"));
+    MonstersArr.push(new DNEMonsterCard("wight-brothers", "Бліді брати", 16, "img/monsters/monster-wight-brothers.png", "Відпускають гравців з 3-ма душами чи менше. Більш розвинені герої, якщо не досягли успіху, втрачають дві душі", 2, 4, "Втрать усі душі"));
+    MonstersArr.push(new DNEMonsterCard("ghoulfiends", "Мадемонуазелі", 8, "img/monsters/monster-ghoulfiends.png", "", 1, 2, "Втрать стільки душ, щоб залилось як у гравця з найменьшою кількістю душ у грі"));
+    MonstersArr.push(new DNEMonsterCard("mr-bones", "Містер Бонес", 2, "img/monsters/monster-mr-bones.png", "Якщо довелось змиватись, втрать одну душу, навіть якщо успішно", 1, 1, "Втрать дві душі"));
+    MonstersArr.push(new DNEMonsterCard("druid", "Друїд", 14, "img/monsters/monster-druid.png", "+3 для Прибульців та Дракононароджених. Друїдський фреш впливає на них дуже не передбачувано", 1, 4, "Скинь карту, що дає тобі особливу здібність, на твій вибір"));
+    MonstersArr.push(new DNEMonsterCard("smog", "Смог", 20, "img/monsters/monster-smog.png", "Дракононароджений запросивший Смога бере дві карти звуку в руку, навіть якщо вже має п'ять", 2, 5, "Тебе обнулено"));
+    MonstersArr.push(new DNEMonsterCard("right-angel", "Прямий янгол", 9, "img/monsters/monster-right-angel.png", "Своєю прямотою ставить тебе в глухий кут. +3 для Татуєрів", 1, 3, "Скинь карту, що дає тобі особливу здібність, на твій вибір. Якщо такої карти в тебе нема, візьми одну карту на руку"));
+    MonstersArr.push(new DNEMonsterCard("a-cute-angel", "Косий янгол", 4, "img/monsters/monster-a-cute-angel.png", "Його найгірша риса - ніколи не знаєш куди він мітить. +3 для Прибульців, -2 для Найомничків", 1, 2, "Втрать одну душу"));
+    MonstersArr.push(new DNEMonsterCard("pit-bull", "Пітбуль", 2, "img/monsters/monster-pit-bull.png", "Не можеш перемогти? Скинь одну карту і скажи \"Апорт!\", щоб автоматично змитись", 1, 1, "Втрать дві душі"));
+    MonstersArr.push(new DNEMonsterCard("midgard-serpent", "Мідгардський змій", 19, "img/monsters/monster-midgard-serpent.png", "З ним приходить Фімбулвінтер - Довга Зима. -3 для Дракононароджених, +5 для DJ-їв", 2, 5, "Кінець світу... принаймні твого. Тебе обнулено"));
+    MonstersArr.push(new DNEMonsterCard("pinball-lizard", "Пінбольний ящер", 2, "img/monsters/monster-pinball-lizard.png", "+3 для людей. Він дійсно круто грає в пінбол.", 1, 1, "Дзинь! Втрать одну душу або карту з найбільшим бонусом, що ти маєш, - на твій вибір."));
+    MonstersArr.push(new DNEMonsterCard("net-troll", "Інтернет троль", 10, "img/monsters/monster-net-troll.png", "Нічіго не вміє, тому і біситься.", 1, 3, "Йому чхати на баланс. Дозволь гравцям з найбільшою кількістю душ взяти в тебе по карті на їх вибір"));
+    MonstersArr.push(new DNEMonsterCard("pukachu", "Ригачу", 6, "img/monsters/monster-pukachu.png", "Отримай додаткову душу, досягнувши успіху використавши лише дві карти і без допомоги", 1, 2, "Скинь всю руку"));
+    MonstersArr.push(new DNEMonsterCard("snerks", "Шмурфи", 12, "img/monsters/monster-snerks.png", "Істоти із пекла!<br> -2 для Татуєрів, +3 для Дракононароджених", 1, 3, "Скинь дві карти"));
+    MonstersArr.push(new DNEMonsterCard("bullrog", "Бульрог", 18, "img/monsters/monster-bullrog.png", "Відпускає гравців з 4-ма душами чи менше", 2, 5, "Шмагає тебе доки не обнулишся"));
+    MonstersArr.push(new DNEMonsterCard("elmer", "Елмер", 18, "img/monsters/monster-elmer.png", "Чого це він на твої черевики витріщився? +3 для DJ-їв, +2 для Нетраннерів", 2, 4, "Він тобі ласти склеїв. Тебе обнулено"));
+    MonstersArr.push(new DNEMonsterCard("under-the-bed", "Монстр з під ліжка", 2, "img/monsters/monster-under-the-bed.png", "+2 для Олів'є та Найомничків", 1, 1, "Що це за звуки з-під ліжка? Скинь одну карту з руки"));
+    MonstersArr.push(new DNEMonsterCard("meanderthal", "Поневірянець", 10, "img/monsters/monster-meanderthal.png", "Поневірянця можна запросити на будь-який Рейв, не скидуючи карту.", 1, 3, "Скинь карту з бонусом не менше 4-ох, якщо такої нема, втрать душу"));
+    MonstersArr.push(new DNEMonsterCard("floating-nose", "Блукаючий ніс", 10, "img/monsters/monster-floating-nose.png", "Шкода свого носа? Скинь карту з бонусом >4 і він піде.", 1, 3, "Він ще той нюхач. Змитись не вийде. Втрать 3 душі"));
+    MonstersArr.push(new DNEMonsterCard("the-brothers-grimm", "Брати Грімм", 2, "img/monsters/monster-the-brothers-grimm.png", "Кожен суперник, може скинути карту, щоб підвищити їх рівень на 3. +2 для DJ-їв", 1, 1, "Втрать одну душу"));
+    MonstersArr.push(new DNEMonsterCard("roc-star", "Вьюрок-звезда", 4, "img/monsters/monster-roc-star.png", "-2 для DJ-їв, +3 для Прибульців", 1, 2, "Ти неуважно читав його райдер! Скинь увесь звук з бонусом 4 або менше"));
+    MonstersArr.push(new DNEMonsterCard("centaurpede", "Сороконячка", 2, "img/monsters/monster-centaurpede.png", "Завжди з собою купа підков - більшої вдачі годі шукати! +3 для Дракононароджених, +2 для DJ-їв", 1, 1, "Скинь одну карту з руки"));
+    MonstersArr.push(new DNEMonsterCard("unspeakably-awful-indescribable-horror", "Невимовно жахливий незбагненний жах", 14, "img/monsters/monster-unspeakably-awful-indescribable-horror.png", "+4 для Нетраннерів", 1, 4, "Невимовно жахливим чином обнуляє всіх крім Нетраннерів. Нетраннер втрачає сили - скинь карту Нетраннера"));
+    MonstersArr.push(new DNEMonsterCard("stoned-golem", "Обдовбаний голем", 14, "img/monsters/monster-stoned-golem.png", "Завжди можеш просто піти і забити на його звук", 1, 4, "Його пробило на хавку, тебе обнулено"));
+    MonstersArr.push(new DNEMonsterCard("the-wraith-of-khan", "Привид Хана", 10, "img/monsters/monster-the-wraith-of-khan.png", "+3 для Райтерів.<br>+2 для Найомничків", 1, 3, "Віддай по одній карті усім, крім гравців з найбільшим та найменшим рівнем"));
+    MonstersArr.push(new DNEMonsterCard("tongue-demon", "Язичницький демон", 12, "img/monsters/monster-tongue-demon.png", "Пекельне створіння. -4 для Татуєрів. Маєш скинути додаткову карту з руки для запрошення", 1, 3, "Втрать дві душі. За бажанням кинь d6, випаде 6 - нічого не втрачаєш, інше - втрачай три душі"));
+    MonstersArr.push(new DNEMonsterCard("lounge-lizards", "Тусящери", 12, "img/monsters/monster-lounge-lizards.png", "-2 для Дракононароджених,<br>+4 для DJ-їв та Татуєрів", 1, 3, "Їм завжди треба більше. Скинь дві карти з найбільшим бонусом, серед тих що ти маєш"));
+    MonstersArr.push(new DNEMonsterCard("gms-ex-girlfriend", "Колишня подруга майстра", 4, "img/monsters/monster-gms-ex-girlfriend.png", "Тепер вона найстрашніший монстр у його грі... +4 для чоловіків", 1, 2, "Жінка втрачає одну душу. Чоловік скидує карти з руки, сумарний бонус яких має бути не менше 5-ти"));
 
     return MonstersArr;
 }
 
 const DNEMonsterArr = initMonsterArr();
+
+const initBUGArr = () => {
+    const BUGArr = [];
+    const DIVINE_LONGLINE = `Ти повинен зіграти цю карту, як тільки її отримав. Всі DJ-ї одразу отримують рівень! Цей рівень може бути переможним. Якщо ти переміг у грі за рахунок цієї карти, маєш право насміхатись безжально.`;
+    BUGArr.push(new DNEBUGCard("bug-divine-interdiction", "Боже втручання", "/img/bug/bug-divine-interdiction.png", DIVINE_LONGLINE, "", 0, 0, true)); // bose, gameChanger
+    const MINE_TO_11_LONGLINE = `Будь-коли виклади цю карту посеред столу. Гра триває<br> до 11-ї душі. 10-ту та 11-ту душі можна отримати лише з Монстром на Рейві.`;
+    BUGArr.push(new DNEBUGCard("bug-mine-goes-to-11", "Підіймаю до 11", "/img/bug/bug-mine-goes-to-11.png", MINE_TO_11_LONGLINE, "", 0, 0, true)); // gut, gameChanger
+    const KNEEPADS_OF_ALLURE_LONGLINE = `Жоден гравець, в якого більше душ ніж в тебе, не може відмовити прийти тобі на поміч і не вимагає за це нагороди. Ти не можеш здобути переможний рівень за бій, у якому твій Спаситель розведений наколінниками.`;
+    BUGArr.push(new DNEBUGCard("bug-kneepads-of-allure", "Наколінники розводу", "/img/bug/bug-kneepads-of-allure.png", KNEEPADS_OF_ALLURE_LONGLINE, "Не для Татуєрів", 0, 0, false)); // gut, gameChanger, 600
+    const WAND_OF_DOWSING_LONGLINE = `Прочухай скид, щоб знайти будь-яку потрібну карту. Забери її та скинь цю. Разова карта.`;
+    BUGArr.push(new DNEBUGCard("bug-wand-of-dowsing", "Штир лозоходця", "/img/bug/bug-wand-of-dowsing.png", WAND_OF_DOWSING_LONGLINE, "", 0, 0, true)); // gut, gameChanger, 1100
+    const TRANSFERRAL_POTION_LONGLINE = `Грай у будь-який Рейв. Тепер ним займається будь-який обраний тобою гравець. Він може просити допомоги, а при перемозі отримує душі та звук. Після хід повертається до попереднього гравця, щоб взяти звук з лайнапу та закінчити хід. Разова карта.`;
+    BUGArr.push(new DNEBUGCard("bug-transferral-potion", "Зілля стрілочника", "/img/bug/bug-transferral-potion.png", TRANSFERRAL_POTION_LONGLINE, "", 0, 0, true)); // gut, escaper, 300
+    const BABY_OIL_LONGLINE = `Вислизни з Рейву! Це зілля дозволяє одному або двом гравцям автоматично змитись навіть від таких монстрів, від яких зазвичай змитись не можна. Разова карта.`;
+    BUGArr.push(new DNEBUGCard("bug-baby-oil", "Дитяче масло", "/img/bug/bug-baby-oil.png", BABY_OIL_LONGLINE, "", 0, 0, true)); // gut, escaper, 300
+    const INVISIBILITY_POTION_LONGLINE = `Грай, коли провалив змивку, щоб автоматично змитись від монстрів. Разова карта.`;
+    BUGArr.push(new DNEBUGCard("bug-invisibility-potion", "Зілля невидимості", "/img/bug/bug-invisibility-potion.png", INVISIBILITY_POTION_LONGLINE, "", 0, 0, true)); // gut, escaper, 300
+    const POLLYMORPH_POTION_LONGLINE = `Грай у будь-який Рейв. Один монстр перетворюється на папугу і відлітає, залишаючи свій звук. Разова шмотка.`;
+    BUGArr.push(new DNEBUGCard("bug-pollymorph-potion", "Зілля напівморфа", "/img/bug/bug-pollymorph-potion.png", POLLYMORPH_POTION_LONGLINE, "", 0, 0, true)); // gut, escaper, 1300
+    const DISBELIEF_POTION_LONGLINE = `Грай у будь-який Рейв. Скинь одного монстра: ніхто не отримує від нього душ, а його звук можна буде взяти лише досягнувши успіху на цьому Рейві. Разова карта.`;
+    BUGArr.push(new DNEBUGCard("bug-potion-of-disbelief", "Зілля невіри", "/img/bug/bug-potion-of-disbelief.png", DISBELIEF_POTION_LONGLINE, "", 0, 0, true)); // gut, escaper, 1000
+    const DEUS_EX_MACHINEGUN_LONGLINE = `Грай у будь-який Рейв, щоб у нього втрутилися розправедники, посланці богів. Вони з особливою жорстокістю обнуляють всіх монстрів і забирають весь звук та рівні. Ти не можеш забрати карту з лайнапу після цього. Разова карта.`;
+    BUGArr.push(new DNEBUGCard("bug-deus-ex-machinegun", "Розправедники", "/img/bug/bug-deus-ex-machinegun.png", DEUS_EX_MACHINEGUN_LONGLINE, "", 0, 0, true)); // gut, escaper
+    const IN_LOVE_LONGLINE = `Грай у будь-який Рейв, у якому бере участь лише один монстр. Рейв відразу завершується, карт більше грати не можна. Зіграні підсилювачі витрачені, інші разові карти повертаються власникам. Закоханий монстр роздає звук. За годинниковою стрілкою починаючи з гравця, що організував Рейв, здавайте по карті звуку із запасів монстра.`;
+    BUGArr.push(new DNEBUGCard("bug-of-love", "Закоханий", "/img/bug/bug-of-love.png", IN_LOVE_LONGLINE, "", 0, 0, true)); // bose, escaper
+    const ILLUSION_LONGLINE = `Грай у будь-який Рейв, скинь одного монстра разом зі всіма накладеними на нього посилювачами. Заміни його монстром на твій вибір.`;
+    BUGArr.push(new DNEBUGCard("bug-illusion", "Ілюзія", "/img/bug/bug-illusion.png", ILLUSION_LONGLINE, "", 0, 0, true)); // bose, escaper
+    const OUT_TO_LUNCH_LONGLINE = `Грай у будь-який Рейв, щоб відправити монстрів на обід. Гравець, який запрошував їх, скидає їхні карти і відразу тягне дві випадкові карти звуку.`;
+    BUGArr.push(new DNEBUGCard("bug-out-to-lunch", "Обідня перерва", "/img/bug/bug-out-to-lunch.png", OUT_TO_LUNCH_LONGLINE, "", 0, 0, true)); // bose, escaper
+    const MOMMY_LONGLINE = `Можна зіграти на монстра 5-го рівня чи нижче. З ним на Рейв приходить такий самий монстр, але на 10 рівнів більше. Мамця - окремий монстр, на якого діють усі підсилювачі дитини. Невдача така сама. За успіх з Мамцею отримай на 1 душу і 1 звук більше, ніж за її дитинча.`;
+    BUGArr.push(new DNEBUGCard("bug-mommy", "Мамця", "/img/bug/bug-mommy.png", MOMMY_LONGLINE, "", 0, 0, true)); // bose, escaper
+    const FRIENDLY_LONGLINE = `Грай у будь-який Рейв. Той, хто запрошував монстрів, може їх скинути забравши звук. Але якщо він хоче їх залишити, після рішення про це він повинен кинути d6 двічі і додати до рівня монстрів суму значень, що випали.`;
+    BUGArr.push(new DNEBUGCard("bug-friendly", "Френдлі", "/img/bug/bug-friendly.png", FRIENDLY_LONGLINE, "", 0, 0, true)); // bose, escaper
+    const TWO_HEADER_LONGLINE = `Грай у будь-який Рейв на будь-якого монстра. Його рівень подвоїться, як і всі бонуси від зіграних карток. Але це, як і раніше, один монстр. Якщо ти таки переможеш, бери вдвічі більше звуку, ніж отримав би від одноголової версії.`;
+    BUGArr.push(new DNEBUGCard("bug-two-headed", "Двоголовий", "/img/bug/bug-two-headed.png", TWO_HEADER_LONGLINE, "", 0, 0, true)); // bose, powerUpper
+    const TYPOGRAPHICAL_ERROR_LONGLINE = `Грай у будь-який Рейв. В опис монстра вкралася друкарська помилка! Його рівень падає<br> до 1-го, а характеристики та нагороди залишаються ті самі.`;
+    BUGArr.push(new DNEBUGCard("bug-typographical-error", "Типуграфічна помилка", "/img/bug/bug-typographical-error.png", TYPOGRAPHICAL_ERROR_LONGLINE, "", 0, 0, true)); // bose, disabler
+    const DEAD_LONGLINE = `Все, Петрухо, цей готовий. Грай на одного монстра щоб зробити його вбитим. Гравець, що запрошував його забирає звук. Душі ніхто не отримує.`;
+    BUGArr.push(new DNEBUGCard("bug-dead", "Вбитий", "/img/bug/bug-dead.png", DEAD_LONGLINE, "", 0, 0, true)); // bose, escaper
+    const ARBITRARY_GAME_BALANCE_LONGLINE = `Гравці які мають найменше душ отримують душу. Потім кожен гравець, у якого три або менше карток Звуку, отримує душу. Ціль проблеми не отримує нічого.`;
+    BUGArr.push(new DNEBUGCard("bug-arbitrary-game-balance", "Майстерське свавілля!", "/img/bug/bug-arbitrary-game-balance.png", ARBITRARY_GAME_BALANCE_LONGLINE, "Проблема!", 0, 0, true));
+    const DRAG_ON_AND_ON_LONGLINE = `До свого наступного ходу (або поки всі не скажуть тобі заткнутись) ти маєш безперервно говорити. Якщо ти замовкнеш довше ніж на пару секунд, ти втратиш дві душі і далі можеш мовчати скільки влізе.`;
+    BUGArr.push(new DNEBUGCard("bug-drag-on-and-on-and-on", "Потік свідомості", "/img/bug/bug-drag-on-and-on-and-on.png", DRAG_ON_AND_ON_LONGLINE, "Проблема!", 0, 0, true));
+    const INCOME_TAX_LONGLINE = `Обери та скинь карту Звуку. Тепер кожен суперник має скинути карту Звуку з бонусом не менше за твою. Ті, кому нічим заплатити податок, скидають усю руку і втрачають душу.`;
+    BUGArr.push(new DNEBUGCard("bug-sound-tax", "Податок на музику", "/img/bug/bug-sound-tax.png", INCOME_TAX_LONGLINE, "Проблема!", 0, 0, true));
+    const EVERYTHING_IS_RELATIVE_LONGLINE = `Усі інші втрачають душу. Виходить, для тебе це і не проблема зовсім, так? Прикро.<br><br>Якщо гравець вміє скасовувати проблеми, він може скасувати цю проблему для себе, але не для інших.`;
+    BUGArr.push(new DNEBUGCard("bug-everything-is-relative", "Все відносно", "/img/bug/bug-everything-is-relative.png", EVERYTHING_IS_RELATIVE_LONGLINE, "Проблема!", 0, 0, true));
+    const PAYROLL_TAX_LONGLINE = `Діє на всіх гравців! Кожен, в кого є Найомнички, має скинути дві карти за кожного Найоничка у своїй крю або скинути Найомничка, за якого не заплатив.`;
+    BUGArr.push(new DNEBUGCard("bug-friendship-tax", "Податок на дружбу", "/img/bug/bug-friendship-tax.png", PAYROLL_TAX_LONGLINE, "Проблема!", 0, 0, true));
+    const EXPLODING_KNEECAPS_LONGLINE = `Втрать душу. Якщо ти носиш щось на колінах(наприклад, наколінники розводу), втрать цю карту і 2 душі.`;
+    BUGArr.push(new DNEBUGCard("bug-shot-in-the-knee", "Постріл в коліно", "/img/bug/bug-shot-in-the-knee.png", EXPLODING_KNEECAPS_LONGLINE, "Проблема!", 0, 0, true));
+    const LYRICAL_ERROR_LONGLINE = `Останній скинутий монстр повертається на твій Рейв. Якщо на Рейві вже є монстри, він приєднується до них.`;
+    BUGArr.push(new DNEBUGCard("bug-lyrical-error", "Лірична помилка", "/img/bug/bug-lyrical-error.png", LYRICAL_ERROR_LONGLINE, "Проблема!", 0, 0, true));
+    const I_GOT_A_ROCK_LONGLINE = `Всі твої суперники, починаючи з сусіда ліворуч, одразу тягнуть по карті Звуку. Тобі дістається Камінь. Ця карта залишається в тебе, як втілення Каменю. Камінь – одноразовий бонус, який можна кинути у будь-якого гравця, щоб відняти в його лайнапу - 1.`;
+    BUGArr.push(new DNEBUGCard("bug-i-got-a-rock", "Мені дістався булиган!", "/img/bug/bug-i-got-a-rock.png", I_GOT_A_ROCK_LONGLINE, "Проблема!", 0, 0, true));
+    const IMPENDING_DOOM_LONGLINE = `Наступна проблема, що діє на іншого гравця, торкнеться і тебе. Нехай ця карта лежить перед тобою, як провісник неминучої долі. Скинь її, коли вона спрацює.`;
+    BUGArr.push(new DNEBUGCard("bug-impending-doom", "Невідворотна кара", "/img/bug/bug-impending-doom.png", IMPENDING_DOOM_LONGLINE, "Проблема!", 0, 0, true));
+    const LUCKY_TALISMAN_LONGLINE = `Можеш застосувати талісман, потрапивши під ефект проблеми, щоб перевести удар на одного з двох сусідів на твій вибір. А той вже хай викручується, як може. Разова карта.`;
+    BUGArr.push(new DNEBUGCard("bug-lucky-talisman", "Талісман вдачі", "/img/bug/bug-lucky-talisman.png", LUCKY_TALISMAN_LONGLINE, "", 0, 0, true)); // 300
+    const LOADED_DIE_LONGLINE = `Грай після свого кидка кубика з будь-якого приводу. Поверни кубик будь-якою гранню нагору: це результат твого кидка. Разова карта.`;
+    BUGArr.push(new DNEBUGCard("bug-loaded-die", "Читерський кубик", "/img/bug/bug-loaded-die.png", LOADED_DIE_LONGLINE, "", 0, 0, true)); // 300
+    const RELOADED_DIE_LONGLINE = `Грай після того, як інший гравець кинув кубик з будь-якого приводу. Поверни кубик будь-якою гранню вгору: це результат його кидка. Перечитерський кубик б'є читерський чи інший перечитерський. Читерський кубик б'є перечитерський. Яка карта зіграна останньою, та і рулить. Разова карта.`;
+    BUGArr.push(new DNEBUGCard("bug-reloaded-die", "Перечитерський кубик", "/img/bug/bug-reloaded-die.png", RELOADED_DIE_LONGLINE, "", 0, 0, true)); // 300
+    const DUNGEON_CASINO_LONGLINE = `Грай будь-якої миті, окрім Рейву. Разова карта.<br>Скинь карти Звуку загальним бонусом не менше 5 і кинь d6:<br>1 - втрать душу;<br>2 - скинь одну карту з руки;<br>3 або 4 - візьми карту Звуку у відкриту;<br>5 - візьми 2 карти;<br>6 - візьми 3;`;
+    BUGArr.push(new DNEBUGCard("bug-dungeon-casino", "Підземне казино", "/img/bug/bug-dungeon-casino.png", DUNGEON_CASINO_LONGLINE, "", 0, 0, true));
+    const POTION_OF_APATHY_LONGLINE = `Грай у будь-який Рейв після того, як хтось був обраний Рятівником. Цей гравець втрачає інтерес до Рейва і не бере участі в ньому. Він повертає на руку всі карти, які зіграв. Хост може вибрати іншого Рятівника, якщо є охочі. Разова карта.`;
+    BUGArr.push(new DNEBUGCard("bug-potion-of-apathy", "Зілля апатії", "/img/bug/bug-potion-of-apathy.png", POTION_OF_APATHY_LONGLINE, "", 0, 0, true));
+    const TINFOIL_HAT_LONGLINE = `У цьому головному уборі ти захищений від усіх проблем, які грають суперники.`;
+    BUGArr.push(new DNEBUGCard("bug-tinfoil-hat", "Шапочка з фольги", "/img/bug/bug-tinfoil-hat.png", TINFOIL_HAT_LONGLINE, "", 0, 0, false)); // 800
+    const RELIABLE_AMULET_LONGLINE = `Коли тебе наздоганяє проблема, кинь кубик. На 1-3 проблема діє, а амулет скидається. На 4-6 проблему відбито: скинь її. А якщо випало шість, ти ще й душу отримуєш!`;
+    BUGArr.push(new DNEBUGCard("bug-occasionally-reliable-amulet", "Часом надійний амулет", "/img/bug/bug-occasionally-reliable-amulet.png", RELIABLE_AMULET_LONGLINE, "", 0, 0, false)); // 600
+    const FELINE_INTERVENTION_LONGLINE = `Грай після того, як будь-хто кине кубик з будь-якого приводу. На кубик стрибає кіт! Цей кидок та всі карти, якими на нього впливали, пропадають. Той, хто кидав кубик, має зробити новий кидок. Разовий прикол.`;
+    BUGArr.push(new DNEBUGCard("bug-feline-intervention", "Кицьо-втручання", "/img/bug/bug-feline-intervention.png", FELINE_INTERVENTION_LONGLINE, "", 0, 0, true));
+    const WISHING_RING_LONGLINE = `Скасовує будь-яку проблему. Грай будь-якої миті. Разова карта.`;
+    BUGArr.push(new DNEBUGCard("bug-wishing-ring", "Бажальне кільце", "/img/bug/bug-wishing-ring.png", WISHING_RING_LONGLINE, "", 0, 0, true));
+    const HYPNOTIZE_THE_MERCENARY_LONGLINE = `Грай тільки в тому випадку, якщо хтось має Найомничка. Він стає твоїм. Отримай душу.`;
+    BUGArr.push(new DNEBUGCard("bug-hypnotize-the-support", "Загіпнотизуй Найомничка", "/img/bug/bug-hypnotize-the-support.png", HYPNOTIZE_THE_MERCENARY_LONGLINE, "1UP", 0, 0, true));
+    const PAY_FOR_PIZZA_LONGLINE = ``;
+    BUGArr.push(new DNEBUGCard("bug-pay-for-pizza", "Заплати за піцу", "/img/bug/bug-pay-for-pizza.png", PAY_FOR_PIZZA_LONGLINE, "1UP", 0, 0, true));
+    const WASH_CAR_LONGLINE = ``;
+    BUGArr.push(new DNEBUGCard("bug-wash-gms-car", "Помий машину майстра", "/img/bug/bug-wash-gms-car.png", WASH_CAR_LONGLINE, "1UP", 0, 0, true));
+    const REINCARNATE_LONGLINE = `Замість того щоб отримати душу можеш скинути цю карту будь-якої миті, крім Рейву. Прочеши колоду Класів, обери одну карту і застосуй її.`;
+    BUGArr.push(new DNEBUGCard("bug-reincarnate-without-dying-first", "Реінкарнуй на випередження", "/img/bug/bug-reincarnate-without-dying-first.png", REINCARNATE_LONGLINE, "1UP", 0, 0, true));
+    const SENSELESS_KINDNESS_LONGLINE = `Замість того, щоб отримувати душу, можеш зіграти цю карту на суперника. Він повинен віддати тобі карту Звуку з найбільшим бонусом і отримує душу.`;
+    BUGArr.push(new DNEBUGCard("bug-senseless-act-of-kindness", "Безглузді жести доброї волі", "/img/bug/bug-senseless-act-of-kindness.png", SENSELESS_KINDNESS_LONGLINE, "1UP", 0, 0, true));
+    const SODA_PUNCH_LONGLINE = `Також можеш зіграти цю карту будь-якої миті на будь-якого гравця, щоб він втратив душу. Навіть якщо він вже вирішив, ніби переміг.`;
+    BUGArr.push(new DNEBUGCard("bug-make-gm-snort-soda-out-his-nose", "Змусь майстра поперхнутись колою", "/img/bug/bug-make-gm-snort-soda-out-his-nose.png", SODA_PUNCH_LONGLINE, "1UP", 0, 0, true));
+    const STEAL_THE_CREDIT_LONGLINE = `Грай, коли інший гравець успішно провів Рейв і отримує душі, аби примазатись до його слави.`;
+    BUGArr.push(new DNEBUGCard("bug-steal-credit", "Вкради почесті", "/img/bug/bug-steal-credit.png", STEAL_THE_CREDIT_LONGLINE, "1UP", 0, 0, true));
+    const TAKE_GOOD_WITH_BAD_LONGLINE = `Грай одразу після того, як будь-який гравець втрачає Найомничка.`;
+    BUGArr.push(new DNEBUGCard("bug-take-good-with-bad", "Немає лиха без добра", "/img/bug/bug-take-good-with-bad.png", TAKE_GOOD_WITH_BAD_LONGLINE, "1UP", 0, 0, true));
+    const CONTEMPLATE_YOUR_NAVEL_LONGLINE = `Якщо скинеш всю руку (не менше трьох карт), отримай дві душі замість однієї!`;
+    BUGArr.push(new DNEBUGCard("bug-contemplate-your-navel", "Споглядай пупок", "/img/bug/bug-contemplate-your-navel.png", CONTEMPLATE_YOUR_NAVEL_LONGLINE, "1UP", 0, 0, true));
+    const WANDERING_MONSTER_LONGLINE = `Грай у будь-який Рейв(можна й у свій). Вибери будь-якого монстра рівнем не більше за очікування і закинь його в цей Рейв. Якщо монстрів прийшло декілька, при невдачі гравець робить окремі кидки змивки в будь-якому порядку.`;
+    BUGArr.push(new DNEBUGCard("bug-wandering-monster", "Бродяча тварина", "/img/bug/bug-wandering-monster.png", WANDERING_MONSTER_LONGLINE, "", 0, 0, true));
+    const DOGPILE_LONGLINE = `Грай у будь-який Рейв(можна у свій). Потім решта гравців може скинути по одній карті Звуку, щоб запросити<br>на Рейв<br>по монстру<br>за кожну.<br>Склади їх рівні<br>з очікуваннями.<br>При невдачі<br>гравець<br>робить<br>окремі<br>кидки<br>змивки<br>для кожного.`;
+    BUGArr.push(new DNEBUGCard("bug-dogpile", "Купа мала", "/img/bug/bug-dogpile.png", DOGPILE_LONGLINE, "", 0, 0, true));
+    const MONSTER_MASH_LONGLINE = `Грай у будь-який Рейв разом з будь-якою кількістю карт з руки. Запроси на Рейв по монстру за кожну. Склади їх рівні з очікуваннями. При невдачі гравець робить окремі кидки змивки для кожного.`;
+    BUGArr.push(new DNEBUGCard("bug-monster-mash", "Тому що ми банда!", "/img/bug/bug-monster-mash.png", MONSTER_MASH_LONGLINE, "", 0, 0, true));
+    const LOSE_TOUR_LUCKY_DIE_LONGLINE = `Втрать душу! Якщо в тебе по життю є щасливий кубик, прибери його з очей геть і не торкайся до нього, не застосовуй його жодним іншим способом, навіть не дивися на нього до кінця партії!`;
+    BUGArr.push(new DNEBUGCard("bug-lose-your-lucky-die", "Загубив щасливий кубик", "/img/bug/bug-lose-your-lucky-die.png", LOSE_TOUR_LUCKY_DIE_LONGLINE, "Проблема!", 0, 0, true));
+    const TEMPORARY_AMNESIA_LONGLINE = `Удар по голові змусив тебе забути свій клас. Переверни свою карту Класу сорочкою вгору. Ти згадаєш це, тільки коли організуєш чи допоможеш організувати Рейв з монстром. До того часу ти будеш у всіх відносинах звичайною людиною без класу.`;
+    BUGArr.push(new DNEBUGCard("bug-temporary-amnesia", "Тимчасова амнезія", "/img/bug/bug-temporary-amnesia.png", TEMPORARY_AMNESIA_LONGLINE, "Проблема!", 0, 0, true));
+    const NEW_EDITION_RULES_LONGLINE = `Діє на всіх гравців! Кожен гравець втрачає душу. Якщо у когось є бажальне кільце, він може його використати, щоб скасувати цю проблему для всіх або деяких гравців(як він забажає).`;
+    BUGArr.push(new DNEBUGCard("bug-new-edition-rules", "Нова редакція правил", "/img/bug/bug-new-edition-rules.png", NEW_EDITION_RULES_LONGLINE, "Проблема!", 0, 0, true));
+    const BO_LONGLINE = `На твоєму наступному Рейві тобі ніхто не допоможе. Якщо ця проблема спіткала тебе під час Рейву, твій Рятівник залишає тебе(без штрафів) і ти маєш вивозити самотужки. Зате Блукаючий ніс біжить від тебе, залишаючи в твоїх пахучих руках весь свій звук.`;
+    BUGArr.push(new DNEBUGCard("bug-bo", "Сморід", "/img/bug/bug-bo.png", BO_LONGLINE, "Проблема!", 0, 0, true));
+    const CURSED_THINGY_LONGLINE = `Одна твоя карта Звуку з найбільшим бонусом стає багнутою. Вона втрачає свій бонус і ти не можеш позбутися її, поки проблема не знята. Інша проблема може зняти баг(наприклад, "Втрать дві карти"). Бажальне кільце знімає баг з карти, повертаючи її бонус. Крім того, цей баг зникає, якщо ти обнулишся. Вчасно, правда?`;
+    BUGArr.push(new DNEBUGCard("bug-cursed-thingy", "Багнута карта", "/img/bug/bug-cursed-thingy.png", CURSED_THINGY_LONGLINE, "Проблема!", 0, 0, true));
+    const GENEROSITY_LONGLINE = `Ти маєш дати кожному супернику по одній карті Звуку зі свого інвентарю. Ті, кому не вистачить, тягнуть наосліп дві карти в тебе з руки. Ти сам вирішуєш, в якому порядку виявлятимеш щедрість.`;
+    BUGArr.push(new DNEBUGCard("bug-generosity", "Щедрість", "/img/bug/bug-generosity.png", GENEROSITY_LONGLINE, "Проблема!", 0, 0, true));
+    const DNA_MOD_LONGLINE = `Можеш випити зілля будь-якої миті, хоч на Рейві, щоб прочесати колоду Класів і вибрати будь-яку карту. Якщо нічого не забороняє тобі зіграти її прямо зараз, можеш одразу зробити це. Разова карта.`;
+    BUGArr.push(new DNEBUGCard("bug-dna-potion", "Зілля модифікації ДНК", "/img/bug/bug-dna-potion.png", DNA_MOD_LONGLINE, "", 0, 0, true)); // 900
+    const HOARD_LONGLINE = `Відразу візьми три карти Звуку так само, як витягнув цю карту, - у відкриту або в закриту.`;
+    BUGArr.push(new DNEBUGCard("bug-hoard", "Ура, клад!", "/img/bug/bug-hoard.png", HOARD_LONGLINE, "", 0, 0, true));
+    const GARAGE_SALE_LONGLINE = `Можеш зіграти цю карту відразу як тільки отримав її чи пізніше у свій хід. Скинь карту Звуку на свій вибір. Потім візьми зі скиду дві будь-які карти, бонус яких не більший за скинуту.`;
+    BUGArr.push(new DNEBUGCard("bug-garage-sale", "Розпродаж", "/img/bug/bug-garage-sale.png", GARAGE_SALE_LONGLINE, "", 0, 0, true));
+    const SKILLZ_TOME_LONGLINE = `Можеш прочитати том будь-якої миті, хоч на Рейві, щоб прочесати колоду Класів і вибрати звідти карту класу. Якщо нічого не заважає тобі зіграти її, можеш відразу зробити це. Разова карта.`;
+    BUGArr.push(new DNEBUGCard("bug-mighty-tome-of-skillz", "Розумний том вмінь", "/img/bug/bug-mighty-tome-of-skillz.png", SKILLZ_TOME_LONGLINE, "", 0, 0, true));
+    const TROJAN_HORSE_LONGLINE = `Грай цю карту разом із картою Звуку, коли суперник успішно організував Рейв і тягнеться за нагородою. Тепер цієї нагороди він не бачить: він знову кидає d20 і має успішно провести новий Рейв, на який приходить монстр на твій вибір. Досягши успіху на новому Рейві, він отримає нагороду за нього за стандартними правилами. Можеш зіграти коня і без карти Звуку, щоб просто позбавити суперника нагороди.`;
+    BUGArr.push(new DNEBUGCard("bug-trojan-horse", "Троянський кінь", "/img/bug/bug-trojan-horse.png", TROJAN_HORSE_LONGLINE, "", 0, 0, true));
+    const INFLATABLE_MUNCHKIN_LONGLINE = `Відволікає переслідувачів, дозволяючи тобі та всім, хто був на Рейві, автоматично змитись. Разова карта.`;
+    BUGArr.push(new DNEBUGCard("bug-inflatable-munchkin", "Надувний манчкін", "/img/bug/bug-inflatable-munchkin.png", INFLATABLE_MUNCHKIN_LONGLINE, "", 0, 0, true));
+    const DUCK_OF_MANY_THINGS_LONGLINE = `Зроби наступне, суворо в такому порядку: наосліп витягни карту з руки сусіда зліва; віддай карту на свій вибір сусіду праворуч; візьми верхню карту з будь-якого скиду; заспівай пісеньку; отримай душу; скинь дві карти; скинь цю карту.`;
+    BUGArr.push(new DNEBUGCard("bug-duck-of-many-things", "Роздавайка", "/img/bug/bug-duck-of-many-things.png", DUCK_OF_MANY_THINGS_LONGLINE, "", 0, 0, true));
+    const RESTRAINING_ORDER_LONGLINE = `Грай будь-якої миті на будь-якого суперника. До кінця ходу той втрачає право грати на тебе карти, а так само повинен повернути на руку всі вже зіграні карти. Разова карта.`;
+    BUGArr.push(new DNEBUGCard("bug-restraining-order", "Заборонна постанова", "/img/bug/bug-restraining-order.png", RESTRAINING_ORDER_LONGLINE, "", 0, 0, true));
+    const POTION_OF_COWARDICE_LONGLINE = `Грай у будь-який Рейв, щоб змусити гравців змиватись з нього, навіть якщо вони перевершували очікування аудиторії. Разова карта.`;
+    BUGArr.push(new DNEBUGCard("bug-potion-of-cowardice", "Зілля боягузства", "/img/bug/bug-potion-of-cowardice.png", POTION_OF_COWARDICE_LONGLINE, "", 0, 0, true));
+    const COUPON_LONGLINE = `У будь-який момент, окрім Рейва, можеш обміняти цей купон, щоб взяти зі скидання карти Звуку сумарним бонусом не більше 10.`;
+    BUGArr.push(new DNEBUGCard("bug-valuable-coupon", "Купон", "/img/bug/bug-valuable-coupon.png", COUPON_LONGLINE, "", 0, 0, true));
+    const AVATAR_LONGLINE = `Грай якщо ти на Рейві без Рятувальника. Можеш покликати на допомогу свого могутнього Аватара, рівень якого дорівнюватиме кількості твоїх душ помноженій на три. Додай його рівень до бонусу твого Лайнапу. Якщо ви досягли успіху, отримуй карти Звуку, але не душі. При невдачі ти змиваєшся автоматично. Разова карта.`;
+    BUGArr.push(new DNEBUGCard("bug-avatar", "Аватар", "/img/bug/bug-avatar.png", AVATAR_LONGLINE, "", 0, 0, true));
+    const LUCKY_PENNY_LONGLINE = `Коли інший гравець втрачає карти через Невдачу або Проблему, можеш відразу скинути цю картку і забрати одну з втрачених карток. Разовий прийом.`;
+    BUGArr.push(new DNEBUGCard("bug-lucky-penny", "Щаслива копієчка", "/img/bug/bug-lucky-penny.png", LUCKY_PENNY_LONGLINE, "", 0, 0, true));
+    const TAKE_ME_LONGLINE = `Коли інший гравець отримує право просити допомоги на Рейві, зіграй цю карту, щоб змусити його взяти тебе Рятівником. Ти не можеш вимагати додаткової нагороди за допомогу. Разова карта. До речі, якщо попередній Рятівник вже зіграв якісь карти, він забирає їх назад.`;
+    BUGArr.push(new DNEBUGCard("bug-take-me", "Обери мене!", "/img/bug/bug-take-me.png", TAKE_ME_LONGLINE, "", 0, 0, true));
+    const FILTHY_RICH_LONGLINE = `Грай на Рейві із монстрами. Якщо гравцям дістається їх звук, вони за бажанням можуть скинути будь-які з отриманих карток і взяти стільки ж нових карт(лише один раз).`;
+    BUGArr.push(new DNEBUGCard("bug-filthy-rich", "Безсовісно багатий", "/img/bug/bug-filthy-rich.png", FILTHY_RICH_LONGLINE, "", 0, 0, true));
+    const BUSY_MONSTERS_LONGLINE = `Грай цю карту в будь-який Рейв із монстрами. В них гра, рейвити їм ніколи, а полізеш нахабно - зачинять двері. Тим часом, монстр, що програє, згоден обміняти карти звуку на душі. Скинь скільки завгодно душ, щоб отримати три карти звуку за кожну.`;
+    BUGArr.push(new DNEBUGCard("bug-monsters-are-busy", "Зайняті монстри", "/img/bug/bug-monsters-are-busy.png", BUSY_MONSTERS_LONGLINE, "", 0, 0, true));
+    const FIND_MAP_LONGLINE = `Грай цю карту в будь-який момент свого ходу, щоб переглянути п'ять верхніх карт у колоді Звуку(або три у будь-якій іншій) і покласти їх назад у будь-якому порядку. Не показуй ці карти іншим гравцям.`;
+    BUGArr.push(new DNEBUGCard("bug-find-a-map", "Знайди мапу", "/img/bug/bug-find-a-map.png", FIND_MAP_LONGLINE, "", 0, 0, true));
+    const DECK_OF_TOO_MANY_LONGLINE = `Грай цю карту будь-якої миті свого ходу. Потім скинь з руки скільки завгодно тобі карток Звуку(хоч всі) і в закриту візьми стільки ж нових карт.`;
+    BUGArr.push(new DNEBUGCard("bug-deck-of-too-many-things", "Колода занадто багатьох речей", "/img/bug/bug-deck-of-too-many-things.png", DECK_OF_TOO_MANY_LONGLINE, "", 0, 0, true));
+    const HELP_ME_OUT_THERE_LONGLINE = `Грай у будь-який момент Рейва, щоб наосліп взяти дві карти Звуку у будь-якого суперника. Якщо зараз вони можуть змінити результат Рейва на твою користь, використай їх.`;
+    BUGArr.push(new DNEBUGCard("bug-help-me-out-there", "Допоможи, чим можеш!", "/img/bug/bug-help-me-out-there.png", HELP_ME_OUT_THERE_LONGLINE, "", 0, 0, true));
+    const SHOES_UNTIED_LONGLINE = `Найбільш бородатий трюк із підручника. Але досі працює – тому й у підручнику. Грай у будь-який Рейв. +3 будь-якому лайнапу. Разовий прикол.`;
+    BUGArr.push(new DNEBUGCard("bug-your-shoes-untied", "В тебе шнурок розв'язався", "/img/bug/bug-your-shoes-untied.png", SHOES_UNTIED_LONGLINE, "", 3, 0, true));
+    const ROYAL_OIL_LONGLINE = `Грай у будь-який Рейв. +3 будь-якому лайнапу. Разовий прикол.`;
+    BUGArr.push(new DNEBUGCard("bug-royal-oil", "Царське масло", "/img/bug/bug-royal-oil.png", ROYAL_OIL_LONGLINE, "", 3, 0, true)); // 100
+    const OIL_OF_BOILING_LONGLINE = `Грай у будь-який Рейв. +3 будь-якому лайнапу. +5 якщо ти Дракононароджений. Разовий прикол.`;
+    BUGArr.push(new DNEBUGCard("bug-oil-of-boiling", "Коктейль Молотова", "/img/bug/bug-oil-of-boiling.png", OIL_OF_BOILING_LONGLINE, "", 3, 0, true)); // 200
+    const DRUID_FLUID_LONGLINE = `Грай у будь-який Рейв. +3 будь-якому лайнапу. Разовий прикол.`;
+    BUGArr.push(new DNEBUGCard("bug-druid-fluid", "Друїдський фреш", "/img/bug/bug-druid-fluid.png", DRUID_FLUID_LONGLINE, "", 3, 0, true)); // 100
+    const YUPPIE_WATER_LONGLINE = `Грай у будь-який Рейв. +2 будь-якому Лайнапу. Та +4 для кожного Прибульця на Рейві. Разовий прикол.`;
+    BUGArr.push(new DNEBUGCard("bug-yuppie-water", "Япічка", "/img/bug/bug-yuppie-water.png", YUPPIE_WATER_LONGLINE, "", 2, 0, true)); // 100
+    const LIQUID_WENCH_LONGLINE = `Грай у будь-який Рейв для привернення уваги. +3 будь-якому лайнапу. За бажанням запроси Монстра 3-го рівня або менше, не скидуючи карти Звуку. Разовий прикол.`;
+    BUGArr.push(new DNEBUGCard("bug-liquid-wench", "Мокра мавка", "/img/bug/bug-liquid-wench.png", LIQUID_WENCH_LONGLINE, "", 3, 0, true)); // 400
+    const LEMMING_JUICE_LONGLINE = `Подавай охолодженим для вгамування спраги. +3 будь-якому лайнапу. Разовий прикол.`;
+    BUGArr.push(new DNEBUGCard("bug-lemming-juice", "Леммінгнад", "/img/bug/bug-lemming-juice.png", LEMMING_JUICE_LONGLINE, "", 3, 0, true)); // 100
+    const MONSTER_CHOW_LONGLINE = `А ось смакотки кому?! Корм приваблює Монстрів... +5 будь-якому лайнапу. Разовий прикол.`;
+    BUGArr.push(new DNEBUGCard("bug-monster-chow", "Монстрокорм", "/img/bug/bug-monster-chow.png", MONSTER_CHOW_LONGLINE, "", 5, 0,  true)); // 300
+    const POISONBERRY_SYRUP_LONGLINE = `Грай у будь-який Рейв. +5 будь-якому лайнапу. Разовий прикол.`;
+    BUGArr.push(new DNEBUGCard("bug-poisonberry-syrup", "Ядожиновий сироп", "/img/bug/bug-poisonberry-syrup.png", POISONBERRY_SYRUP_LONGLINE, "", 5, 0, true)); // 400
+    const HOT_PEPPER_SAUCE_LONGLINE = `Грай у будь-який Рейв. Це пекуче зілля дає +3 будь-якому Лайнапу, а якщо у справі Дракононароджений, то всі +6. Разова карта`;
+    BUGArr.push(new DNEBUGCard("bug-hot-pepper-sauce", "Гострий соус", "/img/bug/bug-hot-pepper-sauce.png", HOT_PEPPER_SAUCE_LONGLINE, "", 0, 0, true)); // 300
+    const SCROLL_OF_DEBUFFING_LONGLINE = `Грай у будь-який Рейв, щоб скинути всіх Монстрів та підсилювачі лайнапу, окрім зіграних тобою та твоїм Рятівником, якщо він був.`;
+    BUGArr.push(new DNEBUGCard("bug-of-debuffination", "Дебафінація", "/img/bug/bug-of-debuffination.png", SCROLL_OF_DEBUFFING_LONGLINE, "", 0, 0, true)); // 900
+    const BAG_OF_CALTROPS_LONGLINE = `Колючки в кармані не сховаєш! Використай колючки під час свого Рейву, щоб заборонити іншим гравцям Підкидати Пасажирів до кінця твого ходу. Або після проваленого кидка змивки, щоб автоматично втекти від відповідальності перед всіма Монстрами. Разова карта.`;
+    BUGArr.push(new DNEBUGCard("bug-of-caltrops", "Колючки", "/img/bug/bug-of-caltrops.png", BAG_OF_CALTROPS_LONGLINE, "", 0, 0, true)); // 200
+    const SANDALS_OF_PROTECTION_LONGLINE = `Захищають тебе від нових знайомств під час Рейву. Інші гравці не зможуть Пудкинути Пасажира у твій Рейв, або у Рейв, на який ти прийшов як Рятівник.`;
+    BUGArr.push(new DNEBUGCard("bug-sandals-of-protection", "Сандалі-протектори", "/img/bug/bug-sandals-of-protection.png", SANDALS_OF_PROTECTION_LONGLINE, "", 0, 0, false)); // 700
+    const THEME_MUSIC_LONGLINE = `Куди б ти не йшов, мелодія йде за тобою п'ятами, дратуючи як ворогів, так і друзів. Якщо хочеш, підспівуй.`;
+    BUGArr.push(new DNEBUGCard("bug-theme-music", "Тема героя", "/img/bug/bug-theme-music.png", THEME_MUSIC_LONGLINE, "+5 для DJ", 2, 0, false));
+    const THE_OTHER_RING_LONGLINE = `Можеш автоматично змитись з будь-якого Рейву(які б інші карти на тебе не впливали), але при цьому ти втратиш душу. Також можеш скинути цю карту, щоб позбавитись проблеми(як бажальним кільцем).`;
+    BUGArr.push(new DNEBUGCard("bug-other-ring", "Інше кільце", "/img/bug/bug-other-ring.png", THE_OTHER_RING_LONGLINE, "", 2, 0, false)); // 1000
+    const MAGNIFICENT_HAT_LONGLINE = `Ця сяюча шапка відбиває проблеми. Щоразу, коли по тобі б'є Проблема, кожен твій суперник кидає d6, і проблема діє на того, хто викинув найменший результат.`;
+    BUGArr.push(new DNEBUGCard("bug-magnificent-hat", "Шапка величності", "/img/bug/bug-magnificent-hat.png", MAGNIFICENT_HAT_LONGLINE, "", 2, 0, false)); // 900
+    const REVEALING_COSTUME_LONGLINE = `Приваблюєш монстрів. І тобі все одно, чи залишаються вони ощасливленими від побаченого чи ні. При кожній зміні статі костюм рветься у найвідвертіших місцях, збільшуючи бонус на 1.`;
+    BUGArr.push(new DNEBUGCard("bug-revealing-costume", "Викриваючий костюм", "/img/bug/bug-revealing-costume.png", REVEALING_COSTUME_LONGLINE, "", 3, 0, false)); // 600
+    const HALO_LONGLINE = `Якщо ти обнуляєшся з німбом, не скидай його. Коли твої суперники закінчать мародерство, можеш скинути його та не витрачати душу на відродження. Візьми п'ять карток Звуку, випадкову карту Класу і продовжуй хід, ніби нічого не сталося.`;
+    BUGArr.push(new DNEBUGCard("bug-halo", "Німб", "/img/bug/bug-halo.png", HALO_LONGLINE, "", 2, 0, false)); // 700
+    const HORSEWHIP_LONGLINE = ``;
+    BUGArr.push(new DNEBUGCard("bug-horsewhip", "Погоняло", "/img/bug/bug-horsewhip.png", HORSEWHIP_LONGLINE, "+3 для жінок", 1, 0, false)); // 200
+    const IMPRESSIVE_TITLE_LONGLINE = ``;
+    BUGArr.push(new DNEBUGCard("bug-really-impressive-title", "Реально вражаючий титул", "/img/bug/bug-really-impressive-title.png", IMPRESSIVE_TITLE_LONGLINE, "", 3, 0, false));
+    const RAINCOAT_LONGLINE = `Іншим гравцям не можна грати зілля у твій Рейв. Виключення - твій Рятівник, якщо він є.`;
+    BUGArr.push(new DNEBUGCard("bug-raincoat", "Дощовик", "/img/bug/bug-raincoat.png", RAINCOAT_LONGLINE, "", 0, 0, false)); // 100
+    const ITCHING_POWDER_LONGLINE = `Грай будь-якої миті. Жертва має скинути будь-який предмет одягу(або інший артефакт, що дає їй постійний бонус) на твій вибір. Разова карта.`;
+    BUGArr.push(new DNEBUGCard("bug-itching-powder", "Коростяний порошок", "/img/bug/bug-itching-powder.png", ITCHING_POWDER_LONGLINE, "", 0, 0, true)); // 200
+    const TRIP_OVER_LONGLINE = `Кожен інший гравець, починаючи з твого сусіда праворуч, може взяти карту Звуку з колоди.`;
+    BUGArr.push(new DNEBUGCard("bug-trip-over-your-own-chest", "Фатальна запинка", "/img/bug/bug-trip-over-your-own-chest.png", TRIP_OVER_LONGLINE, "Проблема!", 0, 0, true));
+    const UNCORKED_LONGLINE = `Покажи свою руку і скинь усі свої разові карти з гри та з руки.`;
+    BUGArr.push(new DNEBUGCard("bug-uncorked", "Розкупорка", "/img/bug/bug-uncorked.png", UNCORKED_LONGLINE, "Проблема!", 0, 0, true));
+    const AGORAPHOBIA_LONGLINE = `Тепер ти боїшся монстрів! Ти не можеш нікому допомагати на Рейвах із монстрами. Якщо допомагаєш з Рейвом і на нього приходить монстр, ти маєш піти з Рейва (без штрафів). Ти нізащо не покличеш монстра на свій Рейв, а якщо хтось підкине пасажира - доведеться змиватись, навіть якщо міг би перемогти. Якщо змивка вдалась, ти переборов Агорафобію, скинь її.`;
+    BUGArr.push(new DNEBUGCard("bug-agoraphobia", "Агорафобія", "/img/bug/bug-agoraphobia.png", AGORAPHOBIA_LONGLINE, "Проблема!", 0, 0, true));
+    const GENDER_BLENDER_LONGLINE = `Поки не позбудешся цієї проблеми, у тебе немає статі (це не так вже й погано - зате ти не схильний до зміни статі).`;
+    BUGArr.push(new DNEBUGCard("bug-gender-blender", "Гендер-блендер", "/img/bug/bug-gender-blender.png", GENDER_BLENDER_LONGLINE, "Проблема!", 0, 0, true));
+    const DYING_CURSE_LONGLINE = `Найвищий монстр із скиду творить з тобою свої Неперелавки, і змитись від цього не можна!`;
+    BUGArr.push(new DNEBUGCard("bug-dying-curse", "Посмертна капость", "/img/bug/bug-dying-curse.png", DYING_CURSE_LONGLINE, "", 0, 0, true));
+    const DWARVEN_ALE_LONGLINE = `-4 для твого наступного(або поточного) Лайнапу, якщо тільки ти не Олів'є, тоді ця "проблема" дасть тобі +4.`;
+    BUGArr.push(new DNEBUGCard("bug-french-ale", "Французький ель", "/img/bug/bug-french-ale.png", DWARVEN_ALE_LONGLINE, "Проблема!", 0, 0, true));
+    const DUCK_OF_DOOM_LONGLINE = `Втрать дві душі, щоб не кортіло надалі підбирати птахів на Рейви.`;
+    BUGArr.push(new DNEBUGCard("bug-duck-of-doom", "Фатальна пташка", "/img/bug/bug-duck-of-doom.png", DUCK_OF_DOOM_LONGLINE, "Проблема!", 0, 0, true));
+    const CHANGE_SEX_LONGLINE = `-5 для твого наступного Лайнапу, через сум'яття. Після цього штрафів не буде, але стать залишиться зміненою.`;
+    BUGArr.push(new DNEBUGCard("bug-change-sex", "Зміна статі", "/img/bug/bug-change-sex.png", CHANGE_SEX_LONGLINE, "Проблема!", 0, 0, true));
+    const DONT_CALL_ME_SHIRLEY_LONGLINE = `Зміни стать. ${CHANGE_SEX_LONGLINE}`;
+    BUGArr.push(new DNEBUGCard("bug-dont-call-me-shirley", "Не клич мене крихіткою!", "/img/bug/bug-dont-call-me-shirley.png", DONT_CALL_ME_SHIRLEY_LONGLINE, "Проблема!", 0, 0, true));
+    const FOOLS_GOLD_LONGLINE = `Не отримуй Звук за свій наступний Рейв. Якщо ця проблема наздогнала тебе під час Рейву, ти не отримаєш карти Звуку за поточний Рейв.`;
+    BUGArr.push(new DNEBUGCard("bug-fools-gold", "Золото дурнів", "/img/bug/bug-fools-gold.png", FOOLS_GOLD_LONGLINE, "Проблема!", 0, 0, true));
+    const TOURIST_TRAP_LONGLINE = `Ти більше не можеш запрошувати Монстрів. Ця проблема тримається доти, доки не допоможеш іншому гравцеві успішно провести Рейв.`;
+    BUGArr.push(new DNEBUGCard("bug-tourist-trap", "Капкан на туриста", "/img/bug/bug-tourist-trap.png", TOURIST_TRAP_LONGLINE, "Проблема!", 0, 0, true));
+    const LOSE_TWO_CARDS_LONGLINE = `Спочатку лівий сусід тягне у жертви з руки одну карту і залишає її собі, потім те саме робить правий сусід.`;
+    BUGArr.push(new DNEBUGCard("bug-lose-two-cards", "Загуби дві карти", "/img/bug/bug-lose-two-cards.png", LOSE_TWO_CARDS_LONGLINE, "Проблема!", 0, 0, true));
+    const HUNGRY_BACKPACK_LONGLINE = `Наприкінці кожного свого ходу кинь d6. Твій рюкзак зжирає стільки карток в тебе з руки, скільки випало! Карти наосліп витягує і скидає твій сусід зліва. Але якщо випало 6, рюкзак пожере сам себе і зникне, не торкнувшись твоєї руки. Проблема закінчиться.`;
+    BUGArr.push(new DNEBUGCard("bug-hungry-backpack", "Голодний рюкзак", "/img/bug/bug-hungry-backpack.png", HUNGRY_BACKPACK_LONGLINE, "Проблема!", 0, 0, true));
+    const TYPECAST_LONGLINE = `З цією проблемою ти не можеш ні придбати новий Клас, ні скинути поточний. Однак Проблеми та Неперелавки, що позбавляють Класу, можуть позбавити тебе поточного Класу разом з цією проблемою.`;
+    BUGArr.push(new DNEBUGCard("bug-typecast", "Заручник типажу", "/img/bug/bug-typecast.png", TYPECAST_LONGLINE, "Проблема!", 0, 0, true));
+    const BUTTERFINGERS_LONGLINE = `Втрать карту, що дає тобі постійний бонус! Якщо такої немає, скинь три карти з руки, які сусід праворуч обере наосліп.`;
+    BUGArr.push(new DNEBUGCard("bug-butterfingers", "Жирні руки", "/img/bug/bug-butterfingers.png", BUTTERFINGERS_LONGLINE, "Проблема!", 0, 0, true));
+    const REWRITE_CHARACTER_LONGLINE = ``;
+    BUGArr.push(new DNEBUGCard("bug-rewrite-character-sheet", "Перепиши старий брудний аркуш персонажа", "/img/bug/bug-rewrite-character-sheet.png", REWRITE_CHARACTER_LONGLINE, "1UP", 0, 0, true));
+    BUGArr.push(new DNEBUGCard("bug-invoke-obscure-rules", "Застосуй незрозумілі правила", "/img/bug/bug-invoke-obscure-rules.png", "", "1UP", 0, 0, true));
+    BUGArr.push(new DNEBUGCard("bug-promise-gm-stop-talking", "Обіцяй майстру, що припиниш балачки про свого персонажа", "/img/bug/bug-promise-gm-stop-talking.png", "", "1UP", 0, 0, true));
+    BUGArr.push(new DNEBUGCard("bug-half-horse-will-traver", "Маю копита, вирушаю в мандрівку", "/img/bug/bug-half-horse-will-traver.png", "", "1UP", 0, 0, true));
+    BUGArr.push(new DNEBUGCard("bug-watch-japanese-monster-movies", "Заціни японське кіно про монстрів", "/img/bug/bug-watch-japanese-monster-movies.png", "", "1UP", 0, 0, true));
+    BUGArr.push(new DNEBUGCard("bug-betray-the-party", "Зрадь друзів", "/img/bug/bug-betray-the-party.png", "", "1UP", 0, 0, true));
+    BUGArr.push(new DNEBUGCard("bug-potion-of-general-studliness", "Зілля загальної крутизни", "/img/bug/bug-potion-of-general-studliness.png", "", "1UP", 0, 0, true));
+    BUGArr.push(new DNEBUGCard("bug-unnecessary-roughness", "Необґрунтована грубість", "/img/bug/bug-unnecessary-roughness.png", "", "1UP", 0, 0, true));
+    BUGArr.push(new DNEBUGCard("bug-threaten-switch-systems", "Погрожуй змінити ігрову систему", "/img/bug/bug-threaten-switch-systems.png", "", "1UP", 0, 0, true));
+    BUGArr.push(new DNEBUGCard("bug-show-up-early", "Прийди на гру раніше", "/img/bug/bug-show-up-early.png", "", "1UP", 0, 0, true));
+    BUGArr.push(new DNEBUGCard("bug-peek-scenario", "Запали сценарій", "/img/bug/bug-peek-scenario.png", REINCARNATE_LONGLINE, "1UP", 0, 0, true));
+    BUGArr.push(new DNEBUGCard("bug-hurt-gms-brain", "Винеси мізки майстру", "/img/bug/bug-hurt-gms-brain.png", REINCARNATE_LONGLINE, "1UP", 0, 0, true));
+    BUGArr.push(new DNEBUGCard("bug-remember-gms-birthday", "Згадай про днюху майстра", "/img/bug/bug-remember-gms-birthday.png", "", "1UP", 0, 0, true));
+    const SWITCH_CHARACTER_LONGLINE = "Не можеш грати цю карту, якщо ти гравець з найбільшою кількістю душ, або один з них.";
+    BUGArr.push(new DNEBUGCard("bug-switch-character-sheet", "Махнись аркушами персонажа", "/img/bug/bug-switch-character-sheet.png", SWITCH_CHARACTER_LONGLINE, "1UP", 0, 0, true));
+    BUGArr.push(new DNEBUGCard("bug-whine-at-gm", "Поплачся майстру", "/img/bug/bug-whine-at-gm.png", SWITCH_CHARACTER_LONGLINE, "1UP", 0, 0, true));
+    BUGArr.push(new DNEBUGCard("bug-buy-gm-new-miniatures", "Придбай майстру нові міньки", "/img/bug/bug-buy-gm-new-miniatures.png", "", "1UP", 0, 0, true));
+    BUGArr.push(new DNEBUGCard("bug-illustrate-your-character", "Намалюй свого персонажа", "/img/bug/bug-illustrate-your-character.png", "", "1UP", 0, 0, true));
+    const SELL_YOUR_MOTHER_LONGLINE = `Ну а що? Користі на Рейві від неї ніякої, а тут цілу душу дають! Половина нагороди за успішний Рейв, якщо комусь незрозуміло!`;
+    BUGArr.push(new DNEBUGCard("bug-sell-your-mother", "Продай свою матір!", "/img/bug/bug-sell-your-mother.png", SELL_YOUR_MOTHER_LONGLINE, "1UP", 0, 0, true));
+    const INEPT_LONGLINE = `До кінця свого наступного ходу ти не можеш використовувати переваги своїх Найомничків, навіть якщо зміниш їх. Тримай цю карту перед собою доки не перестане діяти.`;
+    BUGArr.push(new DNEBUGCard("bug-inept", "Дилетант", "/img/bug/bug-inept.png", INEPT_LONGLINE, "Проблема!", 0, 0, true));
+    const LOSE_YOUR_CREW_LONGLINE = `Скинь усіх своїх Найомничків. Втрать душу.`;
+    BUGArr.push(new DNEBUGCard("bug-lose-your-crew", "Втрать крюху!", "/img/bug/bug-lose-your-crew.png", LOSE_YOUR_CREW_LONGLINE, "Проблема!", 0, 0, true));
+    const CHANGE_CREW_LONGLINE = `Якщо в тебе немає Найомничків, ця проблема не діє. Якщо є, віддай їх гравцю з найменшою кількістю Найомничків(спір вирішуйте кидком d6). Натомість отримай від нього всіх його Найомничків, крім одного, на його вибір. Якщо в нього Найомничків не було, візьми випадкового з колоди.`;
+    BUGArr.push(new DNEBUGCard("bug-change-crew", "Махнись крюхами", "/img/bug/bug-change-crew.png", CHANGE_CREW_LONGLINE, "Проблема!", 0, 0, true));
+    const RATION_SPOILED_LONGLINE = `Діє на всіх гравців! Кожний, в кого є Найомнички, кидає d6. Той хто викинув менше інших, відправляє свого Найомничка за хавчиком. До кінця партії він не повернеться, скинь його.`;
+    BUGArr.push(new DNEBUGCard("bug-ration-spoiled", "Їжа зіпсована!", "/img/bug/bug-ration-spoiled.png", RATION_SPOILED_LONGLINE, "Проблема!", 0, 0, true));
+    const MISPLACE_YOUR_CREW_LONGLINE = `На початку кожного свого ходу ти кидаєш d6 і скидуєш стільки Найомничків, скільки випало. Повторюй до тих пір доки не втратиш їх усіх, або не викинеш 6, після цього проблема зникне. Тримай цю карту перед собою, доки не перестане діяти.`;
+    BUGArr.push(new DNEBUGCard("bug-misplace-your-crew", "Виродження крюхи", "/img/bug/bug-misplace-your-crew.png", MISPLACE_YOUR_CREW_LONGLINE, "Проблема!", 0, 0, true));
+    const YOU_ARE_NOT_SPECIAL_LONGLINE = `Скинь з гри одного Найомничка на вибір сусіда праворуч. Втрать душу.`;
+    BUGArr.push(new DNEBUGCard("bug-you-are-not-so-special", "Не такий вже ти і особливий", "/img/bug/bug-you-are-not-so-special.png", YOU_ARE_NOT_SPECIAL_LONGLINE, "Проблема!", 0, 0, true));
+    const TRULY_OBNOXIOUS_CURSE_LONGLINE = `Діє на всіх гравців! Скинь карту Звуку з найбільшим бонусом та карту, що дає тобі постійний бонус чи має особливу властивість, якщо в тебе така є. Так, це жорстко. Бажальне кільце тобі в поміч.`;
+    BUGArr.push(new DNEBUGCard("bug-truly-obnoxious-curse", "Нестерпно жахлива проблема!", "/img/bug/bug-truly-obnoxious-curse.png", TRULY_OBNOXIOUS_CURSE_LONGLINE, "Проблема!", 0, 0, true));
+    const SNAIL_MAIL_LONGLINE = `Якщо маєш карту, що дає тобі постійний бонус чи має особливі властивість, скинь її. Якщо нічого такого немає, твій одяг зникає, від сором'язливості ти автоматично провалюєш свій наступний кидок на змивку. Залиш цю карту перед собою, щоб не забути.`;
+    BUGArr.push(new DNEBUGCard("bug-snail-mail", "Одяг равлобився", "/img/bug/bug-snail-mail.png", SNAIL_MAIL_LONGLINE, "", 0, 0, true));
+    const BAG_OF_HOLDING_LONGLINE = `Скинь карту Звуку з бонусом 5 або більше. Якщо такої нема, до кінця гри тримай в руці на одну карту меньше. Бажальне кільце тобі в поміч...`;
+    BUGArr.push(new DNEBUGCard("bug-of-holding", "Баг утримання", "/img/bug/bug-of-holding.png", BAG_OF_HOLDING_LONGLINE, "Проблема!", 0, 0, true));
+    const LOSE_BIG_ITEM_LONGLINE = `Якщо маєш карту, що дає тобі постійний бонус чи має особливі властивість, скинь її. Якщо нічого такого нема, покажи всю руку та скинь карту з найбільшим бонусом.`;
+    BUGArr.push(new DNEBUGCard("bug-lose-big-item", "Втрать сильний айтем", "/img/bug/bug-lose-big-item.png", LOSE_BIG_ITEM_LONGLINE, "Проблема!", 0, 0, true));
+    const CHICKEN_ON_YOUR_HEAD_LONGLINE = `-1 до всіх твоїх кидків кубика. Будь-яка карта, що примушує тебе скинути карту з постійними бонусом чи особливою властивістю, забирає і курку. Якщо раптом твого Найомничка відправляють за хавчиком, скинь курку замість нього)))`;
+    BUGArr.push(new DNEBUGCard("bug-chicken-on-your-head", "Курка на башті", "/img/bug/bug-chicken-on-your-head.png", CHICKEN_ON_YOUR_HEAD_LONGLINE, "Проблема!", 0, 0, true));
+    const RAIN_OF_WEASELS_LONGLINE = `Діє на всіх гравців! Скиньте усіх своїх Найомничків у центр столу сорочкою догори. Кожен, починаючи з гравця, на якого була використана проблема, кидає d6 та забирає стільки Найомничків скільки випало, доки вони не закінчаться.`;
+    BUGArr.push(new DNEBUGCard("bug-rain-of-weasels", "Буде ласковий дощ", "/img/bug/bug-rain-of-weasels.png", RAIN_OF_WEASELS_LONGLINE, "Проблема!", 0, 0, true));
+    const CHANGE_EVERYTHING_LONGLINE = `Якщо в тебе є Клас, скинь його. Після чого візьми верхню карту з колоди Класів і застосуй її. Якщо в тебе є Найомнички, віддай їх гравцю з найменшою кількістю Найомничків(спір вирішуйте кидком d6). Натомість отримай від нього всіх його Найомничків, крім одного, на його вибір. Якщо в нього Найомничків не було, візьми випадкового з колоди.`;
+    BUGArr.push(new DNEBUGCard("bug-change-everything", "Зміни все", "/img/bug/bug-change-everything.png", CHANGE_EVERYTHING_LONGLINE, "Проблема!", 0, 0, true));
+    const LOSE_EVERYTHING_LONGLINE = `Скинь свій Клас. Якщо в тебе є Найомнички, роздай їх по одному кожному гравцю проти годинникової стрілки, починаючи з сусіда праворуч, а зайвих просто скинь. Втрать душу.`;
+    BUGArr.push(new DNEBUGCard("bug-loose-everything", "Втрать все", "/img/bug/bug-loose-everything.png", LOSE_EVERYTHING_LONGLINE, "Проблема!", 0, 0, true));
+    const MALIGN_MIRROR_LONGLINE = `Все викривлено! У своєму наступному Рейві(і тільки в ньому) ти не можеш використовувати переваги своїх Найомничків та Класу. А рівень очікувань визначатиме результат кидка d20 віднятий від 20. Знайдеш Бажальне Кільце до Рейву, зможеш зняти цю проблему.`;
+    BUGArr.push(new DNEBUGCard("bug-malign-mirror", "Криве дзеркало", "/img/bug/bug-malign-mirror.png", MALIGN_MIRROR_LONGLINE, "Проблема!", 0, 0, true));
+    const BAD_STEED_FEED_LONGLINE = `Схоже пара твоїх Найомничків прихворіли. У цій грі можеш на них не розраховувати. Скинь їх.`;
+    BUGArr.push(new DNEBUGCard("bug-bad-steed-feed", "Магічна хвороба", "/img/bug/bug-bad-steed-feed.png", BAD_STEED_FEED_LONGLINE, "Проблема!", 0, 0, true));
+    BUGArr.push(new DNEBUGCard("bug-lose-soul", "Втрать душу", "/img/bug/bug-lose-soul.png", "", "Проблема!", 0, 0, true));
+    BUGArr.push(new DNEBUGCard("bug-lose-two-souls", "Втрать дві душі", "/img/bug/bug-lose-two-souls.png", "", "Проблема!", 0, 0, true));
+    const VOODOO_DOLL_LONGLINE = `В тебе є три голки, кожна може змусити іншого гравця втратити душу, Найомничка або Клас. Скажи як ти їх використаєш, коли активуєш цю карту.`;
+    BUGArr.push(new DNEBUGCard("bug-voodoo-doll", "Кукла Вуду", "/img/bug/bug-voodoo-doll.png", VOODOO_DOLL_LONGLINE, "Проблема!", 0, 0, true));
+    const FLYPAPER_FLOORS_LONGLINE = `Діє на всіх гравців до самого кінця гри(якщо тільки не буде знято Бажальним Кільцем). У всіх -1 на Змивку.`;
+    BUGArr.push(new DNEBUGCard("bug-flypaper-floors", "Липка підлога", "/img/bug/bug-flypaper-floors.png", FLYPAPER_FLOORS_LONGLINE, "Проблема!", 0, 0, true));
+    const CLUMSY_LONGLINE = `В тебе -1 на Змивку, доки не позбудешся цієї проблеми.`;
+    BUGArr.push(new DNEBUGCard("bug-clumsy", "Крихкі кістки", "/img/bug/bug-clumsy.png", CLUMSY_LONGLINE, "Проблема!", 0, 0, true));
+    const CURSED_ITEM_LONGLINE = `Одна твоя карта, що дає тобі постійний бонус чи особливу властивість стає багнутою. Вона втрачає свій бонус і ти не можеш позбутися її, поки проблема не знята. Інша проблема може зняти баг(наприклад, "Коростяний порошок"). Бажальне кільце знімає баг з карти, повертаючи її бонус. Крім того, цей баг зникає, якщо ти обнулишся. Вчасно, правда?`;
+    BUGArr.push(new DNEBUGCard("bug-cursed-item", "Багнутий айтем", "/img/bug/bug-cursed-item.png", CURSED_ITEM_LONGLINE, "Проблема!", 0, 0, true));
+    BUGArr.push(new DNEBUGCard("bug-wandering-monster-2", "Бродяча тварина", "/img/bug/bug-wandering-monster-2.png", WANDERING_MONSTER_LONGLINE, "", 0, 0, true));
+    BUGArr.push(new DNEBUGCard("bug-wandering-monster-3", "Бродяча тварина", "/img/bug/bug-wandering-monster-3.png", WANDERING_MONSTER_LONGLINE, "", 0, 0, true));
+    BUGArr.push(new DNEBUGCard("bug-wandering-monster-4", "Бродяча тварина", "/img/bug/bug-wandering-monster-4.png", WANDERING_MONSTER_LONGLINE, "", 0, 0, true));
+    BUGArr.push(new DNEBUGCard("bug-wandering-monster-5", "Бродяча тварина", "/img/bug/bug-wandering-monster-5.png", WANDERING_MONSTER_LONGLINE, "", 0, 0, true));
+    BUGArr.push(new DNEBUGCard("bug-wandering-monster-6", "Бродяча тварина", "/img/bug/bug-wandering-monster-6.png", WANDERING_MONSTER_LONGLINE, "", 0, 0, true));
+    BUGArr.push(new DNEBUGCard("bug-wandering-monster-7", "Бродяча тварина", "/img/bug/bug-wandering-monster-7.png", WANDERING_MONSTER_LONGLINE, "", 0, 0, true));
+    BUGArr.push(new DNEBUGCard("bug-wandering-monster-8", "Бродяча тварина", "/img/bug/bug-wandering-monster-8.png", WANDERING_MONSTER_LONGLINE, "", 0, 0, true));
+    BUGArr.push(new DNEBUGCard("bug-wandering-monster-9", "Бродяча тварина", "/img/bug/bug-wandering-monster-9.png", WANDERING_MONSTER_LONGLINE, "", 0, 0, true));
+    const DOGPILE_LONGLINE_2 = `Грай у будь-який Рейв(можна у свій). Потім решта гравців може скинути по одній карті Звуку, щоб запросити на Рейв по монстру за кожну. Склади їх рівні з очікуваннями. При невдачі гравець робить окремі кидки змивки для кожного.`;
+    BUGArr.push(new DNEBUGCard("bug-dogpile-2", "Купа мала", "/img/bug/bug-dogpile-2.png", DOGPILE_LONGLINE_2, "", 0, 0, true));
+    BUGArr.push(new DNEBUGCard("bug-monster-mash-2", "Тому що ми банда!", "/img/bug/bug-monster-mash-2.png", MONSTER_MASH_LONGLINE, "", 0, 0, true));
+    const SEMIFINAL_STRIKE_LONGLINE = `Обери одну карту звуку в твоєму лайнапі, її бонус потроюється. Після Рейву кинь d6. Якщо випало 6, поверни її разом з однією картою, що забираєш після Рейву зазвичай. Разова карта.`;
+    BUGArr.push(new DNEBUGCard("bug-semi-final-drop", "Передостанній дроп", "/img/bug/bug-semi-final-drop.png", SEMIFINAL_STRIKE_LONGLINE, "", 0, 0, true));
+    BUGArr.push(new DNEBUGCard("bug-lucky-talisman-2", "Талісман вдачі", "/img/bug/bug-lucky-talisman-2.png", LUCKY_TALISMAN_LONGLINE, "", 0, 0, true)); // 300
+    BUGArr.push(new DNEBUGCard("bug-lucky-talisman-3", "Талісман вдачі", "/img/bug/bug-lucky-talisman-3.png", LUCKY_TALISMAN_LONGLINE, "", 0, 0, true)); // 300
+    BUGArr.push(new DNEBUGCard("bug-wishing-ring-2", "Бажальне кільце", "/img/bug/bug-wishing-ring-2.png", WISHING_RING_LONGLINE, "", 0, 0, true)); // 500
+    BUGArr.push(new DNEBUGCard("bug-wishing-ring-3", "Бажальне кільце", "/img/bug/bug-wishing-ring-3.png", WISHING_RING_LONGLINE, "", 0, 0, true)); // 500
+    BUGArr.push(new DNEBUGCard("bug-wishing-ring-4", "Бажальне кільце", "/img/bug/bug-wishing-ring-4.png", WISHING_RING_LONGLINE, "", 0, 0, true)); // 500
+    BUGArr.push(new DNEBUGCard("bug-loaded-die-2", "Читерський кубик", "/img/bug/bug-loaded-die-2.png", LOADED_DIE_LONGLINE, "", 0, 0, true)); // 500
+    BUGArr.push(new DNEBUGCard("bug-loaded-die-3", "Читерський кубик", "/img/bug/bug-loaded-die-3.png", LOADED_DIE_LONGLINE, "", 0, 0, true)); // 500
+    const ANNIHILATION_LONGLINE = `Грай цю карту будь-якої миті, щоб перманентно прибрати будь-яку карту з гри. Вона не йде у скид.. сховай її назад у коробку та забудь про неї.<br>Ціль має бути зіграна, коли ти використовуєш Анігіляцію на неї. Як тільки суперник зіграв її, вона була анігільована та не мала жодного ефекту.`;
+    BUGArr.push(new DNEBUGCard("bug-annihilation", "Анігіляція", "/img/bug/bug-annihilation.png", ANNIHILATION_LONGLINE, "", 0, 0, true));
+    BUGArr.push(new DNEBUGCard("bug-reloaded-die-2", "Перечитерський кубик", "/img/bug/bug-reloaded-die-2.png", RELOADED_DIE_LONGLINE, "", 0, 0, true)); // 300
+    const GREEN_CHAOS_LONGLINE = `Використай в будь-який Рейв. Отримай вдвічі більше карт Звуку за успіх.`;
+    BUGArr.push(new DNEBUGCard("bug-green-chaos", "Смарагд хаосу", "/img/bug/bug-green-chaos.png", GREEN_CHAOS_LONGLINE, "", 0, 0, true));
+
+    return BUGArr;
+}
+
+const DNEBUGArr = initBUGArr();
+
 const DNESecretCards = {
     monsters: DNEMonsterArr,
+    bug: DNEBUGArr,
     smiths: [],
     mafia: []
 }

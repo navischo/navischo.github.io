@@ -31,7 +31,7 @@
     border: 0;
     min-height: 35px;
     line-height: 20px;
-    transition: background 0.2s;
+    transition: background 0.3s ease-in;
     z-index: 1;
 }
 
@@ -52,6 +52,7 @@
     bottom: 0;
     clip-path: var(--clip);
     z-index: -1;
+    transition: background 0.3s ease-in;
 }
 
 .cybr-btn:before {

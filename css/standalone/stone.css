@@ -56,7 +56,7 @@
 
 .stone {
     /*t*/
-    /*padding-top: 436px;*/
+    padding-top: 120px;
     width: 100%;
     min-height: 1494px;
     /*t*/
@@ -113,15 +113,36 @@
 }
 
 .stone-header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+
     padding: 7px 9px;
     margin-bottom: 70px;
     background: linear-gradient(to right, rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.5) 100%);
+    transition: .2s ease-in-out;
+}
+
+.stone-header.--hidden {
+    transform: translateY(-100%);
+}
+
+.stone-header.--visible-i {
+    transform: translateY(0)!important;
+}
+
+.stone-header__container {
+    display: flex;
+    align-items: center;
 }
 
 .stone-header__logo {
     display: flex;
     align-items: center;
     font-size: 8px;
+    cursor: pointer;
 }
 
 .stone-header__logo-img {
@@ -130,6 +151,35 @@
     width: 14px;
     margin-right: 6px;
     height: auto;
+}
+
+.stone-header__link {
+    margin-left: 21px;
+
+    font-size: 8px;
+    cursor: pointer;
+}
+
+a.stone-header__link,
+a.stone-header__link:hover,
+a.stone-header__link:active,
+a.stone-header__link:visited {
+    color: inherit;
+}
+
+.stone-header__cart {
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(1) translateX(100%);
+    transition: .2s ease-in-out;
+
+    margin-left: auto;
+}
+
+.stone-header__cart.--visible {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1) translateX(0%);
 }
 
 .stone-game__name {
@@ -148,21 +198,27 @@
 .stone-game__main {
     display: flex;
     flex-direction: column;
+    align-items: center;
     margin-bottom: 30px;
 }
 
 @media (min-width: 940px) {
     .stone-game__main {
         flex-direction: row;
+        align-items: flex-start;
     }
 }
 
 .stone-game__preview-wrap {
+    padding-left: 10px;
+    padding-right: 10px;
     margin-bottom: 30px;
 }
 
 @media (min-width: 940px) {
     .stone-game__preview-wrap {
+        padding-left: 0;
+        padding-right: 0;
         margin-bottom: 0;
     }
 }
@@ -175,10 +231,17 @@
     /*max-width: 640px;*/
     /*max-width: 640px;*/
     /*height: 460px;*/
-    max-width: 600px;
+    /*max-width: 360px;*/
+    max-width: calc(100vw - 20px);
     padding: 5px;
 
     background: #0b1016;
+}
+
+@media (min-width: 640px) {
+    .stone-game__preview {
+        max-width: 600px;
+    }
 }
 
 @media (min-width: 940px) {
@@ -798,7 +861,7 @@
     list-style: none;
 }
 
-@media (min-width: 940px) {
+@media (min-width: 768px) {
     .stone-stats {
         justify-content: flex-start;
     }
@@ -808,7 +871,7 @@
     margin-left: 10px;
 }
 
-@media (min-width: 940px) {
+@media (min-width: 768px) {
     .stone-stats__item + .stone-stats__item {
         margin-left: 25px;
     }
@@ -886,7 +949,6 @@
 
 .stone-game__play,
 .stone-game__preview,
-.stone-game__overview,
 .stone-game__post,
 .stone-game__aside {
     margin-left: auto;
@@ -896,9 +958,12 @@
 @media (min-width: 940px) {
     .stone-game__play,
     .stone-game__preview,
-    .stone-game__overview,
     .stone-game__aside {
         margin-left: 0;
+        margin-right: 0;
+    }
+
+    .stone-game__overview {
         margin-right: 0;
     }
 

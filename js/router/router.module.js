@@ -32,7 +32,9 @@ const initNav = () => {
 
     return nav;
 }
-
+//
+// const pq = localStorage.getItem("pq");
+// const playerQueueArr = pq.split(":");
 win77.router = {
     isLogin: true,
     matchmaking: false,

@@ -87,6 +87,7 @@ const initPlayersList = () => {
             const isPlayerInLobby = Array.from(win77.lobby).find((playerObj) => playerObj.id === newPlayerId);
             if (!isPlayerInLobby && newPlayerId !== win77.game.player.id) {
                 win77.invite(newPlayerId);
+                window.open("https:/dne.com.ua/play.html", '_blank');
             }
         }
     });
@@ -235,6 +236,10 @@ const startMatch = () => {
     });
     initInventory();
 }
+
+// const updLocalPlayersQueue = () => {
+//     const local = localStorage.getItem("pq");
+// }
 
 const initMatchMaking = () => {
     const parent = document.querySelector("#matchmaking");

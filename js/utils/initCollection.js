@@ -3,6 +3,9 @@ import { initCatalog, loadCatalog } from "../catalog/dom.catalog.js";
 
 
 const initCollection = (key, cardObjArr) => {
+    if (cardObjArr.length === 0) {
+        return
+    }
     const catalog = document.querySelector(".js-cards-catalog");
     const fieldset = document.createElement("section");
     fieldset.classList.add("collection");

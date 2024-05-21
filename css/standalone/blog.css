@@ -2643,6 +2643,16 @@ html:lang(ar) .l-footer__cookie-declaration span:after, html:lang(ar) .l-footer_
     }
 }
 
+.l-single-news__article h2 {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.l-single-news__article p {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
 .l-single-news__article {
     max-width: calc(100% - 208px);
     padding-top: 28px;
@@ -3441,6 +3451,7 @@ img[data-crystal-link] {
 
 .l-news__latest-newses .c-news__content h2 span {
     background: none;
+    white-space: nowrap;
 }
 
 .l-news__latest-newses {
