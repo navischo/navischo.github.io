@@ -145,4 +145,4 @@ const initKeyboard = () => {
     initKeyMap();
 }
 
-export { initKeyboard };
+export { initKeyboard, KEYS_CALLBACKS };

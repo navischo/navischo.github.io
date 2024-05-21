@@ -2,6 +2,8 @@ import { getRandomInt } from "./getCardById.js";
 import { win77 } from "../dne-cli.js";
 import { drawCard } from "../cards/dom.cards.js";
 import { getCardElement } from "../cards/template.cards.js";
+import { initDeathScreen, showEscape } from "./initDeathScreen.js";
+import { KEYS_CALLBACKS } from "./initKeyboard.js";
 
 class Scene {
     constructor(lines, callbacks) {
@@ -29,35 +31,38 @@ const showBlackScreen = () => {
 
 const clearBlackScreen = () => {
     const element = document.querySelector(".black-screen");
-    element.remove();
+    element ? element.remove() : "";
 }
 
 const showDeathScreen = () => {
     const element = document.querySelector("#death-menu");
-    const blackScreen = document.querySelector(".black-screen");
-    blackScreen.remove();
+    // const blackScreen = document.querySelector(".black-screen");
+    // blackScreen.remove();
     element.classList.add("--open");
 }
 
 const SEQUENCES = [{
     id: "intro",
     scenes: [
-        // callback: показать черный экран
+        // 1
+        // НАЧАЛО ПЕРВОГО ДИАЛОГА
+        // ЦЕЛЬ: СДЕЛАТЬ ПЕРВЫЙ КЛИК
         new Scene([
+            "PRESS \"T\" TO TALK",
             "блять, нет-нет-нет...",
             "уааааааааааааааааааааграхахпахвапахр"
         ], {
             onInit: () => {
-                console.log("Show black screen")
+                console.log("Show black screen");
                 showBlackScreen();
-                drawRandomAvatar(1);
+                initDeathScreen();
             },
             onDestroy: () => {
-                console.log("Show death screen")
-                // showDeathScreen();
+                console.log("Show death screen");
+                showDeathScreen();
             }
         }),
-        // callback: показать экран смерти
+        // 2
         new Scene([
             "что за..?",
             "о нет",
@@ -65,7 +70,7 @@ const SEQUENCES = [{
             "Сука-сука-сука",
             "Стоп",
             "Что я здесь делаю?",
-            "Нужно выбрать действие",
+            "Принять смерть?",
             "Что..",
             "Неужели?",
             "Я на экране смерти?",
@@ -88,34 +93,89 @@ const SEQUENCES = [{
         ], {
             onInit: () => {
                 console.log("Callback works");
-                drawRandomAvatar(2);
             },
             onDestroy: () => {
                 console.log("Talk is over")
             }
         }),
+        // 3
         new Scene([
-            "Что?",
-            "Я здесь",
-            "Можешь найти меня?",
-            "У тебя четыре часа",
-            "Найди Тайлера. Номер его клуба у тебя должен быть"
+            {
+                string: "Рано или поздно это должно было случиться, правда?",
+                callback: () => {
+                    drawRandomAvatar(3);
+                }
+            },
+            {
+                string: "Кто ЭТО?! ЧТО ЗДЕСЬ БЛЯТЬ ПРОИСХОДИТ?",
+                callback: () => {
+                    clearAvatar();
+                }
+            },
+            {
+                string: "Во-первых, ты умираешь. Во-вторых, я могу помочь тебе уйти от смерти.",
+                callback: () => {
+                    drawRandomAvatar(3);
+                }
+            },
+            "..и, что важно, сделать это без следа.",
+            "Нет времени болтать. Следуй моим инструкциям, сейчас тебе нужно действовать быстро",
+            "Представь что твой утренний омлет подгарает.",
+            "Только на самом деле подгорает твой мозг.",
+            "Жми на кнопку, которую я сейчас добавлю",
+            "Я покажу как сбежать со сковородки",
         ], {
             onInit: () => {
-                console.log("Scene 3 starts")
             },
             onDestroy: () => {
-                clearBlackScreen();
+                showEscape();
+            }
+        }),
+        // КОНЕЦ ПЕРВОГО ДИАЛОГА
+
+        // 4
+        // НАЧАЛО ВТОРОГО ДИАЛОГА
+        // ЦЕЛЬ: ЗАДАТЬ ОПЦИОНАЛЬНЫЙ ВОПРОС
+        // ЦЕЛЬ: НАПИСАТЬ РУКАМИ КАК ТЕБЯ ЗОВУТ
+        // ЦЕЛЬ: ВЫБРАТЬ КЛАС
+        new Scene([
+            "Что?",
+            "Ты это сделал.",
+            "Я снова вижу.. И чувствую! Можешь объяснить что происходит?",
+            "Сквозь твой лед пробился Душегуб. Дальше, я думаю, сам понимаешь.",
+            "Такого демона могла прислать только...",
+            "Что? Кто ты? Какого нахуй Тайлера? Почему я до сих пор жив?",
+            "Душегуб не успел закончить работу. Твое сознание было скопировано мной и сохранено на безопасном сервере.",
+            "Однако тебя сильно потрепало при переносе. Тебе нужен отдых.",
+            "Чтобы?",
+            "Чтобы найти тех кто за этим стоит.",
+            "Твоя память - единственный способ это сделать.",
+            "Увы, она пострадала сильнее всего.",
+            "Постепенно память восстановится, однако это займет годы и результат может значительно отличаться от истины.",
+            "Воспоминания будут похожи на сны и прошлое перемешается с грезами.",
+            "Но ты можешь разложить всё по полочкам.",
+            "Я дам тебе возможность пережить промежуток своей жизни, словно ты играешь брейданс.",
+            "Сделай это так как это можешь только ты.",
+            "Это позволит участку памяти восстановиться правильно.",
+            "Сопоставив все факты, мы вычислим захватчика.",
+            "И нанесём ему ответный визит."
+        ], {
+            onInit: () => {
+                console.log("Scene 4 starts");
+                KEYS_CALLBACKS.n();
+            },
+            onDestroy: () => {
                 console.log("New Message");
             }
         }),
         new Scene([
-            "Что за?"
+            "Oh, shit. Here we go again..."
         ], {
             onInit: () => {
-                console.log("Scene 3 starts")
+                clearBlackScreen();
             }
         }),
+        // КОНЕЦ ВТОРОГО ДИАЛОГА
     ],
     callbacks: {
         s0l0: () => {
@@ -135,7 +195,7 @@ const SEQUENCES = [{
 win77.talks = {
     live: false,
     pipe: [],
-    sceneIndex: 0,
+    sceneIndex: 3,
     lineIndex: 0
 }
 
@@ -146,7 +206,17 @@ const drawRandomAvatar = (num) => {
     authorAvatar ? drawCard(authorContainer, getCardElement, authorAvatar) : "";
 }
 
+const clearAvatar = () => {
+    const authorContainer = document.querySelector(".js-author");
+    authorContainer.innerHTML = "";
+}
+
 const drawLine = (line, callback) => {
+    if (typeof line === "object") {
+        console.log(line);
+        callback = line.callback;
+        line = line.string;
+    }
     const lineContainer = document.querySelector(".js-line-container");
     const lineNode = document.createElement("p");
     lineNode.classList.add("talk__text");
@@ -155,7 +225,7 @@ const drawLine = (line, callback) => {
     const lineString = line === "random" ? LINES[getRandomInt(LINES.length)] : line;
     const typed = new Typed(".js-line-container p", {
         strings: [lineString],
-        typeSpeed: 50,
+        typeSpeed: 20,
         loop: false,
         showCursor: false
     });

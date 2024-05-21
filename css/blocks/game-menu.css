@@ -78,6 +78,10 @@
     opacity: .5;
 }
 
+.--death .game-menu__list {
+    padding-top: 350px;
+}
+
 .game-menu__list-item {
     position: relative;
     z-index: 1;
@@ -102,6 +106,10 @@
     border-radius: 2px;
     clip-path: var(--ui-notch-path);
     transform: translateY(0);
+}
+
+.game-menu__list-item.--hide {
+    display: none;
 }
 
 .game-menu__list-item + .game-menu__list-item {
@@ -198,6 +206,10 @@
 @media (min-width: 1960px) {
     .game-menu__list {
         padding-top: 350px;
+    }
+
+    .--death .game-menu__list {
+        padding-top: 450px;
     }
 
     .game-menu .cybr-title {

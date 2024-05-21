@@ -14,6 +14,13 @@
     /*logo cs*/
 }
 
+.game-menu.--death .cybr-title {
+    top: 10px;
+    font-size: 17.5em;
+    color: #7e0000;
+    text-shadow: 0 0 2px black, 4px 5px 0 #d30101;
+}
+
 .cybr-title a,
 .cybr-title a:hover,
 .cybr-title a:visited,
