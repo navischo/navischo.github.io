@@ -74,13 +74,26 @@
 }
 
 .talk__text {
+    /*width: 100%;*/
     margin: 0;
 
     font-family: "Press Start 2p", "JetBrains Mono", monospace;
     font-size: 34px;
     line-height: 1.5;
     text-shadow: 10px 10px 0 rebeccapurple;
+
+    /*overflow: hidden;*/
 }
+
+/*.--typing-animation {*/
+/*    animation: typing 8s steps(60, end);*/
+/*}*/
+
+/*@keyframes typing {*/
+/*    0% {width: 0;}*/
+/*    50% {width: 0;}*/
+/*    100% {width: 100%;}*/
+/*}*/
 
 .talk__right {
     position: absolute;

@@ -27,6 +27,11 @@ const showBlackScreen = () => {
     body.appendChild(element);
 }
 
+const clearBlackScreen = () => {
+    const element = document.querySelector(".black-screen");
+    element.remove();
+}
+
 const showDeathScreen = () => {
     const element = document.querySelector("#death-menu");
     const blackScreen = document.querySelector(".black-screen");
@@ -90,12 +95,27 @@ const SEQUENCES = [{
             }
         }),
         new Scene([
-            "Что?"
+            "Что?",
+            "Я здесь",
+            "Можешь найти меня?",
+            "У тебя четыре часа",
+            "Найди Тайлера. Номер его клуба у тебя должен быть"
+        ], {
+            onInit: () => {
+                console.log("Scene 3 starts")
+            },
+            onDestroy: () => {
+                clearBlackScreen();
+                console.log("New Message");
+            }
+        }),
+        new Scene([
+            "Что за?"
         ], {
             onInit: () => {
                 console.log("Scene 3 starts")
             }
-        })
+        }),
     ],
     callbacks: {
         s0l0: () => {
@@ -127,8 +147,20 @@ const drawRandomAvatar = (num) => {
 }
 
 const drawLine = (line, callback) => {
-    const lineContainer = document.querySelector(".js-line");
-    lineContainer.textContent = line === "random" ? LINES[getRandomInt(LINES.length)] : line;
+    const lineContainer = document.querySelector(".js-line-container");
+    const lineNode = document.createElement("p");
+    lineNode.classList.add("talk__text");
+    lineContainer.innerHTML = "";
+    lineContainer.appendChild(lineNode);
+    const lineString = line === "random" ? LINES[getRandomInt(LINES.length)] : line;
+    const typed = new Typed(".js-line-container p", {
+        strings: [lineString],
+        typeSpeed: 50,
+        loop: false,
+        showCursor: false
+    });
+    // const lineContainer = document.querySelector(".js-line");
+    // lineContainer.textContent = line === "random" ? LINES[getRandomInt(LINES.length)] : line;
 
     if (callback) {
         callback();
