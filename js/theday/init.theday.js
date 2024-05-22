@@ -121,4 +121,4 @@ const drawTheday = () => {
     parent.appendChild(getSquadUnitElement());
 }
 
-export { drawTheday, initTheday };
+export { drawTheday, initTheday, getPortalElement };

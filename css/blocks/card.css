@@ -84,6 +84,11 @@
     overflow: hidden;
 }
 
+.card.--animation-take {
+    transform: translate(0, 500px);
+    transition: .2s ease-in;
+}
+
 .card.--smith {
     visibility: hidden;
     opacity: 0;

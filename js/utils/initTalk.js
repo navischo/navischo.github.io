@@ -4,6 +4,9 @@ import { drawCard } from "../cards/dom.cards.js";
 import { getCardElement } from "../cards/template.cards.js";
 import { initDeathScreen, showEscape } from "./initDeathScreen.js";
 import { KEYS_CALLBACKS } from "./initKeyboard.js";
+import { appendAvatarCards } from "./appendAvatarCards.js";
+import { getPortalElement } from "../theday/init.theday.js";
+import { updExecutive } from "../hud/table.hud.js";
 
 class Scene {
     constructor(lines, callbacks) {
@@ -23,10 +26,13 @@ const LINES = [
 ];
 
 const showBlackScreen = () => {
-    const element = document.createElement("div");
-    const body = document.querySelector("body");
-    element.classList.add("black-screen");
-    body.appendChild(element);
+    const blackScreen = document.querySelector(".black-screen");
+    if (!blackScreen) {
+        const element = document.createElement("div");
+        const body = document.querySelector("body");
+        element.classList.add("black-screen");
+        body.appendChild(element);
+    }
 }
 
 const clearBlackScreen = () => {
@@ -41,6 +47,43 @@ const showDeathScreen = () => {
     element.classList.add("--open");
 }
 
+const OPTIONS_DATA = [
+    {
+        option: "Кто ты?",
+        answer: "Этот вопрос не имеет смысла пока твоя память в зубах Душегуба."
+    },
+    {
+        option: "Зачем я тебе?",
+        answer: "Скажу просто. У нас общий враг. И он могущественный."
+    },
+    {
+        option: "Спаси моё тело!",
+        answer: "Слишком поздно."
+    },
+]
+
+const showOptionsBtns = () => {
+    const element = document.querySelector(".js-options-wrap");
+    OPTIONS_DATA.forEach((data) => {
+        const optionBtn = document.createElement("button");
+        optionBtn.classList.add("talk__optionsItem");
+        optionBtn.classList.add("game-menu__list-item");
+        optionBtn.textContent = data.option;
+        optionBtn.addEventListener("click", () => {
+            drawLine(data.answer);
+            element.innerHTML = "";
+        });
+        element.appendChild(optionBtn);
+    });
+
+    element.classList.add("--visible");
+}
+
+const clearOptionsBtns = () => {
+    const parent = document.querySelector(".js-options-wrap");
+    parent.innerHTML = "";
+}
+
 const showAnswerInput = () => {
     const element = document.querySelector(".js-answer-wrap");
     const answerInput = document.querySelector(".js-answer-input");
@@ -49,13 +92,29 @@ const showAnswerInput = () => {
 
     answerBtn.addEventListener("click", () => {
         hideAnswerInput();
-        drawLine(answerInput.value);
+        win77.game.player.id = `${answerInput.value}`;
+        drawLine(`Зови меня ${win77.game.player.id}`);
+        updExecutive();
     });
 }
 
 const hideAnswerInput = () => {
     const element = document.querySelector(".js-answer-wrap");
     element.classList.remove("--visible");
+}
+
+const showAvatarSelect = () => {
+    const parent = document.querySelector(".js-talk-select");
+    parent.innerHTML = `
+        <div class="swiper avatar-select">
+            <div id="avatar-select" class="swiper-wrapper"></div>
+        </div>
+    `;
+    appendAvatarCards();
+    win77.swiperAvatar = new Swiper(".swiper.avatar-select", {
+        effect: "cards",
+        grabCursor: true,
+    });
 }
 
 const SEQUENCES = [{
@@ -83,33 +142,35 @@ const SEQUENCES = [{
         new Scene([
             "что за..?",
             "о нет",
-            "Неужели меня поджарили?",
+            "Меня поджарили?",
             "Сука-сука-сука",
             "Стоп",
             "Что я здесь делаю?",
             "Принять смерть?",
             "Что..",
             "Неужели?",
-            "Я на экране смерти?",
-            "Он правда так выглядит?",
+            "Я на экране смерти...",
+            "Он существует?",
             "Нет-нет-нет",
             "Это не происходит",
-            "В жизни нет экрана смерти",
-            "Это всё не по-настоящему",
+            "Экрана смерти не существует",
+            "Это всё не реально",
             "Разве что...",
-            "Кто-то создал энграмму моего сознания пока мой мозг окончательно не превратился в кисель.",
-            "Что он явно сделает в ближайшие доли секунд, это уж точно. Вот только здесь они покажутся вечностью..",
+            "Я стал энграммой.",
+            "Пока мой мозг окончательно не превратился в кисель.",
+            "Что он явно сделает в ближайшие секунды.",
+            "Вот только здесь это считай вечность..",
             "Выходит я и есть...",
-            "Боже",
             "Блять!",
             "Нееет",
-            "Я - энграмма!",
+            "Вечность на экране смерти.",
             "Сука..",
             "Ебанная энграмма"
             // callback: прислать сообщение в нокиа
         ], {
             onInit: () => {
                 console.log("Callback works");
+                showBlackScreen();
             },
             onDestroy: () => {
                 console.log("Talk is over")
@@ -120,42 +181,92 @@ const SEQUENCES = [{
             {
                 string: "Рано или поздно это должно было случиться, правда?",
                 callback: () => {
-                    drawRandomAvatar(3);
+                    // drawRandomAvatar(3);
                 }
             },
             {
                 string: "Кто ЭТО?! ЧТО ЗДЕСЬ БЛЯТЬ ПРОИСХОДИТ?",
                 callback: () => {
-                    clearAvatar();
+                    // clearAvatar();
                 }
             },
             {
                 string: "Во-первых, ты умираешь. Во-вторых, я могу помочь тебе уйти от смерти.",
                 callback: () => {
-                    drawRandomAvatar(3);
+                    // drawRandomAvatar(3);
                 }
             },
             "..и, что важно, сделать это без следа.",
-            "Нет времени болтать. Следуй моим инструкциям, сейчас тебе нужно действовать быстро",
+            {
+                string: "Погоди минутку...",
+                callback: () => {
+                    // вставить три опциональных строчки диалога
+                    showOptionsBtns();
+                }
+            },
+            {
+                string: "Нет времени болтать. Следуй моим инструкциям, сейчас тебе нужно действовать быстро.",
+                callback: () => {
+                    clearOptionsBtns();
+                }
+            },
             "Представь что твой утренний омлет подгарает.",
             "Только на самом деле подгорает твой мозг.",
-            "Жми на кнопку, которую я сейчас добавлю",
-            "Я покажу как сбежать со сковородки",
+            "Прыгай в портал, который я сейчас создам.",
+            "И продолжай говорить. Не отключайся.",
+            "Я покажу как сбежать со сковородки.",
+            "Я ничего не вижу.. и не чувствую! Можешь объяснить что происходит?",
+            "Сквозь твой лед пробился Душегуб. Дальше, я думаю, сам понимаешь.",
+            "Ты сейчас в том самом моменте между жизнью и смертью.",
+            "Без аватар ты можешь воспринимать только текст.",
+            "Так что читай внимательно.",
+            "Такого демона могла прислать только...",
+            "Почему я до сих пор жив?",
+            "Душегуб не успел закончить работу.",
+            "Мой антивирус замедлил его и выиграл время для этого разговора.",
+            "Теперь к делу.",
+            "Я могу скопировать то что от тебя осталось и укрыть на безопасном сервере.",
+            "Чтобы?",
+            "Чтобы найти тех кто за этим стоит.",
+            "Твоя память - единственный способ это сделать.",
+            "Увы, её уже сильно потрепало.",
+            "Постепенно она восстановится, однако это займет годы и результат может значительно отличаться от истины.",
+            "Воспоминания будут похожи на сны и прошлое перемешается с грезами.",
+            "Но ты ещё можешь успеть разложить всё по полочкам.",
+            "Я дам тебе возможность переживать отрезки своей жизни, словно ты играешь брейданс.",
+            "Сделай это так как это можешь только ты.",
+            "Это позволит участку памяти восстановиться правильно.",
+            "Сопоставив все факты, мы вычислим захватчика.",
+            "И нанесём ему ответный визит.",
+            "Ты этого хочешь.",
+            "Я этого хочу.",
+            "Ситуация вин-вин.",
+            "Т.е. ты достигаешь своей цели и делаешь это моими мозгами?",
+            {
+                string: "Выбор за тобой. Никто не запрещает тебе остаться.",
+                callback: () => {
+                    // вставить карту портала getPortalElement
+                    drawPortalCard();
+                }
+            },
+            "Oh, shit. Here we go again..."
+
         ], {
             onInit: () => {
+                console.log("Scene 4 starts");
+                showBlackScreen();
             },
             onDestroy: () => {
-                showEscape();
+                console.log("New Message");
             }
         }),
-        // КОНЕЦ ПЕРВОГО ДИАЛОГА
-
-        // 4
-        // НАЧАЛО ВТОРОГО ДИАЛОГА
-        // ЦЕЛЬ: ЗАДАТЬ ОПЦИОНАЛЬНЫЙ ВОПРОС
-        // ЦЕЛЬ: НАПИСАТЬ РУКАМИ КАК ТЕБЯ ЗОВУТ
-        // ЦЕЛЬ: ВЫБРАТЬ КЛАС
         new Scene([
+            "У тебя получилось!",
+            "Как себя чувствуешь?",
+            "Я знаю..",
+            "Я нихуя не знаю!",
+            "Это было ожидаемо.",
+            "Начни с чего-то простого.",
             {
                 string: "Как тебя зовут?",
                 callback: () => {
@@ -163,38 +274,39 @@ const SEQUENCES = [{
                 }
             },
             "Что?",
-            "Ты это сделал.",
-            "Я снова вижу.. И чувствую! Можешь объяснить что происходит?",
-            "Сквозь твой лед пробился Душегуб. Дальше, я думаю, сам понимаешь.",
-            "Такого демона могла прислать только...",
-            "Что? Кто ты? Какого нахуй Тайлера? Почему я до сих пор жив?",
-            "Душегуб не успел закончить работу. Твое сознание было скопировано мной и сохранено на безопасном сервере.",
-            "Однако тебя сильно потрепало при переносе. Тебе нужен отдых.",
-            "Чтобы?",
-            "Чтобы найти тех кто за этим стоит.",
-            "Твоя память - единственный способ это сделать.",
-            "Увы, она пострадала сильнее всего.",
-            "Постепенно память восстановится, однако это займет годы и результат может значительно отличаться от истины.",
-            "Воспоминания будут похожи на сны и прошлое перемешается с грезами.",
-            "Но ты можешь разложить всё по полочкам.",
-            "Я дам тебе возможность пережить промежуток своей жизни, словно ты играешь брейданс.",
-            "Сделай это так как это можешь только ты.",
-            "Это позволит участку памяти восстановиться правильно.",
-            "Сопоставив все факты, мы вычислим захватчика.",
-            "И нанесём ему ответный визит."
+            "Окей, допустим.",
+            "Просканировать твою энграмму практически невозможно.",
+            "Всё намертво закодировано.",
+            "И мои скрипты здесь ни при чем.",
+            "Похоже с Душегубом фоном работал Кролик.",
+            "Тот кто их отправил знал своё дело.",
+            "Я помню своё имя.. что было сегодня.",
+            "Или это было в прошлом месяце?",
+            "Всё словно в блендере..",
+            "Сука",
+            "Я ничего не помню...",
+            "Помни что так не будет вечно.",
+            "Твоя память вернется.",
+            "Я помогу тебе вспомнить всё.",
+            "Просто продолжай говорить.",
+            "Похоже твои данные так перемешались, что я даже не могу восстановить твою внешность.",
+            "Тут нам остается только полагаться на твою интуицию.",
+            {
+                string: "Кто из них ты?",
+                callback: () => {
+                    // выбрать аватар
+                    showAvatarSelect();
+                }
+            },
+            "Окей, у тебя теперь есть имя и аватар.",
+            "Этого достаточно чтобы сохраниться на сервере.",
+            "Когда мы встретимся снова, ты будешь знать больше.",
+            "Не теряйся."
         ], {
             onInit: () => {
-                console.log("Scene 4 starts");
-                KEYS_CALLBACKS.n();
+
             },
             onDestroy: () => {
-                console.log("New Message");
-            }
-        }),
-        new Scene([
-            "Oh, shit. Here we go again..."
-        ], {
-            onInit: () => {
                 clearBlackScreen();
             }
         }),
@@ -218,7 +330,7 @@ const SEQUENCES = [{
 win77.talks = {
     live: false,
     pipe: [],
-    sceneIndex: 3,
+    sceneIndex: 0,
     lineIndex: 0
 }
 
@@ -227,6 +339,25 @@ const drawRandomAvatar = (num) => {
     authorContainer.innerHTML = "";
     const authorAvatar = Array.from(win77.game.catalog.avatar)[num];
     authorAvatar ? drawCard(authorContainer, getCardElement, authorAvatar) : "";
+}
+
+const drawPortalCard = () => {
+    const authorContainer = document.querySelector(".js-author");
+    const portalElement = getPortalElement();
+    portalElement.style.display = "block";
+    authorContainer.innerHTML = "";
+    authorContainer.appendChild(portalElement);
+
+    portalElement.addEventListener("click", (e) => {
+        const parent = document.querySelector("#death-menu");
+        parent.classList.remove("--open");
+        authorContainer.innerHTML = "";
+        leaveTalk();
+        win77.talks.sceneIndex = win77.talks.sceneIndex + 1;
+        win77.startCutscene("hyrool");
+        KEYS_CALLBACKS.n();
+        clearBlackScreen();
+    })
 }
 
 const clearAvatar = () => {

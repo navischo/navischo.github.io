@@ -20,9 +20,6 @@ const initDeathScreen = () => {
     escapeBtn.addEventListener("click", () => {
         const parent = document.querySelector("#death-menu");
         parent.classList.remove("--open");
-        win77.startCutscene("hyrool");
-        KEYS_CALLBACKS.n();
-        clearBlackScreen();
     });
 
     // acceptBtn
