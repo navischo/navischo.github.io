@@ -19,6 +19,10 @@ const WALLS = [
         link: "wall-A17.html",
         title: "What's new in DNE 0.7?"
     },
+    {
+        link: "wall-525.html",
+        title: "SPAWN NEW CARDS"
+    },
 ];
 
 const getNavElement = (wallsArr) => {
