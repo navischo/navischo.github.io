@@ -146,7 +146,7 @@ const initApp = () => {
     makeWallSprayable();
     initTerminal();
     enterCity();
-    startSequence("intro");
+    // startSequence("intro");
 }
 
 export { initApp };
