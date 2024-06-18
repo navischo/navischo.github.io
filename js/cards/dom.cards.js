@@ -4,7 +4,7 @@ import { COMMANDS } from "./const.cards.js";
 import { drawImgLazy } from "../utils/drawImgLazy.js";
 import { createNode } from "../utils/createNode.js";
 import { initInventory } from "../hud/inventory.hud.js";
-import { moveCardById , registerRent} from "../utils/getCardById.js";
+import {getRandomInt, moveCardById, registerRent} from "../utils/getCardById.js";
 import { updBalanceNode } from "../hud/balance.hud.js";
 import { isSetHasId } from "../utils/isSetHasId.js";
 import { PAGE_NAMES } from "../router/router.module.js";
@@ -80,7 +80,8 @@ const initHandlers = (cardData, controls) => {
                 win77.router.matchmaking ? win77.router.nextStep() : "";
             }
             const id = cardData.id;
-            const bonus = cardData.bonus;
+            const bonusString = cardData.bonus;
+            const bonus = bonusString === "d6" ? getRandomInt(6) : +bonusString;
             getEnergyForExtraSound(); // experiment
             moveCardById(id, win77.game.player.sound, win77.game.table);
             updTable();
@@ -253,7 +254,8 @@ const updHand = () => {
             }
 
             const id = card.id.substring(9);
-            const bonus = +(card.querySelector(".card__bonus").textContent);
+            const bonusString = card.querySelector(".card__bonus").textContent;
+            const bonus = bonusString === "+d6" ? getRandomInt(6) : +bonusString;
             // console.log(win77);
             // openWithTimer();
             getEnergyForExtraSound(); // experiment
