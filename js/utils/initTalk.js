@@ -331,7 +331,7 @@ const SEQUENCES = [{
 win77.talks = {
     live: false,
     pipe: [],
-    sceneIndex: 0,
+    sceneIndex: 3,
     lineIndex: 0
 }
 
@@ -355,7 +355,7 @@ const drawPortalCard = () => {
         authorContainer.innerHTML = "";
         leaveTalk();
         win77.talks.sceneIndex = win77.talks.sceneIndex + 1;
-        win77.startCutscene("hyrool");
+        win77.startCutscene("spawn");
         KEYS_CALLBACKS.n();
         clearBlackScreen();
     })

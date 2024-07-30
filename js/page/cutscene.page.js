@@ -3,6 +3,7 @@ import { win77 } from "../dne-cli.js";
 const parent = document.querySelector("#cutscene-parent");
 
 const CUTSCENE_IDS = {
+    spawn: `spawn`,
     cosmohedrone: `cosmohedrone`,
     hyrool: `hyrool`,
     fight: `fight`,
@@ -17,6 +18,7 @@ const CUTSCENE_IDS = {
 };
 
 const CUTSCENE_FILES = {
+    spawn: `mp4-spawn.mp4`,
     cosmohedrone: `mp4-cutscene-cosmohedrone.mp4`,
     hyrool: `mp4-cutscene-hyrool.mp4`,
     fight: `mp4-cutscene-fight.mp4`,
