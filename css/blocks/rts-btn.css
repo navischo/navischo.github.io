@@ -42,6 +42,24 @@ body.ready-to-start .rts-btn-wrap {
     transform: translate(-50%, 0);
 }
 
+.rsp-btn-wrap {
+    visibility: hidden;
+    opacity: 0;
+
+    position: absolute;
+    top: 55px;
+    left: 50%;
+    z-index: 1;
+    transform: translate(-50%, -100%);
+    transition: .2s ease-in-out;
+}
+
+body.js-return-sound-phase .rsp-btn-wrap {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(-50%, 0);
+}
+
 @keyframes title-rotation {
     from {
         transform: translate(0, 0) rotate(-5deg);

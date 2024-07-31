@@ -104,6 +104,7 @@ const initHandlers = (cardData, controls) => {
             initInventory();
             document.querySelector("#table").innerHTML = "";
             win77.selectCardToSave = false;
+            document.querySelector("body").classList.remove("js-return-sound-phase");
         }
     };
 

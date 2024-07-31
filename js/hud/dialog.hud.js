@@ -67,7 +67,7 @@ Ready to start event?
         ]
     },
     {
-        question: `<p>Seems you dont have enouch sound. Wanna give up or buy some more?</p>`,
+        question: `<p>Seems you dont have enouch sound. Wanna buy 3 more<br>for soul?</p>`,
         answersId: {
             giveUp: 0,
             oneMore: 1
@@ -81,12 +81,18 @@ Ready to start event?
                 }
             },
             {
-                text: "1 more(500)",
+                text: "3 more",
                 action: (e) => {
                     console.log("One more");
-                    win77.putCardAtPlayersHand(1);
-                    win77.getCostFromPlayer(500);
-                    updHand();
+                    if (win77.game.player.balance.skillPoints >= 1) {
+                        win77.getSkillPointsFromPlayer(1);
+                        for (let i = 0; i < 3; i++) {
+                            if (win77.game.player.hand.size < 5) {
+                                win77.putCardAtPlayersHand(1);
+                            }
+                        }
+                        updHand();
+                    }
                     win77.updBalanceHUD();
                     closePopup();
                 }

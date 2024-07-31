@@ -53,7 +53,7 @@ const initCalendar = () => {
             dayString: "Sat",
             dayId: "sa0",
             carNeed: true,
-            buyIn: 20000,
+            buyIn: 200000,
             reward: "cash"
         },
         weekArr: [
@@ -73,10 +73,10 @@ const currentEventMarkup = (currentEventObj) =>
         <h3 class="your-event__title">${currentEventObj.name}</h3>
         <b class="your-event__day" data-day-id="${currentEventObj.dayId}">${currentEventObj.dayString}</b>
         <div class="your-event__require-list">
-            <p class="your-event__require-item">
+            <!--<p class="your-event__require-item">
                 <span class="your-event__require-label">CAR-TIER:</span>
-                <span class="your-event__require-val">${currentEventObj.carNeed ? "CAR NEEDED" : "NOT NEEDED"}</span>
-            </p>
+                <span class="your-event__require-val">${`a`/* currentEventObj.carNeed ? "CAR NEEDED" : "NOT NEEDED" */}</span>
+            </p>-->
             
             <p class="your-event__require-item">
                 <span class="your-event__require-label">BUY-IN:</span>

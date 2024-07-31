@@ -20,9 +20,9 @@ const adminWeekMarkup =
     `<div class="week-wrap">
         <section class="week">
             <h2 class="js-day-name week__title">Sunday</h2>
-            <div class="week__car-preview">
-                <img src="img/img-car-week.png" class="week__car-preview-img" alt="">
-            </div>
+<!--            <div class="week__car-preview">-->
+<!--                <img src="img/img-car-week.png" class="week__car-preview-img" alt="">-->
+<!--            </div>-->
             <div class="week__main">
                 <div class="js-your-days-touch swiper --week">
                     <div class="swiper-wrapper">

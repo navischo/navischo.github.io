@@ -31,7 +31,7 @@ const initAdminSwiper = () => {
             // }
 
             if (e.activeIndex === 4) {
-                HousePage.init();
+                // HousePage.init();
                 // initDialog(DIALOGS[0], dialogParent);
             }
         });
@@ -39,7 +39,7 @@ const initAdminSwiper = () => {
         SchedulePage.init();
         // DirectPage.init();
         BankPage.init();
-        HousePage.init();
+        // HousePage.init();
         // ProfilePage.init();
     }
     return new SwiperCell(init);

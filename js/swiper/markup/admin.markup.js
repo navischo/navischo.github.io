@@ -12,9 +12,9 @@ const adminMarkup = `
     <div class="swiper-slide">
         ${adminBankMarkup}
     </div>
-    <div class="swiper-slide">
-        ${adminHouseMarkup}
-    </div>
+    <!--<div class="swiper-slide">-->
+    <!--    -->
+    <!--</div>-->
 <!--    <div class="swiper-slide">-->
 <!--        <div class="sky-nav">-->
 <!--            <a class="sky-nav-item"><span class="sky-nav-item__text">HEALTH</span></a>-->

@@ -260,6 +260,32 @@
     margin-left: 23px;
 }
 
+.js-return-sound-phase .table__cards .card__controls button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 272px;
+    height: 430px;
+    font-size: 77px;
+}
+
+#queue .card__controls {
+    display: flex;
+}
+
+#queue .card__controls button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 136px;
+    height: 430px;
+    font-size: 77px;
+}
+
+#queue .card__controls button + button {
+    margin-left: 5px;
+}
+
 .card__header {
     display: flex;
     align-items: baseline;

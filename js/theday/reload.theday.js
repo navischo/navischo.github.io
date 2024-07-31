@@ -39,6 +39,7 @@ const reloadTheday = () => {
 
     document.querySelector("body").classList.remove("background-single");
 
+    document.querySelector("body").classList.add("js-return-sound-phase");
     document.querySelector("#dne-page-up").classList.remove("js-open");
     document.querySelector("#dne-page-up").innerHTML = "";
 
