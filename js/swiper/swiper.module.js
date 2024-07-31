@@ -99,18 +99,19 @@ win77.eventSwiper = new Swiper("#event-swiper", {
     //     clickable: true,
     // },
 });
-win77.eventSwiper.on("slideChange", (e) => {
+// COLLECTOR ACTIVATION
+// win77.eventSwiper.on("slideChange", (e) => {
     // console.log("e.activeIndex", e, e.activeIndex);
-    if (e.activeIndex === 1) {
-        if (!win77.collector) {
-            win77.startCollector();
-        } else {
-            win77.collector.resume();
-        }
-    } else {
-        win77.pauseCollector();
-    }
-});
+    // if (e.activeIndex === 1) {
+    //     if (!win77.collector) {
+    //         win77.startCollector();
+    //     } else {
+    //         win77.collector.resume();
+    //     }
+    // } else {
+    //     win77.pauseCollector();
+    // }
+// });
 swiper.on('slideChange', function (e) {
     if (Object.keys(PAGES_ID)[e.activeIndex]) {
         const pageName = Object.keys(PAGES_ID)[e.activeIndex];
