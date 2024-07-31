@@ -33,12 +33,12 @@ const initGameBoy = () => {
         };
         closeBtn.addEventListener("click", closeBtnHandler);
     }
-
-    const openCSBtn = document.querySelector(".js-open-cs");
-    openCSBtn.addEventListener("click", () => {
-        drawGame();
-        win77.startCutscene(`cs`, true);
-    });
+    // INIT GIG
+    // const openCSBtn = document.querySelector(".js-open-cs");
+    // openCSBtn.addEventListener("click", () => {
+    //     drawGame();
+    //     win77.startCutscene(`cs`, true);
+    // });
 }
 
 export { initGameBoy };
