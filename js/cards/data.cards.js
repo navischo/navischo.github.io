@@ -847,6 +847,55 @@ const initDNELootArr = () => {
     const SPAWN_DEMO_SHORTLINE = `${STRINGS.DEMO_LONGLINE_SHORT_3}`;
     LootArr.push(new DNELootCard("demo-spawn", `SPAWN`, SPAWN_DEMO_LONGLINE, "img/sound/demo-spawn.jpg", "d6", 0, "Демо, 98m of Psychodelic Electro Ambient", SPAWN_DEMO_SHORTLINE, "", true, true, "sound", ""));
 
+    // Meddle
+    //
+    //
+    const MEDDLE_DEMO_LONGLINE = "";
+    const MEDDLE_DEMO_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("vinyl-meddle", `Meddle`, MEDDLE_DEMO_LONGLINE, "img/sound/vinyl-meddle.jpg", 6, 1900, "Платівка, 47m of Progressive Psychodelic Rock", MEDDLE_DEMO_SHORTLINE, "", true, true, "sound", "https://youtu.be/90zyF3gPF8M"));
+
+    // Morrison Hotel
+    //
+    //
+    const MORRISON_HOTEL_VINYL_LONGLINE = "";
+    const MORRISON_HOTEL_VINYL_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("vinyl-morrison-hotel", `Morrison Hotel`, MORRISON_HOTEL_VINYL_LONGLINE, "img/sound/vinyl-morrison-hotel.png", 5, 1200, "Платівка, 38m of Blues Psychodelic Rock", MORRISON_HOTEL_VINYL_SHORTLINE, "", true, true, "sound", "https://youtu.be/dRC1mdrpCQA"));
+
+    // Morrison Hotel
+    //
+    //
+    const ATOMIC_HEART_MOTHER_VINYL_LONGLINE = "";
+    const ATOMIC_HEART_MOTHER_VINYL_SHORTLINE = `${STRINGS.VINYL_LONGLINE_2}`;
+    LootArr.push(new DNELootCard("vinyl-atomic-heart-mother", `Atomic Heart Mother`, ATOMIC_HEART_MOTHER_VINYL_LONGLINE, "img/sound/vinyl-atomic-heart-mother.png", 5, 1600, "Платівка, 52m of Experimental Progressive Rock", ATOMIC_HEART_MOTHER_VINYL_SHORTLINE, "", true, true, "sound", "https://youtu.be/DkGDi0XXsT4"));
+
+    // L.A. Woman
+    //
+    //
+    const LA_WOMAN_VINYL_LONGLINE = "";
+    const LA_WOMAN_VINYL_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("vinyl-la-woman", `L.A.WOMAN`, LA_WOMAN_VINYL_LONGLINE, "img/sound/vinyl-la-woman.png", 6, 1900, "Платівка, 49m of Blues Psychodelic Rock", LA_WOMAN_VINYL_SHORTLINE, "", true, true, "sound", "https://youtu.be/91vU3kHtnoU"));
+
+    // Waiting for the Sun
+    //
+    //
+    const WAITING_FOR_THE_SUN_VINYL_LONGLINE = "";
+    const WAITING_FOR_THE_SUN_VINYL_SHORTLINE = `${STRINGS.VINYL_LONGLINE_2}`;
+    LootArr.push(new DNELootCard("vinyl-waiting-for-the-sun", `WAITING FOR THE SUN`, WAITING_FOR_THE_SUN_VINYL_LONGLINE, "img/sound/vinyl-waiting-for-the-sun.png", 3, 1300, "Платівка, 65m of Psychodelic Rock", WAITING_FOR_THE_SUN_VINYL_SHORTLINE, "", true, true, "sound", "https://youtu.be/4Q12wpgi4BI"));
+
+    // Strange Days
+    //
+    //
+    const STRANGE_DAYS_VINYL_LONGLINE = "";
+    const STRANGE_DAYS_VINYL_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("vinyl-strange-days", `Strange Days`, STRANGE_DAYS_VINYL_LONGLINE, "img/sound/vinyl-strange-days.jpg", 7, 6000, "Платівка, 41m of Psychodelic Rock", STRANGE_DAYS_VINYL_SHORTLINE, "", true, true, "sound", "https://youtu.be/mf7BsyCAT80"));
+
+    // The Dark Side of the Moon
+    //
+    //
+    const DARK_SIDE_OF_THE_MOON_VINYL_LONGLINE = "";
+    const DARK_SIDE_OF_THE_MOON_VINYL_SHORTLINE = `${STRINGS.VINYL_LONGLINE_2}`;
+    LootArr.push(new DNELootCard("vinyl-the-dark-side-of-the-moon", `The Dark Side of the Moon`, DARK_SIDE_OF_THE_MOON_VINYL_LONGLINE, "img/sound/vinyl-the-dark-side-of-the-moon.png", 7, 1700, "Платівка, 43m of Progressive Psychodelic Rock", DARK_SIDE_OF_THE_MOON_VINYL_SHORTLINE, "", true, true, "sound", "https://youtu.be/k9ynZnEBtvw"));
+
     // Cinco Cielos
     //
     //
