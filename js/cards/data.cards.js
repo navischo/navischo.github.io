@@ -333,9 +333,44 @@ const initDNELootArr = () => {
     // LootArr.push(new DNELootCard("class-rockrunner", "Рокраннер", ROCKRUNNER_CLASS_LONGLINE, ROCKRUNNER_CLASS_IMG, 1, 0, "Клас", ROCKRUNNER_CLASS_SHORTLINE, "", true, true, "class"));
 
 
+    // 2-D
+    //
+    //
+    const TOD_LONGLINE = "";
+    const TOD_SHORTLINE = ``;
+    const TOD_IMG = `../img/npc/2-D.jpg`;
+
+    LootArr.push(new DNELootCard("i2-d", "2-D", TOD_LONGLINE, TOD_IMG, 0, 0, "Найомничок", TOD_SHORTLINE, "", true, false, "npc"));
+
+    // Murdoc
+    //
+    //
+    const MURDOC_LONGLINE = "";
+    const MURDOC_SHORTLINE = ``;
+    const MURDOC_IMG = `../img/npc/Murdoc.jpg`;
+
+    LootArr.push(new DNELootCard("murdoc", "Murdoc", MURDOC_LONGLINE, MURDOC_IMG, 0, 0, "Найомничок", MURDOC_SHORTLINE, "", true, false, "npc"));
+
+    // Noodle
+    //
+    //
+    const NOODLE_LONGLINE = "";
+    const NOODLE_SHORTLINE = ``;
+    const NOODLE_IMG = `../img/npc/Noodle.jpg`;
+
+    LootArr.push(new DNELootCard("noodle", "Noodle", NOODLE_LONGLINE, NOODLE_IMG, 0, 0, "Найомничок", NOODLE_SHORTLINE, "", true, false, "npc"));
+
+    // Noodle
+    //
+    //
+    const RUSSEL_LONGLINE = "";
+    const RUSSEL_SHORTLINE = ``;
+    const RUSSEL_IMG = `../img/npc/Russel.jpg`;
+
+    LootArr.push(new DNELootCard("russel", "Russel", RUSSEL_LONGLINE, RUSSEL_IMG, 0, 0, "Найомничок", RUSSEL_SHORTLINE, "", true, false, "npc"));
 
     const GABE_LONGLINE = "Любить своїх фанів. Відповідає на твої імейли. Оплачує своїм робітникам та їх родинам подорож на Гаваї.<br><br>Звісно в нього ти знайдеш найкращий лут, або навідь зможеш придбати.";
-    LootArr.push(new DNELootCard("gabe", "Гейб", GABE_LONGLINE, "https://lh6.googleusercontent.com/7i6mSHABzuXys1AYpZyzxTxgHSPfoMZIdRPKBJeCvwtBcvx8L7arDexJJF2ODvT6HQY=w2400", 0, 0, "Мільярдер", GABE_LONGLINE, "", true, true, "npc"));
+    LootArr.push(new DNELootCard("gabe", "Гейб", GABE_LONGLINE, "../img/npc/gabe.jpg", 0, 0, "Мільярдер", GABE_LONGLINE, "", true, true, "npc"));
 
     // Гейм-майстер
     //
@@ -367,48 +402,45 @@ const initDNELootArr = () => {
         <br>Знайди Вовка на локації, розпитай його. Напевно, він знає, де той може бути.
     `;
     const MICKHALYCH_SHORTLINE = `Тримає Магазин рідкостей у Києві. Хоч і скупий, та досвідчені Шинобі його поважають.<br><br> За свої послуги бере багато, але допомагає новачкам вижити.`;
-    const MICKHALYCH_IMG_ID = `1JEkeyP47FTPN8fUhaD-XXMuacyn7hPtE`;
-    const MICKHALYCH_IMG = `https://drive.google.com/uc?id=${MICKHALYCH_IMG_ID}`;
+    const MICKHALYCH_IMG = `../img/npc/mickhalych.png`;
 
-    LootArr.push(new DNELootCard("michalych", "Міхалич", MICKHALYCH_LONGLINE, MICKHALYCH_IMG, 1, 0, "Найомничок", MICKHALYCH_SHORTLINE, "", true, true, "npc"));
+    LootArr.push(new DNELootCard("michalych", "Міхалич", "", MICKHALYCH_IMG, 0, 0, "Найомничок", "", "", true, true, "npc"));
 
     // LootArr.push(new DNELootCard("support", "Найомничок", "Можеш застосувати на нього ще один клас та дати йому одну шмотку. Якщо втрачаєш Найомничка, клас до тебе повертається, та шмотку втрачаєш із ним. Можеш підставити Найомничка щоб піти від відповідальності за провальний івент. Тримай Найомничка перед собой поряд с іншими айтемами.", "https://lh4.googleusercontent.com/SMs5epImEfomWNvE5FJFJgtvVK3inDgX5oGiaQmwvORuLEMhIkBFn6qaUgMDN216x8U=w2400", 1, 0, "", STRINGS.COMPANION_SHORTLINE, "", true, true, "npc"));
 
-    const SONYA_LONGLINE = `Бот-найомничок в уборі андроіда, може допомогати, виконуючи прості команди. При активації система дозволяє завантажити будь-яку особистість, що була попередньо записана на носій пам'яті. Відрізняється від інших Найомничків тим що у якості головного модулю встановлена акустична система XB77 із штучним інтелектом Hypnosoft. З встановленою Кібердекою має здатність завантажуваи саунд з будь-яких ресурсів, розпізнавати його та створювати інтерактивні плей-листи. Тож фактично має здатність виконувати роль DJ. Можеш застосувати на нього ще один клас та дати йому одну шмотку. Якщо втрачаєш Найомничка, клас до тебе повертається, та шмотку втрачаєш із ним. Можеш підставити Найомничка щоб піти від відповідальності за провальний івент. Тримай Найомничка перед собой поряд с іншими айтемами.`;
-    const SONYA_SHORTLINE = `Бот-найомничок в уборі андроіда, може допомогати, виконуючи прості команди.<br><br> Завантажувати будь-яку особистість та саунд з будь-яких ресурсів і розпізнавати їх, фактично виконуючи роль DJ або звичайного Найомничка. <br><br>Дай йому клас та шмотку за бажанням.`;
-    const SONYA_IMG_ID = `1kxGyXmYD_Abakvcrc26JAIsNmFZdKiOV`;
-    const SONYA_IMG = `https://drive.google.com/uc?id=${SONYA_IMG_ID}`;
-    LootArr.push(new DNELootCard("sonya-xb77", "Sonya XB77", SONYA_LONGLINE, SONYA_IMG, 1, 0, "Бот-Найомничок", SONYA_SHORTLINE, "", true, true, "npc"));
+    // const SONYA_LONGLINE = `Бот-найомничок в уборі андроіда, може допомогати, виконуючи прості команди. При активації система дозволяє завантажити будь-яку особистість, що була попередньо записана на носій пам'яті. Відрізняється від інших Найомничків тим що у якості головного модулю встановлена акустична система XB77 із штучним інтелектом Hypnosoft. З встановленою Кібердекою має здатність завантажуваи саунд з будь-яких ресурсів, розпізнавати його та створювати інтерактивні плей-листи. Тож фактично має здатність виконувати роль DJ. Можеш застосувати на нього ще один клас та дати йому одну шмотку. Якщо втрачаєш Найомничка, клас до тебе повертається, та шмотку втрачаєш із ним. Можеш підставити Найомничка щоб піти від відповідальності за провальний івент. Тримай Найомничка перед собой поряд с іншими айтемами.`;
+    // const SONYA_SHORTLINE = `Бот-найомничок в уборі андроіда, може допомогати, виконуючи прості команди.<br><br> Завантажувати будь-яку особистість та саунд з будь-яких ресурсів і розпізнавати їх, фактично виконуючи роль DJ або звичайного Найомничка. <br><br>Дай йому клас та шмотку за бажанням.`;
+    // const SONYA_IMG_ID = `1kxGyXmYD_Abakvcrc26JAIsNmFZdKiOV`;
+    // const SONYA_IMG = `https://drive.google.com/uc?id=${SONYA_IMG_ID}`;
+    // LootArr.push(new DNELootCard("sonya-xb77", "Sonya XB77", SONYA_LONGLINE, SONYA_IMG, 1, 0, "Бот-Найомничок", SONYA_SHORTLINE, "", true, true, "npc"));
 
     // Хайред
     //
     //
     const HIRED_LONGLINE = "";
     const HIRED_SHORTLINE = `Молодий стажер з Пекла, не боїться важкої праці та чудово керує персоналом.`;
-    const HIRED_IMG_ID = `1croBMIMlSuDqFjHU9U5Z1IQP_87SGrLG`;
-    const HIRED_IMG = `https://drive.google.com/uc?id=${HIRED_IMG_ID}`;
+    const HIRED_IMG = `../img/npc/hired.png`;
 
-    LootArr.push(new DNELootCard("hired", "Хайред", HIRED_LONGLINE, HIRED_IMG, 1, 0, "Найомничок", HIRED_SHORTLINE, "", true, true, "npc"));
+    LootArr.push(new DNELootCard("hired", "Хайред", HIRED_LONGLINE, HIRED_IMG, 0, 0, "Найомничок", HIRED_SHORTLINE, "", true, true, "npc"));
 
     // Снуп
     //
     //
     const SNOOP_LONGLINE = "";
     const SNOOP_SHORTLINE = `Легенда Хіп-Хоп культури, завжди на висоті і готовий до фристайлу, завжди привітний і перманентно палає.`;
-    const SNOOP_IMG_ID = `1_LtxoMzbS3aPCJ3ASGmHtK_tdojGRbFd`;
-    const SNOOP_IMG = `https://drive.google.com/uc?id=${SNOOP_IMG_ID}`;
+    const SNOOP_IMG = `../img/npc/snoop.png`;
 
-    LootArr.push(new DNELootCard("snoop-dog", "Снуп Дог", SNOOP_LONGLINE, SNOOP_IMG, 1, 0, "Найомничок-MC", SNOOP_SHORTLINE, "", true, true, "npc"));
+    // -MC
+    LootArr.push(new DNELootCard("snoop-dog", "Снуп Дог", SNOOP_LONGLINE, SNOOP_IMG, 0, 0, "Найомничок", SNOOP_SHORTLINE, "", true, true, "npc"));
 
     // Ребека
     //
     //
     const REBECA_LONGLINE = "";
     const REBECA_SHORTLINE = `Вона повернулась, щоб змінити свою долю назавжди.`;
-    const REBECA_IMG_ID = `1d2_a75c3KIiNDvajEy8-1VUJXaNsX-2B`;
-    const REBECA_IMG = `https://drive.google.com/uc?id=${REBECA_IMG_ID}`;
+    const REBECA_IMG = `../img/npc/rebeca.jpg`;
 
-    LootArr.push(new DNELootCard("rebeca", "Ребека", REBECA_LONGLINE, REBECA_IMG, 1, 0, "Найомничок", REBECA_SHORTLINE, "", true, true, "npc"));
+    LootArr.push(new DNELootCard("rebeca", "Ребека", REBECA_LONGLINE, REBECA_IMG, 0, 0, "Найомничок", REBECA_SHORTLINE, "", true, true, "npc"));
 
 
     //  Лусіо
@@ -416,10 +448,10 @@ const initDNELootArr = () => {
     //
     const LUCIO_LONGLINE = "";
     const LUCIO_SHORTLINE = `Try to match <br>this BPM!`;
-    const LUCIO_IMG_ID = `1TwF8NwC7gpd2NJQY4lEi0c48npZx4b0F`;
-    const LUCIO_IMG = `https://drive.google.com/uc?id=${LUCIO_IMG_ID}`;
+    const LUCIO_IMG = `../img/npc/lucio.png`;
 
-    LootArr.push(new DNELootCard("lucio", "Лусіо", LUCIO_LONGLINE, LUCIO_IMG, 1, 0, "Найомничок-DJ", LUCIO_SHORTLINE, "", true, true, "npc"));
+    // -DJ
+    LootArr.push(new DNELootCard("lucio", "Лусіо", LUCIO_LONGLINE, LUCIO_IMG, 0, 0, "Найомничок", LUCIO_SHORTLINE, "", true, true, "npc"));
 
 
     // Лялька
@@ -427,46 +459,45 @@ const initDNELootArr = () => {
     //
     const DOLL_LONGLINE = "";
     const DOLL_SHORTLINE = `Welcome home, good hunter`;
-    const DOLL_IMG_ID = `1nezBWRaDGRcT2zR4oM3nCgaDyoIuNcxH`;
-    const DOLL_IMG = `https://drive.google.com/uc?id=${DOLL_IMG_ID}`;
+    const DOLL_IMG = `../img/npc/doll.jpg`;
 
-    LootArr.push(new DNELootCard("doll", "Doll", DOLL_LONGLINE, DOLL_IMG, 1, 0, "Найомничок", DOLL_SHORTLINE, "", true, true, "npc"));
+    LootArr.push(new DNELootCard("doll", "Doll", DOLL_LONGLINE, DOLL_IMG, 0, 0, "Найомничок", DOLL_SHORTLINE, "", true, true, "npc"));
 
-    LootArr.push(new DNELootCard("mechanic", "Механік", "Механік здатен виконати будь-яку чоловічу роботу по дому, в машині або на івенті. Сильний чоловік що працює за розумні гроші. Має автівку вантажного классу та водійське посвідчення", "https://lh4.googleusercontent.com/Fut_jQUzHbDUFJ9siml-QsQQQQFrYamdaVff8SL-Uqi9TiKx2rVQKapBRaq6PmOwGyA=w2400", 1, 0, "Найомничок", "Сильний чоловік що працює за розумні гроші. Має - автівку вантажного классу, посвідчення.", "", true, true, "npc"));
+    // Механік здатен виконати будь-яку чоловічу роботу по дому, в машині або на івенті. Сильний чоловік що працює за розумні гроші. Має автівку вантажного классу та водійське посвідчення
+    LootArr.push(new DNELootCard("mechanic", "Механік", "", "../img/npc/mechanic.png", 0, 0, "Найомничок", "", "", true, true, "npc"));
 
     // Бойовий Механік
     //
     //
     const COMBAT_MECHANIC_LONGLINE = "Бойовий механік здатна виконати будь-яку роботу не тільки в приміщенні або машині, а навідь на полі бою та прямо під час сутички. Незамінний помічник, елітного рівня, що виручить усюди.";
     const COMBAT_MECHANIC_SHORTLINE = `Бойовий механік здатна виконати будь-яку роботу не тільки в приміщенні або машині, а навідь на полі бою та прямо під час`;
-    const COMBAT_MECHANIC_IMG_ID = `1-WjUmxxPEkLk0vpKiceiQqUaTFVPk3x1`;
-    const COMBAT_MECHANIC_IMG = `https://drive.google.com/uc?id=${COMBAT_MECHANIC_IMG_ID}`;
+    const COMBAT_MECHANIC_IMG = `../img/npc/combat-mechanic.jpg`;
 
-    LootArr.push(new DNELootCard("combat-mechanic", "Бойовий Механік", COMBAT_MECHANIC_LONGLINE, COMBAT_MECHANIC_IMG, 1, 0, "Найомничок", COMBAT_MECHANIC_SHORTLINE, "", true, true, "npc"));
+    LootArr.push(new DNELootCard("combat-mechanic", "Бойовий Механік", "", COMBAT_MECHANIC_IMG, 0, 0, "Найомничок", "", "", true, true, "npc"));
 
-    LootArr.push(new DNELootCard("porn-prince", "Порно-принц", "Здатен створити гарячий відео-контент з будь-якого творчого задуму. Спробуй використати отримані матеріали щоб розповісти у відео-форматі про свою справу. Хтось може звернути на це увагу та запропонувати тобі роботу.", "https://lh4.googleusercontent.com/FZFTYr__oUeAQtVUxdlG0AT7A2BMWGKmCL9KECct9KeZK6iacLswIjCpc2aEWfqjk64=w2400", 1, 0, "Найомничок", "Здатен створити гарячий відео-контент з будь-якого творчого задуму на твоєму івенті.<br><br> Забезпеч його апаратурою,усе інше - справа техніки.", "", true, true, "npc"));
+    // LootArr.push(new DNELootCard("porn-prince", "Порно-принц", "Здатен створити гарячий відео-контент з будь-якого творчого задуму. Спробуй використати отримані матеріали щоб розповісти у відео-форматі про свою справу. Хтось може звернути на це увагу та запропонувати тобі роботу.", "https://lh4.googleusercontent.com/FZFTYr__oUeAQtVUxdlG0AT7A2BMWGKmCL9KECct9KeZK6iacLswIjCpc2aEWfqjk64=w2400", 1, 0, "Найомничок", "Здатен створити гарячий відео-контент з будь-якого творчого задуму на твоєму івенті.<br><br> Забезпеч його апаратурою,усе інше - справа техніки.", "", true, true, "npc"));
 
     // Єва
     //
     //
     const EVA_LONGLINE = "";
     const EVA_SHORTLINE = `Молода дівчина успішно стрімить, майструє крихітні прикраси з епоксидної смоли та дарує Найомничкам, заряджаючи їх енергією.`;
-    const EVA_IMG_ID = `15FWesuvomOmKaToRH-dkPdOzzi-HaEww`;
-    const EVA_IMG = `https://drive.google.com/uc?id=${EVA_IMG_ID}`;
+    const EVA_IMG = `../img/npc/eva.jpg`;
 
-    LootArr.push(new DNELootCard("eva", "Єва", EVA_LONGLINE, EVA_IMG, 1, 0, "Найомничок-Стрімер", EVA_SHORTLINE, "", true, true, "npc"));
+    // -Стрімер
+    LootArr.push(new DNELootCard("eva", "Єва", "", EVA_IMG, 0, 0, "Найомничок", "", "", true, true, "npc"));
 
-    LootArr.push(new DNELootCard("alise", "Aліс`е", "Проклятий янгол з сумними очима. Чудово продає речі, бо здатна відрізнити оригінал від підробки та цінує свій відсоток.", "https://lh4.googleusercontent.com/a-hieOJkrw-3bWjz8EawHojHcLcH78bHvYAFnIN9rew2VPZUxg8mTzcrMJb791fwPL4=w2400", 1, 0, "Найомничок", "Проклятий янгол з сумними очима. Чудово продає речі, бо здатна відрізнити оригінал від підробки та цінує свій відсоток.", "", true, true, "npc"));
+    // Проклятий янгол з сумними очима. Чудово продає речі, бо здатна відрізнити оригінал від підробки та цінує свій відсоток.
+    LootArr.push(new DNELootCard("alise", "Aліс`е", "", "../img/npc/alise.png", 0, 0, "Найомничок", "", "", true, true, "npc"));
 
     // Макіма
     //
     //
     const MAKIMA_LONGLINE = "";
     const MAKIMA_SHORTLINE = `Високопоставлений мисливець на демонів, що служить у Бюро Громадської Безпеки.`;
-    const MAKIMA_IMG_ID = `1DiP8r8WrcyiHnKjJct9VymEEeETT1WjT`;
-    const MAKIMA_IMG = `https://drive.google.com/uc?id=${MAKIMA_IMG_ID}`;
+    const MAKIMA_IMG = `../img/npc/makima.jpg`;
 
-    LootArr.push(new DNELootCard("makima", "Макіма", MAKIMA_LONGLINE, MAKIMA_IMG, 1, 0, "Найомничок", MAKIMA_SHORTLINE, "", true, true, "npc"));
+    LootArr.push(new DNELootCard("makima", "Макіма", MAKIMA_LONGLINE, MAKIMA_IMG, 0, 0, "Найомничок", MAKIMA_SHORTLINE, "", true, true, "npc"));
 
 
     // Мисливець
@@ -474,20 +505,18 @@ const initDNELootArr = () => {
     //
     const HUNTER_LONGLINE = "";
     const HUNTER_SHORTLINE = `Полює на монстрів. Захистить твій івент від них за потреби та допоможе здихатись Відповідальності за провал.`;
-    const HUNTER_IMG_ID = `1-uOsrs2xqQVCWqsCu46h9m_ddf-AJwnI`;
-    const HUNTER_IMG = `https://drive.google.com/uc?id=${HUNTER_IMG_ID}`;
+    const HUNTER_IMG = `../img/npc/lilith.jpg`;
 
-    LootArr.push(new DNELootCard("lilith", "Ліліт", HUNTER_LONGLINE, HUNTER_IMG, 1, 0, "Найомничок", HUNTER_SHORTLINE, "", true, true, "npc"));
+    LootArr.push(new DNELootCard("lilith", "Ліліт", HUNTER_LONGLINE, HUNTER_IMG, 0, 0, "Найомничок", HUNTER_SHORTLINE, "", true, true, "npc"));
 
     // Діксі
     //
     //
     const DIXI_LONGLINE = "";
     const DIXI_SHORTLINE = `Професійний боєць проїздом з Найт-Сіті. Має найдсучасне кібернетичне тіло та схильність до Кіберпсихозу.<br><br> Її дії не передбачувані, а зброя смертоносна.`;
-    const DIXI_IMG_ID = `1fuTZ9EWIwGcrhbLsUtMFm5J_YYdY_95X`;
-    const DIXI_IMG = `https://drive.google.com/uc?id=${DIXI_IMG_ID}`;
+    const DIXI_IMG = `../img/npc/dixi.jpg`;
 
-    LootArr.push(new DNELootCard("dixi", "Діксі", DIXI_LONGLINE, DIXI_IMG, 1, 0, "Найомничок", DIXI_SHORTLINE, "", true, true, "npc"));
+    LootArr.push(new DNELootCard("dixi", "Діксі", DIXI_LONGLINE, DIXI_IMG, 0, 0, "Найомничок", DIXI_SHORTLINE, "", true, true, "npc"));
 
 
     // i2B
@@ -495,82 +524,91 @@ const initDNELootArr = () => {
     //
     const I2B_LONGLINE = "";
     const I2B_SHORTLINE = `Бойовий-андроід із твоїх мрій. Допомогає, захищає, муркоче.`;
-    const I2B_IMG_ID = `1DRcSPPfyUf42kikvepWXU8N780PGqJ62`;
-    const I2B_IMG = `https://drive.google.com/uc?id=${I2B_IMG_ID}`;
+    const I2B_IMG = `../img/npc/2B.jpg`;
 
-    LootArr.push(new DNELootCard("i2b", "i2B", I2B_LONGLINE, I2B_IMG, 1, 0, "Найомничок", I2B_SHORTLINE, "", true, true, "npc"));
+    LootArr.push(new DNELootCard("i2b", "i2B", I2B_LONGLINE, I2B_IMG, 0, 0, "Найомничок", I2B_SHORTLINE, "", true, true, "npc"));
 
-    LootArr.push(new DNELootCard("vargus", "Варгус", "Варгус має талант до продажу речей людям та живе щасливим життям, підпрацьовуючи в секс-шопі, у вільний час від книжок та рольових ігор. З радістю допоможе тобі в продажі товарів на івентах, та обов'язково візьме відсоток. Навіть не думай, в неї є подруга.", "https://lh3.googleusercontent.com/6gH7UsITDPPYen1jxeGornc0u1qERrzJASIDw5yNCQs03ptnsEWqH1fi-LrecRVtM9k=w2400", 1, 0, "Найомничок", "Варгус має талант до продажу речей людям та з радістю допоможе тобі з цим за розумний відсоток", "", true, true, "npc"));
-    LootArr.push(new DNELootCard("olivye", "Олів'є", "Олів'є - людина перформанс. Він перетворить на захопливу пригоду навідь звичайнісінький день. Перетворить на товар буквально будь-що, з радістю допоможе тобі в продажі та обов'язково візьме відсоток.", "https://lh6.googleusercontent.com/UPZBku2FlEp8bXCBMhdsRXu2ZRWVrAyLidobt8lMhi82Fudyxexfi7rwCHubrAGSgM4=w2400", 1, 0, "Найомничок", "Олів'є - людина перформанс. Перетворить на товар буквально будь-що, з радістю допоможе тобі в продажі та обов'язково візьме відсоток.", "", true, true, "npc"));
-    LootArr.push(new DNELootCard("wednesday", "Середа", "Середа переїхала з Харкова і захопилася Київською натурою, від тоді нічне життя столиці її не відпускає. Має талант до продажу рослин та речей з органічних матеріалів. З радістю допоможе тобі в продажі товарів на івентах, та обов'язково візьме відсоток.", "https://lh3.googleusercontent.com/4sGFySzeBod97kvEwmqncV9wHszsLBoE0qDZ5rujFfsqjfU6eqYpjdLnKP63VXSI7gE=w2400", 1, 0, "Найомничок", "Має талант до продажу рослин та речей з органічних матеріалів. З радістю допоможе тобі в продажі товарів на івентах, та обов'язково візьме відсоток.", "", true, true, "npc"));
-    LootArr.push(new DNELootCard("cleo", "Клео", "Клео - надійний товариш, доки ти її друг. Переїхавши з Берліну почала займатися організацією і доводі успішно. Має власне авто, талант до продажу та організації, та працює лише за ідею і тільки з одним гравцем за всю партію.", "https://lh3.googleusercontent.com/a8JzDrNSRIgDG_m4yH4-A5kttXRu6SM6D1APBlOBn4WhIdT4bpUA9_YtHB_yPejzOlc=w2400", 1, 0, "Найомничок-DJ", "Має власне авто, талант до продажу та організації, та працює лише за ідею і тільки з одним гравцем за всю партію.", "", true, true, "npc"));
+    // Варгус має талант до продажу речей людям та живе щасливим життям, підпрацьовуючи в секс-шопі, у вільний час від книжок та рольових ігор. З радістю допоможе тобі в продажі товарів на івентах, та обов'язково візьме відсоток. Навіть не думай, в неї є подруга.
+    LootArr.push(new DNELootCard("vargus", "Варгус", "", "../img/npc/vargus.jpg", 0, 0, "Найомничок", "", "", true, true, "npc"));
+    // LootArr.push(new DNELootCard("olivye", "Олів'є", "Олів'є - людина перформанс. Він перетворить на захопливу пригоду навідь звичайнісінький день. Перетворить на товар буквально будь-що, з радістю допоможе тобі в продажі та обов'язково візьме відсоток.", "https://lh6.googleusercontent.com/UPZBku2FlEp8bXCBMhdsRXu2ZRWVrAyLidobt8lMhi82Fudyxexfi7rwCHubrAGSgM4=w2400", 1, 0, "Найомничок", "Олів'є - людина перформанс. Перетворить на товар буквально будь-що, з радістю допоможе тобі в продажі та обов'язково візьме відсоток.", "", true, true, "npc"));
+    // Середа переїхала з Харкова і захопилася Київською натурою, від тоді нічне життя столиці її не відпускає. Має талант до продажу рослин та речей з органічних матеріалів. З радістю допоможе тобі в продажі товарів на івентах, та обов'язково візьме відсоток.
+    LootArr.push(new DNELootCard("wednesday", "Середа", "", "../img/npc/frog-seller.jpg", 0, 0, "Найомничок", "", "", true, true, "npc"));
+    // Клео - надійний товариш, доки ти її друг. Переїхавши з Берліну почала займатися організацією і доводі успішно. Має власне авто, талант до продажу та організації, та працює лише за ідею і тільки з одним гравцем за всю партію.
+    // -DJ
+    LootArr.push(new DNELootCard("cleo", "Клео", "", "../img/npc/cleo.jpg", 0, 0, "Найомничок", "", "", true, true, "npc"));
 
     // Сенсей
     //
     //
     const SENSEI_LONGLINE = "";
     const SENSEI_SHORTLINE = `Помстись ворогам. Поверни свою честь. Опануй мистецтво смертельного бою.`;
-    const SENSEI_IMG_ID = `13eiuBzIQXINrQvxyr6OdlaLiS_yJLMDN`;
-    const SENSEI_IMG = `https://drive.google.com/uc?id=${SENSEI_IMG_ID}`;
+    const SENSEI_IMG = `../img/npc/sensei.jpg`;
 
-    LootArr.push(new DNELootCard("sensei", "Сенсей", SENSEI_LONGLINE, SENSEI_IMG, 1, 0, "Найомничок", SENSEI_SHORTLINE, "", true, true, "npc"));
+    LootArr.push(new DNELootCard("sensei", "Сенсей", "", SENSEI_IMG, 0, 0, "Найомничок", "", "", true, true, "npc"));
 
-    LootArr.push(new DNELootCard("zer0", "0", "Смертельно небезпечний та фантастично дорогий.", "https://lh3.googleusercontent.com/iLWF6yChVeG_1Sstqxehiaq2TEH7Tv3PNkHekUKIbKoZ_04FxB-FF5K5LXocBLO-Xjo=w2400", 1, 0, "Найомничок", "Смертельно небезпечний та фантастично дорогий.", "", true, true, "npc"));
+    // Смертельно небезпечний та фантастично дорогий.
+    LootArr.push(new DNELootCard("zer0", "0", "", "../img/npc/zer0.png", 0, 0, "Найомничок", "", "", true, true, "npc"));
 
     // 47
     //
     //
     const F7_LONGLINE = `Agent 47 (also known as \"The Hitman\", or simply by his birth name \"47\", ... the first time as well as Lucas Grey's death, with 47 saying \"he made it count\".`;
     const F7_SHORTLINE = `The IOI<br> bold experiment also known<br> as \"The Hitman\", or simply<br> by his birth name \"47\"`;
-    const F7_IMG_ID = `1UHaztzmNF7XWuEwebmtHfpEjB6T2mit6`;
-    const F7_IMG = `https://drive.google.com/uc?id=${F7_IMG_ID}`;
+    const F7_IMG = `../img/npc/i47.jpg`;
 
-    LootArr.push(new DNELootCard("i47", "47", F7_LONGLINE, F7_IMG, 1, 0, "Найомничок", F7_SHORTLINE, "", true, true, "npc"));
+    LootArr.push(new DNELootCard("i47", "47", "", F7_IMG, 0, 0, "Найомничок", "", "", true, true, "npc"));
 
-    LootArr.push(new DNELootCard("i61", "61", "Trust me, i`am i61", "https://lh6.googleusercontent.com/qumGC_im9tZgoM_aMaItCmCqO37bUO2EYilop2w6PZPSvJQbXmfomdP_tyjrrWux-Rk=w2400", 1, 0, "Найомничок", "Trust me, i`am i61", "", true, true, "npc"));
+    // LootArr.push(new DNELootCard("i61", "61", "Trust me, i`am i61", "https://lh6.googleusercontent.com/qumGC_im9tZgoM_aMaItCmCqO37bUO2EYilop2w6PZPSvJQbXmfomdP_tyjrrWux-Rk=w2400", 1, 0, "Найомничок", "Trust me, i`am i61", "", true, true, "npc"));
 
     // Ghost Dog
     //
     //
     const GHOST_DOG_LONGLINE = "";
     const GHOST_DOG_SHORTLINE = ``;
-    const GHOST_DOG_IMG_ID = `1UL2biMpCnSviaVt7mg4goGdIH4mmcf4N`;
-    const GHOST_DOG_IMG = `https://drive.google.com/uc?id=${GHOST_DOG_IMG_ID}`;
+    const GHOST_DOG_IMG = `../img/npc/ghost-dog.jpg`;
 
-    LootArr.push(new DNELootCard("ghost-dog", "Ghost Dog", GHOST_DOG_LONGLINE, GHOST_DOG_IMG, 1, 0, "Найомничок", GHOST_DOG_SHORTLINE, "", true, true, "npc"));
+    LootArr.push(new DNELootCard("ghost-dog", "Ghost<br>Dog", GHOST_DOG_LONGLINE, GHOST_DOG_IMG, 0, 0, "Найомничок", GHOST_DOG_SHORTLINE, "", true, true, "npc"));
 
     // LootArr.push(new DNELootCard("upgrade", "UPGRADE", "Після страшенних травм важко сумісних з життям ви стали учасником державної програми відновлення Апгрейд. Титанові кістки в поєднанні з надсучасним інтерфейсом карбонового спинного мозку роблять можливість в автоматичному режимі чинити опір агресору у ситуаціях рівня небезпеки S та нижче, поки ваша свідомість повністю підтримує лінгвістичні здібності.", "https://lh3.googleusercontent.com/hjjlI54RXzntVQCU3Wluj_wZMKhlxkPth3kQGXeHRqVjyHAeJunEYCI2z5LhYWMup2A=w2400", 1, 0, "", "Після страшенних травм важко сумісних з життям ви стали учасником державної програми відновлення Апгрейд.<br> Титанові кістки в поєднанні з надсучасним інтерфейсом карбонового спинного мозку роблять можливість в автоматичному режимі чинити опір агресору у ситуаціях рівня небезпеки S та нижче.<br><br> Тим часом ваша свідомість повністю підтримує лінгвістичні здібності.", "", true, true, "anti"));
-    LootArr.push(new DNELootCard("upgrade", "UPGRADE", "Після страшенних травм важко сумісних з життям ви стали учасником державної програми відновлення Апгрейд. Титанові кістки в поєднанні з надсучасним інтерфейсом карбонового спинного мозку роблять можливість в автоматичному режимі чинити опір агресору у ситуаціях рівня небезпеки S та нижче, поки ваша свідомість повністю підтримує лінгвістичні здібності.", "https://lh3.googleusercontent.com/hjjlI54RXzntVQCU3Wluj_wZMKhlxkPth3kQGXeHRqVjyHAeJunEYCI2z5LhYWMup2A=w2400", 1, 0, "", "Після страшенних травм важко сумісних з життям ви стали учасником державної програми відновлення Апгрейд.<br> Титанові кістки в поєднанні з надсучасним інтерфейсом карбонового спинного мозку роблять можливість в автоматичному режимі чинити опір агресору у ситуаціях рівня небезпеки S та нижче.<br><br> Тим часом ваша свідомість повністю підтримує лінгвістичні здібності.", "", false, "anti"));
-    LootArr.push(new DNELootCard("machete", "Мачете", "Мачете приєднався до ЗСУ щоб вбивати русню в Україні, був взятий в полон під Донецьком, де втік з конц-табору РФ і заліг на дно в Києві. Буде радий будь якій роботі, чудово впорається з охороною, фейсконтролем та зйомками в пілотних епізодах.", "https://lh5.googleusercontent.com/gExfGHO7RIkKcdu0kC-md2uTZldiZH-sD4b_ZkQ43LNGKiHngWzWKQwIq1tjSJMRKHg=w2400", 1, 0, "Найомничок", "Охоронничок від бога і співрозмовник чудовий, легко впорається навіть з баром або фейсом", "", true, true, "npc"));
+    // LootArr.push(new DNELootCard("upgrade", "UPGRADE", "Після страшенних травм важко сумісних з життям ви стали учасником державної програми відновлення Апгрейд. Титанові кістки в поєднанні з надсучасним інтерфейсом карбонового спинного мозку роблять можливість в автоматичному режимі чинити опір агресору у ситуаціях рівня небезпеки S та нижче, поки ваша свідомість повністю підтримує лінгвістичні здібності.", "https://lh3.googleusercontent.com/hjjlI54RXzntVQCU3Wluj_wZMKhlxkPth3kQGXeHRqVjyHAeJunEYCI2z5LhYWMup2A=w2400", 1, 0, "", "Після страшенних травм важко сумісних з життям ви стали учасником державної програми відновлення Апгрейд.<br> Титанові кістки в поєднанні з надсучасним інтерфейсом карбонового спинного мозку роблять можливість в автоматичному режимі чинити опір агресору у ситуаціях рівня небезпеки S та нижче.<br><br> Тим часом ваша свідомість повністю підтримує лінгвістичні здібності.", "", false, "anti"));
+    // Мачете приєднався до ЗСУ щоб вбивати русню в Україні, був взятий в полон під Донецьком, де втік з конц-табору РФ і заліг на дно в Києві. Буде радий будь якій роботі, чудово впорається з охороною, фейсконтролем та зйомками в пілотних епізодах.
+    LootArr.push(new DNELootCard("machete", "Мачете", "", "../img/npc/machete.jpg", 0, 0, "Найомничок", "", "", true, true, "npc"));
     // LootArr.push(new DNELootCard("machete", "Мачете", "Мачете приєднався до ЗСУ щоб вбивати русню в Україні, був взятий в полон під Донецьком, де втік з конц-табору РФ і заліг на дно в Києві. Буде радий будь якій роботі, чудово впорається з охороною, фейсконтролем та зйомками в пілотних епізодах.", "https://lh5.googleusercontent.com/gExfGHO7RIkKcdu0kC-md2uTZldiZH-sD4b_ZkQ43LNGKiHngWzWKQwIq1tjSJMRKHg=w2400", 1, 0, "Найомничок", "Охоронничок від бога і співрозмовник чудовий, легко впорається навіть з баром або фейсом", "", true));
-    LootArr.push(new DNELootCard("sansa-stark", "Санса Старк", "Молода та відважна рудовласа бестія з півночі. Відома шанувальниця темного етнічного звучання в важкій музиці та впевнений організатор івентів в жанрі Rock. Легендарна організаторка серії підпільних вечірок Зима Близько на підтримку ЗСУ.", "https://lh3.googleusercontent.com/s0OH3vKnb3jKHXlJSTSsxvMBqGntiTV2oIIqeBU-pkH0IDMx_6ny0TrgxD8OnMl_nRM=w2400", 1, 0, "Найомничок-Рокраннер", "Відома шанувальниця темного етнічного звучання в важкій музиці та впевнений організатор івентів в жанрі Rock.", "", true, true, "npc"));
-    LootArr.push(new DNELootCard("naruto", "Наруто", "Завжди прийде на поміч якщо ти його друг. З цип хлопцем і в вогонь і в воду, ніколи тебе не залишить, навіть якщо перейшов до іншого гравця.", "https://lh5.googleusercontent.com/_kuetu2hY9sUDU93DjJByiZBegvmbwZQmn6PgK6InJ8cba4gankCVVUyneRUC6iPxVw=w2400", 1, 0, "Найомничок", "Завжди прийде на поміч якщо ти його друг. З цип хлопцем і в вогонь і в воду, ніколи тебе не залишить, навіть якщо перейшов до іншого гравця.", "", true, true, "npc"));
-    LootArr.push(new DNELootCard("shadow", "Тінь", "Тінь вирішив відпочити від свого всесвіту і чілить у Києві останні місяці. Кажуть від привіз із собою смарагд Хаосу. Спробуй спитати як в нього справи, для твоєї вечірки може бути корисною його знатність рухатись з неймовірною швидкістю.", "https://lh5.googleusercontent.com/GJR1NJCddA61Kyl4Yp1z01p0iskBFSzn8R4gweyV58AxrMTkffw9FFZ4Gh7MmhosYK8=w2400", 1, 0, "Найомничок", "Тінь вирішив відпочити від свого всесвіту і чілить у Києві.", "", true, true, "npc"));
-    LootArr.push(new DNELootCard("gorillaz", "Gorillaz", "Купа підлідків зібрали Рок-гурт та вирішили спробувати свої сили у Києві. Створюють експерементальний саунд, поєднуючи Electro, Рок та Хіп-Хоп напрями. Звучить надсучасно, сподіваюсь їх хтось помітить.", "https://lh4.googleusercontent.com/-dJLEO2gYvSlpBUlUkHuc24Cegq32ZLTrn83vDiOf8-hwuYAkW8eLMHkwKoBvFT8b8k=w2400", 4, 0, "4 Найомничка", "Четверо хлопців шукають роботу.<br><br> Здається, в них власний гурт, створюють експерементальний саунд, поєднуючи<br> Electro, Рок та Хіп-Хоп.<br><br> Звучить надсучасно, сподіваюсь їх хтось помітить.", "", true, true, "npc"));
+    // Молода та відважна рудовласа бестія з півночі. Відома шанувальниця темного етнічного звучання в важкій музиці та впевнений організатор івентів в жанрі Rock. Легендарна організаторка серії підпільних вечірок Зима Близько на підтримку ЗСУ.
+    // -Рокраннер
+    LootArr.push(new DNELootCard("sansa-stark", "Санса Старк", "", "../img/npc/sansa-stark.png", 0, 0, "Найомничок", "", "", true, true, "npc"));
+    // Завжди прийде на поміч якщо ти його друг. З цип хлопцем і в вогонь і в воду, ніколи тебе не залишить, навіть якщо перейшов до іншого гравця.
+    LootArr.push(new DNELootCard("naruto", "Наруто", "", "../img/npc/naruto.png", 0, 0, "Найомничок", "", "", true, true, "npc"));
+    // Тінь вирішив відпочити від свого всесвіту і чілить у Києві останні місяці. Кажуть від привіз із собою смарагд Хаосу. Спробуй спитати як в нього справи, для твоєї вечірки може бути корисною його знатність рухатись з неймовірною швидкістю.
+    LootArr.push(new DNELootCard("shadow", "Тінь", "", "../img/npc/shadow.png", 0, 0, "Найомничок", "", "", true, true, "npc"));
+    // LootArr.push(new DNELootCard("gorillaz", "Gorillaz", "Купа підлідків зібрали Рок-гурт та вирішили спробувати свої сили у Києві. Створюють експерементальний саунд, поєднуючи Electro, Рок та Хіп-Хоп напрями. Звучить надсучасно, сподіваюсь їх хтось помітить.", "https://lh4.googleusercontent.com/-dJLEO2gYvSlpBUlUkHuc24Cegq32ZLTrn83vDiOf8-hwuYAkW8eLMHkwKoBvFT8b8k=w2400", 4, 0, "4 Найомничка", "Четверо хлопців шукають роботу.<br><br> Здається, в них власний гурт, створюють експерементальний саунд, поєднуючи<br> Electro, Рок та Хіп-Хоп.<br><br> Звучить надсучасно, сподіваюсь їх хтось помітить.", "", true, true, "npc"));
 
     const SAYLOR_MOON_LONGLINE = "";
     const SAYLOR_MOON_SHORTLINE = "Юна леді вчиться контролювати свої здібності, пізнаючи себе та світ творчості.<br><br> Відкриття власного клубу та створення дружньої спільноти - її пристрасть та найбільша мрія.";
-    LootArr.push(new DNELootCard("saylor-moon", "Сейлор Мун", SAYLOR_MOON_LONGLINE, "https://lh3.googleusercontent.com/g5fpxKQ6LO9LYce4mmrWnTdhkwmMyx58dmMDVovS7WaoO8Qzk-fkD7Xlvi_z0L5M6FM=w2400", 1, 0, "Найомничок", SAYLOR_MOON_SHORTLINE, "", true, true, "npc"));
+    LootArr.push(new DNELootCard("saylor-moon", "Сейлор Мун", "", "../img/npc/saylor-moon.jpg", 0, 0, "Найомничок", "", "", true, true, "npc"));
 
     // Сашко Злих
     //
     //
     const ZLYKH_LONGLINE = "";
     const ZLYKH_SHORTLINE = ``;
-    const ZLYKH_IMG_ID = `1JBAF__zcZ9tyrH_zFQ5sayleNnt04glW`;
-    const ZLYKH_IMG = `https://drive.google.com/uc?id=${ZLYKH_IMG_ID}`;
+    const ZLYKH_IMG = `../img/npc/zlych.jpg`;
 
-    LootArr.push(new DNELootCard("zlykh", "Сашко Злих", ZLYKH_LONGLINE, ZLYKH_IMG, 1, 0, "Найомничок-DJ", ZLYKH_SHORTLINE, "", true, true, "npc"));
+    // -DJ
+    LootArr.push(new DNELootCard("zlykh", "Сашко Злих", "", ZLYKH_IMG, 0, 0, "Найомничок", "", "", true, true, "npc"));
 
     const TWINS_LONGLINE = "";
     const TWINS_SHORTLINE = "Близнюки чудово розуміються на командній роботі, як пристрасть до Індустріального звучання, вона в них в крові.";
-    LootArr.push(new DNELootCard("twins", "Близнята", TWINS_LONGLINE, "https://lh6.googleusercontent.com/_X5UuUmOsyvCwAK1wa7nsYwh7MQzvX-N0eauLx9xBo_fZt9rmliWAh1ytWR-mqpNSIk=w2400", 2, 0, "2 Найомничка", TWINS_SHORTLINE, "", true, true, "npc"));
+    LootArr.push(new DNELootCard("twins", "Близнята", "", "../img/npc/twins.jpg", 0, 0, "Найомнички", TWINS_SHORTLINE, "", true, true, "npc"));
 
 
     const CHAOS_GREEN_LONGLINE = "Подвоює інкам від івенту.";
     LootArr.push(new DNELootCard("chaos-green", "Смарагд Хаосу", CHAOS_GREEN_LONGLINE, `../img/loot/chaos-green.png`, 0, "222K", "", CHAOS_GREEN_LONGLINE, "", true, true, "loot"));
-    LootArr.push(new DNELootCard("lady-falko", "Леді Фалько", "Таємнича княжа особа веде свій бізнес чисто та обачно. Латекс та шкіра - для неї головна пристрасть, а про її івенти складають легенди.", "https://lh6.googleusercontent.com/YlzcEVCM2vJECjlLpkSl2kZqlj5T6rCIUQBVQSB2hXzHi6sOsZLIILTVRWm5HM4l9IE=w2400", 1, 0, "Найомничок", "Таємнича княжа особа веде свій бізнес чисто та обачно. Латекс та шкіра - її пристрасть, про її івенти складають легенди.", "", true, true, "npc"));
-    LootArr.push(new DNELootCard("iron-alchemic", "Сталевий Алхімік", "Всім іноді потрібна перерва. Рок музика дала можливість Эдварду Элрику зробити її для себе. Кажуть він чудово проявляє себе в організації івентів з рок-музикою. Чутово мати такого хлопця в команді, якщо збираєшся влаштувати івент в цьому жанрі.", "https://lh6.googleusercontent.com/h2uF5Q439t611fW6MQEOEFbADuixR5J35oRrZQJmlWR05oEi8viPeyzk5vRPppS1-ms=w2400", 1, 0, "Найомничок-Рокраннер", "Всім іноді потрібна перерва. Рок музика дала можливість Эдварду зробити її для себе.", "", true, true, "npc"));
+    // Таємнича княжа особа веде свій бізнес чисто та обачно. Латекс та шкіра - для неї головна пристрасть, а про її івенти складають легенди.
+    LootArr.push(new DNELootCard("lady-falko", "Леді Фалько", "", "../img/npc/lady-falko.jpg", 0, 0, "Найомничок", "", "", true, true, "npc"));
+    // Всім іноді потрібна перерва. Рок музика дала можливість Эдварду Элрику зробити її для себе. Кажуть він чудово проявляє себе в організації івентів з рок-музикою. Чутово мати такого хлопця в команді, якщо збираєшся влаштувати івент в цьому жанрі.
+    // -Рокраннер
+    LootArr.push(new DNELootCard("iron-alchemic", "Сталевий Алхімік", "", "../img/npc/iron-alchemic.jpg", 0, 0, "Найомничок", "", "", true, true, "npc"));
     // LootArr.push(new DNELootCard("philosopher-stone", "Філососький камінь", "Дозволяє три рази за гру перетворити одну карту айтему на будь-яку іншу картку айтему. Навіть якщо ця картка одна в грі і вже комусь належить. Айтем, на який було використано камінь набуває усіх властивостей нового айтему, а попередні - втрачає. Від тепер це дві ідеальні копії.", `../img/loot/philosopher-stone.jpg`, 8, "333K", "Тільки для Сталевого Алхіміка", "Дозволяє три рази за гру перетворити одну карту айтему на будь-яку іншу картку айтему. <br><br>Айтем, на який було використано камінь набуває усіх властивостей нового айтему, а попередні - втрачає.<br>Від тепер це дві ідеальні копії.", "", true, true, "loot"));
     // LootArr.push(new DNELootCard("xenium", "Зеній", "Дає можливість перегорнути гру. Тепер для перемоги необхідно досягти протилежного результату відповідно попередньої мети.", "img/loot/xenium.webp", 9, "444K", "", "Дає можливість перегорнути гру.", "", true, true, "loot"));
     // LootArr.push(new DNELootCard("elias-jensen", "Alias Jensen", "", "https://drive.google.com/file/d/1AaIOpGM8FoHQ-LNlqXVIUDvyru5Wl2hC/view?usp=share_link", 1, 0, "Найомничок-MC", "Амбітний новачок нізвідки шукає роботу. Має талант до продажу, пристрасть до Хіп-Хопу та обмаль часу.", "", true, true, "npc"));
@@ -580,59 +618,63 @@ const initDNELootArr = () => {
     //
     const ELIAS_JENSEN_LONGLINE = "";
     const ELIAS_JENSEN_SHORTLINE = `Легендарний DJ Детройтської сцени та професійний продюсер з платиновими платівками в таких жанрах як Industrial та EDM`;
-    const ELIAS_JENSEN_IMG_ID = `1AaIOpGM8FoHQ-LNlqXVIUDvyru5Wl2hC`;
-    const ELIAS_JENSEN_IMG = `https://drive.google.com/uc?id=${ELIAS_JENSEN_IMG_ID}`;
+    const ELIAS_JENSEN_IMG = `../img/npc/elias-jensen.jpg`;
 
-    LootArr.push(new DNELootCard("elias-jensen", "Elias Jensen", ELIAS_JENSEN_LONGLINE, ELIAS_JENSEN_IMG, 1, 0, "Найомничок-DJ", ELIAS_JENSEN_SHORTLINE, "", true, true, "npc"));
+    // -DJ
+    LootArr.push(new DNELootCard("elias-jensen", "Elias Jensen", "", ELIAS_JENSEN_IMG, 0, 0, "Найомничок", "", "", true, true, "npc"));
 
     // Toxic
     //
     //
-    const TOXIC_LONGLINE = "Купа новачків шукає роботу у місті. Один з таких, кажуть раньше був кухарем, знається на організації публічних івентів. Від MCів завжди чекай біди, а від невідомих MCів тим паче.";
-    const TOXIC_SHORTLINE = `Амбітний новачок нізвідки шукає роботу. Має талант до продажу, пристрасть до Хіп-Хопу та обмаль часу аби зустрітись.`;
-    const TOXIC_IMG_ID = `1-xnMSwzvFqT6NizOFr-4LOruZD1AMqOa`;
-    const TOXIC_IMG = `https://drive.google.com/uc?id=${TOXIC_IMG_ID}`;
+    // const TOXIC_LONGLINE = "Купа новачків шукає роботу у місті. Один з таких, кажуть раньше був кухарем, знається на організації публічних івентів. Від MCів завжди чекай біди, а від невідомих MCів тим паче.";
+    // const TOXIC_SHORTLINE = `Амбітний новачок нізвідки шукає роботу. Має талант до продажу, пристрасть до Хіп-Хопу та обмаль часу аби зустрітись.`;
+    // const TOXIC_IMG_ID = `1-xnMSwzvFqT6NizOFr-4LOruZD1AMqOa`;
+    // const TOXIC_IMG = `https://drive.google.com/uc?id=${TOXIC_IMG_ID}`;
 
-    LootArr.push(new DNELootCard("toxic", "Sertolovo Toxic", TOXIC_LONGLINE, TOXIC_IMG, 1, 0, "Найомничок-MC", TOXIC_SHORTLINE, "", true, true, "npc"));
-    LootArr.push(new DNELootCard("i-sneeker-trunk", "Багажник кросів", "Багажник рідкісних вінтажних кросів, як мене запевнив їх продавець. Звідки вони в нього, я не питав. Цю купу брухту в ідеалі привести до ладу та реалізувати. Гравець або найомничок з класом Продавець здатен продати їх втричі дорожче, але обов'язково візьме відсоток.", "https://lh3.googleusercontent.com/cq-AdJ91YqaIIgmGibDDEP5Vpi77Ppzb3rXXxMzA14r--Tnk1ODXZGpnEaKjMQgjqso=w2400", 0, "80K", "Велика", "Багажник рідкісних вінтажних кросів, як мене запевнив їх продавець.", "", false, true, "anti"));
+    // LootArr.push(new DNELootCard("toxic", "Sertolovo Toxic", TOXIC_LONGLINE, TOXIC_IMG, 1, 0, "Найомничок-MC", TOXIC_SHORTLINE, "", true, true, "npc"));
+    // LootArr.push(new DNELootCard("i-sneeker-trunk", "Багажник кросів", "Багажник рідкісних вінтажних кросів, як мене запевнив їх продавець. Звідки вони в нього, я не питав. Цю купу брухту в ідеалі привести до ладу та реалізувати. Гравець або найомничок з класом Продавець здатен продати їх втричі дорожче, але обов'язково візьме відсоток.", "https://lh3.googleusercontent.com/cq-AdJ91YqaIIgmGibDDEP5Vpi77Ppzb3rXXxMzA14r--Tnk1ODXZGpnEaKjMQgjqso=w2400", 0, "80K", "Велика", "Багажник рідкісних вінтажних кросів, як мене запевнив їх продавець.", "", false, true, "anti"));
     // Ілон Таск
-    LootArr.push(new DNELootCard("tusk", "Ілон Таск", "Таск регулярно донатить ЗСУ на визволення Криму з під контролю Путлера, дарує старлінки та розробляє план розвитку Нового Донецьку. Чудово розуміється у розробці веб-сайтів, апок для смартфонів та дронах. Відчуває ностальгію по власній юності тож завжди радий допомогти молодим даруванням з втіленням найсміливіших ідей.", "https://lh6.googleusercontent.com/paU4WKE38gv_ftC9uXIsGNXoNp0_e8xiVa133tyR6s4zR2ZqkDYmirkcVeRZtRJfQU4=w2400", 1, 0, "Найомничок", "Чудово розуміється на Electroнній музиці та техніці, може домовитись їх придбати вдвічі дешевше, не просто ж так він мільярдер.", "", true, true, "npc"));
+    // Таск регулярно донатить ЗСУ на визволення Криму з під контролю Путлера, дарує старлінки та розробляє план розвитку Нового Донецьку. Чудово розуміється у розробці веб-сайтів, апок для смартфонів та дронах. Відчуває ностальгію по власній юності тож завжди радий допомогти молодим даруванням з втіленням найсміливіших ідей.
+    // Чудово розуміється на Electroнній музиці та техніці, може домовитись їх придбати вдвічі дешевше, не просто ж так він мільярдер.
+    LootArr.push(new DNELootCard("tusk", "Ілон Таск", "", "../img/npc/tusk.png", 0, 0, "Мільярдер", "", "", true, true, "npc"));
     // Рік С-137
-    LootArr.push(new DNELootCard("rick", "Рік С-137", "Так, той самий. В нього завжди при собі його портальна пушка та хто в біса зна що ще. Добре подумай яку справу довірити цій людині. Ніхто не знає що станеться далі.", "https://lh6.googleusercontent.com/FIZwLsrD-krhTSF5hdjlhDt7sFSTjTlmQIGvHxLaLeeA8ceUHPohn6i1k3t8yiDqi2Y=w2400", 1, 0, "Найомничок", "Так, той самий. З ядерним перегаром, літаючою тарілкою зі сміття та мікровсесвітом, накшталт твого, під капотом", "", true, true, "npc"));
+    // Так, той самий. В нього завжди при собі його портальна пушка та хто в біса зна що ще. Добре подумай яку справу довірити цій людині. Ніхто не знає що станеться далі.
+    // Так, той самий. З ядерним перегаром, літаючою тарілкою зі сміття та мікровсесвітом, накшталт твого, під капотом
+    LootArr.push(new DNELootCard("rick", "Рік С-137", "", "../img/npc/rick.png", 0, 0, "Найомничок", "", "", true, true, "npc"));
 
     // Дідусь Влад
     //
     //
     const VLAD_LONGLINE = "";
     const VLAD_SHORTLINE = ``;
-    const VLAD_IMG_ID = `166GMUPmFsJQBKEHPj-tbfGM02yYqBJrz`;
-    const VLAD_IMG = `https://drive.google.com/uc?id=${VLAD_IMG_ID}`;
+    const VLAD_IMG = `../img/npc/grandfather-vlad.png`;
 
-    LootArr.push(new DNELootCard("vlad", "Дідусь Влад", VLAD_LONGLINE, VLAD_IMG, 1, 0, "Найомничок", VLAD_SHORTLINE, "", true, true, "npc"));
+    LootArr.push(new DNELootCard("vlad", "Дідусь Влад", "", VLAD_IMG, 0, 0, "Найомничок", "", "", true, true, "npc"));
 
     // A
     //
     //
     const A_LONGLINE = "";
     const A_SHORTLINE = ``;
-    const A_IMG_ID = `1hQd9OPzuLXvkNyudTTH7dfBvRLBwBuI2`;
-    const A_IMG = `https://drive.google.com/uc?id=${A_IMG_ID}`;
+    const A_IMG = `../img/npc/a.png`;
 
-    LootArr.push(new DNELootCard("a", "A", A_LONGLINE, A_IMG, 1, 0, "Найомничок", A_SHORTLINE, "", true, true, "npc"));
+    LootArr.push(new DNELootCard("a", "A", A_LONGLINE, A_IMG, 0, 0, "Найомничок", A_SHORTLINE, "", true, true, "npc"));
 
     // D
     //
     //
     const D_LONGLINE = "";
     const D_SHORTLINE = ``;
-    const D_IMG_ID = `1PuJGV4EQ74OJ2R2XmZ8y3ZpTFnCwiM6G`;
-    const D_IMG = `https://drive.google.com/uc?id=${D_IMG_ID}`;
+    const D_IMG = `../img/npc/b.png`;
 
-    LootArr.push(new DNELootCard("d", "D", D_LONGLINE, D_IMG, 1, 0, "Найомничок", D_SHORTLINE, "", true, true, "npc"));
+    LootArr.push(new DNELootCard("d", "D", D_LONGLINE, D_IMG, 0, 0, "Найомничок", D_SHORTLINE, "", true, true, "npc"));
 
-    LootArr.push(new DNELootCard("ricks-second-portalgun", "Запасна портальна пушка Ріка", "Дозволяє миттєво переміщатись з пункту А в пункт Б. В часі з нею не поподорожуєш, бо Рік зробив її щоб Морті міг швидко ходити за пивом. Не заправляй її спрайтом.", "https://lh5.googleusercontent.com/FvLcgRozAUKRG7UniV9wQnIoNEvckTZ_g8DvU0so9nsPalQfPtkGfHzsNVH14obqe6o=w2400", 5, "300К/5К", "Авто"));
-    LootArr.push(new DNELootCard("v", "V", "Так, поклич цього хлопця, що може піти не так?)", "https://lh6.googleusercontent.com/TGoJYG0KoqQ1oSf45SIKkFmp_6skZRJ9pmmR1vEWo6_xyFoHuCqZWI01Pi58MzRBKgg=w2400", 1, 0, "Найомничок", "Виглядає як порядний Охороничок та вправний Водій", "", true, true, "npc"));
-    LootArr.push(new DNELootCard("wolf", "THE WOLF", "I solve problems", "https://lh3.googleusercontent.com/hgUIik77UVkI226aXYkYt7gtuvicht-KY4ytgoTuwB47f7gzrG93-9QI-rhgw5Y7RAk=w2400", 1, 0, "Найомничок", "I solve problems", "", true, true, "npc"));
+    // LootArr.push(new DNELootCard("ricks-second-portalgun", "Запасна портальна пушка Ріка", "Дозволяє миттєво переміщатись з пункту А в пункт Б. В часі з нею не поподорожуєш, бо Рік зробив її щоб Морті міг швидко ходити за пивом. Не заправляй її спрайтом.", "https://lh5.googleusercontent.com/FvLcgRozAUKRG7UniV9wQnIoNEvckTZ_g8DvU0so9nsPalQfPtkGfHzsNVH14obqe6o=w2400", 5, "300К/5К", "Авто"));
+    // Так, поклич цього хлопця, що може піти не так?)
+    // Виглядає як порядний Охороничок та вправний Водій
+    LootArr.push(new DNELootCard("v", "V", "", "../img/npc/v.png", 0, 0, "Найомничок", "", "", true, true, "npc"));
+    // I solve problems
+    LootArr.push(new DNELootCard("wolf", "THE WOLF", "", "../img/npc/wolf.jpg", 0, 0, "Найомничок", "I solve problems", "", true, true, "npc"));
 
     // GENDALF
     //
@@ -640,26 +682,40 @@ const initDNELootArr = () => {
     const GENDALF_LONGLINE = "";
     const GENDALF_SHORTLINE = `Старий чарівник пристосувався до нових умов.`;
     const GENDALF_IMG_ID = `1xPCA3ckLOBJTJ_cfQ2SZNbkACdnwGiUc`;
-    const GENDALF_IMG = `https://drive.google.com/uc?id=${GENDALF_IMG_ID}`;
+    const GENDALF_IMG = `../img/npc/gendalf.jpg`;
 
-    LootArr.push(new DNELootCard("gendalf", "Гендальф", GENDALF_LONGLINE, GENDALF_IMG, 1, 0, "Найомничок", GENDALF_SHORTLINE, "", true, true, "npc"));
+    LootArr.push(new DNELootCard("gendalf", "Гендальф", "", GENDALF_IMG, 0, 0, "Найомничок", "", "", true, true, "npc"));
 
     const LISOVA_MAVKA_LONGLINE = "";
     const LISOVA_MAVKA_SHORTLINE = "Здатна створювати неймовірні напої з природніх речовин та залюбки реалізує свій продукт на твоєму івенті.";
-    LootArr.push(new DNELootCard("lisova-mavka", "Лісова Діва", LISOVA_MAVKA_LONGLINE, "https://lh3.googleusercontent.com/gTtZ-rp5BXr_GyuAwIiSkTFBQWUmbwyyeFrc0G534MsQGLv_r6U8VonEkSm5eqW0z4E=w2400", 1, 0, "Найомничок", LISOVA_MAVKA_SHORTLINE, "", true, true, "npc"));
+    LootArr.push(new DNELootCard("lisova-mavka", "Лісова Діва", "", "../img/npc/lisova-mavka.jpg", 0, 0, "Найомничок", "", "", true, true, "npc"));
 
     // SHAMAN
     //
     //
     const SHAMAN_LONGLINE = "";
     const SHAMAN_SHORTLINE = `Майстер дихання та традиційної китайської чайної церемонії.`;
-    const SHAMAN_IMG_ID = `1J_SfvUvfA1lRbiHsosm-0Hn32JaQ1HGr`;
-    const SHAMAN_IMG = `https://drive.google.com/uc?id=${SHAMAN_IMG_ID}`;
+    const SHAMAN_IMG = `../img/npc/shaman.jpeg`;
 
-    LootArr.push(new DNELootCard("shaman", "Шаман", SHAMAN_LONGLINE, SHAMAN_IMG, 1, 0, "Найомничок", SHAMAN_SHORTLINE, "", true, true, "npc"));
+    LootArr.push(new DNELootCard("shaman", "Шаман", "", SHAMAN_IMG, 0, 0, "Найомничок", "", "", true, true, "npc"));
 
-    // Убрать и отснять студию
-    // Фото чистої студії приваблюють клієнтів, отримай два випадкові закази на руку та використовуй цю картку як бонус +2 для будь-якого івенту в ній. Фото на професійний фотоаппарат з широким об'єктивом привабить навіть найвибагливішу аудиторію.
+    // Почіта
+    //
+    //
+    const POCHITA_LONGLINE = `Смерть із цією Тваринкою запускає вступний квест "Одна ніч у Києві" якщо встановлений Мод "Ніч на Землі".`;
+    const POCHITA_SHORTLINE = `Може принести себе в жертву, щоб дати воскреснути своєму господареві, коли він зустріне Смерть.`;
+    const POCHITA_IMG = `../img/npc/pochita.png`;
+
+    LootArr.push(new DNELootCard("pochita", "Почіта", "", POCHITA_IMG, 0, 0, "Тваринка", "", "", true, true, "npc"));
+
+    // Фелікс
+    //
+    //
+    const FELIX_LONGLINE = "";
+    const FELIX_SHORTLINE = `Зіграє з тобою сет b2b. Зігріває та муркоче, загортається в м'які речі і заряджається на сонечку.`;
+    const FELIX_IMG = `../img/npc/felix.jpg`;
+
+    LootArr.push(new DNELootCard("felix", "Фелікс", "", FELIX_IMG, 0, 0, "Тваринка-DJ", "", "", true, true, "npc"));
 
     // Пограти
     //
@@ -1762,27 +1818,6 @@ const initDNELootArr = () => {
 
     // Кільце влади
     LootArr.push(new DNELootCard("power-ring", "Кільце влади", "Посилює найсильніші якості носителя, покращуючи їх до максимуму відносно обставин. Кільця влади можуть бути різної форми та рівнів могутності, залежно від майстра що його викував, рідкості матеріалу та каменю. З часом використання пробуджує темні сторони особистості носія та поступово підкоряє його власній волі. Кільце влади завжди вірне лише своєму творцю, завжди прагне до нього і чим більше наближається, тим могутнішим стає.", "https://lh4.googleusercontent.com/dWwMABhNjnvI-OOzxZDgmEqELhIfSJ25Ru8fR0hflXz1Ufd3Tr-jXDtZKTKVQ3dIxzk=w2400", 4, 0, "Драгоцінність", "Посилює найсильніші якості носителя, покращуючи їх до максимуму відносно обставин.", "", false, true, "anti"));
-
-
-    // Почіта
-    //
-    //
-    const POCHITA_LONGLINE = `Смерть із цією Тваринкою запускає вступний квест "Одна ніч у Києві" якщо встановлений Мод "Ніч на Землі".`;
-    const POCHITA_SHORTLINE = `Може принести себе в жертву, щоб дати воскреснути своєму господареві, коли він зустріне Смерть.`;
-    const POCHITA_IMG_ID = `1E6H0YeXJi9ShDVeNfKxPUaLZopLBaMKE`;
-    const POCHITA_IMG = `https://drive.google.com/uc?id=${POCHITA_IMG_ID}`;
-
-    LootArr.push(new DNELootCard("pochita", "Почіта", POCHITA_LONGLINE, POCHITA_IMG, 1, 0, "Тваринка", POCHITA_SHORTLINE, "", true, true, "npc"));
-
-    // Фелікс
-    //
-    //
-    const FELIX_LONGLINE = "";
-    const FELIX_SHORTLINE = `Зіграє з тобою сет b2b. Зігріває та муркоче, загортається в м'які речі і заряджається на сонечку.`;
-    const FELIX_IMG_ID = `1XEFWfOp4QXDsEEp9X3I9XQXADkno9-23`;
-    const FELIX_IMG = `https://drive.google.com/uc?id=${FELIX_IMG_ID}`;
-
-    LootArr.push(new DNELootCard("felix", "Фелікс", FELIX_LONGLINE, FELIX_IMG, 1, 0, "Тваринка-DJ", FELIX_SHORTLINE, "", true, true, "npc"));
 
     // 1UP
     //

@@ -862,16 +862,118 @@
     color: white;
 }
 
+#dne-card-i2-d .card__header,
+#dne-card-murdoc .card__header,
+#dne-card-noodle .card__header,
+#dne-card-russel .card__header {
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+
+#dne-card-i2-d .card__preview,
+#dne-card-murdoc .card__preview,
+#dne-card-noodle .card__preview,
+#dne-card-russel .card__preview {
+    position: absolute;
+    top: 0;
+    transform: scale(1.05) translateY(10px);
+}
+
+#dne-card-gabe .card__header {
+    position: absolute;
+    z-index: 1;
+}
+
 #dne-card-gabe .card__preview-img {
-    transform: scale(2.5) translateY(45px);
+    position: absolute;
+    top: 0;
+    transform: scale(2.8) translateY(50px);
 }
 
 #dne-card-gabe .card__description {
+    display: none;
     position: absolute;
     bottom: 20px;
 
     color: white;
     text-shadow: 2px 1px 0 black;
+}
+
+#dne-card-shadow .card__preview-img {
+    position: relative;
+    top: -50px;
+}
+
+#dne-card-tusk .card__preview-img {
+    transform: translateY(30px);
+}
+
+#dne-card-naruto .card__preview {
+    transform: translateY(25px);
+}
+
+#dne-card-i47 .card__header,
+#dne-card-ghost-dog .card__header {
+    position: absolute;
+    z-index: 2;
+    color: white;
+}
+
+#dne-card-i47 .card__preview-img {
+    position: absolute;
+    top: 0;
+}
+
+#dne-card-ghost-dog .card__preview {
+    position: absolute;
+    top: 0;
+    transform: scale(1.15) translate(6px, 25px);
+}
+
+#dne-card-iron-alchemic .card__preview-img {
+    transform: translateY(-13px);
+}
+
+#dne-card-sansa-stark .card__preview-img {
+    transform: scale(1.2) translate(10px, 37px);
+}
+
+#dne-card-saylor-moon .card__header {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-shadow: 2px 1px 0 black;
+}
+
+#dne-card-saylor-moon .card__preview-img {
+    position: absolute;
+    top: 0;
+    transform: scale(2.4) translate(0, 61px);
+}
+
+#dne-card-alise .card__preview-img {
+    transform: scale(1.3) translateY(23px);
+}
+
+#dne-card-lilith .card__header {
+    position: relative;
+    z-index: 1;
+    color: white;
+}
+
+#dne-card-lilith .card__preview-img {
+    transform: scale(1.6) translateY(15px);
+}
+
+#dne-card-i2b .card__header {
+    position: relative;
+    z-index: 1;
+    color: white;
+}
+
+#dne-card-i2b .card__preview-img {
+    transform: scale(1.6) translateY(15px);
 }
 
 #dne-card-sonya-xb77 .card__preview {
@@ -1077,8 +1179,14 @@
     color: white;
 }
 
+#dne-card-elias-jensen .card__header {
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+
 #dne-card-elias-jensen .card__preview-img {
-    transform: scale(1.06) translateY(10px);
+    transform: scale(1.26) translateY(-28px);
 }
 
 #dne-card-elias-jensen .card__description {
@@ -1326,7 +1434,11 @@
 
 #dne-card-zer0 .card__description {
     position: absolute;
-    top: 59px;
+    top: 49px;
+}
+
+#dne-card-zer0 .card__preview-img {
+    transform: scale(1.2) translate(-15px, -11px);
 }
 
 #dne-card-prj-ee-in-the-rain .card__preview-img {
@@ -1429,7 +1541,7 @@
     position: relative;
     z-index: 0;
 
-    transform: scale(2.6) translate(24px, 29px);
+    transform: scale(1.3) translate(10px, -12px);
 }
 
 #dne-card-wolf .card__header {
@@ -1811,9 +1923,8 @@ img {
 }
 
 .build #dne-card-vargus .card__preview {
-    margin-bottom: -76px;
     position: relative;
-    top: -45px;
+    top: -23px;
     z-index: 1;
 }
 
@@ -2037,6 +2148,26 @@ img {
     transform: scale(.9);
 }
 
+#dne-card-wednesday .card__preview {
+    position: relative;
+    transform: scale(1.5) translateY(38px);
+}
+
+#dne-card-cleo .card__header {
+    position: relative;
+    z-index: 1;
+    color: white;
+}
+
+#dne-card-cleo .card__preview {
+    position: absolute;
+    top: 0;
+}
+
+#dne-card-cleo .card__preview-img {
+    transform: scale(1.15) translateY(17px);
+}
+
 /*#dne-card-vinyl-i-am-chill-session .card {*/
     /*color: white;*/
     /*background-color: #1f1f36;*/
@@ -2075,7 +2206,18 @@ img {
 }
 
 #dne-card-hired .card__preview {
-    transform: scale(1.6) translateY(48px);
+    transform: scale(1.6) translateY(52px);
+}
+
+#dne-card-mechanic .card__header {
+    position: absolute;
+    z-index: 2;
+}
+
+#dne-card-mechanic .card__preview {
+    position: absolute;
+    top: 0;
+    transform: scale(1.05) translateY(8px);
 }
 
 #dne-card-makima .card__header {
