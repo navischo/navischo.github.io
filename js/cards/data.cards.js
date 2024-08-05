@@ -840,12 +840,12 @@ const initDNELootArr = () => {
 
     // LootArr.push(new DNELootCard("make-french-exit", "Піти по-французьки", "Гравець що використав цю карту, дістає вогнепальну зброю и робить постріл у голову гравця, в адресу якого була використана карта.<br><br> Все, цей гравець мертвий, куля в голову як не як.<br><br> А ти що думав з тобою тут хтось сюсюкатись буде?", "https://lh3.googleusercontent.com/VVGoBbf0sATIkcowuVZuAuJrkjF0C6ZKr2bY43f_f4U4B9Hk9au3Q90d9mGiIZDhKso=w2400", 0, 0, "Дія"));
 
-    // SPAWN
+    // Requiem for Romance
     //
     //
-    const SPAWN_DEMO_LONGLINE = "";
-    const SPAWN_DEMO_SHORTLINE = `${STRINGS.DEMO_LONGLINE_SHORT_3}`;
-    LootArr.push(new DNELootCard("demo-spawn", `SPAWN`, SPAWN_DEMO_LONGLINE, "img/sound/demo-spawn.jpg", "d6", 0, "Демо, 98m of Psychodelic Electro Ambient", SPAWN_DEMO_SHORTLINE, "", true, true, "sound", ""));
+    const REQUIEM_FOR_ROMANCE_ALBUM_LONGLINE = "";
+    const REQUIEM_FOR_ROMANCE_ALBUM_SHORTLINE = ``;
+    LootArr.push(new DNELootCard("album-requiem-for-romance", `Requiem for Romance`, REQUIEM_FOR_ROMANCE_ALBUM_LONGLINE, "img/sound/album-requiem-for-romance.jpg", 5, 400, "Альбом, 31m of Dark Electro Indie", REQUIEM_FOR_ROMANCE_ALBUM_SHORTLINE, "", true, true, "sound", "https://www.youtube.com/playlist?list=OLAK5uy_l1UXlu4dgZi3jmiQamovZnyEWmF1Y6Mnk"));
 
     // Meddle
     //
@@ -880,7 +880,7 @@ const initDNELootArr = () => {
     //
     const WAITING_FOR_THE_SUN_VINYL_LONGLINE = "";
     const WAITING_FOR_THE_SUN_VINYL_SHORTLINE = `${STRINGS.VINYL_LONGLINE_2}`;
-    LootArr.push(new DNELootCard("vinyl-waiting-for-the-sun", `WAITING FOR THE SUN`, WAITING_FOR_THE_SUN_VINYL_LONGLINE, "img/sound/vinyl-waiting-for-the-sun.png", 3, 1300, "Платівка, 65m of Psychodelic Rock", WAITING_FOR_THE_SUN_VINYL_SHORTLINE, "", true, true, "sound", "https://youtu.be/4Q12wpgi4BI"));
+    LootArr.push(new DNELootCard("vinyl-waiting-for-the-sun", `WAITING FOR THE SUN`, WAITING_FOR_THE_SUN_VINYL_LONGLINE, "img/sound/vinyl-waiting-for-the-sun.png", 4, 1300, "Платівка, 65m of Psychodelic Rock", WAITING_FOR_THE_SUN_VINYL_SHORTLINE, "", true, true, "sound", "https://youtu.be/4Q12wpgi4BI"));
 
     // Strange Days
     //
@@ -895,6 +895,83 @@ const initDNELootArr = () => {
     const DARK_SIDE_OF_THE_MOON_VINYL_LONGLINE = "";
     const DARK_SIDE_OF_THE_MOON_VINYL_SHORTLINE = `${STRINGS.VINYL_LONGLINE_2}`;
     LootArr.push(new DNELootCard("vinyl-the-dark-side-of-the-moon", `The Dark Side of the Moon`, DARK_SIDE_OF_THE_MOON_VINYL_LONGLINE, "img/sound/vinyl-the-dark-side-of-the-moon.png", 7, 1700, "Платівка, 43m of Progressive Psychodelic Rock", DARK_SIDE_OF_THE_MOON_VINYL_SHORTLINE, "", true, true, "sound", "https://youtu.be/k9ynZnEBtvw"));
+
+    // The Division Bell
+    //
+    //
+    const THE_DIVISION_BELL_VINYL_LONGLINE = "";
+    const THE_DIVISION_BELL_VINYL_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("vinyl-division-bell", `The Division Bell`, THE_DIVISION_BELL_VINYL_LONGLINE, "img/sound/vinyl-division-bell.png", 8, 2500, "Платівка, 67m of New-Age Progressive Rock", THE_DIVISION_BELL_VINYL_SHORTLINE, "", true, true, "sound", "https://youtu.be/Nc7bHU6ylvM"));
+
+    // A Saucerful Of Secrets
+    //
+    //
+    const SAUCERFUL_OF_SECRETS_LONGLINE = "";
+    const SAUCERFUL_OF_SECRETS_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("vinyl-saucerful-of-secrets", `A Saucerful Of Secrets`, SAUCERFUL_OF_SECRETS_LONGLINE, "img/sound/vinyl-saucerful-of-secrets.png", 4, 1700, "Платівка, 40m of Psychodelic Space Rock", SAUCERFUL_OF_SECRETS_SHORTLINE, "", true, true, "sound", "https://youtu.be/rmmuHnXLJiw"));
+
+    // Maggot Brain
+    //
+    //
+    const MAGGOT_BRAIN_LONGLINE = "";
+    const MAGGOT_BRAIN_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("vinyl-maggot-brain", `Maggot Brain`, MAGGOT_BRAIN_LONGLINE, "img/sound/vinyl-maggot-brain.jpg", 8, 2200, "Платівка, 37m of Acid Funk<br>Psychodelic Rock", MAGGOT_BRAIN_SHORTLINE, "", true, true, "sound", "https://youtu.be/21sP7orRS3c"));
+
+    // Animals
+    //
+    //
+    const ANIMALS_VINYL_LONGLINE = "";
+    const ANIMALS_VINYL_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("vinyl-animals", `Animals`, ANIMALS_VINYL_LONGLINE, "img/sound/vinyl-animals.png", 6, 1700, "Платівка, 42m of Progressive Rock", ANIMALS_VINYL_SHORTLINE, "", true, true, "sound", "https://youtu.be/w0MmM73v21c"));
+
+    // The Doors Electro Session
+    //
+    //
+    const THE_DOOR_ELECTRO_MIX_LONGLINE = "";
+    const THE_DOOR_ELECTRO_MIX_SHORTLINE = `${STRINGS.DEMO_LONGLINE}`;
+    LootArr.push(new DNELootCard("demo-the-doors-electro", `The Doors Electro Session`, THE_DOOR_ELECTRO_MIX_LONGLINE, "img/sound/demo-the-doors-electro-mix.jpg", 6, 0, "Демо, 35m of Psychodelic Electro Deep House", THE_DOOR_ELECTRO_MIX_SHORTLINE, "", true, true, "sound", "https://youtu.be/sCpRokBkaRs"));
+
+    // Favorite Worst Nightmare
+    //
+    //
+    const VINYL_FAVORIT_WORST_NIGHTMARE_LONGLINE = "";
+    const VINYL_FAVORIT_WORST_NIGHTMARE_SHORTLINE = `${STRINGS.VINYL_LONGLINE_2}`;
+    LootArr.push(new DNELootCard("vinyl-favorit-worst-nightmare", `Favorite Worst Nightmare`, VINYL_FAVORIT_WORST_NIGHTMARE_LONGLINE, "img/sound/vinyl-favorit-worst-nightmare.jpg", 5, 1800, "Платівка, 37m of Indie Rock", VINYL_FAVORIT_WORST_NIGHTMARE_SHORTLINE, "", true, true, "sound", "https://www.youtube.com/playlist?list=PLDUEjoBVMbh9xMc8MLt4aJodKq2bHHtQK"));
+
+    // Demon Days
+    //
+    //
+    const VINYL_DEMON_DAYS_LONGLINE = "";
+    const VINYL_DEMON_DAYS_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("vinyl-demon-days", `Demon Days`, VINYL_DEMON_DAYS_LONGLINE, "img/sound/vinyl-demon-days.png", 6, 2100, "Платівка, 52m of Hip-Hop<br>Trip-Hop Alternative Rock", VINYL_DEMON_DAYS_SHORTLINE, "", true, true, "sound", "https://youtu.be/cmQOG3VM54k"));
+
+    // Humanz
+    //
+    //
+    const VINYL_HUMANZ_LONGLINE = "";
+    const VINYL_HUMANZ_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("vinyl-humanz", `Humanz`, VINYL_HUMANZ_LONGLINE, "img/sound/vinyl-humanz.jpg", 8, 1700, "Платівка, 75m of Hip-Hop Progressive Rock", VINYL_HUMANZ_SHORTLINE, "", true, true, "sound", "https://youtu.be/f2aPPgSdsKc"));
+
+    // Gorilaz
+    //
+    //
+    const VINYL_GORILAZ_LONGLINE = "";
+    const VINYL_GORILAZ_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("vinyl-gorilaz", `Gorilaz`, VINYL_GORILAZ_LONGLINE, "img/sound/vinyl-gorilaz.png", 7, 1900, "Платівка, 56m of Electronic<br>Hip-Hop Alternative Rock", VINYL_GORILAZ_SHORTLINE, "", true, true, "sound", "https://youtu.be/H-v5oHH3iWs"));
+
+    // Farwalker
+    //
+    //
+    const FARWALKER_ALBUM_LONGLINE = "";
+    const FARWALKER_ALBUM_SHORTLINE = ``;
+    LootArr.push(new DNELootCard("album-farwalker", `Farwalker`, FARWALKER_ALBUM_LONGLINE, "img/sound/album-farwalker.png", 4, 0, "Платівка, 56m of Dungeon Synth Fantasy Ambient", FARWALKER_ALBUM_SHORTLINE, "", true, true, "sound", "https://youtu.be/kzsDAv5OqNM"));
+
+    // SPAWN
+    //
+    //
+    const SPAWN_DEMO_LONGLINE = "";
+    const SPAWN_DEMO_SHORTLINE = `${STRINGS.DEMO_LONGLINE_SHORT_3}`;
+    LootArr.push(new DNELootCard("demo-spawn", `SPAWN`, SPAWN_DEMO_LONGLINE, "img/sound/demo-spawn.jpg", "d6", 0, "Демо, 98m of Psychodelic Electro Ambient", SPAWN_DEMO_SHORTLINE, "", true, true, "sound", ""));
 
     // Cinco Cielos
     //
@@ -922,7 +999,7 @@ const initDNELootArr = () => {
     //
     const ACID_HOOF_ALBUM_LONGLINE = "";
     const ACID_HOOF_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
-    LootArr.push(new DNELootCard("vinyl-under-acid-hoof", `Under Acid Hoof`, ACID_HOOF_ALBUM_LONGLINE, "img/sound/vinyl-under-acid-hoof.jpg", 6, 2000, "Платівка, 36m of Doom Metal Rock", ACID_HOOF_ALBUM_SHORTLINE, "", true, true, "sound", "https://youtu.be/4GwYrQeQpJk"));
+    LootArr.push(new DNELootCard("vinyl-under-acid-hoof", `Under Acid Hoof`, ACID_HOOF_ALBUM_LONGLINE, "img/sound/vinyl-under-acid-hoof.jpg", 6, 2000, "Платівка, 36m of Doom Metal<br>Acid Rock", ACID_HOOF_ALBUM_SHORTLINE, "", true, true, "sound", "https://youtu.be/4GwYrQeQpJk"));
 
     // Sleep Party People
     //
@@ -1364,8 +1441,8 @@ const initDNELootArr = () => {
     //
     //
     const HOW_TO_DISAPPEAR_DEMO_LONGLINE = "";
-    const HOW_TO_DISAPPEAR_DEMO_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
-    LootArr.push(new DNELootCard("demo-how-to-disappear", "How to disappear", HOW_TO_DISAPPEAR_DEMO_LONGLINE, "img/sound/demo-how-to-disappear.jpg", 3, 0, "Вініл, 11m of Ambient Drone", HOW_TO_DISAPPEAR_DEMO_SHORTLINE, "", true, true, "sound", "https://youtu.be/rLlFWl4HTww?si=wuzZpAAUzGfIbsfG"));
+    const HOW_TO_DISAPPEAR_DEMO_SHORTLINE = `${STRINGS.DEMO_LONGLINE}`;
+    LootArr.push(new DNELootCard("demo-how-to-disappear", "How to disappear", HOW_TO_DISAPPEAR_DEMO_LONGLINE, "img/sound/demo-how-to-disappear.jpg", 3, 0, "Демо, 11m of Ambient Drone", HOW_TO_DISAPPEAR_DEMO_SHORTLINE, "", true, true, "sound", "https://youtu.be/rLlFWl4HTww?si=wuzZpAAUzGfIbsfG"));
 
 
     LootArr.push(new DNELootCard("demo-deep-lofi-house", "DEEP LOFI HOUSE MIX", "Демо дає можливість показати лейблам що ти хочеш записати. Лейб HOR має високу репутацію, його демо значно збільшує шанси знайти простір з якісною аппаратурою, зробити якісний реліз та домовлятись про промо, стріми та лайви. Спробуй досягти цих можливостей домовившись про продюсування цього демо, використавши його під час вечірки, запису трансляції, сету або мікстейпу.<br> Комбінуй демо та платівки в одному жанрі, щоб дати кожній наступній 50% бонус до виправданих очікувань аудиторії. Та будь впевнений, що твій звук всім сподобається.", "img/sound/demo-deep-lofi-house.jpg", 1, 0, "Демо, 67m of Deep Lo-Fi House", STRINGS.DEMO_LONGLINE_SHORT_2, "", true, true, "sound", "https://youtu.be/yL06_XP4o-s"));
