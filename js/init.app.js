@@ -59,7 +59,6 @@ import {enterCity} from "./utils/enterCity.js";
 import { updNokiaLobby } from "./router/callFriend.js";
 import { saveVisit, displayLastVisit } from "./utils/saveVisit.js";
 import { startSequence } from "./utils/initTalk.js";
-import { spawnMonster, initMonsters } from "./utils/spawnMonster.js";
 
 const initApp = () => {
     saveVisit();
@@ -148,8 +147,6 @@ const initApp = () => {
     initTerminal();
     enterCity();
     // startSequence("intro");
-    // spawnMonster(8);
-    initMonsters();
 }
 
 export { initApp };

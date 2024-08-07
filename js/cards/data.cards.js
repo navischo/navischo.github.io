@@ -879,65 +879,65 @@ const initDNELootArr = () => {
     // ステップ
     //
     //
-    const STEP_SINGLE_LONGLINE = "";
-    const STEP_SINGLE_SHORTLINE = ``;
-    LootArr.push(new DNELootCard("single-step", `ステップ`, STEP_SINGLE_LONGLINE, "img/sound/single-step.jpg", "d6", 0, "Сінгл, 3:19 of Psychodelic Electronic", STEP_SINGLE_SHORTLINE, "", true, true, "sound", "https://soundcloud.com/echomateriya/ppausja4veq6"));
+    // const STEP_SINGLE_LONGLINE = "";
+    // const STEP_SINGLE_SHORTLINE = ``;
+    // LootArr.push(new DNELootCard("single-step", `ステップ`, STEP_SINGLE_LONGLINE, "img/sound/single-step.jpg", "d6", 0, "Сінгл, 3:19 of Psychodelic Electronic", STEP_SINGLE_SHORTLINE, "", true, true, "sound", "https://soundcloud.com/echomateriya/ppausja4veq6"));
 
     // ステップ
     //
     //
-    const DOUBLE_TWENTY_TWO_SINGLE_LONGLINE = "";
-    const DOUBLE_TWENTY_TWO_SINGLE_SHORTLINE = ``;
-    LootArr.push(new DNELootCard("single-double-twenty-two", `22:22.`, DOUBLE_TWENTY_TWO_SINGLE_LONGLINE, "img/sound/single-double-twenty-two.jpg", "d6", 0, "Сінгл, 2:22 of Trip-Hop Electronic", DOUBLE_TWENTY_TWO_SINGLE_SHORTLINE, "", true, true, "sound", "https://soundcloud.com/echomateriya/2222instrumentaldemo-version-1"));
-
+    // const DOUBLE_TWENTY_TWO_SINGLE_LONGLINE = "";
+    // const DOUBLE_TWENTY_TWO_SINGLE_SHORTLINE = ``;
+    // LootArr.push(new DNELootCard("single-double-twenty-two", `22:22.`, DOUBLE_TWENTY_TWO_SINGLE_LONGLINE, "img/sound/single-double-twenty-two.jpg", "d6", 0, "Сінгл, 2:22 of Trip-Hop Electronic", DOUBLE_TWENTY_TWO_SINGLE_SHORTLINE, "", true, true, "sound", "https://soundcloud.com/echomateriya/2222instrumentaldemo-version-1"));
+    //
     // G. G. P.
     //
     //
-    const GGP_SINGLE_LONGLINE = "";
-    const GGP_SINGLE_SHORTLINE = ``;
-    LootArr.push(new DNELootCard("single-ggp", `G.G.P.`, GGP_SINGLE_LONGLINE, "img/sound/single-ggp.jpg", "d6", 0, "Сінгл, 7:35 of Psychodelic Space Rock Funk", GGP_SINGLE_SHORTLINE, "", true, true, "sound", "https://soundcloud.com/echomateriya/g-g-pdemo-version-1"));
+    // const GGP_SINGLE_LONGLINE = "";
+    // const GGP_SINGLE_SHORTLINE = ``;
+    // LootArr.push(new DNELootCard("single-ggp", `G.G.P.`, GGP_SINGLE_LONGLINE, "img/sound/single-ggp.jpg", "d6", 0, "Сінгл, 7:35 of Psychodelic Space Rock Funk", GGP_SINGLE_SHORTLINE, "", true, true, "sound", "https://soundcloud.com/echomateriya/g-g-pdemo-version-1"));
 
     // A.H.H.
     //
     //
-    const AHH_SINGLE_LONGLINE = "";
-    const AHH_SINGLE_SHORTLINE = ``;
-    LootArr.push(new DNELootCard("single-ahh", `A.H.H.`, AHH_SINGLE_LONGLINE, "img/sound/single-ahh.jpg", "d6", 0, "Сінгл, 8:33 of Psychodelic<br>Hip-Hop Acid", AHH_SINGLE_SHORTLINE, "", true, true, "sound", "https://soundcloud.com/echomateriya/ahhinstrumentaldeno-version-1"));
+    // const AHH_SINGLE_LONGLINE = "";
+    // const AHH_SINGLE_SHORTLINE = ``;
+    // LootArr.push(new DNELootCard("single-ahh", `A.H.H.`, AHH_SINGLE_LONGLINE, "img/sound/single-ahh.jpg", "d6", 0, "Сінгл, 8:33 of Psychodelic<br>Hip-Hop Acid", AHH_SINGLE_SHORTLINE, "", true, true, "sound", "https://soundcloud.com/echomateriya/ahhinstrumentaldeno-version-1"));
 
     // København.
     //
     //
-    const COPENHAGEN_SINGLE_LONGLINE = "";
-    const COPENHAGEN_SINGLE_SHORTLINE = ``;
-    LootArr.push(new DNELootCard("single-copenhagen", `København.`, COPENHAGEN_SINGLE_LONGLINE, "img/sound/single-copenhagen.jpg", "d6", 0, "Сінгл, 3:32 of Progressive Rock", COPENHAGEN_SINGLE_SHORTLINE, "", true, true, "sound", "https://soundcloud.com/echomateriya/kobenhavninstrumentaldemo-version-1"));
+    // const COPENHAGEN_SINGLE_LONGLINE = "";
+    // const COPENHAGEN_SINGLE_SHORTLINE = ``;
+    // LootArr.push(new DNELootCard("single-copenhagen", `København.`, COPENHAGEN_SINGLE_LONGLINE, "img/sound/single-copenhagen.jpg", "d6", 0, "Сінгл, 3:32 of Progressive Rock", COPENHAGEN_SINGLE_SHORTLINE, "", true, true, "sound", "https://soundcloud.com/echomateriya/kobenhavninstrumentaldemo-version-1"));
 
     // Amanita
     //
     //
-    const AMANITA_SINGLE_LONGLINE = "";
-    const AMANITA_SINGLE_SHORTLINE = ``;
-    LootArr.push(new DNELootCard("single-amanita", `Amanita`, AMANITA_SINGLE_LONGLINE, "img/sound/single-amanita.jpg", "d6", 0, "Сінгл, 3:43 of Psychodelic Electronic", AMANITA_SINGLE_SHORTLINE, "", true, true, "sound", "https://soundcloud.com/echomateriya/amanita"));
+    // const AMANITA_SINGLE_LONGLINE = "";
+    // const AMANITA_SINGLE_SHORTLINE = ``;
+    // LootArr.push(new DNELootCard("single-amanita", `Amanita`, AMANITA_SINGLE_LONGLINE, "img/sound/single-amanita.jpg", "d6", 0, "Сінгл, 3:43 of Psychodelic Electronic", AMANITA_SINGLE_SHORTLINE, "", true, true, "sound", "https://soundcloud.com/echomateriya/amanita"));
 
     // BIG FISH.
     //
     //
-    const BIG_FISH_SINGLE_LONGLINE = "";
-    const BIG_FISH_SINGLE_SHORTLINE = ``;
-    LootArr.push(new DNELootCard("single-big-fish", `BIG FISH.`, BIG_FISH_SINGLE_LONGLINE, "img/sound/single-big-fish.jpg", "d6", 0, "Сінгл, 4:59 of Progressive Psychodelic Space Rock", BIG_FISH_SINGLE_SHORTLINE, "", true, true, "sound", "https://soundcloud.com/echomateriya/big-fishinstrumentaldemo-version-1"));
+    // const BIG_FISH_SINGLE_LONGLINE = "";
+    // const BIG_FISH_SINGLE_SHORTLINE = ``;
+    // LootArr.push(new DNELootCard("single-big-fish", `BIG FISH.`, BIG_FISH_SINGLE_LONGLINE, "img/sound/single-big-fish.jpg", "d6", 0, "Сінгл, 4:59 of Progressive Psychodelic Space Rock", BIG_FISH_SINGLE_SHORTLINE, "", true, true, "sound", "https://soundcloud.com/echomateriya/big-fishinstrumentaldemo-version-1"));
 
     // Koto.
     //
     //
-    const KOTO_SINGLE_LONGLINE = "";
-    const KOTO_SINGLE_SHORTLINE = ``;
-    LootArr.push(new DNELootCard("single-koto", `Koto.`, KOTO_SINGLE_LONGLINE, "img/sound/single-koto.jpg", "d6", 0, "Сінгл, 5:44 of Progressive Psychodelic Space Rock", KOTO_SINGLE_SHORTLINE, "", true, true, "sound", "https://soundcloud.com/echomateriya/kotodemo-version-1"));
+    // const KOTO_SINGLE_LONGLINE = "";
+    // const KOTO_SINGLE_SHORTLINE = ``;
+    // LootArr.push(new DNELootCard("single-koto", `Koto.`, KOTO_SINGLE_LONGLINE, "img/sound/single-koto.jpg", "d6", 0, "Сінгл, 5:44 of Progressive Psychodelic Space Rock", KOTO_SINGLE_SHORTLINE, "", true, true, "sound", "https://soundcloud.com/echomateriya/kotodemo-version-1"));
 
     // 48° 34' 39° 19'
     //
     //
-    const GEO_SINGLE_LONGLINE = "";
-    const GEO_SINGLE_SHORTLINE = ``;
-    LootArr.push(new DNELootCard("single-48-34-39-19", `48° 34' 39° 19'`, GEO_SINGLE_LONGLINE, "img/sound/single-geo.jpg", "d6", 0, "Сінгл, 4:03 of Progressive Psychodelic Space Rock", GEO_SINGLE_SHORTLINE, "", true, true, "sound", "https://soundcloud.com/echomateriya/48-34-39-19a"));
+    // const GEO_SINGLE_LONGLINE = "";
+    // const GEO_SINGLE_SHORTLINE = ``;
+    // LootArr.push(new DNELootCard("single-48-34-39-19", `48° 34' 39° 19'`, GEO_SINGLE_LONGLINE, "img/sound/single-geo.jpg", "d6", 0, "Сінгл, 4:03 of Progressive Psychodelic Space Rock", GEO_SINGLE_SHORTLINE, "", true, true, "sound", "https://soundcloud.com/echomateriya/48-34-39-19a"));
 
     // Requiem for Romance
     //

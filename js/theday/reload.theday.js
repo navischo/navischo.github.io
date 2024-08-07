@@ -69,12 +69,15 @@ const reloadTheday = () => {
     }
 
     if (win77.game.monsters.length) {
+        let soulsCount = 0;
         let soundCount = 0;
         win77.game.monsters.forEach((monsterObj) => {
             win77.giveSkillPointsToPlayer(monsterObj.card.souls);
+            soulsCount = soulsCount + monsterObj.card.souls;
             soundCount = soundCount + monsterObj.card.treasures;
         });
-        console.log(`You receive ${soundCount} sound cards from monsters`);
+        win77.game.monsters = [];
+        console.log(`You receive ${soulsCount} souls and ${soundCount} sound cards from monsters`);
     }
 
     win77.giveEnergyPointsToPlayer(1);
