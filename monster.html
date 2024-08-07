@@ -1008,11 +1008,11 @@
 
     initApp();
 
-    goToCards();
-    const catalogNode = document.querySelector(".js-cards-catalog");
-    catalogNode.innerHTML = "";
-    console.log(win77.game.catalog._secret.monsters);
-    const getMonsterCard = (cardData) => {
+    // goToCards();
+    // const catalogNode = document.querySelector(".js-cards-catalog");
+    // catalogNode.innerHTML = "";
+    // console.log(win77.game.catalog._secret.monsters);
+    const getCardElement = (cardData) => {
         const newCard = document.createElement("div");
         newCard.style.display = "block";
         newCard.id = `dne-card-${cardData.id}`;
@@ -1047,9 +1047,9 @@
 
         return newCard;
     }
-    win77.game.catalog._secret.monsters.forEach((monsterData) => {
-        catalogNode.appendChild(getMonsterCard(monsterData));
-    });
+    // win77.game.catalog._secret.monsters.forEach((monsterData) => {
+    //     catalogNode.appendChild(getCardElement(monsterData));
+    // });
 </script>
 </body>
 </html>

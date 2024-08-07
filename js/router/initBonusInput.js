@@ -11,7 +11,7 @@ const initBonusInput = () => {
         `
             <fieldset class="field --dialog">
                 <label class="visually-hidden glow text" for="bonus">Bonus</label>
-                <input id="bonus" type="number" value="1" max="9" min="1">
+                <input id="bonus" type="number" value="1" min="1">
                 <button id="bonus-submit" class="card-btn">+</button>
             </fieldset>
         `;

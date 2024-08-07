@@ -840,6 +840,42 @@ const initDNELootArr = () => {
 
     // LootArr.push(new DNELootCard("make-french-exit", "Піти по-французьки", "Гравець що використав цю карту, дістає вогнепальну зброю и робить постріл у голову гравця, в адресу якого була використана карта.<br><br> Все, цей гравець мертвий, куля в голову як не як.<br><br> А ти що думав з тобою тут хтось сюсюкатись буде?", "https://lh3.googleusercontent.com/VVGoBbf0sATIkcowuVZuAuJrkjF0C6ZKr2bY43f_f4U4B9Hk9au3Q90d9mGiIZDhKso=w2400", 0, 0, "Дія"));
 
+    // Supersonic Megafauna Collision
+    //
+    //
+    const SUPERSONIC_MEGAFAUNA_COLLISION_LONGLINE = "";
+    const SUPERSONIC_MEGAFAUNA_COLLISION_SHORTLINE = `${STRINGS.ALBUM_LONGLINE}`;
+    const SUPERSONIC_MEGAFAUNA_COLLISION_IMG = `img/sound/album-supersonic-megafauna-collision.jpg`;
+
+    LootArr.push(new DNELootCard("album-supersonic-megafauna-collision", "Supersonic Megafauna Collision", SUPERSONIC_MEGAFAUNA_COLLISION_LONGLINE, SUPERSONIC_MEGAFAUNA_COLLISION_IMG, 4, 300, "Альбом, 42m Doom Metal Rock", SUPERSONIC_MEGAFAUNA_COLLISION_SHORTLINE, "", true, false, "sound", "https://youtu.be/M2jadsUGZKA"));
+
+    // Caravan
+    //
+    //
+    const CARAVAN_VINYL_LONGLINE = "";
+    const CARAVAN_VINYL_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    const CARAVAN_VINYL_IMG = `img/sound/vinyl-caravan.jpg`;
+
+    LootArr.push(new DNELootCard("vinyl-caravan", "Caravan", CARAVAN_VINYL_LONGLINE, CARAVAN_VINYL_IMG, 5, 1200, "Платівка, 40m of Psychodelic<br>Doom Metal Stoner Rock", CARAVAN_VINYL_SHORTLINE, "", true, false, "sound", "https://youtu.be/Dy_tMphZE_g"));
+
+    // DOOM SESSION VOL2
+    //
+    //
+    const DOOM_SESSION_VOL2_ALBUM_LONGLINE = "";
+    const DOOM_SESSION_VOL2_ALBUM_SHORTLINE = ``;
+    const DOOM_SESSION_VOL2_ALBUM_IMG = `img/sound/album-doom-session-2.jpg`;
+
+    LootArr.push(new DNELootCard("album-doom-session-2", "DOOM SESSION VOL2", DOOM_SESSION_VOL2_ALBUM_LONGLINE, DOOM_SESSION_VOL2_ALBUM_IMG, 6, 1200, "Альбом, 36m Psychodelic<br>Doom Metal Stoner Rock", DOOM_SESSION_VOL2_ALBUM_SHORTLINE, "", true, false, "sound", "https://youtu.be/XO2K4FEVQaA"));
+
+    // Holy Mountain
+    //
+    //
+    const HOLY_MOUNTAIN_VINYL_LONGLINE = "";
+    const HOLY_MOUNTAIN_VINYL_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    const HOLY_MOUNTAIN_VINYL_IMG = `img/sound/vinyl-holy-mountain.jpg`;
+
+    LootArr.push(new DNELootCard("vinyl-holy-mountain", "Holy Mountain", HOLY_MOUNTAIN_VINYL_LONGLINE, HOLY_MOUNTAIN_VINYL_IMG, 7, 1400, "Платівка, 58m of Alternative Doom Metal Stoner Rock", HOLY_MOUNTAIN_VINYL_SHORTLINE, "", true, true, "sound", "https://youtu.be/1WNxnQ39b38"));
+
     // ステップ
     //
     //

@@ -47,7 +47,9 @@ const initGame = () => {
         round: 0,
         alliance: false,
         invasion: false,
-        final: false
+        final: false,
+        monsters: [],
+        fastForward: true
     }
 
     win77.locationsSet = new Set();

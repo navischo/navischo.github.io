@@ -1,3 +1,23 @@
+.card-owner {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 2;
+
+    transform: translate(-60%, 0) scale(1.1);
+
+    transition: .2s ease;
+
+}
+
+.card-owner:hover {
+    visibility: visible;
+    opacity: 1;
+
+    z-index: 3;
+    transform: translate(0, 0) scale(1.5);
+}
+
 #find-card-by-id-popup {
     max-width: 340px;
 }
@@ -34,6 +54,10 @@
     text-align: left;
 
     background: white;
+}
+
+.card:hover {
+    z-index: 2;
 }
 
 .card.--hide::before {
@@ -277,7 +301,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 136px;
+    width: 132px;
     height: 430px;
     font-size: 77px;
 }

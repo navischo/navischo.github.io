@@ -40,6 +40,9 @@ const reloadTheday = () => {
     document.querySelector("body").classList.remove("background-single");
 
     document.querySelector("body").classList.add("js-return-sound-phase");
+    document.querySelectorAll(".js-monster-table").forEach((monsterTable) => {
+        monsterTable.remove();
+    });
     document.querySelector("#dne-page-up").classList.remove("js-open");
     document.querySelector("#dne-page-up").innerHTML = "";
 
@@ -63,6 +66,15 @@ const reloadTheday = () => {
     } else {
         win77.giveIncomeToPlayer(win77.game.event.result.income);
         win77.giveSkillPointsToPlayer(2);
+    }
+
+    if (win77.game.monsters.length) {
+        let soundCount = 0;
+        win77.game.monsters.forEach((monsterObj) => {
+            win77.giveSkillPointsToPlayer(monsterObj.card.souls);
+            soundCount = soundCount + monsterObj.card.treasures;
+        });
+        console.log(`You receive ${soundCount} sound cards from monsters`);
     }
 
     win77.giveEnergyPointsToPlayer(1);
