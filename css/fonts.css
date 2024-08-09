@@ -34,6 +34,20 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Justice Halftone';
+    src: url('../fonts/justicehalf.woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Justice Laser';
+    src: url('../fonts/justicelaser.woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     color: white;
 }

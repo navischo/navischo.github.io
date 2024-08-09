@@ -843,6 +843,15 @@ const initDNELootArr = () => {
     // Supersonic Megafauna Collision
     //
     //
+    const EXCURSION_LONGLINE = "";
+    const EXCURSION_SHORTLINE = `${STRINGS.ALBUM_LONGLINE}`;
+    const EXCURSION_IMG = `img/sound/album-excursion.jpg`;
+
+    LootArr.push(new DNELootCard("album-excursion", "Excursion", EXCURSION_LONGLINE, EXCURSION_IMG, 4, 300, "Альбом, 43m Doom Metal<br>Stoner Rock", EXCURSION_SHORTLINE, "", true, false, "sound", "https://youtu.be/JVBB_9pigT4"));
+
+    // Supersonic Megafauna Collision
+    //
+    //
     const SUPERSONIC_MEGAFAUNA_COLLISION_LONGLINE = "";
     const SUPERSONIC_MEGAFAUNA_COLLISION_SHORTLINE = `${STRINGS.ALBUM_LONGLINE}`;
     const SUPERSONIC_MEGAFAUNA_COLLISION_IMG = `img/sound/album-supersonic-megafauna-collision.jpg`;

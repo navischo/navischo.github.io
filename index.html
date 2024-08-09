@@ -36,6 +36,7 @@
     <link rel="stylesheet" href="css/standalone/sale.css">
     <link rel="stylesheet" href="css/standalone/dodge.css">
     <link rel="stylesheet" href="css/standalone/stone.css">
+    <link rel="stylesheet" href="css/standalone/flyer.css">
 
 </head>
 <body class="buy-body">
@@ -83,6 +84,92 @@
 <!--            </div>-->
 <!--        </header>-->
 
+<!--        <div class="buy buy-hero">-->
+<!--            <header class="buy-hero__header">-->
+<!--                <h1 class="buy__title">DNE WEEK</h1>-->
+<!--                <p class="buy-hero__descr">-->
+<!--                    ЛІТНІЙ РОЗПРОДАЖ НАСТОЛКИ<br>-->
+<!--                    ЩО НЕ ІСНУЄ-->
+<!--                </p>-->
+<!--            </header>-->
+<!--            <div class="buy-hero__main">-->
+<!--                <b class="buy-hero__date"><span class="buy-hero__percent">50%</span><br>sale</b>-->
+<!--&lt;!&ndash;                <img src="img/flyer_sale-A@21x10.jpg" alt="" width="1181" height="2481">&ndash;&gt;-->
+<!--                -->
+<!--            </div>-->
+<!--        </div>-->
+        <div class="sale">
+            <div class="flyer sale__flyer-1">
+                <b class="flyer__title">
+                    <span class="flyer__title-percent">50%</span><br>
+                    <span class="flyer__title-word">sale</span>
+                </b>
+                <div class="flyer__products">
+                    <div class="flyer__product">
+                        <div class="flyer__preview">
+                            <img class="flyer__previewImg" src="img/buy/img-product-flyer-1.png" alt="">
+                        </div>
+                        <p class="flyer__price">
+                            <span class="flyer__priceOld">777</span>
+                            <span class="flyer__priceNew">420</span>
+                        </p>
+                    </div>
+                    <div class="flyer__product">
+                        <div class="flyer__preview">
+                            <img class="flyer__previewImg" src="img/buy/img-product-flyer-2.png" alt="">
+                        </div>
+                        <p class="flyer__price">
+                            <span class="flyer__priceOld">250</span>
+                            <span class="flyer__priceNew">120</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="text-me sale__text-me">
+                    <div class="container text-me__container">
+                        <a class="text-me__qr" href="https://www.t.me/beast_hotline" target="_blank">
+                            <img src="img/buy/qr-dev-hotline.png" alt="" class="text-me__qrImg">
+                        </a>
+                        <p class="text-me__title">
+                            напиши мені "+"<br>
+                            щоб замовити
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flyer sale__flyer-2">
+                <b class="flyer__title">
+                    <span class="flyer__title-word flyer__title-word-2">combo</span>
+                </b>
+                <div class="flyer__products">
+                    <div class="flyer__product">
+                        <div class="flyer__name"><span class="flyer__num">36</span><br>CARDS</div>
+                        <div class="flyer__preview">
+                            <img class="flyer__previewImg" src="img/buy/img-product-flyer-3.png" alt="">
+                        </div>
+                    </div>
+
+                    <div class="flyer__product">
+                        <div class="flyer__name"><span class="flyer__num">40</span><br>CRYSTALS</div>
+                        <div class="flyer__preview">
+                            <img class="flyer__previewImg" src="img/buy/img-product-flyer-4.png" alt="">
+                        </div>
+                    </div>
+
+                    <div class="flyer__product">
+                        <div class="flyer__name"><span class="flyer__num">3</span><br>DICES</div>
+                        <div class="flyer__preview">
+                            <img class="flyer__previewImg" src="img/buy/img-product-flyer-5.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <p class="flyer__price flyer__priceFinal">
+                    <span class="flyer__priceOld">999</span>
+                    <span class="flyer__priceNew">666</span>
+                </p>
+            </div>
+        </div>
+
         <header class="node">
             <div class="container node__container">
                 <h1 class="node__disclaimer">DNE is an open-source, cross-platform JavaScript game</h1>
@@ -118,10 +205,11 @@
             <ul class="buy__bundle-list">
                 <li class="buy__bundle">
                     <h3 class="buy__bundle-title">Bunny</h3>
-                    <b id="price-bunny" class="buy__bundle-price">250₴</b>
+                    <b id="price-bunny" class="buy__bundle-price">120₴</b>
                     <button class="buy__bundle-preview">
-                        <img class="buy__bundle-preview-img" src="img/buy/shop-preview-bunny.png" alt="">
-                        <img class="buy__bundle-preview-img buy__bundle-preview-img--hover buy__bundle-preview-img--hover-1" src="img/buy/shop-preview-bunny-2.jpg" alt="">
+<!--                        <img class="buy__bundle-preview-img" src="img/buy/shop-preview-bunny.png" alt="">-->
+                        <img class="buy__bundle-preview-img" src="img/buy/shop-preview-bunny-2@1x1.jpg" alt="">
+<!--                        <img class="buy__bundle-preview-img buy__bundle-preview-img&#45;&#45;hover buy__bundle-preview-img&#45;&#45;hover-1" src="img/buy/shop-preview-bunny-2.jpg" alt="">-->
                     </button>
                     <div class="buy__bundle-textfield">
                         <ul>
@@ -133,10 +221,10 @@
                         </ul>
                         <p>Вистачить щоб відчути на смак</p>
                     </div>
-                    <button class="js-add-pack cp-button btn-buy" data-pack-type="bunny" data-pack-price="250"
+                    <button class="js-add-pack cp-button btn-buy" data-pack-type="bunny" data-pack-price="120"
                             type="button">&plus;
                     </button>
-                    <button class="js-sub-pack cp-button btn-buy" data-pack-type="bunny" data-pack-price="250"
+                    <button class="js-sub-pack cp-button btn-buy" data-pack-type="bunny" data-pack-price="120"
                             type="button">&minus;
                     </button>
                     <!--            <button class="cybr-btn buy__action">+</button>-->
@@ -144,15 +232,18 @@
                 </li>
                 <li class="buy__bundle">
                     <h3 class="buy__bundle-title">Basic</h3>
-                    <b id="price-basic" class="buy__bundle-price">777₴</b>
+                    <b id="price-basic" class="buy__bundle-price">420₴</b>
                     <button class="buy__bundle-preview">
-                        <img class="buy__bundle-preview-img" src="img/buy/shop-preview-basic.png" alt="">
+<!--                        <img class="buy__bundle-preview-img" src="img/buy/shop-preview-basic.png" alt="">-->
+                        <img class="buy__bundle-preview-img" src="img/buy/shop-preview-basic-2@1x1.jpg" alt="">
 <!--                        <img class="buy__bundle-preview-img buy__bundle-preview-img&#45;&#45;hover buy__bundle-preview-img&#45;&#45;hover-1" src="img/buy/done/shop-preview-basic.png" alt="">-->
-                        <img class="buy__bundle-preview-img buy__bundle-preview-img--hover buy__bundle-preview-img--hover-1" src="img/buy/shop-preview-basic-2.jpg" alt="">
+<!--                        <img class="buy__bundle-preview-img buy__bundle-preview-img&#45;&#45;hover buy__bundle-preview-img&#45;&#45;hover-1" src="img/buy/shop-preview-basic-2.jpg" alt="">-->
                     </button>
                     <div class="buy__bundle-textfield">
                         <ul>
                             <li>27 карток Звуку</li>
+                            <li>1 буклет з правилами</li>
+                            <li>3 карти-шпаргалки</li>
                             <!--                                <li>9 Найомничків</li>-->
                             <!--                                <li>15 Саундів</li>-->
                             <!--                                <li>1 DMT-дихання</li>-->
@@ -160,31 +251,33 @@
                         </ul>
                         <p>"Bunny"х3, достатньо щоб зануритись</p>
                     </div>
-                    <button class="js-add-pack cp-button btn-buy" data-pack-type="basic" data-pack-price="777"
+                    <button class="js-add-pack cp-button btn-buy" data-pack-type="basic" data-pack-price="420"
                             type="button">&plus;
                     </button>
-                    <button class="js-sub-pack cp-button btn-buy" data-pack-type="basic" data-pack-price="777"
+                    <button class="js-sub-pack cp-button btn-buy" data-pack-type="basic" data-pack-price="420"
                             type="button">&minus;
                     </button>
-                    <!--            <button class="cybr-btn buy__action">+</button>-->
+                    <!--            <button class="cybr-btn buy__actionц">+</button>-->
                     <!--            <button class="cybr-btn buy__action">-</button>-->
                 </li>
                 <li class="buy__bundle">
-                    <h3 class="buy__bundle-title">Regular</h3>
-                    <b id="price-regular" class="buy__bundle-price --regular">4.2K₴</b>
+                    <h3 class="buy__bundle-title">Combo</h3>
+                    <b id="price-combo" class="buy__bundle-price">666₴</b>
                     <button class="buy__bundle-preview">
-                        <img class="buy__bundle-preview-img" src="img/buy/shop-preview-regular.png" alt="">
-                        <img class="buy__bundle-preview-img buy__bundle-preview-img--hover buy__bundle-preview-img--hover-1" src="img/buy/shop-preview-regular-2.jpg" alt="">
+                        <img class="buy__bundle-preview-img" src="img/buy/shop-preview-combo.png" alt="">
+<!--                        <img class="buy__bundle-preview-img buy__bundle-preview-img&#45;&#45;hover buy__bundle-preview-img&#45;&#45;hover-1" src="img/buy/shop-preview-regular-2.jpg" alt="">-->
                     </button>
                     <div class="buy__bundle-textfield">
                         <ul>
-                            <li>Повна колекція зі 189 карток Звуку</li>
+                            <li>36 карток Звуку</li>
+                            <li>40 кристалів(для 4х гравців)</li>
+                            <li>3 кубики d8</li>
                             <!--                                <li>63 Найомничка</li>-->
                             <!--                                <li>105 Саундів</li>-->
                             <!--                                <li>7 DMT-дихання</li>-->
                             <!--                                <li>14 Класів</li>-->
                         </ul>
-                        <p>"Basic"х7, дозволить поринути з головою</p>
+                        <p>1 "Basic" + 1 "Bunny" і трохи тайлів<br>для задоволення</p>
                     </div>
                     <button class="js-add-pack cp-button btn-buy" data-pack-type="regular" data-pack-price="4200"
                             type="button">&plus;
@@ -195,6 +288,32 @@
                     <!--            <button class="cybr-btn buy__action">+</button>-->
                     <!--            <button class="cybr-btn buy__action">-</button>-->
                 </li>
+<!--                <li class="buy__bundle">-->
+<!--                    <h3 class="buy__bundle-title">Regular</h3>-->
+<!--                    <b id="price-regular" class="buy__bundle-price &#45;&#45;regular">4.2K₴</b>-->
+<!--                    <button class="buy__bundle-preview">-->
+<!--                        <img class="buy__bundle-preview-img" src="img/buy/shop-preview-regular.png" alt="">-->
+<!--                        <img class="buy__bundle-preview-img buy__bundle-preview-img&#45;&#45;hover buy__bundle-preview-img&#45;&#45;hover-1" src="img/buy/shop-preview-regular-2.jpg" alt="">-->
+<!--                    </button>-->
+<!--                    <div class="buy__bundle-textfield">-->
+<!--                        <ul>-->
+<!--                            <li>Повна колекція зі 189 карток Звуку</li>-->
+<!--                            &lt;!&ndash;                                <li>63 Найомничка</li>&ndash;&gt;-->
+<!--                            &lt;!&ndash;                                <li>105 Саундів</li>&ndash;&gt;-->
+<!--                            &lt;!&ndash;                                <li>7 DMT-дихання</li>&ndash;&gt;-->
+<!--                            &lt;!&ndash;                                <li>14 Класів</li>&ndash;&gt;-->
+<!--                        </ul>-->
+<!--                        <p>"Basic"х7, дозволить поринути з головою</p>-->
+<!--                    </div>-->
+<!--                    <button class="js-add-pack cp-button btn-buy" data-pack-type="regular" data-pack-price="4200"-->
+<!--                            type="button">&plus;-->
+<!--                    </button>-->
+<!--                    <button class="js-sub-pack cp-button btn-buy" data-pack-type="regular" data-pack-price="4200"-->
+<!--                            type="button">&minus;-->
+<!--                    </button>-->
+<!--                    &lt;!&ndash;            <button class="cybr-btn buy__action">+</button>&ndash;&gt;-->
+<!--                    &lt;!&ndash;            <button class="cybr-btn buy__action">-</button>&ndash;&gt;-->
+<!--                </li>-->
             </ul>
         </div>
         <div class="js-order order">
@@ -222,7 +341,7 @@
         <div id="real-cards" class="buy-cards-counter">
             <div class="container">
                 <div class="buy-cards-counter__number">
-                    <span class="matrix-flip">1290</span>+
+                    <span class="matrix-flip">1533</span>+
                 </div>
                 <p class="buy-cards-counter__descr">
                     does not exist collectible cards printed
@@ -1019,10 +1138,11 @@
     const buyPhysicalBtn = document.querySelector("#buy-physical");
     const bunnyPriceNode = document.querySelector("#price-bunny");
     const basicPriceNode = document.querySelector("#price-basic");
-    const regularPriceNode = document.querySelector("#price-regular");
-    const priceNodeArr = [bunnyPriceNode, basicPriceNode, regularPriceNode];
-    const digitalPriceArr = [0, 0, 0];
-    const physicalPriceArr = [250, 777, '4.2K'];
+    // const regularPriceNode = document.querySelector("#price-regular");
+    const comboPriceNode = document.querySelector("#price-combo");
+    const priceNodeArr = [bunnyPriceNode, basicPriceNode, comboPriceNode]; // , regularPriceNode
+    const digitalPriceArr = [0, 0, 0]; // , 0
+    const physicalPriceArr = [120, 420, 666]; // , '4.2K'
     const CURRENCY = "₴";
 
     buyDigitalBtn.addEventListener("click", () => {

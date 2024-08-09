@@ -1,0 +1,214 @@
+.sale {
+    display: flex;
+    flex-direction: column;
+}
+
+.flyer {
+    position: relative;
+    padding-bottom: 60px;
+}
+
+.flyer__title {
+    display: block;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.flyer__title-percent {
+    font-family: "Justice Laser", "Press Start 2P", sans-serif;
+    font-size: 150px;
+    line-height: 60px;
+}
+
+.flyer__title-percent::before {
+    content: "UP TO";
+
+    position: absolute;
+
+    font-size: 30px;
+
+    transform: rotate(-75deg) translate(-18px, -42px);
+}
+
+.flyer__title-word {
+    position: relative;
+    left: -11px;
+
+    font-family: "Justice Halftone", "Press Start 2P", sans-serif;
+    font-size: 130px;
+    line-height: 62px;
+}
+
+.flyer__title-word-2 {
+    font-size: 100px;
+}
+
+.flyer__products {
+    position: relative;
+    padding: 40px 0 60px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.flyer__products::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+
+    display: block;
+
+    background-image: url("../../img/bg-snake.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.flyer__product + .flyer__product {
+    margin-top: 60px;
+}
+
+.flyer__product {
+    position: relative;
+    z-index: 2;
+    max-width: 360px;
+    margin: 0 auto;
+}
+
+.flyer__previewImg {
+}
+
+.flyer__price {
+    position: absolute;
+    right: 20px;
+    bottom: 40px;
+
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+
+    font-family: "Justice Laser", "Press Start 2P", sans-serif;
+    font-size: 60px;
+    line-height: 1;
+    text-shadow: 5px 2px black;
+}
+
+.flyer__priceOld {
+    position: relative;
+    margin-right: auto;
+}
+
+.flyer__priceOld::before {
+    content: "";
+
+    position: absolute;
+
+    display: block;
+    width: 120%;
+    height: 10px;
+
+    background: black;
+    transform: rotate(340deg) translate(-15px, 25px);
+}
+
+.flyer__priceFinal .flyer__priceOld::before {
+    width: 115%;
+    transform: rotate(342deg) translate(-20px, 40px);
+}
+
+.flyer__priceNew {
+    display: inline-block;
+    margin-left: 22px;
+    line-height: .7;
+}
+
+.flyer__priceFinal {
+    right: 40px;
+    bottom: 100px;
+    z-index: 2;
+
+    font-size: 110px;
+    line-height: 0.8;
+}
+
+.flyer__name {
+    position: absolute;
+    left: 20px;
+    top: 0;
+
+    font-family: "Justice Laser", "Press Start 2P", sans-serif;
+    font-size: 48px;
+    line-height: .7;
+    text-shadow: 5px 2px black;
+}
+
+.flyer__num {
+    font-size: 78px;
+}
+
+.text-me {
+    margin: 0 0 60px;
+    padding: 40px;
+    background-color: #00ffff;
+}
+
+.text-me__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-me__qr {
+    display: block;
+    width: 140px;
+    height: 140px;
+    margin-bottom: 15px;
+}
+
+.text-me__qrImg {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.text-me__title {
+    text-align: center;
+    font-family: "JetBrains Mono", sans-serif;
+    font-size: 24px;
+    line-height: 32px;
+    color: black;
+}
+
+@media (min-width: 480px) {
+}
+
+@media (min-width: 940px) {
+    .sale {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .sale__flyer-1 {
+        margin-right: 60px;
+    }
+
+    .sale__flyer-2 {
+        padding-top: 97px;
+        margin-left: 60px;
+    }
+
+    .text-me {
+        max-width: 360px;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 40px;
+        background: transparent;
+        filter: invert(1);
+    }
+}
