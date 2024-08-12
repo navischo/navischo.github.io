@@ -840,6 +840,16 @@ const initDNELootArr = () => {
 
     // LootArr.push(new DNELootCard("make-french-exit", "Піти по-французьки", "Гравець що використав цю карту, дістає вогнепальну зброю и робить постріл у голову гравця, в адресу якого була використана карта.<br><br> Все, цей гравець мертвий, куля в голову як не як.<br><br> А ти що думав з тобою тут хтось сюсюкатись буде?", "https://lh3.googleusercontent.com/VVGoBbf0sATIkcowuVZuAuJrkjF0C6ZKr2bY43f_f4U4B9Hk9au3Q90d9mGiIZDhKso=w2400", 0, 0, "Дія"));
 
+    // Spiritual Paralysis
+    //
+    //
+    const SPIRITUAL_PARALYSIS_VINYL_LONGLINE = "";
+    const SPIRITUAL_PARALYSIS_VINYL_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    const SPIRITUAL_PARALYSIS_VINYL_IMG_ID = ``;
+    const SPIRITUAL_PARALYSIS_VINYL_IMG = `img/sound/vinyl-spiritual-paralysis.jpg`;
+
+    LootArr.push(new DNELootCard("vinyl-spiritual-paralysis", "Spiritual Paralysis", SPIRITUAL_PARALYSIS_VINYL_LONGLINE, SPIRITUAL_PARALYSIS_VINYL_IMG, 4, 1100, "Платівка, 40m Electronic<br>Dark Ambient", SPIRITUAL_PARALYSIS_VINYL_SHORTLINE, "", true, false, "sound", "https://youtu.be/7vTraPeiEtw"));
+
     // Supersonic Megafauna Collision
     //
     //

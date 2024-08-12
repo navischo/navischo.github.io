@@ -1,3 +1,85 @@
+.sale-hero {
+    padding-bottom: 60px;
+
+    text-align: center;
+    font-family: "Sofia Sans", sans-serif;
+    background: radial-gradient(cyan, transparent 50%);
+    transition: 2.5s ease-in-out;
+}
+
+.sale-hero__logo {
+    position: relative;
+
+    max-width: 900px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: auto;
+}
+
+.sale-hero__logo-img {
+    position: relative;
+    z-index: 2;
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.sale-hero__logo::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    transform: translate(-70%, -100px);
+
+
+    display: block;
+    width: 500px;
+    height: 500px;
+
+    background-image: url("../../img/buy/bg-sale-hero-left.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.sale-hero__logo::after {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 3;
+    transform: translate(70%, -100px);
+
+
+    display: block;
+    width: 500px;
+    height: 500px;
+
+    background-image: url("../../img/buy/bg-sale-hero-right.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.sale-hero__date {
+    display: block;
+    max-width: 180px;
+    padding: 5px 10px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+
+    font-size: 24px;
+    line-height: 32px;
+    font-family: "Press Start 2P", sans-serif;
+    /*font-size: .8em;*/
+    /*color: black;*/
+    /*text-shadow: 4px 2px #fefe01;*/
+    /*background: white;*/
+}
+
 .sale {
     display: none;
     width: 100%;
@@ -146,6 +228,26 @@
 
     90% {
         background-position: -10% 10%;
+    }
+}
+
+@media (min-width: 940px) {
+    .sale-hero {
+        padding-bottom: 100px;
+    }
+
+    .sale-hero__logo::before,
+    .sale-hero__logo::after {
+        content: "";
+    }
+
+    .sale-hero__date {
+        max-width: 430px;
+        padding: 10px 20px;
+        font-size: 2em;
+        color: black;
+        /*text-shadow: 4px 2px #fefe01;*/
+        background: white;
     }
 }
 

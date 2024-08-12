@@ -52,6 +52,22 @@
         .swiper-slide {
 
         }
+
+        .swiper-pagination-bullet {
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            line-height: 20px;
+            font-size: 12px;
+            color: #000;
+            opacity: 1;
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        .swiper-pagination-bullet-active {
+            color: #fff;
+            background: #007aff;
+        }
     </style>
 </head>
 
@@ -62,6 +78,7 @@
     </div>
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
 </div>
 
 <!-- Swiper JS -->
@@ -86,6 +103,13 @@
         navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            renderBullet: function (index, className) {
+                return '<span class="' + className + '">' + (index + 1) + "</span>";
+            },
         },
         loop: true
     });
