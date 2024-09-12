@@ -68,6 +68,15 @@
             color: #fff;
             background: #007aff;
         }
+
+        .swiper-pagination {
+            opacity: 0;
+            transition: .2s ease;
+        }
+
+        .swiper-pagination:hover {
+            opacity: 1;
+        }
     </style>
 </head>
 
@@ -96,7 +105,7 @@
         parent.appendChild(newSlide);
 
     }
-    for (let i = 1; i <= 92; i++) {
+    for (let i = 1; i <= 95; i++) {
         appendSheet(i);
     }
     var swiper = new Swiper(".mySwiper", {

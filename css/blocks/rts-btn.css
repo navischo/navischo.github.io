@@ -58,6 +58,7 @@ body.js-return-sound-phase .rsp-btn-wrap {
     visibility: visible;
     opacity: 1;
     transform: translate(-50%, 0);
+    /*z-index: 41;*/
 }
 
 @keyframes title-rotation {

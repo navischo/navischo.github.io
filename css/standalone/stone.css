@@ -570,6 +570,10 @@ a.stone-header__link:visited {
     font-family: "JetBrains Mono", monospace;
 }
 
+.stone-game__about-textfield a {
+    text-decoration: underline;
+}
+
 .stone-game__about-textfield h3 {
     margin-top: 1.4rem;
     margin-bottom: 1rem;
