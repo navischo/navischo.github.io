@@ -1,3 +1,5 @@
+import {CARD_TYPES} from "./const.cards.js";
+
 const getCardElement = (cardData) => {
     const newCard = document.createElement("div");
     newCard.style.display = "block";
@@ -15,7 +17,10 @@ const getCardElement = (cardData) => {
             <small class="card__limits">${cardData.limits}</small>
         </div>
         <div class="card__header-right">
-            ${cardData.bonus !== 0 ? `<b class="card__bonus">+${cardData.bonus}</b>` : ``}
+            ${
+            cardData.bonus !== 0 ? 
+            `<b class="card__bonus" ${cardData.type === CARD_TYPES.sound ? `data-bonus-50="${+cardData.bonus + (Math.round(+cardData.bonus / 2))}" data-bonus-100="${+cardData.bonus + +cardData.bonus}"` : ""}>+${cardData.bonus}</b>` 
+            : ``}
         </div>
     </header>
     <a class="card__preview" ${cardData.credits ? `href="${cardData.credits}" target="_blank"` :  ``}>

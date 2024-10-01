@@ -126,7 +126,9 @@ const SCREEN_NAMES = [
     // `screen-nohud--need-for-speed-3`,
     // `screen-nohud--need-for-speed-4`,
     // `screen-nohud--need-for-speed-5`,
-    // `screen-nohud--need-for-speed-6`
+    // `screen-nohud--need-for-speed-6`,
+    `screen-nohud--here-we-go`,
+    // `screen-nohud--`
 ];
 
 const initScreen = (all = false, select = false) => {

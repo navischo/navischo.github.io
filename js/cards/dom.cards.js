@@ -82,7 +82,7 @@ const initHandlers = (cardData, controls) => {
             const id = cardData.id;
             const bonusString = cardData.bonus;
             const bonus = bonusString === "d6" ? getRandomInt(6) : +bonusString;
-            getEnergyForExtraSound(); // experiment
+            getEnergyForExtraSound(); // experiment // попробуй добавить сюда сканер жанров в лайнапе и плюсануть бонус за метчи в основной счёт
             moveCardById(id, win77.game.player.sound, win77.game.table);
             updTable();
 
@@ -259,7 +259,7 @@ const updHand = () => {
             const bonus = bonusString === "+d6" ? getRandomInt(6) : +bonusString;
             // console.log(win77);
             // openWithTimer();
-            getEnergyForExtraSound(); // experiment
+            getEnergyForExtraSound(); // experiment // попробуй добавить сюда сканер жанров в лайнапе и плюсануть бонус за метчи в основной счёт
 
             if (win77.game.invasion) {
                 if (win77.game.player.id === win77.game.invasion.invader) {

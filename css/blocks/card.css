@@ -390,6 +390,7 @@
 }
 
 .card__bonus {
+    position: relative;
     white-space: nowrap;
 }
 
@@ -398,6 +399,30 @@
 .card__profit {
     font-family: 'Press Start 2P', sans-serif;
     font-size: 1.2em;
+}
+
+.card__bonus::before {
+    content: attr(data-bonus-50);
+
+    position: absolute;
+    bottom: 0;
+    right: 1.5px;
+    transform: translateY(100%);
+
+    font-size: .5em;
+    font-family: "JetBrains Mono", sans-serif;
+}
+
+.card__bonus::after {
+    content: attr(data-bonus-100);
+
+    position: absolute;
+    bottom: 0;
+    right: 1.5px;
+    transform: translateY(200%);
+
+    font-size: .5em;
+    font-family: "JetBrains Mono", sans-serif;
 }
 
 .js-cards-catalog {
