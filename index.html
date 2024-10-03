@@ -98,6 +98,7 @@
 <!--                -->
 <!--            </div>-->
 <!--        </div>-->
+        <!--
         <div class="sale-hero">
             <div class="container sale-hero__container">
                 <a class="rts-btn sale-hero__date">вересень</a>
@@ -177,6 +178,7 @@
                 </p>
             </div>
         </div>
+        -->
 
         <header class="node">
             <div class="container node__container">
@@ -213,7 +215,7 @@
             <ul class="buy__bundle-list">
                 <li class="buy__bundle">
                     <h3 class="buy__bundle-title">Bunny</h3>
-                    <b id="price-bunny" class="buy__bundle-price">120₴</b>
+                    <b id="price-bunny" class="buy__bundle-price">250₴</b>
                     <button class="buy__bundle-preview">
 <!--                        <img class="buy__bundle-preview-img" src="img/buy/shop-preview-bunny.png" alt="">-->
                         <img class="buy__bundle-preview-img" src="img/buy/shop-preview-bunny-2@1x1.jpg" alt="">
@@ -240,7 +242,7 @@
                 </li>
                 <li class="buy__bundle">
                     <h3 class="buy__bundle-title">Basic</h3>
-                    <b id="price-basic" class="buy__bundle-price">420₴</b>
+                    <b id="price-basic" class="buy__bundle-price">777₴</b>
                     <button class="buy__bundle-preview">
 <!--                        <img class="buy__bundle-preview-img" src="img/buy/shop-preview-basic.png" alt="">-->
                         <img class="buy__bundle-preview-img" src="img/buy/shop-preview-basic-2@1x1.jpg" alt="">
@@ -270,7 +272,7 @@
                 </li>
                 <li class="buy__bundle">
                     <h3 class="buy__bundle-title">Combo</h3>
-                    <b id="price-combo" class="buy__bundle-price">666₴</b>
+                    <b id="price-combo" class="buy__bundle-price">999₴</b>
                     <button class="buy__bundle-preview">
                         <img class="buy__bundle-preview-img" src="img/buy/shop-preview-combo.png" alt="">
 <!--                        <img class="buy__bundle-preview-img buy__bundle-preview-img&#45;&#45;hover buy__bundle-preview-img&#45;&#45;hover-1" src="img/buy/shop-preview-regular-2.jpg" alt="">-->
@@ -1151,7 +1153,7 @@
     const comboPriceNode = document.querySelector("#price-combo");
     const priceNodeArr = [bunnyPriceNode, basicPriceNode, comboPriceNode]; // , regularPriceNode
     const digitalPriceArr = [0, 0, 0]; // , 0
-    const physicalPriceArr = [120, 420, 666]; // , '4.2K'
+    const physicalPriceArr = [250, 777, 999]; // , '4.2K'
     const CURRENCY = "₴";
 
     buyDigitalBtn.addEventListener("click", () => {
