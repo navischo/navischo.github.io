@@ -18,6 +18,12 @@ body {
     user-select: none;
 }
 
+.showcase .num,
+.showcase .click-me,
+.showcase .name {
+    display: none!important;
+}
+
 .link {
     position: absolute;
     width: 100%;
@@ -94,6 +100,9 @@ body {
     pointer-events: none;
 }
 
+/*--width: clamp(257px, 22vw, 396px);*/
+/*--height: clamp(338.8px, 45vw, 680px);*/
+
 .carousel-item {
     --items: 7;
     --width: clamp(240px, 20vw, 380px);
@@ -136,13 +145,15 @@ body {
     position: absolute;
     z-index: 3;
     color: #222222;
-    bottom: 30px;
+    bottom: 0;
     left: 130px;
     background: #00ffb4;
     padding: 10px 20px 10px 20px;
     max-height: 20vw;
     max-width: 40vw !important;
     border-radius: 15px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
     font-size: clamp(12px, 1vw, 24px);
     max-width: 30%;
     box-sizing: border-box;
@@ -183,8 +194,8 @@ body {
     position: absolute;
     z-index: 1;
     color: #fff;
-    bottom: 20px;
-    left: 20px;
+    bottom: 10px;
+    left: 10px;
     transition: opacity 0.8s cubic-bezier(0, 0.02, 0, 1);
     font-size: clamp(28px, 2.5vw, 40px);
     text-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
@@ -332,7 +343,7 @@ video {
 @media screen and (max-width: 1000px) {
     .description-box {
         left: 10px;
-        bottom: 10px;
+        bottom: 0;
         right: 10px;
         max-width: none!important;
         max-height: 60vw;
