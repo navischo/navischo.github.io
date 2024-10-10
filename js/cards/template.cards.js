@@ -19,7 +19,7 @@ const getCardElement = (cardData) => {
         <div class="card__header-right">
             ${
             cardData.bonus !== 0 ? 
-            `<b class="card__bonus" ${cardData.type === CARD_TYPES.sound ? `data-bonus-50="${+cardData.bonus + (Math.round(+cardData.bonus / 2))}" data-bonus-100="${+cardData.bonus + +cardData.bonus}"` : ""}>+${cardData.bonus}</b>` 
+            `<b class="card__bonus" ${cardData.type === CARD_TYPES.sound ? `data-bonus-one="${+cardData.bonus + (Math.round(+cardData.bonus / 2))}" data-bonus-two="${+cardData.bonus + +cardData.bonus}"` : ""}>+${cardData.bonus}</b>` 
             : ``}
         </div>
     </header>

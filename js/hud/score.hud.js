@@ -2,6 +2,8 @@ import { win77 } from "../dne-cli.js";
 import { getRandomInt } from "../utils/getCardById.js";
 import { openPopup } from "../popup/dom.popup.jquery.js";
 import { dialog } from "./dialog.hud.js";
+import { spawnMonster } from "../utils/spawnMonster.js";
+import { getGenreBonus } from "../utils/matchGenreBonus.js";
 
 const initScore = () => {
     let crewPoints = 0;
@@ -17,7 +19,8 @@ const initScore = () => {
 
     win77.game.player.score = crewPoints + soundPoints + lootPoints;
     win77.game.totalScore = 0;
-    win77.game.versusScore = getRandomInt(20);
+    win77.game.versusScore = getRandomInt(19) + 1;
+    spawnMonster(1);
 }
 
 const readyToStart = () => {
@@ -76,13 +79,26 @@ const transferScoreFromTo = (senderId, receiverId) => {
     senderObj.score = 0;
 }
 
+const updHostGenreBonus = () => {
+    win77.game.player.score = win77.game.player.score - win77.game.player.genreBonus;
+    getGenreBonus(win77.game.table);
+    win77.game.player.score = win77.game.player.score + win77.game.player.genreBonus;
+}
+
+const updInvaderGenreBonus = () => {
+    win77.game.player.score = win77.game.player.score - win77.game.player.genreBonus;
+    getGenreBonus(win77.game.invasion.table);
+    win77.game.player.score = win77.game.player.score + win77.game.player.genreBonus;
+}
+
 const updScore = (bonus = 0) => {
     const playerScoreNode = document.querySelector("#player-score");
     const versusScoreNode = document.querySelector("#versus-score");
-
     win77.game.player.score = win77.game.player.score + +bonus;
 
     if (!win77.game.alliance && !win77.game.invasion) {
+        updHostGenreBonus();
+
         win77.game.totalScore = win77.game.player.score;
         playerScoreNode.innerHTML = win77.game.totalScore;
 
@@ -95,11 +111,14 @@ const updScore = (bonus = 0) => {
 
     } else if (!win77.game.alliance && win77.game.invasion) {
         if (win77.game.player.id === win77.game.invasion.host) {
+            updHostGenreBonus();
             win77.game.totalScore = win77.game.player.score;
             playerScoreNode.innerHTML = win77.game.totalScore;
         } else {
+            updInvaderGenreBonus();
             updInvaderScore(win77.game.player.score);
         }
+
     } else if (win77.game.alliance && win77.game.invasion) {
         const hostScore = win77.findPlayerObj(win77.game.alliance.host).score;
         const saviorScore = win77.findPlayerObj(win77.game.alliance.savior).score;
@@ -109,6 +128,7 @@ const updScore = (bonus = 0) => {
         updInvaderScore(invaderScore);
         playerScoreNode.innerHTML = hostScore;
     }
+
 
 
     versusScoreNode.innerHTML = win77.game.versusScore;

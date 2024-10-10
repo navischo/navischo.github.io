@@ -141,7 +141,8 @@ const initNextBtn = () => {
     updNokiaLobby();
 
     win77.router.matchmaking = true;
-    document.querySelector("#one-more").classList.add("fw-d-none-i");
+    // temporary посмотрим как докупка будет работать в мм
+    // document.querySelector("#one-more").classList.add("fw-d-none-i");
     win77.router.nextBtn = document.querySelector("#next-btn");
     win77.router.nextBtn.classList.add("--visible");
     win77.router.currentPage = "play";

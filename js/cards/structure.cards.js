@@ -160,6 +160,7 @@ const initPlayer = (id = null) => {
         availableLocations: [playerSpaceId ? playerSpaceId : "spawn"],
         currentQuest: null,
         score: 0,
+        genreBonus: 0,
         isOnMap: false
     };
 

@@ -401,8 +401,22 @@
     font-size: 1.2em;
 }
 
+.genre-matched .card__bonus {
+    color: #5ff3d0;
+    text-shadow: 3px 2px black;
+}
+
+.genre-half-matched .card__bonus {
+    color: #5ff3d0;
+    text-shadow: 3px 2px black;
+}
+
+.genre-half-matched .card__bonus::after {
+    color: black;
+}
+
 .card__bonus::before {
-    content: attr(data-bonus-50);
+    content: attr(data-bonus-one);
 
     position: absolute;
     bottom: 0;
@@ -411,10 +425,11 @@
 
     font-size: .5em;
     font-family: "JetBrains Mono", sans-serif;
+    text-shadow: none;
 }
 
 .card__bonus::after {
-    content: attr(data-bonus-100);
+    content: attr(data-bonus-two);
 
     position: absolute;
     bottom: 0;
@@ -423,6 +438,7 @@
 
     font-size: .5em;
     font-family: "JetBrains Mono", sans-serif;
+    text-shadow: none;
 }
 
 .js-cards-catalog {
