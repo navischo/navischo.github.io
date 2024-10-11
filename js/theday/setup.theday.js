@@ -44,7 +44,8 @@ const setupTheday = (budget = 5000) => {
     closePopup();
 
     // switchTime(win77.game.event.lineupLength); // time temporary disabled
-    settings.socialPoints = budget / 1000;
+    const potentialSocialPoints = (budget / 1000);
+    settings.socialPoints = potentialSocialPoints > 9 ? 9 : potentialSocialPoints;
     win77.setEventSettings(Object.assign({}, settings));
     win77.game.event.settings.dungeObj = Array.from(win77.locationsSet).find((dungeObj) => dungeObj.name === win77.game.event.settings.dungeName);
     if (win77.setting) {

@@ -351,7 +351,7 @@ const drawSmitsCard = (dataObj) => {
                     guest.remove();
                 }, 450);
                 console.log(`You say not today to ${dataObj.name}`, dataObj, win77.game);
-                win77.giveSocialPointToPlayer();
+                // win77.giveSocialPointToPlayer();
                 // inviteGuest();
             });
         }

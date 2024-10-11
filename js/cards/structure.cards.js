@@ -146,7 +146,7 @@ const initPlayer = (id = null) => {
         balance: {
             energy: 7,
             bankroll: 16000, // savedBankroll ? savedBankroll :
-            skillPoints: 0
+            skillPoints: 3
         },
         hand: new Set(),
         avatar: new Set(),
