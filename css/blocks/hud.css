@@ -371,11 +371,15 @@ body {
     /*color: black;*/
 }
 
+.table.custom-scrollbar {
+    overflow-x: visible!important;
+}
+
 .table {
     position: fixed;
     top: 80px;
-    left: 0;
-    right: 0;
+    left: -185px;
+    right: -185px;
 
     height: calc(187vh - 80px);
 
