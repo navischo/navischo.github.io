@@ -128,6 +128,9 @@ const SCREEN_NAMES = [
     // `screen-nohud--need-for-speed-5`,
     // `screen-nohud--need-for-speed-6`,
     `screen-nohud--here-we-go`,
+    `screen-nohud--curer`,
+    `screen-nohud--smoky-spot`,
+    `screen-nohud--penthouse`,
     // `screen-nohud--`
 ];
 
