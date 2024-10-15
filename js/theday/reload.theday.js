@@ -104,6 +104,7 @@ const reloadTheday = () => {
     win77.game.rareGuestsSet.forEach((guest) => {
         guest.isOnBoard = false;
     });
+    win77.resetGenreBonus();
 
 
     win77.selectCardToSave = true;

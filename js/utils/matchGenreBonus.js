@@ -37,6 +37,17 @@ const visualizeGenreMatch = () => {
 
 }
 
+const resetGenreBonus = () => {
+    win77.game.player.genreBonus = 0;
+    win77.game.player.genreBonusObj = {
+        cards: [],
+        increment: 0,
+        sum: 0
+    };
+
+    //todo если мм, то же самое для него
+}
+
 const getGenreBonus = (cardArr) => {
     let totalBonus = 0;
     const genreBonusObj = {};
@@ -129,5 +140,6 @@ const getGenreBonus = (cardArr) => {
 // вычислить кол-во карт с одним жанром и повысить бонус на нужный процент
 // найти ноды нужных карт и дать им особый клас и переписать бонус на повышенный
 
+win77.resetGenreBonus = resetGenreBonus;
 
 export { matchGenreBonus, getGenreBonus };
