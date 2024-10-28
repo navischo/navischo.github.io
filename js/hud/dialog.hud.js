@@ -34,6 +34,8 @@ Ready to start event?
             {
                 text: "Yep",
                 action: () => {
+                    // начало второй фазы, вырезать в отдельную функцию и включить, если параметр второй фазы тру
+                    // по умолчанию здесь просто даем души и перезапускаем день
                     console.log("Lets Rave");
                     win77.swiper.slideTo(2, 0);
                     const budgetInput = document.querySelector("#event-budget");

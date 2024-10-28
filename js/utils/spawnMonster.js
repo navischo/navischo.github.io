@@ -85,9 +85,9 @@ const spawnMonster = (num = 1) => {
 }
 
 const initMonsters = () => {
-    addOptionalNextBtn("monster", () => {
-        spawnMonster(1);
-    });
+    // addOptionalNextBtn("monster", () => {
+    //     spawnMonster(1);
+    // });
 }
 
 export { spawnMonster, initMonsters };
