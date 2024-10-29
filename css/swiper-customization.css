@@ -133,7 +133,7 @@ body .swiper-button-prev {
 
 .custom-scrollbar::-webkit-scrollbar {
     height: 9px;
-    width: 0px;
+    width: 4px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-button:end:increment,
@@ -149,9 +149,9 @@ body .swiper-button-prev {
 .custom-scrollbar::-webkit-scrollbar-thumb:horizontal,
 .custom-scrollbar::-webkit-scrollbar-thumb:vertical {
     background: var(--colors-tertiary--500);
-    border-radius: 5px;
+    border-radius: 0;
     display: block;
-    height: 50px;
+    height: 67px;
 }
 
 .iframe-live {
