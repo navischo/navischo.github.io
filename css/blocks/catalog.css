@@ -40,50 +40,50 @@
     font-size: 20px;
 }
 
-.chip-list {
-    display: flex;
-    flex-wrap: wrap;
-}
+/*.chip-list {*/
+/*    display: flex;*/
+/*    flex-wrap: wrap;*/
+/*}*/
 
-.chip {
-    display: none;
-    padding: 0 15px;
-    margin: 2px;
+/*.chip {*/
+/*    display: none;*/
+/*    padding: 0 15px;*/
+/*    margin: 2px;*/
 
-    font-size: 18px;
-    line-height: 30px;
-    border-radius: 25px;
-    background-color: #f1f1f1;
-    cursor: pointer;
-    box-shadow: inset 0 0 0 0 #222222;
+/*    font-size: 18px;*/
+/*    line-height: 30px;*/
+/*    border-radius: 25px;*/
+/*    background-color: #f1f1f1;*/
+/*    cursor: pointer;*/
+/*    box-shadow: inset 0 0 0 0 #222222;*/
 
-    transition: .2s ease-in;
-}
+/*    transition: .2s ease-in;*/
+/*}*/
 
-.chip:hover {
-    box-shadow: inset 0 0 0 4px #222222;
-}
+/*.chip:hover {*/
+/*    box-shadow: inset 0 0 0 4px #222222;*/
+/*}*/
 
-.chip:active {
-    transform: scale(.98);
-}
+/*.chip:active {*/
+/*    transform: scale(.98);*/
+/*}*/
 
-.chip--visible {
-    display: inline-block;
-}
+/*.chip--visible {*/
+/*    display: inline-block;*/
+/*}*/
 
-.chip--active {
+/*.chip--active {*/
 
-    box-shadow: inset 0 0 0 3px #222222;
-}
+/*    box-shadow: inset 0 0 0 3px #222222;*/
+/*}*/
 
-.chip img {
-    float: left;
-    margin: 0 10px 0 -25px;
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-}
+/*.chip img {*/
+/*    float: left;*/
+/*    margin: 0 10px 0 -25px;*/
+/*    height: 50px;*/
+/*    width: 50px;*/
+/*    border-radius: 50%;*/
+/*}*/
 
 .closebtn {
     padding-left: 10px;

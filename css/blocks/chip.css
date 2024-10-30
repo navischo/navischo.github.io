@@ -1,0 +1,552 @@
+.chip {
+    position: relative;
+    overflow: hidden;
+
+    box-sizing: border-box;
+    width: 300px;
+    height: auto;
+    border: 10px solid black;
+
+    font-family: "JetBrains Mono", monospace;
+    font-size: 14px;
+    color: #000;
+    text-align: left;
+
+    background: white;
+}
+
+.chip:hover {
+    z-index: 2;
+}
+
+.chip.--hide::before {
+    content: "";
+
+    position: absolute!important;
+    top: 0!important;
+    right: 0!important;
+    bottom: 0!important;
+    left: 0!important;
+    z-index: 10!important;
+
+    width: 100%!important;
+    height: 100%!important;
+
+    background-image: url("../../img/bg-chip.png")!important;
+    background-size: cover!important;
+}
+
+.chip.--exit-label {
+    overflow: visible;
+}
+
+.chip.--exit-label::before {
+    content: "GO=>";
+
+    position: absolute;
+    top: -86px;
+    left: 20px;
+
+    font-family: "Press Start 2p", "JetBrains Mono", monospace;
+    font-size: 66px;
+    font-weight: 700;
+    text-shadow:
+            2px 3px 0 black,
+            3px 4px 0 white,
+            5px 7px 0 black;
+
+    cursor: pointer;
+
+    animation:
+            bounce-left 2.8s both infinite,
+            glowing-exit 2.8s ease-out infinite alternate;
+}
+
+.queue-wrap {
+    max-width: 38%;
+    overflow: hidden;
+}
+
+.chip.--animation-take {
+    transform: translate(0, 500px);
+    transition: .2s ease-in;
+}
+
+.chip.--smith {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.chip.--smith.slide-in-blurred-right {
+    visibility: visible;
+    opacity: 1;
+}
+
+.chip.--smith .chip__header {
+    position: static;
+    z-index: 1;
+}
+
+.chip.--smith .chip__preview {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+}
+
+.chip.--rare .chip__preview {
+    position: static;
+}
+
+/*.chip.--ultimate .chip__preview {*/
+/*    top: 30px;*/
+/*}*/
+
+.chip.--rick {
+    background: #6db855;
+}
+.chip.--jerry {
+    color: white;
+    background: #2d3235;
+}
+.chip.--summer {
+    background: #c894b7;
+}
+.chip.--morty {
+    background: #46bae0;
+}
+.chip.--beth {
+    background: #993637;
+}
+.chip.--darksranchik {
+    color: white;
+    background: #b33c37;
+}
+.chip.--lightsranchik {
+    color: white;
+    background: #46bae0;
+}
+.chip.--darksranchik .chip__preview,
+.chip.--lightsranchik .chip__preview {
+    position: absolute;
+}
+.chip--back {
+    position: relative;
+}
+
+.chip--back::before {
+    content: "";
+
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    bottom: -10px;
+    left: -10px;
+
+    display: block;
+
+    background: url("https://lh6.googleusercontent.com/94ZiG04RaljkE0kBIgEnJ81qqspFoKyJfiKqkb7iJ0XPsKKfThuCHF6iqL5YOUtrAAc=w2400");
+    background-size: cover;
+    background-position: center;
+}
+
+.chip__preview {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 100px;
+    padding: 5px;
+}
+
+.chip__preview[href]:hover {
+    cursor: zoom-in;
+}
+
+[data-advice-id]:hover {
+    cursor: help;
+}
+
+.chip__controls {
+    position: absolute;
+    bottom: 0;
+    z-index: 3;
+
+    visibility: hidden;
+    opacity: 0;
+
+    padding: 5px;
+
+    transition: .2s ease-in;
+}
+
+.chip:hover .chip__controls {
+    visibility: visible;
+
+    opacity: 1;
+}
+
+/*.chip__controls:hover {*/
+/*    visibility: visible;*/
+
+/*    opacity: 1;*/
+/*}*/
+
+.chip-btn,
+.chip__controls > button {
+    font-size: 20px;
+    padding: 0 10px;
+    font-weight: 700;
+    color: black;
+    border: 2px solid black;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 2px;
+    clip-path: var(--ui-notch-path);
+    cursor: pointer;
+    display: inline-block;
+    font-family: var(--fonts-primary);
+    letter-spacing: 0.045em;
+    text-align: left;
+    text-transform: uppercase;
+    transform: translateY(0);
+    transition: .1s ease-in;
+}
+
+.chip-btn::before,
+.chip__controls > button::before {
+    content: "";
+
+    position: absolute;
+    right: 2px;
+    top: auto;
+    bottom: 10px;
+    z-index: 31;
+
+    display: block;
+    height: 3px;
+    width: var(--ui-notch-hypotenuse);
+
+    transform: rotate(315deg) translateY(10px);
+    background-color: black;
+    transition: .1s ease-in;
+}
+
+.chip-btn:hover,
+.chip__controls > button:hover {
+    background-color: rgba(80, 233, 239, 0.7)!important;
+    border-color: var(--colors-secondary--500);
+}
+
+.chip-btn:hover::before,
+.chip__controls > button:hover::before {
+    background-color: var(--colors-secondary--500);
+}
+
+.chip-btn:active,
+.chip__controls > button:active {
+    transform: translateY(1px);
+}
+
+.chip__controls .buy {
+    margin-right: 15px;
+    margin-left: 23px;
+}
+
+.js-return-sound-phase .table__chips .chip__controls button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 272px;
+    height: 430px;
+    font-size: 77px;
+}
+
+#queue .chip__controls {
+    display: flex;
+}
+
+#queue .chip__controls button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 132px;
+    height: 430px;
+    font-size: 77px;
+}
+
+#queue .chip__controls button + button {
+    margin-left: 5px;
+}
+
+.chip__header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 10px 5px 0;
+    width: 100%;
+    margin-bottom: 10px;
+
+    word-break: break-word;
+}
+
+.chip__id {
+    position: absolute;
+    top: 0;
+    left: 6px;
+    font-size: 6px;
+}
+
+.chip__title {
+    margin: 0;
+
+    font-family: 'Press Start 2P', sans-serif;
+    word-break: break-word;
+}
+
+.chip__header-left {
+    width: 100%;
+    max-width: 80%;
+}
+
+.chip__header-right {
+    display: flex;
+    flex-direction: column;
+    max-width: 20%;
+
+    text-align: right;
+}
+
+.chip__price {
+    font-family: 'Press Start 2P', sans-serif;
+}
+
+.chip__limits {
+    font-family: "JetBrains Mono", monospace;
+}
+
+.chip__description {
+    overflow: hidden;
+    padding: 0 5px;
+    padding-right: 100px;
+}
+
+.chip__summary {
+    padding: 0 4px;
+    font-size: smaller;
+}
+
+.chip__footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 5px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.chip--door .chip__footer {
+    justify-content: space-between;
+}
+
+.chip__footer-left,
+.chip__footer-right {
+    max-width: 50%;
+}
+
+.chip__bonus {
+    position: relative;
+    white-space: nowrap;
+}
+
+/*.chip.--ultimate .chip__bonus {*/
+/*    font-size: 1.7em;*/
+/*    letter-spacing: -8.2px;*/
+/*    left: -32px;*/
+/*    bottom: -1px;*/
+/*    word-spacing: -3px;*/
+/*}*/
+
+.chip__bonus,
+.chip__budget,
+.chip__profit {
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 1.2em;
+}
+
+.genre-matched .chip__bonus {
+    color: #5ff3d0;
+    text-shadow: 3px 2px black;
+}
+
+.genre-half-matched .chip__bonus {
+    color: #5ff3d0;
+    text-shadow: 3px 2px black;
+}
+
+.genre-half-matched .chip__bonus::after {
+    color: black;
+}
+
+.chip__bonus::before {
+    content: attr(data-bonus-one);
+
+    position: absolute;
+    bottom: 0;
+    right: 1.5px;
+    transform: translateY(100%);
+
+    font-size: .5em;
+    font-family: "JetBrains Mono", sans-serif;
+    text-shadow: none;
+}
+
+.chip__bonus::after {
+    content: attr(data-bonus-two);
+
+    position: absolute;
+    bottom: 0;
+    right: 1.5px;
+    transform: translateY(200%);
+
+    font-size: .5em;
+    font-family: "JetBrains Mono", sans-serif;
+    text-shadow: none;
+}
+
+.js-chips-catalog {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.chip-catalog-wrap.--styled {
+    padding-top: 80px;
+    padding-bottom: 120px;
+}
+
+.chip-catalog-wrap.--styled .js-chips-catalog {
+
+}
+
+.chip-catalog-wrap.--styled .js-chips-catalog > * {
+    margin: 5px;
+}
+
+.catalog-controls__show-btn {
+    z-index: 3;
+}
+
+.catalog-controls__hide-btn {
+    z-index: 4;
+}
+
+.js-inventory-menu .chip > *:not(.chip__preview) {
+    display: none;
+}
+
+.build .js-inventory-menu .chip {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.build .js-inventory-menu .chip > .chip__title {
+    display: block;
+}
+
+@keyframes bounce-left {
+    0% {
+        transform: translateX(-48px);
+        animation-timing-function: ease-in;
+        opacity: 1;
+    }
+    24% {
+        opacity: 1;
+    }
+    40% {
+        transform: translateX(-26px);
+        animation-timing-function: ease-in;
+    }
+    65% {
+        transform: translateX(-13px);
+        animation-timing-function: ease-in;
+    }
+    82% {
+        transform: translateX(-6.5px);
+        animation-timing-function: ease-in;
+    }
+    93% {
+        transform: translateX(-4px);
+        animation-timing-function: ease-in;
+    }
+    22%,
+    52%,
+    72%,
+    84%,
+    95% {
+        transform: translateX(0px);
+        animation-timing-function: ease-out;
+    }
+    100% {
+        transform: translateX(-48px);
+        animation-timing-function: ease-in;
+        opacity: 1;
+    }
+}
+
+@keyframes glowing-exit {
+    0% {
+        color: var(--color);
+        /*text-shadow: 0 0 1px var(--color);*/
+        opacity: 1;
+    }
+    13% {
+        color: black;
+        text-shadow: 0 8px 1px var(--color);
+        opacity: 0.9;
+    }
+    20% {
+        color: var(--color);
+        /*text-shadow: 0 0 1px var(--color);*/
+        opacity: 1;
+    }
+    27% {
+        color: black;
+        /*text-shadow: 0 8px 1px var(--color);*/
+        opacity: 0.9;
+    }
+    34% {
+        color: var(--color);
+        /*text-shadow: 0 5px 1px var(--color);*/
+        opacity: 1;
+    }
+    40% {
+        color: black;
+        /*text-shadow: 0 8px 1px var(--color);*/
+        opacity: 0.9;
+    }
+    48% {
+        color: var(--color);
+        /*text-shadow: 0 3px 1px var(--color);*/
+        opacity: 1;
+    }
+    55% {
+        color: black;
+        /*text-shadow: 0 9px 1px var(--color);*/
+        opacity: 0.9;
+    }
+    62% {
+        color: var(--color);
+        /*text-shadow: 0 5px 0 var(--color);*/
+        opacity: 1;
+    }
+    100% {
+        color: var(--color);
+        /*text-shadow: 0 8px 0 var(--color);*/
+    }
+}
