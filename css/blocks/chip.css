@@ -101,6 +101,27 @@
 /*    top: 30px;*/
 /*}*/
 
+.chip.--archetype {
+    height: 460px;
+}
+
+.chip.--ultimate {
+    min-height: 142px;
+}
+
+.chip.--ultimate::after {
+    content: "Ultimate";
+
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    transform: rotate(-90deg) translate(55px, 46px);
+
+    font-family: 'Press Start 2P', sans-serif;
+    word-break: break-word;
+}
+
 .chip.--rick {
     background: #6db855;
 }
@@ -156,6 +177,16 @@
     display: block;
     width: 100px;
     padding: 5px;
+}
+
+.--archetype .chip__preview {
+    position: static;
+    width: auto;
+    padding: 0 50px;
+}
+
+.--archetype .chip__description {
+    padding-right: 5px;
 }
 
 .chip__preview[href]:hover {
@@ -359,6 +390,7 @@
 
 .chip__bonus {
     position: relative;
+    z-index: 5;
     white-space: nowrap;
 }
 

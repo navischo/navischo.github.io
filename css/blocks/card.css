@@ -2,7 +2,7 @@
     position: absolute;
     top: 60px;
     left: 0;
-    z-index: 2;
+    z-index: 3;
 
     transform: translate(-60%, 0) scale(1.1);
 
@@ -14,7 +14,7 @@
     visibility: visible;
     opacity: 1;
 
-    z-index: 3;
+    z-index: 4;
     transform: translate(0, 0) scale(1.5);
 }
 
@@ -45,7 +45,7 @@
 
     box-sizing: border-box;
     width: 300px;
-    height: 500px;
+    height: 460px;
     border: 10px solid black;
 
     font-family: "JetBrains Mono", monospace;
@@ -57,7 +57,7 @@
 }
 
 .card:hover {
-    z-index: 2;
+    z-index: 4;
 }
 
 .card.--hide::before {
