@@ -3,8 +3,14 @@
 
     text-align: center;
     font-family: "Sofia Sans", sans-serif;
-    background: radial-gradient(#ff00ff, transparent 50%);
+    /*background: radial-gradient(#ff00ff, transparent 50%);*/
     transition: 2.5s ease-in-out;
+}
+
+.img-black-sale {
+    filter: invert(1);
+    margin-top: -100px;
+    max-height: 100vh;
 }
 
 .sale-hero__logo {

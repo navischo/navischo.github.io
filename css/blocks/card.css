@@ -1,3 +1,32 @@
+.icon-type {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.i-problem {
+    background-image: url("../../img/icon-problem.png");
+}
+.i-summon {
+    background-image: url("../../img/icon-summon.png");
+    filter: invert(1);
+}
+.i-buff {
+    background-image: url("../../img/icon-buff.png");
+}
+.i-escape {
+    background-image: url("../../img/icon-escape.png");
+}
+.i-counterspell {
+    background-image: url("../../img/icon-counterspell.png");
+}
+.i-levelup {
+    background-image: url("../../img/icon-levelup.png");
+}
+
 .card-owner {
     position: absolute;
     top: 60px;
