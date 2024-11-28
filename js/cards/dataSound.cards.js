@@ -12,6 +12,32 @@ const initSoundCards = () => {
     // \$$$$$$  | $$$$$$  |\$$$$$$  |$$ | \$$ |$$$$$$$  |
     //  \______/  \______/  \______/ \__|  \__|\_______/
 
+    // DOPETHRONE
+    //
+    //
+    const DOPETHRONE_LONGLINE = "";
+    const DOPETHRONE_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    const DOPETHRONE_IMG = `img/sound/vinyl-dopethrone.png`;
+
+    LootArr.push(new DNELootCard("vinyl-dopethrone", "DOPETHRONE", DOPETHRONE_LONGLINE, DOPETHRONE_IMG, 9, 1300, "Платівка, 76m of Doom Metal Stoner Rock", DOPETHRONE_SHORTLINE, "", true, true, "sound", "https://youtu.be/xsbAVGDPvM0"));
+
+    // PROTOPLASM
+    //
+    //
+    const PROTOPLASM_LONGLINE = "";
+    const PROTOPLASM_SHORTLINE = `${STRINGS.ALBUM_LONGLINE}`;
+    const PROTOPLASM_IMG = `img/sound/album-protoplasm.jpg`;
+
+    LootArr.push(new DNELootCard("album-protoplasm", "PROTOPLASM", PROTOPLASM_LONGLINE, PROTOPLASM_IMG, 5, 300, "Альбом, 22m of Downtempo Coldwave Synthpunk", PROTOPLASM_SHORTLINE, "", true, true, "sound", "https://youtu.be/Bfvmxzmu48A"));
+
+    // PROTOPLASM
+    //
+    //
+    const ARTIFICIAL_SENTIMENTS_LONGLINE = "";
+    const ARTIFICIAL_SENTIMENTS_SHORTLINE = `${STRINGS.ALBUM_LONGLINE}`;
+    const ARTIFICIAL_SENTIMENTS_IMG = `img/sound/album-artificial-sentiments.jpg`;
+
+    LootArr.push(new DNELootCard("album-artificial-sentiments", "ARTIFICIAL SENTIMENTS", ARTIFICIAL_SENTIMENTS_LONGLINE, ARTIFICIAL_SENTIMENTS_IMG, 7, 500, "Альбом, 39m of Electro EDM", ARTIFICIAL_SENTIMENTS_SHORTLINE, "", true, true, "sound", "https://youtu.be/OiiggeHIsSQ"));
 
     // SOMBER REALM
     //
