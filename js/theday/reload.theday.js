@@ -72,9 +72,11 @@ const reloadTheday = () => {
         let soulsCount = 0;
         let soundCount = 0;
         win77.game.monsters.forEach((monsterObj) => {
+            win77.giveHeatTo(win77.game.player.id, monsterObj.card.level / 10);
             win77.giveSkillPointsToPlayer(monsterObj.card.souls);
             soulsCount = soulsCount + monsterObj.card.souls;
             soundCount = soundCount + monsterObj.card.treasures;
+            console.log(`${win77.game.player} achieve level of heat ${win77.game.player.heat}`);
         });
         win77.game.monsters = [];
         console.log(`You receive ${soulsCount} souls and ${soundCount} sound cards from monsters`);

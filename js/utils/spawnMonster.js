@@ -2,6 +2,7 @@ import {getRandomInt} from "./getCardById.js";
 import {updScore} from "../hud/score.hud.js";
 import {getCardElement} from "../cards/template.cards.js";
 import {addOptionalNextBtn} from "../router/addOptionalNextBtn.js";
+import {heatToMinLevel} from "./heatToMinLevel.js";
 const getMonsterCard = (cardData) => {
     const newCard = document.createElement("div");
     newCard.style.display = "block";
@@ -68,18 +69,34 @@ const selectMonsterSound = (num) => {
     return selectedSound;
 }
 
+const acceptMonster = (newMonster) => {
+    const newMonsterObj = {
+        card: newMonster,
+        hand: selectMonsterSound(newMonster.treasures)
+    };
+    win77.game.monsters.push(newMonsterObj);
+    win77.game.versusScore = win77.game.versusScore + newMonster.level;
+
+    appendMonsterTable(newMonsterObj);
+}
+
+const isMonsterValid = (newMonster) => {
+    const monsterMinLevel = heatToMinLevel(win77.game.player.heat);
+    const isThisMonsterAlreadyExist = win77.game.monsters.find((existedMonster) => newMonster === existedMonster.card);
+    console.log(`Monster analysis`, monsterMinLevel, newMonster.level, newMonster.level < monsterMinLevel, isThisMonsterAlreadyExist);
+    // return !(isThisMonsterAlreadyExist || newMonster.level < monsterMinLevel);
+    return !(isThisMonsterAlreadyExist);
+}
+
 const spawnMonster = (num = 1) => {
     for (let i = 0; i < num; i++) {
         const newMonster = win77.game.catalog._secret.monsters[getRandomInt(win77.game.catalog._secret.monsters.length)];
         console.log(newMonster, win77);
-        const newMonsterObj = {
-            card: newMonster,
-            hand: selectMonsterSound(newMonster.treasures)
-        };
-        win77.game.monsters.push(newMonsterObj);
-        win77.game.versusScore = win77.game.versusScore + newMonster.level;
-
-        appendMonsterTable(newMonsterObj);
+        if (isMonsterValid(newMonster)) {
+            acceptMonster(newMonster);
+        } else {
+            spawnMonster(1);
+        }
     }
     updScore();
 }

@@ -161,7 +161,8 @@ const initPlayer = (id = null) => {
         currentQuest: null,
         score: 0,
         genreBonus: 0,
-        isOnMap: false
+        isOnMap: false,
+        heat: 0
     };
 
     selectFirstSetup(player);

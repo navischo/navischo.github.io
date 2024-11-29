@@ -192,6 +192,13 @@ class DNECli {
     clearAchievements() {
         localStorage.removeItem("achievements");
     }
+
+    giveHeatTo(id, count) {
+        const playerObj = this.findPlayerObj(id);
+        playerObj.heat = playerObj.heat + count;
+        playerObj.heat = playerObj.heat > 5 ? 5 : playerObj.heat;
+        return playerObj.heat;
+    }
 }
 
 const win77 = new DNECli();
