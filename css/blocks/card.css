@@ -26,6 +26,9 @@
 .i-levelup {
     background-image: url("../../img/icon-levelup.png");
 }
+.--i-invert {
+    filter: invert(1);
+}
 
 .card-owner {
     position: absolute;

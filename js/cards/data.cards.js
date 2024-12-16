@@ -48,9 +48,9 @@ const initDNELootArr = () => {
     djms11.collection = "soundTool";
     LootArr.push(djms11);
 
-    const sps585 = new DNELootCard("sps585", "SPS-585", "", `../img/loot/sps585.png`, 2, "2300", "+2 з DDJ-400", "Проста та надійна акустична система на 3.5мм, з якою впорається навіть маля.<br><br>Чудово поєднується з DDJ-400, отримай +2 та ще +1, якщо ти DJ.", "", true, true, "loot");
-    sps585.collection = "soundTool";
-    LootArr.push(sps585);
+    // const sps585 = new DNELootCard("sps585", "SPS-585", "", `../img/loot/sps585.png`, 2, "2300", "+2 з DDJ-400", "Проста та надійна акустична система на 3.5мм, з якою впорається навіть маля.<br><br>Чудово поєднується з DDJ-400, отримай +2 та ще +1, якщо ти DJ.", "", true, true, "loot");
+    // sps585.collection = "soundTool";
+    // LootArr.push(sps585);
 
     // GOPRO
     // LootArr.push(new DNELootCard("i-gopro", "GOPRO", "Дозволяє знімати широкоформатне відео з високою кількістю кадрів на секунду. З відповідними аксесуарами доступне відео від першого лиця, відео з руки та корпусу", "https://lh5.googleusercontent.com/1k2kOk7TOG2p0UjrV6WXnhOnzBtXJUoEMv9XPE-wejGTYDcIU-PkaGZmAeMeXuS08YU=w2400", 2, "20К/500", "Бонус для Відеомейкер"));
