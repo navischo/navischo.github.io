@@ -844,6 +844,8 @@
 
 #dne-card-bug-lucky-talisman-3 .card__preview-img {
     padding-right: 0!important;
+    max-width: 260px;
+    margin-left: auto;
 }
 
 #dne-card-bug-annihilation .card__preview-img {
