@@ -12,6 +12,15 @@ const initSoundCards = () => {
     // \$$$$$$  | $$$$$$  |\$$$$$$  |$$ | \$$ |$$$$$$$  |
     //  \______/  \______/  \______/ \__|  \__|\_______/
 
+    // GREEN_HOUSE
+    //
+    //
+    const GREEN_HOUSE_LONGLINE = "";
+    const GREEN_HOUSE_SHORTLINE = `${STRINGS.DEMO_LONGLINE_SHORT_3}`;
+    const GREEN_HOUSE_IMG = `img/sound/demo-green-house.jpg`;
+
+    LootArr.push(new DNELootCard("vinyl-green-house", "GREEN HOUSE", GREEN_HOUSE_LONGLINE, GREEN_HOUSE_IMG, 8, 0, "Демо, 32m of Electro EDM", GREEN_HOUSE_SHORTLINE, "", true, true, "sound", "https://soundcloud.com/emil-zenko/greenhouselive"));
+
     // DOPETHRONE
     //
     //
