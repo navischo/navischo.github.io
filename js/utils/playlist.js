@@ -39,4 +39,30 @@ const LEVEL_0 = [
     }
 ];
 
-export { LEVEL_0, VFX }
+const initPlaylist = () => {
+    const parent = document.querySelector("#playlist");
+    const closePlaylistHandler = (e) => {
+        if (e.key === "Escape") {
+            parent.classList.remove("--visible");
+        }
+
+        document.removeEventListener("keydown", closePlaylistHandler);
+    };
+    const openPlaylistPage = () => {
+        parent.classList.add("--visible");
+
+        document.addEventListener("keydown", closePlaylistHandler);
+        return parent;
+    };
+
+    const initHandlers = () => {
+        const closeBtn = parent.querySelector(".js-exit-matchmaking");
+        const openBtn = document.querySelector(".js-open-playlist");
+        openBtn.addEventListener("click", openPlaylistPage);
+        closeBtn.addEventListener("click", closePlaylistHandler);
+    }
+
+    initHandlers();
+}
+
+export { LEVEL_0, VFX, initPlaylist };

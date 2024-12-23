@@ -60,6 +60,7 @@
 @import "blocks/achievement.css";
 @import "blocks/talk.css";
 @import "blocks/chip.css";
+@import "blocks/playlist.css";
 
 /*CUSTOMIZATION*/
 @import "./i-customization.css";

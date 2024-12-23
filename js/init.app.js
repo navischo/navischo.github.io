@@ -59,6 +59,7 @@ import {enterCity} from "./utils/enterCity.js";
 import { updNokiaLobby } from "./router/callFriend.js";
 import { saveVisit, displayLastVisit } from "./utils/saveVisit.js";
 import { startSequence } from "./utils/initTalk.js";
+import { initPlaylist } from "./utils/playlist.js";
 
 const initApp = () => {
     saveVisit();
@@ -141,6 +142,7 @@ const initApp = () => {
     initSettingOptionsUpdate();
     initGameBoy();
     initMatchMaking();
+    initPlaylist();
     // initRoller();
     initBtnZeroInbox();
     makeWallSprayable();
