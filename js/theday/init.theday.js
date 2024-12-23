@@ -3,6 +3,7 @@ import { win77 } from "../dne-cli.js";
 import { initGradient } from "./gradient.theday.js";
 import { pokeButtonMarkup } from "../utils/pokeButtonMarkup.js";
 import {getDungeNameInASCII} from "../utils/getDungeNameInASCII.js";
+import { LEVEL_0 } from "../utils/playlist.js";
 
 
 const getPortalElement = () => {
@@ -32,7 +33,7 @@ const getSquadUnitElement = () => {
     const element = document.createElement("section");
     element.classList.add("squad-unit");
     element.innerHTML = `
-    <b class="squad-unit__lvl ${win77.game.player.lvl > 9 ? "--double" : ""}"><span>${win77.game.player.lvl}</span></b>
+    <b class="squad-unit__lvl ${win77.game.track > 9 ? "--double" : ""}"><span>${win77.game.track}</span></b>
     <div class="squad-unit__stats">
         <div class="js-player-social-points squad-unit__bars">
             ${getSocialPointsMarkup()}
@@ -75,8 +76,14 @@ const initTheday = () => {
     const roundTitleElement = document.querySelector(`#round-title`);
     const roundTitleTextElement = document.querySelector(`#round-title .theday__round-title-text`);
     const dungeTitleElement = document.querySelector(`#ascii-title`);
+    let levelData = LEVEL_0[win77.game.track];
+    if (!levelData) {
+        win77.game.track = 0;
+        levelData = LEVEL_0[win77.game.track];
+    }
+    levelData.audio.play();
 
-    dungeTitleElement.innerHTML = `${win77.game.event.settings.dungeObj.name}`;
+    dungeTitleElement.innerHTML = `${LEVEL_0[win77.game.track].name}`;
     dungeTitleElement.classList.add("--visible");
     setTimeout(() => {
         dungeTitleElement.classList.remove("--visible");
@@ -89,8 +96,9 @@ const initTheday = () => {
     setTimeout(() => {
         playerTitleElement.classList.remove("--visible");
 
-        roundTitleTextElement.innerHTML = `${win77.game.round}`;
+        roundTitleTextElement.innerHTML = `${win77.game.track}`;
         roundTitleElement.classList.add("--visible");
+
         setTimeout(() => {
             roundTitleElement.classList.add("--fade-out");
             roundTitleElement.classList.remove("--visible");

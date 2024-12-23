@@ -80,7 +80,7 @@
 }
 
 .theday__round-title-text::before {
-    content: "Round ";
+    content: "Track ";
 }
 
 .theday__round-title.--visible {
@@ -182,6 +182,8 @@
     /*transform: translateY(-50%);*/
     transform: translateY(-44%) translateX(-50px) rotate(2deg) skewY(8deg);
 
+    border: none;
+    background: transparent;
 }
 
 .js-rick-portal img {

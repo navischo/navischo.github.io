@@ -1,7 +1,7 @@
 import { getRandomInt, moveCardById } from "./utils/getCardById.js";
 import { getCardElement } from "./cards/template.cards.js";
 import { appendNewTop } from "./theday/endgame.theday.js";
-import { getAchievement } from "./utils/initAchievements.js"
+import { getAchievement } from "./utils/initAchievements.js";
 
 class DNECli {
     constructor() {
