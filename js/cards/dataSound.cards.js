@@ -12,6 +12,24 @@ const initSoundCards = () => {
     // \$$$$$$  | $$$$$$  |\$$$$$$  |$$ | \$$ |$$$$$$$  |
     //  \______/  \______/  \______/ \__|  \__|\_______/
 
+    // PROMENI
+    //
+    //
+    const PROMENI_LONGLINE = "";
+    const PROMENI_SHORTLINE = `${STRINGS.ALBUM_LONGLINE}`;
+    const PROMENI_IMG = `img/sound/album-promeni.jpg`;
+
+    LootArr.push(new DNELootCard("album-promeni", "PROMENI", PROMENI_LONGLINE, PROMENI_IMG, 6, 0, "Альбом, 42m of Experimental Psychodelic Electronic", PROMENI_SHORTLINE, "", true, true, "sound", "https://kvitnu.bandcamp.com/album/promeni"));
+
+    // INTERMISSION
+    //
+    //
+    const INTERMISSION_LONGLINE = "";
+    const INTERMISSION_SHORTLINE = `${STRINGS.ALBUM_LONGLINE}`;
+    const INTERMISSION_IMG = `img/sound/album-intermission.jpg`;
+
+    LootArr.push(new DNELootCard("album-intermission", "INTERMISSION", INTERMISSION_LONGLINE, INTERMISSION_IMG, 7, 0, "Альбом, 37m of Electro Experimental Techno", INTERMISSION_SHORTLINE, "", true, true, "sound", "https://standard-deviation.bandcamp.com/album/intermission"));
+
     // GREEN_HOUSE
     //
     //

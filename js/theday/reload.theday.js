@@ -11,10 +11,9 @@ import { matchGenreBonus } from "../utils/matchGenreBonus.js";
 import { giveIncomeTo } from "../utils/giveIncomeTo.js";
 import { updExecutive } from "../hud/table.hud.js";
 import { selectCardToSave } from "../utils/selectCardToSave.js";
-import { LEVEL_0, VFX } from "../utils/playlist.js";
 
 const reloadTheday = () => {
-    VFX.brake[0].play();
+    win77.VFX.brake[0].play();
     console.log("win77.game.event.result", win77.game.event.result);
     Array.from(win77.game.event.settings.guests.set).forEach((smithsCard) => {
         matchEventIncome(smithsCard);
@@ -110,10 +109,7 @@ const reloadTheday = () => {
     });
     win77.resetGenreBonus();
 
-    const levelData = LEVEL_0[win77.game.track];
-    levelData.audio.pause();
-    levelData.audio.currentTime = 0;
-    win77.game.track = win77.game.track + 1;
+    win77.playlist.upTrack();
 
     win77.selectCardToSave = true;
     // selectCardToSave();

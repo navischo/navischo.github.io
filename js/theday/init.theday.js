@@ -3,7 +3,6 @@ import { win77 } from "../dne-cli.js";
 import { initGradient } from "./gradient.theday.js";
 import { pokeButtonMarkup } from "../utils/pokeButtonMarkup.js";
 import {getDungeNameInASCII} from "../utils/getDungeNameInASCII.js";
-import { LEVEL_0 } from "../utils/playlist.js";
 
 
 const getPortalElement = () => {
@@ -76,14 +75,9 @@ const initTheday = () => {
     const roundTitleElement = document.querySelector(`#round-title`);
     const roundTitleTextElement = document.querySelector(`#round-title .theday__round-title-text`);
     const dungeTitleElement = document.querySelector(`#ascii-title`);
-    let levelData = LEVEL_0[win77.game.track];
-    if (!levelData) {
-        win77.game.track = 0;
-        levelData = LEVEL_0[win77.game.track];
-    }
-    levelData.audio.play();
+    win77.playlist.playTrack();
 
-    dungeTitleElement.innerHTML = `${LEVEL_0[win77.game.track].name}`;
+    dungeTitleElement.innerHTML = `${win77.playlist.getTrackId()}`;
     dungeTitleElement.classList.add("--visible");
     setTimeout(() => {
         dungeTitleElement.classList.remove("--visible");

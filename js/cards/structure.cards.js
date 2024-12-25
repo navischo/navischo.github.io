@@ -46,6 +46,7 @@ const initGame = () => {
         calendar: initCalendar(),
         round: 0,
         track: 0,
+        currentPlaylist: false,
         alliance: false,
         invasion: false,
         final: false,

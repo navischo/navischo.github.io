@@ -800,11 +800,29 @@
     </template>
 </div>
 
-<div id="playlist">
+<div id="playlist" class="">
     <div class="playlist">
         <button class="js-exit-playlist cp-button hud-btn">
             <img src="img/img-hud-btn.png" alt="HUD" width="200" height="221">
         </button>
+        <div class="playlist__albums-wrap custom-scrollbar --x">
+            <div class="playlist__albums-list">
+                <button class="js-set-playlist playlist__album" data-album-id="intermission">
+                    <img src="img/sound/album-intermission.jpg" alt="">
+                    <span class="playlist__album-thumbnail">[11]</span>
+                </button>
+
+                <button class="js-set-playlist playlist__album" data-album-id="promeni">
+                    <img src="img/sound/album-promeni.jpg" alt="">
+                    <span class="playlist__album-thumbnail">[21]</span>
+                </button>
+
+                <button class="js-set-playlist playlist__album" data-album-id="intermission">
+                    <img src="img/sound/album-intermission.jpg" alt="">
+                    <span class="playlist__album-thumbnail">[11]</span>
+                </button>
+            </div>
+        </div>
     </div>
 </div>
 

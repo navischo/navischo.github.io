@@ -36,3 +36,44 @@
     top: 7px;
     z-index: 11;
 }
+
+.playlist__albums-wrap {
+}
+
+.playlist__albums-list {
+    display: flex;
+    height: 98.7vh;
+}
+
+.playlist__album {
+    flex-shrink: 0;
+    width: 500px;
+    height: 500px;
+    padding: 0;
+    border: none;
+    margin: 20px;
+
+    cursor: pointer;
+    background: transparent;
+}
+
+.playlist__album.--current {
+    /*box-shadow: inset 0 0 5px 0 #fed33f;*/
+}
+
+.playlist__album.--current .playlist__album-thumbnail {
+    color: #fed33f;
+}
+
+.playlist__album-thumbnail {
+    display: block;
+    width: 100%;
+    padding: 20px;
+
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    line-height: 20px;
+    font-family: "Press Start 2p", "JetBrains Mono", monospace;
+    transition: .2s ease;
+}
