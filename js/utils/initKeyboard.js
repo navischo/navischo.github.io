@@ -3,6 +3,8 @@ import { closeGameMenu } from "../hud/btn.hud.js";
 import { openTalk, leaveTalk } from "./initTalk.js";
 import { win77 } from "../dne-cli.js";
 import {initBonusInput} from "../router/initBonusInput.js";
+import { useTempo } from "./tempo.js";
+
 // const NUMBERS = {
 //     IN_MENU: [],
 //     IN_PLAY: [],
@@ -43,7 +45,8 @@ const KEYS = [
 
 const KEYS_SIGNS = {
     n: ["n", "N", "т", "Т"],
-    c: ["b", "B", "и", "И"],
+    c: ["c", "C", "с", "С"],
+    b: ["b", "B", "и", "И"],
     p: ["r", "R", "к", "К"],
     h: ["h", "H", "р", "Р"],
     t: ["t", "T", "е", "Е"],
@@ -58,6 +61,9 @@ const KEYS_CALLBACKS = {
         document.querySelector("body").classList.toggle("hide-hud");
     },
     c: () => {
+        useTempo();
+    },
+    b: () => {
         goToCards();
     },
     p: () => {

@@ -64,7 +64,7 @@
     top: -2px;
 }
 
-.tempo__bars {
+.tempo__stock {
     display: flex;
     width: 240px;
     height: 6px;
@@ -72,17 +72,21 @@
     transform: rotate(-108deg) translate(-70px, -189px);
 }
 
-.tempo__bars-item + .tempo__bars-item {
+.tempo__stock-item + .tempo__stock-item {
     margin-left: 4px;
 }
 
-.tempo__bars-item {
+.tempo__stock-item {
     flex-grow: 1;
     height: 6px;
 
     background: white;
     opacity: .9;
     border-radius: 2px;
+}
+
+.tempo__stock-item.--transparent {
+    background: transparent;
 }
 
 .tempo__name {
@@ -119,4 +123,8 @@
     background: white;
     opacity: .9;
     border-radius: 2px;
+}
+
+.tempo__points-item.--transparent {
+    background: transparent;
 }
