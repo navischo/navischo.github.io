@@ -182,7 +182,7 @@
 .--archetype .chip__preview {
     position: static;
     width: auto;
-    padding: 0 70px;
+    padding: 0 5px;
 }
 
 .--archetype .chip__description {

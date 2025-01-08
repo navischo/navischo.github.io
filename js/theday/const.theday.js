@@ -444,7 +444,7 @@ const useSmithsCard = (interval = undefined) => {
                 smithCard = Object.assign({}, SMITHS_TYPES[getRandomInt(SMITHS_TYPES.length)]);
             } while (smithCard.name !== "rare");
         }
-        smithCard.plusCount = getRandomInt(14);
+        smithCard.plusCount = getRandomInt(13) + 1;
         console.log(`Security: Seems like ${smithCard.name} coming to your Event from strange portal with ${smithCard.plusCount} friends. Let them pass?`);
 
         win77.getSocialPointsFromPlayer(1);
