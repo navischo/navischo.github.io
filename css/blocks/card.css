@@ -12,7 +12,6 @@
 }
 .i-summon {
     background-image: url("../../img/icon-summon.png");
-    filter: invert(1);
 }
 .i-buff {
     background-image: url("../../img/icon-buff.png");
