@@ -12,6 +12,15 @@ const initSoundCards = () => {
     // \$$$$$$  | $$$$$$  |\$$$$$$  |$$ | \$$ |$$$$$$$  |
     //  \______/  \______/  \______/ \__|  \__|\_______/
 
+    // BLOODBOUND
+    //
+    //
+    const BLOODBOUND_LONGLINE = "";
+    const BLOODBOUND_SHORTLINE = `${STRINGS.ALBUM_LONGLINE}`;
+    const BLOODBOUND_IMG = `img/sound/album-bloodbound.jpg`;
+
+    LootArr.push(new DNELootCard("album-bloodbound", "BLOODBOUND", BLOODBOUND_LONGLINE, BLOODBOUND_IMG, 8, 0, "Альбом, 47m of Dark Electro Coldwave", BLOODBOUND_SHORTLINE, "", true, true, "sound", "https://youtu.be/nZyQIohZEis?si=rDCZ03LYsjDJ4bDx"));
+
     // PROMENI
     //
     //
