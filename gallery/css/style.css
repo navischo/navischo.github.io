@@ -1,0 +1,111 @@
+/* font.css */
+.zen-dots-regular {
+    font-family: "Zen Dots", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.visually-hidden {
+    visibility: hidden;
+    position: absolute;
+    opacity: 0;
+    clip-path: inset(0, 0, 0, 0);
+}
+
+.title {
+    position: absolute;
+    top: 0;
+    left: 2rem;
+    z-index: 2;
+
+    font-size: 2rem;
+    line-height: 1.2;
+
+    opacity: 0;
+    transition: .2s ease;
+}
+
+.title:hover {
+    opacity: 1;
+}
+
+.year {
+    display: block;
+}
+
+/* swiper.css */
+html,
+body {
+    position: relative;
+    height: 100%;
+}
+
+body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    max-width: calc(100vw - 40px);
+    max-height: calc(100vh - 40px);
+    width: 100%;
+    height: 100%;
+    margin: 20px;
+    object-fit: contain;
+}
+
+.swiper-slide {
+
+}
+
+.swiper-pagination-bullet {
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 9px;
+    color: #000;
+    opacity: 1;
+    background: silver;
+}
+
+.swiper-pagination-bullet-active {
+    color: #fff;
+    background: black;
+}
+
+.swiper-pagination {
+    opacity: 0;
+    transition: .2s ease;
+}
+
+.swiper-pagination:hover {
+    opacity: 1;
+}
+
+.swiper-button-next, .swiper-button-prev {
+    color: black;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 2px;
+}

@@ -5,82 +5,20 @@
     <meta charset="utf-8" />
     <title>Ink</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
-    <!-- Link Swiper's CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
-    <!-- Demo styles -->
-    <style>
-        html,
-        body {
-            position: relative;
-            height: 100%;
-        }
-
-        body {
-            background: #eee;
-            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-            font-size: 14px;
-            color: #000;
-            margin: 0;
-            padding: 0;
-        }
-
-        .swiper {
-            width: 100%;
-            height: 100%;
-        }
-
-        .swiper-slide {
-            text-align: center;
-            font-size: 18px;
-            background: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .swiper-slide img {
-            display: block;
-            max-width: calc(100vw - 40px);
-            max-height: calc(100vh - 40px);
-            width: 100%;
-            height: 100%;
-            margin: 20px;
-            object-fit: contain;
-        }
-
-        .swiper-slide {
-
-        }
-
-        .swiper-pagination-bullet {
-            width: 20px;
-            height: 20px;
-            text-align: center;
-            line-height: 20px;
-            font-size: 12px;
-            color: #000;
-            opacity: 1;
-            background: rgba(0, 0, 0, 0.2);
-        }
-
-        .swiper-pagination-bullet-active {
-            color: #fff;
-            background: #007aff;
-        }
-
-        .swiper-pagination {
-            opacity: 0;
-            transition: .2s ease;
-        }
-
-        .swiper-pagination:hover {
-            opacity: 1;
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="zen-dots-regular">
+<h1 class="visually-hidden">Collection of drawings by Yehor Navischo</h1>
+<h2 class="title">
+    <span class="collection">Currents</span>
+    <b class="year">2024</b>
+</h2>
+
 <!-- Swiper -->
 <div class="swiper mySwiper">
     <div class="swiper-wrapper">
@@ -92,36 +30,14 @@
 
 <!-- Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="js/data.js" type="module"></script>
+<script src="js/dom.js" type="module"></script>
+<script type="module">
+    "use strict";
 
-<!-- Initialize Swiper -->
-<script>
-    const parent = document.querySelector(".swiper-wrapper");
-    const appendSheet = (imgId) => {
-        const newSlide = document.createElement("div");
-        const imgNode = document.createElement("img");
-        newSlide.classList.add("swiper-slide");
-        imgNode.src = `img/${imgId}.jpg`;
-        newSlide.appendChild(imgNode)
-        parent.appendChild(newSlide);
+    import { init } from "./js/dom.js";
 
-    }
-    for (let i = 1; i <= 96; i++) {
-        appendSheet(i);
-    }
-    var swiper = new Swiper(".mySwiper", {
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-            renderBullet: function (index, className) {
-                return '<span class="' + className + '">' + (index + 1) + "</span>";
-            },
-        },
-        loop: true
-    });
+    init();
 </script>
 </body>
 
