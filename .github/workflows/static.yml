@@ -4,7 +4,7 @@ name: Deploy static content to Pages
 on:
   # Runs on pushes targeting the default branch
   push:
-    branches: ["main"]
+    branches: [$default-branch]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -15,43 +15,29 @@ permissions:
   pages: write
   id-token: write
 
-# Allow one concurrent deployment
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
   group: "pages"
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
-  build-and-test:
-    runs-on: ${{ matrix.os }}
-    outputs:
-      os: ${{ matrix.os }}
-      run_number: ${{ github.run_number }}
-    strategy:
-      matrix:
-        os: [ubuntu-latest, windows-latest]
-    steps:
-      # ... (steps to setup environment, checkout code)
-      - name: Build
-        run: dotnet build
-      - name: Test
-        run: dotnet test
-      - name: Upload Test Results
-        uses: actions/upload-artifact@v4
-        with:
-          name: test-results-${{ matrix.os }}-${{ github.run_number }}
-          path: path/to/test-results
-
+  # Single deploy job since we're just deploying
   deploy:
-    needs: build-and-test
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Download Test Results for Ubuntu
-        uses: actions/download-artifact@v4
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          name: test-results-ubuntu-latest-${{ needs.build-and-test.outputs.os }}-${{ needs.build-and-test.outputs.run_number }}
-          path: path/to/downloaded-test-results
-      - name: Download Test Results for Windows
-        uses: actions/download-artifact@v4
-        with:
-          name: test-results-windows-latest-${{ needs.build-and-test.outputs.os }}-${{ needs.build-and-test.outputs.run_number }}
-          path: path/to/downloaded-test-results
+          # Upload entire repository
+          path: '.'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
