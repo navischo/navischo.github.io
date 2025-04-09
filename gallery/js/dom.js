@@ -12,7 +12,7 @@ const init = () => {
 
     }
 
-    for (let i = 1; i <= 96; i++) {
+    for (let i = 1; i <= 99; i++) {
         appendSheet(i);
     }
 

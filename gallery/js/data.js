@@ -488,6 +488,21 @@ const data = [
         id: 96,
         year: 21,
         collection: COLLECTION_NAMES.neuromance
+    },
+    {
+        id: 97,
+        year: 22,
+        collection: COLLECTION_NAMES.neuromance
+    },
+    {
+        id: 98,
+        year: 22,
+        collection: COLLECTION_NAMES.remix
+    },
+    {
+        id: 99,
+        year: 25,
+        collection: COLLECTION_NAMES.currents
     }
 ];
 
