@@ -58,6 +58,10 @@
     top: 60px;
 }
 
+#dne-card-demo-dimensional .card__header-left {
+    max-width: 86%;
+}
+
 #dne-card-class-writer .card__preview {
     position: absolute;
     top: 45px;

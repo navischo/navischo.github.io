@@ -12,6 +12,13 @@ const initSoundCards = () => {
     // \$$$$$$  | $$$$$$  |\$$$$$$  |$$ | \$$ |$$$$$$$  |
     //  \______/  \______/  \______/ \__|  \__|\_______/
 
+    // Level Select
+    //
+    //
+    // const DIMENSIONAL_ALBUM_LONGLINE = "";
+    // const DIMENSIONAL_ALBUM_SHORTLINE = `Може помножити карту на нуль. Поклади на будь-яку іншу карту, щоб звести її вплив на нівець`;
+    // LootArr.push(new DNELootCard("demo-dimensional", `DIMENSIONAL`, DIMENSIONAL_ALBUM_LONGLINE, "img/sound/album-dimensional.jpg", 8, 200, "Альбом, 35m of Indutrial Dungeon Synthpunk", DIMENSIONAL_ALBUM_SHORTLINE, "", true, true, "sound", "https://youtu.be/HkImUUFadls"));
+
     // BLOODBOUND
     //
     //
