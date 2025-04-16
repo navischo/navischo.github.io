@@ -142,7 +142,7 @@ const initApp = () => {
     initSettingOptionsUpdate();
     initGameBoy();
     initMatchMaking();
-    initPlaylist();
+    // initPlaylist();
     // initRoller();
     initBtnZeroInbox();
     makeWallSprayable();

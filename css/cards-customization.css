@@ -51,6 +51,40 @@
     max-width: 190px;
 }
 
+#dne-card-oxymoron .card__preview-img {
+    max-height: 260px!important;
+}
+
+#dne-card-frog-prince .card__preview-img {
+    max-height: 160px!important;
+}
+
+#dne-card-smog .card__preview-img {
+    max-height: 260px!important;
+}
+
+#dne-card-midgard-serpent .card__preview-img {
+    max-height: 153px!important;
+    width: auto;
+    margin-left: auto;
+}
+
+#dne-card-snerks .card__preview-img {
+    max-height: 258px!important;
+}
+
+#dne-card-bullrog .card__preview-img {
+    max-height: 230px!important;
+}
+
+#dne-card-meanderthal .card__preview-img {
+    max-height: 205px!important;
+}
+
+#dne-card-roc-star .card__preview-img {
+    max-height: 267px!important;
+}
+
 #dne-card-class-proxy .card__description,
 #dne-card-class-engramma .card__description {
     position: absolute;
@@ -200,12 +234,12 @@
 }
 
 #dne-card-stoned-golem .card__preview-img {
-    max-width: 240px;
+    max-width: 232px;
     margin: 0 auto;
 }
 
 #dne-card-stoned-golem .card__header + .card__description::after {
-    content: "Виключення: Олів'є. Доведеться досягти успіху, щоб не стати обідом";
+    content: "Виключення: Найомнички. Доведеться досягти успіху, щоб вони не стали обідом";
     position: absolute;
     max-width: 92px;
     right: 8px;
