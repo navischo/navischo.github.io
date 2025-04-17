@@ -149,3 +149,55 @@ body[data-hash="play"] .hud-btn--fixed {
     visibility: visible;
     opacity: 1;
 }
+
+.table.custom-scrollbar.--y {
+    padding-bottom: 160px;
+}
+
+ body.hide-hud.monsters-page .score {
+    display: block;
+}
+
+ body.monsters-page .card-owner {
+     transform: none;
+ }
+
+ body.monsters-page .table {
+     left: 0;
+     right: 0;
+     transform: scale(1.3)!important;
+ }
+
+body.hide-hud.monsters-page #table {
+    display: flex;
+    justify-content: center;
+}
+
+body.hide-hud.monsters-page #table > * {
+    margin: 10px;
+}
+
+body.monsters-page .table__cards::before {
+    display: none;
+}
+
+body.monsters-page .score {
+    transform: translate(-50%, 38px) scale(2);
+    /* transform-origin: center; */
+    width: 50vw;
+    text-align: center;
+}
+
+body.monsters-page .js-score-val {
+    display: inline-block;
+    width: 100px;
+}
+
+body.monsters-page .js-score-val:first-child {
+    text-align: right;
+}
+
+body.monsters-page .js-score-val:last-child {
+    text-align: left;
+}
+

@@ -7,6 +7,10 @@ function getRandomInt(max) {
     return Math.floor(Math.random() * max);
 }
 
+function getRandomIntFrom(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
 const getCardById = (id, set) => {
     const card = Array.from(set).find((lootCard) => lootCard.id === id);
     if (card) {
@@ -72,4 +76,4 @@ const getRandomId = (collection) => {
     return idsArr[getRandomInt(idsArr.length)];
 };
 
-export { getRandomInt, getCardById, moveCardById, moveCardBackAfterRent, grabCost, registerRent, getRandomId };
+export { getRandomInt, getRandomIntFrom, getCardById, moveCardById, moveCardBackAfterRent, grabCost, registerRent, getRandomId };

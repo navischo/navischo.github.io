@@ -1004,7 +1004,8 @@
 
 <script type="module">
     import { initApp } from "./js/init.app.js";
-    import { spawnMonster, initMonsters } from "./js/utils/spawnMonster.js";
+    // import { spawnMonster, initMonsters } from "./js/utils/spawnMonster.js";
+    import { spawnMonster, initMonsters } from "./js/utils/popupMonster.js";
     import {win77} from "./js/dne-cli.js";
     import {updBalanceNode} from "./js/hud/balance.hud.js";
 
@@ -1013,6 +1014,12 @@
     // spawnMonster(8);
     initMonsters();
     updBalanceNode();
+
+    const initMonstersPopup = () => {
+        // создать сплошной поп-ап поверх всей игры
+        // по з-индексу счёт поставить выше
+        // в попапе спавним большими картами монстров при загрузке страницы
+    }
 </script>
 </body>
 </html>

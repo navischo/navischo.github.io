@@ -20,7 +20,7 @@ const initScore = () => {
     win77.game.player.score = crewPoints + soundPoints + lootPoints;
     win77.game.totalScore = 0;
     win77.game.versusScore = getRandomInt(19) + 1;
-    spawnMonster(1);
+    // spawnMonster(1);
 }
 
 const readyToStart = () => {
