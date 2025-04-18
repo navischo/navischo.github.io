@@ -79,7 +79,7 @@ const getMonsterCard = (cardData) => {
 const appendMonsterTable = (newMonster) => {
     const parent = document.querySelector("#table");
     const monsterCard = getMonsterCard(newMonster.card);
-    console.log(newMonster, newMonster.id, newMonster.name);
+    console.log(newMonster, newMonster.card.id, newMonster.card.name);
     // tableNode.dataset.owner = newMonster.card.name;
     parent.appendChild(monsterCard);
 }
@@ -140,8 +140,8 @@ const spawnMonstersByLevel = (key) => {
     const keyObj = monsterLevels[key];
         const monstersOrigin = win77.game.catalog._secret.monsters;
         const monstersGroupArr = monstersOrigin.filter((monsterData) => {
-            console.log("key", keyObj, keyObj.min < monsterData.level <= keyObj.max);
-            return keyObj.min < monsterData.level <= keyObj.max
+            // console.log("Compare monster level...", monsterData.level, keyObj, keyObj.min < monsterData.level && monsterData.level <= keyObj.max);
+            return keyObj.min < monsterData.level && monsterData.level <= keyObj.max
         });
         console.log(`Monster group ${key}`, monstersGroupArr);
         const newMonster = monstersGroupArr[getRandomInt(monstersGroupArr.length)];
@@ -155,7 +155,10 @@ const spawnMonstersByLevel = (key) => {
 }
 
 const spawnMonsterByPattern = () => {
-    const pattern = monsterKeys[getRandomInt(monsterKeys.length)];
+    const patternIndex = getRandomInt(monsterKeys.length);
+    const pattern = monsterKeys[patternIndex];
+    console.log(`Patter #${patternIndex} initiated: ${pattern.join(", ")}`);
+
     pattern.forEach((key) => {
         spawnMonstersByLevel(key);
     })
@@ -181,6 +184,14 @@ const monstersPopupMarkup = `
 //     parent.appendChild(monsterCard);
 // }
 
+const getRandomMonsterKey = () => {
+    const keys = Object.keys(monsterLevels);
+    const selectedIndex = getRandomInt(keys.length);
+    const selectedKey = keys[selectedIndex];
+    console.log(`You got ${selectedIndex + 1} on d4. Append one more monster from group ${selectedKey}`);
+    return selectedKey;
+}
+
 const initMonsters = () => {
     win77.game.versusScore = 0;
     const root = document.querySelector("body");
@@ -192,6 +203,9 @@ const initMonsters = () => {
     root.classList.add("monsters-page");
     root.classList.add("hide-hud");
     spawnMonsterByPattern();
+    addOptionalNextBtn("+1 monster", () => {
+        spawnMonstersByLevel(getRandomMonsterKey());
+    });
 }
 
 export { spawnMonster, initMonsters };

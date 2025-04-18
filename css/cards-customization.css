@@ -60,7 +60,7 @@
 }
 
 #dne-card-smog .card__preview-img {
-    max-height: 260px!important;
+    max-height: 225px!important;
 }
 
 #dne-card-midgard-serpent .card__preview-img {
@@ -224,8 +224,23 @@
     margin: 0 auto;
 }
 
+#dne-card-unspeakably-awful-indescribable-horror .card__header-left {
+    max-width: 252px;
+}
+
+#dne-card-unspeakably-awful-indescribable-horror .card__header-right {
+    position: absolute;
+    right: 5px;
+}
+
 #dne-card-unspeakably-awful-indescribable-horror .card__preview-img {
-    max-width: 230px;
+    max-width: 173px;
+    padding: 5px!important;
+    margin: 0 auto!important;
+}
+
+#dne-card-tongue-demon .card__header-left {
+    max-width: 95%;
 }
 
 #dne-card-tongue-demon .card__preview-img {
@@ -234,12 +249,64 @@
 }
 
 #dne-card-stoned-golem .card__preview-img {
-    max-width: 232px;
+    max-width: 155px;
     margin: 0 auto;
+    margin-left: 18px!important;
+}
+
+#dne-card-cat-girl .card__preview-img {
+    max-width: 233px;
+
+}
+
+#dne-card-lawyers .card__preview-img {
+    max-height: 280px!important;
+    padding-top: 10px!important;
+}
+
+#dne-card-gothyanki .card__preview-img {
+    max-height: 211px!important;
+}
+
+#dne-card-chocolate-bunny .card__preview-img {
+    max-height: 242px!important;
+}
+
+#dne-card-obsture-angel .card__preview-img {
+    max-height: 224px!important;
+    padding: 10px 5px!important;
+}
+
+#dne-card-blobgoblin .card__preview-img {
+    padding: 10px 5px!important;
+}
+
+#dne-card-failcor .card__preview-img {
+    padding-right: 0!important;
+}
+
+#dne-card-ghoulfiends .card__preview-img {
+    max-height: 260px!important;
+    padding: 10px 5px!important;
+}
+
+#dne-card-the-brothers-grimm .card__preview-img {
+    max-height: 224px!important;
+}
+
+#dne-card-mr-bones .card__preview-img {
+    max-height: 279px!important;
+    position: relative;
+    top: -20px;
+    right: -35px;
+}
+
+#dne-card-pinball-lizard .card__preview-img {
+    padding: 10px 5px!important;
 }
 
 #dne-card-stoned-golem .card__header + .card__description::after {
-    content: "Виключення: Найомнички. Доведеться досягти успіху, щоб вони не стали обідом";
+    content: "Виключення: Найомнички. Доведеться досягти успіху, щоб не втратрити їх";
     position: absolute;
     max-width: 92px;
     right: 8px;
