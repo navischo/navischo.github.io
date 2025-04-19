@@ -1138,6 +1138,30 @@ const DNEMonsterArr = initMonsterArr();
 
 const initBUGArr = () => {
     const BUGArr = [];
+    const WANDERING_MONSTER_LONGLINE = `Грай у будь-який Рейв<br>(можна й у свій).<br>Обери верхнього монстра рівнем не більше за очікування і закинь його в цей Рейв.`;
+    BUGArr.push(new DNEBUGCard("bug-wandering-monster", "Сором'язлива тварина", "/img/bug/bug-wandering-monster.png", WANDERING_MONSTER_LONGLINE, "", 0, 0, true));
+    const WANDERING_MONSTER_LONGLINE_2 = `Грай у будь-який Рейв,<br>скинувши карту звуку.<br>Обери одного з верхніх монстрів і закинь його в цей Рейв.`;
+    BUGArr.push(new DNEBUGCard("bug-wandering-monster-2", "Очікувана тварина", "/img/bug/bug-wandering-monster-2.png", WANDERING_MONSTER_LONGLINE_2, "", 0, 0, true));
+    const WANDERING_MONSTER_LONGLINE_3 = `Підкинь пасажира в цей Рейв, кинь d4 та поклич монстра відповідного рівня складності:<br>1 - легкий,<br>2 - середній,<br>3 - сильний або<br>4 - особливий.`;
+    BUGArr.push(new DNEBUGCard("bug-wandering-monster-3", "Випадкова тварина", "/img/bug/bug-wandering-monster-3.png", WANDERING_MONSTER_LONGLINE_3, "", 0, 0, true));
+    const WANDERING_MONSTER_LONGLINE_4 = `Грай у будь-який Рейв.<br>Обери верхнього монстра з більшим рівнем, ніж в будь-якого з монстрів, що вже запрошені, і закинь його в цей Рейв.`;
+    BUGArr.push(new DNEBUGCard("bug-wandering-monster-4", "Нарцистична тварина", "/img/bug/bug-wandering-monster-8.png", WANDERING_MONSTER_LONGLINE_4, "", 0, 0, true));
+    const WANDERING_MONSTER_LONGLINE_5 = `Грай у будь-який Рейв,<br>скинувши душу.<br>Прочухай усіх монстрів, обери будь-якого і закинь його в цей Рейв.`;
+    BUGArr.push(new DNEBUGCard("bug-wandering-monster-5", "Вийняткова тварина", "/img/bug/bug-wandering-monster-5.png", WANDERING_MONSTER_LONGLINE_5, "", 0, 0, true));
+    const WANDERING_MONSTER_LONGLINE_6 = `Грай у будь-який Рейв,<br>скинувши душу.<br>Візьми верхнього монстра з колоди кожної складності та закинь їх в цей Рейв.`;
+    BUGArr.push(new DNEBUGCard("bug-wandering-monster-6", "Співзалежні тварини", "/img/bug/bug-wandering-monster-9.png", WANDERING_MONSTER_LONGLINE_6, "", 0, 0, true));
+    const WANDERING_MONSTER_LONGLINE_7 = `Грай у будь-який Рейв,<br>скинувши душу.<br>Прочухай колоду найвищої складності, обери двох монстрів та закинь їх в цей Рейв.`;
+    BUGArr.push(new DNEBUGCard("bug-wandering-monster-7", "Нерозлучні тварини", "/img/bug/bug-wandering-monster-7.png", WANDERING_MONSTER_LONGLINE_7, "", 0, 0, true));
+    // const WANDERING_MONSTER_LONGLINE_8 = `Грай у будь-який Рейв,<br>скинувши душу.<br>Прочухай колоду найвищої складності, обери двох монстрів та закинь їх в цей Рейв.`;
+    // BUGArr.push(new DNEBUGCard("bug-wandering-monster-8", "Бродяча тварина", "/img/bug/bug-wandering-monster-8.png", WANDERING_MONSTER_LONGLINE_8, "", 0, 0, true));
+    // BUGArr.push(new DNEBUGCard("bug-wandering-monster-9", "Бродяча тварина", "/img/bug/bug-wandering-monster-9.png", WANDERING_MONSTER_LONGLINE, "", 0, 0, true));
+    const DOGPILE_LONGLINE = `Грай у будь-який Рейв(можна у свій). Потім решта гравців може скинути по одній карті Звуку, щоб запросити<br>на Рейв<br>по монстру<br>за кожну.<br>Склади їх рівні<br>з очікуваннями.<br>При невдачі<br>гравець<br>робить<br>окремі<br>кидки<br>змивки<br>для кожного.`;
+    BUGArr.push(new DNEBUGCard("bug-dogpile", "Купа мала", "/img/bug/bug-dogpile.png", DOGPILE_LONGLINE, "", 0, 0, true));
+    const MONSTER_MASH_LONGLINE = `Грай у будь-який Рейв разом з будь-якою кількістю карт з руки. Запроси на Рейв по монстру за кожну. Склади їх рівні з очікуваннями. При невдачі гравець робить окремі кидки змивки для кожного.`;
+    BUGArr.push(new DNEBUGCard("bug-monster-mash", "Тому що ми банда!", "/img/bug/bug-monster-mash.png", MONSTER_MASH_LONGLINE, "", 0, 0, true));
+    // const DOGPILE_LONGLINE_2 = `Грай у будь-який Рейв(можна у свій). Потім решта гравців може скинути по одній карті Звуку, щоб запросити на Рейв по монстру за кожну. Склади їх рівні з очікуваннями. При невдачі гравець робить окремі кидки змивки для кожного.`;
+    // BUGArr.push(new DNEBUGCard("bug-dogpile-2", "Купа мала", "/img/bug/bug-dogpile-2.png", DOGPILE_LONGLINE_2, "", 0, 0, true));
+    // BUGArr.push(new DNEBUGCard("bug-monster-mash-2", "Тому що ми банда!", "/img/bug/bug-monster-mash-2.png", MONSTER_MASH_LONGLINE, "", 0, 0, true));
     const DIVINE_LONGLINE = `Ти повинен зіграти цю карту, як тільки її отримав. Всі DJ-ї одразу отримують рівень! Цей рівень може бути переможним. Якщо ти переміг у грі за рахунок цієї карти, маєш право насміхатись безжально.`;
     BUGArr.push(new DNEBUGCard("bug-divine-interdiction", "Боже втручання", "/img/bug/bug-divine-interdiction.png", DIVINE_LONGLINE, "", 0, 0, true)); // bose, gameChanger
     const MINE_TO_11_LONGLINE = `Будь-коли виклади цю карту посеред столу. Гра триває<br> до 11-ї душі. 10-ту та 11-ту душі можна отримати лише з Монстром на Рейві.`;
@@ -1228,12 +1252,6 @@ const initBUGArr = () => {
     BUGArr.push(new DNEBUGCard("bug-take-good-with-bad", "Немає лиха без добра", "/img/bug/bug-take-good-with-bad.png", TAKE_GOOD_WITH_BAD_LONGLINE, "1UP", 0, 0, true));
     const CONTEMPLATE_YOUR_NAVEL_LONGLINE = `Якщо скинеш всю руку (не менше трьох карт), отримай дві душі замість однієї!`;
     BUGArr.push(new DNEBUGCard("bug-contemplate-your-navel", "Споглядай пупок", "/img/bug/bug-contemplate-your-navel.png", CONTEMPLATE_YOUR_NAVEL_LONGLINE, "1UP", 0, 0, true));
-    const WANDERING_MONSTER_LONGLINE = `Грай у будь-який Рейв(можна й у свій). Вибери будь-якого монстра рівнем не більше за очікування і закинь його в цей Рейв. Якщо монстрів прийшло декілька, при невдачі гравець робить окремі кидки змивки в будь-якому порядку.`;
-    BUGArr.push(new DNEBUGCard("bug-wandering-monster", "Бродяча тварина", "/img/bug/bug-wandering-monster.png", WANDERING_MONSTER_LONGLINE, "", 0, 0, true));
-    const DOGPILE_LONGLINE = `Грай у будь-який Рейв(можна у свій). Потім решта гравців може скинути по одній карті Звуку, щоб запросити<br>на Рейв<br>по монстру<br>за кожну.<br>Склади їх рівні<br>з очікуваннями.<br>При невдачі<br>гравець<br>робить<br>окремі<br>кидки<br>змивки<br>для кожного.`;
-    BUGArr.push(new DNEBUGCard("bug-dogpile", "Купа мала", "/img/bug/bug-dogpile.png", DOGPILE_LONGLINE, "", 0, 0, true));
-    const MONSTER_MASH_LONGLINE = `Грай у будь-який Рейв разом з будь-якою кількістю карт з руки. Запроси на Рейв по монстру за кожну. Склади їх рівні з очікуваннями. При невдачі гравець робить окремі кидки змивки для кожного.`;
-    BUGArr.push(new DNEBUGCard("bug-monster-mash", "Тому що ми банда!", "/img/bug/bug-monster-mash.png", MONSTER_MASH_LONGLINE, "", 0, 0, true));
     // const LOSE_TOUR_LUCKY_DIE_LONGLINE = `Втрать душу! Якщо в тебе по життю є щасливий кубик, прибери його з очей геть і не торкайся до нього, не застосовуй його жодним іншим способом, навіть не дивися на нього до кінця партії!`;
     // BUGArr.push(new DNEBUGCard("bug-lose-your-lucky-die", "Загубив щасливий кубик", "/img/bug/bug-lose-your-lucky-die.png", LOSE_TOUR_LUCKY_DIE_LONGLINE, "Проблема!", 0, 0, true));
     const TEMPORARY_AMNESIA_LONGLINE = `Удар по голові змусив тебе забути свій клас. Переверни свою карту Класу сорочкою вгору. Ти згадаєш це, тільки коли організуєш чи допоможеш організувати Рейв з монстром. До того часу ти будеш у всіх відносинах звичайною людиною без класу.`;
@@ -1419,17 +1437,6 @@ const initBUGArr = () => {
     BUGArr.push(new DNEBUGCard("bug-clumsy", "Крихкі кістки", "/img/bug/bug-clumsy.png", CLUMSY_LONGLINE, "Проблема!", 0, 0, true));
     const CURSED_ITEM_LONGLINE = `Одна твоя карта, що дає тобі постійний бонус чи особливу властивість стає багнутою. Вона втрачає свій бонус і ти не можеш позбутися її, поки проблема не знята. Інша проблема може зняти баг(наприклад, "Коростяний порошок"). Бажальне кільце знімає баг з карти, повертаючи її бонус. Крім того, цей баг зникає, якщо ти обнулишся. Вчасно, правда?`;
     BUGArr.push(new DNEBUGCard("bug-cursed-item", "Багнутий айтем", "/img/bug/bug-cursed-item.png", CURSED_ITEM_LONGLINE, "Проблема!", 0, 0, true));
-    BUGArr.push(new DNEBUGCard("bug-wandering-monster-2", "Бродяча тварина", "/img/bug/bug-wandering-monster-2.png", WANDERING_MONSTER_LONGLINE, "", 0, 0, true));
-    BUGArr.push(new DNEBUGCard("bug-wandering-monster-3", "Бродяча тварина", "/img/bug/bug-wandering-monster-3.png", WANDERING_MONSTER_LONGLINE, "", 0, 0, true));
-    BUGArr.push(new DNEBUGCard("bug-wandering-monster-4", "Бродяча тварина", "/img/bug/bug-wandering-monster-4.png", WANDERING_MONSTER_LONGLINE, "", 0, 0, true));
-    BUGArr.push(new DNEBUGCard("bug-wandering-monster-5", "Бродяча тварина", "/img/bug/bug-wandering-monster-5.png", WANDERING_MONSTER_LONGLINE, "", 0, 0, true));
-    BUGArr.push(new DNEBUGCard("bug-wandering-monster-6", "Бродяча тварина", "/img/bug/bug-wandering-monster-6.png", WANDERING_MONSTER_LONGLINE, "", 0, 0, true));
-    BUGArr.push(new DNEBUGCard("bug-wandering-monster-7", "Бродяча тварина", "/img/bug/bug-wandering-monster-7.png", WANDERING_MONSTER_LONGLINE, "", 0, 0, true));
-    BUGArr.push(new DNEBUGCard("bug-wandering-monster-8", "Бродяча тварина", "/img/bug/bug-wandering-monster-8.png", WANDERING_MONSTER_LONGLINE, "", 0, 0, true));
-    BUGArr.push(new DNEBUGCard("bug-wandering-monster-9", "Бродяча тварина", "/img/bug/bug-wandering-monster-9.png", WANDERING_MONSTER_LONGLINE, "", 0, 0, true));
-    const DOGPILE_LONGLINE_2 = `Грай у будь-який Рейв(можна у свій). Потім решта гравців може скинути по одній карті Звуку, щоб запросити на Рейв по монстру за кожну. Склади їх рівні з очікуваннями. При невдачі гравець робить окремі кидки змивки для кожного.`;
-    BUGArr.push(new DNEBUGCard("bug-dogpile-2", "Купа мала", "/img/bug/bug-dogpile-2.png", DOGPILE_LONGLINE_2, "", 0, 0, true));
-    BUGArr.push(new DNEBUGCard("bug-monster-mash-2", "Тому що ми банда!", "/img/bug/bug-monster-mash-2.png", MONSTER_MASH_LONGLINE, "", 0, 0, true));
     const SEMIFINAL_STRIKE_LONGLINE = `Обери одну карту звуку в твоєму лайнапі, її бонус потроюється. Після Рейву кинь d6. Якщо випало 6, поверни її разом з однією картою, що забираєш після Рейву зазвичай. Разова карта.`;
     BUGArr.push(new DNEBUGCard("bug-semi-final-drop", "Передостанній дроп", "/img/bug/bug-semi-final-drop.png", SEMIFINAL_STRIKE_LONGLINE, "", 0, 0, true));
     BUGArr.push(new DNEBUGCard("bug-lucky-talisman-2", "Талісман вдачі", "/img/bug/bug-lucky-talisman-2.png", LUCKY_TALISMAN_LONGLINE, "", 0, 0, true)); // 300
