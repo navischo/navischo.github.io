@@ -60,6 +60,7 @@ import { updNokiaLobby } from "./router/callFriend.js";
 import { saveVisit, displayLastVisit } from "./utils/saveVisit.js";
 import { startSequence } from "./utils/initTalk.js";
 import { initPlaylist } from "./utils/playlist.js";
+import {win77} from "./dne-cli.js";
 
 const initApp = () => {
     saveVisit();
@@ -149,6 +150,8 @@ const initApp = () => {
     initTerminal();
     enterCity();
     // startSequence("intro");
+    win77.startCutscene("cyberdoomer");
+    document.querySelector(".game-menu").classList.toggle("--open");
 }
 
 export { initApp };

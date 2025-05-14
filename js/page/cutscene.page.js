@@ -29,7 +29,8 @@ const CUTSCENE_FILES = {
     nightplay: `mp4-room-night-play.mp4`,
     smok: `mp4-room-smok.mp4`,
     cs: `mp4-bg-cyber-strike.mp4`,
-    freedom: `mp4-cutscene-freedom.mp4`
+    freedom: `mp4-cutscene-freedom.mp4`,
+    cyberdoomer: "mp4-cyberdoomer.mp4"
 };
 
 const getCutsceneMarkup = (videoName) =>
