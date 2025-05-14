@@ -248,6 +248,10 @@
     margin: 0 auto;
 }
 
+#dne-card-munchsphinx .card__preview-img {
+    max-height: 283px!important;
+}
+
 #dne-card-stoned-golem .card__preview-img {
     max-width: 155px;
     margin: 0 auto;
