@@ -74,7 +74,7 @@
 }
 
 #dne-card-bullrog .card__preview-img {
-    max-height: 230px!important;
+    max-height: 210px!important;
 }
 
 #dne-card-meanderthal .card__preview-img {
@@ -98,6 +98,10 @@
 
 #dne-card-vinyl-crepuscular .card__header-left {
     max-width: 86%;
+}
+
+#dne-card-misplacer-beast .card__header-left {
+    max-width: 90%;
 }
 
 #dne-card-class-writer .card__preview {

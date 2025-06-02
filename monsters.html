@@ -1030,7 +1030,9 @@
             <h2 class="card__title">${cardData.name}</h2>
         </div>
         <div class="card__header-right">
-            ${cardData.level !== 0 ? `<b class="card__bonus">${cardData.level}</b>` : ``}
+            ${cardData.level !== 0 ?
+            `<b class="card__bonus" ${cardData.modifiedLevel !== 0 ? `data-bonus-one="${cardData.modifiedLevel}"` : ""}>${cardData.level}</b>`
+            : ``}
         </div>
     </header>
     <p class="card__description">${cardData.description}</p>
