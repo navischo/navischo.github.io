@@ -56,7 +56,7 @@
 }
 
 #dne-card-frog-prince .card__preview-img {
-    max-height: 160px!important;
+    max-height: 152px!important;
 }
 
 #dne-card-smog .card__preview-img {
@@ -102,6 +102,14 @@
 
 #dne-card-misplacer-beast .card__header-left {
     max-width: 90%;
+}
+
+#dne-card-ghoulfiends .card__header-left {
+    max-width: 90%;
+}
+
+#dne-card-under-the-bed .card__preview-img {
+    max-height: 240px!important;
 }
 
 #dne-card-class-writer .card__preview {
@@ -253,7 +261,7 @@
 }
 
 #dne-card-munchsphinx .card__preview-img {
-    max-height: 283px!important;
+    max-height: 265px!important;
 }
 
 #dne-card-stoned-golem .card__preview-img {
@@ -273,7 +281,7 @@
 }
 
 #dne-card-gothyanki .card__preview-img {
-    max-height: 211px!important;
+    max-height: 191px!important;
 }
 
 #dne-card-chocolate-bunny .card__preview-img {
@@ -323,7 +331,7 @@
 }
 
 #dne-card-gms-ex-girlfriend .card__preview-img {
-    max-width: 260px;
+    max-width: 253px;
     margin: 0 auto;
 }
 

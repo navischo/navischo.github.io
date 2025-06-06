@@ -499,7 +499,7 @@ const initSoundCards = () => {
     //
     const COME_OVER_VINYL_LONGLINE = "";
     const COME_OVER_VINYL_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
-    LootArr.push(new DNELootCard("vinyl-come-over", `Come Over`, COME_OVER_VINYL_LONGLINE, "img/sound/vinyl-come-over.jpg", 5, 1000, "Платівка, 35m of Psychodelic Lo-Fi Indie Rock", COME_OVER_VINYL_SHORTLINE, "", true, true, "sound", "https://www.youtube.com/watch?v=tVgpoLZOBkY&list=PLfJndz0utgOPLfP5L2k1MYak2xF_LGD1e&index=1&ab_channel=Kowloon-Topic"));
+    LootArr.push(new DNELootCard("vinyl-come-over", `Come Over`, COME_OVER_VINYL_LONGLINE, "img/sound/vinyl-come-over.jpg", 5, 1000, "Платівка, 35m of Psychodelic Lo-Fi Indie Rock", COME_OVER_VINYL_SHORTLINE, "", true, true, "sound", "https://youtu.be/S-WKoSNivXs?si=w8mooUO6PUv1VhzK"));
 
     // ANATOMY VOL.3
     //

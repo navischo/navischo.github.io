@@ -985,6 +985,19 @@
     margin-top: 15px;
 }
 
+.buy-where__textfield h2 {
+    margin-bottom: 1em;
+}
+
+.buy-where__textfield ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+.buy-where__textfield b {
+    font-weight: 700;
+}
+
 .buy-where__right a {
     text-decoration: underline;
 }
