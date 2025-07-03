@@ -151,7 +151,7 @@ const initApp = () => {
     enterCity();
     // startSequence("intro");
     win77.startCutscene("cyberdoomer");
-    document.querySelector(".game-menu").classList.toggle("--open");
+    // document.querySelector(".game-menu").classList.toggle("--open");
 }
 
 export { initApp };
