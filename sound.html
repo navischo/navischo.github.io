@@ -1026,23 +1026,23 @@
     // эту функцию необходимо разделить на две: одна ищет карты соответствующие параметрам, вторая вызывает её для всего массива каждый раз когда та достигает успеха
     const shufle = () => {
         const shufledSound = [];
-        const maxSize = 20;
+        const maxSize = 220;
         let curSize = 0;
-        let maxBonus = 3;
-        let curBonus = 4;
+        let maxBonus = 9;
+        let curBonus = 2;
         Array.from(win77.game.catalog.sound).filter((soundCard, index) => {
-            if (soundCard.bonus === curBonus) {
+            // if (soundCard.bonus === curBonus) {
                 // shufledSound.push(soundCard);
-                if (curSize < maxSize) {
+                // if (curSize < maxSize) {
                     console.log(`try ${index} pass ${curSize} of ${maxSize}`, curSize < maxSize, soundCard, shufledSound);
-                    curSize += 1;
+                    // curSize += 1;
                     shufledSound.push(soundCard);
-                } else {
+                // } else {
                     console.log(`try ${index} complete ${curBonus}`, curSize, curBonus, shufledSound);
-                    curSize = 0;
+                    // curSize = 0;
                     // curBonus = curBonus + 1;
-                }
-            }
+                // }
+            // }
         });
         console.log(shufledSound, win77.game.catalog.sound);
         drawSoundCards(shufledSound);
