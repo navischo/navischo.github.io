@@ -1,4 +1,251 @@
 /* START CUSTOM DNE-CARDS STYLES */
+#dne-card-album-vampire-the-masquerade-bloodlines .card__header.--flip {
+    display: none!important;
+}
+
+#dne-card-album-vampire-the-masquerade-bloodlines .card__preview {
+    margin-bottom: 0!important;
+}
+
+#dne-card-album-vampire-the-masquerade-bloodlines .card {
+    padding-bottom: 0!important;
+}
+
+#dne-card-album-farwalker .card__preview {
+    position: relative;
+    top: -4px;
+}
+
+#dne-card-album-chemical-love-story .card__header.--flip {
+    display: none!important;
+}
+
+#dne-card-album-chemical-love-story .card__preview {
+    margin-bottom: 0!important;
+}
+
+#dne-card-demo-sekia-sessions .card__header.--flip {
+    display: none!important;
+}
+
+#dne-card-demo-sekia-sessions .card__preview {
+    margin-bottom: 0!important;
+}
+
+#dne-card-album-supersonic-megafauna-collision .card__header.--flip {
+    display: none!important;
+}
+
+#dne-card-album-supersonic-megafauna-collision .card__preview {
+    margin-bottom: 0!important;
+}
+
+#dne-card-album-doom-session-2 .card__header.--flip {
+    display: none!important;
+}
+
+#dne-card-album-doom-session-2 .card__preview {
+    margin-bottom: 0!important;
+}
+
+#dne-card-album-motion-regime .card__header.--flip {
+    display: none!important;
+}
+
+#dne-card-album-motion-regime .card__preview {
+    margin-bottom: 0!important;
+}
+
+#dne-card-demo-journey-into-abstract .card__header.--flip {
+    display: none!important;
+}
+
+#dne-card-demo-journey-into-abstract .card__preview {
+    margin-bottom: 0!important;
+}
+
+#dne-card-album-royal-noises-from-dead-kingdoms .card__header.--flip {
+    display: none!important;
+}
+
+#dne-card-album-royal-noises-from-dead-kingdoms .card__preview {
+    margin-bottom: 0!important;
+}
+
+#dne-card-album-psycho-tropical-berlin .card__header.--flip {
+    display: none!important;
+}
+
+#dne-card-album-psycho-tropical-berlin .card__preview {
+    margin-bottom: 0!important;
+}
+
+#dne-card-album-i-no-longer-fear .card__header.--flip {
+    display: none!important;
+}
+
+#dne-card-album-i-no-longer-fear .card__preview {
+    margin-bottom: 0!important;
+}
+
+#dne-card-album-how-to-see-through-walls .card__header.--flip {
+    display: none!important;
+}
+
+#dne-card-album-how-to-see-through-walls .card__preview {
+    margin-bottom: 0!important;
+}
+
+#dne-card-album-intermission .card__preview {
+    position: relative;
+    top: -10px;
+}
+
+#dne-card-demo-tweeman .card__preview,
+#dne-card-demo-jing .card__preview,
+#dne-card-demo-courtesy .card__preview,
+#dne-card-demo-jelz .card__preview,
+#dne-card-demo-lolsnake .card__preview,
+#dne-card-demo-marum-future .card__preview,
+#dne-card-demo-smith .card__preview,
+#dne-card-demo-fracture .card__preview,
+#dne-card-demo-nite-fleit .card__preview,
+#dne-card-demo-madness .card__preview,
+#dne-card-demo-sim0ne .card__preview,
+#dne-card-demo-oneman .card__preview,
+#dne-card-demo-dj-perception .card__preview,
+#dne-card-demo-jordss .card__preview,
+#dne-card-demo-neffa-t .card__preview,
+#dne-card-demo-wallflower .card__preview,
+#dne-card-demo-sol-ortega .card__preview,
+#dne-card-demo-isabelle-beaucamp .card__preview,
+#dne-card-demo-deep-syth-journey .card__preview,
+#dne-card-demo-mission-london .card__preview,
+#dne-card-demo-how-to-disappear .card__preview,
+#dne-card-demo-rouge .card__preview,
+#dne-card-demo-muravyova .card__preview {
+    transform: scale(1.8);
+}
+
+#dne-card-demo-autonomous-aka-slam .card__preview {
+    transform: scale(1.8) translate(12px, 0px);
+}
+
+#dne-card-demo-thom-yorke .card__preview {
+    transform: scale(1.5) translate(40px, 0px);
+}
+
+#dne-card-demo-phonk-cloud .card__preview {
+    transform: scale(1.5) translate(-10px, 0px);
+}
+
+#dne-card-demo-chill-out .card__preview {
+    transform: scale(1.45) translate(-5px, 0px);
+}
+
+#dne-card-demo-mac-lofi .card__preview {
+    transform: scale(1.3);
+}
+
+#dne-card-demo-420mix .card__preview {
+    transform: scale(1.78) rotate(90deg);
+}
+
+#dne-card-demo-420mix .card__header:not(.--flip) {
+    position: relative;
+    z-index: 2;
+}
+
+#dne-card-demo-420mix .card__header {
+    color: white!important;
+}
+
+#dne-card-demo-cyberdream .card__preview {
+    transform: scale(2);
+}
+
+#dne-card-demo-chill-hotline .card__preview {
+    transform: scale(1.2);
+}
+
+#dne-card-demo-epic-hotline .card__preview {
+    transform: scale(1.6);
+}
+
+#dne-card-album-enigma .card__preview {
+    transform: scale(2);
+}
+
+#dne-card-demo-calm-down .card__preview {
+    transform: scale(2);
+}
+
+#dne-card-demo-zeldawave .card__preview {
+    transform: scale(2);
+}
+
+#dne-card-demo-tour-de-manege .card__preview {
+    transform: scale(1.3);
+}
+
+#dne-card-demo-gesserit-sister .card__preview {
+    transform: scale(1.6);
+}
+
+#dne-card-demo-dub-wars .card__preview {
+    transform: scale(1.3);
+}
+
+#dne-card-demo-zeldawave-2 .card__preview {
+    transform: scale(1.5);
+}
+
+#dne-card-demo-slowed-robot .card__preview {
+    transform: scale(1.9);
+}
+
+#dne-card-demo-trappin-japan .card__preview {
+    transform: scale(1.7);
+}
+
+#dne-card-demo-exodus .card__preview {
+    transform: scale(1.9);
+}
+
+#dne-card-demo-patience .card__title {
+    line-height: 38px;
+    text-align: center;
+    padding-left: 17px;
+}
+
+#dne-card-album-iron-horse .card__preview {
+    transform: scale(1.15) translate(5px, 0px);
+}
+
+#dne-card-demo-chill-dude-here .card__preview {
+    transform: scale(1.8) translate(-4px, 0px);
+}
+
+#dne-card-demo-deep-into-your-eyes .card__preview {
+    transform: scale(1.8);
+}
+
+#dne-card-demo-dark-trap-4 .card__preview {
+    transform: scale(1.55);
+}
+
+#dne-card-demo-dark-trap-777 .card__preview {
+    transform: scale(1.55);
+}
+
+#dne-card-demo-high-alone .card__preview {
+    transform: scale(2.6) translate(-4px, 0px);
+}
+
+#dne-card-demo-apex-twin-sleep .card__preview {
+    transform: scale(1.8);
+}
+
 #dne-card-avatar-ttter .card__preview {
     transform: scale(1.6) translate(0, 40px);
 }
@@ -1211,7 +1458,7 @@
 }
 
 #dne-card-vinyl-cyberpunk-triple .card__header {
-    position: relative;
+    /*position: relative;*/
     z-index: 2;
 }
 
@@ -1885,7 +2132,7 @@
 }
 
 #dne-card-demo-mac-lofi .card__header-left {
-    max-width: 90%;
+    /*max-width: 90%;*/
 }
 
 #dne-card-demo-mac-lofi .card__description {
@@ -1930,20 +2177,20 @@
 
 #dne-card-album-i-no-longer-fear .card__preview-img {
     position: absolute;
-    transform: scale(2) translateY(27px);
+    transform: scale(2) translate(0px, -20px);
 }
 
-#dne-card-album-i-no-longer-fear .card__limits {
-    position: relative;
-    z-index: 2;
+/*#dne-card-album-i-no-longer-fear .card__limits {*/
+/*    position: relative;*/
+/*    z-index: 2;*/
 
-    display: block;
-    width: 275px;
-    padding-top: 2px;
+/*    display: block;*/
+/*    width: 275px;*/
+/*    padding-top: 2px;*/
 
-    color: white;
-    text-shadow: 2px 1px 0 black;
-}
+/*    color: white;*/
+/*    text-shadow: 2px 1px 0 black;*/
+/*}*/
 
 #dne-card-album-i-no-longer-fear .card__title {
     width: 231px;

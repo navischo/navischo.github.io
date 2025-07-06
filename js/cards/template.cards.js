@@ -6,7 +6,7 @@ const getCardElement = (cardData) => {
     newCard.id = `dne-card-${cardData.id}`;
 
     newCard.innerHTML = `
-<article class="card"><!--${cardData.isHide ? "--hide": ""}-->
+<article class="card --sound"><!--${cardData.isHide ? "--hide": ""}-->
     <div class="js-card-controls card__controls">
         <button>+</button>
     </div>
@@ -26,10 +26,19 @@ const getCardElement = (cardData) => {
     <a class="card__preview" ${cardData.credits ? `href="${cardData.credits}" target="_blank"` :  ``}>
         <img class="card__preview-img" src="${cardData.img}" alt="">
     </a>
-    <p class="card__description">${cardData.longline ? cardData.longline : cardData.description.slice(0, 50)}</p>
-    <footer class="card__footer">
-        ${cardData.cost !== 0 ? `<b class="card__price">${cardData.cost}</b>` : ``}
-    </footer>
+    <header class="card__header --flip">
+        <div class="card__header-left">
+            <small class="js card__id">#${cardData.id}</small>
+            <h2 class="card__title">${cardData.name}</h2><!-- data-advice-id="${cardData.type}" -->
+            <small class="card__limits">${cardData.limits}</small>
+        </div>
+        <div class="card__header-right">
+            ${
+        cardData.bonus !== 0 ?
+            `<b class="card__bonus" ${cardData.type === CARD_TYPES.sound ? `data-bonus-one="${+cardData.bonus + (Math.round(+cardData.bonus / 2))}" data-bonus-two="${+cardData.bonus + +cardData.bonus}"` : ""}>+${cardData.bonus}</b>`
+            : ``}
+        </div>
+    </header>
 </article>
 `;
 

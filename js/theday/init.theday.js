@@ -75,14 +75,14 @@ const initTheday = () => {
     const roundTitleElement = document.querySelector(`#round-title`);
     const roundTitleTextElement = document.querySelector(`#round-title .theday__round-title-text`);
     const dungeTitleElement = document.querySelector(`#ascii-title`);
-    win77.playlist.playTrack();
+    // win77.playlist.playTrack();
 
-    dungeTitleElement.innerHTML = `${win77.playlist.getTrackId()}`;
-    dungeTitleElement.classList.add("--visible");
-    setTimeout(() => {
-        dungeTitleElement.classList.remove("--visible");
-    }, 3000);
-    console.log(dungeASCII);
+    // dungeTitleElement.innerHTML = `${win77.playlist.getTrackId()}`;
+    // dungeTitleElement.classList.add("--visible");
+    // setTimeout(() => {
+    //     dungeTitleElement.classList.remove("--visible");
+    // }, 3000);
+    // console.log(dungeASCII);
 
     playerTitleTextElement.innerHTML = `${win77.game.player.id}`;
     playerTitleTextElement.dataset.playerId = `${win77.game.player.id}`;

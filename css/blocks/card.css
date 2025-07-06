@@ -87,6 +87,21 @@
     background: white;
 }
 
+.card.--sound {
+    display: flex;
+    flex-direction: column;
+}
+
+.card.--sound .card__preview {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.card.--sound .card__limits {
+    display: inline-block;
+    width: 270px;
+}
+
 .card:hover {
     z-index: 4;
 }
@@ -352,6 +367,12 @@
     word-break: break-word;
 }
 
+.card__header.--flip {
+    position: absolute;
+    bottom: -10px;
+    transform: rotate(180deg);
+}
+
 .card__id {
     position: absolute;
     top: 0;
@@ -368,7 +389,7 @@
 
 .card__header-left {
     width: 100%;
-    max-width: 80%;
+    max-width: 87%;
 }
 
 .card__header-right {
@@ -423,6 +444,7 @@
 .card__bonus {
     position: relative;
     white-space: nowrap;
+    top: -5px;
 }
 
 .card__bonus,
@@ -450,11 +472,11 @@
     content: attr(data-bonus-one);
 
     position: absolute;
-    bottom: 0;
+    bottom: -2px;
     right: 1.5px;
     transform: translateY(100%);
 
-    font-size: .5em;
+    font-size: .55em;
     font-family: "JetBrains Mono", sans-serif;
     text-shadow: none;
 }
@@ -463,11 +485,11 @@
     content: attr(data-bonus-two);
 
     position: absolute;
-    bottom: 0;
+    bottom: -2px;
     right: 1.5px;
     transform: translateY(200%);
 
-    font-size: .5em;
+    font-size: .55em;
     font-family: "JetBrains Mono", sans-serif;
     text-shadow: none;
 }

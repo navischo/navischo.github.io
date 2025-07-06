@@ -228,6 +228,10 @@ const drawLootCards = (cardData, parentSelector = "#dne-page") => {
 
     const drawIt = (DNELootCard) => {
         drawCard(cardContainer, getCardElement, DNELootCard);
+        const drawnedCard = document.querySelector(`#dne-card-${DNELootCard.id} .card.--sound`);
+        const drawnedCardHeaderHeight = drawnedCard.querySelector(`.card__header`).offsetHeight;
+        drawnedCard.style.paddingBottom = `${drawnedCardHeaderHeight + 10}px`;
+        console.log(`${DNELootCard.id}`, drawnedCard);
     }
 
     // console.log("cardDataforEach", cardData);

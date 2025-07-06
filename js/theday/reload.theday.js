@@ -109,7 +109,7 @@ const reloadTheday = () => {
     });
     win77.resetGenreBonus();
 
-    win77.playlist.upTrack();
+    // win77.playlist.upTrack();
 
     win77.selectCardToSave = true;
     // selectCardToSave();
