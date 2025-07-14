@@ -16,9 +16,30 @@ const initSoundCards = () => {
     // Платівка MYSTERE
     //
     //
+    const THE_SPIRAL_LONGLINE = "";
+    const THE_SPIRAL_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-spiral", "THE SPIRAL", THE_SPIRAL_LONGLINE, "img/sound/album-the-spiral.jpg", 8, 0, "Альбом, 32m of Experimental<br> Industrial Noise", THE_SPIRAL_ALBUM_SHORTLINE, "", true, true, "sound", "https://youtube.com/playlist?list=OLAK5uy_nsnuCohrZAOicGtutjuTwFmeZXKd6lPSA&si=wv4N1l4vYkhfiWu4"));
+
+    // Платівка MYSTERE
+    //
+    //
+    const ANON_DATABASE_LONGLINE = "";
+    const ANON_DATABASE_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-anon-database", "THE ANON DATABASE", ANON_DATABASE_LONGLINE, "img/sound/album-anon-database.jpg", 6, 0, "Альбом, 34m of Downtempo<br>Experimental Ambient", ANON_DATABASE_ALBUM_SHORTLINE, "", true, true, "sound", "https://youtu.be/wyUQi_Aq8RE?si=2cI1AKTVJ8dg1j6P"));
+
+    // Платівка MYSTERE
+    //
+    //
+    const THE_DROUGHT_ALBUM_LONGLINE = "";
+    const THE_DROUGHT_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-drought", "THE DROUGHT", THE_DROUGHT_ALBUM_LONGLINE, "img/sound/album-the-drought.jpg", 8, 0, "Альбом, 43m of Experimental<br>Industrial Noise", THE_DROUGHT_ALBUM_SHORTLINE, "", true, true, "sound", "https://youtu.be/pwjZrbo6Hco?si=x_M4rHII7maMuGRy"));
+
+    // Платівка MYSTERE
+    //
+    //
     const MYSTERE_VINYL_LONGLINE = "";
     const MYSTERE_VINYL_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
-    LootArr.push(new DNELootCard("album-mystere", "MYSTERE", MYSTERE_VINYL_LONGLINE, "img/sound/album-mystere.jpg", 6, 900, "Альбом, 68m of Psychodelic Alternative Indie", MYSTERE_VINYL_SHORTLINE, "", true, true, "sound", "https://youtu.be/jTMSguDFlMI?si=HfSmT95DMNDRqe_u"));
+    LootArr.push(new DNELootCard("album-mystere", "MYSTERE", MYSTERE_VINYL_LONGLINE, "img/sound/album-mystere.jpg", 7, 900, "Альбом, 68m of Psychodelic Alternative Indie", MYSTERE_VINYL_SHORTLINE, "", true, true, "sound", "https://youtu.be/jTMSguDFlMI?si=HfSmT95DMNDRqe_u"));
 
     // WEVAL
 
