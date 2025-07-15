@@ -347,7 +347,7 @@
     color: white;
     background: black;
 
-    min-height: 135px;
+    min-height: 190px;
     padding: 10px;
     margin-bottom: 10px;
 
@@ -363,6 +363,7 @@
 
 .buy__bundle-textfield > *:last-child {
     margin-bottom: 0;
+    padding: 0 14px 5px 14px;
 }
 
 .buy__bundle-preview {
