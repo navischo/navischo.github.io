@@ -1,4 +1,17 @@
 /* START CUSTOM DNE-CARDS STYLES */
+
+/* START ECHO UPDATE */
+#dne-card-dragula .card__preview-img {
+    max-height: 263px!important;
+    margin: 0 auto;
+}
+
+#dne-card-net-troll .card__preview-img {
+    max-height: 225px!important;
+    margin: 0 auto;
+}
+/* END ECHO UPDATE */
+
 #dne-card-album-vampire-the-masquerade-bloodlines .card__header.--flip {
     display: none!important;
 }
