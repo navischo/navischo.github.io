@@ -37,6 +37,12 @@
     margin-bottom: 0!important;
 }
 
+#dne-card-album-spiral .card__preview {
+    position: relative;
+    left: -1.5px;
+    transform: scale(1.02);
+}
+
 #dne-card-demo-sekia-sessions .card__header.--flip {
     display: none!important;
 }
@@ -140,6 +146,10 @@
 #dne-card-demo-mission-london .card__preview,
 #dne-card-demo-how-to-disappear .card__preview,
 #dne-card-demo-rouge .card__preview,
+#dne-card-demo-dj-nina-eba .card__preview,
+#dne-card-demo-filmmaker .card__preview,
+#dne-card-demo-eid55558 .card__preview,
+#dne-card-demo-yousuke-yukimatsu .card__preview,
 #dne-card-demo-muravyova .card__preview {
     transform: scale(1.8);
 }
@@ -165,7 +175,7 @@
 }
 
 #dne-card-demo-420mix .card__preview {
-    transform: scale(1.78) rotate(90deg);
+    transform: scale(1.79) rotate(90deg);
 }
 
 #dne-card-demo-420mix .card__header:not(.--flip) {
@@ -200,6 +210,19 @@
 }
 
 #dne-card-demo-micks-tape .card__header {
+    color: white!important;
+}
+
+#dne-card-demo-phonk-cloud .card__preview {
+    transform: scale(1.79) rotate(90deg);
+}
+
+#dne-card-demo-phonk-cloud .card__header:not(.--flip) {
+    position: relative;
+    z-index: 2;
+}
+
+#dne-card-demo-phonk-cloud .card__header {
     color: white!important;
 }
 
