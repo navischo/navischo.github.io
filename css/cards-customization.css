@@ -85,12 +85,16 @@
     margin-bottom: 0!important;
 }
 
-#dne-card-album-psycho-tropical-berlin .card__header.--flip {
-    display: none!important;
-}
+/*#dne-card-album-psycho-tropical-berlin .card__header.--flip {*/
+/*    display: none!important;*/
+/*}*/
 
-#dne-card-album-psycho-tropical-berlin .card__preview {
-    margin-bottom: 0!important;
+/*#dne-card-album-psycho-tropical-berlin .card__preview {*/
+/*    margin-bottom: 0!important;*/
+/*}*/
+
+#dne-card-album-anon-database .card__header:not(.--flip) {
+    margin-bottom: -1px;
 }
 
 #dne-card-album-i-no-longer-fear .card__header.--flip {
@@ -171,6 +175,36 @@
 
 #dne-card-demo-420mix .card__header {
     color: white!important;
+}
+
+#dne-card-demo-world-of-horror .card__preview {
+    transform: scale(1.79) rotate(90deg);
+}
+
+#dne-card-demo-world-of-horror .card__header:not(.--flip) {
+    position: relative;
+    z-index: 2;
+}
+
+#dne-card-demo-world-of-horror .card__header {
+    color: white!important;
+}
+
+#dne-card-demo-micks-tape .card__preview {
+    transform: scale(1.79) rotate(90deg);
+}
+
+#dne-card-demo-micks-tape .card__header:not(.--flip) {
+    position: relative;
+    z-index: 2;
+}
+
+#dne-card-demo-micks-tape .card__header {
+    color: white!important;
+}
+
+#dne-card-demo-hypothese-grise .card__header.--flip {
+    display: none!important;
 }
 
 #dne-card-demo-cyberdream .card__preview {
