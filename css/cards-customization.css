@@ -43,6 +43,34 @@
     transform: scale(1.02);
 }
 
+#dne-card-demo-acoustic-church-session .card {
+    padding-bottom: 0!important;
+}
+
+#dne-card-demo-acoustic-church-session .card__preview {
+    margin-bottom: 0!important;
+}
+
+#dne-card-demo-acoustic-church-session .card__header.--flip {
+    display: none!important;
+}
+
+#dne-card-album-how-sad-how-lovely .card__header:not(.--flip) {
+    margin-bottom: -1px!important;
+}
+
+#dne-card-album-the-family-jewels .card__header:not(.--flip) {
+    margin-bottom: -1px!important;
+}
+
+#dne-card-album-electra-heart .card__header:not(.--flip) {
+    margin-bottom: -1px!important;
+}
+
+#dne-card-album-fetch-the-bolt-cutters .card__header:not(.--flip) {
+    margin-bottom: -1px!important;
+}
+
 #dne-card-demo-sekia-sessions .card__header.--flip {
     display: none!important;
 }

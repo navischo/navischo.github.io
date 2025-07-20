@@ -13,16 +13,66 @@ const initSoundCards = () => {
     // \$$$$$$  | $$$$$$  |\$$$$$$  |$$ | \$$ |$$$$$$$  |
     //  \______/  \______/  \______/ \__|  \__|\_______/
 
-    // Платівка VIRTUAL PRESENCE
-    //
-    //
+    const ACOUSTIC_CHURCH_SESSION_LONGLINE = "";
+    const ACOUSTIC_CHURCH_SESSION_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("demo-acoustic-church-session", "Jazmin<br>Bean`s<br>Acoustic Church Session", ACOUSTIC_CHURCH_SESSION_LONGLINE, "img/sound/demo-acoustic-church-session.jpg", 5, 0, "Альбом, 16m of Acoustic Horror Pop", ACOUSTIC_CHURCH_SESSION_ALBUM_SHORTLINE, "", true, true, "sound", "https://music.youtube.com/playlist?list=OLAK5uy_liP6isp6OGc5_cWMzoltP09IKr01f-aDg&si=1_1jwFExyxseka-P"));
+
+    const NINE_ONE_ONE_LONGLINE = "";
+    const NINE_ONE_ONE_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-nine-one-one", "911", NINE_ONE_ONE_LONGLINE, "img/sound/album-nine-one-one.jpg", 6, 0, "Альбом, 15m of Experimental<br>Industrial Hip-Hop", NINE_ONE_ONE_ALBUM_SHORTLINE, "", true, true, "sound", "https://music.youtube.com/playlist?list=OLAK5uy_mAOre2IDt3uEkahDYosWDn6_4IbU1g5XQ&si=qyGr-IAAKIV4Sv1G"));
+
+    const FETCH_THE_BOLT_CUTTERS_LONGLINE = "";
+    const FETCH_THE_BOLT_CUTTERS_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-fetch-the-bolt-cutters", "Fetch the <span style='white-space: nowrap'>Bolt Cutters</span>", FETCH_THE_BOLT_CUTTERS_LONGLINE, "img/sound/album-fetch-the-bolt-cutters.jpg", 7, 0, "Альбом, 52m of Singer-Songwriter<br>Progressive Pop", FETCH_THE_BOLT_CUTTERS_ALBUM_SHORTLINE, "", true, true, "sound", "https://music.youtube.com/playlist?list=OLAK5uy_k-GHGUsLjvpuH7nLnGd5Cv_DdZC3Faxuo&si=5jtQYD9ro_9GAI8f"));
+
+    const HAPPINESS_LONGLINE = "";
+    const HAPPINESS_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-happiness", "Happiness", HAPPINESS_LONGLINE, "img/sound/album-happiness.jpg", 6, 0, "Альбом, 44m of Synth-pop Electronic", HAPPINESS_ALBUM_SHORTLINE, "", true, true, "sound", "https://music.youtube.com/playlist?list=OLAK5uy_kwpgtnqOGQQyEAVPRPp2IqsONf6ylqpUM&si=gQDs6i0UCGWCtozw"));
+
+    const ELECTRA_HEART_LONGLINE = "";
+    const ELECTRA_HEART_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-electra-heart", "Electra Heart", ELECTRA_HEART_LONGLINE, "img/sound/album-electra-heart.jpg", 9, 0, "Альбом, 47m of Singer-Songwriter Pop Bubblegum-Punk", ELECTRA_HEART_ALBUM_SHORTLINE, "", true, true, "sound", "https://music.youtube.com/playlist?list=OLAK5uy_n_YNhIGazBfhuR45jiyVUiPj3LNpM6mHw&si=NMW5kbfhvbd-cjHr"));
+
+    const THE_FAMILY_JEWELS_LONGLINE = "";
+    const THE_FAMILY_JEWELS_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-the-family-jewels", "The Family Jewels", THE_FAMILY_JEWELS_LONGLINE, "img/sound/album-the-family-jewels.jpg", 7, 0, "Альбом, 44m of Alternative Indie<br>Synth-pop Bubblegum-Punk", THE_FAMILY_JEWELS_ALBUM_SHORTLINE, "", true, true, "sound", "https://music.youtube.com/playlist?list=OLAK5uy_lIxs0bwVNdDGFdoE244H0b6xK4KQ8h3bY&si=UdA3Tji92G-3v-OL"));
+
+    const HOW_SAD_HOW_LOVELY_LONGLINE = "";
+    const HOW_SAD_HOW_LOVELY_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-how-sad-how-lovely", "How Sad,<br>How Lovely", HOW_SAD_HOW_LOVELY_LONGLINE, "img/sound/album-how-sad-how-lovely.jpg", 7, 0, "Альбом, 40m of Singer-Songwriter<br>Acoustic Folk", HOW_SAD_HOW_LOVELY_ALBUM_SHORTLINE, "", true, true, "sound", "https://music.youtube.com/playlist?list=OLAK5uy_kcHlawM9coeKH722Wo1Z9PCCr0CD3e5VM&si=i3pC5HW5XFDBT7cu"));
+
+    const VIOLATOR_LONGLINE = "";
+    const VIOLATOR_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-violator", "Violator", VIOLATOR_LONGLINE, "img/sound/album-violator.jpg", 6, 0, "Альбом, 72m of Synth-pop<br>Alternative Rock", VIOLATOR_ALBUM_SHORTLINE, "", true, true, "sound", "https://music.youtube.com/playlist?list=OLAK5uy_mdFMT_6jHeXEFAzkrbGszwqbrJQzYs2B4&si=3keXJWn7ga29aR7r"));
+
+    const ADRENALINE_LONGLINE = "";
+    const ADRENALINE_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("vinyl-adrenaline", "Adrenaline", ADRENALINE_LONGLINE, "img/sound/vinyl-adrenaline.jpg", 7, 0, "Платівка, 47m of Nu Metal Alternative", ADRENALINE_ALBUM_SHORTLINE, "", true, true, "sound", "https://music.youtube.com/playlist?list=OLAK5uy_mNszD2xAooshMxGL-Ph4NrIBbJAdQjQbo&si=zICJmGhY_tzv7yWY"));
+
+    const KHAAR_LONGLINE = "";
+    const KHAAR_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-khaar", "Khaar", KHAAR_LONGLINE, "img/sound/album-khaar.jpg", 9, 0, "Альбом, 28m of Post-Punk Electro<br>Industrial Synthpunk", KHAAR_ALBUM_SHORTLINE, "", true, true, "sound", "https://music.youtube.com/playlist?list=OLAK5uy_lSlOOZyCiCDSgcPba_pUQ6cIySOC9NrEI&si=8mswUAlfzXsN0g-4"));
+
+    const WARLORD_LONGLINE = "";
+    const WARLORD_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-warlord", "Warlord", WARLORD_LONGLINE, "img/sound/vinyl-warlord.jpg", 8, 0, "Платівка, 41m of Cloud Trap<br>Industrial Hip-Hop", WARLORD_ALBUM_SHORTLINE, "", true, true, "sound", "https://music.youtube.com/playlist?list=OLAK5uy_lpHa33dFi2rPVPhVdc07eyzJ03MCxxPWc&si=B93GvlEluYkoRFfG"));
+
+    const RELAX_LONGLINE = "";
+    const RELAX_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-relax", "Relax", RELAX_LONGLINE, "img/sound/album-relax.jpg", 7, 0, "Альбом, 42m of Alternative Indie Rock", RELAX_ALBUM_SHORTLINE, "", true, true, "sound", "https://music.youtube.com/playlist?list=OLAK5uy_lpx9zdaEtxZspWJpHnxI3_SYcEF52mDVA&si=iYcHmE-iNahv5Bti"));
+
+    const CREST_LONGLINE = "";
+    const CREST_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-crest", "Crest", CREST_LONGLINE, "img/sound/album-crest.jpg", 6, 0, "Альбом, 30m of Cloud Hip-Hop<br>Synth-pop", CREST_ALBUM_SHORTLINE, "", true, true, "sound", "https://music.youtube.com/playlist?list=OLAK5uy_kF87Zvbu92YyUOjXCKJp43tIlblvh0Y0s&si=enobQQ_syQaXS9eM"));
+
+    const PORNOGRAPHY_LONGLINE = "";
+    const PORNOGRAPHY_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-pornography", "Pornography", PORNOGRAPHY_LONGLINE, "img/sound/album-pornography.jpg", 8, 0, "Альбом, 43m of Post-punk Alternative Gothic Rock", PORNOGRAPHY_ALBUM_SHORTLINE, "", true, true, "sound", "https://music.youtube.com/playlist?list=OLAK5uy_nq-_6NxAfIduzC4BUcPY8kTPNRq2-GqK4&si=Kszw_fP42WcpuYaM"));
+
     const LOST_IN_TRANSIT_LONGLINE = "";
     const LOST_IN_TRANSIT_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
     LootArr.push(new DNELootCard("album-lost-in-transit", "Lost In Transit", LOST_IN_TRANSIT_LONGLINE, "img/sound/album-lost-in-transit.jpg", 4, 0, "Альбом, 62m of Hi-Fi Electronic", LOST_IN_TRANSIT_ALBUM_SHORTLINE, "", true, true, "sound", "https://youtu.be/qhcpoSxzphI"));
 
-    // Платівка VIRTUAL PRESENCE
-    //
-    //
     const GOTHAM_THE_BAD_LONGLINE = "";
     const GOTHAM_THE_BAD_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
     LootArr.push(new DNELootCard("album-gotham-the-bad", "Gotham - The Bad", GOTHAM_THE_BAD_LONGLINE, "img/sound/album-gotham-the-bad.jpg", 8, 0, "Альбом, 62m of Trip-Hop Dark Ambient", GOTHAM_THE_BAD_ALBUM_SHORTLINE, "", true, true, "sound", "https://youtu.be/BMmtJJQ6bHI"));
