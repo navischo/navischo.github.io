@@ -395,7 +395,7 @@
 .card__header-right {
     position: absolute;
     right: 5px;
-    top: 9px;
+    top: 11px;
 
     display: flex;
     flex-direction: column;
