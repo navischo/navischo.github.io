@@ -13,6 +13,22 @@ const initSoundCards = () => {
     // \$$$$$$  | $$$$$$  |\$$$$$$  |$$ | \$$ |$$$$$$$  |
     //  \______/  \______/  \______/ \__|  \__|\_______/
 
+    const KYIV_ETERNAL_LONGLINE = "";
+    const KYIV_ETERNAL_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-kyiv-eternal", "Kyiv Eternal", KYIV_ETERNAL_LONGLINE, "img/sound/album-kyiv-eternal.jpg", 7, 0, "Альбом, 49m of Ambient Drone Glitch", KYIV_ETERNAL_ALBUM_SHORTLINE, "", true, true, "sound", "https://music.youtube.com/playlist?list=OLAK5uy_nJA7ie5DKbfMpz547lV2vayh8uzgG5bzA&si=uoh3XBvffNQVJNMN"));
+
+    const INFESTISSUMAM_LONGLINE = "";
+    const INFESTISSUMAM_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-infestissumam", "Infestissumam", INFESTISSUMAM_LONGLINE, "img/sound/album-infestissumam.jpg", 6, 0, "Альбом, 47m of Progressive Doom Metal", INFESTISSUMAM_ALBUM_SHORTLINE, "", true, true, "sound", "https://youtube.com/playlist?list=PLixrJ9xPZTqfl7ujV4WiKsNxnKyiCjllN&si=n-8L_ODK6KsFqO7R"));
+
+    const ST_LP_LONGLINE = "";
+    const ST_LP_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-st-lp", "S/T LP", ST_LP_LONGLINE, "img/sound/album-st-lp.jpg", 7, 0, "Альбом, 32m of Dungeon Post-Punk", ST_LP_ALBUM_SHORTLINE, "", true, true, "sound", "https://youtu.be/QFvt2cNSOaM?si=OSiAtbwntJZlmf5F"));
+
+    const SILENT_HILL_2_LONGLINE = "";
+    const SILENT_HILL_2_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-silent-hill-2", "Silent Hill 2", SILENT_HILL_2_LONGLINE, "img/sound/album-silent-hill-2.jpg", 8, 0, "Альбом, 73m of Alternative Ambient", SILENT_HILL_2_ALBUM_SHORTLINE, "", true, true, "sound", "https://youtu.be/QFvt2cNSOaM?si=OSiAtbwntJZlmf5F"));
+
     const ACOUSTIC_CHURCH_SESSION_LONGLINE = "";
     const ACOUSTIC_CHURCH_SESSION_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
     LootArr.push(new DNELootCard("demo-acoustic-church-session", "Jazmin<br>Bean`s<br>Acoustic Church Session", ACOUSTIC_CHURCH_SESSION_LONGLINE, "img/sound/demo-acoustic-church-session.jpg", 5, 0, "Альбом, 16m of Acoustic Horror Pop", ACOUSTIC_CHURCH_SESSION_ALBUM_SHORTLINE, "", true, true, "sound", "https://music.youtube.com/playlist?list=OLAK5uy_liP6isp6OGc5_cWMzoltP09IKr01f-aDg&si=1_1jwFExyxseka-P"));
