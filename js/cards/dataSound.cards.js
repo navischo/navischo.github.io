@@ -13,9 +13,33 @@ const initSoundCards = () => {
     // \$$$$$$  | $$$$$$  |\$$$$$$  |$$ | \$$ |$$$$$$$  |
     //  \______/  \______/  \______/ \__|  \__|\_______/
 
+    const PROGRESSIVE_FUTURE_1_LONGLINE = "";
+    const PROGRESSIVE_FUTURE_1_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-progressive-future-001", "#001", PROGRESSIVE_FUTURE_1_LONGLINE, "img/sound/album-progressive-future-001.jpg", 6, 0, "Альбом, 37m of Electro Techno IDM", PROGRESSIVE_FUTURE_1_ALBUM_SHORTLINE, "", true, true, "sound", "https://progressive-future.bandcamp.com/album/001"));
+
+    const IDOL_EYES_LONGLINE = "";
+    const IDOL_EYES_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-idol-eyes", "Idol Eyes", IDOL_EYES_LONGLINE, "img/sound/album-idol-eyes.jpg", 6, 0, "Альбом, 26m of Psychodelic R&B", IDOL_EYES_ALBUM_SHORTLINE, "", true, true, "sound", "https://youtu.be/XQP4BLnCpws?si=9kKGAi2kWkqr56LB"));
+
+    const ALBUM_MYDRIASIS_LONGLINE = "";
+    const ALBUM_MYDRIASIS_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-midriasis", "MYDRIASIS", ALBUM_MYDRIASIS_LONGLINE, "img/sound/album-midriasis.jpg", 6, 0, "Альбом, 46m of Psychodelic Stoner", ALBUM_MYDRIASIS_ALBUM_SHORTLINE, "", true, true, "sound", "https://youtu.be/vUHyWRjwL5A?si=6JBFzWTJVFpwad3V"));
+
     const KYIV_ETERNAL_LONGLINE = "";
     const KYIV_ETERNAL_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
     LootArr.push(new DNELootCard("album-kyiv-eternal", "Kyiv Eternal", KYIV_ETERNAL_LONGLINE, "img/sound/album-kyiv-eternal.jpg", 7, 0, "Альбом, 49m of Ambient Drone Glitch", KYIV_ETERNAL_ALBUM_SHORTLINE, "", true, true, "sound", "https://music.youtube.com/playlist?list=OLAK5uy_nJA7ie5DKbfMpz547lV2vayh8uzgG5bzA&si=uoh3XBvffNQVJNMN"));
+
+    const BLOOD_MOON_RISE_LONGLINE = "";
+    const BLOOD_MOON_RISE_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-blood-moon-rise", "Blood Moon Rise", BLOOD_MOON_RISE_LONGLINE, "img/sound/album-blood-moon-rise.jpg", 9, 0, "Альбом, 45m of Psychodelic Doom Metal", BLOOD_MOON_RISE_ALBUM_SHORTLINE, "", true, true, "sound", "https://youtu.be/8ZUlUq__ar4?si=Cw6INQOT-veX6426"));
+
+    const STRANGE_AND_ETERNAL_LONGLINE = "";
+    const STRANGE_AND_ETERNAL_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-strange-and-eternal", "Strange And Eternal", STRANGE_AND_ETERNAL_LONGLINE, "img/sound/album-strange-and-eternal.jpg", 8, 0, "Альбом, 45m of Dungeon Synth", STRANGE_AND_ETERNAL_ALBUM_SHORTLINE, "", true, true, "sound", "https://youtu.be/xzj-1WE3P9M?si=5ns5GDMsMhQ-ICrL"));
+
+    const GILES_COREY_LONGLINE = "";
+    const GILES_COREY_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-giles-corey", "Giles Corey", GILES_COREY_LONGLINE, "img/sound/album-giles-corey.jpg", 7, 0, "Альбом, 56m of Experimental Drone", GILES_COREY_ALBUM_SHORTLINE, "", true, true, "sound", "https://youtu.be/Mweu3JBu8bM?si=zImAU7v9Wrfov25z"));
 
     const INFESTISSUMAM_LONGLINE = "";
     const INFESTISSUMAM_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
