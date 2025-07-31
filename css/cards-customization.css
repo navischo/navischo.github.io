@@ -211,11 +211,6 @@
     margin-bottom: 0!important;
 }
 
-#dne-card-album-intermission .card__preview {
-    position: relative;
-    top: -10px;
-}
-
 #dne-card-demo-tweeman .card__preview,
 #dne-card-demo-jing .card__preview,
 #dne-card-demo-courtesy .card__preview,
@@ -276,6 +271,19 @@
 }
 
 #dne-card-demo-420mix .card__header {
+    color: white!important;
+}
+
+#dne-card-album-supercoven .card__preview {
+    transform: scale(1.79) rotate(90deg);
+}
+
+#dne-card-album-supercoven .card__header:not(.--flip) {
+    position: relative;
+    z-index: 2;
+}
+
+#dne-card-album-supercoven .card__header {
     color: white!important;
 }
 
