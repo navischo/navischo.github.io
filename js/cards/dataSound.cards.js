@@ -13,13 +13,73 @@ const initSoundCards = () => {
     // \$$$$$$  | $$$$$$  |\$$$$$$  |$$ | \$$ |$$$$$$$  |
     //  \______/  \______/  \______/ \__|  \__|\_______/
 
-    const PROGRESSIVE_FUTURE_1_LONGLINE = "";
-    const PROGRESSIVE_FUTURE_1_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
-    LootArr.push(new DNELootCard("album-progressive-future-001", "#001", PROGRESSIVE_FUTURE_1_LONGLINE, "img/sound/album-progressive-future-001.jpg", 6, 0, "Альбом, 37m of Electro Techno IDM", PROGRESSIVE_FUTURE_1_ALBUM_SHORTLINE, "", true, true, "sound", "https://progressive-future.bandcamp.com/album/001"));
+    const WITCHCULT_TODAY_LONGLINE = "";
+    const WITCHCULT_TODAY_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-witchcult-today", "Witchcult Today", WITCHCULT_TODAY_LONGLINE, "img/sound/album-witchcult-today.jpg", 4, 0, "Альбом, 59m of Doom Stoner", WITCHCULT_TODAY_ALBUM_SHORTLINE, "", true, true, "sound", "https://youtu.be/Jzem_-At6F4"));
+
+    const LEGALIZE_DRUGS_LONGLINE = "";
+    const LEGALIZE_DRUGS_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-legalize-drugs-and-murder", "Legalize Drugs & Murder", LEGALIZE_DRUGS_LONGLINE, "img/sound/album-legalize-drugs-and-murder.jpg", 4, 0, "Платівка, 35m of Doom Stoner", LEGALIZE_DRUGS_ALBUM_SHORTLINE, "", true, true, "sound", "https://witchfinderrecords.bandcamp.com/album/legalise-drugs-and-murder"));
+
+    const MEZZANINE_LONGLINE = "";
+    const MEZZANINE_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("vinyl-mezzanine", "Mezzanine", MEZZANINE_LONGLINE, "img/sound/vinyl-mezzanine.png", 4, 0, "Платівка, 64m of Trip-Hop Downtempo", MEZZANINE_ALBUM_SHORTLINE, "", true, true, "sound", "https://youtu.be/ORxdyjvfItk?si=nk4VFlyAMgjKEhX3"));
+
+    const NOSTALGIA_LONGLINE = "";
+    const NOSTALGIA_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-nostalgia", "Nostalgia", NOSTALGIA_LONGLINE, "img/sound/album-nostalgia.jpg", 4, 0, "Альбом, 40m of Trip-Hop Funk<br>Alternative Rock", NOSTALGIA_ALBUM_SHORTLINE, "", true, true, "sound", "https://skinshape.bandcamp.com/album/nostalgia"));
+
+    const ABANDON_LONGLINE = "";
+    const ABANDON_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-abandon", "Abandon", ABANDON_LONGLINE, "img/sound/album-abandon.jpg", 5, 0, "Альбом, 54m of Industrial Harsh Noise", ABANDON_ALBUM_SHORTLINE, "", true, true, "sound", "https://music.youtube.com/playlist?list=OLAK5uy_nsp6AcVc9JDEx6cIEEoiAU35P8hkoUUt4&si=Rg8DY7F3N29fLeR2"));
+
+    const BESTIAL_BURDEN_LONGLINE = "";
+    const BESTIAL_BURDEN_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-bestial-burden", "Bestial Burden", BESTIAL_BURDEN_LONGLINE, "img/sound/album-bestial-burden.jpg", 7, 0, "Альбом, 32m of Industrial Harsh Noise", BESTIAL_BURDEN_ALBUM_SHORTLINE, "", true, true, "sound", "https://music.youtube.com/playlist?list=OLAK5uy_mS37M653qOK-6JUXA1j6PD3ZzJvMFXqt0&si=irzLNkoQCwjlP-fy"));
+
+    const ALLAH_LAS_LONGLINE = "";
+    const ALLAH_LAS_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-allah-las", "Allah-Las", ALLAH_LAS_LONGLINE, "img/sound/album-allah-las.jpg", 5, 0, "Альбом, 44m of Psychodelic Indie Rock", ALLAH_LAS_ALBUM_SHORTLINE, "", true, true, "sound", "https://youtu.be/XMXACjSnEsM"));
+
+    const ANOTHER_SKINSHAPE_LONGLINE = "";
+    const ANOTHER_SKINSHAPE_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-another-side-of-skinshape", "Another Side Of Skinshape", ANOTHER_SKINSHAPE_LONGLINE, "img/sound/album-another-side-of-skinshape.jpg", 5, 0, "Альбом, 37m of Trip-Hop Funk<br>Psychodelic Rock", ANOTHER_SKINSHAPE_ALBUM_SHORTLINE, "", true, true, "sound", "https://skinshape.bandcamp.com/album/another-side-of-skinshape"));
+
+    const SKINSHAPE_LONGLINE = "";
+    const SKINSHAPE_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-skinshape", "Skinshape", SKINSHAPE_LONGLINE, "img/sound/album-skinshape.jpg", 5, 0, "Альбом, 34m of Trip-Hop Funk<br>Psychodelic Hip-Hop", SKINSHAPE_ALBUM_SHORTLINE, "", true, true, "sound", "https://skinshape.bandcamp.com/album/skinshape-lp"));
+
+    const LEVENDER_LONGLINE = "";
+    const LEVENDER_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-levender", "Lavender", LEVENDER_LONGLINE, "img/sound/album-levender.jpg", 5, 0, "Альбом, 10m of Cloud Hip-Hop", LEVENDER_ALBUM_SHORTLINE, "", true, true, "sound", "https://soundcloud.com/bruhman9/sets/yung-lean-lavender-ep"));
+
+    const PSYKOS_LONGLINE = "";
+    const PSYKOS_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-psykos", "Psykos", PSYKOS_LONGLINE, "img/sound/album-psykos.jpg", 5, 0, "Альбом, 22m of Gothic Rock Post-punk", PSYKOS_ALBUM_SHORTLINE, "", true, true, "sound", "https://youtube.com/playlist?list=PL8yOVXKR3_2AgLUcrK0DAIzBD2Bsz8uF5&si=tgdLQfGX2DA1L68m"));
+
+    const UNRENDERED_LONGLINE = "";
+    const UNRENDERED_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-unrendered", "UNRENDERED", UNRENDERED_LONGLINE, "img/sound/album-unrendered.jpg", 5, 0, "Альбом, 40m of Cloud Trap Hip-Hop", UNRENDERED_ALBUM_SHORTLINE, "", true, true, "sound", "https://soundcloud.com/teamsesh/sets/bones-unrendered"));
+
+    const HIGH_TIDE_IN_THE_SNAKES_NEST_LONGLINE = "";
+    const HIGH_TIDE_IN_THE_SNAKES_NEST_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-high-tide-in-the-snakes-nest", "High Tide in the Snake's Nest", HIGH_TIDE_IN_THE_SNAKES_NEST_LONGLINE, "img/sound/album-high-tide-in-the-snakes-nest.jpg", 6, 0, "Альбом, 27m of Cloud Trap Hip-Hop", HIGH_TIDE_IN_THE_SNAKES_NEST_ALBUM_SHORTLINE, "", true, true, "sound", "https://youtu.be/29VLZTa4_MU"));
+
+    const MOON_LONGLINE = "";
+    const MOON_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-moon", "M.O.O.N", MOON_LONGLINE, "img/sound/album-moon.jpg", 6, 0, "Альбом, 20m of Techno House RnB Funk", MOON_ALBUM_SHORTLINE, "", true, true, "sound", "https://youtu.be/29VLZTa4_MU"));
+
+    const ORACULAR_SPECTACULAR_LONGLINE = "";
+    const ORACULAR_SPECTACULAR_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-oracular-spectacular", "Oracular Spectacular", ORACULAR_SPECTACULAR_LONGLINE, "img/sound/album-oracular-spectacular.jpg", 7, 0, "Альбом, 41m of Psychodelic Indie", ORACULAR_SPECTACULAR_ALBUM_SHORTLINE, "", true, true, "sound", "https://youtu.be/iL2gjEW81KM"));
+
+    const LOST_SUMMER_LONGLINE = "";
+    const LOST_SUMMER_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-lost-summer", "LOST SUMMER", LOST_SUMMER_LONGLINE, "img/sound/album-lost-summer.jpg", 7, 0, "Альбом, 45m of Experimental Indie<br>Synth-pop Post-punk", LOST_SUMMER_ALBUM_SHORTLINE, "", true, true, "sound", "https://youtube.com/playlist?list=PLFE1QOlYmtYwEabtCEZ4UgCfJK9lcbdv9&si=f7xlKlU01dAyEMEI"));
 
     const IDOL_EYES_LONGLINE = "";
     const IDOL_EYES_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
-    LootArr.push(new DNELootCard("album-idol-eyes", "Idol Eyes", IDOL_EYES_LONGLINE, "img/sound/album-idol-eyes.jpg", 6, 0, "Альбом, 26m of Psychodelic R&B", IDOL_EYES_ALBUM_SHORTLINE, "", true, true, "sound", "https://youtu.be/XQP4BLnCpws?si=9kKGAi2kWkqr56LB"));
+    LootArr.push(new DNELootCard("album-idol-eyes", "Idol Eyes", IDOL_EYES_LONGLINE, "img/sound/album-idol-eyes.jpg", 6, 0, "Альбом, 26m of Psychodelic RnB", IDOL_EYES_ALBUM_SHORTLINE, "", true, true, "sound", "https://youtu.be/XQP4BLnCpws?si=9kKGAi2kWkqr56LB"));
 
     const ALBUM_MYDRIASIS_LONGLINE = "";
     const ALBUM_MYDRIASIS_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
@@ -27,7 +87,115 @@ const initSoundCards = () => {
 
     const KYIV_ETERNAL_LONGLINE = "";
     const KYIV_ETERNAL_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
-    LootArr.push(new DNELootCard("album-kyiv-eternal", "Kyiv Eternal", KYIV_ETERNAL_LONGLINE, "img/sound/album-kyiv-eternal.jpg", 7, 0, "Альбом, 49m of Ambient Drone Glitch", KYIV_ETERNAL_ALBUM_SHORTLINE, "", true, true, "sound", "https://music.youtube.com/playlist?list=OLAK5uy_nJA7ie5DKbfMpz547lV2vayh8uzgG5bzA&si=uoh3XBvffNQVJNMN"));
+    LootArr.push(new DNELootCard("album-kyiv-eternal", "Kyiv Eternal", KYIV_ETERNAL_LONGLINE, "img/sound/album-kyiv-eternal.jpg", 8, 0, "Альбом, 49m of Ambient Drone Glitch", KYIV_ETERNAL_ALBUM_SHORTLINE, "", true, true, "sound", "https://music.youtube.com/playlist?list=OLAK5uy_nJA7ie5DKbfMpz547lV2vayh8uzgG5bzA&si=uoh3XBvffNQVJNMN"));
+
+    const ODE_TO_THE_SEA_LONGLINE = "";
+    const ODE_TO_THE_SEA_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-ode-to-the-sea", "Ode To<br>The Sea", ODE_TO_THE_SEA_LONGLINE, "img/sound/album-ode-to-the-sea.jpg", 2, 0, "Платівка, 45m of Experimental", ODE_TO_THE_SEA_ALBUM_SHORTLINE, "", true, true, "sound", "https://muscut.bandcamp.com/album/ode-to-the-sea"));
+
+    const UKRAINIAN_FIELD_NOTES_LONGLINE = "";
+    const UKRAINIAN_FIELD_NOTES_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-ukrainian-field-notes", "Ukrainian Field Notes", UKRAINIAN_FIELD_NOTES_LONGLINE, "img/sound/album-ukrainian-field-notes.jpg", 3, 0, "Альбом, 489m of Experimental Ambient", UKRAINIAN_FIELD_NOTES_ALBUM_SHORTLINE, "", true, true, "sound", "https://systemnapotvora.bandcamp.com/album/ukrainian-field-notes-va"));
+
+    const MADRIGALS_LONGLINE = "";
+    const MADRIGALS_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("vinyl-madrigals", "Madrigals", MADRIGALS_LONGLINE, "img/sound/album-madrigals.jpg", 3, 0, "Платівка, 39m of Experimental Ambient", MADRIGALS_ALBUM_SHORTLINE, "", true, true, "sound", "https://heinali.bandcamp.com/album/madrigals"));
+
+    const EYE_OF_DELIRIOUS_LONGLINE = "";
+    const EYE_OF_DELIRIOUS_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-eye-of-delirious", "Eye of Delirious", EYE_OF_DELIRIOUS_LONGLINE, "img/sound/album-eye-of-delirious.jpg", 4, 0, "Альбом, 40m of Experimental Ambient", EYE_OF_DELIRIOUS_ALBUM_SHORTLINE, "", true, true, "sound", "https://johnskingdom.bandcamp.com/album/eat-your-mind"));
+
+    const COME_ANGEL_LONGLINE = "";
+    const COME_ANGEL_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-come-angel", "Come, Angel", COME_ANGEL_LONGLINE, "img/sound/album-come-angel.jpg", 4, 0, "Альбом, 21m of Experimental Drone", COME_ANGEL_ALBUM_SHORTLINE, "", true, true, "sound", "https://offen.bandcamp.com/album/come-angel"));
+
+    const KOMBINEZON_LONGLINE = "";
+    const KOMBINEZON_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-kombinezon", "Kombinezon", KOMBINEZON_LONGLINE, "img/sound/album-kombinezon.jpg", 4, 0, "Альбом, 24m of Experimental Ambient", KOMBINEZON_ALBUM_SHORTLINE, "", true, true, "sound", "https://systemnapotvora.bandcamp.com/album/kombinezon"));
+
+    const TYSHA_LONGLINE = "";
+    const TYSHA_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-tysha", "Tysha", TYSHA_LONGLINE, "img/sound/album-tysha.jpg", 5, 0, "Альбом, 34m of Experimental Glitch Ambient", TYSHA_ALBUM_SHORTLINE, "", true, true, "sound", "https://standard-deviation.bandcamp.com/album/tysha"));
+
+    const WHEN_YOU_ARE_NOT_AT_HOME_LONGLINE = "";
+    const WHEN_YOU_ARE_NOT_AT_HOME_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-when-you-are-not-at-home", "When<br>you are<br>not<br>at home", WHEN_YOU_ARE_NOT_AT_HOME_LONGLINE, "img/sound/album-when-you-are-not-at-home.jpg", 5, 0, "Альбом, 98m of Experimental Techno", WHEN_YOU_ARE_NOT_AT_HOME_ALBUM_SHORTLINE, "", true, true, "sound", "https://mord.bandcamp.com/album/when-you-are-not-at-home"));
+
+    const TAKE_LONGLINE = "";
+    const TAKE_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-take", "Take", TAKE_LONGLINE, "img/sound/album-take.jpg", 5, 0, "Альбом, 21m of<br>Experimental Electronic", TAKE_ALBUM_SHORTLINE, "", true, true, "sound", "https://tofudj.bandcamp.com/album/take"));
+
+    const THE_SOUND_OF_PSEUDOSCIENCE_LONGLINE = "";
+    const THE_SOUND_OF_PSEUDOSCIENCE_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-the-sound-of-pseudoscience", "The<br>Sounds<br>Of<br>Pseudoscience", THE_SOUND_OF_PSEUDOSCIENCE_LONGLINE, "img/sound/album-the-sound-of-pseudoscience.jpg", 5, 0, "Платівка, 35m of Experimental Electronic", THE_SOUND_OF_PSEUDOSCIENCE_ALBUM_SHORTLINE, "", true, true, "sound", "https://muscut.bandcamp.com/album/the-sounds-of-pseudoscience"));
+
+    const VOICE_IN_MY_HEAD_LONGLINE = "";
+    const VOICE_IN_MY_HEAD_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-voice-in-my-head", "Voice In My Head", VOICE_IN_MY_HEAD_LONGLINE, "img/sound/album-voice-in-my-head.jpg", 6, 0, "Альбом, 22m of Techno House", VOICE_IN_MY_HEAD_ALBUM_SHORTLINE, "", true, true, "sound", "https://soundcloud.com/the-wicked-bass/borys"));
+
+    const SPADOK_LONGLINE = "";
+    const SPADOK_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-spadok", "С П А Д О К", SPADOK_LONGLINE, "img/sound/album-spadok.jpg", 6, 0, "Альбом, 80m of Ambient Drone<br>Experimental Electronic", SPADOK_ALBUM_SHORTLINE, "", true, true, "sound", "https://gasolinerecords.bandcamp.com/album/-"));
+
+    const HEAT_LONGLINE = "";
+    const HEAT_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-heat", "Heat", HEAT_LONGLINE, "img/sound/album-heat.jpg", 6, 0, "Альбом, 19m of Glitch<br>Experimental IDM", HEAT_ALBUM_SHORTLINE, "", true, true, "sound", "https://johnobject.bandcamp.com/album/heat"));
+
+    const EAT_YOUR_MIND_LONGLINE = "";
+    const EAT_YOUR_MIND_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-eat-your-mind", "Eat Your Mind", EAT_YOUR_MIND_LONGLINE, "img/sound/album-eat-your-mind.jpg", 6, 0, "Альбом, 19m of Experimental Electro", EAT_YOUR_MIND_ALBUM_SHORTLINE, "", true, true, "sound", "https://johnskingdom.bandcamp.com/album/eat-your-mind"));
+
+    const DUFFIOLOGY_LONGLINE = "";
+    const DUFFIOLOGY_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("vinyl-duffiology", "Duffiology", DUFFIOLOGY_LONGLINE, "img/sound/vinyl-duffiology.jpg", 6, 0, "Платівка, 23m of Electro Breakbeat", DUFFIOLOGY_ALBUM_SHORTLINE, "", true, true, "sound", "https://soundcloud.com/clommunity/a1-timur-basha-alex-savage-duffiology"));
+
+    const LOST_BUT_FOUND_LONGLINE = "";
+    const LOST_BUT_FOUND_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("vinyl-lost-but-found", "Lost but found", LOST_BUT_FOUND_LONGLINE, "img/sound/album-lost-but-found.jpg", 6, 0, "Платівка, 18m of Electronic Downtempo", LOST_BUT_FOUND_ALBUM_SHORTLINE, "", true, true, "sound", "https://soundcloud.com/detaliweare/dtl-001-qzzaargh-lost-but-found-snippets"));
+
+    const PO_TOBI_LONGLINE = "";
+    const PO_TOBI_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-po-tobi", "По тобі", PO_TOBI_LONGLINE, "img/sound/album-po-tobi.jpg", 7, 0, "Альбом, 17m of DnB Breakbeat Jungle", PO_TOBI_ALBUM_SHORTLINE, "", true, true, "sound", "https://yuvi.bandcamp.com/album/po-tobi"));
+
+    const AUTOPORTRACK_LONGLINE = "";
+    const AUTOPORTRACK_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-autoportrack", "autoportrack", AUTOPORTRACK_LONGLINE, "img/sound/album-autoportrack.jpg", 7, 0, "Альбом, 46m of Experimental Jungle Jazz", AUTOPORTRACK_ALBUM_SHORTLINE, "", true, true, "sound", "https://andriibarmalii.bandcamp.com/album/autoportrack"));
+
+    const TIMELINE_LONGLINE = "";
+    const TIMELINE_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-timeline", "Timeline", TIMELINE_LONGLINE, "img/sound/album-timeline.jpg", 7, 0, "Альбом, 53m of DnB IDM Ambient", TIMELINE_ALBUM_SHORTLINE, "", true, true, "sound", "https://kashtanrecords.bandcamp.com/album/timeline-lp"));
+
+    const MODERN_LONGLINE = "";
+    const MODERN_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-modern", "Modern", MODERN_LONGLINE, "img/sound/album-modern.jpg", 7, 0, "Платівка, 32m of IDM<br>Experimental Electro", MODERN_ALBUM_SHORTLINE, "", true, true, "sound", "https://progressive-future.bandcamp.com/album/modern"));
+
+    const SWEAT_LONGLINE = "";
+    const SWEAT_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-sweat", "Sweat", SWEAT_LONGLINE, "img/sound/album-sweat.jpg", 7, 0, "Альбом, 52m of Gabber Glitch IDM", SWEAT_ALBUM_SHORTLINE, "", true, true, "sound", "https://johnobject.bandcamp.com/album/heat"));
+
+    const PROGRESSIVE_FUTURE_1_LONGLINE = "";
+    const PROGRESSIVE_FUTURE_1_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-progressive-future-001", "#001", PROGRESSIVE_FUTURE_1_LONGLINE, "img/sound/album-progressive-future-001.jpg", 7, 0, "Альбом, 37m of Electro Techno IDM", PROGRESSIVE_FUTURE_1_ALBUM_SHORTLINE, "", true, true, "sound", "https://progressive-future.bandcamp.com/album/001"));
+
+    const VESELO_LONGLINE = "";
+    const VESELO_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-veselo", "Veselo", VESELO_LONGLINE, "img/sound/album-veselo.jpg", 8, 0, "Альбом, 59m of Electro Synth-pop EBM", VESELO_ALBUM_SHORTLINE, "", true, true, "sound", "https://pincet.bandcamp.com/album/veselo"));
+
+    const DIE_NAG_LONGLINE = "";
+    const DIE_NAG_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-die-nag", "Die Nag", DIE_NAG_LONGLINE, "img/sound/album-die-nag.jpg", 8, 0, "Альбом, 23m of Acid House Breakbeat", DIE_NAG_ALBUM_SHORTLINE, "", true, true, "sound", "https://animalsonpsychedelicsmusic.bandcamp.com/album/die-nag-ep"));
+
+    const RAINALICE_LONGLINE = "";
+    const RAINALICE_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-rainalice", "Rainalice", RAINALICE_LONGLINE, "img/sound/album-rainalice.jpg", 8, 0, "Альбом, 56m of Acid Electro Breakbeat", RAINALICE_ALBUM_SHORTLINE, "", true, true, "sound", "https://kalaharioystercult.bandcamp.com/album/volodymyr-gnatenko-rainalice-oyster38"));
+
+    const KURS_VALUT_LONGLINE = "";
+    const KURS_VALUT_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-kurs-valut", "Kurs Valüt", KURS_VALUT_LONGLINE, "img/sound/album-kurs-valut.jpg", 9, 0, "Альбом, 35m of Synth-pop EBM<br>Post-punk", KURS_VALUT_ALBUM_SHORTLINE, "", true, true, "sound", "https://soundcloud.com/kursvalut/sets/kurs-valut-kurs-valut-neb035"));
+
+    const FOR_A_BRAVE_LONGLINE = "";
+    const FOR_A_BRAVE_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-for-a-brave", "For A Brave", FOR_A_BRAVE_LONGLINE, "img/sound/album-for-a-brave.jpg", 9, 0, "Альбом, 24m of Acid Trance Techno", FOR_A_BRAVE_ALBUM_SHORTLINE, "", true, true, "sound", "https://soundcloud.com/trance-pandemic/tp001-komponente-kurilo-for-a-brave-ep"));
 
     const BLOOD_MOON_RISE_LONGLINE = "";
     const BLOOD_MOON_RISE_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
@@ -47,7 +215,7 @@ const initSoundCards = () => {
 
     const ST_LP_LONGLINE = "";
     const ST_LP_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
-    LootArr.push(new DNELootCard("album-st-lp", "S/T LP", ST_LP_LONGLINE, "img/sound/album-st-lp.jpg", 7, 0, "Альбом, 32m of Dungeon Post-Punk", ST_LP_ALBUM_SHORTLINE, "", true, true, "sound", "https://youtu.be/QFvt2cNSOaM?si=OSiAtbwntJZlmf5F"));
+    LootArr.push(new DNELootCard("album-st-lp", "S/T LP", ST_LP_LONGLINE, "img/sound/album-st-lp.jpg", 7, 0, "Альбом, 32m of Dungeon Post-punk", ST_LP_ALBUM_SHORTLINE, "", true, true, "sound", "https://youtu.be/QFvt2cNSOaM?si=OSiAtbwntJZlmf5F"));
 
     const SILENT_HILL_2_LONGLINE = "";
     const SILENT_HILL_2_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
@@ -91,7 +259,7 @@ const initSoundCards = () => {
 
     const KHAAR_LONGLINE = "";
     const KHAAR_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
-    LootArr.push(new DNELootCard("album-khaar", "Khaar", KHAAR_LONGLINE, "img/sound/album-khaar.jpg", 9, 0, "Альбом, 28m of Post-Punk Electro<br>Industrial Synthpunk", KHAAR_ALBUM_SHORTLINE, "", true, true, "sound", "https://music.youtube.com/playlist?list=OLAK5uy_lSlOOZyCiCDSgcPba_pUQ6cIySOC9NrEI&si=8mswUAlfzXsN0g-4"));
+    LootArr.push(new DNELootCard("album-khaar", "Khaar", KHAAR_LONGLINE, "img/sound/album-khaar.jpg", 9, 0, "Альбом, 28m of Post-punk Electro<br>Industrial Synthpunk", KHAAR_ALBUM_SHORTLINE, "", true, true, "sound", "https://music.youtube.com/playlist?list=OLAK5uy_lSlOOZyCiCDSgcPba_pUQ6cIySOC9NrEI&si=8mswUAlfzXsN0g-4"));
 
     const WARLORD_LONGLINE = "";
     const WARLORD_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
@@ -582,7 +750,6 @@ const initSoundCards = () => {
     // const SPAWN_DEMO_SHORTLINE = `${STRINGS.DEMO_LONGLINE_SHORT_3}`;
     // LootArr.push(new DNELootCard("demo-spawn", `SPAWN`, SPAWN_DEMO_LONGLINE, "img/sound/demo-spawn.jpg", "d6", 0, "Демо, 98m of Psychodelic Electro Ambient", SPAWN_DEMO_SHORTLINE, "", true, true, "sound", ""));
 
-    // Perfect Blue
     //
     //
     const PERFECT_BLUE_VINYL_LONGLINE = "";
@@ -679,13 +846,6 @@ const initSoundCards = () => {
     const PYROMANIACS_ALBUM_LONGLINE = "";
     const PYROMANIACS_ALBUM_SHORTLINE = `${STRINGS.ALBUM_LONGLINE}`;
     LootArr.push(new DNELootCard("album-pyromaniacs", `PYROMANIACS`, PYROMANIACS_ALBUM_LONGLINE, "img/sound/album-pyromaniacs.jpg", 7, "NYP", "Альбом, 56m of Electronic Synthwave Vaporwave", PYROMANIACS_ALBUM_SHORTLINE, "", true, true, "sound", "https://youtu.be/S9NbJFmvVIs"));
-
-    // The Rabbit That Hunts Tigers
-    //
-    //
-    // const RABBIT_VINYL_LONGLINE = "";
-    // const RABBIT_VINYL_SHORTLINE = `${STRINGS.ALBUM_LONGLINE}`;
-    // LootArr.push(new DNELootCard("vinyl-rabbit-that-hunts-tigers", `The Rabbit That Hunts Tigers`, RABBIT_VINYL_LONGLINE, "img/sound/vinyl-the-rabbit-that-hunts-tigers.jpg", 3, 700, "Платівка, 44m of Alternative Rock Funk", RABBIT_VINYL_SHORTLINE, "", true, true, "sound", "https://youtu.be/oQq3Jwz0bDQ"));
 
     // Flower Boy
     //
@@ -944,7 +1104,7 @@ const initSoundCards = () => {
 
     const YOUSUKE_YUKIMATSU_DEMO_LONGLINE = "";
     const YOUSUKE_YUKIMATSU_DEMO_SHORTLINE = `${STRINGS.DEMO_LONGLINE}`;
-    LootArr.push(new DNELootCard("demo-yousuke-yukimatsu", "¥ØU$UK€ ¥UK1MAT$U", YOUSUKE_YUKIMATSU_DEMO_LONGLINE, "img/sound/demo-yousuke-yukimatsu.png", 8, "1K", "Демо, 55m of Industrial Experimental Techno", YOUSUKE_YUKIMATSU_DEMO_SHORTLINE, "", true, true, "sound", "https://www.youtube.com/live/qhqGGCbQEuI"));
+    LootArr.push(new DNELootCard("demo-yousuke-yukimatsu", "¥ØU$UK€ ¥UK1MAT$U", YOUSUKE_YUKIMATSU_DEMO_LONGLINE, "img/sound/demo-yousuke-yukimatsu.png", 8, "1K", "Демо, 55m of Experimental Industrial", YOUSUKE_YUKIMATSU_DEMO_SHORTLINE, "", true, true, "sound", "https://www.youtube.com/live/qhqGGCbQEuI"));
 
     // Thom Yorke
     //

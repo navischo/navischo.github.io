@@ -29,6 +29,70 @@
     top: -4px;
 }
 
+#dne-card-album-legalize-drugs-and-murder .card__preview {
+    margin-bottom: 0!important;
+}
+
+#dne-card-album-legalize-drugs-and-murder .card {
+    padding-bottom: 0!important;
+}
+
+#dne-card-album-legalize-drugs-and-murder .card__header.--flip {
+    display: none!important;
+}
+
+#dne-card-album-another-side-of-skinshape .card__preview {
+    margin-bottom: 0!important;
+}
+
+#dne-card-album-another-side-of-skinshape .card {
+    padding-bottom: 0!important;
+}
+
+#dne-card-album-another-side-of-skinshape .card__header.--flip {
+    display: none!important;
+}
+
+#dne-card-album-high-tide-in-the-snakes-nest .card__header.--flip {
+    display: none!important;
+}
+
+#dne-card-album-high-tide-in-the-snakes-nest .card__preview {
+    margin-bottom: 0!important;
+}
+
+#dne-card-album-high-tide-in-the-snakes-nest .card {
+    padding-bottom: 0!important;
+}
+
+#dne-card-album-high-tide-in-the-snakes-nest .card__limits {
+    white-space: nowrap;
+}
+
+#dne-card-album-when-you-are-not-at-home .card__header.--flip {
+    display: none!important;
+}
+
+#dne-card-album-when-you-are-not-at-home .card__preview {
+    margin-bottom: 0!important;
+}
+
+#dne-card-album-the-sound-of-pseudoscience .card__header.--flip {
+    display: none!important;
+}
+
+#dne-card-album-the-sound-of-pseudoscience .card__preview {
+    margin-bottom: 0!important;
+}
+
+#dne-card-album-the-sound-of-pseudoscience .card {
+    padding-bottom: 0!important;
+}
+
+#dne-card-album-the-sound-of-pseudoscience .card__title {
+    white-space: nowrap;
+}
+
 #dne-card-album-chemical-love-story .card__header.--flip {
     display: none!important;
 }
