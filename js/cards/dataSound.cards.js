@@ -13,6 +13,10 @@ const initSoundCards = () => {
     // \$$$$$$  | $$$$$$  |\$$$$$$  |$$ | \$$ |$$$$$$$  |
     //  \______/  \______/  \______/ \__|  \__|\_______/
 
+    const COLOURMEINKINDNESS_LONGLINE = "";
+    const COLOURMEINKINDNESS_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-colourmeinkindness", "Colourmein<br>kindness", COLOURMEINKINDNESS_LONGLINE, "img/sound/album-colourmeinkindness.jpg", 2, 0, "Альбом, 34m of Alternative Rock", COLOURMEINKINDNESS_ALBUM_SHORTLINE, "", true, true, "sound", "https://youtu.be/o1f4V0nzUbA"));
+
     const GOO_LONGLINE = "";
     const GOO_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
     LootArr.push(new DNELootCard("album-goo", "Goo", GOO_LONGLINE, "img/sound/album-goo.jpg", 7, 0, "Альбом, 49m of Alternative Rock", GOO_ALBUM_SHORTLINE, "", true, true, "sound", "https://youtu.be/k_1rqDKM_0E"));
