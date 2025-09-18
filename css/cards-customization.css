@@ -304,6 +304,10 @@
     transform: scale(1.79) rotate(90deg);
 }
 
+#dne-card-album-tales-of-the-mad-moon .card__header-left {
+    max-width: 94%!important;
+}
+
 #dne-card-demo-micks-tape .card__header:not(.--flip) {
     position: relative;
     z-index: 2;
@@ -327,6 +331,10 @@
 }
 
 #dne-card-demo-hypothese-grise .card__header.--flip {
+    display: none!important;
+}
+
+#dne-card-album-maybe-we-will-hug-each-other-in-a-past-life .card__header.--flip {
     display: none!important;
 }
 

@@ -13,6 +13,26 @@ const initSoundCards = () => {
     // \$$$$$$  | $$$$$$  |\$$$$$$  |$$ | \$$ |$$$$$$$  |
     //  \______/  \______/  \______/ \__|  \__|\_______/
 
+    const TALES_OF_THE_MAD_MOON_LONGLINE = "";
+    const TALES_OF_THE_MAD_MOON_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-tales-of-the-mad-moon", "Tales of<br>the Mad Moon", TALES_OF_THE_MAD_MOON_LONGLINE, "img/sound/album-tales-of-the-mad-moon.jpg", 8, 0, "Альбом, 87m of Dark Dungeon Synth", TALES_OF_THE_MAD_MOON_ALBUM_SHORTLINE, "", true, true, "sound", "https://youtu.be/gBmz4O41jfc"));
+
+    const OCTOBER_RUST_LONGLINE = "";
+    const OCTOBER_RUST_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("vinyl-october-rust", "OCTOBER RUST", OCTOBER_RUST_LONGLINE, "img/sound/vinyl-october-rust.png", 6, 0, "Платівка, 73m of Progressive Gothic Metal", OCTOBER_RUST_ALBUM_SHORTLINE, "", true, true, "sound", "https://youtu.be/C5vqN44iK20"));
+
+    const PEOPLE_ARE_MACHINES_LONGLINE = "";
+    const PEOPLE_ARE_MACHINES_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-people-are-machines", "People Are Machines", PEOPLE_ARE_MACHINES_LONGLINE, "img/sound/album-people-are-machines.jpg", 3, 0, "Альбом, 51m of Psychodelic Blues Rock", PEOPLE_ARE_MACHINES_ALBUM_SHORTLINE, "", true, true, "sound", "https://youtu.be/C5vqN44iK20"));
+
+    const MAYBE_WE_WILL_HUG_EACH_OTHER_IN_A_PAST_LIFE_LONGLINE = "";
+    const MAYBE_WE_WILL_HUG_EACH_OTHER_IN_A_PAST_LIFE_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-maybe-we-will-hug-each-other-in-a-past-life", "Maybe we'll hug each other in a past life", MAYBE_WE_WILL_HUG_EACH_OTHER_IN_A_PAST_LIFE_LONGLINE, "img/sound/album-maybe-we-will-hug-each-other-in-a-past-life.jpg", 7, 0, "Альбом, 51m of Alternative Experimental Psychodelic Ambient", MAYBE_WE_WILL_HUG_EACH_OTHER_IN_A_PAST_LIFE_ALBUM_SHORTLINE, "", true, true, "sound", "https://youtu.be/ix-6vG3qXPc"));
+
+    const TENDER_NEW_SIGNS_LONGLINE = "";
+    const TENDER_NEW_SIGNS_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-tender-new-signs", "Tender New Signs", TENDER_NEW_SIGNS_LONGLINE, "img/sound/album-tender-new-signs.jpg", 5, 0, "Альбом, 40m of Alternative Indie", TENDER_NEW_SIGNS_ALBUM_SHORTLINE, "", true, true, "sound", "https://tamaryn.bandcamp.com/album/tender-new-signs"));
+
     const COLOURMEINKINDNESS_LONGLINE = "";
     const COLOURMEINKINDNESS_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
     LootArr.push(new DNELootCard("album-colourmeinkindness", "Colourmein<br>kindness", COLOURMEINKINDNESS_LONGLINE, "img/sound/album-colourmeinkindness.jpg", 2, 0, "Альбом, 34m of Alternative Rock", COLOURMEINKINDNESS_ALBUM_SHORTLINE, "", true, true, "sound", "https://youtu.be/o1f4V0nzUbA"));
