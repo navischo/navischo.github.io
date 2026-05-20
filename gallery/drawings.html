@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Ink</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="zen-dots-regular">
+<h1 class="visually-hidden">Collection of drawings by Yehor Navischo</h1>
+<h2 class="title">
+    <span class="collection">Currents</span>
+    <b class="year">2024</b>
+</h2>
+
+<!-- Swiper -->
+<div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+</div>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="js/data.js" type="module"></script>
+<script src="js/dom.js" type="module"></script>
+<script type="module">
+    "use strict";
+
+    import { init } from "./js/dom.js";
+
+    init();
+</script>
+</body>
+
+</html>

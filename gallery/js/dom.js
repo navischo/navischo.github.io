@@ -6,7 +6,7 @@ const init = () => {
         const newSlide = document.createElement("div");
         const imgNode = document.createElement("img");
         newSlide.classList.add("swiper-slide");
-        imgNode.src = `img/${imgId}.jpg`;
+        imgNode.src = `img/drawings/${imgId}.jpg`;
         newSlide.appendChild(imgNode)
         parent.appendChild(newSlide);
 

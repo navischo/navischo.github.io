@@ -13,6 +13,14 @@ const initSoundCards = () => {
     // \$$$$$$  | $$$$$$  |\$$$$$$  |$$ | \$$ |$$$$$$$  |
     //  \______/  \______/  \______/ \__|  \__|\_______/
 
+    const I_FEEL_LIKE_PURPLE_LONGLINE = "";
+    const I_FEEL_LIKE_PURPLE_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-i-feel-like-i-purple", "I Feel Like I'm Purple", I_FEEL_LIKE_PURPLE_LONGLINE, "img/sound/album-i-feel-like-i-purple.jpg", 5, 0, "Альбом, 47m of Psychodelic Blues Rock", I_FEEL_LIKE_PURPLE_ALBUM_SHORTLINE, "", true, true, "sound", "https://skelephant.bandcamp.com/album/i-feel-like-im-purple"));
+
+    const SLAUGTHER_NOSTALGIA_LONGLINE = "";
+    const SLAUGTHER_NOSTALGIA_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-slaughter-nostalgia", "Slaughter Nostalgia", SLAUGTHER_NOSTALGIA_LONGLINE, "img/sound/album-slaughter-nostalgia.jpg", 2, 0, "Альбом, 38m of Dark Industrial Lo-Fi", SLAUGTHER_NOSTALGIA_ALBUM_SHORTLINE, "", true, true, "sound", "https://youtu.be/zVqMUekAbao"));
+
     const TALES_OF_THE_MAD_MOON_LONGLINE = "";
     const TALES_OF_THE_MAD_MOON_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
     LootArr.push(new DNELootCard("album-tales-of-the-mad-moon", "Tales of<br>the Mad Moon", TALES_OF_THE_MAD_MOON_LONGLINE, "img/sound/album-tales-of-the-mad-moon.jpg", 8, 0, "Альбом, 87m of Dark Dungeon Synth", TALES_OF_THE_MAD_MOON_ALBUM_SHORTLINE, "", true, true, "sound", "https://youtu.be/gBmz4O41jfc"));
