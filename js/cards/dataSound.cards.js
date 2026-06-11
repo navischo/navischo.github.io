@@ -13,6 +13,42 @@ const initSoundCards = () => {
     // \$$$$$$  | $$$$$$  |\$$$$$$  |$$ | \$$ |$$$$$$$  |
     //  \______/  \______/  \______/ \__|  \__|\_______/
 
+    const KILL_YOUR_ENEMIES_LONGLINE = "";
+    const KILL_YOUR_ENEMIES_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-kill-your-enemy", "Kill Your Enemy", KILL_YOUR_ENEMIES_LONGLINE, "img/sound/album-kill-your-enemy.jpg", 8, 0, "Альбом, 46m of Coldwave Techno EBM", KILL_YOUR_ENEMIES_ALBUM_SHORTLINE, "", true, true, "sound", "https://khoinix.bandcamp.com/album/kill-your-enemy"));
+
+    const NGOMA_INJECTIONS_LONGLINE = "";
+    const NGOMA_INJECTIONS_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-ngoma-injections", "Ngoma Injection", NGOMA_INJECTIONS_LONGLINE, "img/sound/album-ngoma-injections.jpg", 5, 0, "Альбом, 36m of Tribal Techno", NGOMA_INJECTIONS_ALBUM_SHORTLINE, "", true, true, "sound", "https://hakunakulala.bandcamp.com/album/ngoma-injection"));
+
+    const AS_THE_LOVE_CONTINUES_LONGLINE = "";
+    const AS_THE_LOVE_CONTINUES_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-as-the-love-continues", "Delirious Rites", AS_THE_LOVE_CONTINUES_LONGLINE, "img/sound/album-as-the-love-continues.jpg", 9, 0, "Альбом, 62m of Alternative Rock", AS_THE_LOVE_CONTINUES_ALBUM_SHORTLINE, "", true, true, "sound", "https://mogwai.bandcamp.com/album/as-the-love-continues"));
+
+    const DELIRIOUS_RITES_LONGLINE = "";
+    const DELIRIOUS_RITES_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-delirious-rites", "Delirious Rites", DELIRIOUS_RITES_LONGLINE, "img/sound/album-delirious-rites.jpg", 3, 0, "Альбом, 33m of Doom Metal", DELIRIOUS_RITES_ALBUM_SHORTLINE, "", true, true, "sound", "https://thelastingdoserecords.bandcamp.com/album/delirious-rites-tld04"));
+
+    const VELOCIRAPTOR_LONGLINE = "";
+    const VELOCIRAPTOR_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-velociraptor", "Velociraptor!", VELOCIRAPTOR_LONGLINE, "img/sound/album-velociraptor.jpg", 7, 0, "Альбом, 50m of Psychodelic Indie Rock", VELOCIRAPTOR_ALBUM_SHORTLINE, "", true, true, "sound", "https://youtube.com/playlist?list=PLW_J5FejjqccuDGW1Cd7WHawkVtGt83re&si=HDNvbu-yHyilNegj"));
+
+    const LOCKED_LONGLINE = "";
+    const LOCKED_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-locket", "Locket", LOCKED_LONGLINE, "img/sound/album-locket.jpg", 4, 0, "Альбом, 15m of Psychodelic Pop", LOCKED_ALBUM_SHORTLINE, "", true, true, "sound", "https://crumbtheband.bandcamp.com/album/locket"));
+
+    const NEVERODDOREVEN_LONGLINE = "";
+    const NEVERODDOREVEN_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-neveroddoreven", "Neveroddoreven", NEVERODDOREVEN_LONGLINE, "img/sound/album-neveroddoreven.jpg", 6, 0, "Альбом, 45m of Psychodelic Pop", NEVERODDOREVEN_ALBUM_SHORTLINE, "", true, true, "sound", "https://imonster.bandcamp.com/album/neveroddoreven-limited-edition-orange-vinyl"));
+
+    const ALL_LUNO_LONGLINE = "";
+    const ALL_LUNO_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-luno", "LUNO", ALL_LUNO_LONGLINE, "img/sound/album-luno.jpg", 3, 0, "Альбом, 32m of Experimental Indie Pop", ALL_LUNO_ALBUM_SHORTLINE, "", true, true, "sound", "https://bloodcultures.bandcamp.com/album/luno"));
+
+    const ALL_DESCEND_LONGLINE = "";
+    const ALL_DESCEND_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
+    LootArr.push(new DNELootCard("album-all-descend", "All Descend", ALL_DESCEND_LONGLINE, "img/sound/album-all-descend.jpg", 2, 0, "Альбом, 37m of Stoner Metal", ALL_DESCEND_ALBUM_SHORTLINE, "", true, true, "sound", "https://terrablackband.bandcamp.com/album/all-descend"));
+
     const I_FEEL_LIKE_PURPLE_LONGLINE = "";
     const I_FEEL_LIKE_PURPLE_ALBUM_SHORTLINE = `${STRINGS.VINYL_LONGLINE}`;
     LootArr.push(new DNELootCard("album-i-feel-like-i-purple", "I Feel Like I'm Purple", I_FEEL_LIKE_PURPLE_LONGLINE, "img/sound/album-i-feel-like-i-purple.jpg", 5, 0, "Альбом, 47m of Psychodelic Blues Rock", I_FEEL_LIKE_PURPLE_ALBUM_SHORTLINE, "", true, true, "sound", "https://skelephant.bandcamp.com/album/i-feel-like-im-purple"));
